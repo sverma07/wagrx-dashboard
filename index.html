@@ -72,9 +72,10 @@
     font-size: 0.85rem;
     color: var(--text-dim);
   }
+  .controls-row { display: flex; gap: 8px; margin-top: 10px; }
   .search-box {
-    width: 100%;
-    margin-top: 10px;
+    flex: 1;
+    min-width: 0;
     padding: 10px 14px;
     border: 1px solid var(--border);
     border-radius: 10px;
@@ -84,6 +85,17 @@
   }
   .search-box::placeholder { color: var(--text-dim); }
   .search-box:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .runtime-select {
+    flex-shrink: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card-bg);
+    color: var(--text);
+    font-size: 0.88rem;
+    max-width: 45%;
+  }
+  .runtime-select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
   .game-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -149,7 +161,10 @@
       <span id="updated-at">Loading&hellip;</span>
       <span id="game-count"></span>
     </div>
-    <input type="search" id="search" class="search-box" placeholder="Search teams&hellip;" oninput="filterGames()">
+    <div class="controls-row">
+      <select id="runtime-select" class="runtime-select" onchange="selectSnapshot(this.value)"></select>
+      <input type="search" id="search" class="search-box" placeholder="Search teams&hellip;" oninput="filterGames()">
+    </div>
   </header>
   <main id="games"></main>
 </div>
@@ -221,18 +236,43 @@ function filterGames() {
   document.getElementById("game-count").textContent = visible + (visible === 1 ? " game" : " games");
 }
 
-fetch("ncaaf.json?_=" + Date.now())
+let allSnapshots = [];
+
+function populateRuntimeSelect(snapshots) {
+  const sel = document.getElementById("runtime-select");
+  sel.innerHTML = snapshots.map((s, i) => `<option value="${i}">${fmtTime(s.time)}</option>`).join("");
+  sel.value = snapshots.length - 1;
+}
+
+function selectSnapshot(indexStr) {
+  const snap = allSnapshots[parseInt(indexStr, 10)];
+  if (snap) renderSnapshot(snap);
+}
+
+function renderSnapshot(snap) {
+  document.getElementById("updated-at").textContent = "Showing: " + fmtTime(snap.time);
+  const games = snap.games || [];
+  document.getElementById("game-count").textContent = games.length + (games.length === 1 ? " game" : " games");
+  const container = document.getElementById("games");
+  if (games.length === 0) {
+    container.innerHTML = '<div class="empty-state">No games in this snapshot.</div>';
+    return;
+  }
+  container.innerHTML = games.map(renderGame).join("");
+  filterGames();
+}
+
+fetch("ncaaf_today.json?_=" + Date.now())
   .then(r => r.json())
   .then(data => {
-    document.getElementById("updated-at").textContent = "Last updated: " + fmtTime(data.generated_at);
-    const games = data.games || [];
-    document.getElementById("game-count").textContent = games.length + (games.length === 1 ? " game" : " games");
-    const container = document.getElementById("games");
-    if (games.length === 0) {
-      container.innerHTML = '<div class="empty-state">No games loaded yet. Check back after the next run.</div>';
+    allSnapshots = data.snapshots || [];
+    if (allSnapshots.length === 0) {
+      document.getElementById("updated-at").textContent = "No data yet today.";
+      document.getElementById("games").innerHTML = '<div class="empty-state">No games loaded yet. Check back after the next run.</div>';
       return;
     }
-    container.innerHTML = games.map(renderGame).join("");
+    populateRuntimeSelect(allSnapshots);
+    renderSnapshot(allSnapshots[allSnapshots.length - 1]);
   })
   .catch(err => {
     document.getElementById("updated-at").textContent = "Could not load data.";
