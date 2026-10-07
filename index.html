@@ -55,6 +55,20 @@
     padding: 16px;
   }
   .wrap { max-width: 780px; margin: 0 auto; }
+  .top-bar { display: flex; justify-content: flex-start; margin-bottom: 10px; }
+  .export-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text);
+    font-size: 0.82rem;
+    cursor: pointer;
+  }
+  .export-btn:hover { border-color: var(--accent); color: var(--accent); }
   header { margin-bottom: 20px; }
   h1 { font-size: 1.4rem; margin: 0 0 4px 0; }
   .subtitle { color: var(--text-dim); font-size: 0.9rem; }
@@ -135,7 +149,7 @@
     color: #fff;
   }
   .models-wrap { max-height: 0; overflow: hidden; transition: max-height 0.2s ease; }
-  .game-card.expanded .models-wrap { max-height: 500px; }
+  .game-card.expanded .models-wrap { max-height: 600px; }
   table.models { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 12px; }
   table.models td { padding: 6px 4px; border-top: 1px solid var(--border); }
   table.models td:first-child { color: var(--text-dim); width: 42%; }
@@ -149,11 +163,35 @@
   }
   .tag.agree { background: var(--win-bg); color: var(--win); }
   .tag.disagree { background: var(--loss-bg); color: var(--loss); }
+  .detail-box {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .detail-select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--neutral-bg);
+    color: var(--text);
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+  .detail-text {
+    font-size: 0.88rem;
+    color: var(--text);
+    padding: 8px 2px;
+  }
+  .detail-text .num { font-weight: 700; }
   .empty-state { color: var(--text-dim); text-align: center; padding: 40px 16px; }
 </style>
 </head>
 <body>
 <div class="wrap">
+  <div class="top-bar">
+    <button class="export-btn" onclick="exportCSV()">&#8595; Export CSV</button>
+  </div>
   <header>
     <h1>WagrX: NCAAF</h1>
     <div class="subtitle">Model consensus for today's games</div>
@@ -170,6 +208,8 @@
 </div>
 
 <script>
+const MODEL_KEYS = ["M1: Normal Score", "M2: Relevance", "M3: Efficiency", "M4: ATS Trends", "M5: Luck", "M6: Sharp Money", "CONSENSUS"];
+
 function fmtTime(iso) {
   if (!iso) return "never run yet";
   try {
@@ -180,24 +220,66 @@ function fmtTime(iso) {
   }
 }
 
-function renderGame(g) {
-  const modelRows = Object.entries(g.models || {})
-    .filter(([key]) => key !== "CONSENSUS" && key !== "CONFIDENCE")
-    .map(([key, pick]) => {
-      const consensusPick = (g.models && g.models.CONSENSUS) || "";
-      let tag = "";
-      if (pick && pick.startsWith("TAKE:") && consensusPick && consensusPick.startsWith("TAKE:")) {
-        tag = pick === consensusPick
-          ? '<span class="tag agree">AGREE</span>'
-          : '<span class="tag disagree">DISAGREE</span>';
-      }
-      const label = pick ? pick.replace("TAKE: ", "") : "N/A";
-      return `<tr><td>${key}</td><td>${label}${tag}</td></tr>`;
-    }).join("");
+function fmtNum(v) {
+  if (v === undefined || v === null || v === "N/A") return null;
+  const n = parseFloat(v);
+  return isNaN(n) ? String(v) : (Number.isInteger(n) ? String(n) : n.toFixed(1));
+}
 
-  const consensus = (g.models && g.models.CONSENSUS) ? g.models.CONSENSUS.replace("TAKE: ", "") : "N/A";
+function formatDetail(g, modelKey) {
+  const teamHome = g.team_home || "Home";
+  const teamAway = g.team_away || "Away";
+
+  if (modelKey === "CONSENSUS") {
+    const pick = (g.picks && g.picks.CONSENSUS) ? g.picks.CONSENSUS.replace("TAKE: ", "") : "N/A";
+    return `Weighted vote: <span class="num">${g.confidence || "N/A"}</span> for ${pick}`;
+  }
+
+  const d = (g.detail || {})[modelKey];
+  if (!d) return "No underlying data available for this model.";
+
+  if (modelKey === "M3: Efficiency") {
+    const m = fmtNum(d.margin);
+    if (m === null) return "No predicted margin available.";
+    const favored = parseFloat(d.margin) >= 0 ? teamHome : teamAway;
+    return `Predicted margin: ${favored} by <span class="num">${Math.abs(parseFloat(d.margin)).toFixed(1)}</span>`;
+  }
+
+  if (modelKey === "M6: Sharp Money") {
+    if (d.home_b === undefined || d.home_b === null) return "No sharp money data available.";
+    return `${teamHome}: <span class="num">${fmtNum(d.home_b)}%</span> bets / <span class="num">${fmtNum(d.home_m)}%</span> money`
+      + `&nbsp;&nbsp;|&nbsp;&nbsp;`
+      + `${teamAway}: <span class="num">${fmtNum(d.away_b)}%</span> bets / <span class="num">${fmtNum(d.away_m)}%</span> money`;
+  }
+
+  // M1, M2, M4, M5 all share a simple home/away numeric-pair shape.
+  const homeVal = fmtNum(d.home);
+  const awayVal = fmtNum(d.away);
+  if (homeVal === null && awayVal === null) return "No data available for this model.";
+  return `${teamHome}: <span class="num">${homeVal ?? "N/A"}</span>`
+    + `&nbsp;&nbsp;|&nbsp;&nbsp;`
+    + `${teamAway}: <span class="num">${awayVal ?? "N/A"}</span>`;
+}
+
+function renderGame(g, idx) {
+  const picks = g.picks || {};
+  const modelRows = MODEL_KEYS.filter(k => k !== "CONSENSUS").map(key => {
+    const pick = picks[key];
+    const consensusPick = picks.CONSENSUS || "";
+    let tag = "";
+    if (pick && pick.startsWith("TAKE:") && consensusPick && consensusPick.startsWith("TAKE:")) {
+      tag = pick === consensusPick
+        ? '<span class="tag agree">AGREE</span>'
+        : '<span class="tag disagree">DISAGREE</span>';
+    }
+    const label = pick ? pick.replace("TAKE: ", "") : "N/A";
+    return `<tr><td>${key}</td><td>${label}${tag}</td></tr>`;
+  }).join("");
+
+  const consensus = picks.CONSENSUS ? picks.CONSENSUS.replace("TAKE: ", "") : "N/A";
   const confidence = g.confidence || "N/A";
   const searchKey = (g.game || "").toLowerCase();
+  const detailOptions = MODEL_KEYS.map(k => `<option value="${k}">${k}</option>`).join("");
 
   return `
     <div class="game-card" data-search="${searchKey}">
@@ -219,9 +301,19 @@ function renderGame(g) {
       </div>
       <div class="models-wrap">
         <table class="models">${modelRows}</table>
+        <div class="detail-box">
+          <select class="detail-select" onchange="showModelDetail(${idx}, this.value, this)">${detailOptions}</select>
+          <div class="detail-text" id="detail-${idx}">${formatDetail(g, MODEL_KEYS[0])}</div>
+        </div>
       </div>
     </div>
   `;
+}
+
+function showModelDetail(idx, modelKey) {
+  const g = currentGames[idx];
+  if (!g) return;
+  document.getElementById("detail-" + idx).innerHTML = formatDetail(g, modelKey);
 }
 
 function filterGames() {
@@ -236,7 +328,37 @@ function filterGames() {
   document.getElementById("game-count").textContent = visible + (visible === 1 ? " game" : " games");
 }
 
+function csvEscape(val) {
+  const s = (val === undefined || val === null) ? "" : String(val);
+  return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+}
+
+function exportCSV() {
+  if (!currentGames || currentGames.length === 0) {
+    alert("Nothing loaded to export yet.");
+    return;
+  }
+  const headers = ["Game", "Spread", "Favorite", ...MODEL_KEYS, "Confidence"];
+  const rows = currentGames.map(g => {
+    const picks = g.picks || {};
+    const pickVals = MODEL_KEYS.map(k => (picks[k] || "N/A").replace("TAKE: ", ""));
+    return [g.game, g.spread, g.favorite, ...pickVals, g.confidence];
+  });
+  const csv = [headers, ...rows].map(r => r.map(csvEscape).join(",")).join("\r\n");
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `wagrx-ncaaf-${(currentSnapshotTime || "export").replace(/[:.]/g, "-")}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
 let allSnapshots = [];
+let currentGames = [];
+let currentSnapshotTime = "";
 
 function populateRuntimeSelect(snapshots) {
   const sel = document.getElementById("runtime-select");
@@ -250,15 +372,16 @@ function selectSnapshot(indexStr) {
 }
 
 function renderSnapshot(snap) {
+  currentSnapshotTime = snap.time || "";
   document.getElementById("updated-at").textContent = "Showing: " + fmtTime(snap.time);
-  const games = snap.games || [];
-  document.getElementById("game-count").textContent = games.length + (games.length === 1 ? " game" : " games");
+  currentGames = snap.games || [];
+  document.getElementById("game-count").textContent = currentGames.length + (currentGames.length === 1 ? " game" : " games");
   const container = document.getElementById("games");
-  if (games.length === 0) {
+  if (currentGames.length === 0) {
     container.innerHTML = '<div class="empty-state">No games in this snapshot.</div>';
     return;
   }
-  container.innerHTML = games.map(renderGame).join("");
+  container.innerHTML = currentGames.map((g, i) => renderGame(g, i)).join("");
   filterGames();
 }
 
