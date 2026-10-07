@@ -72,6 +72,18 @@
     font-size: 0.85rem;
     color: var(--text-dim);
   }
+  .search-box {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card-bg);
+    color: var(--text);
+    font-size: 0.92rem;
+  }
+  .search-box::placeholder { color: var(--text-dim); }
+  .search-box:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
   .game-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -79,8 +91,19 @@
     padding: 16px;
     margin-bottom: 14px;
   }
+  .game-card.hidden-by-search { display: none; }
+  .game-header { cursor: pointer; user-select: none; }
+  .game-title-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
   .game-title { font-weight: 600; font-size: 1.02rem; margin-bottom: 2px; }
   .game-meta { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 12px; }
+  .chevron {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+    transition: transform 0.15s ease;
+  }
+  .game-card.expanded .chevron { transform: rotate(90deg); }
   .consensus-row {
     display: flex;
     justify-content: space-between;
@@ -88,7 +111,6 @@
     background: var(--neutral-bg);
     border-radius: 8px;
     padding: 10px 12px;
-    margin-bottom: 12px;
   }
   .consensus-label { font-size: 0.78rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.04em; }
   .consensus-pick { font-weight: 700; font-size: 1rem; }
@@ -100,7 +122,9 @@
     background: var(--accent);
     color: #fff;
   }
-  table.models { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  .models-wrap { max-height: 0; overflow: hidden; transition: max-height 0.2s ease; }
+  .game-card.expanded .models-wrap { max-height: 500px; }
+  table.models { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 12px; }
   table.models td { padding: 6px 4px; border-top: 1px solid var(--border); }
   table.models td:first-child { color: var(--text-dim); width: 42%; }
   .tag {
@@ -125,6 +149,7 @@
       <span id="updated-at">Loading&hellip;</span>
       <span id="game-count"></span>
     </div>
+    <input type="search" id="search" class="search-box" placeholder="Search teams&hellip;" oninput="filterGames()">
   </header>
   <main id="games"></main>
 </div>
@@ -157,21 +182,43 @@ function renderGame(g) {
 
   const consensus = (g.models && g.models.CONSENSUS) ? g.models.CONSENSUS.replace("TAKE: ", "") : "N/A";
   const confidence = g.confidence || "N/A";
+  const searchKey = (g.game || "").toLowerCase();
 
   return `
-    <div class="game-card">
-      <div class="game-title">${g.game || ""}</div>
-      <div class="game-meta">Line: ${g.spread || "N/A"} &middot; Favorite: ${g.favorite || "N/A"}</div>
-      <div class="consensus-row">
-        <div>
-          <div class="consensus-label">Consensus</div>
-          <div class="consensus-pick">${consensus}</div>
+    <div class="game-card" data-search="${searchKey}">
+      <div class="game-header" onclick="this.closest('.game-card').classList.toggle('expanded')">
+        <div class="game-title-row">
+          <div>
+            <div class="game-title">${g.game || ""}</div>
+            <div class="game-meta">Line: ${g.spread || "N/A"} &middot; Favorite: ${g.favorite || "N/A"}</div>
+          </div>
+          <span class="chevron">&#9654;</span>
         </div>
-        <div class="confidence-badge">${confidence}</div>
+        <div class="consensus-row">
+          <div>
+            <div class="consensus-label">Consensus</div>
+            <div class="consensus-pick">${consensus}</div>
+          </div>
+          <div class="confidence-badge">${confidence}</div>
+        </div>
       </div>
-      <table class="models">${modelRows}</table>
+      <div class="models-wrap">
+        <table class="models">${modelRows}</table>
+      </div>
     </div>
   `;
+}
+
+function filterGames() {
+  const q = document.getElementById("search").value.trim().toLowerCase();
+  const cards = document.querySelectorAll(".game-card");
+  let visible = 0;
+  cards.forEach(card => {
+    const match = !q || (card.dataset.search || "").includes(q);
+    card.classList.toggle("hidden-by-search", !match);
+    if (match) visible++;
+  });
+  document.getElementById("game-count").textContent = visible + (visible === 1 ? " game" : " games");
 }
 
 fetch("ncaaf.json?_=" + Date.now())
