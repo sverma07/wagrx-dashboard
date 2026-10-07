@@ -36,6 +36,41 @@
           "confidence": "53%"
         }
       ]
+    },
+    {
+      "time": "2026-10-07T11:20:52-04:00",
+      "games": [
+        {
+          "game": "Kennesaw State Owls (H) vs Jacksonville State Gamecocks (A)",
+          "spread": "JXST -3",
+          "favorite": "Jacksonville State Gamecocks -fav",
+          "models": {
+            "M1: Normal Score": "TAKE: Jacksonville State Gamecocks",
+            "M2: Relevance": "TAKE: Jacksonville State Gamecocks",
+            "M3: Efficiency": "TAKE: Jacksonville State Gamecocks",
+            "M4: ATS Trends": "TAKE: Kennesaw State Owls",
+            "M5: Luck": "TAKE: Kennesaw State Owls",
+            "M6: Sharp Money": "PUSH",
+            "CONSENSUS": "TAKE: Jacksonville State Gamecocks"
+          },
+          "confidence": "66%"
+        },
+        {
+          "game": "Florida International Panthers (H) vs New Mexico State Aggies (A)",
+          "spread": "FIU -6.5",
+          "favorite": "Florida International Panthers -fav",
+          "models": {
+            "M1: Normal Score": "TAKE: Florida International Panthers",
+            "M2: Relevance": "TAKE: Florida International Panthers",
+            "M3: Efficiency": "TAKE: New Mexico State Aggies",
+            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
+            "M5: Luck": "TAKE: New Mexico State Aggies",
+            "M6: Sharp Money": "N/A",
+            "CONSENSUS": "TAKE: Florida International Panthers"
+          },
+          "confidence": "53%"
+        }
+      ]
     }
   ]
 }
