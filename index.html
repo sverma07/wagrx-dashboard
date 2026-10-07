@@ -81,18 +81,18 @@
   .export-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 7px 12px;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 10px;
     background: var(--card-bg);
-    color: var(--text);
-    font-size: 0.82rem;
+    color: var(--text-dim);
+    font-size: 1rem;
     cursor: pointer;
     box-shadow: var(--shadow);
-    white-space: nowrap;
   }
-  .export-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .export-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
 
   .tab-bar {
     display: flex;
@@ -240,7 +240,6 @@
       <h1>WagrX</h1>
       <span class="tagline">model consensus, live</span>
     </div>
-    <button class="export-btn" onclick="exportCSV()">&#8595; Export CSV</button>
   </div>
 
   <div class="tab-bar" id="tab-bar"></div>
@@ -252,6 +251,7 @@
   <div class="controls-row">
     <select id="runtime-select" class="runtime-select" onchange="selectSnapshot(this.value)"></select>
     <input type="search" id="search" class="search-box" placeholder="Search teams&hellip;" oninput="filterGames()">
+    <button class="export-btn" onclick="exportCSV()" title="Export current view as CSV">&#8595;</button>
   </div>
   <main id="games"></main>
 </div>
