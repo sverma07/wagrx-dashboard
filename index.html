@@ -11,8 +11,10 @@
     --text: #15171c;
     --text-dim: #6b7280;
     --border: #e5e7eb;
-    --accent: #2563eb;
-    --accent-soft: #eff4ff;
+    --accent: #4F46E5;
+    --accent-2: #9333EA;
+    --accent-gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
+    --accent-soft: #f1effe;
     --win: #15803d;
     --win-bg: #dcfce7;
     --loss: #b91c1c;
@@ -27,8 +29,9 @@
       --text: #e8e9ec;
       --text-dim: #9199a8;
       --border: #2b2f38;
-      --accent: #6c9bff;
-      --accent-soft: #1b2436;
+      --accent: #9B8AFB;
+      --accent-2: #D08CF7;
+      --accent-soft: #231f36;
       --win: #4ade80;
       --win-bg: #123020;
       --loss: #f87171;
@@ -43,8 +46,9 @@
     --text: #e8e9ec;
     --text-dim: #9199a8;
     --border: #2b2f38;
-    --accent: #6c9bff;
-    --accent-soft: #1b2436;
+    --accent: #9B8AFB;
+    --accent-2: #D08CF7;
+    --accent-soft: #231f36;
     --win: #4ade80;
     --win-bg: #123020;
     --loss: #f87171;
@@ -65,19 +69,16 @@
 
   .brand-row {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 14px;
   }
-  .brand { display: flex; align-items: baseline; gap: 8px; }
-  .brand h1 {
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: -0.01em;
-    margin: 0;
+  .brand-logo {
+    height: 52px;
+    width: 52px;
+    border-radius: 12px;
+    display: block;
   }
-  .brand .tagline { color: var(--text-dim); font-size: 0.85rem; }
   .export-btn {
     display: inline-flex;
     align-items: center;
@@ -119,7 +120,8 @@
     transition: background 0.12s ease, color 0.12s ease;
   }
   .tab-btn:hover { color: var(--text); }
-  .tab-btn.active { background: var(--accent); color: #fff; }
+  .tab-btn.active { background: var(--accent-gradient); color: #fff; }
+  .tab-btn.perf-tab { flex: 0 0 auto; border-left: 1px solid var(--border); margin-left: 2px; padding-left: 14px; }
 
   .status-bar {
     display: flex;
@@ -199,7 +201,7 @@
     font-size: 0.95rem;
     padding: 4px 11px;
     border-radius: 999px;
-    background: var(--accent);
+    background: var(--accent-gradient);
     color: #fff;
   }
   .models-wrap { max-height: 0; overflow: hidden; transition: max-height 0.2s ease; }
@@ -231,23 +233,45 @@
   .detail-text { font-size: 0.88rem; color: var(--text); padding: 8px 2px; }
   .detail-text .num { font-weight: 700; }
   .empty-state { color: var(--text-dim); text-align: center; padding: 48px 16px; font-size: 0.92rem; }
+
+  .perf-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow);
+  }
+  .perf-card h2 {
+    font-size: 1rem;
+    margin: 0 0 4px;
+  }
+  .perf-updated { color: var(--text-dim); font-size: 0.78rem; margin-bottom: 10px; }
+  table.perf { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  table.perf td, table.perf th {
+    padding: 7px 6px;
+    border-top: 1px solid var(--border);
+    text-align: left;
+  }
+  table.perf th { color: var(--text-dim); font-weight: 600; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  table.perf tr.consensus-row-perf td { font-weight: 700; }
+  table.perf tr.consensus-row-perf { background: var(--accent-soft); }
+  .perf-pct { font-weight: 700; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="brand-row">
-    <div class="brand">
-      <h1>WagrX</h1>
-    </div>
+    <img src="logo.png" alt="WagrX" class="brand-logo">
   </div>
 
   <div class="tab-bar" id="tab-bar"></div>
 
-  <div class="status-bar">
+  <div class="status-bar" id="status-bar">
     <span id="updated-at">Loading&hellip;</span>
     <span id="game-count"></span>
   </div>
-  <div class="controls-row">
+  <div class="controls-row" id="controls-row">
     <select id="runtime-select" class="runtime-select" onchange="selectSnapshot(this.value)"></select>
     <input type="search" id="search" class="search-box" placeholder="Search teams&hellip;" oninput="filterGames()">
     <button class="export-btn" onclick="exportCSV()" title="Export current view as CSV">
@@ -259,17 +283,19 @@
     </button>
   </div>
   <main id="games"></main>
+  <main id="performance" style="display:none;"></main>
 </div>
 
 <script>
 const SPORTS = [
-  { key: "ncaaf", label: "NCAAF", file: "ncaaf_today.json" },
-  { key: "nfl",   label: "NFL",   file: "nfl_today.json" },
-  { key: "nba",   label: "NBA",   file: "nba_today.json" },
-  { key: "ncaa",  label: "NCAAB", file: "ncaa_today.json" },
+  { key: "ncaaf", label: "NCAAF", file: "ncaaf_today.json", perfFile: "ncaaf_performance.json" },
+  { key: "nfl",   label: "NFL",   file: "nfl_today.json",   perfFile: "nfl_performance.json" },
+  { key: "nba",   label: "NBA",   file: "nba_today.json",   perfFile: "nba_performance.json" },
+  { key: "ncaa",  label: "NCAAB", file: "ncaa_today.json",  perfFile: "ncaa_performance.json" },
 ];
 
 let currentSport = SPORTS[0].key;
+let currentView = "games"; // "games" or "performance"
 let allSnapshots = [];
 let currentGames = [];
 let currentSnapshotTime = "";
@@ -455,16 +481,29 @@ function renderSnapshot(snap) {
 
 function renderTabs() {
   const bar = document.getElementById("tab-bar");
-  bar.innerHTML = SPORTS.map(s =>
-    `<button class="tab-btn${s.key === currentSport ? " active" : ""}" onclick="selectSport('${s.key}')">${s.label}</button>`
+  const sportTabs = SPORTS.map(s =>
+    `<button class="tab-btn${(currentView === "games" && s.key === currentSport) ? " active" : ""}" onclick="selectSport('${s.key}')">${s.label}</button>`
   ).join("");
+  const perfTab = `<button class="tab-btn perf-tab${currentView === "performance" ? " active" : ""}" onclick="selectPerformance()">Performance</button>`;
+  bar.innerHTML = sportTabs + perfTab;
+}
+
+function setViewVisibility() {
+  const isGames = currentView === "games";
+  document.getElementById("status-bar").style.display = isGames ? "" : "none";
+  document.getElementById("controls-row").style.display = isGames ? "" : "none";
+  document.getElementById("games").style.display = isGames ? "" : "none";
+  document.getElementById("performance").style.display = isGames ? "none" : "";
 }
 
 function selectSport(key) {
-  if (key === currentSport && allSnapshots.length) { loadSport(key); return; }
+  const wasPerformance = currentView === "performance";
+  currentView = "games";
+  if (key === currentSport && allSnapshots.length && !wasPerformance) { loadSport(key); return; }
   currentSport = key;
   try { localStorage.setItem("wagrx-last-sport", key); } catch (e) {}
   renderTabs();
+  setViewVisibility();
   loadSport(key);
 }
 
@@ -495,11 +534,59 @@ function loadSport(key) {
     });
 }
 
+function selectPerformance() {
+  currentView = "performance";
+  renderTabs();
+  setViewVisibility();
+  loadPerformance();
+}
+
+function renderPerfCard(sport, data) {
+  if (!data || !data.models) {
+    return `<div class="perf-card"><h2>${sport.label}</h2><div class="empty-state">No graded games yet this season.</div></div>`;
+  }
+  const rows = Object.entries(data.models).map(([key, rec]) => {
+    const w = rec.W || 0, l = rec.L || 0, total = w + l;
+    const pct = total > 0 ? Math.round((w / total) * 100) + "%" : "N/A";
+    const isConsensus = key === "CONSENSUS";
+    return `<tr class="${isConsensus ? "consensus-row-perf" : ""}">
+      <td>${key}</td>
+      <td>${w}-${l}</td>
+      <td class="perf-pct">${pct}</td>
+    </tr>`;
+  }).join("");
+  const updated = data.updated ? fmtTime(data.updated) : "N/A";
+  return `
+    <div class="perf-card">
+      <h2>${sport.label}</h2>
+      <div class="perf-updated">Last graded: ${updated}</div>
+      <table class="perf">
+        <tr><th>Model</th><th>Record</th><th>Win %</th></tr>
+        ${rows}
+      </table>
+    </div>
+  `;
+}
+
+function loadPerformance() {
+  const container = document.getElementById("performance");
+  container.innerHTML = '<div class="empty-state">Loading&hellip;</div>';
+  Promise.all(SPORTS.map(sport =>
+    fetch(sport.perfFile + "?_=" + Date.now())
+      .then(r => r.ok ? r.json() : null)
+      .catch(() => null)
+      .then(data => ({ sport, data }))
+  )).then(results => {
+    container.innerHTML = results.map(({ sport, data }) => renderPerfCard(sport, data)).join("");
+  });
+}
+
 (function init() {
   let saved = null;
   try { saved = localStorage.getItem("wagrx-last-sport"); } catch (e) {}
   if (saved && SPORTS.some(s => s.key === saved)) currentSport = saved;
   renderTabs();
+  setViewVisibility();
   loadSport(currentSport);
 })();
 </script>

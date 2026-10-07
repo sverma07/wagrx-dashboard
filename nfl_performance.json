@@ -1,0 +1,38 @@
+{
+  "sport": "NFL",
+  "updated": "2026-10-07T14:26:19-04:00",
+  "models": {
+    "M1: Normal Score": {
+      "W": 40,
+      "L": 26
+    },
+    "M2: Relevance": {
+      "W": 40,
+      "L": 27
+    },
+    "M3: Efficiency": {
+      "W": 16,
+      "L": 22
+    },
+    "M4: ATS Trends": {
+      "W": 22,
+      "L": 16
+    },
+    "M5: Luck": {
+      "W": 20,
+      "L": 25
+    },
+    "M6: Sharp Money": {
+      "W": 4,
+      "L": 2
+    },
+    "M7: QB Injury Edge": {
+      "W": 4,
+      "L": 9
+    },
+    "CONSENSUS": {
+      "W": 40,
+      "L": 27
+    }
+  }
+}
