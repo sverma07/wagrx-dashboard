@@ -305,6 +305,11 @@ function sharpStrength(g) {
   return { label: "LEAN", cls: "sharp-lean", gap, team };
 }
 
+// The scripts store the favorite as "<Team> -fav" (an Excel summary label); drop the suffix here.
+function favoriteName(g) {
+  return (g.favorite || "N/A").replace(/\s*-fav$/, "");
+}
+
 // Always-visible sharp money summary under the consensus box, so it doesn't need the dropdown.
 function renderSharpRow(g) {
   if (!g.picks || !("M6: Sharp Money" in g.picks)) return "";
@@ -395,7 +400,7 @@ function renderGame(g, idx) {
         <div class="game-title-row">
           <div>
             <div class="game-title">${g.game || ""}</div>
-            <div class="game-meta">Line: ${g.spread || "N/A"} &middot; Favorite: ${g.favorite || "N/A"}</div>
+            <div class="game-meta">Line: ${g.spread || "N/A"} &middot; Favorite: ${favoriteName(g)}</div>
           </div>
           <span class="chevron">&#9654;</span>
         </div>
@@ -451,7 +456,7 @@ function exportCSV() {
   const rows = currentGames.map(g => {
     const picks = g.picks || {};
     const pickVals = currentModelKeys.map(k => (picks[k] || "N/A").replace("TAKE: ", ""));
-    return [g.game, g.spread, g.favorite, ...pickVals, g.confidence];
+    return [g.game, g.spread, favoriteName(g), ...pickVals, g.confidence];
   });
   const csv = [headers, ...rows].map(r => r.map(csvEscape).join(",")).join("\r\n");
   const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
