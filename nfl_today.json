@@ -337,6 +337,62 @@
           "away_id": "27"
         }
       ]
+    },
+    {
+      "time": "2026-10-08T10:05:04-04:00",
+      "games": [
+        {
+          "game": "Dallas Cowboys (H) vs Tampa Bay Buccaneers (A)",
+          "spread": "DAL -8.5",
+          "favorite": "Dallas Cowboys -fav",
+          "confidence": "57%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Dallas Cowboys",
+            "M2: Relevance": "TAKE: Dallas Cowboys",
+            "M3: Efficiency": "TAKE: Tampa Bay Buccaneers",
+            "M4: ATS Trends": "TAKE: Dallas Cowboys",
+            "M5: Luck": "TAKE: Tampa Bay Buccaneers",
+            "M6: Sharp Money": "TAKE: Tampa Bay Buccaneers",
+            "M7: QB Injury Edge": "TAKE: Dallas Cowboys",
+            "CONSENSUS": "TAKE: Dallas Cowboys"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 29,
+              "away": 16
+            },
+            "M2: Relevance": {
+              "home": 40.6456,
+              "away": 16.3332
+            },
+            "M3: Efficiency": {
+              "margin": 3.8
+            },
+            "M4: ATS Trends": {
+              "home": 10,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "-0.2",
+              "away": "-1.9"
+            },
+            "M6: Sharp Money": {
+              "home_b": 72.03,
+              "home_m": 66.64,
+              "away_b": 27.97,
+              "away_m": 33.36
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Dak Prescott (Active)",
+              "away_status": "Baker Mayfield (Out) -> Jalon Daniels (Active) starting"
+            }
+          },
+          "team_home": "Dallas Cowboys",
+          "team_away": "Tampa Bay Buccaneers",
+          "home_id": "6",
+          "away_id": "27"
+        }
+      ]
     }
   ]
 }
