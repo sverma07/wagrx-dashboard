@@ -292,11 +292,13 @@ function fmtNum(v) {
 function sharpStrength(g) {
   const d = (g.detail || {})["M6: Sharp Money"];
   if (!d || d.home_b === undefined || d.home_b === null) return null;
-  const gap = Math.abs(parseFloat(d.home_m) - parseFloat(d.home_b));
-  if (isNaN(gap) || gap === 0) return null;
-  if (gap > 20) return { label: "EXTREME", cls: "sharp-extreme", gap };
-  if (gap >= 10) return { label: "STRONG", cls: "sharp-strong", gap };
-  return { label: "LEAN", cls: "sharp-lean", gap };
+  const signed = parseFloat(d.home_m) - parseFloat(d.home_b);
+  if (isNaN(signed) || signed === 0) return null;
+  const gap = Math.abs(signed);
+  const team = signed > 0 ? (g.team_home || "Home") : (g.team_away || "Away");
+  if (gap > 20) return { label: "EXTREME", cls: "sharp-extreme", gap, team };
+  if (gap >= 10) return { label: "STRONG", cls: "sharp-strong", gap, team };
+  return { label: "LEAN", cls: "sharp-lean", gap, team };
 }
 
 function formatDetail(g, modelKey) {
@@ -324,7 +326,7 @@ function formatDetail(g, modelKey) {
     return `${teamHome}: <span class="num">${fmtNum(d.home_b)}%</span> bets / <span class="num">${fmtNum(d.home_m)}%</span> money`
       + `&nbsp;&nbsp;|&nbsp;&nbsp;`
       + `${teamAway}: <span class="num">${fmtNum(d.away_b)}%</span> bets / <span class="num">${fmtNum(d.away_m)}%</span> money`
-      + (s ? `<br>Gap: <span class="num">${s.gap.toFixed(1)}</span> pts<span class="tag ${s.cls}">${s.label}</span>` : "");
+      + (s ? `<br>Gap: <span class="num">${s.gap.toFixed(1)}</span> pts toward ${s.team}<span class="tag ${s.cls}">${s.label}</span>` : "");
   }
 
   if (modelKey.includes("QB Injury")) {
