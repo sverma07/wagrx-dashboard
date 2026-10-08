@@ -267,6 +267,7 @@
   .perf-pct { font-weight: 700; }
   .tag.neutral { background: var(--neutral-bg); color: var(--text-dim); }
   .hist-record { font-weight: 700; color: var(--text); }
+  .hist-note { color: var(--text-dim); font-size: 0.8rem; margin: -6px 2px 12px; }
 </style>
 </head>
 <body>
@@ -410,14 +411,21 @@ function formatDetail(g, modelKey) {
     + `${teamAway}: <span class="num">${awayVal ?? "N/A"}</span>`;
 }
 
-function renderGame(g, idx) {
+// grade (History only): { cover, final, status } from that day's graded results.
+// scope keeps the detail-dropdown ids unique between the Games and History views.
+function renderGame(g, idx, grade = null, scope = "games") {
   const picks = g.picks || {};
+  const graded = grade && grade.cover;
+  const gradeTag = pick => {
+    if (!graded || !pick || !pick.startsWith("TAKE:")) return "";
+    return resultTag(pick.replace("TAKE:", "").trim() === grade.cover ? "WIN" : "LOSS");
+  };
   const modelKeys = Object.keys(picks);
   const modelRows = modelKeys.filter(k => k !== "CONSENSUS").map(key => {
     const pick = picks[key];
     const consensusPick = picks.CONSENSUS || "";
-    let tag = "";
-    if (pick && pick.startsWith("TAKE:") && consensusPick && consensusPick.startsWith("TAKE:")) {
+    let tag = gradeTag(pick);  // once graded, WIN/LOSS replaces AGREE/DISAGREE
+    if (!graded && pick && pick.startsWith("TAKE:") && consensusPick && consensusPick.startsWith("TAKE:")) {
       tag = pick === consensusPick
         ? '<span class="tag agree">AGREE</span>'
         : '<span class="tag disagree">DISAGREE</span>';
@@ -435,6 +443,9 @@ function renderGame(g, idx) {
   const confidence = g.confidence || "N/A";
   const searchKey = (g.game || "").toLowerCase();
   const detailOptions = modelKeys.map(k => `<option value="${k}">${k}</option>`).join("");
+  const finalMeta = grade && grade.final ? ` &middot; Final: ${grade.final}` : "";
+  let consensusTag = gradeTag(picks.CONSENSUS || "");
+  if (!consensusTag && grade && grade.status) consensusTag = `<span class="tag neutral">${grade.status.split(" (")[0]}</span>`;
 
   return `
     <div class="game-card" data-search="${searchKey}">
@@ -442,14 +453,14 @@ function renderGame(g, idx) {
         <div class="game-title-row">
           <div>
             <div class="game-title">${g.game || ""}</div>
-            <div class="game-meta">Line: ${g.spread || "N/A"} &middot; Favorite: ${favoriteName(g)}</div>
+            <div class="game-meta">Line: ${g.spread || "N/A"} &middot; Favorite: ${favoriteName(g)}${finalMeta}</div>
           </div>
           <span class="chevron">&#9654;</span>
         </div>
         <div class="consensus-row">
           <div>
             <div class="consensus-label">Consensus</div>
-            <div class="consensus-pick">${consensus}</div>
+            <div class="consensus-pick">${consensus}${consensusTag}</div>
           </div>
           <div class="confidence-badge">${confidence}</div>
         </div>
@@ -458,18 +469,18 @@ function renderGame(g, idx) {
       <div class="models-wrap">
         <table class="models">${modelRows}</table>
         <div class="detail-box">
-          <select class="detail-select" onchange="showModelDetail(${idx}, this.value)">${detailOptions}</select>
-          <div class="detail-text" id="detail-${idx}">${formatDetail(g, modelKeys[0])}</div>
+          <select class="detail-select" onchange="showModelDetail('${scope}', ${idx}, this.value)">${detailOptions}</select>
+          <div class="detail-text" id="detail-${scope}-${idx}">${formatDetail(g, modelKeys[0])}</div>
         </div>
       </div>
     </div>
   `;
 }
 
-function showModelDetail(idx, modelKey) {
-  const g = currentGames[idx];
+function showModelDetail(scope, idx, modelKey) {
+  const g = (scope === "history" ? historyGames : currentGames)[idx];
   if (!g) return;
-  document.getElementById("detail-" + idx).innerHTML = formatDetail(g, modelKey);
+  document.getElementById(`detail-${scope}-${idx}`).innerHTML = formatDetail(g, modelKey);
 }
 
 function filterGames() {
@@ -690,8 +701,9 @@ function loadPerformance() {
 let historySport = null;
 let historyData = null;
 let historyDate = null;
-let historyRuns = [];        // that day's saved runs (days/<sport>/<date>.json), if any
-let historyRun = "graded";   // "graded" = the morning picks that were graded, else a run index
+let historyRuns = [];   // that day's saved runs (days/<sport>/<date>.json), if any
+let historyRun = null;  // index into historyRuns; defaults to the day's last run
+let historyGames = [];  // games currently rendered in History (for the detail dropdowns)
 
 function selectHistory() {
   currentView = "history";
@@ -733,7 +745,7 @@ function selectHistoryDate(d) {
 
 function loadHistoryRuns() {
   historyRuns = [];
-  historyRun = "graded";
+  historyRun = null;
   renderHistory();
   if (!historyDate) return;
   const sport = historySport, date = historyDate;
@@ -743,39 +755,14 @@ function loadHistoryRuns() {
     .then(data => {
       if (sport !== historySport || date !== historyDate) return;  // user moved on meanwhile
       historyRuns = (data && data.snapshots) || [];
+      historyRun = historyRuns.length ? historyRuns.length - 1 : null;
       renderHistory();
     });
 }
 
 function selectHistoryRun(v) {
-  historyRun = v;
+  historyRun = parseInt(v, 10);
   renderHistory();
-}
-
-// Re-grade one saved run's picks against that day's final results (cover is
-// decided by the graded morning line, same as the Graded picks view).
-function gradeRun(snap, gradedGames) {
-  return (snap.games || []).map(g => {
-    const h = gradedGames.find(x => x.team_home === g.team_home && x.team_away === g.team_away) || {};
-    const picks = {};
-    for (const [k, raw] of Object.entries(g.picks || {})) {
-      const r = String(raw || "N/A");
-      if (r.startsWith("TAKE:")) {
-        const team = r.replace("TAKE:", "").trim();
-        picks[k] = { pick: team, result: h.cover ? (team === h.cover ? "WIN" : "LOSS") : null };
-      } else {
-        picks[k] = { pick: r, result: null };
-      }
-    }
-    return {
-      game: g.game, team_home: g.team_home, team_away: g.team_away,
-      line: g.spread, final: h.final, cover: h.cover,
-      status: h.game ? h.status : "Not graded",
-      confidence: g.confidence,
-      sharp: (g.detail || {})["M6: Sharp Money"] || {},
-      picks,
-    };
-  });
 }
 
 function resultTag(result) {
@@ -826,31 +813,59 @@ function renderHistory() {
   const dateOpts = days.length
     ? days.map(d => `<option value="${d}"${d === historyDate ? " selected" : ""}>${fmtDate(d)}</option>`).join("")
     : "<option>No graded days</option>";
+  const runOpts = historyRuns.map((r, i) =>
+    `<option value="${i}"${i === historyRun ? " selected" : ""}>${new Date(r.time).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })}</option>`
+  ).join("");
   const controls = `
     <div class="controls-row">
       <select class="runtime-select" onchange="loadHistory(this.value)">${sportOpts}</select>
       <select class="runtime-select" onchange="selectHistoryDate(this.value)"${days.length ? "" : " disabled"}>${dateOpts}</select>
-      ${historyRuns.length ? `<select class="runtime-select" onchange="selectHistoryRun(this.value)" title="Run time">
-        <option value="graded"${historyRun === "graded" ? " selected" : ""}>Graded picks</option>
-        ${historyRuns.map((r, i) => `<option value="${i}"${String(i) === historyRun ? " selected" : ""}>${new Date(r.time).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })} run</option>`).join("")}
-      </select>` : ""}
+      ${historyRuns.length ? `<select class="runtime-select" onchange="selectHistoryRun(this.value)" title="Run time">${runOpts}</select>` : ""}
     </div>`;
   const container = document.getElementById("history");
   if (!days.length) {
     container.innerHTML = controls + `<div class="empty-state">No graded ${sport.label} games yet.</div>`;
     return;
   }
-  const graded = historyData.days[historyDate] || [];
-  const games = historyRun === "graded" || !historyRuns[historyRun] ? graded : gradeRun(historyRuns[historyRun], graded);
-  const results = games.map(g => (g.picks && g.picks.CONSENSUS || {}).result);
+  const gradedGames = historyData.days[historyDate] || [];
+  const run = historyRuns[historyRun];
+
+  // Days from before runs were saved only have the graded morning picks.
+  if (!run) {
+    historyGames = [];
+    const results = gradedGames.map(g => (g.picks && g.picks.CONSENSUS || {}).result);
+    container.innerHTML = controls + dayRecordBar(results, gradedGames.length,
+      "Run-by-run snapshots weren't saved for this day, so this shows the graded morning picks.")
+      + gradedGames.map(renderHistoryGame).join("");
+    return;
+  }
+
+  // A saved run: the exact cards the Games view showed at that time, plus the grade.
+  historyGames = run.games || [];
+  const grades = historyGames.map(g => {
+    const h = gradedGames.find(x => x.team_home === g.team_home && x.team_away === g.team_away);
+    return h ? { cover: h.cover, final: h.final, status: h.status } : { status: "Not graded" };
+  });
+  const results = historyGames.map((g, i) => {
+    const c = (g.picks || {}).CONSENSUS || "";
+    if (!grades[i].cover || !c.startsWith("TAKE:")) return null;
+    return c.replace("TAKE:", "").trim() === grades[i].cover ? "WIN" : "LOSS";
+  });
+  container.innerHTML = controls + dayRecordBar(results, historyGames.length,
+    `Showing the ${fmtTime(run.time)} run, graded against final scores.`)
+    + historyGames.map((g, i) => renderGame(g, i, grades[i], "history")).join("");
+}
+
+function dayRecordBar(results, count, note) {
   const w = results.filter(r => r === "WIN").length;
   const l = results.filter(r => r === "LOSS").length;
   const pct = w + l ? ` (${Math.round(w / (w + l) * 100)}%)` : "";
-  container.innerHTML = controls + `
+  return `
     <div class="status-bar">
       <span>Consensus: <span class="hist-record">${w}-${l}</span>${pct}</span>
-      <span>${games.length} ${games.length === 1 ? "game" : "games"}</span>
-    </div>` + games.map(renderHistoryGame).join("");
+      <span>${count} ${count === 1 ? "game" : "games"}</span>
+    </div>
+    <div class="hist-note">${note}</div>`;
 }
 
 (function init() {
