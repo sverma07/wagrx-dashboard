@@ -275,35 +275,62 @@
 
   /* Net-wins chart. Series colors: reference palette dark steps, slots 1-4, validated
      against the card surface #17181d (adjacent CVD dE 8.4, normal-vision 19.8, all >= 3:1). */
-  .net-card { padding-bottom: 12px; }
-  .net-controls { display: flex; gap: 4px; margin-bottom: 12px; }
+  .net-card { padding: 18px 18px 14px; }
+  .net-head { margin-bottom: 14px; }
+  .net-head h2 { font-size: 1.05rem; margin: 10px 0 2px; letter-spacing: 0.01em; }
+  .net-sub { color: var(--text-dim); font-size: 0.8rem; }
+  .seg { display: inline-flex; padding: 3px; gap: 2px; background: var(--neutral-bg); border: 1px solid var(--border); border-radius: 10px; }
   .range-btn {
-    padding: 6px 12px; border: 1px solid var(--border); border-radius: 8px;
-    background: transparent; color: var(--text-dim); font-size: 0.8rem; font-weight: 600; cursor: pointer;
+    padding: 5px 14px; border: none; border-radius: 7px; background: transparent;
+    color: var(--text-dim); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.03em; cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
   }
   .range-btn:hover { color: var(--text); }
-  .range-btn.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
-  .net-sub { color: var(--text-dim); font-size: 0.78rem; margin: 2px 0 10px; }
-  .net-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.8rem; color: var(--text); margin-bottom: 6px; }
-  .net-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .range-btn.active { background: var(--accent-gradient); color: #fff; }
+  .net-tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-bottom: 14px; }
+  .net-tile {
+    text-align: left; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px;
+    background: var(--neutral-bg); color: var(--text); cursor: default; font: inherit;
+    transition: border-color 0.15s ease, opacity 0.15s ease;
+  }
+  .net-tile:hover, .net-tile:focus-visible { border-color: #3a3f4b; outline: none; }
+  .net-tile .tile-label { display: flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
+  .net-tile .tile-label i { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
+  .net-tile .tile-value { font-size: 1.6rem; font-weight: 700; line-height: 1.15; margin-top: 4px; }
+  .net-tile .tile-meta { font-size: 0.76rem; color: var(--text-dim); margin-top: 2px; }
+  .net-tile.dimmed { opacity: 0.45; }
+  .net-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.78rem; color: var(--text); margin-bottom: 4px; }
+  .net-legend span { display: inline-flex; align-items: center; gap: 6px; cursor: default; }
   .net-legend i { display: inline-block; width: 16px; height: 2px; border-radius: 1px; }
   .net-legend .muted { color: var(--text-dim); }
   .net-plot { position: relative; }
   .net-plot svg { display: block; width: 100%; overflow: visible; }
   .net-plot text { font-size: 11px; fill: var(--text-dim); font-variant-numeric: tabular-nums; }
-  .net-plot .end-label { fill: var(--text); font-weight: 600; }
+  .net-plot .end-label { fill: var(--text); font-weight: 700; font-size: 11.5px; }
+  .net-plot .net-line, .net-plot .net-area, .net-plot .net-end, .net-plot .end-label, .net-plot .leader { transition: opacity 0.15s ease; }
+  .net-plot .faded { opacity: 0.22; }
+  .net-plot .net-area { opacity: 0; }
+  .net-plot .net-area.on { opacity: 1; }
+  .net-plot.draw .net-line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: net-draw 0.7s ease-out forwards; }
+  @keyframes net-draw { to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) { .net-plot.draw .net-line { animation: none; stroke-dashoffset: 0; } }
   .net-tip {
-    position: absolute; pointer-events: none; background: var(--neutral-bg); border: 1px solid var(--border);
-    border-radius: 8px; padding: 8px 10px; font-size: 0.78rem; color: var(--text); white-space: nowrap;
-    box-shadow: var(--shadow); display: none; z-index: 2;
+    position: absolute; pointer-events: none; background: #20232b; border: 1px solid var(--border);
+    border-radius: 10px; padding: 9px 11px; font-size: 0.78rem; color: var(--text); white-space: nowrap;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45); display: none; z-index: 2;
   }
-  .net-tip .tip-date { color: var(--text-dim); margin-bottom: 4px; }
-  .net-tip .tip-row { display: flex; align-items: center; gap: 8px; }
+  .net-tip .tip-date { color: var(--text-dim); margin-bottom: 5px; font-weight: 600; }
+  .net-tip .tip-row { display: flex; align-items: center; gap: 8px; line-height: 1.6; }
   .net-tip .tip-row i { width: 12px; height: 2px; border-radius: 1px; display: inline-block; }
-  .net-tip .tip-val { font-weight: 700; min-width: 28px; }
+  .net-tip .tip-val { font-weight: 700; min-width: 30px; font-variant-numeric: tabular-nums; }
   .net-tip .tip-day { color: var(--text-dim); }
-  .net-table summary { cursor: pointer; color: var(--text-dim); font-size: 0.8rem; margin-top: 8px; }
+  .net-table summary { cursor: pointer; color: var(--text-dim); font-size: 0.8rem; margin-top: 10px; }
   .net-table table { margin-top: 6px; }
+  @media (max-width: 600px) {
+    .net-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .net-tile .tile-value { font-size: 1.35rem; }
+  }
   .tag.neutral { background: var(--neutral-bg); color: var(--text-dim); }
   .hist-record { font-weight: 700; color: var(--text); }
   .hist-note { color: var(--text-dim); font-size: 0.8rem; margin: -6px 2px 12px; }
@@ -767,13 +794,15 @@ function renderPerfCard(sport, data) {
 const NET_RANGES = [{ key: "1w", label: "1W", days: 7 }, { key: "1m", label: "1M", days: 30 },
                     { key: "1y", label: "1Y", days: 365 }, { key: "all", label: "All", days: null }];
 let netRange = "1m";
-let netData = null;  // { sportKey: { "YYYY-MM-DD": { w, l } } }
+let netData = null;   // { sportKey: { "YYYY-MM-DD": { w, l } } }
+let netFocus = null;  // sport key emphasized from a tile/legend hover
 
 function isoDay(d) {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 function parseDay(s) { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); }
 function shortDay(s) { return parseDay(s).toLocaleDateString(undefined, { month: "short", day: "numeric" }); }
+function signed(v) { return v > 0 ? "+" + v : String(v); }
 
 function loadNetData() {
   return Promise.all(SPORTS.map(sport =>
@@ -819,15 +848,52 @@ function netSeries() {
   return { days, series };
 }
 
-function renderNetChart() {
+function renderNetTiles(series) {
+  const tiles = document.querySelector("#net-card .net-tiles");
+  tiles.innerHTML = "";
+  for (const s of series) {
+    const btn = document.createElement("button");
+    btn.className = "net-tile" + (netFocus && netFocus !== s.sport.key ? " dimmed" : "");
+    btn.type = "button";
+    btn.dataset.sport = s.sport.key;
+    const total = s.w + s.l;
+    btn.innerHTML = `<div class="tile-label"><i style="background:${s.color}"></i></div>
+      <div class="tile-value"></div><div class="tile-meta"></div>`;
+    btn.querySelector(".tile-label").append(s.sport.label);
+    btn.querySelector(".tile-value").textContent = s.graded ? signed(s.w - s.l) : "N/A";
+    btn.querySelector(".tile-meta").textContent = s.graded
+      ? `${s.w}-${s.l} · ${Math.round((s.w / total) * 100)}% ATS` : "No graded games";
+    btn.addEventListener("pointerenter", () => setNetFocus(s.sport.key));
+    btn.addEventListener("pointerleave", () => setNetFocus(null));
+    btn.addEventListener("focus", () => setNetFocus(s.sport.key));
+    btn.addEventListener("blur", () => setNetFocus(null));
+    tiles.appendChild(btn);
+  }
+}
+
+// Emphasis: the focused sport keeps full strength (plus a 10% area wash); the rest fade.
+function setNetFocus(key) {
+  netFocus = key;
+  const card = document.getElementById("net-card");
+  if (!card) return;
+  card.querySelectorAll("[data-sport]").forEach(el => {
+    const dim = key && el.dataset.sport !== key;
+    if (el.classList.contains("net-tile")) el.classList.toggle("dimmed", !!dim);
+    else el.classList.toggle("faded", !!dim);
+    if (el.classList.contains("net-area")) el.classList.toggle("on", el.dataset.sport === key);
+  });
+}
+
+function renderNetChart(animate = false) {
   const card = document.getElementById("net-card");
   if (!card || !netData) return;
   const { days, series } = netSeries();
+  renderNetTiles(series);
   const plot = card.querySelector(".net-plot");
-  const W = Math.max(280, plot.clientWidth), H = 240;
-  const m = { top: 10, right: 92, bottom: 26, left: 34 };
+  const W = Math.max(280, plot.clientWidth), H = 260;
+  const m = { top: 12, right: 96, bottom: 28, left: 36 };
   const iw = W - m.left - m.right, ih = H - m.top - m.bottom;
-  const all = series.flatMap(s => s.values).concat([0]);
+  const all = series.filter(s => s.graded).flatMap(s => s.values).concat([0]);
   let lo = Math.min(...all), hi = Math.max(...all);
   if (lo === hi) { lo -= 1; hi += 1; }
   const step = [1, 2, 5, 10, 20, 50, 100].find(st => (hi - lo) / st <= 6) || 100;
@@ -835,43 +901,72 @@ function renderNetChart() {
   const x = i => m.left + (days.length > 1 ? (i / (days.length - 1)) * iw : iw / 2);
   const y = v => m.top + (1 - (v - lo) / (hi - lo)) * ih;
 
-  let svg = `<svg viewBox="0 0 ${W} ${H}" height="${H}" role="img" aria-label="Net wins over time by sport">`;
+  let svg = `<svg viewBox="0 0 ${W} ${H}" height="${H}" role="img" aria-label="Net wins over time by sport"><defs>`;
+  series.forEach((s, i) => {
+    svg += `<linearGradient id="net-wash-${i}" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="${s.color}" stop-opacity="0.18"/><stop offset="1" stop-color="${s.color}" stop-opacity="0.02"/></linearGradient>`;
+  });
+  svg += `</defs>`;
+  // recessive solid hairline grid; the zero line one step stronger
   for (let v = lo; v <= hi + 1e-9; v += step) {
-    svg += `<line x1="${m.left}" x2="${m.left + iw}" y1="${y(v)}" y2="${y(v)}" stroke="${v === 0 ? "#3a3f4b" : "#23262e"}" stroke-width="1"/>`;
-    svg += `<text x="${m.left - 6}" y="${y(v) + 4}" text-anchor="end">${v > 0 ? "+" + v : v}</text>`;
+    svg += `<line x1="${m.left}" x2="${m.left + iw}" y1="${y(v)}" y2="${y(v)}" stroke="${v === 0 ? "#3a3f4b" : "#22252d"}" stroke-width="1"/>`;
+    svg += `<text x="${m.left - 8}" y="${y(v) + 4}" text-anchor="end">${signed(v)}</text>`;
   }
   const ticks = Math.max(2, Math.min(6, days.length, Math.floor(iw / 70)));  // ~70px per date label
   for (let t = 0; t < ticks; t++) {
     const i = ticks === 1 ? 0 : Math.round(t * (days.length - 1) / (ticks - 1));
-    svg += `<text x="${x(i)}" y="${H - 6}" text-anchor="${t === 0 ? "start" : t === ticks - 1 ? "end" : "middle"}">${shortDay(days[i])}</text>`;
+    svg += `<text x="${x(i)}" y="${H - 8}" text-anchor="${t === 0 ? "start" : t === ticks - 1 ? "end" : "middle"}">${shortDay(days[i])}</text>`;
   }
-  // step-after lines: the net only changes on a graded day
-  for (const s of series) {
-    if (!s.graded) continue;
-    let d = `M${x(0)},${y(s.values[0])}`;
-    for (let i = 1; i < days.length; i++) d += `H${x(i)}V${y(s.values[i])}`;
-    svg += `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
-  }
-  // direct end labels, nudged apart so they never overlap
-  const ends = series.filter(s => s.graded).map(s => ({ s, v: s.values[s.values.length - 1], yy: y(s.values[s.values.length - 1]) }))
-    .sort((a, b) => a.yy - b.yy);
-  for (let i = 1; i < ends.length; i++) if (ends[i].yy - ends[i - 1].yy < 13) ends[i].yy = ends[i - 1].yy + 13;
+  // per-sport area wash (shown only when that sport is focused), then the 2px lines
+  series.forEach((s, i) => {
+    if (!s.graded) return;
+    const pts = s.values.map((v, j) => `${x(j)},${y(v)}`).join(" L");
+    svg += `<path class="net-area" data-sport="${s.sport.key}" d="M${x(0)},${y(0)} L${pts} L${x(days.length - 1)},${y(0)} Z" fill="url(#net-wash-${i})"/>`;
+  });
+  series.forEach(s => {
+    if (!s.graded) return;
+    const pts = s.values.map((v, j) => `${x(j)},${y(v)}`).join(" L");
+    svg += `<path class="net-line" data-sport="${s.sport.key}" pathLength="1" d="M${pts}" fill="none" stroke="${s.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  });
+  // end dots (r 4, 2px surface ring) + end labels; colliding labels get a leader line
+  const xEnd = x(days.length - 1);
+  const ends = series.filter(s => s.graded).map(s => {
+    const v = s.values[s.values.length - 1];
+    return { s, v, ly: y(v), yy: y(v) };
+  }).sort((a, b) => a.yy - b.yy);
+  for (let i = 1; i < ends.length; i++) if (ends[i].yy - ends[i - 1].yy < 15) ends[i].yy = ends[i - 1].yy + 15;
   for (const e of ends) {
-    svg += `<text class="end-label" x="${m.left + iw + 8}" y="${e.yy + 4}">${e.s.sport.label} ${e.v > 0 ? "+" + e.v : e.v}</text>`;
+    const k = e.s.sport.key;
+    if (Math.abs(e.yy - e.ly) > 1) {
+      svg += `<path class="leader" data-sport="${k}" d="M${xEnd + 6},${e.ly} L${xEnd + 12},${e.yy}" stroke="#5b6170" stroke-width="1" fill="none"/>`;
+    }
+    svg += `<circle class="net-end" data-sport="${k}" cx="${xEnd}" cy="${e.ly}" r="4" fill="${e.s.color}" stroke="#17181d" stroke-width="2"/>`;
+    svg += `<text class="end-label" data-sport="${k}" x="${xEnd + 15}" y="${e.yy + 4}">${e.s.sport.label} ${signed(e.v)}</text>`;
   }
   svg += `<line class="net-cross" x1="0" x2="0" y1="${m.top}" y2="${m.top + ih}" stroke="#5b6170" stroke-width="1" visibility="hidden"/>`;
   svg += `<g class="net-dots"></g>`;
   svg += `<rect class="net-hit" x="${m.left}" y="${m.top}" width="${iw}" height="${ih}" fill="transparent"/></svg>`;
+  plot.classList.toggle("draw", animate);
   plot.innerHTML = svg + `<div class="net-tip"></div>`;
 
-  // legend (line keys) + empty-state note for sports with nothing graded in range
-  card.querySelector(".net-legend").innerHTML = series.map(s =>
-    `<span><i style="background:${s.color}"></i>${s.sport.label}${s.graded ? "" : ' <span class="muted">(no graded games)</span>'}</span>`
-  ).join("");
+  // legend (line keys); hovering an entry focuses that sport
+  const legend = card.querySelector(".net-legend");
+  legend.innerHTML = "";
+  for (const s of series) {
+    const item = document.createElement("span");
+    item.innerHTML = `<i style="background:${s.color}"></i>`;
+    item.append(s.sport.label);
+    if (!s.graded) { const note = document.createElement("span"); note.className = "muted"; note.textContent = "(no graded games)"; item.append(" ", note); }
+    else {
+      item.addEventListener("pointerenter", () => setNetFocus(s.sport.key));
+      item.addEventListener("pointerleave", () => setNetFocus(null));
+    }
+    legend.appendChild(item);
+  }
 
   // table view: the same numbers without hovering
   card.querySelector(".net-table tbody").innerHTML = series.map(s =>
-    `<tr><td>${s.sport.label}</td><td>${s.w}-${s.l}</td><td class="perf-pct">${s.w - s.l > 0 ? "+" : ""}${s.w - s.l}</td></tr>`
+    `<tr><td>${s.sport.label}</td><td>${s.w}-${s.l}</td><td class="perf-pct">${signed(s.w - s.l)}</td></tr>`
   ).join("");
 
   // hover: crosshair snaps to the nearest day; one tooltip lists every sport
@@ -892,8 +987,7 @@ function renderNetChart() {
     for (const s of series.filter(s => s.graded)) {
       const row = document.createElement("div"); row.className = "tip-row";
       const key = document.createElement("i"); key.style.background = s.color;
-      const val = document.createElement("span"); val.className = "tip-val";
-      val.textContent = (s.values[i] > 0 ? "+" : "") + s.values[i];
+      const val = document.createElement("span"); val.className = "tip-val"; val.textContent = signed(s.values[i]);
       const name = document.createElement("span"); name.textContent = s.sport.label;
       const rec = s.byDay[days[i]];
       const day = document.createElement("span"); day.className = "tip-day";
@@ -903,28 +997,32 @@ function renderNetChart() {
     }
     tip.style.display = "block";
     const left = (x(i) / W) * rect.width;
-    tip.style.left = Math.min(Math.max(0, left + 12), rect.width - tip.offsetWidth) + "px";
+    tip.style.left = Math.min(Math.max(0, left + 14), rect.width - tip.offsetWidth) + "px";
     tip.style.top = "4px";
   };
   const hide = () => { tip.style.display = "none"; cross.setAttribute("visibility", "hidden"); dots.innerHTML = ""; };
   hit.addEventListener("pointermove", show);
   hit.addEventListener("pointerleave", hide);
+  setNetFocus(netFocus);
 }
 
 function selectNetRange(key) {
   netRange = key;
   document.querySelectorAll(".range-btn").forEach(b => b.classList.toggle("active", b.dataset.range === key));
-  renderNetChart();
+  renderNetChart(true);
 }
 
 function netCardHtml() {
   return `
     <div class="perf-card net-card" id="net-card">
-      <div class="net-controls">${NET_RANGES.map(r =>
-        `<button class="range-btn${r.key === netRange ? " active" : ""}" data-range="${r.key}" onclick="selectNetRange('${r.key}')">${r.label}</button>`).join("")}
+      <div class="net-head">
+        <div class="seg" role="group" aria-label="Time range">${NET_RANGES.map(r =>
+          `<button class="range-btn${r.key === netRange ? " active" : ""}" data-range="${r.key}" onclick="selectNetRange('${r.key}')">${r.label}</button>`).join("")}
+        </div>
+        <h2>Net Wins Over Time</h2>
+        <div class="net-sub">Consensus picks against the spread: running wins minus losses by sport.</div>
       </div>
-      <h2>Net wins over time</h2>
-      <div class="net-sub">Consensus picks against the spread: running wins minus losses, by sport.</div>
+      <div class="net-tiles"></div>
       <div class="net-legend"></div>
       <div class="net-plot"></div>
       <details class="net-table">
@@ -934,7 +1032,7 @@ function netCardHtml() {
     </div>`;
 }
 
-window.addEventListener("resize", () => { if (currentView === "performance") renderNetChart(); });
+window.addEventListener("resize", () => { if (currentView === "performance") renderNetChart(false); });
 
 function loadPerformance() {
   const container = document.getElementById("performance");
@@ -946,7 +1044,7 @@ function loadPerformance() {
       .then(data => ({ sport, data }))
   )).then(results => {
     container.innerHTML = netCardHtml() + results.map(({ sport, data }) => renderPerfCard(sport, data)).join("");
-    loadNetData().then(renderNetChart);
+    loadNetData().then(() => renderNetChart(true));
   });
 }
 
