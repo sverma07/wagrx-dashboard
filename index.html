@@ -495,7 +495,7 @@ function showModelDetail(scope, idx, modelKey) {
 
 function filterGames() {
   const q = document.getElementById("search").value.trim().toLowerCase();
-  const cards = document.querySelectorAll(".game-card");
+  const cards = document.querySelectorAll("#games .game-card");
   let visible = 0;
   cards.forEach(card => {
     const match = !q || (card.dataset.search || "").includes(q);
