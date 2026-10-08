@@ -135,6 +135,10 @@
     box-shadow: var(--shadow);
   }
   .runtime-select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  @media (max-width: 480px) {
+    .controls-row { flex-wrap: wrap; }
+    .search-box { order: 5; flex: 1 1 100%; }
+  }
 
   .game-card {
     background: var(--card-bg);
@@ -253,7 +257,8 @@
     <span id="game-count"></span>
   </div>
   <div class="controls-row" id="controls-row">
-    <select id="runtime-select" class="runtime-select" onchange="selectSnapshot(this.value)"></select>
+    <select id="date-select" class="runtime-select" onchange="selectDate(this.value)" title="Day"></select>
+    <select id="runtime-select" class="runtime-select" onchange="selectSnapshot(this.value)" title="Run time"></select>
     <input type="search" id="search" class="search-box" placeholder="Search teams&hellip;" oninput="filterGames()">
     <button class="export-btn" onclick="exportCSV()" title="Export current view as CSV">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -282,6 +287,7 @@ let allSnapshots = [];
 let currentGames = [];
 let currentSnapshotTime = "";
 let currentModelKeys = [];
+let todayDate = null;  // date of <sport>_today.json; older days load from days/<sport>/<date>.json
 
 function fmtTime(iso) {
   if (!iso) return "never run yet";
@@ -480,7 +486,10 @@ function exportCSV() {
 
 function populateRuntimeSelect(snapshots) {
   const sel = document.getElementById("runtime-select");
-  sel.innerHTML = snapshots.map((s, i) => `<option value="${i}">${fmtTime(s.time)}</option>`).join("");
+  // The day is picked in the date dropdown, so each run is labeled by time only.
+  sel.innerHTML = snapshots.map((s, i) =>
+    `<option value="${i}">${new Date(s.time).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })}</option>`
+  ).join("");
   sel.value = snapshots.length - 1;
 }
 
@@ -539,24 +548,60 @@ function loadSport(key) {
   document.getElementById("updated-at").textContent = "Loading…";
   document.getElementById("games").innerHTML = "";
   document.getElementById("runtime-select").innerHTML = "";
+  document.getElementById("date-select").innerHTML = "";
   document.getElementById("search").value = "";
 
-  fetch(sport.file + "?_=" + Date.now())
-    .then(r => r.json())
-    .then(data => {
-      allSnapshots = data.snapshots || [];
-      if (allSnapshots.length === 0) {
-        document.getElementById("updated-at").textContent = "No data yet today.";
-        document.getElementById("game-count").textContent = "";
-        document.getElementById("games").innerHTML = '<div class="empty-state">No games loaded yet. Check back after the next run.</div>';
-        return;
-      }
-      populateRuntimeSelect(allSnapshots);
-      renderSnapshot(allSnapshots[allSnapshots.length - 1]);
+  Promise.all([
+    fetch(sport.file + "?_=" + Date.now()).then(r => r.json()),
+    fetch(`days/${key}/index.json?_=` + Date.now()).then(r => r.ok ? r.json() : []).catch(() => []),
+  ])
+    .then(([data, dates]) => {
+      todayDate = data.date || null;
+      populateDateSelect(dates, todayDate);
+      showDay(data);
     })
     .catch(err => {
       document.getElementById("updated-at").textContent = "Could not load data.";
       document.getElementById("games").innerHTML = '<div class="empty-state">Could not load data for this sport yet.</div>';
+      console.error(err);
+    });
+}
+
+function populateDateSelect(dates, latest) {
+  const sel = document.getElementById("date-select");
+  const all = [...new Set([...(latest ? [latest] : []), ...dates])].sort().reverse();
+  sel.innerHTML = all.map(d => {
+    const [y, m, day] = d.split("-").map(Number);
+    const label = new Date(y, m - 1, day).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
+    return `<option value="${d}">${label}</option>`;
+  }).join("");
+  sel.value = latest || all[0] || "";
+  sel.style.display = all.length ? "" : "none";
+}
+
+function showDay(data) {
+  allSnapshots = data.snapshots || [];
+  document.getElementById("runtime-select").innerHTML = "";
+  if (allSnapshots.length === 0) {
+    document.getElementById("updated-at").textContent = "No data yet today.";
+    document.getElementById("game-count").textContent = "";
+    document.getElementById("games").innerHTML = '<div class="empty-state">No games loaded yet. Check back after the next run.</div>';
+    return;
+  }
+  populateRuntimeSelect(allSnapshots);
+  renderSnapshot(allSnapshots[allSnapshots.length - 1]);
+}
+
+function selectDate(d) {
+  const sport = SPORTS.find(s => s.key === currentSport);
+  const url = d === todayDate ? sport.file : `days/${currentSport}/${d}.json`;
+  document.getElementById("games").innerHTML = '<div class="empty-state">Loading&hellip;</div>';
+  document.getElementById("search").value = "";
+  fetch(url + "?_=" + Date.now())
+    .then(r => r.json())
+    .then(showDay)
+    .catch(err => {
+      document.getElementById("games").innerHTML = '<div class="empty-state">Could not load that day.</div>';
       console.error(err);
     });
 }
