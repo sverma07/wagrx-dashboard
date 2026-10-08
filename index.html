@@ -690,6 +690,8 @@ function loadPerformance() {
 let historySport = null;
 let historyData = null;
 let historyDate = null;
+let historyRuns = [];        // that day's saved runs (days/<sport>/<date>.json), if any
+let historyRun = "graded";   // "graded" = the morning picks that were graded, else a run index
 
 function selectHistory() {
   currentView = "history";
@@ -720,13 +722,60 @@ function loadHistory(key) {
       historyData = data;
       const days = historyDays();
       if (!days.includes(historyDate)) historyDate = days[0] || null;
-      renderHistory();
+      loadHistoryRuns();
     });
 }
 
 function selectHistoryDate(d) {
   historyDate = d;
+  loadHistoryRuns();
+}
+
+function loadHistoryRuns() {
+  historyRuns = [];
+  historyRun = "graded";
   renderHistory();
+  if (!historyDate) return;
+  const sport = historySport, date = historyDate;
+  fetch(`days/${sport}/${date}.json?_=` + Date.now())
+    .then(r => r.ok ? r.json() : null)
+    .catch(() => null)
+    .then(data => {
+      if (sport !== historySport || date !== historyDate) return;  // user moved on meanwhile
+      historyRuns = (data && data.snapshots) || [];
+      renderHistory();
+    });
+}
+
+function selectHistoryRun(v) {
+  historyRun = v;
+  renderHistory();
+}
+
+// Re-grade one saved run's picks against that day's final results (cover is
+// decided by the graded morning line, same as the Graded picks view).
+function gradeRun(snap, gradedGames) {
+  return (snap.games || []).map(g => {
+    const h = gradedGames.find(x => x.team_home === g.team_home && x.team_away === g.team_away) || {};
+    const picks = {};
+    for (const [k, raw] of Object.entries(g.picks || {})) {
+      const r = String(raw || "N/A");
+      if (r.startsWith("TAKE:")) {
+        const team = r.replace("TAKE:", "").trim();
+        picks[k] = { pick: team, result: h.cover ? (team === h.cover ? "WIN" : "LOSS") : null };
+      } else {
+        picks[k] = { pick: r, result: null };
+      }
+    }
+    return {
+      game: g.game, team_home: g.team_home, team_away: g.team_away,
+      line: g.spread, final: h.final, cover: h.cover,
+      status: h.game ? h.status : "Not graded",
+      confidence: g.confidence,
+      sharp: (g.detail || {})["M6: Sharp Money"] || {},
+      picks,
+    };
+  });
 }
 
 function resultTag(result) {
@@ -781,13 +830,18 @@ function renderHistory() {
     <div class="controls-row">
       <select class="runtime-select" onchange="loadHistory(this.value)">${sportOpts}</select>
       <select class="runtime-select" onchange="selectHistoryDate(this.value)"${days.length ? "" : " disabled"}>${dateOpts}</select>
+      ${historyRuns.length ? `<select class="runtime-select" onchange="selectHistoryRun(this.value)" title="Run time">
+        <option value="graded"${historyRun === "graded" ? " selected" : ""}>Graded picks</option>
+        ${historyRuns.map((r, i) => `<option value="${i}"${String(i) === historyRun ? " selected" : ""}>${new Date(r.time).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })} run</option>`).join("")}
+      </select>` : ""}
     </div>`;
   const container = document.getElementById("history");
   if (!days.length) {
     container.innerHTML = controls + `<div class="empty-state">No graded ${sport.label} games yet.</div>`;
     return;
   }
-  const games = historyData.days[historyDate] || [];
+  const graded = historyData.days[historyDate] || [];
+  const games = historyRun === "graded" || !historyRuns[historyRun] ? graded : gradeRun(historyRuns[historyRun], graded);
   const results = games.map(g => (g.picks && g.picks.CONSENSUS || {}).result);
   const w = results.filter(r => r === "WIN").length;
   const l = results.filter(r => r === "LOSS").length;
