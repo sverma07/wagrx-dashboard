@@ -443,7 +443,8 @@ function renderGame(g, idx, grade = null, scope = "games") {
   const confidence = g.confidence || "N/A";
   const searchKey = (g.game || "").toLowerCase();
   const detailOptions = modelKeys.map(k => `<option value="${k}">${k}</option>`).join("");
-  const finalMeta = grade && grade.final ? ` &middot; Final: ${grade.final}` : "";
+  const finalMeta = (grade && grade.final ? ` &middot; Final: ${grade.final}` : "")
+    + (grade && grade.run ? ` &middot; Graded: ${new Date(grade.run).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })} run` : "");
   let consensusTag = gradeTag(picks.CONSENSUS || "");
   if (!consensusTag && grade && grade.status) consensusTag = `<span class="tag neutral">${grade.status.split(" (")[0]}</span>`;
 
@@ -702,7 +703,7 @@ let historySport = null;
 let historyData = null;
 let historyDate = null;
 let historyRuns = [];   // that day's saved runs (days/<sport>/<date>.json), if any
-let historyRun = null;  // index into historyRuns; defaults to the day's last run
+let historyRun = "graded";  // "graded" (each game's last run before kickoff) or an index into historyRuns
 let historyGames = [];  // games currently rendered in History (for the detail dropdowns)
 
 function selectHistory() {
@@ -745,7 +746,7 @@ function selectHistoryDate(d) {
 
 function loadHistoryRuns() {
   historyRuns = [];
-  historyRun = null;
+  historyRun = "graded";
   renderHistory();
   if (!historyDate) return;
   const sport = historySport, date = historyDate;
@@ -755,13 +756,12 @@ function loadHistoryRuns() {
     .then(data => {
       if (sport !== historySport || date !== historyDate) return;  // user moved on meanwhile
       historyRuns = (data && data.snapshots) || [];
-      historyRun = historyRuns.length ? historyRuns.length - 1 : null;
       renderHistory();
     });
 }
 
 function selectHistoryRun(v) {
-  historyRun = parseInt(v, 10);
+  historyRun = v === "graded" ? "graded" : parseInt(v, 10);
   renderHistory();
 }
 
@@ -813,7 +813,7 @@ function renderHistory() {
   const dateOpts = days.length
     ? days.map(d => `<option value="${d}"${d === historyDate ? " selected" : ""}>${fmtDate(d)}</option>`).join("")
     : "<option>No graded days</option>";
-  const runOpts = historyRuns.map((r, i) =>
+  const runOpts = `<option value="graded"${historyRun === "graded" ? " selected" : ""}>Graded</option>` + historyRuns.map((r, i) =>
     `<option value="${i}"${i === historyRun ? " selected" : ""}>${new Date(r.time).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })}</option>`
   ).join("");
   const controls = `
@@ -828,7 +828,25 @@ function renderHistory() {
     return;
   }
   const gradedGames = historyData.days[historyDate] || [];
-  const run = historyRuns[historyRun];
+  const run = historyRun === "graded" ? null : historyRuns[historyRun];
+
+  // Graded view: each game exactly as it looked in the run that was graded (its last run
+  // before kickoff). Games graded from the morning file (no saved run) use the simple card.
+  if (historyRun === "graded" && historyRuns.length) {
+    historyGames = [];
+    const cards = gradedGames.map(h => {
+      const snap = h.graded_run && historyRuns.find(r => r.time === h.graded_run);
+      const g = snap && (snap.games || []).find(x => x.team_home === h.team_home && x.team_away === h.team_away);
+      if (!g) return renderHistoryGame(h);
+      historyGames.push(g);
+      return renderGame(g, historyGames.length - 1,
+        { cover: h.cover, final: h.final, status: h.status, run: h.graded_run }, "history");
+    });
+    const results = gradedGames.map(g => (g.picks && g.picks.CONSENSUS || {}).result);
+    container.innerHTML = controls + dayRecordBar(results, gradedGames.length,
+      "Each game as of its last run before kickoff, which is what was graded.") + cards.join("");
+    return;
+  }
 
   // Days from before runs were saved only have the graded morning picks.
   if (!run) {
