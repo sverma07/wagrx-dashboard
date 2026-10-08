@@ -8,6 +8,10 @@
   :root {
     --bg: #000000;
     --card-bg: #17181d;
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --series-4: #c98500;
     --text: #e8e9ec;
     --text-dim: #9199a8;
     --border: #2b2f38;
@@ -268,6 +272,38 @@
   table.perf tr.consensus-row-perf { background: var(--accent-soft); }
   table.perf tr.sharp-row-perf td { color: var(--text-dim); border-top: 2px solid var(--border); }
   .perf-pct { font-weight: 700; }
+
+  /* Net-wins chart. Series colors: reference palette dark steps, slots 1-4, validated
+     against the card surface #17181d (adjacent CVD dE 8.4, normal-vision 19.8, all >= 3:1). */
+  .net-card { padding-bottom: 12px; }
+  .net-controls { display: flex; gap: 4px; margin-bottom: 12px; }
+  .range-btn {
+    padding: 6px 12px; border: 1px solid var(--border); border-radius: 8px;
+    background: transparent; color: var(--text-dim); font-size: 0.8rem; font-weight: 600; cursor: pointer;
+  }
+  .range-btn:hover { color: var(--text); }
+  .range-btn.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  .net-sub { color: var(--text-dim); font-size: 0.78rem; margin: 2px 0 10px; }
+  .net-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.8rem; color: var(--text); margin-bottom: 6px; }
+  .net-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .net-legend i { display: inline-block; width: 16px; height: 2px; border-radius: 1px; }
+  .net-legend .muted { color: var(--text-dim); }
+  .net-plot { position: relative; }
+  .net-plot svg { display: block; width: 100%; overflow: visible; }
+  .net-plot text { font-size: 11px; fill: var(--text-dim); font-variant-numeric: tabular-nums; }
+  .net-plot .end-label { fill: var(--text); font-weight: 600; }
+  .net-tip {
+    position: absolute; pointer-events: none; background: var(--neutral-bg); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 10px; font-size: 0.78rem; color: var(--text); white-space: nowrap;
+    box-shadow: var(--shadow); display: none; z-index: 2;
+  }
+  .net-tip .tip-date { color: var(--text-dim); margin-bottom: 4px; }
+  .net-tip .tip-row { display: flex; align-items: center; gap: 8px; }
+  .net-tip .tip-row i { width: 12px; height: 2px; border-radius: 1px; display: inline-block; }
+  .net-tip .tip-val { font-weight: 700; min-width: 28px; }
+  .net-tip .tip-day { color: var(--text-dim); }
+  .net-table summary { cursor: pointer; color: var(--text-dim); font-size: 0.8rem; margin-top: 8px; }
+  .net-table table { margin-top: 6px; }
   .tag.neutral { background: var(--neutral-bg); color: var(--text-dim); }
   .hist-record { font-weight: 700; color: var(--text); }
   .hist-note { color: var(--text-dim); font-size: 0.8rem; margin: -6px 2px 12px; }
@@ -726,6 +762,180 @@ function renderPerfCard(sport, data) {
   `;
 }
 
+
+// ---- Performance: net wins (consensus W minus L, against the spread) over time ----
+const NET_RANGES = [{ key: "1w", label: "1W", days: 7 }, { key: "1m", label: "1M", days: 30 },
+                    { key: "1y", label: "1Y", days: 365 }, { key: "all", label: "All", days: null }];
+let netRange = "1m";
+let netData = null;  // { sportKey: { "YYYY-MM-DD": { w, l } } }
+
+function isoDay(d) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+function parseDay(s) { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); }
+function shortDay(s) { return parseDay(s).toLocaleDateString(undefined, { month: "short", day: "numeric" }); }
+
+function loadNetData() {
+  return Promise.all(SPORTS.map(sport =>
+    fetch(sport.histFile + "?_=" + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null)
+      .then(h => {
+        const byDay = {};
+        for (const [day, games] of Object.entries((h && h.days) || {})) {
+          let w = 0, l = 0;
+          for (const g of games || []) {
+            const r = ((g.picks || {}).CONSENSUS || {}).result;
+            if (r === "WIN") w++; else if (r === "LOSS") l++;
+          }
+          if (w || l) byDay[day] = { w, l };
+        }
+        return [sport.key, byDay];
+      })
+  )).then(entries => { netData = Object.fromEntries(entries); });
+}
+
+// Cumulative net per sport, one point per calendar day in the range, starting from 0.
+function netSeries() {
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const allDays = Object.values(netData).flatMap(m => Object.keys(m)).sort();
+  const range = NET_RANGES.find(r => r.key === netRange);
+  let start;
+  if (range.days) { start = new Date(today); start.setDate(start.getDate() - (range.days - 1)); }
+  else {
+    start = allDays.length ? parseDay(allDays[0]) : new Date(today);
+    start.setDate(start.getDate() - 1);  // begin at 0, the day before the first graded day
+  }
+  const days = [];
+  for (let d = new Date(start); d <= today; d.setDate(d.getDate() + 1)) days.push(isoDay(d));
+  const series = SPORTS.map((sport, i) => {
+    const m = netData[sport.key] || {};
+    let net = 0, w = 0, l = 0;
+    const values = days.map(day => {
+      const rec = m[day];
+      if (rec) { net += rec.w - rec.l; w += rec.w; l += rec.l; }
+      return net;
+    });
+    return { sport, color: `var(--series-${i + 1})`, values, byDay: m, w, l, graded: days.some(d => m[d]) };
+  });
+  return { days, series };
+}
+
+function renderNetChart() {
+  const card = document.getElementById("net-card");
+  if (!card || !netData) return;
+  const { days, series } = netSeries();
+  const plot = card.querySelector(".net-plot");
+  const W = Math.max(280, plot.clientWidth), H = 240;
+  const m = { top: 10, right: 92, bottom: 26, left: 34 };
+  const iw = W - m.left - m.right, ih = H - m.top - m.bottom;
+  const all = series.flatMap(s => s.values).concat([0]);
+  let lo = Math.min(...all), hi = Math.max(...all);
+  if (lo === hi) { lo -= 1; hi += 1; }
+  const step = [1, 2, 5, 10, 20, 50, 100].find(st => (hi - lo) / st <= 6) || 100;
+  lo = Math.floor(lo / step) * step; hi = Math.ceil(hi / step) * step;
+  const x = i => m.left + (days.length > 1 ? (i / (days.length - 1)) * iw : iw / 2);
+  const y = v => m.top + (1 - (v - lo) / (hi - lo)) * ih;
+
+  let svg = `<svg viewBox="0 0 ${W} ${H}" height="${H}" role="img" aria-label="Net wins over time by sport">`;
+  for (let v = lo; v <= hi + 1e-9; v += step) {
+    svg += `<line x1="${m.left}" x2="${m.left + iw}" y1="${y(v)}" y2="${y(v)}" stroke="${v === 0 ? "#3a3f4b" : "#23262e"}" stroke-width="1"/>`;
+    svg += `<text x="${m.left - 6}" y="${y(v) + 4}" text-anchor="end">${v > 0 ? "+" + v : v}</text>`;
+  }
+  const ticks = Math.max(2, Math.min(6, days.length, Math.floor(iw / 70)));  // ~70px per date label
+  for (let t = 0; t < ticks; t++) {
+    const i = ticks === 1 ? 0 : Math.round(t * (days.length - 1) / (ticks - 1));
+    svg += `<text x="${x(i)}" y="${H - 6}" text-anchor="${t === 0 ? "start" : t === ticks - 1 ? "end" : "middle"}">${shortDay(days[i])}</text>`;
+  }
+  // step-after lines: the net only changes on a graded day
+  for (const s of series) {
+    if (!s.graded) continue;
+    let d = `M${x(0)},${y(s.values[0])}`;
+    for (let i = 1; i < days.length; i++) d += `H${x(i)}V${y(s.values[i])}`;
+    svg += `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  }
+  // direct end labels, nudged apart so they never overlap
+  const ends = series.filter(s => s.graded).map(s => ({ s, v: s.values[s.values.length - 1], yy: y(s.values[s.values.length - 1]) }))
+    .sort((a, b) => a.yy - b.yy);
+  for (let i = 1; i < ends.length; i++) if (ends[i].yy - ends[i - 1].yy < 13) ends[i].yy = ends[i - 1].yy + 13;
+  for (const e of ends) {
+    svg += `<text class="end-label" x="${m.left + iw + 8}" y="${e.yy + 4}">${e.s.sport.label} ${e.v > 0 ? "+" + e.v : e.v}</text>`;
+  }
+  svg += `<line class="net-cross" x1="0" x2="0" y1="${m.top}" y2="${m.top + ih}" stroke="#5b6170" stroke-width="1" visibility="hidden"/>`;
+  svg += `<g class="net-dots"></g>`;
+  svg += `<rect class="net-hit" x="${m.left}" y="${m.top}" width="${iw}" height="${ih}" fill="transparent"/></svg>`;
+  plot.innerHTML = svg + `<div class="net-tip"></div>`;
+
+  // legend (line keys) + empty-state note for sports with nothing graded in range
+  card.querySelector(".net-legend").innerHTML = series.map(s =>
+    `<span><i style="background:${s.color}"></i>${s.sport.label}${s.graded ? "" : ' <span class="muted">(no graded games)</span>'}</span>`
+  ).join("");
+
+  // table view: the same numbers without hovering
+  card.querySelector(".net-table tbody").innerHTML = series.map(s =>
+    `<tr><td>${s.sport.label}</td><td>${s.w}-${s.l}</td><td class="perf-pct">${s.w - s.l > 0 ? "+" : ""}${s.w - s.l}</td></tr>`
+  ).join("");
+
+  // hover: crosshair snaps to the nearest day; one tooltip lists every sport
+  const svgEl = plot.querySelector("svg"), tip = plot.querySelector(".net-tip");
+  const cross = svgEl.querySelector(".net-cross"), dots = svgEl.querySelector(".net-dots");
+  const hit = svgEl.querySelector(".net-hit");
+  const show = evt => {
+    const rect = svgEl.getBoundingClientRect();
+    const px = (evt.clientX - rect.left) * (W / rect.width);
+    const i = Math.max(0, Math.min(days.length - 1, Math.round(((px - m.left) / iw) * (days.length - 1))));
+    cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible");
+    dots.innerHTML = series.filter(s => s.graded).map(s =>
+      `<circle cx="${x(i)}" cy="${y(s.values[i])}" r="4" fill="${s.color}" stroke="#17181d" stroke-width="2"/>`).join("");
+    tip.innerHTML = "";
+    const head = document.createElement("div"); head.className = "tip-date";
+    head.textContent = parseDay(days[i]).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
+    tip.appendChild(head);
+    for (const s of series.filter(s => s.graded)) {
+      const row = document.createElement("div"); row.className = "tip-row";
+      const key = document.createElement("i"); key.style.background = s.color;
+      const val = document.createElement("span"); val.className = "tip-val";
+      val.textContent = (s.values[i] > 0 ? "+" : "") + s.values[i];
+      const name = document.createElement("span"); name.textContent = s.sport.label;
+      const rec = s.byDay[days[i]];
+      const day = document.createElement("span"); day.className = "tip-day";
+      day.textContent = rec ? `${rec.w}-${rec.l} that day` : "";
+      row.append(key, val, name, day);
+      tip.appendChild(row);
+    }
+    tip.style.display = "block";
+    const left = (x(i) / W) * rect.width;
+    tip.style.left = Math.min(Math.max(0, left + 12), rect.width - tip.offsetWidth) + "px";
+    tip.style.top = "4px";
+  };
+  const hide = () => { tip.style.display = "none"; cross.setAttribute("visibility", "hidden"); dots.innerHTML = ""; };
+  hit.addEventListener("pointermove", show);
+  hit.addEventListener("pointerleave", hide);
+}
+
+function selectNetRange(key) {
+  netRange = key;
+  document.querySelectorAll(".range-btn").forEach(b => b.classList.toggle("active", b.dataset.range === key));
+  renderNetChart();
+}
+
+function netCardHtml() {
+  return `
+    <div class="perf-card net-card" id="net-card">
+      <div class="net-controls">${NET_RANGES.map(r =>
+        `<button class="range-btn${r.key === netRange ? " active" : ""}" data-range="${r.key}" onclick="selectNetRange('${r.key}')">${r.label}</button>`).join("")}
+      </div>
+      <h2>Net wins over time</h2>
+      <div class="net-sub">Consensus picks against the spread: running wins minus losses, by sport.</div>
+      <div class="net-legend"></div>
+      <div class="net-plot"></div>
+      <details class="net-table">
+        <summary>View as table</summary>
+        <table class="perf"><thead><tr><th>Sport</th><th>Record</th><th>Net</th></tr></thead><tbody></tbody></table>
+      </details>
+    </div>`;
+}
+
+window.addEventListener("resize", () => { if (currentView === "performance") renderNetChart(); });
+
 function loadPerformance() {
   const container = document.getElementById("performance");
   container.innerHTML = '<div class="empty-state">Loading&hellip;</div>';
@@ -735,7 +945,8 @@ function loadPerformance() {
       .catch(() => null)
       .then(data => ({ sport, data }))
   )).then(results => {
-    container.innerHTML = results.map(({ sport, data }) => renderPerfCard(sport, data)).join("");
+    container.innerHTML = netCardHtml() + results.map(({ sport, data }) => renderPerfCard(sport, data)).join("");
+    loadNetData().then(renderNetChart);
   });
 }
 
