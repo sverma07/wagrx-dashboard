@@ -1,6 +1,6 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-10-08T14:22:42-04:00",
+  "updated": "2026-10-08T16:43:15-04:00",
   "days": {
     "2026-10-07": [
       {
@@ -157,7 +157,7 @@
         "game": "Northwestern Wildcats (H) vs Penn State Nittany Lions (A)",
         "team_home": "Northwestern Wildcats",
         "team_away": "Penn State Nittany Lions",
-        "line": "N/A",
+        "line": "PSU -3",
         "favorite": "?",
         "final": "Northwestern Wildcats 34, Penn State Nittany Lions 13",
         "cover": "Northwestern Wildcats",
@@ -205,7 +205,7 @@
         "game": "Virginia Tech Hokies (H) vs Pittsburgh Panthers (A)",
         "team_home": "Virginia Tech Hokies",
         "team_away": "Pittsburgh Panthers",
-        "line": "N/A",
+        "line": "VT -1.5",
         "favorite": "?",
         "final": "Virginia Tech Hokies 33, Pittsburgh Panthers 35",
         "cover": "Pittsburgh Panthers",
@@ -253,7 +253,7 @@
         "game": "Delaware Fightin' Blue Hens (H) vs Liberty Flames (A)",
         "team_home": "Delaware Fightin' Blue Hens",
         "team_away": "Liberty Flames",
-        "line": "N/A",
+        "line": "LIB -7",
         "favorite": "?",
         "final": "Delaware Fightin' Blue Hens 14, Liberty Flames 30",
         "cover": "Liberty Flames",
@@ -303,10 +303,10 @@
         "game": "Tulsa Golden Hurricane (H) vs North Texas Mean Green (A)",
         "team_home": "Tulsa Golden Hurricane",
         "team_away": "North Texas Mean Green",
-        "line": "N/A",
+        "line": "UNT -3",
         "favorite": "?",
         "final": "Tulsa Golden Hurricane 44, North Texas Mean Green 45",
-        "cover": "North Texas Mean Green",
+        "cover": "Tulsa Golden Hurricane",
         "status": null,
         "confidence": "61%",
         "sharp": {
@@ -319,11 +319,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Tulsa Golden Hurricane",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M2: Relevance": {
             "pick": "Tulsa Golden Hurricane",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -331,11 +331,11 @@
           },
           "M4: ATS Trends": {
             "pick": "North Texas Mean Green",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M5: Luck": {
             "pick": "North Texas Mean Green",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M6: Sharp Money": {
             "pick": "PUSH",
@@ -343,7 +343,7 @@
           },
           "CONSENSUS": {
             "pick": "Tulsa Golden Hurricane",
-            "result": "LOSS"
+            "result": "WIN"
           }
         }
       },
@@ -351,7 +351,7 @@
         "game": "New Mexico State Aggies (H) vs Western Kentucky Hilltoppers (A)",
         "team_home": "New Mexico State Aggies",
         "team_away": "Western Kentucky Hilltoppers",
-        "line": "N/A",
+        "line": "NMSU -1.5",
         "favorite": "?",
         "final": "New Mexico State Aggies 34, Western Kentucky Hilltoppers 13",
         "cover": "New Mexico State Aggies",
@@ -405,10 +405,10 @@
         "game": "SMU Mustangs (H) vs Missouri State Bears (A)",
         "team_home": "SMU Mustangs",
         "team_away": "Missouri State Bears",
-        "line": "N/A",
+        "line": "SMU -30.5",
         "favorite": "?",
         "final": "SMU Mustangs 34, Missouri State Bears 24",
-        "cover": "SMU Mustangs",
+        "cover": "Missouri State Bears",
         "status": null,
         "confidence": "65%",
         "sharp": {
@@ -421,11 +421,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "SMU Mustangs",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "SMU Mustangs",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -437,15 +437,15 @@
           },
           "M5: Luck": {
             "pick": "Missouri State Bears",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M6: Sharp Money": {
             "pick": "Missouri State Bears",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "CONSENSUS": {
             "pick": "SMU Mustangs",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -453,7 +453,7 @@
         "game": "UTEP Miners (H) vs Oregon State Beavers (A)",
         "team_home": "UTEP Miners",
         "team_away": "Oregon State Beavers",
-        "line": "N/A",
+        "line": "ORST -11.5",
         "favorite": "?",
         "final": "UTEP Miners 7, Oregon State Beavers 33",
         "cover": "Oregon State Beavers",
@@ -501,7 +501,7 @@
         "game": "Sacramento State Hornets (H) vs UMass Minutemen (A)",
         "team_home": "Sacramento State Hornets",
         "team_away": "UMass Minutemen",
-        "line": "N/A",
+        "line": "MASS -6",
         "favorite": "?",
         "final": "Sacramento State Hornets 6, UMass Minutemen 35",
         "cover": "UMass Minutemen",
@@ -549,7 +549,7 @@
         "game": "Fresno State Bulldogs (H) vs Rice Owls (A)",
         "team_home": "Fresno State Bulldogs",
         "team_away": "Rice Owls",
-        "line": "N/A",
+        "line": "FRES -12.5",
         "favorite": "?",
         "final": "Fresno State Bulldogs 38, Rice Owls 24",
         "cover": "Fresno State Bulldogs",
@@ -597,7 +597,7 @@
         "game": "Stanford Cardinal (H) vs Georgia Tech Yellow Jackets (A)",
         "team_home": "Stanford Cardinal",
         "team_away": "Georgia Tech Yellow Jackets",
-        "line": "N/A",
+        "line": "GT -3",
         "favorite": "?",
         "final": "Stanford Cardinal 34, Georgia Tech Yellow Jackets 27",
         "cover": "Stanford Cardinal",
@@ -645,10 +645,10 @@
         "game": "Nevada Wolf Pack (H) vs Air Force Falcons (A)",
         "team_home": "Nevada Wolf Pack",
         "team_away": "Air Force Falcons",
-        "line": "N/A",
+        "line": "AF -4.5",
         "favorite": "?",
         "final": "Nevada Wolf Pack 33, Air Force Falcons 36",
-        "cover": "Air Force Falcons",
+        "cover": "Nevada Wolf Pack",
         "status": null,
         "confidence": "83%",
         "sharp": {
@@ -661,11 +661,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Nevada Wolf Pack",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M2: Relevance": {
             "pick": "Nevada Wolf Pack",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -673,11 +673,11 @@
           },
           "M4: ATS Trends": {
             "pick": "Air Force Falcons",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M5: Luck": {
             "pick": "Nevada Wolf Pack",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M6: Sharp Money": {
             "pick": "PUSH",
@@ -685,7 +685,7 @@
           },
           "CONSENSUS": {
             "pick": "Nevada Wolf Pack",
-            "result": "LOSS"
+            "result": "WIN"
           }
         }
       },
@@ -693,7 +693,7 @@
         "game": "Washington Huskies (H) vs Minnesota Golden Gophers (A)",
         "team_home": "Washington Huskies",
         "team_away": "Minnesota Golden Gophers",
-        "line": "N/A",
+        "line": "WASH -12.5",
         "favorite": "?",
         "final": "Washington Huskies 24, Minnesota Golden Gophers 27",
         "cover": "Minnesota Golden Gophers",
@@ -741,10 +741,10 @@
         "game": "Tennessee Volunteers (H) vs Texas Longhorns (A)",
         "team_home": "Tennessee Volunteers",
         "team_away": "Texas Longhorns",
-        "line": "N/A",
+        "line": "TEX -5.5",
         "favorite": "?",
         "final": "Tennessee Volunteers 17, Texas Longhorns 20",
-        "cover": "Texas Longhorns",
+        "cover": "Tennessee Volunteers",
         "status": null,
         "confidence": "66%",
         "sharp": {
@@ -757,11 +757,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Texas Longhorns",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "Texas Longhorns",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -769,11 +769,11 @@
           },
           "M4: ATS Trends": {
             "pick": "Tennessee Volunteers",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M5: Luck": {
             "pick": "Tennessee Volunteers",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M6: Sharp Money": {
             "pick": "N/A",
@@ -781,7 +781,7 @@
           },
           "CONSENSUS": {
             "pick": "Texas Longhorns",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -789,7 +789,7 @@
         "game": "Georgia Bulldogs (H) vs Oklahoma Sooners (A)",
         "team_home": "Georgia Bulldogs",
         "team_away": "Oklahoma Sooners",
-        "line": "N/A",
+        "line": "UGA -11.5",
         "favorite": "?",
         "final": "Georgia Bulldogs 41, Oklahoma Sooners 13",
         "cover": "Georgia Bulldogs",
@@ -837,7 +837,7 @@
         "game": "Purdue Boilermakers (H) vs Notre Dame Fighting Irish (A)",
         "team_home": "Purdue Boilermakers",
         "team_away": "Notre Dame Fighting Irish",
-        "line": "N/A",
+        "line": "ND -27.5",
         "favorite": "?",
         "final": "Purdue Boilermakers 10, Notre Dame Fighting Irish 49",
         "cover": "Notre Dame Fighting Irish",
@@ -885,7 +885,7 @@
         "game": "Florida Gators (H) vs Ole Miss Rebels (A)",
         "team_home": "Florida Gators",
         "team_away": "Ole Miss Rebels",
-        "line": "N/A",
+        "line": "FLA -4",
         "favorite": "?",
         "final": "Florida Gators 52, Ole Miss Rebels 28",
         "cover": "Florida Gators",
@@ -933,7 +933,7 @@
         "game": "Miami (FL) Hurricanes (H) vs Central Michigan Chippewas (A)",
         "team_home": "Miami (FL) Hurricanes",
         "team_away": "Central Michigan Chippewas",
-        "line": "N/A",
+        "line": "MIA -41.5",
         "favorite": "?",
         "final": "Miami (FL) Hurricanes 52, Central Michigan Chippewas 3",
         "cover": "Miami (FL) Hurricanes",
@@ -981,10 +981,10 @@
         "game": "Ohio State Buckeyes (H) vs Illinois Fighting Illini (A)",
         "team_home": "Ohio State Buckeyes",
         "team_away": "Illinois Fighting Illini",
-        "line": "N/A",
+        "line": "OSU -25.5",
         "favorite": "?",
         "final": "Ohio State Buckeyes 42, Illinois Fighting Illini 19",
-        "cover": "Ohio State Buckeyes",
+        "cover": "Illinois Fighting Illini",
         "status": null,
         "confidence": "100%",
         "sharp": {
@@ -997,11 +997,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Ohio State Buckeyes",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "Ohio State Buckeyes",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -1021,7 +1021,7 @@
           },
           "CONSENSUS": {
             "pick": "Ohio State Buckeyes",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -1029,7 +1029,7 @@
         "game": "Alabama Crimson Tide (H) vs South Carolina Gamecocks (A)",
         "team_home": "Alabama Crimson Tide",
         "team_away": "South Carolina Gamecocks",
-        "line": "N/A",
+        "line": "ALA -12.5",
         "favorite": "?",
         "final": "Alabama Crimson Tide 49, South Carolina Gamecocks 18",
         "cover": "Alabama Crimson Tide",
@@ -1077,7 +1077,7 @@
         "game": "LSU Tigers (H) vs Texas A&M Aggies (A)",
         "team_home": "LSU Tigers",
         "team_away": "Texas A&M Aggies",
-        "line": "N/A",
+        "line": "LSU -8.5",
         "favorite": "?",
         "final": "LSU Tigers 35, Texas A&M Aggies 6",
         "cover": "LSU Tigers",
@@ -1125,7 +1125,7 @@
         "game": "Texas Tech Red Raiders (H) vs Sam Houston Bearkats (A)",
         "team_home": "Texas Tech Red Raiders",
         "team_away": "Sam Houston Bearkats",
-        "line": "N/A",
+        "line": "TTU -34.5",
         "favorite": "?",
         "final": "Texas Tech Red Raiders 49, Sam Houston Bearkats 14",
         "cover": "Texas Tech Red Raiders",
@@ -1173,7 +1173,7 @@
         "game": "USC Trojans (H) vs Oregon Ducks (A)",
         "team_home": "USC Trojans",
         "team_away": "Oregon Ducks",
-        "line": "N/A",
+        "line": "ORE -3.5",
         "favorite": "?",
         "final": "USC Trojans 27, Oregon Ducks 41",
         "cover": "Oregon Ducks",
@@ -1221,7 +1221,7 @@
         "game": "Penn State Nittany Lions (H) vs Wisconsin Badgers (A)",
         "team_home": "Penn State Nittany Lions",
         "team_away": "Wisconsin Badgers",
-        "line": "N/A",
+        "line": "PSU -9.5",
         "favorite": "?",
         "final": "Penn State Nittany Lions 20, Wisconsin Badgers 24",
         "cover": "Wisconsin Badgers",
@@ -1269,7 +1269,7 @@
         "game": "Iowa State Cyclones (H) vs Utah Utes (A)",
         "team_home": "Iowa State Cyclones",
         "team_away": "Utah Utes",
-        "line": "N/A",
+        "line": "UTAH -7.5",
         "favorite": "?",
         "final": "Iowa State Cyclones 17, Utah Utes 31",
         "cover": "Utah Utes",
@@ -1317,7 +1317,7 @@
         "game": "Louisville Cardinals (H) vs Wake Forest Demon Deacons (A)",
         "team_home": "Louisville Cardinals",
         "team_away": "Wake Forest Demon Deacons",
-        "line": "N/A",
+        "line": "LOU -11.5",
         "favorite": "?",
         "final": "Louisville Cardinals 27, Wake Forest Demon Deacons 30",
         "cover": "Wake Forest Demon Deacons",
@@ -1365,7 +1365,7 @@
         "game": "Michigan Wolverines (H) vs Iowa Hawkeyes (A)",
         "team_home": "Michigan Wolverines",
         "team_away": "Iowa Hawkeyes",
-        "line": "N/A",
+        "line": "MICH -4.5",
         "favorite": "?",
         "final": "Michigan Wolverines 19, Iowa Hawkeyes 20",
         "cover": "Iowa Hawkeyes",
@@ -1413,7 +1413,7 @@
         "game": "Mississippi State Bulldogs (H) vs Missouri Tigers (A)",
         "team_home": "Mississippi State Bulldogs",
         "team_away": "Missouri Tigers",
-        "line": "N/A",
+        "line": "MSST -3.5",
         "favorite": "?",
         "final": "Mississippi State Bulldogs 31, Missouri Tigers 24",
         "cover": "Mississippi State Bulldogs",
@@ -1461,10 +1461,10 @@
         "game": "Georgia Southern Eagles (H) vs Houston Cougars (A)",
         "team_home": "Georgia Southern Eagles",
         "team_away": "Houston Cougars",
-        "line": "N/A",
+        "line": "HOU -17.5",
         "favorite": "?",
         "final": "Georgia Southern Eagles 28, Houston Cougars 42",
-        "cover": "Houston Cougars",
+        "cover": "Georgia Southern Eagles",
         "status": null,
         "confidence": "66%",
         "sharp": {
@@ -1477,11 +1477,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Houston Cougars",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "Houston Cougars",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -1489,11 +1489,11 @@
           },
           "M4: ATS Trends": {
             "pick": "Georgia Southern Eagles",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M5: Luck": {
             "pick": "Georgia Southern Eagles",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M6: Sharp Money": {
             "pick": "N/A",
@@ -1501,7 +1501,7 @@
           },
           "CONSENSUS": {
             "pick": "Houston Cougars",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -1509,7 +1509,7 @@
         "game": "Baylor Bears (H) vs Colorado Buffaloes (A)",
         "team_home": "Baylor Bears",
         "team_away": "Colorado Buffaloes",
-        "line": "N/A",
+        "line": "BAY -8.5",
         "favorite": "?",
         "final": "Baylor Bears 23, Colorado Buffaloes 13",
         "cover": "Baylor Bears",
@@ -1557,7 +1557,7 @@
         "game": "Pittsburgh Panthers (H) vs Bucknell Bison (A)",
         "team_home": "Pittsburgh Panthers",
         "team_away": "Bucknell Bison",
-        "line": "N/A",
+        "line": "PITT -54.5",
         "favorite": "?",
         "final": "Pittsburgh Panthers 59, Bucknell Bison 0",
         "cover": "Pittsburgh Panthers",
@@ -1605,10 +1605,10 @@
         "game": "Boston College Eagles (H) vs Virginia Tech Hokies (A)",
         "team_home": "Boston College Eagles",
         "team_away": "Virginia Tech Hokies",
-        "line": "N/A",
+        "line": "VT -14.5",
         "favorite": "?",
         "final": "Boston College Eagles 14, Virginia Tech Hokies 21",
-        "cover": "Virginia Tech Hokies",
+        "cover": "Boston College Eagles",
         "status": null,
         "confidence": "100%",
         "sharp": {
@@ -1621,11 +1621,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Virginia Tech Hokies",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "Virginia Tech Hokies",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -1633,7 +1633,7 @@
           },
           "M4: ATS Trends": {
             "pick": "Virginia Tech Hokies",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M5: Luck": {
             "pick": "PUSH",
@@ -1645,7 +1645,7 @@
           },
           "CONSENSUS": {
             "pick": "Virginia Tech Hokies",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -1653,7 +1653,7 @@
         "game": "Toledo Rockets (H) vs San Diego State Aztecs (A)",
         "team_home": "Toledo Rockets",
         "team_away": "San Diego State Aztecs",
-        "line": "N/A",
+        "line": "TOL -2.5",
         "favorite": "?",
         "final": "Toledo Rockets 41, San Diego State Aztecs 16",
         "cover": "Toledo Rockets",
@@ -1701,10 +1701,10 @@
         "game": "UTSA Roadrunners (H) vs Colorado State Rams (A)",
         "team_home": "UTSA Roadrunners",
         "team_away": "Colorado State Rams",
-        "line": "N/A",
+        "line": "UTSA -14.5",
         "favorite": "?",
         "final": "UTSA Roadrunners 59, Colorado State Rams 45",
-        "cover": "UTSA Roadrunners",
+        "cover": "Colorado State Rams",
         "status": null,
         "confidence": "60%",
         "sharp": {
@@ -1717,11 +1717,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Colorado State Rams",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M2: Relevance": {
             "pick": "UTSA Roadrunners",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -1733,7 +1733,7 @@
           },
           "M5: Luck": {
             "pick": "Colorado State Rams",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M6: Sharp Money": {
             "pick": "N/A",
@@ -1741,7 +1741,7 @@
           },
           "CONSENSUS": {
             "pick": "Colorado State Rams",
-            "result": "LOSS"
+            "result": "WIN"
           }
         }
       },
@@ -1749,7 +1749,7 @@
         "game": "Akron Zips (H) vs UNLV Rebels (A)",
         "team_home": "Akron Zips",
         "team_away": "UNLV Rebels",
-        "line": "N/A",
+        "line": "UNLV -13.5",
         "favorite": "?",
         "final": "Akron Zips 10, UNLV Rebels 38",
         "cover": "UNLV Rebels",
@@ -1797,7 +1797,7 @@
         "game": "Kent State Golden Flashes (H) vs Ball State Cardinals (A)",
         "team_home": "Kent State Golden Flashes",
         "team_away": "Ball State Cardinals",
-        "line": "N/A",
+        "line": "KENT -2.5",
         "favorite": "?",
         "final": "Kent State Golden Flashes 26, Ball State Cardinals 13",
         "cover": "Kent State Golden Flashes",
@@ -1845,7 +1845,7 @@
         "game": "Kentucky Wildcats (H) vs South Alabama Jaguars (A)",
         "team_home": "Kentucky Wildcats",
         "team_away": "South Alabama Jaguars",
-        "line": "N/A",
+        "line": "UK -20.5",
         "favorite": "?",
         "final": "Kentucky Wildcats 45, South Alabama Jaguars 21",
         "cover": "Kentucky Wildcats",
@@ -1893,7 +1893,7 @@
         "game": "Eastern Michigan Eagles (H) vs Lindenwood Lions (A)",
         "team_home": "Eastern Michigan Eagles",
         "team_away": "Lindenwood Lions",
-        "line": "N/A",
+        "line": "EMU -24.5",
         "favorite": "?",
         "final": "Eastern Michigan Eagles 29, Lindenwood Lions 3",
         "cover": "Eastern Michigan Eagles",
@@ -1941,7 +1941,7 @@
         "game": "Maryland Terrapins (H) vs UCLA Bruins (A)",
         "team_home": "Maryland Terrapins",
         "team_away": "UCLA Bruins",
-        "line": "N/A",
+        "line": "UCLA -2.5",
         "favorite": "?",
         "final": "Maryland Terrapins 3, UCLA Bruins 54",
         "cover": "UCLA Bruins",
@@ -1989,7 +1989,7 @@
         "game": "Georgia State Panthers (H) vs Northern Illinois Huskies (A)",
         "team_home": "Georgia State Panthers",
         "team_away": "Northern Illinois Huskies",
-        "line": "N/A",
+        "line": "GAST -8.5",
         "favorite": "?",
         "final": "Georgia State Panthers 35, Northern Illinois Huskies 14",
         "cover": "Georgia State Panthers",
@@ -2037,10 +2037,10 @@
         "game": "Florida State Seminoles (H) vs Central Arkansas Bears (A)",
         "team_home": "Florida State Seminoles",
         "team_away": "Central Arkansas Bears",
-        "line": "N/A",
+        "line": "FSU -45.5",
         "favorite": "?",
         "final": "Florida State Seminoles 34, Central Arkansas Bears 7",
-        "cover": "Florida State Seminoles",
+        "cover": "Central Arkansas Bears",
         "status": null,
         "confidence": "N/A",
         "sharp": {
@@ -2085,7 +2085,7 @@
         "game": "Wyoming Cowboys (H) vs Hawai'i Rainbow Warriors (A)",
         "team_home": "Wyoming Cowboys",
         "team_away": "Hawai'i Rainbow Warriors",
-        "line": "N/A",
+        "line": "HAW -2.5",
         "favorite": "?",
         "final": "Wyoming Cowboys 27, Hawai'i Rainbow Warriors 10",
         "cover": "Wyoming Cowboys",
@@ -2133,7 +2133,7 @@
         "game": "UCF Knights (H) vs TCU Horned Frogs (A)",
         "team_home": "UCF Knights",
         "team_away": "TCU Horned Frogs",
-        "line": "N/A",
+        "line": "TCU -3.5",
         "favorite": "?",
         "final": "UCF Knights 21, TCU Horned Frogs 13",
         "cover": "UCF Knights",
@@ -2181,7 +2181,7 @@
         "game": "Duke Blue Devils (H) vs William & Mary Tribe (A)",
         "team_home": "Duke Blue Devils",
         "team_away": "William & Mary Tribe",
-        "line": "N/A",
+        "line": "DUKE -43.5",
         "favorite": "?",
         "final": "Duke Blue Devils 62, William & Mary Tribe 7",
         "cover": "Duke Blue Devils",
@@ -2229,7 +2229,7 @@
         "game": "Western Michigan Broncos (H) vs Boise State Broncos (A)",
         "team_home": "Western Michigan Broncos",
         "team_away": "Boise State Broncos",
-        "line": "N/A",
+        "line": "BOIS -8.5",
         "favorite": "?",
         "final": "Western Michigan Broncos 7, Boise State Broncos 32",
         "cover": "Boise State Broncos",
@@ -2277,7 +2277,7 @@
         "game": "Miami (OH) RedHawks (H) vs UConn Huskies (A)",
         "team_home": "Miami (OH) RedHawks",
         "team_away": "UConn Huskies",
-        "line": "N/A",
+        "line": "M-OH -2.5",
         "favorite": "?",
         "final": "Miami (OH) RedHawks 24, UConn Huskies 21",
         "cover": "Miami (OH) RedHawks",
@@ -2325,7 +2325,7 @@
         "game": "New Mexico State Aggies (H) vs New Mexico Lobos (A)",
         "team_home": "New Mexico State Aggies",
         "team_away": "New Mexico Lobos",
-        "line": "N/A",
+        "line": "UNM -11.5",
         "favorite": "?",
         "final": "New Mexico State Aggies 18, New Mexico Lobos 42",
         "cover": "New Mexico Lobos",
@@ -2373,10 +2373,10 @@
         "game": "Buffalo Bulls (H) vs Robert Morris Colonials (A)",
         "team_home": "Buffalo Bulls",
         "team_away": "Robert Morris Colonials",
-        "line": "N/A",
+        "line": "BUF -27.5",
         "favorite": "?",
         "final": "Buffalo Bulls 31, Robert Morris Colonials 28",
-        "cover": "Buffalo Bulls",
+        "cover": "Robert Morris Colonials",
         "status": null,
         "confidence": "N/A",
         "sharp": {
@@ -2421,10 +2421,10 @@
         "game": "Ohio Bobcats (H) vs Stonehill Skyhawks (A)",
         "team_home": "Ohio Bobcats",
         "team_away": "Stonehill Skyhawks",
-        "line": "N/A",
+        "line": "OHIO -32.5",
         "favorite": "?",
         "final": "Ohio Bobcats 35, Stonehill Skyhawks 7",
-        "cover": "Ohio Bobcats",
+        "cover": "Stonehill Skyhawks",
         "status": null,
         "confidence": "N/A",
         "sharp": {
@@ -2469,10 +2469,10 @@
         "game": "Marshall Thundering Herd (H) vs Gardner-Webb Runnin' Bulldogs (A)",
         "team_home": "Marshall Thundering Herd",
         "team_away": "Gardner-Webb Runnin' Bulldogs",
-        "line": "N/A",
+        "line": "MRSH -24.5",
         "favorite": "?",
         "final": "Marshall Thundering Herd 36, Gardner-Webb Runnin' Bulldogs 35",
-        "cover": "Marshall Thundering Herd",
+        "cover": "Gardner-Webb Runnin' Bulldogs",
         "status": null,
         "confidence": "N/A",
         "sharp": {
@@ -2517,10 +2517,10 @@
         "game": "East Carolina Pirates (H) vs North Carolina Central Eagles (A)",
         "team_home": "East Carolina Pirates",
         "team_away": "North Carolina Central Eagles",
-        "line": "N/A",
+        "line": "ECU -37.5",
         "favorite": "?",
         "final": "East Carolina Pirates 42, North Carolina Central Eagles 9",
-        "cover": "East Carolina Pirates",
+        "cover": "North Carolina Central Eagles",
         "status": null,
         "confidence": "N/A",
         "sharp": {
@@ -2565,10 +2565,10 @@
         "game": "Auburn Tigers (H) vs Vanderbilt Commodores (A)",
         "team_home": "Auburn Tigers",
         "team_away": "Vanderbilt Commodores",
-        "line": "N/A",
+        "line": "AUB -10",
         "favorite": "?",
         "final": "Auburn Tigers 21, Vanderbilt Commodores 15",
-        "cover": "Auburn Tigers",
+        "cover": "Vanderbilt Commodores",
         "status": null,
         "confidence": "83%",
         "sharp": {
@@ -2581,11 +2581,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Auburn Tigers",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "Auburn Tigers",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -2593,11 +2593,11 @@
           },
           "M4: ATS Trends": {
             "pick": "Vanderbilt Commodores",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M5: Luck": {
             "pick": "Auburn Tigers",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M6: Sharp Money": {
             "pick": "N/A",
@@ -2605,7 +2605,7 @@
           },
           "CONSENSUS": {
             "pick": "Auburn Tigers",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -2613,7 +2613,7 @@
         "game": "Michigan State Spartans (H) vs Nebraska Cornhuskers (A)",
         "team_home": "Michigan State Spartans",
         "team_away": "Nebraska Cornhuskers",
-        "line": "N/A",
+        "line": "NEB -6",
         "favorite": "?",
         "final": "Michigan State Spartans 13, Nebraska Cornhuskers 31",
         "cover": "Nebraska Cornhuskers",
@@ -2661,10 +2661,10 @@
         "game": "Bowling Green Falcons (H) vs South Florida Bulls (A)",
         "team_home": "Bowling Green Falcons",
         "team_away": "South Florida Bulls",
-        "line": "N/A",
+        "line": "USF -17.5",
         "favorite": "?",
         "final": "Bowling Green Falcons 6, South Florida Bulls 14",
-        "cover": "South Florida Bulls",
+        "cover": "Bowling Green Falcons",
         "status": null,
         "confidence": "83%",
         "sharp": {
@@ -2677,11 +2677,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "South Florida Bulls",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "South Florida Bulls",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -2689,11 +2689,11 @@
           },
           "M4: ATS Trends": {
             "pick": "South Florida Bulls",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M5: Luck": {
             "pick": "Bowling Green Falcons",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M6: Sharp Money": {
             "pick": "N/A",
@@ -2701,7 +2701,7 @@
           },
           "CONSENSUS": {
             "pick": "South Florida Bulls",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -2709,7 +2709,7 @@
         "game": "Virginia Cavaliers (H) vs Delaware Fightin' Blue Hens (A)",
         "team_home": "Virginia Cavaliers",
         "team_away": "Delaware Fightin' Blue Hens",
-        "line": "N/A",
+        "line": "UVA -19.5",
         "favorite": "?",
         "final": "Virginia Cavaliers 42, Delaware Fightin' Blue Hens 3",
         "cover": "Virginia Cavaliers",
@@ -2757,7 +2757,7 @@
         "game": "Texas State Bobcats (H) vs Incarnate Word Cardinals (A)",
         "team_home": "Texas State Bobcats",
         "team_away": "Incarnate Word Cardinals",
-        "line": "N/A",
+        "line": "TXST -30.5",
         "favorite": "?",
         "final": "Texas State Bobcats 63, Incarnate Word Cardinals 10",
         "cover": "Texas State Bobcats",
@@ -2805,10 +2805,10 @@
         "game": "Florida International Panthers (H) vs Long Island University Sharks (A)",
         "team_home": "Florida International Panthers",
         "team_away": "Long Island University Sharks",
-        "line": "N/A",
+        "line": "FIU -37.5",
         "favorite": "?",
         "final": "Florida International Panthers 20, Long Island University Sharks 3",
-        "cover": "Florida International Panthers",
+        "cover": "Long Island University Sharks",
         "status": null,
         "confidence": "N/A",
         "sharp": {
@@ -2853,7 +2853,7 @@
         "game": "Old Dominion Monarchs (H) vs James Madison Dukes (A)",
         "team_home": "Old Dominion Monarchs",
         "team_away": "James Madison Dukes",
-        "line": "N/A",
+        "line": "JMU -7",
         "favorite": "?",
         "final": "Old Dominion Monarchs 20, James Madison Dukes 46",
         "cover": "James Madison Dukes",
@@ -2901,7 +2901,7 @@
         "game": "Charlotte 49ers (H) vs Louisiana Ragin' Cajuns (A)",
         "team_home": "Charlotte 49ers",
         "team_away": "Louisiana Ragin' Cajuns",
-        "line": "N/A",
+        "line": "UL -9.5",
         "favorite": "?",
         "final": "Charlotte 49ers 7, Louisiana Ragin' Cajuns 34",
         "cover": "Louisiana Ragin' Cajuns",
@@ -2949,7 +2949,7 @@
         "game": "Cincinnati Bearcats (H) vs Kansas State Wildcats (A)",
         "team_home": "Cincinnati Bearcats",
         "team_away": "Kansas State Wildcats",
-        "line": "N/A",
+        "line": "KSU -6",
         "favorite": "?",
         "final": "Cincinnati Bearcats 31, Kansas State Wildcats 26",
         "cover": "Cincinnati Bearcats",
@@ -2997,7 +2997,7 @@
         "game": "West Virginia Mountaineers (H) vs Oklahoma State Cowboys (A)",
         "team_home": "West Virginia Mountaineers",
         "team_away": "Oklahoma State Cowboys",
-        "line": "N/A",
+        "line": "WVU -1.5",
         "favorite": "?",
         "final": "West Virginia Mountaineers 24, Oklahoma State Cowboys 41",
         "cover": "Oklahoma State Cowboys",
@@ -3045,10 +3045,10 @@
         "game": "Tulane Green Wave (H) vs Southern Miss Golden Eagles (A)",
         "team_home": "Tulane Green Wave",
         "team_away": "Southern Miss Golden Eagles",
-        "line": "N/A",
+        "line": "TULN -17.5",
         "favorite": "?",
         "final": "Tulane Green Wave 24, Southern Miss Golden Eagles 21",
-        "cover": "Tulane Green Wave",
+        "cover": "Southern Miss Golden Eagles",
         "status": null,
         "confidence": "66%",
         "sharp": {
@@ -3061,11 +3061,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Tulane Green Wave",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "Tulane Green Wave",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -3073,11 +3073,11 @@
           },
           "M4: ATS Trends": {
             "pick": "Southern Miss Golden Eagles",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M5: Luck": {
             "pick": "Southern Miss Golden Eagles",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M6: Sharp Money": {
             "pick": "N/A",
@@ -3085,7 +3085,7 @@
           },
           "CONSENSUS": {
             "pick": "Tulane Green Wave",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -3093,10 +3093,10 @@
         "game": "Arkansas State Red Wolves (H) vs Kennesaw State Owls (A)",
         "team_home": "Arkansas State Red Wolves",
         "team_away": "Kennesaw State Owls",
-        "line": "N/A",
+        "line": "ARST -6.5",
         "favorite": "?",
         "final": "Arkansas State Red Wolves 17, Kennesaw State Owls 14",
-        "cover": "Arkansas State Red Wolves",
+        "cover": "Kennesaw State Owls",
         "status": null,
         "confidence": "80%",
         "sharp": {
@@ -3109,11 +3109,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Arkansas State Red Wolves",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "Arkansas State Red Wolves",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -3125,7 +3125,7 @@
           },
           "M5: Luck": {
             "pick": "Kennesaw State Owls",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M6: Sharp Money": {
             "pick": "N/A",
@@ -3133,7 +3133,7 @@
           },
           "CONSENSUS": {
             "pick": "Arkansas State Red Wolves",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -3141,7 +3141,7 @@
         "game": "Western Kentucky Hilltoppers (H) vs Mercyhurst Lakers (A)",
         "team_home": "Western Kentucky Hilltoppers",
         "team_away": "Mercyhurst Lakers",
-        "line": "N/A",
+        "line": "WKU -39.5",
         "favorite": "?",
         "final": "Western Kentucky Hilltoppers 52, Mercyhurst Lakers 7",
         "cover": "Western Kentucky Hilltoppers",
@@ -3189,7 +3189,7 @@
         "game": "Jacksonville State Gamecocks (H) vs Middle Tennessee Blue Raiders (A)",
         "team_home": "Jacksonville State Gamecocks",
         "team_away": "Middle Tennessee Blue Raiders",
-        "line": "N/A",
+        "line": "JXST -7",
         "favorite": "?",
         "final": "Jacksonville State Gamecocks 23, Middle Tennessee Blue Raiders 13",
         "cover": "Jacksonville State Gamecocks",
@@ -3237,10 +3237,10 @@
         "game": "Washington State Cougars (H) vs Arizona Wildcats (A)",
         "team_home": "Washington State Cougars",
         "team_away": "Arizona Wildcats",
-        "line": "N/A",
+        "line": "ARIZ -11.5",
         "favorite": "?",
         "final": "Washington State Cougars 24, Arizona Wildcats 34",
-        "cover": "Arizona Wildcats",
+        "cover": "Washington State Cougars",
         "status": null,
         "confidence": "80%",
         "sharp": {
@@ -3253,11 +3253,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Arizona Wildcats",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "Arizona Wildcats",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -3269,7 +3269,7 @@
           },
           "M5: Luck": {
             "pick": "Washington State Cougars",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M6: Sharp Money": {
             "pick": "N/A",
@@ -3277,7 +3277,7 @@
           },
           "CONSENSUS": {
             "pick": "Arizona Wildcats",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -3285,7 +3285,7 @@
         "game": "Utah State Aggies (H) vs Troy Trojans (A)",
         "team_home": "Utah State Aggies",
         "team_away": "Troy Trojans",
-        "line": "N/A",
+        "line": "USU -3",
         "favorite": "?",
         "final": "Utah State Aggies 21, Troy Trojans 10",
         "cover": "Utah State Aggies",
@@ -3333,7 +3333,7 @@
         "game": "North Texas Mean Green (H) vs Houston Christian Huskies (A)",
         "team_home": "North Texas Mean Green",
         "team_away": "Houston Christian Huskies",
-        "line": "N/A",
+        "line": "UNT -38.5",
         "favorite": "?",
         "final": "North Texas Mean Green 63, Houston Christian Huskies 14",
         "cover": "North Texas Mean Green",
@@ -3381,10 +3381,10 @@
         "game": "NC State Wolfpack (H) vs Appalachian State Mountaineers (A)",
         "team_home": "NC State Wolfpack",
         "team_away": "Appalachian State Mountaineers",
-        "line": "N/A",
+        "line": "NCSU -12.5",
         "favorite": "?",
         "final": "NC State Wolfpack 41, Appalachian State Mountaineers 31",
-        "cover": "NC State Wolfpack",
+        "cover": "Appalachian State Mountaineers",
         "status": null,
         "confidence": "80%",
         "sharp": {
@@ -3397,11 +3397,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Appalachian State Mountaineers",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M2: Relevance": {
             "pick": "Appalachian State Mountaineers",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -3413,7 +3413,7 @@
           },
           "M5: Luck": {
             "pick": "NC State Wolfpack",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M6: Sharp Money": {
             "pick": "N/A",
@@ -3421,7 +3421,7 @@
           },
           "CONSENSUS": {
             "pick": "Appalachian State Mountaineers",
-            "result": "LOSS"
+            "result": "WIN"
           }
         }
       },
@@ -3429,7 +3429,7 @@
         "game": "Arkansas Razorbacks (H) vs Tulsa Golden Hurricane (A)",
         "team_home": "Arkansas Razorbacks",
         "team_away": "Tulsa Golden Hurricane",
-        "line": "N/A",
+        "line": "ARK -7",
         "favorite": "?",
         "final": "Arkansas Razorbacks 34, Tulsa Golden Hurricane 6",
         "cover": "Arkansas Razorbacks",
@@ -3477,7 +3477,7 @@
         "game": "Louisiana-Monroe Warhawks (H) vs Florida Atlantic Owls (A)",
         "team_home": "Louisiana-Monroe Warhawks",
         "team_away": "Florida Atlantic Owls",
-        "line": "N/A",
+        "line": "FAU -11.5",
         "favorite": "?",
         "final": "Louisiana-Monroe Warhawks 17, Florida Atlantic Owls 45",
         "cover": "Florida Atlantic Owls",
@@ -3527,7 +3527,7 @@
         "game": "California Golden Bears (H) vs Clemson Tigers (A)",
         "team_home": "California Golden Bears",
         "team_away": "Clemson Tigers",
-        "line": "N/A",
+        "line": "CLEM -2.5",
         "favorite": "?",
         "final": "California Golden Bears 10, Clemson Tigers 24",
         "cover": "Clemson Tigers",
@@ -3575,10 +3575,10 @@
         "game": "Indiana Hoosiers (H) vs Northwestern Wildcats (A)",
         "team_home": "Indiana Hoosiers",
         "team_away": "Northwestern Wildcats",
-        "line": "N/A",
+        "line": "IU -20.5",
         "favorite": "?",
         "final": "Indiana Hoosiers 29, Northwestern Wildcats 23",
-        "cover": "Indiana Hoosiers",
+        "cover": "Northwestern Wildcats",
         "status": null,
         "confidence": "68%",
         "sharp": {
@@ -3591,11 +3591,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Indiana Hoosiers",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "Indiana Hoosiers",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -3603,19 +3603,19 @@
           },
           "M4: ATS Trends": {
             "pick": "Northwestern Wildcats",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M5: Luck": {
             "pick": "Indiana Hoosiers",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M6: Sharp Money": {
             "pick": "Northwestern Wildcats",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "CONSENSUS": {
             "pick": "Indiana Hoosiers",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -3623,11 +3623,11 @@
         "game": "Temple Owls (H) vs Army Black Knights (A)",
         "team_home": "Temple Owls",
         "team_away": "Army Black Knights",
-        "line": "N/A",
+        "line": "ARMY -4",
         "favorite": "?",
         "final": "Temple Owls 17, Army Black Knights 21",
-        "cover": "Army Black Knights",
-        "status": null,
+        "cover": null,
+        "status": "PUSH (not graded)",
         "confidence": "82%",
         "sharp": {
           "home_b": null,
@@ -3639,11 +3639,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Army Black Knights",
-            "result": "WIN"
+            "result": null
           },
           "M2: Relevance": {
             "pick": "Army Black Knights",
-            "result": "WIN"
+            "result": null
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -3651,11 +3651,11 @@
           },
           "M4: ATS Trends": {
             "pick": "Temple Owls",
-            "result": "LOSS"
+            "result": null
           },
           "M5: Luck": {
             "pick": "Army Black Knights",
-            "result": "WIN"
+            "result": null
           },
           "M6: Sharp Money": {
             "pick": "N/A",
@@ -3663,7 +3663,7 @@
           },
           "CONSENSUS": {
             "pick": "Army Black Knights",
-            "result": "WIN"
+            "result": null
           }
         }
       },
@@ -3671,7 +3671,7 @@
         "game": "Rutgers Scarlet Knights (H) vs Howard Bison (A)",
         "team_home": "Rutgers Scarlet Knights",
         "team_away": "Howard Bison",
-        "line": "N/A",
+        "line": "RUTG -42.5",
         "favorite": "?",
         "final": "Rutgers Scarlet Knights 58, Howard Bison 7",
         "cover": "Rutgers Scarlet Knights",
@@ -3719,7 +3719,7 @@
         "game": "UAB Blazers (H) vs Navy Midshipmen (A)",
         "team_home": "UAB Blazers",
         "team_away": "Navy Midshipmen",
-        "line": "N/A",
+        "line": "NAVY -6.5",
         "favorite": "?",
         "final": "UAB Blazers 24, Navy Midshipmen 20",
         "cover": "UAB Blazers",
@@ -3769,7 +3769,7 @@
         "game": "Coastal Carolina Chanticleers (H) vs Liberty Flames (A)",
         "team_home": "Coastal Carolina Chanticleers",
         "team_away": "Liberty Flames",
-        "line": "N/A",
+        "line": "LIB -2.5",
         "favorite": "?",
         "final": "Coastal Carolina Chanticleers 17, Liberty Flames 34",
         "cover": "Liberty Flames",

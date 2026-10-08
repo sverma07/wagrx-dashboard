@@ -1,6 +1,6 @@
 {
   "sport": "NBA",
-  "updated": "2026-10-08T14:22:46-04:00",
+  "updated": "2026-10-08T16:43:21-04:00",
   "days": {
     "2026-10-07": [
       {
@@ -249,7 +249,7 @@
         "game": "Atlanta Hawks (H) vs Memphis Grizzlies (A)",
         "team_home": "Atlanta Hawks",
         "team_away": "Memphis Grizzlies",
-        "line": "N/A",
+        "line": "ATL -3.5",
         "favorite": "?",
         "final": "Atlanta Hawks 123, Memphis Grizzlies 132",
         "cover": "Memphis Grizzlies",
@@ -297,10 +297,10 @@
         "game": "Detroit Pistons (H) vs Phoenix Suns (A)",
         "team_home": "Detroit Pistons",
         "team_away": "Phoenix Suns",
-        "line": "N/A",
+        "line": "DET -2.5",
         "favorite": "?",
         "final": "Detroit Pistons 109, Phoenix Suns 107",
-        "cover": "Detroit Pistons",
+        "cover": "Phoenix Suns",
         "status": null,
         "confidence": "75%",
         "sharp": {
@@ -313,11 +313,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Detroit Pistons",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "Detroit Pistons",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -325,11 +325,11 @@
           },
           "M4: ATS Trends": {
             "pick": "Phoenix Suns",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M5: Luck": {
             "pick": "Detroit Pistons",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M6: Sharp Money": {
             "pick": "N/A",
@@ -337,7 +337,7 @@
           },
           "CONSENSUS": {
             "pick": "Detroit Pistons",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -345,7 +345,7 @@
         "game": "Philadelphia 76ers (H) vs New York Knicks (A)",
         "team_home": "Philadelphia 76ers",
         "team_away": "New York Knicks",
-        "line": "N/A",
+        "line": "NY -4.5",
         "favorite": "?",
         "final": "Philadelphia 76ers 120, New York Knicks 97",
         "cover": "Philadelphia 76ers",
@@ -393,7 +393,7 @@
         "game": "Milwaukee Bucks (H) vs Minnesota Timberwolves (A)",
         "team_home": "Milwaukee Bucks",
         "team_away": "Minnesota Timberwolves",
-        "line": "N/A",
+        "line": "MIN -5.5",
         "favorite": "?",
         "final": "Milwaukee Bucks 97, Minnesota Timberwolves 116",
         "cover": "Minnesota Timberwolves",
@@ -441,7 +441,7 @@
         "game": "Sacramento Kings (H) vs Los Angeles Lakers (A)",
         "team_home": "Sacramento Kings",
         "team_away": "Los Angeles Lakers",
-        "line": "N/A",
+        "line": "LAL -3.5",
         "favorite": "?",
         "final": "Sacramento Kings 103, Los Angeles Lakers 127",
         "cover": "Los Angeles Lakers",

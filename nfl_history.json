@@ -1,6 +1,6 @@
 {
   "sport": "NFL",
-  "updated": "2026-10-08T14:22:45-04:00",
+  "updated": "2026-10-08T16:43:20-04:00",
   "days": {
     "2026-10-07": [],
     "2026-10-06": [],
@@ -63,10 +63,10 @@
         "game": "Minnesota Vikings (H) vs Miami Dolphins (A)",
         "team_home": "Minnesota Vikings",
         "team_away": "Miami Dolphins",
-        "line": "N/A",
+        "line": "MIN -10",
         "favorite": "?",
         "final": "Minnesota Vikings 15, Miami Dolphins 10",
-        "cover": "Minnesota Vikings",
+        "cover": "Miami Dolphins",
         "status": null,
         "confidence": "59%",
         "sharp": {
@@ -79,11 +79,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Minnesota Vikings",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "Minnesota Vikings",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -91,15 +91,15 @@
           },
           "M4: ATS Trends": {
             "pick": "Minnesota Vikings",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M5: Luck": {
             "pick": "Miami Dolphins",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M6: Sharp Money": {
             "pick": "Miami Dolphins",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M7: QB Injury Edge": {
             "pick": "PUSH",
@@ -107,7 +107,7 @@
           },
           "CONSENSUS": {
             "pick": "Minnesota Vikings",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -115,10 +115,10 @@
         "game": "Las Vegas Raiders (H) vs Kansas City Chiefs (A)",
         "team_home": "Las Vegas Raiders",
         "team_away": "Kansas City Chiefs",
-        "line": "N/A",
+        "line": "KC -3.5",
         "favorite": "?",
         "final": "Las Vegas Raiders 27, Kansas City Chiefs 30",
-        "cover": "Kansas City Chiefs",
+        "cover": "Las Vegas Raiders",
         "status": null,
         "confidence": "76%",
         "sharp": {
@@ -131,11 +131,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Kansas City Chiefs",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "Kansas City Chiefs",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -143,11 +143,11 @@
           },
           "M4: ATS Trends": {
             "pick": "Las Vegas Raiders",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M5: Luck": {
             "pick": "Kansas City Chiefs",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M6: Sharp Money": {
             "pick": "PUSH",
@@ -159,7 +159,7 @@
           },
           "CONSENSUS": {
             "pick": "Kansas City Chiefs",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -167,7 +167,7 @@
         "game": "San Francisco 49ers (H) vs Denver Broncos (A)",
         "team_home": "San Francisco 49ers",
         "team_away": "Denver Broncos",
-        "line": "N/A",
+        "line": "SF -3",
         "favorite": "?",
         "final": "San Francisco 49ers 24, Denver Broncos 14",
         "cover": "San Francisco 49ers",
@@ -219,11 +219,11 @@
         "game": "Seattle Seahawks (H) vs Los Angeles Chargers (A)",
         "team_home": "Seattle Seahawks",
         "team_away": "Los Angeles Chargers",
-        "line": "N/A",
+        "line": "SEA -7",
         "favorite": "?",
         "final": "Seattle Seahawks 30, Los Angeles Chargers 23",
-        "cover": "Seattle Seahawks",
-        "status": null,
+        "cover": null,
+        "status": "PUSH (not graded)",
         "confidence": "77%",
         "sharp": {
           "home_b": 56.51,
@@ -235,11 +235,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Seattle Seahawks",
-            "result": "WIN"
+            "result": null
           },
           "M2: Relevance": {
             "pick": "Seattle Seahawks",
-            "result": "WIN"
+            "result": null
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -247,11 +247,11 @@
           },
           "M4: ATS Trends": {
             "pick": "Seattle Seahawks",
-            "result": "WIN"
+            "result": null
           },
           "M5: Luck": {
             "pick": "Los Angeles Chargers",
-            "result": "LOSS"
+            "result": null
           },
           "M6: Sharp Money": {
             "pick": "PUSH",
@@ -263,7 +263,7 @@
           },
           "CONSENSUS": {
             "pick": "Seattle Seahawks",
-            "result": "WIN"
+            "result": null
           }
         }
       },
@@ -271,7 +271,7 @@
         "game": "Washington Commanders (H) vs Indianapolis Colts (A)",
         "team_home": "Washington Commanders",
         "team_away": "Indianapolis Colts",
-        "line": "N/A",
+        "line": "IND -4.5",
         "favorite": "?",
         "final": "Washington Commanders 13, Indianapolis Colts 30",
         "cover": "Indianapolis Colts",
@@ -323,7 +323,7 @@
         "game": "Buffalo Bills (H) vs New England Patriots (A)",
         "team_home": "Buffalo Bills",
         "team_away": "New England Patriots",
-        "line": "N/A",
+        "line": "BUF -7",
         "favorite": "?",
         "final": "Buffalo Bills 26, New England Patriots 29",
         "cover": "New England Patriots",
@@ -375,7 +375,7 @@
         "game": "Chicago Bears (H) vs New York Jets (A)",
         "team_home": "Chicago Bears",
         "team_away": "New York Jets",
-        "line": "N/A",
+        "line": "CHI -3.5",
         "favorite": "?",
         "final": "Chicago Bears 23, New York Jets 12",
         "cover": "Chicago Bears",
@@ -427,7 +427,7 @@
         "game": "Cincinnati Bengals (H) vs Jacksonville Jaguars (A)",
         "team_home": "Cincinnati Bengals",
         "team_away": "Jacksonville Jaguars",
-        "line": "N/A",
+        "line": "CIN -2.5",
         "favorite": "?",
         "final": "Cincinnati Bengals 17, Jacksonville Jaguars 22",
         "cover": "Jacksonville Jaguars",
@@ -479,7 +479,7 @@
         "game": "New York Giants (H) vs Arizona Cardinals (A)",
         "team_home": "New York Giants",
         "team_away": "Arizona Cardinals",
-        "line": "N/A",
+        "line": "ARI -2.5",
         "favorite": "?",
         "final": "New York Giants 36, Arizona Cardinals 24",
         "cover": "New York Giants",
@@ -531,10 +531,10 @@
         "game": "Philadelphia Eagles (H) vs Los Angeles Rams (A)",
         "team_home": "Philadelphia Eagles",
         "team_away": "Los Angeles Rams",
-        "line": "N/A",
+        "line": "LAR -4.5",
         "favorite": "?",
         "final": "Philadelphia Eagles 20, Los Angeles Rams 24",
-        "cover": "Los Angeles Rams",
+        "cover": "Philadelphia Eagles",
         "status": null,
         "confidence": "100%",
         "sharp": {
@@ -547,11 +547,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Los Angeles Rams",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M2: Relevance": {
             "pick": "Los Angeles Rams",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -559,11 +559,11 @@
           },
           "M4: ATS Trends": {
             "pick": "Los Angeles Rams",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M5: Luck": {
             "pick": "Los Angeles Rams",
-            "result": "WIN"
+            "result": "LOSS"
           },
           "M6: Sharp Money": {
             "pick": "N/A",
@@ -575,7 +575,7 @@
           },
           "CONSENSUS": {
             "pick": "Los Angeles Rams",
-            "result": "WIN"
+            "result": "LOSS"
           }
         }
       },
@@ -583,7 +583,7 @@
         "game": "Tampa Bay Buccaneers (H) vs Green Bay Packers (A)",
         "team_home": "Tampa Bay Buccaneers",
         "team_away": "Green Bay Packers",
-        "line": "N/A",
+        "line": "GB -2.5",
         "favorite": "?",
         "final": "Tampa Bay Buccaneers 14, Green Bay Packers 17",
         "cover": "Green Bay Packers",
@@ -635,10 +635,10 @@
         "game": "Baltimore Ravens (H) vs Tennessee Titans (A)",
         "team_home": "Baltimore Ravens",
         "team_away": "Tennessee Titans",
-        "line": "N/A",
+        "line": "BAL -11.5",
         "favorite": "?",
         "final": "Baltimore Ravens 24, Tennessee Titans 18",
-        "cover": "Baltimore Ravens",
+        "cover": "Tennessee Titans",
         "status": null,
         "confidence": "100%",
         "sharp": {
@@ -651,11 +651,11 @@
         "picks": {
           "M1: Normal Score": {
             "pick": "Tennessee Titans",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M2: Relevance": {
             "pick": "Tennessee Titans",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M3: Efficiency": {
             "pick": "N/A",
@@ -663,11 +663,11 @@
           },
           "M4: ATS Trends": {
             "pick": "Tennessee Titans",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M5: Luck": {
             "pick": "Tennessee Titans",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "M6: Sharp Money": {
             "pick": "N/A",
@@ -675,11 +675,11 @@
           },
           "M7: QB Injury Edge": {
             "pick": "Tennessee Titans",
-            "result": "LOSS"
+            "result": "WIN"
           },
           "CONSENSUS": {
             "pick": "Tennessee Titans",
-            "result": "LOSS"
+            "result": "WIN"
           }
         }
       },
@@ -687,7 +687,7 @@
         "game": "Houston Texans (H) vs Dallas Cowboys (A)",
         "team_home": "Houston Texans",
         "team_away": "Dallas Cowboys",
-        "line": "N/A",
+        "line": "HOU -3",
         "favorite": "?",
         "final": "Houston Texans 30, Dallas Cowboys 34",
         "cover": "Dallas Cowboys",
