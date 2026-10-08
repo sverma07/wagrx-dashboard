@@ -289,16 +289,16 @@
   .range-btn.active { background: var(--accent-gradient); color: #fff; }
   .net-tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-bottom: 14px; }
   .net-tile {
-    text-align: left; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px;
+    text-align: left; padding: 8px 12px; border: 1px solid var(--border); border-radius: 10px;
     background: var(--neutral-bg); color: var(--text); cursor: default; font: inherit;
     transition: border-color 0.15s ease, opacity 0.15s ease;
   }
   .net-tile:hover, .net-tile:focus-visible { border-color: #3a3f4b; outline: none; }
-  .net-tile .tile-label { display: flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 700;
+  .net-tile .tile-label { display: flex; align-items: center; gap: 6px; font-size: 0.68rem; font-weight: 700;
     letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
   .net-tile .tile-label i { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
-  .net-tile .tile-value { font-size: 1.6rem; font-weight: 700; line-height: 1.15; margin-top: 4px; }
-  .net-tile .tile-meta { font-size: 0.76rem; color: var(--text-dim); margin-top: 2px; }
+  .net-tile .tile-value { font-size: 1.15rem; font-weight: 700; line-height: 1.2; margin-top: 3px; }
+  .net-tile .tile-meta { font-size: 0.72rem; color: var(--text-dim); margin-top: 1px; }
   .net-tile.dimmed { opacity: 0.45; }
   .net-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.78rem; color: var(--text); margin-bottom: 4px; }
   .net-legend span { display: inline-flex; align-items: center; gap: 6px; cursor: default; }
@@ -329,7 +329,7 @@
   .net-table table { margin-top: 6px; }
   @media (max-width: 600px) {
     .net-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .net-tile .tile-value { font-size: 1.35rem; }
+    .net-tile .tile-value { font-size: 1.05rem; }
   }
   .tag.neutral { background: var(--neutral-bg); color: var(--text-dim); }
   .hist-record { font-weight: 700; color: var(--text); }
