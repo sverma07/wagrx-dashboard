@@ -758,9 +758,9 @@ function selectPerformance() {
   loadPerformance();
 }
 
-function renderPerfCard(sport, data) {
+function renderPerfTable(sport, data) {
   if (!data || !data.models) {
-    return `<div class="perf-card"><h2>${sport.label}</h2><div class="empty-state">No graded games yet this season.</div></div>`;
+    return `<div class="empty-state">No graded ${sport.label} games yet this season.</div>`;
   }
   // Sharp money is tracked as info only, so it sits below the models and consensus.
   const entries = Object.entries(data.models).filter(([k]) => k !== SHARP_KEY);
@@ -778,15 +778,37 @@ function renderPerfCard(sport, data) {
   }).join("");
   const updated = data.updated ? fmtTime(data.updated) : "N/A";
   return `
-    <div class="perf-card">
-      <h2>${sport.label}</h2>
-      <div class="perf-updated">Last graded: ${updated}</div>
-      <table class="perf">
-        <tr><th>Model</th><th>Record</th><th>Win %</th></tr>
-        ${rows}
-      </table>
-    </div>
+    <div class="perf-updated">Last graded: ${updated}</div>
+    <table class="perf">
+      <tr><th>Model</th><th>Record</th><th>Win %</th></tr>
+      ${rows}
+    </table>
   `;
+}
+
+// One "Model Records" card with a sport picker, instead of four stacked tables.
+let perfResults = [];
+let perfSport = null;
+
+function selectPerfSport(key) {
+  perfSport = key;
+  document.querySelectorAll(".perf-sport-btn").forEach(b => b.classList.toggle("active", b.dataset.sport === key));
+  const r = perfResults.find(x => x.sport.key === key);
+  document.getElementById("perf-body").innerHTML = r ? renderPerfTable(r.sport, r.data) : "";
+}
+
+function perfCardHtml() {
+  return `
+    <div class="perf-card">
+      <div class="net-head">
+        <div class="seg" role="group" aria-label="Sport">${SPORTS.map(sp =>
+          `<button class="range-btn perf-sport-btn${sp.key === perfSport ? " active" : ""}" data-sport="${sp.key}" onclick="selectPerfSport('${sp.key}')">${sp.label}</button>`).join("")}
+        </div>
+        <h2>Model Records</h2>
+        <div class="net-sub">Each model's graded record since the last reset. Consensus is highlighted.</div>
+      </div>
+      <div id="perf-body"></div>
+    </div>`;
 }
 
 
@@ -1008,7 +1030,7 @@ function renderNetChart(animate = false) {
 
 function selectNetRange(key) {
   netRange = key;
-  document.querySelectorAll(".range-btn").forEach(b => b.classList.toggle("active", b.dataset.range === key));
+  document.querySelectorAll("#net-card .range-btn").forEach(b => b.classList.toggle("active", b.dataset.range === key));
   renderNetChart(true);
 }
 
@@ -1043,7 +1065,10 @@ function loadPerformance() {
       .catch(() => null)
       .then(data => ({ sport, data }))
   )).then(results => {
-    container.innerHTML = netCardHtml() + results.map(({ sport, data }) => renderPerfCard(sport, data)).join("");
+    perfResults = results;
+    if (!perfSport) perfSport = currentSport;
+    container.innerHTML = netCardHtml() + perfCardHtml();
+    selectPerfSport(perfSport);
     loadNetData().then(() => renderNetChart(true));
   });
 }
