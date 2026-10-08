@@ -162,6 +162,10 @@
   }
   .consensus-label { font-size: 0.74rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
   .consensus-pick { font-weight: 700; font-size: 1rem; }
+  .sharp-row { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; margin-top: 8px; padding: 0 12px; font-size: 0.85rem; }
+  .sharp-row .consensus-label { margin-right: 2px; }
+  .sharp-row .tag { margin-left: 0; }
+  .sharp-row .dim { color: var(--text-dim); }
   .confidence-badge {
     font-weight: 700;
     font-size: 0.95rem;
@@ -301,6 +305,22 @@ function sharpStrength(g) {
   return { label: "LEAN", cls: "sharp-lean", gap, team };
 }
 
+// Always-visible sharp money summary under the consensus box, so it doesn't need the dropdown.
+function renderSharpRow(g) {
+  if (!g.picks || !("M6: Sharp Money" in g.picks)) return "";
+  const d = (g.detail || {})["M6: Sharp Money"];
+  const s = sharpStrength(g);
+  let body;
+  if (s) {
+    body = `<span>${s.team}</span><span class="tag ${s.cls}">${s.label}</span><span class="dim">${s.gap.toFixed(1)} pts</span>`;
+  } else if (d && d.home_b !== undefined && d.home_b !== null) {
+    body = `<span class="dim">Even (no gap)</span>`;
+  } else {
+    body = `<span class="dim">No splits posted yet</span>`;
+  }
+  return `<div class="sharp-row"><span class="consensus-label">Sharp money</span>${body}</div>`;
+}
+
 function formatDetail(g, modelKey) {
   const teamHome = g.team_home || "Home";
   const teamAway = g.team_away || "Away";
@@ -386,6 +406,7 @@ function renderGame(g, idx) {
           </div>
           <div class="confidence-badge">${confidence}</div>
         </div>
+        ${renderSharpRow(g)}
       </div>
       <div class="models-wrap">
         <table class="models">${modelRows}</table>
