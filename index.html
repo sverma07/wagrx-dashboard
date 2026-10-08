@@ -119,6 +119,8 @@
     .tab-btn { padding: 8px 4px; font-size: 0.78rem; }
   }
 
+  .day-won { color: var(--win); font-weight: 700; }
+  .day-lost { color: var(--loss); font-weight: 700; }
   .status-bar {
     display: flex;
     justify-content: space-between;
@@ -284,6 +286,7 @@
 
   <div class="status-bar" id="status-bar">
     <span id="updated-at">Loading&hellip;</span>
+    <span id="day-record"></span>
     <span id="game-count"></span>
   </div>
   <div class="controls-row" id="controls-row">
@@ -595,6 +598,7 @@ function selectSport(key) {
 }
 
 function loadSport(key) {
+  delete historyCache[key];  // pick up a new night's grading on reload
   const sport = SPORTS.find(s => s.key === key);
   document.getElementById("updated-at").textContent = "Loading…";
   document.getElementById("games").innerHTML = "";
@@ -630,8 +634,35 @@ function populateDateSelect(dates, latest) {
   sel.style.display = all.length ? "" : "none";
 }
 
+// The day's graded consensus record (same as History's Graded view), from <sport>_history.json.
+const historyCache = {};
+
+function showDayRecord(sportKey, date) {
+  const el = document.getElementById("day-record");
+  el.innerHTML = "";
+  if (!date) return;
+  const sport = SPORTS.find(s => s.key === sportKey);
+  const cached = historyCache[sportKey];
+  const load = cached ? Promise.resolve(cached)
+    : fetch(sport.histFile + "?_=" + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null)
+        .then(d => (historyCache[sportKey] = d));
+  load.then(hist => {
+    if (sportKey !== currentSport) return;  // switched sports meanwhile
+    const games = hist && hist.days && hist.days[date];
+    if (!games || !games.length) {
+      el.textContent = "Not graded yet";
+      return;
+    }
+    const results = games.map(g => (g.picks && g.picks.CONSENSUS || {}).result);
+    const w = results.filter(r => r === "WIN").length;
+    const l = results.filter(r => r === "LOSS").length;
+    el.innerHTML = `Record: <span class="day-won">Won ${w}</span> &middot; <span class="day-lost">Lost ${l}</span>`;
+  });
+}
+
 function showDay(data) {
   allSnapshots = data.snapshots || [];
+  showDayRecord(currentSport, data.date);
   document.getElementById("runtime-select").innerHTML = "";
   if (allSnapshots.length === 0) {
     document.getElementById("updated-at").textContent = "No data yet today.";
