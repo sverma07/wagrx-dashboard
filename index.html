@@ -88,6 +88,11 @@
   .tab-btn:hover { color: var(--text); }
   .tab-btn.active { background: var(--accent-gradient); color: #fff; }
   .tab-btn.perf-tab { flex: 0 0 auto; border-left: 1px solid var(--border); margin-left: 2px; padding-left: 14px; }
+  @media (max-width: 480px) {
+    .tab-bar { gap: 2px; }
+    .tab-btn { padding: 8px 5px; font-size: 0.76rem; }
+    .tab-btn.perf-tab { padding-left: 7px; margin-left: 0; }
+  }
 
   .status-bar {
     display: flex;
@@ -231,6 +236,8 @@
   table.perf tr.consensus-row-perf td { font-weight: 700; }
   table.perf tr.consensus-row-perf { background: var(--accent-soft); }
   .perf-pct { font-weight: 700; }
+  .tag.neutral { background: var(--neutral-bg); color: var(--text-dim); }
+  .hist-record { font-weight: 700; color: var(--text); }
 </style>
 </head>
 <body>
@@ -258,18 +265,19 @@
   </div>
   <main id="games"></main>
   <main id="performance" style="display:none;"></main>
+  <main id="history" style="display:none;"></main>
 </div>
 
 <script>
 const SPORTS = [
-  { key: "ncaaf", label: "NCAAF", file: "ncaaf_today.json", perfFile: "ncaaf_performance.json" },
-  { key: "nfl",   label: "NFL",   file: "nfl_today.json",   perfFile: "nfl_performance.json" },
-  { key: "nba",   label: "NBA",   file: "nba_today.json",   perfFile: "nba_performance.json" },
-  { key: "ncaa",  label: "NCAAB", file: "ncaa_today.json",  perfFile: "ncaa_performance.json" },
+  { key: "ncaaf", label: "NCAAF", file: "ncaaf_today.json", perfFile: "ncaaf_performance.json", histFile: "ncaaf_history.json" },
+  { key: "nfl",   label: "NFL",   file: "nfl_today.json",   perfFile: "nfl_performance.json", histFile: "nfl_history.json" },
+  { key: "nba",   label: "NBA",   file: "nba_today.json",   perfFile: "nba_performance.json", histFile: "nba_history.json" },
+  { key: "ncaa",  label: "NCAAB", file: "ncaa_today.json",  perfFile: "ncaa_performance.json", histFile: "ncaa_history.json" },
 ];
 
 let currentSport = SPORTS[0].key;
-let currentView = "games"; // "games" or "performance"
+let currentView = "games"; // "games", "history" or "performance"
 let allSnapshots = [];
 let currentGames = [];
 let currentSnapshotTime = "";
@@ -298,7 +306,7 @@ function sharpStrength(g) {
   if (!d || d.home_b === undefined || d.home_b === null) return null;
   const signed = parseFloat(d.home_m) - parseFloat(d.home_b);
   if (isNaN(signed) || signed === 0) return null;
-  const gap = Math.abs(signed);
+  const gap = Math.round(Math.abs(signed) * 10) / 10;  // tier on the same 1-decimal value that is displayed
   const team = signed > 0 ? (g.team_home || "Home") : (g.team_away || "Away");
   if (gap > 20) return { label: "EXTREME", cls: "sharp-extreme", gap, team };
   if (gap >= 10) return { label: "STRONG", cls: "sharp-strong", gap, team };
@@ -502,7 +510,8 @@ function renderTabs() {
     `<button class="tab-btn${(currentView === "games" && s.key === currentSport) ? " active" : ""}" onclick="selectSport('${s.key}')">${s.label}</button>`
   ).join("");
   const perfTab = `<button class="tab-btn perf-tab${currentView === "performance" ? " active" : ""}" onclick="selectPerformance()">Performance</button>`;
-  bar.innerHTML = sportTabs + perfTab;
+  const histTab = `<button class="tab-btn perf-tab${currentView === "history" ? " active" : ""}" onclick="selectHistory()">History</button>`;
+  bar.innerHTML = sportTabs + histTab + perfTab;
 }
 
 function setViewVisibility() {
@@ -510,13 +519,14 @@ function setViewVisibility() {
   document.getElementById("status-bar").style.display = isGames ? "" : "none";
   document.getElementById("controls-row").style.display = isGames ? "" : "none";
   document.getElementById("games").style.display = isGames ? "" : "none";
-  document.getElementById("performance").style.display = isGames ? "none" : "";
+  document.getElementById("performance").style.display = currentView === "performance" ? "" : "none";
+  document.getElementById("history").style.display = currentView === "history" ? "" : "none";
 }
 
 function selectSport(key) {
-  const wasPerformance = currentView === "performance";
+  const wasOtherView = currentView !== "games";
   currentView = "games";
-  if (key === currentSport && allSnapshots.length && !wasPerformance) { loadSport(key); return; }
+  if (key === currentSport && allSnapshots.length && !wasOtherView) { loadSport(key); return; }
   currentSport = key;
   try { localStorage.setItem("wagrx-last-sport", key); } catch (e) {}
   renderTabs();
@@ -596,6 +606,119 @@ function loadPerformance() {
   )).then(results => {
     container.innerHTML = results.map(({ sport, data }) => renderPerfCard(sport, data)).join("");
   });
+}
+
+// ---- History tab: one graded day at a time, per sport (from <sport>_history.json) ----
+let historySport = null;
+let historyData = null;
+let historyDate = null;
+
+function selectHistory() {
+  currentView = "history";
+  renderTabs();
+  setViewVisibility();
+  loadHistory(historySport || currentSport);
+}
+
+function historyDays() {
+  const days = (historyData && historyData.days) || {};
+  return Object.keys(days).filter(d => (days[d] || []).length).sort().reverse();
+}
+
+function fmtDate(d) {
+  const [y, m, day] = d.split("-").map(Number);
+  return new Date(y, m - 1, day).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric", year: "numeric" });
+}
+
+function loadHistory(key) {
+  historySport = key;
+  historyData = null;
+  const sport = SPORTS.find(s => s.key === key);
+  document.getElementById("history").innerHTML = '<div class="empty-state">Loading&hellip;</div>';
+  fetch(sport.histFile + "?_=" + Date.now())
+    .then(r => r.ok ? r.json() : null)
+    .catch(() => null)
+    .then(data => {
+      historyData = data;
+      const days = historyDays();
+      if (!days.includes(historyDate)) historyDate = days[0] || null;
+      renderHistory();
+    });
+}
+
+function selectHistoryDate(d) {
+  historyDate = d;
+  renderHistory();
+}
+
+function resultTag(result) {
+  if (result === "WIN") return '<span class="tag agree">WIN</span>';
+  if (result === "LOSS") return '<span class="tag disagree">LOSS</span>';
+  return "";
+}
+
+function renderHistoryGame(g) {
+  const picks = g.picks || {};
+  const c = picks.CONSENSUS || {};
+  const modelRows = Object.entries(picks).filter(([k]) => k !== "CONSENSUS").map(([k, p]) =>
+    `<tr><td>${k}</td><td>${p.pick || "N/A"}${resultTag(p.result)}</td></tr>`
+  ).join("");
+  const final = g.final ? ` &middot; Final: ${g.final}` : "";
+  const statusTag = g.status ? `<span class="tag neutral">${g.status.split(" (")[0]}</span>` : resultTag(c.result);
+  const sharpGame = { ...g, detail: { "M6: Sharp Money": g.sharp || {} } };
+  return `
+    <div class="game-card">
+      <div class="game-header" onclick="this.closest('.game-card').classList.toggle('expanded')">
+        <div class="game-title-row">
+          <div>
+            <div class="game-title">${g.game || ""}</div>
+            <div class="game-meta">Line: ${g.line || "N/A"}${final}</div>
+          </div>
+          <span class="chevron">&#9654;</span>
+        </div>
+        <div class="consensus-row">
+          <div>
+            <div class="consensus-label">Consensus</div>
+            <div class="consensus-pick">${c.pick || "N/A"}${statusTag}</div>
+          </div>
+          <div class="confidence-badge">${g.confidence || "N/A"}</div>
+        </div>
+        ${renderSharpRow(sharpGame)}
+      </div>
+      <div class="models-wrap">
+        <table class="models">${modelRows}</table>
+      </div>
+    </div>
+  `;
+}
+
+function renderHistory() {
+  const sport = SPORTS.find(s => s.key === historySport);
+  const days = historyDays();
+  const sportOpts = SPORTS.map(s => `<option value="${s.key}"${s.key === historySport ? " selected" : ""}>${s.label}</option>`).join("");
+  const dateOpts = days.length
+    ? days.map(d => `<option value="${d}"${d === historyDate ? " selected" : ""}>${fmtDate(d)}</option>`).join("")
+    : "<option>No graded days</option>";
+  const controls = `
+    <div class="controls-row">
+      <select class="runtime-select" onchange="loadHistory(this.value)">${sportOpts}</select>
+      <select class="runtime-select" onchange="selectHistoryDate(this.value)"${days.length ? "" : " disabled"}>${dateOpts}</select>
+    </div>`;
+  const container = document.getElementById("history");
+  if (!days.length) {
+    container.innerHTML = controls + `<div class="empty-state">No graded ${sport.label} games yet.</div>`;
+    return;
+  }
+  const games = historyData.days[historyDate] || [];
+  const results = games.map(g => (g.picks && g.picks.CONSENSUS || {}).result);
+  const w = results.filter(r => r === "WIN").length;
+  const l = results.filter(r => r === "LOSS").length;
+  const pct = w + l ? ` (${Math.round(w / (w + l) * 100)}%)` : "";
+  container.innerHTML = controls + `
+    <div class="status-bar">
+      <span>Consensus: <span class="hist-record">${w}-${l}</span>${pct}</span>
+      <span>${games.length} ${games.length === 1 ? "game" : "games"}</span>
+    </div>` + games.map(renderHistoryGame).join("");
 }
 
 (function init() {
