@@ -264,6 +264,7 @@
   table.perf th { color: var(--text-dim); font-weight: 600; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.04em; }
   table.perf tr.consensus-row-perf td { font-weight: 700; }
   table.perf tr.consensus-row-perf { background: var(--accent-soft); }
+  table.perf tr.sharp-row-perf td { color: var(--text-dim); border-top: 2px solid var(--border); }
   .perf-pct { font-weight: 700; }
   .tag.neutral { background: var(--neutral-bg); color: var(--text-dim); }
   .hist-record { font-weight: 700; color: var(--text); }
@@ -354,13 +355,18 @@ function favoriteName(g) {
 }
 
 // Always-visible sharp money summary under the consensus box, so it doesn't need the dropdown.
-function renderSharpRow(g) {
-  if (!g.picks || !("M6: Sharp Money" in g.picks)) return "";
+// Sharp money is an info point shown under the consensus, not one of the voting models.
+const SHARP_KEY = "M6: Sharp Money";
+
+// cover (History only): the team that covered, to grade the sharp side as info.
+function renderSharpRow(g, cover = null) {
+  if (!g.picks || !(SHARP_KEY in g.picks)) return "";
   const d = (g.detail || {})["M6: Sharp Money"];
   const s = sharpStrength(g);
   let body;
   if (s) {
-    body = `<span>${s.team}</span><span class="tag ${s.cls}">${s.label}</span><span class="dim">${s.gap.toFixed(1)} pts</span>`;
+    body = `<span>${s.team}</span><span class="tag ${s.cls}">${s.label}</span><span class="dim">${s.gap.toFixed(1)} pts</span>`
+      + (cover ? resultTag(s.team === cover ? "WIN" : "LOSS") : "");
   } else if (d && d.home_b !== undefined && d.home_b !== null) {
     body = `<span class="dim">Even (no gap)</span>`;
   } else {
@@ -421,7 +427,7 @@ function renderGame(g, idx, grade = null, scope = "games") {
     return resultTag(pick.replace("TAKE:", "").trim() === grade.cover ? "WIN" : "LOSS");
   };
   const modelKeys = Object.keys(picks);
-  const modelRows = modelKeys.filter(k => k !== "CONSENSUS").map(key => {
+  const modelRows = modelKeys.filter(k => k !== "CONSENSUS" && k !== SHARP_KEY).map(key => {
     const pick = picks[key];
     const consensusPick = picks.CONSENSUS || "";
     let tag = gradeTag(pick);  // once graded, WIN/LOSS replaces AGREE/DISAGREE
@@ -442,7 +448,7 @@ function renderGame(g, idx, grade = null, scope = "games") {
   const consensus = picks.CONSENSUS ? picks.CONSENSUS.replace("TAKE: ", "") : "N/A";
   const confidence = g.confidence || "N/A";
   const searchKey = (g.game || "").toLowerCase();
-  const detailOptions = modelKeys.map(k => `<option value="${k}">${k}</option>`).join("");
+  const detailOptions = modelKeys.map(k => `<option value="${k}">${k === SHARP_KEY ? "Sharp Money (info)" : k}</option>`).join("");
   const finalMeta = (grade && grade.final ? ` &middot; Final: ${grade.final}` : "")
     + (grade && grade.run ? ` &middot; Graded: ${new Date(grade.run).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })} run` : "");
   let consensusTag = gradeTag(picks.CONSENSUS || "");
@@ -465,7 +471,7 @@ function renderGame(g, idx, grade = null, scope = "games") {
           </div>
           <div class="confidence-badge">${confidence}</div>
         </div>
-        ${renderSharpRow(g)}
+        ${renderSharpRow(g, grade && grade.cover)}
       </div>
       <div class="models-wrap">
         <table class="models">${modelRows}</table>
@@ -662,12 +668,16 @@ function renderPerfCard(sport, data) {
   if (!data || !data.models) {
     return `<div class="perf-card"><h2>${sport.label}</h2><div class="empty-state">No graded games yet this season.</div></div>`;
   }
-  const rows = Object.entries(data.models).map(([key, rec]) => {
+  // Sharp money is tracked as info only, so it sits below the models and consensus.
+  const entries = Object.entries(data.models).filter(([k]) => k !== SHARP_KEY);
+  if (data.models[SHARP_KEY]) entries.push([SHARP_KEY, data.models[SHARP_KEY]]);
+  const rows = entries.map(([key, rec]) => {
     const w = rec.W || 0, l = rec.L || 0, total = w + l;
     const pct = total > 0 ? Math.round((w / total) * 100) + "%" : "N/A";
     const isConsensus = key === "CONSENSUS";
-    return `<tr class="${isConsensus ? "consensus-row-perf" : ""}">
-      <td>${key}</td>
+    const isSharp = key === SHARP_KEY;
+    return `<tr class="${isConsensus ? "consensus-row-perf" : isSharp ? "sharp-row-perf" : ""}">
+      <td>${isSharp ? "Sharp Money (info, not in consensus)" : key}</td>
       <td>${w}-${l}</td>
       <td class="perf-pct">${pct}</td>
     </tr>`;
@@ -774,7 +784,7 @@ function resultTag(result) {
 function renderHistoryGame(g) {
   const picks = g.picks || {};
   const c = picks.CONSENSUS || {};
-  const modelRows = Object.entries(picks).filter(([k]) => k !== "CONSENSUS").map(([k, p]) =>
+  const modelRows = Object.entries(picks).filter(([k]) => k !== "CONSENSUS" && k !== SHARP_KEY).map(([k, p]) =>
     `<tr><td>${k}</td><td>${p.pick || "N/A"}${resultTag(p.result)}</td></tr>`
   ).join("");
   const final = g.final ? ` &middot; Final: ${g.final}` : "";
@@ -797,7 +807,7 @@ function renderHistoryGame(g) {
           </div>
           <div class="confidence-badge">${g.confidence || "N/A"}</div>
         </div>
-        ${renderSharpRow(sharpGame)}
+        ${renderSharpRow(sharpGame, g.cover)}
       </div>
       <div class="models-wrap">
         <table class="models">${modelRows}</table>
