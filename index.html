@@ -87,11 +87,36 @@
   }
   .tab-btn:hover { color: var(--text); }
   .tab-btn.active { background: var(--accent-gradient); color: #fff; }
-  .tab-btn.perf-tab { flex: 0 0 auto; border-left: 1px solid var(--border); margin-left: 2px; padding-left: 14px; }
+  /* Sport tabs share the bar equally so every sport's box is the same size. */
+  .tab-bar .tab-btn { flex: 1 1 0; min-width: 0; }
+  .nav-row { display: flex; gap: 8px; align-items: stretch; margin-bottom: 14px; }
+  .nav-row .tab-bar { flex: 1; min-width: 0; margin-bottom: 0; }
+  /* History / Performance: outlined utility buttons, visually separate from the sports. */
+  .util-tabs { display: flex; gap: 6px; }
+  .util-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: transparent;
+    color: var(--text-dim);
+    font-size: 0.84rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.12s ease, border-color 0.12s ease, background 0.12s ease;
+  }
+  .util-btn svg { flex-shrink: 0; }
+  .util-btn:hover { color: var(--text); border-color: var(--text-dim); }
+  .util-btn.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  @media (max-width: 600px) {
+    .util-btn { padding: 0 11px; }
+    .util-btn .util-label { display: none; }
+  }
   @media (max-width: 480px) {
-    .tab-bar { gap: 2px; }
-    .tab-btn { padding: 8px 5px; font-size: 0.76rem; }
-    .tab-btn.perf-tab { padding-left: 7px; margin-left: 0; }
+    .tab-btn { padding: 8px 4px; font-size: 0.78rem; }
   }
 
   .status-bar {
@@ -250,7 +275,10 @@
     <img src="logo-banner.png" alt="WagrX" class="brand-logo">
   </div>
 
-  <div class="tab-bar" id="tab-bar"></div>
+  <div class="nav-row">
+    <div class="tab-bar" id="tab-bar"></div>
+    <div class="util-tabs" id="util-tabs"></div>
+  </div>
 
   <div class="status-bar" id="status-bar">
     <span id="updated-at">Loading&hellip;</span>
@@ -513,14 +541,19 @@ function renderSnapshot(snap) {
   filterGames();
 }
 
+const UTIL_ICONS = {
+  history: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg>',
+  performance: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg>',
+};
+
 function renderTabs() {
-  const bar = document.getElementById("tab-bar");
-  const sportTabs = SPORTS.map(s =>
+  document.getElementById("tab-bar").innerHTML = SPORTS.map(s =>
     `<button class="tab-btn${(currentView === "games" && s.key === currentSport) ? " active" : ""}" onclick="selectSport('${s.key}')">${s.label}</button>`
   ).join("");
-  const perfTab = `<button class="tab-btn perf-tab${currentView === "performance" ? " active" : ""}" onclick="selectPerformance()">Performance</button>`;
-  const histTab = `<button class="tab-btn perf-tab${currentView === "history" ? " active" : ""}" onclick="selectHistory()">History</button>`;
-  bar.innerHTML = sportTabs + histTab + perfTab;
+  const util = (view, label, onclick) =>
+    `<button class="util-btn${currentView === view ? " active" : ""}" onclick="${onclick}" title="${label}" aria-label="${label}">${UTIL_ICONS[view]}<span class="util-label">${label}</span></button>`;
+  document.getElementById("util-tabs").innerHTML =
+    util("history", "History", "selectHistory()") + util("performance", "Performance", "selectPerformance()");
 }
 
 function setViewVisibility() {
