@@ -185,6 +185,10 @@
   }
   .tag.agree { background: var(--win-bg); color: var(--win); }
   .tag.disagree { background: var(--loss-bg); color: var(--loss); }
+  /* Sharp money strength: one amber ramp (kept clear of the green/red AGREE/DISAGREE tags). */
+  .tag.sharp-lean { background: transparent; color: #d6b45a; box-shadow: inset 0 0 0 1px #6b5a2a; }
+  .tag.sharp-strong { background: #4a3810; color: #f5b43a; }
+  .tag.sharp-extreme { background: #f59e0b; color: #1a1200; }
   .detail-box { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
   .detail-select {
     width: 100%;
@@ -283,6 +287,18 @@ function fmtNum(v) {
   return isNaN(n) ? String(v) : (Number.isInteger(n) ? String(n) : n.toFixed(1));
 }
 
+// Tier the M6 pick by the gap between money% and bets% on the picked side:
+// under 10 pts LEAN, 10-20 STRONG, over 20 EXTREME. Null when there's no data or no gap.
+function sharpStrength(g) {
+  const d = (g.detail || {})["M6: Sharp Money"];
+  if (!d || d.home_b === undefined || d.home_b === null) return null;
+  const gap = Math.abs(parseFloat(d.home_m) - parseFloat(d.home_b));
+  if (isNaN(gap) || gap === 0) return null;
+  if (gap > 20) return { label: "EXTREME", cls: "sharp-extreme", gap };
+  if (gap >= 10) return { label: "STRONG", cls: "sharp-strong", gap };
+  return { label: "LEAN", cls: "sharp-lean", gap };
+}
+
 function formatDetail(g, modelKey) {
   const teamHome = g.team_home || "Home";
   const teamAway = g.team_away || "Away";
@@ -304,9 +320,11 @@ function formatDetail(g, modelKey) {
 
   if (modelKey.includes("Sharp Money")) {
     if (d.home_b === undefined || d.home_b === null) return "No sharp money data available.";
+    const s = sharpStrength(g);
     return `${teamHome}: <span class="num">${fmtNum(d.home_b)}%</span> bets / <span class="num">${fmtNum(d.home_m)}%</span> money`
       + `&nbsp;&nbsp;|&nbsp;&nbsp;`
-      + `${teamAway}: <span class="num">${fmtNum(d.away_b)}%</span> bets / <span class="num">${fmtNum(d.away_m)}%</span> money`;
+      + `${teamAway}: <span class="num">${fmtNum(d.away_b)}%</span> bets / <span class="num">${fmtNum(d.away_m)}%</span> money`
+      + (s ? `<br>Gap: <span class="num">${s.gap.toFixed(1)}</span> pts<span class="tag ${s.cls}">${s.label}</span>` : "");
   }
 
   if (modelKey.includes("QB Injury")) {
@@ -336,7 +354,12 @@ function renderGame(g, idx) {
         : '<span class="tag disagree">DISAGREE</span>';
     }
     const label = pick ? pick.replace("TAKE: ", "") : "N/A";
-    return `<tr><td>${key}</td><td>${label}${tag}</td></tr>`;
+    let strengthTag = "";
+    if (key.includes("Sharp Money") && pick && pick.startsWith("TAKE:")) {
+      const s = sharpStrength(g);
+      if (s) strengthTag = `<span class="tag ${s.cls}">${s.label}</span>`;
+    }
+    return `<tr><td>${key}</td><td>${label}${strengthTag}${tag}</td></tr>`;
   }).join("");
 
   const consensus = picks.CONSENSUS ? picks.CONSENSUS.replace("TAKE: ", "") : "N/A";
