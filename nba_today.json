@@ -1,87 +1,43 @@
 {
   "sport": "NBA",
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "snapshots": [
     {
-      "time": "2026-10-07T13:53:28-04:00",
+      "time": "2026-10-08T23:45:20-04:00",
       "games": [
         {
-          "game": "Indiana Pacers (H) vs Minnesota Timberwolves (A)",
-          "spread": "MIN -3.5",
-          "favorite": "Minnesota Timberwolves -fav",
-          "confidence": "75%",
+          "game": "Cleveland Cavaliers (H) vs Boston Celtics (A)",
+          "spread": "N/A",
+          "favorite": "?",
+          "confidence": "100%",
           "picks": {
-            "M1: Normal Score": "TAKE: Minnesota Timberwolves",
-            "M2: Relevance": "TAKE: Minnesota Timberwolves",
-            "M3: Efficiency": "TAKE: Minnesota Timberwolves",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Indiana Pacers",
-            "CONSENSUS": "TAKE: Minnesota Timberwolves",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 27,
-              "away": 67
-            },
-            "M2: Relevance": {
-              "home": 249.7002,
-              "away": 2716.3803
-            },
-            "M3: Efficiency": {
-              "margin": -4.9
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "-4.9",
-              "away": "1.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Indiana Pacers",
-          "team_away": "Minnesota Timberwolves"
-        },
-        {
-          "game": "Memphis Grizzlies (H) vs Orlando Magic (A)",
-          "spread": "ORL -2.5",
-          "favorite": "Orlando Magic -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Orlando Magic",
-            "M2: Relevance": "TAKE: Orlando Magic",
-            "M3: Efficiency": "TAKE: Orlando Magic",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Memphis Grizzlies",
-            "CONSENSUS": "TAKE: Orlando Magic",
-            "M6: Sharp Money": "N/A"
+            "M1: Normal Score": "TAKE: Boston Celtics",
+            "M2: Relevance": "TAKE: Boston Celtics",
+            "M3: Efficiency": "N/A",
+            "M4: ATS Trends": "TAKE: Boston Celtics",
+            "M5: Luck": "TAKE: Boston Celtics",
+            "M6: Sharp Money": "N/A",
+            "CONSENSUS": "TAKE: Boston Celtics"
           },
           "detail": {
             "M1: Normal Score": {
               "home": 34,
-              "away": 59
+              "away": 72
             },
             "M2: Relevance": {
-              "home": 305.9211,
-              "away": 2658.0308
+              "home": 632.0617,
+              "away": 2134.8068
             },
             "M3: Efficiency": {
-              "margin": -3.0
+              "margin": -2.3
             },
             "M4: ATS Trends": {
               "home": 0,
-              "away": 0
+              "away": 14
             },
             "M5: Luck": {
-              "home": "-3.6",
-              "away": "2.1"
+              "home": "0.8",
+              "away": "-1.7"
             },
             "M6: Sharp Money": {
               "home_b": null,
@@ -90,42 +46,42 @@
               "away_m": null
             }
           },
-          "team_home": "Memphis Grizzlies",
-          "team_away": "Orlando Magic"
+          "team_home": "Cleveland Cavaliers",
+          "team_away": "Boston Celtics"
         },
         {
-          "game": "Oklahoma City Thunder (H) vs Milwaukee Bucks (A)",
-          "spread": "OKC -14.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "80%",
+          "game": "Miami Heat (H) vs New Orleans Pelicans (A)",
+          "spread": "N/A",
+          "favorite": "?",
+          "confidence": "75%",
           "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Milwaukee Bucks",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "TAKE: Oklahoma City Thunder",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "M6: Sharp Money": "N/A"
+            "M1: Normal Score": "TAKE: Miami Heat",
+            "M2: Relevance": "TAKE: Miami Heat",
+            "M3: Efficiency": "N/A",
+            "M4: ATS Trends": "TAKE: Miami Heat",
+            "M5: Luck": "TAKE: New Orleans Pelicans",
+            "M6: Sharp Money": "N/A",
+            "CONSENSUS": "TAKE: Miami Heat"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 88,
-              "away": 17
+              "home": 79,
+              "away": 26
             },
             "M2: Relevance": {
-              "home": 2788.523,
-              "away": 210.2257
+              "home": 2193.2126,
+              "away": 226.8521
             },
             "M3: Efficiency": {
-              "margin": 8.2
+              "margin": 3.2
             },
             "M4: ATS Trends": {
-              "home": 11,
-              "away": 2
+              "home": 9,
+              "away": 5
             },
             "M5: Luck": {
-              "home": "-0.9",
-              "away": "3.2"
+              "home": "-2.3",
+              "away": "-4.2"
             },
             "M6: Sharp Money": {
               "home_b": null,
@@ -134,41 +90,85 @@
               "away_m": null
             }
           },
-          "team_home": "Oklahoma City Thunder",
-          "team_away": "Milwaukee Bucks"
+          "team_home": "Miami Heat",
+          "team_away": "New Orleans Pelicans"
         },
         {
-          "game": "Chicago Bulls (H) vs Phoenix Suns (A)",
-          "spread": "PHX -2.5",
-          "favorite": "Phoenix Suns -fav",
+          "game": "Brooklyn Nets (H) vs Philadelphia 76ers (A)",
+          "spread": "N/A",
+          "favorite": "?",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Philadelphia 76ers",
+            "M2: Relevance": "TAKE: Philadelphia 76ers",
+            "M3: Efficiency": "N/A",
+            "M4: ATS Trends": "TAKE: Philadelphia 76ers",
+            "M5: Luck": "TAKE: Brooklyn Nets",
+            "M6: Sharp Money": "N/A",
+            "CONSENSUS": "TAKE: Philadelphia 76ers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 22,
+              "away": 85
+            },
+            "M2: Relevance": {
+              "home": 227.2279,
+              "away": 2525.5798
+            },
+            "M3: Efficiency": {
+              "margin": -4.3
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 12
+            },
+            "M5: Luck": {
+              "home": "1.1",
+              "away": "5.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            }
+          },
+          "team_home": "Brooklyn Nets",
+          "team_away": "Philadelphia 76ers"
+        },
+        {
+          "game": "New York Knicks (H) vs Washington Wizards (A)",
+          "spread": "N/A",
+          "favorite": "?",
           "confidence": "100%",
           "picks": {
-            "M1: Normal Score": "TAKE: Phoenix Suns",
-            "M2: Relevance": "TAKE: Phoenix Suns",
-            "M3: Efficiency": "TAKE: Phoenix Suns",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Phoenix Suns",
-            "CONSENSUS": "TAKE: Phoenix Suns",
-            "M6: Sharp Money": "N/A"
+            "M1: Normal Score": "TAKE: New York Knicks",
+            "M2: Relevance": "TAKE: New York Knicks",
+            "M3: Efficiency": "N/A",
+            "M4: ATS Trends": "TAKE: New York Knicks",
+            "M5: Luck": "TAKE: New York Knicks",
+            "M6: Sharp Money": "N/A",
+            "CONSENSUS": "TAKE: New York Knicks"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 39,
-              "away": 54
+              "home": 97,
+              "away": 9
             },
             "M2: Relevance": {
-              "home": 458.1063,
-              "away": 2501.2703
+              "home": 2745.673,
+              "away": 19.785
             },
             "M3: Efficiency": {
-              "margin": -2.8
+              "margin": 9.7
             },
             "M4: ATS Trends": {
-              "home": 0,
+              "home": 14,
               "away": 0
             },
             "M5: Luck": {
-              "home": "1.8",
+              "home": "-2.1",
               "away": "1.6"
             },
             "M6: Sharp Money": {
@@ -178,42 +178,42 @@
               "away_m": null
             }
           },
-          "team_home": "Chicago Bulls",
-          "team_away": "Phoenix Suns"
+          "team_home": "New York Knicks",
+          "team_away": "Washington Wizards"
         },
         {
-          "game": "Portland Trail Blazers (H) vs Golden State Warriors (A)",
-          "spread": "POR -14.5",
-          "favorite": "Portland Trail Blazers -fav",
+          "game": "San Antonio Spurs (H) vs Atlanta Hawks (A)",
+          "spread": "N/A",
+          "favorite": "?",
           "confidence": "75%",
           "picks": {
-            "M1: Normal Score": "TAKE: Golden State Warriors",
-            "M2: Relevance": "TAKE: Portland Trail Blazers",
-            "M3: Efficiency": "TAKE: Golden State Warriors",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Golden State Warriors",
-            "CONSENSUS": "TAKE: Golden State Warriors",
-            "M6: Sharp Money": "N/A"
+            "M1: Normal Score": "TAKE: San Antonio Spurs",
+            "M2: Relevance": "TAKE: San Antonio Spurs",
+            "M3: Efficiency": "N/A",
+            "M4: ATS Trends": "TAKE: San Antonio Spurs",
+            "M5: Luck": "TAKE: Atlanta Hawks",
+            "M6: Sharp Money": "N/A",
+            "CONSENSUS": "TAKE: San Antonio Spurs"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 45,
-              "away": 46
+              "home": 75,
+              "away": 28
             },
             "M2: Relevance": {
-              "home": 1578.5511,
-              "away": 1317.8158
+              "home": 2657.4967,
+              "away": 108.0806
             },
             "M3: Efficiency": {
-              "margin": -0.1
+              "margin": 3.3
             },
             "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
+              "home": 12,
+              "away": 3
             },
             "M5: Luck": {
-              "home": "2.7",
-              "away": "-3.1"
+              "home": "1.2",
+              "away": "0.9"
             },
             "M6: Sharp Money": {
               "home_b": null,
@@ -222,47 +222,42 @@
               "away_m": null
             }
           },
-          "team_home": "Portland Trail Blazers",
-          "team_away": "Golden State Warriors"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-07T14:10:06-04:00",
-      "games": [
+          "team_home": "San Antonio Spurs",
+          "team_away": "Atlanta Hawks"
+        },
         {
-          "game": "Indiana Pacers (H) vs Minnesota Timberwolves (A)",
-          "spread": "MIN -3.5",
-          "favorite": "Minnesota Timberwolves -fav",
+          "game": "Los Angeles Lakers (H) vs Sacramento Kings (A)",
+          "spread": "N/A",
+          "favorite": "?",
           "confidence": "75%",
           "picks": {
-            "M1: Normal Score": "TAKE: Minnesota Timberwolves",
-            "M2: Relevance": "TAKE: Minnesota Timberwolves",
-            "M3: Efficiency": "TAKE: Minnesota Timberwolves",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Indiana Pacers",
-            "CONSENSUS": "TAKE: Minnesota Timberwolves",
-            "M6: Sharp Money": "N/A"
+            "M1: Normal Score": "TAKE: Los Angeles Lakers",
+            "M2: Relevance": "TAKE: Los Angeles Lakers",
+            "M3: Efficiency": "N/A",
+            "M4: ATS Trends": "TAKE: Los Angeles Lakers",
+            "M5: Luck": "TAKE: Sacramento Kings",
+            "M6: Sharp Money": "N/A",
+            "CONSENSUS": "TAKE: Los Angeles Lakers"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 27,
-              "away": 67
+              "home": 87,
+              "away": 22
             },
             "M2: Relevance": {
-              "home": 249.7002,
-              "away": 2716.3803
+              "home": 2650.2497,
+              "away": 121.5189
             },
             "M3: Efficiency": {
-              "margin": -4.9
+              "margin": 5.4
             },
             "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
+              "home": 14,
+              "away": 1
             },
             "M5: Luck": {
-              "home": "-4.9",
-              "away": "1.6"
+              "home": "7.2",
+              "away": "1.2"
             },
             "M6: Sharp Money": {
               "home_b": null,
@@ -271,1084 +266,8 @@
               "away_m": null
             }
           },
-          "team_home": "Indiana Pacers",
-          "team_away": "Minnesota Timberwolves"
-        },
-        {
-          "game": "Memphis Grizzlies (H) vs Orlando Magic (A)",
-          "spread": "ORL -2.5",
-          "favorite": "Orlando Magic -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Orlando Magic",
-            "M2: Relevance": "TAKE: Orlando Magic",
-            "M3: Efficiency": "TAKE: Orlando Magic",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Memphis Grizzlies",
-            "CONSENSUS": "TAKE: Orlando Magic",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 34,
-              "away": 59
-            },
-            "M2: Relevance": {
-              "home": 305.9211,
-              "away": 2658.0308
-            },
-            "M3: Efficiency": {
-              "margin": -3.0
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "-3.6",
-              "away": "2.1"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Memphis Grizzlies",
-          "team_away": "Orlando Magic"
-        },
-        {
-          "game": "Oklahoma City Thunder (H) vs Milwaukee Bucks (A)",
-          "spread": "OKC -14.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "80%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Milwaukee Bucks",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "TAKE: Oklahoma City Thunder",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 88,
-              "away": 17
-            },
-            "M2: Relevance": {
-              "home": 2788.523,
-              "away": 210.2257
-            },
-            "M3: Efficiency": {
-              "margin": 8.2
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "-0.9",
-              "away": "3.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Oklahoma City Thunder",
-          "team_away": "Milwaukee Bucks"
-        },
-        {
-          "game": "Chicago Bulls (H) vs Phoenix Suns (A)",
-          "spread": "PHX -2.5",
-          "favorite": "Phoenix Suns -fav",
-          "confidence": "100%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Phoenix Suns",
-            "M2: Relevance": "TAKE: Phoenix Suns",
-            "M3: Efficiency": "TAKE: Phoenix Suns",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Phoenix Suns",
-            "CONSENSUS": "TAKE: Phoenix Suns",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 39,
-              "away": 54
-            },
-            "M2: Relevance": {
-              "home": 458.1063,
-              "away": 2501.2703
-            },
-            "M3: Efficiency": {
-              "margin": -2.8
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "1.8",
-              "away": "1.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Chicago Bulls",
-          "team_away": "Phoenix Suns"
-        },
-        {
-          "game": "Portland Trail Blazers (H) vs Golden State Warriors (A)",
-          "spread": "POR -14.5",
-          "favorite": "Portland Trail Blazers -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Golden State Warriors",
-            "M2: Relevance": "TAKE: Portland Trail Blazers",
-            "M3: Efficiency": "TAKE: Golden State Warriors",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Golden State Warriors",
-            "CONSENSUS": "TAKE: Golden State Warriors",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 45,
-              "away": 46
-            },
-            "M2: Relevance": {
-              "home": 1578.5511,
-              "away": 1317.8158
-            },
-            "M3: Efficiency": {
-              "margin": -0.1
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "2.7",
-              "away": "-3.1"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Portland Trail Blazers",
-          "team_away": "Golden State Warriors"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-07T16:10:03-04:00",
-      "games": [
-        {
-          "game": "Indiana Pacers (H) vs Minnesota Timberwolves (A)",
-          "spread": "MIN -3.5",
-          "favorite": "Minnesota Timberwolves -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Minnesota Timberwolves",
-            "M2: Relevance": "TAKE: Minnesota Timberwolves",
-            "M3: Efficiency": "TAKE: Minnesota Timberwolves",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Indiana Pacers",
-            "CONSENSUS": "TAKE: Minnesota Timberwolves",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 27,
-              "away": 67
-            },
-            "M2: Relevance": {
-              "home": 249.7002,
-              "away": 2716.3803
-            },
-            "M3: Efficiency": {
-              "margin": -4.9
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "-4.9",
-              "away": "1.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Indiana Pacers",
-          "team_away": "Minnesota Timberwolves"
-        },
-        {
-          "game": "Memphis Grizzlies (H) vs Orlando Magic (A)",
-          "spread": "ORL -2.5",
-          "favorite": "Orlando Magic -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Orlando Magic",
-            "M2: Relevance": "TAKE: Orlando Magic",
-            "M3: Efficiency": "TAKE: Orlando Magic",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Memphis Grizzlies",
-            "CONSENSUS": "TAKE: Orlando Magic",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 34,
-              "away": 59
-            },
-            "M2: Relevance": {
-              "home": 305.9211,
-              "away": 2658.0308
-            },
-            "M3: Efficiency": {
-              "margin": -3.0
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "-3.6",
-              "away": "2.1"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Memphis Grizzlies",
-          "team_away": "Orlando Magic"
-        },
-        {
-          "game": "Oklahoma City Thunder (H) vs Milwaukee Bucks (A)",
-          "spread": "OKC -14.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "80%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Milwaukee Bucks",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "TAKE: Oklahoma City Thunder",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 88,
-              "away": 17
-            },
-            "M2: Relevance": {
-              "home": 2788.523,
-              "away": 210.2257
-            },
-            "M3: Efficiency": {
-              "margin": 8.2
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "-0.9",
-              "away": "3.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Oklahoma City Thunder",
-          "team_away": "Milwaukee Bucks"
-        },
-        {
-          "game": "Chicago Bulls (H) vs Phoenix Suns (A)",
-          "spread": "PHX -2.5",
-          "favorite": "Phoenix Suns -fav",
-          "confidence": "100%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Phoenix Suns",
-            "M2: Relevance": "TAKE: Phoenix Suns",
-            "M3: Efficiency": "TAKE: Phoenix Suns",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Phoenix Suns",
-            "CONSENSUS": "TAKE: Phoenix Suns",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 39,
-              "away": 54
-            },
-            "M2: Relevance": {
-              "home": 458.1063,
-              "away": 2501.2703
-            },
-            "M3: Efficiency": {
-              "margin": -2.8
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "1.8",
-              "away": "1.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Chicago Bulls",
-          "team_away": "Phoenix Suns"
-        },
-        {
-          "game": "Portland Trail Blazers (H) vs Golden State Warriors (A)",
-          "spread": "POR -14.5",
-          "favorite": "Portland Trail Blazers -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Golden State Warriors",
-            "M2: Relevance": "TAKE: Portland Trail Blazers",
-            "M3: Efficiency": "TAKE: Golden State Warriors",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Golden State Warriors",
-            "CONSENSUS": "TAKE: Golden State Warriors",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 45,
-              "away": 46
-            },
-            "M2: Relevance": {
-              "home": 1578.5511,
-              "away": 1317.8158
-            },
-            "M3: Efficiency": {
-              "margin": -0.1
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "2.7",
-              "away": "-3.1"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Portland Trail Blazers",
-          "team_away": "Golden State Warriors"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-07T18:10:03-04:00",
-      "games": [
-        {
-          "game": "Indiana Pacers (H) vs Minnesota Timberwolves (A)",
-          "spread": "MIN -3.5",
-          "favorite": "Minnesota Timberwolves -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Minnesota Timberwolves",
-            "M2: Relevance": "TAKE: Minnesota Timberwolves",
-            "M3: Efficiency": "TAKE: Minnesota Timberwolves",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Indiana Pacers",
-            "CONSENSUS": "TAKE: Minnesota Timberwolves",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 27,
-              "away": 67
-            },
-            "M2: Relevance": {
-              "home": 249.7002,
-              "away": 2716.3803
-            },
-            "M3: Efficiency": {
-              "margin": -4.9
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "-4.9",
-              "away": "1.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Indiana Pacers",
-          "team_away": "Minnesota Timberwolves"
-        },
-        {
-          "game": "Memphis Grizzlies (H) vs Orlando Magic (A)",
-          "spread": "ORL -2.5",
-          "favorite": "Orlando Magic -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Orlando Magic",
-            "M2: Relevance": "TAKE: Orlando Magic",
-            "M3: Efficiency": "TAKE: Orlando Magic",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Memphis Grizzlies",
-            "CONSENSUS": "TAKE: Orlando Magic",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 34,
-              "away": 59
-            },
-            "M2: Relevance": {
-              "home": 305.9211,
-              "away": 2658.0308
-            },
-            "M3: Efficiency": {
-              "margin": -3.0
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "-3.6",
-              "away": "2.1"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Memphis Grizzlies",
-          "team_away": "Orlando Magic"
-        },
-        {
-          "game": "Oklahoma City Thunder (H) vs Milwaukee Bucks (A)",
-          "spread": "OKC -14.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "80%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Milwaukee Bucks",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "TAKE: Oklahoma City Thunder",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 88,
-              "away": 17
-            },
-            "M2: Relevance": {
-              "home": 2788.523,
-              "away": 210.2257
-            },
-            "M3: Efficiency": {
-              "margin": 8.2
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "-0.9",
-              "away": "3.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Oklahoma City Thunder",
-          "team_away": "Milwaukee Bucks"
-        },
-        {
-          "game": "Chicago Bulls (H) vs Phoenix Suns (A)",
-          "spread": "PHX -2.5",
-          "favorite": "Phoenix Suns -fav",
-          "confidence": "100%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Phoenix Suns",
-            "M2: Relevance": "TAKE: Phoenix Suns",
-            "M3: Efficiency": "TAKE: Phoenix Suns",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Phoenix Suns",
-            "CONSENSUS": "TAKE: Phoenix Suns",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 39,
-              "away": 54
-            },
-            "M2: Relevance": {
-              "home": 458.1063,
-              "away": 2501.2703
-            },
-            "M3: Efficiency": {
-              "margin": -2.8
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "1.8",
-              "away": "1.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Chicago Bulls",
-          "team_away": "Phoenix Suns"
-        },
-        {
-          "game": "Portland Trail Blazers (H) vs Golden State Warriors (A)",
-          "spread": "POR -14.5",
-          "favorite": "Portland Trail Blazers -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Golden State Warriors",
-            "M2: Relevance": "TAKE: Portland Trail Blazers",
-            "M3: Efficiency": "TAKE: Golden State Warriors",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Golden State Warriors",
-            "CONSENSUS": "TAKE: Golden State Warriors",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 45,
-              "away": 46
-            },
-            "M2: Relevance": {
-              "home": 1578.5511,
-              "away": 1317.8158
-            },
-            "M3: Efficiency": {
-              "margin": -0.1
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "2.7",
-              "away": "-3.1"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Portland Trail Blazers",
-          "team_away": "Golden State Warriors"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-07T20:10:02-04:00",
-      "games": [
-        {
-          "game": "Indiana Pacers (H) vs Minnesota Timberwolves (A)",
-          "spread": "MIN -3.5",
-          "favorite": "Minnesota Timberwolves -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Minnesota Timberwolves",
-            "M2: Relevance": "TAKE: Minnesota Timberwolves",
-            "M3: Efficiency": "TAKE: Minnesota Timberwolves",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Indiana Pacers",
-            "CONSENSUS": "TAKE: Minnesota Timberwolves",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 27,
-              "away": 67
-            },
-            "M2: Relevance": {
-              "home": 249.7002,
-              "away": 2716.3803
-            },
-            "M3: Efficiency": {
-              "margin": -4.9
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "-4.9",
-              "away": "1.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Indiana Pacers",
-          "team_away": "Minnesota Timberwolves"
-        },
-        {
-          "game": "Memphis Grizzlies (H) vs Orlando Magic (A)",
-          "spread": "ORL -2.5",
-          "favorite": "Orlando Magic -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Orlando Magic",
-            "M2: Relevance": "TAKE: Orlando Magic",
-            "M3: Efficiency": "TAKE: Orlando Magic",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Memphis Grizzlies",
-            "CONSENSUS": "TAKE: Orlando Magic",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 34,
-              "away": 59
-            },
-            "M2: Relevance": {
-              "home": 305.9211,
-              "away": 2658.0308
-            },
-            "M3: Efficiency": {
-              "margin": -3.0
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "-3.6",
-              "away": "2.1"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Memphis Grizzlies",
-          "team_away": "Orlando Magic"
-        },
-        {
-          "game": "Oklahoma City Thunder (H) vs Milwaukee Bucks (A)",
-          "spread": "OKC -14.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "80%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Milwaukee Bucks",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "TAKE: Oklahoma City Thunder",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 88,
-              "away": 17
-            },
-            "M2: Relevance": {
-              "home": 2788.523,
-              "away": 210.2257
-            },
-            "M3: Efficiency": {
-              "margin": 8.2
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "-0.9",
-              "away": "3.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Oklahoma City Thunder",
-          "team_away": "Milwaukee Bucks"
-        },
-        {
-          "game": "Chicago Bulls (H) vs Phoenix Suns (A)",
-          "spread": "PHX -2.5",
-          "favorite": "Phoenix Suns -fav",
-          "confidence": "100%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Phoenix Suns",
-            "M2: Relevance": "TAKE: Phoenix Suns",
-            "M3: Efficiency": "TAKE: Phoenix Suns",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Phoenix Suns",
-            "CONSENSUS": "TAKE: Phoenix Suns",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 39,
-              "away": 54
-            },
-            "M2: Relevance": {
-              "home": 458.1063,
-              "away": 2501.2703
-            },
-            "M3: Efficiency": {
-              "margin": -2.8
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "1.8",
-              "away": "1.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Chicago Bulls",
-          "team_away": "Phoenix Suns"
-        },
-        {
-          "game": "Portland Trail Blazers (H) vs Golden State Warriors (A)",
-          "spread": "POR -14.5",
-          "favorite": "Portland Trail Blazers -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Golden State Warriors",
-            "M2: Relevance": "TAKE: Portland Trail Blazers",
-            "M3: Efficiency": "TAKE: Golden State Warriors",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Golden State Warriors",
-            "CONSENSUS": "TAKE: Golden State Warriors",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 45,
-              "away": 46
-            },
-            "M2: Relevance": {
-              "home": 1578.5511,
-              "away": 1317.8158
-            },
-            "M3: Efficiency": {
-              "margin": -0.1
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "2.7",
-              "away": "-3.1"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Portland Trail Blazers",
-          "team_away": "Golden State Warriors"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-07T22:10:03-04:00",
-      "games": [
-        {
-          "game": "Indiana Pacers (H) vs Minnesota Timberwolves (A)",
-          "spread": "MIN -3.5",
-          "favorite": "Minnesota Timberwolves -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Minnesota Timberwolves",
-            "M2: Relevance": "TAKE: Minnesota Timberwolves",
-            "M3: Efficiency": "TAKE: Minnesota Timberwolves",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Indiana Pacers",
-            "CONSENSUS": "TAKE: Minnesota Timberwolves",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 27,
-              "away": 67
-            },
-            "M2: Relevance": {
-              "home": 249.7002,
-              "away": 2716.3803
-            },
-            "M3: Efficiency": {
-              "margin": -4.9
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "-4.9",
-              "away": "1.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Indiana Pacers",
-          "team_away": "Minnesota Timberwolves"
-        },
-        {
-          "game": "Memphis Grizzlies (H) vs Orlando Magic (A)",
-          "spread": "ORL -2.5",
-          "favorite": "Orlando Magic -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Orlando Magic",
-            "M2: Relevance": "TAKE: Orlando Magic",
-            "M3: Efficiency": "TAKE: Orlando Magic",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Memphis Grizzlies",
-            "CONSENSUS": "TAKE: Orlando Magic",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 34,
-              "away": 59
-            },
-            "M2: Relevance": {
-              "home": 305.9211,
-              "away": 2658.0308
-            },
-            "M3: Efficiency": {
-              "margin": -3.0
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "-3.6",
-              "away": "2.1"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Memphis Grizzlies",
-          "team_away": "Orlando Magic"
-        },
-        {
-          "game": "Oklahoma City Thunder (H) vs Milwaukee Bucks (A)",
-          "spread": "OKC -14.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "80%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Milwaukee Bucks",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "TAKE: Oklahoma City Thunder",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 88,
-              "away": 17
-            },
-            "M2: Relevance": {
-              "home": 2788.523,
-              "away": 210.2257
-            },
-            "M3: Efficiency": {
-              "margin": 8.2
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "-0.9",
-              "away": "3.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Oklahoma City Thunder",
-          "team_away": "Milwaukee Bucks"
-        },
-        {
-          "game": "Chicago Bulls (H) vs Phoenix Suns (A)",
-          "spread": "PHX -2.5",
-          "favorite": "Phoenix Suns -fav",
-          "confidence": "100%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Phoenix Suns",
-            "M2: Relevance": "TAKE: Phoenix Suns",
-            "M3: Efficiency": "TAKE: Phoenix Suns",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Phoenix Suns",
-            "CONSENSUS": "TAKE: Phoenix Suns",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 39,
-              "away": 54
-            },
-            "M2: Relevance": {
-              "home": 458.1063,
-              "away": 2501.2703
-            },
-            "M3: Efficiency": {
-              "margin": -2.8
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "1.8",
-              "away": "1.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Chicago Bulls",
-          "team_away": "Phoenix Suns"
-        },
-        {
-          "game": "Portland Trail Blazers (H) vs Golden State Warriors (A)",
-          "spread": "POR -14.5",
-          "favorite": "Portland Trail Blazers -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Golden State Warriors",
-            "M2: Relevance": "TAKE: Portland Trail Blazers",
-            "M3: Efficiency": "TAKE: Golden State Warriors",
-            "M4: ATS Trends": "PUSH",
-            "M5: Luck": "TAKE: Golden State Warriors",
-            "CONSENSUS": "TAKE: Golden State Warriors",
-            "M6: Sharp Money": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 45,
-              "away": 46
-            },
-            "M2: Relevance": {
-              "home": 1578.5511,
-              "away": 1317.8158
-            },
-            "M3: Efficiency": {
-              "margin": -0.1
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "2.7",
-              "away": "-3.1"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Portland Trail Blazers",
-          "team_away": "Golden State Warriors"
+          "team_home": "Los Angeles Lakers",
+          "team_away": "Sacramento Kings"
         }
       ]
     }
