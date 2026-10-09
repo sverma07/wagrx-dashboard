@@ -1,7 +1,201 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-10-08T16:43:15-04:00",
+  "updated": "2026-10-09T06:00:03-04:00",
   "days": {
+    "2026-10-08": [
+      {
+        "game": "Liberty Flames (H) vs Sam Houston Bearkats (A)",
+        "team_home": "Liberty Flames",
+        "team_away": "Sam Houston Bearkats",
+        "line": "LIB -13.5",
+        "favorite": "Liberty Flames -fav",
+        "final": "Liberty Flames 35, Sam Houston Bearkats 3",
+        "cover": "Liberty Flames",
+        "status": null,
+        "confidence": "58%",
+        "sharp": {
+          "home_b": 59.02,
+          "home_m": 69.05,
+          "away_b": 40.98,
+          "away_m": 30.95
+        },
+        "graded_run": "2026-10-08T18:00:03-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Liberty Flames",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Liberty Flames",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Liberty Flames",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Sam Houston Bearkats",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Sam Houston Bearkats",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Liberty Flames",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Liberty Flames",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Western Kentucky Hilltoppers (H) vs Missouri State Bears (A)",
+        "team_home": "Western Kentucky Hilltoppers",
+        "team_away": "Missouri State Bears",
+        "line": "WKU -1.5",
+        "favorite": "Western Kentucky Hilltoppers -fav",
+        "final": "Western Kentucky Hilltoppers 34, Missouri State Bears 13",
+        "cover": "Western Kentucky Hilltoppers",
+        "status": null,
+        "confidence": "79%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-10-08T18:00:03-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Missouri State Bears",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Missouri State Bears",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Missouri State Bears",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Missouri State Bears",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Western Kentucky Hilltoppers",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Missouri State Bears",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "UTSA Roadrunners (H) vs South Florida Bulls (A)",
+        "team_home": "UTSA Roadrunners",
+        "team_away": "South Florida Bulls",
+        "line": "UTSA -7",
+        "favorite": "UTSA Roadrunners -fav",
+        "final": "UTSA Roadrunners 31, South Florida Bulls 24",
+        "cover": null,
+        "status": "PUSH (not graded)",
+        "confidence": "79%",
+        "sharp": {
+          "home_b": 36.98,
+          "home_m": 38.41,
+          "away_b": 63.02,
+          "away_m": 61.59
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "South Florida Bulls",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "South Florida Bulls",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "South Florida Bulls",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "UTSA Roadrunners",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "South Florida Bulls",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "South Florida Bulls",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Arkansas State Red Wolves (H) vs South Alabama Jaguars (A)",
+        "team_home": "Arkansas State Red Wolves",
+        "team_away": "South Alabama Jaguars",
+        "line": "ARST -3",
+        "favorite": "Arkansas State Red Wolves -fav",
+        "final": "Arkansas State Red Wolves 49, South Alabama Jaguars 56",
+        "cover": "South Alabama Jaguars",
+        "status": null,
+        "confidence": "79%",
+        "sharp": {
+          "home_b": 36.9,
+          "home_m": 56.45,
+          "away_b": 63.1,
+          "away_m": 43.55
+        },
+        "graded_run": "2026-10-08T18:00:03-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "South Alabama Jaguars",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "South Alabama Jaguars",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "South Alabama Jaguars",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "South Alabama Jaguars",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Arkansas State Red Wolves",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Arkansas State Red Wolves",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "South Alabama Jaguars",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-10-07": [
       {
         "game": "Kennesaw State Owls (H) vs Jacksonville State Gamecocks (A)",
