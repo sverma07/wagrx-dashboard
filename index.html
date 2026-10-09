@@ -795,6 +795,10 @@ function selectPerfSport(key) {
   document.querySelectorAll(".perf-sport-btn").forEach(b => b.classList.toggle("active", b.dataset.sport === key));
   const r = perfResults.find(x => x.sport.key === key);
   document.getElementById("perf-body").innerHTML = r ? renderPerfTable(r.sport, r.data) : "";
+  const since = r && r.data && r.data.since;
+  document.getElementById("perf-since").textContent = since
+    ? `Each model's graded record since ${fmtDate(since)}. Consensus is highlighted.`
+    : "Each model's graded record since the last reset. Consensus is highlighted.";
 }
 
 function perfCardHtml() {
@@ -805,7 +809,7 @@ function perfCardHtml() {
           `<button class="range-btn perf-sport-btn${sp.key === perfSport ? " active" : ""}" data-sport="${sp.key}" onclick="selectPerfSport('${sp.key}')">${sp.label}</button>`).join("")}
         </div>
         <h2>Model Records</h2>
-        <div class="net-sub">Each model's graded record since the last reset. Consensus is highlighted.</div>
+        <div class="net-sub" id="perf-since">Each model's graded record since the last reset. Consensus is highlighted.</div>
       </div>
       <div id="perf-body"></div>
     </div>`;
@@ -831,7 +835,11 @@ function loadNetData() {
     fetch(sport.histFile + "?_=" + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null)
       .then(h => {
         const byDay = {};
+        // Count from the sport's last stats reset, so the chart matches the Model Records table.
+        const perf = (perfResults.find(x => x.sport.key === sport.key) || {}).data;
+        const since = (perf && perf.since) || "";
         for (const [day, games] of Object.entries((h && h.days) || {})) {
+          if (day < since) continue;
           let w = 0, l = 0;
           for (const g of games || []) {
             const r = ((g.picks || {}).CONSENSUS || {}).result;
@@ -1042,7 +1050,7 @@ function netCardHtml() {
           `<button class="range-btn${r.key === netRange ? " active" : ""}" data-range="${r.key}" onclick="selectNetRange('${r.key}')">${r.label}</button>`).join("")}
         </div>
         <h2>Net Wins Over Time</h2>
-        <div class="net-sub">Consensus picks against the spread: running wins minus losses by sport.</div>
+        <div class="net-sub">Consensus picks against the spread: running wins minus losses by sport, since the last stats reset.</div>
       </div>
       <div class="net-tiles"></div>
       <div class="net-legend"></div>
