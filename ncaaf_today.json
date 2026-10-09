@@ -1,1995 +1,229 @@
 {
   "sport": "NCAAF",
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "snapshots": [
     {
-      "time": "2026-10-08T07:38:34-04:00",
+      "time": "2026-10-09T07:35:18-04:00",
       "games": [
         {
-          "game": "Liberty Flames (H) vs Sam Houston Bearkats (A)",
-          "spread": "LIB -13.5",
-          "favorite": "Liberty Flames -fav",
-          "confidence": "58%",
+          "game": "Louisville Cardinals (H) vs Florida State Seminoles (A)",
+          "spread": "LOU -3.5",
+          "favorite": "Louisville Cardinals -fav",
+          "confidence": "82%",
           "picks": {
-            "M1: Normal Score": "TAKE: Liberty Flames",
-            "M2: Relevance": "TAKE: Liberty Flames",
-            "M3: Efficiency": "TAKE: Liberty Flames",
-            "M4: ATS Trends": "TAKE: Sam Houston Bearkats",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "PUSH",
-            "CONSENSUS": "TAKE: Liberty Flames"
+            "M1: Normal Score": "TAKE: Florida State Seminoles",
+            "M2: Relevance": "TAKE: Florida State Seminoles",
+            "M3: Efficiency": "TAKE: Florida State Seminoles",
+            "M4: ATS Trends": "TAKE: Florida State Seminoles",
+            "M5: Luck": "TAKE: Louisville Cardinals",
+            "M6: Sharp Money": "TAKE: Louisville Cardinals",
+            "CONSENSUS": "TAKE: Florida State Seminoles"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 14,
+              "away": 26
+            },
+            "M2: Relevance": {
+              "home": 29.2821,
+              "away": 65.1532
+            },
+            "M3: Efficiency": {
+              "margin": -3.8
+            },
+            "M4: ATS Trends": {
+              "home": 4,
+              "away": 5
+            },
+            "M5: Luck": {
+              "home": "-1.2",
+              "away": "-0.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": 38.45,
+              "home_m": 47.7,
+              "away_b": 61.55,
+              "away_m": 52.3
+            }
+          },
+          "team_home": "Louisville Cardinals",
+          "team_away": "Florida State Seminoles"
+        },
+        {
+          "game": "Washington Huskies (H) vs Iowa Hawkeyes (A)",
+          "spread": "WASH -2.5",
+          "favorite": "Washington Huskies -fav",
+          "confidence": "82%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Iowa Hawkeyes",
+            "M2: Relevance": "TAKE: Iowa Hawkeyes",
+            "M3: Efficiency": "TAKE: Iowa Hawkeyes",
+            "M4: ATS Trends": "TAKE: Iowa Hawkeyes",
+            "M5: Luck": "TAKE: Washington Huskies",
+            "M6: Sharp Money": "TAKE: Washington Huskies",
+            "CONSENSUS": "TAKE: Iowa Hawkeyes"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 17,
+              "away": 27
+            },
+            "M2: Relevance": {
+              "home": 38.5337,
+              "away": 62.4491
+            },
+            "M3: Efficiency": {
+              "margin": -2.2
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 9
+            },
+            "M5: Luck": {
+              "home": "-0.6",
+              "away": "0.6"
+            },
+            "M6: Sharp Money": {
+              "home_b": 19.77,
+              "home_m": 37.34,
+              "away_b": 80.23,
+              "away_m": 62.66
+            }
+          },
+          "team_home": "Washington Huskies",
+          "team_away": "Iowa Hawkeyes"
+        },
+        {
+          "game": "Utah State Aggies (H) vs Washington State Cougars (A)",
+          "spread": "USU -5.5",
+          "favorite": "Utah State Aggies -fav",
+          "confidence": "57%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Utah State Aggies",
+            "M2: Relevance": "TAKE: Utah State Aggies",
+            "M3: Efficiency": "TAKE: Washington State Cougars",
+            "M4: ATS Trends": "TAKE: Washington State Cougars",
+            "M5: Luck": "TAKE: Washington State Cougars",
+            "M6: Sharp Money": "TAKE: Washington State Cougars",
+            "CONSENSUS": "TAKE: Washington State Cougars"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 27,
+              "away": 11
+            },
+            "M2: Relevance": {
+              "home": 66.5976,
+              "away": 21.2463
+            },
+            "M3: Efficiency": {
+              "margin": 3.5
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 4
+            },
+            "M5: Luck": {
+              "home": "-0.6",
+              "away": "-0.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": 53.66,
+              "home_m": 51.59,
+              "away_b": 46.34,
+              "away_m": 48.41
+            }
+          },
+          "team_home": "Utah State Aggies",
+          "team_away": "Washington State Cougars"
+        },
+        {
+          "game": "San Jose State Spartans (H) vs Wyoming Cowboys (A)",
+          "spread": "SJSU -4.5",
+          "favorite": "San Jose State Spartans -fav",
+          "confidence": "61%",
+          "picks": {
+            "M1: Normal Score": "TAKE: San Jose State Spartans",
+            "M2: Relevance": "TAKE: San Jose State Spartans",
+            "M3: Efficiency": "TAKE: Wyoming Cowboys",
+            "M4: ATS Trends": "TAKE: San Jose State Spartans",
+            "M5: Luck": "TAKE: Wyoming Cowboys",
+            "M6: Sharp Money": "TAKE: Wyoming Cowboys",
+            "CONSENSUS": "TAKE: San Jose State Spartans"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 29,
+              "away": 11
+            },
+            "M2: Relevance": {
+              "home": 67.7507,
+              "away": 25.7671
+            },
+            "M3: Efficiency": {
+              "margin": 3.2
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 1
+            },
+            "M5: Luck": {
+              "home": "0.9",
+              "away": "0.1"
+            },
+            "M6: Sharp Money": {
+              "home_b": 69.39,
+              "home_m": 63.74,
+              "away_b": 30.61,
+              "away_m": 36.26
+            }
+          },
+          "team_home": "San Jose State Spartans",
+          "team_away": "Wyoming Cowboys"
+        },
+        {
+          "game": "BYU Cougars (H) vs Iowa State Cyclones (A)",
+          "spread": "BYU -10.5",
+          "favorite": "BYU Cougars -fav",
+          "confidence": "61%",
+          "picks": {
+            "M1: Normal Score": "TAKE: BYU Cougars",
+            "M2: Relevance": "TAKE: BYU Cougars",
+            "M3: Efficiency": "TAKE: Iowa State Cyclones",
+            "M4: ATS Trends": "TAKE: BYU Cougars",
+            "M5: Luck": "TAKE: Iowa State Cyclones",
+            "M6: Sharp Money": "TAKE: Iowa State Cyclones",
+            "CONSENSUS": "TAKE: BYU Cougars"
           },
           "detail": {
             "M1: Normal Score": {
               "home": 31,
-              "away": 8
+              "away": 10
             },
             "M2: Relevance": {
-              "home": 76.3633,
-              "away": 12.6749
+              "home": 73.095,
+              "away": 22.2758
             },
             "M3: Efficiency": {
-              "margin": 15.1
+              "margin": 1.8
             },
             "M4: ATS Trends": {
-              "home": 2,
-              "away": 6
+              "home": 8,
+              "away": 0
             },
             "M5: Luck": {
-              "home": "0.6",
-              "away": "-0.6"
+              "home": "0.7",
+              "away": "0.0"
             },
             "M6: Sharp Money": {
-              "home_b": 55.66,
-              "home_m": 60.5,
-              "away_b": 44.34,
-              "away_m": 39.5
+              "home_b": 49.77,
+              "home_m": 47.2,
+              "away_b": 50.23,
+              "away_m": 52.8
             }
           },
-          "team_home": "Liberty Flames",
-          "team_away": "Sam Houston Bearkats"
-        },
-        {
-          "game": "Western Kentucky Hilltoppers (H) vs Missouri State Bears (A)",
-          "spread": "WKU -1.5",
-          "favorite": "Western Kentucky Hilltoppers -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Missouri State Bears",
-            "M2: Relevance": "TAKE: Missouri State Bears",
-            "M3: Efficiency": "TAKE: Missouri State Bears",
-            "M4: ATS Trends": "TAKE: Missouri State Bears",
-            "M5: Luck": "TAKE: Western Kentucky Hilltoppers",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: Missouri State Bears"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 15,
-              "away": 24
-            },
-            "M2: Relevance": {
-              "home": 31.4651,
-              "away": 57.4544
-            },
-            "M3: Efficiency": {
-              "margin": -7.0
-            },
-            "M4: ATS Trends": {
-              "home": 3,
-              "away": 4
-            },
-            "M5: Luck": {
-              "home": "-0.7",
-              "away": "-0.5"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Western Kentucky Hilltoppers",
-          "team_away": "Missouri State Bears"
-        },
-        {
-          "game": "UTSA Roadrunners (H) vs South Florida Bulls (A)",
-          "spread": "UTSA -7",
-          "favorite": "UTSA Roadrunners -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Florida Bulls",
-            "M2: Relevance": "TAKE: South Florida Bulls",
-            "M3: Efficiency": "TAKE: South Florida Bulls",
-            "M4: ATS Trends": "TAKE: UTSA Roadrunners",
-            "M5: Luck": "TAKE: South Florida Bulls",
-            "M6: Sharp Money": "PUSH",
-            "CONSENSUS": "TAKE: South Florida Bulls"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 20,
-              "away": 21
-            },
-            "M2: Relevance": {
-              "home": 44.47,
-              "away": 49.9789
-            },
-            "M3: Efficiency": {
-              "margin": -2.6
-            },
-            "M4: ATS Trends": {
-              "home": 6,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "1.0",
-              "away": "0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": 36.98,
-              "home_m": 38.41,
-              "away_b": 63.02,
-              "away_m": 61.59
-            }
-          },
-          "team_home": "UTSA Roadrunners",
-          "team_away": "South Florida Bulls"
-        },
-        {
-          "game": "Arkansas State Red Wolves (H) vs South Alabama Jaguars (A)",
-          "spread": "ARST -3",
-          "favorite": "Arkansas State Red Wolves -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Alabama Jaguars",
-            "M2: Relevance": "TAKE: South Alabama Jaguars",
-            "M3: Efficiency": "TAKE: South Alabama Jaguars",
-            "M4: ATS Trends": "TAKE: South Alabama Jaguars",
-            "M5: Luck": "TAKE: Arkansas State Red Wolves",
-            "M6: Sharp Money": "PUSH",
-            "CONSENSUS": "TAKE: South Alabama Jaguars"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 12,
-              "away": 25
-            },
-            "M2: Relevance": {
-              "home": 27.5408,
-              "away": 57.1539
-            },
-            "M3: Efficiency": {
-              "margin": -4.5
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 5
-            },
-            "M5: Luck": {
-              "home": "-0.2",
-              "away": "0.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": 37.34,
-              "home_m": 41.61,
-              "away_b": 62.66,
-              "away_m": 58.39
-            }
-          },
-          "team_home": "Arkansas State Red Wolves",
-          "team_away": "South Alabama Jaguars"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-08T08:00:03-04:00",
-      "games": [
-        {
-          "game": "Liberty Flames (H) vs Sam Houston Bearkats (A)",
-          "spread": "LIB -13.5",
-          "favorite": "Liberty Flames -fav",
-          "confidence": "58%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Liberty Flames",
-            "M2: Relevance": "TAKE: Liberty Flames",
-            "M3: Efficiency": "TAKE: Liberty Flames",
-            "M4: ATS Trends": "TAKE: Sam Houston Bearkats",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "PUSH",
-            "CONSENSUS": "TAKE: Liberty Flames"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 31,
-              "away": 8
-            },
-            "M2: Relevance": {
-              "home": 76.3633,
-              "away": 12.6749
-            },
-            "M3: Efficiency": {
-              "margin": 15.1
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 6
-            },
-            "M5: Luck": {
-              "home": "0.6",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 55.66,
-              "home_m": 60.5,
-              "away_b": 44.34,
-              "away_m": 39.5
-            }
-          },
-          "team_home": "Liberty Flames",
-          "team_away": "Sam Houston Bearkats"
-        },
-        {
-          "game": "Western Kentucky Hilltoppers (H) vs Missouri State Bears (A)",
-          "spread": "WKU -1.5",
-          "favorite": "Western Kentucky Hilltoppers -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Missouri State Bears",
-            "M2: Relevance": "TAKE: Missouri State Bears",
-            "M3: Efficiency": "TAKE: Missouri State Bears",
-            "M4: ATS Trends": "TAKE: Missouri State Bears",
-            "M5: Luck": "TAKE: Western Kentucky Hilltoppers",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: Missouri State Bears"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 15,
-              "away": 24
-            },
-            "M2: Relevance": {
-              "home": 31.4651,
-              "away": 57.4544
-            },
-            "M3: Efficiency": {
-              "margin": -7.0
-            },
-            "M4: ATS Trends": {
-              "home": 3,
-              "away": 4
-            },
-            "M5: Luck": {
-              "home": "-0.7",
-              "away": "-0.5"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Western Kentucky Hilltoppers",
-          "team_away": "Missouri State Bears"
-        },
-        {
-          "game": "UTSA Roadrunners (H) vs South Florida Bulls (A)",
-          "spread": "UTSA -7",
-          "favorite": "UTSA Roadrunners -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Florida Bulls",
-            "M2: Relevance": "TAKE: South Florida Bulls",
-            "M3: Efficiency": "TAKE: South Florida Bulls",
-            "M4: ATS Trends": "TAKE: UTSA Roadrunners",
-            "M5: Luck": "TAKE: South Florida Bulls",
-            "M6: Sharp Money": "PUSH",
-            "CONSENSUS": "TAKE: South Florida Bulls"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 20,
-              "away": 21
-            },
-            "M2: Relevance": {
-              "home": 44.47,
-              "away": 49.9789
-            },
-            "M3: Efficiency": {
-              "margin": -2.6
-            },
-            "M4: ATS Trends": {
-              "home": 6,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "1.0",
-              "away": "0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": 36.98,
-              "home_m": 38.41,
-              "away_b": 63.02,
-              "away_m": 61.59
-            }
-          },
-          "team_home": "UTSA Roadrunners",
-          "team_away": "South Florida Bulls"
-        },
-        {
-          "game": "Arkansas State Red Wolves (H) vs South Alabama Jaguars (A)",
-          "spread": "ARST -3",
-          "favorite": "Arkansas State Red Wolves -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Alabama Jaguars",
-            "M2: Relevance": "TAKE: South Alabama Jaguars",
-            "M3: Efficiency": "TAKE: South Alabama Jaguars",
-            "M4: ATS Trends": "TAKE: South Alabama Jaguars",
-            "M5: Luck": "TAKE: Arkansas State Red Wolves",
-            "M6: Sharp Money": "PUSH",
-            "CONSENSUS": "TAKE: South Alabama Jaguars"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 12,
-              "away": 25
-            },
-            "M2: Relevance": {
-              "home": 27.5408,
-              "away": 57.1539
-            },
-            "M3: Efficiency": {
-              "margin": -4.5
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 5
-            },
-            "M5: Luck": {
-              "home": "-0.2",
-              "away": "0.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": 37.34,
-              "home_m": 41.61,
-              "away_b": 62.66,
-              "away_m": 58.39
-            }
-          },
-          "team_home": "Arkansas State Red Wolves",
-          "team_away": "South Alabama Jaguars"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-08T08:33:23-04:00",
-      "games": [
-        {
-          "game": "Liberty Flames (H) vs Sam Houston Bearkats (A)",
-          "spread": "LIB -13.5",
-          "favorite": "Liberty Flames -fav",
-          "confidence": "66%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Liberty Flames",
-            "M2: Relevance": "TAKE: Liberty Flames",
-            "M3: Efficiency": "TAKE: Liberty Flames",
-            "M4: ATS Trends": "TAKE: Sam Houston Bearkats",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "TAKE: Liberty Flames",
-            "CONSENSUS": "TAKE: Liberty Flames"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 31,
-              "away": 8
-            },
-            "M2: Relevance": {
-              "home": 76.3633,
-              "away": 12.6749
-            },
-            "M3: Efficiency": {
-              "margin": 15.1
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 6
-            },
-            "M5: Luck": {
-              "home": "0.6",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 55.66,
-              "home_m": 60.5,
-              "away_b": 44.34,
-              "away_m": 39.5
-            }
-          },
-          "team_home": "Liberty Flames",
-          "team_away": "Sam Houston Bearkats"
-        },
-        {
-          "game": "Western Kentucky Hilltoppers (H) vs Missouri State Bears (A)",
-          "spread": "WKU -1.5",
-          "favorite": "Western Kentucky Hilltoppers -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Missouri State Bears",
-            "M2: Relevance": "TAKE: Missouri State Bears",
-            "M3: Efficiency": "TAKE: Missouri State Bears",
-            "M4: ATS Trends": "TAKE: Missouri State Bears",
-            "M5: Luck": "TAKE: Western Kentucky Hilltoppers",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: Missouri State Bears"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 15,
-              "away": 24
-            },
-            "M2: Relevance": {
-              "home": 31.4651,
-              "away": 57.4544
-            },
-            "M3: Efficiency": {
-              "margin": -7.0
-            },
-            "M4: ATS Trends": {
-              "home": 3,
-              "away": 4
-            },
-            "M5: Luck": {
-              "home": "-0.7",
-              "away": "-0.5"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Western Kentucky Hilltoppers",
-          "team_away": "Missouri State Bears"
-        },
-        {
-          "game": "UTSA Roadrunners (H) vs South Florida Bulls (A)",
-          "spread": "UTSA -7",
-          "favorite": "UTSA Roadrunners -fav",
-          "confidence": "66%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Florida Bulls",
-            "M2: Relevance": "TAKE: South Florida Bulls",
-            "M3: Efficiency": "TAKE: South Florida Bulls",
-            "M4: ATS Trends": "TAKE: UTSA Roadrunners",
-            "M5: Luck": "TAKE: South Florida Bulls",
-            "M6: Sharp Money": "TAKE: UTSA Roadrunners",
-            "CONSENSUS": "TAKE: South Florida Bulls"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 20,
-              "away": 21
-            },
-            "M2: Relevance": {
-              "home": 44.47,
-              "away": 49.9789
-            },
-            "M3: Efficiency": {
-              "margin": -2.6
-            },
-            "M4: ATS Trends": {
-              "home": 6,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "1.0",
-              "away": "0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": 37.02,
-              "home_m": 39.68,
-              "away_b": 62.98,
-              "away_m": 60.32
-            }
-          },
-          "team_home": "UTSA Roadrunners",
-          "team_away": "South Florida Bulls"
-        },
-        {
-          "game": "Arkansas State Red Wolves (H) vs South Alabama Jaguars (A)",
-          "spread": "ARST -3",
-          "favorite": "Arkansas State Red Wolves -fav",
-          "confidence": "66%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Alabama Jaguars",
-            "M2: Relevance": "TAKE: South Alabama Jaguars",
-            "M3: Efficiency": "TAKE: South Alabama Jaguars",
-            "M4: ATS Trends": "TAKE: South Alabama Jaguars",
-            "M5: Luck": "TAKE: Arkansas State Red Wolves",
-            "M6: Sharp Money": "TAKE: Arkansas State Red Wolves",
-            "CONSENSUS": "TAKE: South Alabama Jaguars"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 12,
-              "away": 25
-            },
-            "M2: Relevance": {
-              "home": 27.5408,
-              "away": 57.1539
-            },
-            "M3: Efficiency": {
-              "margin": -4.5
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 5
-            },
-            "M5: Luck": {
-              "home": "-0.2",
-              "away": "0.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": 36.51,
-              "home_m": 39.62,
-              "away_b": 63.49,
-              "away_m": 60.38
-            }
-          },
-          "team_home": "Arkansas State Red Wolves",
-          "team_away": "South Alabama Jaguars"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-08T10:00:15-04:00",
-      "games": [
-        {
-          "game": "Liberty Flames (H) vs Sam Houston Bearkats (A)",
-          "spread": "LIB -13.5",
-          "favorite": "Liberty Flames -fav",
-          "confidence": "66%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Liberty Flames",
-            "M2: Relevance": "TAKE: Liberty Flames",
-            "M3: Efficiency": "TAKE: Liberty Flames",
-            "M4: ATS Trends": "TAKE: Sam Houston Bearkats",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "TAKE: Liberty Flames",
-            "CONSENSUS": "TAKE: Liberty Flames"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 31,
-              "away": 8
-            },
-            "M2: Relevance": {
-              "home": 76.3633,
-              "away": 12.6749
-            },
-            "M3: Efficiency": {
-              "margin": 15.1
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 6
-            },
-            "M5: Luck": {
-              "home": "0.6",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 56.07,
-              "home_m": 68.1,
-              "away_b": 43.93,
-              "away_m": 31.9
-            }
-          },
-          "team_home": "Liberty Flames",
-          "team_away": "Sam Houston Bearkats"
-        },
-        {
-          "game": "Western Kentucky Hilltoppers (H) vs Missouri State Bears (A)",
-          "spread": "WKU -1.5",
-          "favorite": "Western Kentucky Hilltoppers -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Missouri State Bears",
-            "M2: Relevance": "TAKE: Missouri State Bears",
-            "M3: Efficiency": "TAKE: Missouri State Bears",
-            "M4: ATS Trends": "TAKE: Missouri State Bears",
-            "M5: Luck": "TAKE: Western Kentucky Hilltoppers",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: Missouri State Bears"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 15,
-              "away": 24
-            },
-            "M2: Relevance": {
-              "home": 31.4651,
-              "away": 57.4544
-            },
-            "M3: Efficiency": {
-              "margin": -7.0
-            },
-            "M4: ATS Trends": {
-              "home": 3,
-              "away": 4
-            },
-            "M5: Luck": {
-              "home": "-0.7",
-              "away": "-0.5"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Western Kentucky Hilltoppers",
-          "team_away": "Missouri State Bears"
-        },
-        {
-          "game": "UTSA Roadrunners (H) vs South Florida Bulls (A)",
-          "spread": "UTSA -7",
-          "favorite": "UTSA Roadrunners -fav",
-          "confidence": "66%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Florida Bulls",
-            "M2: Relevance": "TAKE: South Florida Bulls",
-            "M3: Efficiency": "TAKE: South Florida Bulls",
-            "M4: ATS Trends": "TAKE: UTSA Roadrunners",
-            "M5: Luck": "TAKE: South Florida Bulls",
-            "M6: Sharp Money": "TAKE: UTSA Roadrunners",
-            "CONSENSUS": "TAKE: South Florida Bulls"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 20,
-              "away": 21
-            },
-            "M2: Relevance": {
-              "home": 44.47,
-              "away": 49.9789
-            },
-            "M3: Efficiency": {
-              "margin": -2.6
-            },
-            "M4: ATS Trends": {
-              "home": 6,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "1.0",
-              "away": "0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": 37.25,
-              "home_m": 39.79,
-              "away_b": 62.75,
-              "away_m": 60.21
-            }
-          },
-          "team_home": "UTSA Roadrunners",
-          "team_away": "South Florida Bulls"
-        },
-        {
-          "game": "Arkansas State Red Wolves (H) vs South Alabama Jaguars (A)",
-          "spread": "ARST -3",
-          "favorite": "Arkansas State Red Wolves -fav",
-          "confidence": "66%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Alabama Jaguars",
-            "M2: Relevance": "TAKE: South Alabama Jaguars",
-            "M3: Efficiency": "TAKE: South Alabama Jaguars",
-            "M4: ATS Trends": "TAKE: South Alabama Jaguars",
-            "M5: Luck": "TAKE: Arkansas State Red Wolves",
-            "M6: Sharp Money": "TAKE: Arkansas State Red Wolves",
-            "CONSENSUS": "TAKE: South Alabama Jaguars"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 12,
-              "away": 25
-            },
-            "M2: Relevance": {
-              "home": 27.5408,
-              "away": 57.1539
-            },
-            "M3: Efficiency": {
-              "margin": -4.5
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 5
-            },
-            "M5: Luck": {
-              "home": "-0.2",
-              "away": "0.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": 35.66,
-              "home_m": 37.22,
-              "away_b": 64.34,
-              "away_m": 62.78
-            }
-          },
-          "team_home": "Arkansas State Red Wolves",
-          "team_away": "South Alabama Jaguars"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-08T12:00:03-04:00",
-      "games": [
-        {
-          "game": "Liberty Flames (H) vs Sam Houston Bearkats (A)",
-          "spread": "LIB -13.5",
-          "favorite": "Liberty Flames -fav",
-          "confidence": "66%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Liberty Flames",
-            "M2: Relevance": "TAKE: Liberty Flames",
-            "M3: Efficiency": "TAKE: Liberty Flames",
-            "M4: ATS Trends": "TAKE: Sam Houston Bearkats",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "TAKE: Liberty Flames",
-            "CONSENSUS": "TAKE: Liberty Flames"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 31,
-              "away": 8
-            },
-            "M2: Relevance": {
-              "home": 76.3633,
-              "away": 12.6749
-            },
-            "M3: Efficiency": {
-              "margin": 15.1
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 6
-            },
-            "M5: Luck": {
-              "home": "0.6",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 58.06,
-              "home_m": 69.93,
-              "away_b": 41.94,
-              "away_m": 30.07
-            }
-          },
-          "team_home": "Liberty Flames",
-          "team_away": "Sam Houston Bearkats"
-        },
-        {
-          "game": "Western Kentucky Hilltoppers (H) vs Missouri State Bears (A)",
-          "spread": "WKU -1.5",
-          "favorite": "Western Kentucky Hilltoppers -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Missouri State Bears",
-            "M2: Relevance": "TAKE: Missouri State Bears",
-            "M3: Efficiency": "TAKE: Missouri State Bears",
-            "M4: ATS Trends": "TAKE: Missouri State Bears",
-            "M5: Luck": "TAKE: Western Kentucky Hilltoppers",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: Missouri State Bears"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 15,
-              "away": 24
-            },
-            "M2: Relevance": {
-              "home": 31.4651,
-              "away": 57.4544
-            },
-            "M3: Efficiency": {
-              "margin": -7.0
-            },
-            "M4: ATS Trends": {
-              "home": 3,
-              "away": 4
-            },
-            "M5: Luck": {
-              "home": "-0.7",
-              "away": "-0.5"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Western Kentucky Hilltoppers",
-          "team_away": "Missouri State Bears"
-        },
-        {
-          "game": "UTSA Roadrunners (H) vs South Florida Bulls (A)",
-          "spread": "UTSA -7",
-          "favorite": "UTSA Roadrunners -fav",
-          "confidence": "66%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Florida Bulls",
-            "M2: Relevance": "TAKE: South Florida Bulls",
-            "M3: Efficiency": "TAKE: South Florida Bulls",
-            "M4: ATS Trends": "TAKE: UTSA Roadrunners",
-            "M5: Luck": "TAKE: South Florida Bulls",
-            "M6: Sharp Money": "TAKE: UTSA Roadrunners",
-            "CONSENSUS": "TAKE: South Florida Bulls"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 20,
-              "away": 21
-            },
-            "M2: Relevance": {
-              "home": 44.47,
-              "away": 49.9789
-            },
-            "M3: Efficiency": {
-              "margin": -2.6
-            },
-            "M4: ATS Trends": {
-              "home": 6,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "1.0",
-              "away": "0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": 37.91,
-              "home_m": 41.78,
-              "away_b": 62.09,
-              "away_m": 58.22
-            }
-          },
-          "team_home": "UTSA Roadrunners",
-          "team_away": "South Florida Bulls"
-        },
-        {
-          "game": "Arkansas State Red Wolves (H) vs South Alabama Jaguars (A)",
-          "spread": "ARST -3",
-          "favorite": "Arkansas State Red Wolves -fav",
-          "confidence": "83%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Alabama Jaguars",
-            "M2: Relevance": "TAKE: South Alabama Jaguars",
-            "M3: Efficiency": "TAKE: South Alabama Jaguars",
-            "M4: ATS Trends": "TAKE: South Alabama Jaguars",
-            "M5: Luck": "TAKE: Arkansas State Red Wolves",
-            "M6: Sharp Money": "TAKE: South Alabama Jaguars",
-            "CONSENSUS": "TAKE: South Alabama Jaguars"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 12,
-              "away": 25
-            },
-            "M2: Relevance": {
-              "home": 27.5408,
-              "away": 57.1539
-            },
-            "M3: Efficiency": {
-              "margin": -4.5
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 5
-            },
-            "M5: Luck": {
-              "home": "-0.2",
-              "away": "0.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": 35.75,
-              "home_m": 34.91,
-              "away_b": 64.25,
-              "away_m": 65.09
-            }
-          },
-          "team_home": "Arkansas State Red Wolves",
-          "team_away": "South Alabama Jaguars"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-08T14:00:03-04:00",
-      "games": [
-        {
-          "game": "Liberty Flames (H) vs Sam Houston Bearkats (A)",
-          "spread": "LIB -13.5",
-          "favorite": "Liberty Flames -fav",
-          "confidence": "66%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Liberty Flames",
-            "M2: Relevance": "TAKE: Liberty Flames",
-            "M3: Efficiency": "TAKE: Liberty Flames",
-            "M4: ATS Trends": "TAKE: Sam Houston Bearkats",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "TAKE: Liberty Flames",
-            "CONSENSUS": "TAKE: Liberty Flames"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 31,
-              "away": 8
-            },
-            "M2: Relevance": {
-              "home": 76.3633,
-              "away": 12.6749
-            },
-            "M3: Efficiency": {
-              "margin": 15.1
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 6
-            },
-            "M5: Luck": {
-              "home": "0.6",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 59.02,
-              "home_m": 69.05,
-              "away_b": 40.98,
-              "away_m": 30.95
-            }
-          },
-          "team_home": "Liberty Flames",
-          "team_away": "Sam Houston Bearkats"
-        },
-        {
-          "game": "Western Kentucky Hilltoppers (H) vs Missouri State Bears (A)",
-          "spread": "WKU -1.5",
-          "favorite": "Western Kentucky Hilltoppers -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Missouri State Bears",
-            "M2: Relevance": "TAKE: Missouri State Bears",
-            "M3: Efficiency": "TAKE: Missouri State Bears",
-            "M4: ATS Trends": "TAKE: Missouri State Bears",
-            "M5: Luck": "TAKE: Western Kentucky Hilltoppers",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: Missouri State Bears"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 15,
-              "away": 24
-            },
-            "M2: Relevance": {
-              "home": 31.4651,
-              "away": 57.4544
-            },
-            "M3: Efficiency": {
-              "margin": -7.0
-            },
-            "M4: ATS Trends": {
-              "home": 3,
-              "away": 4
-            },
-            "M5: Luck": {
-              "home": "-0.7",
-              "away": "-0.5"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Western Kentucky Hilltoppers",
-          "team_away": "Missouri State Bears"
-        },
-        {
-          "game": "UTSA Roadrunners (H) vs South Florida Bulls (A)",
-          "spread": "UTSA -7",
-          "favorite": "UTSA Roadrunners -fav",
-          "confidence": "83%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Florida Bulls",
-            "M2: Relevance": "TAKE: South Florida Bulls",
-            "M3: Efficiency": "TAKE: South Florida Bulls",
-            "M4: ATS Trends": "TAKE: UTSA Roadrunners",
-            "M5: Luck": "TAKE: South Florida Bulls",
-            "M6: Sharp Money": "TAKE: South Florida Bulls",
-            "CONSENSUS": "TAKE: South Florida Bulls"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 20,
-              "away": 21
-            },
-            "M2: Relevance": {
-              "home": 44.47,
-              "away": 49.9789
-            },
-            "M3: Efficiency": {
-              "margin": -2.6
-            },
-            "M4: ATS Trends": {
-              "home": 6,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "1.0",
-              "away": "0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": 38.8,
-              "home_m": 34.47,
-              "away_b": 61.2,
-              "away_m": 65.53
-            }
-          },
-          "team_home": "UTSA Roadrunners",
-          "team_away": "South Florida Bulls"
-        },
-        {
-          "game": "Arkansas State Red Wolves (H) vs South Alabama Jaguars (A)",
-          "spread": "ARST -3",
-          "favorite": "Arkansas State Red Wolves -fav",
-          "confidence": "66%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Alabama Jaguars",
-            "M2: Relevance": "TAKE: South Alabama Jaguars",
-            "M3: Efficiency": "TAKE: South Alabama Jaguars",
-            "M4: ATS Trends": "TAKE: South Alabama Jaguars",
-            "M5: Luck": "TAKE: Arkansas State Red Wolves",
-            "M6: Sharp Money": "TAKE: Arkansas State Red Wolves",
-            "CONSENSUS": "TAKE: South Alabama Jaguars"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 12,
-              "away": 25
-            },
-            "M2: Relevance": {
-              "home": 27.5408,
-              "away": 57.1539
-            },
-            "M3: Efficiency": {
-              "margin": -4.5
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 5
-            },
-            "M5: Luck": {
-              "home": "-0.2",
-              "away": "0.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": 36.9,
-              "home_m": 56.45,
-              "away_b": 63.1,
-              "away_m": 43.55
-            }
-          },
-          "team_home": "Arkansas State Red Wolves",
-          "team_away": "South Alabama Jaguars"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-08T14:31:46-04:00",
-      "games": [
-        {
-          "game": "Liberty Flames (H) vs Sam Houston Bearkats (A)",
-          "spread": "LIB -13.5",
-          "favorite": "Liberty Flames -fav",
-          "confidence": "58%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Liberty Flames",
-            "M2: Relevance": "TAKE: Liberty Flames",
-            "M3: Efficiency": "TAKE: Liberty Flames",
-            "M4: ATS Trends": "TAKE: Sam Houston Bearkats",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "TAKE: Liberty Flames",
-            "CONSENSUS": "TAKE: Liberty Flames"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 31,
-              "away": 8
-            },
-            "M2: Relevance": {
-              "home": 76.3633,
-              "away": 12.6749
-            },
-            "M3: Efficiency": {
-              "margin": 15.1
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 6
-            },
-            "M5: Luck": {
-              "home": "0.6",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 59.02,
-              "home_m": 69.05,
-              "away_b": 40.98,
-              "away_m": 30.95
-            }
-          },
-          "team_home": "Liberty Flames",
-          "team_away": "Sam Houston Bearkats"
-        },
-        {
-          "game": "Western Kentucky Hilltoppers (H) vs Missouri State Bears (A)",
-          "spread": "WKU -1.5",
-          "favorite": "Western Kentucky Hilltoppers -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Missouri State Bears",
-            "M2: Relevance": "TAKE: Missouri State Bears",
-            "M3: Efficiency": "TAKE: Missouri State Bears",
-            "M4: ATS Trends": "TAKE: Missouri State Bears",
-            "M5: Luck": "TAKE: Western Kentucky Hilltoppers",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: Missouri State Bears"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 15,
-              "away": 24
-            },
-            "M2: Relevance": {
-              "home": 31.4651,
-              "away": 57.4544
-            },
-            "M3: Efficiency": {
-              "margin": -7.0
-            },
-            "M4: ATS Trends": {
-              "home": 3,
-              "away": 4
-            },
-            "M5: Luck": {
-              "home": "-0.7",
-              "away": "-0.5"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Western Kentucky Hilltoppers",
-          "team_away": "Missouri State Bears"
-        },
-        {
-          "game": "UTSA Roadrunners (H) vs South Florida Bulls (A)",
-          "spread": "UTSA -7",
-          "favorite": "UTSA Roadrunners -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Florida Bulls",
-            "M2: Relevance": "TAKE: South Florida Bulls",
-            "M3: Efficiency": "TAKE: South Florida Bulls",
-            "M4: ATS Trends": "TAKE: UTSA Roadrunners",
-            "M5: Luck": "TAKE: South Florida Bulls",
-            "M6: Sharp Money": "TAKE: South Florida Bulls",
-            "CONSENSUS": "TAKE: South Florida Bulls"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 20,
-              "away": 21
-            },
-            "M2: Relevance": {
-              "home": 44.47,
-              "away": 49.9789
-            },
-            "M3: Efficiency": {
-              "margin": -2.6
-            },
-            "M4: ATS Trends": {
-              "home": 6,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "1.0",
-              "away": "0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": 38.8,
-              "home_m": 34.47,
-              "away_b": 61.2,
-              "away_m": 65.53
-            }
-          },
-          "team_home": "UTSA Roadrunners",
-          "team_away": "South Florida Bulls"
-        },
-        {
-          "game": "Arkansas State Red Wolves (H) vs South Alabama Jaguars (A)",
-          "spread": "ARST -3",
-          "favorite": "Arkansas State Red Wolves -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Alabama Jaguars",
-            "M2: Relevance": "TAKE: South Alabama Jaguars",
-            "M3: Efficiency": "TAKE: South Alabama Jaguars",
-            "M4: ATS Trends": "TAKE: South Alabama Jaguars",
-            "M5: Luck": "TAKE: Arkansas State Red Wolves",
-            "M6: Sharp Money": "TAKE: Arkansas State Red Wolves",
-            "CONSENSUS": "TAKE: South Alabama Jaguars"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 12,
-              "away": 25
-            },
-            "M2: Relevance": {
-              "home": 27.5408,
-              "away": 57.1539
-            },
-            "M3: Efficiency": {
-              "margin": -4.5
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 5
-            },
-            "M5: Luck": {
-              "home": "-0.2",
-              "away": "0.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": 36.9,
-              "home_m": 56.45,
-              "away_b": 63.1,
-              "away_m": 43.55
-            }
-          },
-          "team_home": "Arkansas State Red Wolves",
-          "team_away": "South Alabama Jaguars"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-08T16:00:03-04:00",
-      "games": [
-        {
-          "game": "Liberty Flames (H) vs Sam Houston Bearkats (A)",
-          "spread": "LIB -13.5",
-          "favorite": "Liberty Flames -fav",
-          "confidence": "58%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Liberty Flames",
-            "M2: Relevance": "TAKE: Liberty Flames",
-            "M3: Efficiency": "TAKE: Liberty Flames",
-            "M4: ATS Trends": "TAKE: Sam Houston Bearkats",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "TAKE: Liberty Flames",
-            "CONSENSUS": "TAKE: Liberty Flames"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 31,
-              "away": 8
-            },
-            "M2: Relevance": {
-              "home": 76.3633,
-              "away": 12.6749
-            },
-            "M3: Efficiency": {
-              "margin": 15.1
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 6
-            },
-            "M5: Luck": {
-              "home": "0.6",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 59.02,
-              "home_m": 69.05,
-              "away_b": 40.98,
-              "away_m": 30.95
-            }
-          },
-          "team_home": "Liberty Flames",
-          "team_away": "Sam Houston Bearkats"
-        },
-        {
-          "game": "Western Kentucky Hilltoppers (H) vs Missouri State Bears (A)",
-          "spread": "WKU -1.5",
-          "favorite": "Western Kentucky Hilltoppers -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Missouri State Bears",
-            "M2: Relevance": "TAKE: Missouri State Bears",
-            "M3: Efficiency": "TAKE: Missouri State Bears",
-            "M4: ATS Trends": "TAKE: Missouri State Bears",
-            "M5: Luck": "TAKE: Western Kentucky Hilltoppers",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: Missouri State Bears"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 15,
-              "away": 24
-            },
-            "M2: Relevance": {
-              "home": 31.4651,
-              "away": 57.4544
-            },
-            "M3: Efficiency": {
-              "margin": -7.0
-            },
-            "M4: ATS Trends": {
-              "home": 3,
-              "away": 4
-            },
-            "M5: Luck": {
-              "home": "-0.7",
-              "away": "-0.5"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Western Kentucky Hilltoppers",
-          "team_away": "Missouri State Bears"
-        },
-        {
-          "game": "UTSA Roadrunners (H) vs South Florida Bulls (A)",
-          "spread": "UTSA -7",
-          "favorite": "UTSA Roadrunners -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Florida Bulls",
-            "M2: Relevance": "TAKE: South Florida Bulls",
-            "M3: Efficiency": "TAKE: South Florida Bulls",
-            "M4: ATS Trends": "TAKE: UTSA Roadrunners",
-            "M5: Luck": "TAKE: South Florida Bulls",
-            "M6: Sharp Money": "TAKE: South Florida Bulls",
-            "CONSENSUS": "TAKE: South Florida Bulls"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 20,
-              "away": 21
-            },
-            "M2: Relevance": {
-              "home": 44.47,
-              "away": 49.9789
-            },
-            "M3: Efficiency": {
-              "margin": -2.6
-            },
-            "M4: ATS Trends": {
-              "home": 6,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "1.0",
-              "away": "0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": 38.8,
-              "home_m": 34.47,
-              "away_b": 61.2,
-              "away_m": 65.53
-            }
-          },
-          "team_home": "UTSA Roadrunners",
-          "team_away": "South Florida Bulls"
-        },
-        {
-          "game": "Arkansas State Red Wolves (H) vs South Alabama Jaguars (A)",
-          "spread": "ARST -3",
-          "favorite": "Arkansas State Red Wolves -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Alabama Jaguars",
-            "M2: Relevance": "TAKE: South Alabama Jaguars",
-            "M3: Efficiency": "TAKE: South Alabama Jaguars",
-            "M4: ATS Trends": "TAKE: South Alabama Jaguars",
-            "M5: Luck": "TAKE: Arkansas State Red Wolves",
-            "M6: Sharp Money": "TAKE: Arkansas State Red Wolves",
-            "CONSENSUS": "TAKE: South Alabama Jaguars"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 12,
-              "away": 25
-            },
-            "M2: Relevance": {
-              "home": 27.5408,
-              "away": 57.1539
-            },
-            "M3: Efficiency": {
-              "margin": -4.5
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 5
-            },
-            "M5: Luck": {
-              "home": "-0.2",
-              "away": "0.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": 36.9,
-              "home_m": 56.45,
-              "away_b": 63.1,
-              "away_m": 43.55
-            }
-          },
-          "team_home": "Arkansas State Red Wolves",
-          "team_away": "South Alabama Jaguars"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-08T18:00:03-04:00",
-      "games": [
-        {
-          "game": "Liberty Flames (H) vs Sam Houston Bearkats (A)",
-          "spread": "LIB -13.5",
-          "favorite": "Liberty Flames -fav",
-          "confidence": "58%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Liberty Flames",
-            "M2: Relevance": "TAKE: Liberty Flames",
-            "M3: Efficiency": "TAKE: Liberty Flames",
-            "M4: ATS Trends": "TAKE: Sam Houston Bearkats",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "TAKE: Liberty Flames",
-            "CONSENSUS": "TAKE: Liberty Flames"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 31,
-              "away": 8
-            },
-            "M2: Relevance": {
-              "home": 76.3633,
-              "away": 12.6749
-            },
-            "M3: Efficiency": {
-              "margin": 15.1
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 6
-            },
-            "M5: Luck": {
-              "home": "0.6",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 59.02,
-              "home_m": 69.05,
-              "away_b": 40.98,
-              "away_m": 30.95
-            }
-          },
-          "team_home": "Liberty Flames",
-          "team_away": "Sam Houston Bearkats"
-        },
-        {
-          "game": "Western Kentucky Hilltoppers (H) vs Missouri State Bears (A)",
-          "spread": "WKU -1.5",
-          "favorite": "Western Kentucky Hilltoppers -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Missouri State Bears",
-            "M2: Relevance": "TAKE: Missouri State Bears",
-            "M3: Efficiency": "TAKE: Missouri State Bears",
-            "M4: ATS Trends": "TAKE: Missouri State Bears",
-            "M5: Luck": "TAKE: Western Kentucky Hilltoppers",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: Missouri State Bears"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 15,
-              "away": 24
-            },
-            "M2: Relevance": {
-              "home": 31.4651,
-              "away": 57.4544
-            },
-            "M3: Efficiency": {
-              "margin": -7.0
-            },
-            "M4: ATS Trends": {
-              "home": 3,
-              "away": 4
-            },
-            "M5: Luck": {
-              "home": "-0.7",
-              "away": "-0.5"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Western Kentucky Hilltoppers",
-          "team_away": "Missouri State Bears"
-        },
-        {
-          "game": "UTSA Roadrunners (H) vs South Florida Bulls (A)",
-          "spread": "UTSA -7",
-          "favorite": "UTSA Roadrunners -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Florida Bulls",
-            "M2: Relevance": "TAKE: South Florida Bulls",
-            "M3: Efficiency": "TAKE: South Florida Bulls",
-            "M4: ATS Trends": "TAKE: UTSA Roadrunners",
-            "M5: Luck": "TAKE: South Florida Bulls",
-            "M6: Sharp Money": "TAKE: South Florida Bulls",
-            "CONSENSUS": "TAKE: South Florida Bulls"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 20,
-              "away": 21
-            },
-            "M2: Relevance": {
-              "home": 44.47,
-              "away": 49.9789
-            },
-            "M3: Efficiency": {
-              "margin": -2.6
-            },
-            "M4: ATS Trends": {
-              "home": 6,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "1.0",
-              "away": "0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": 38.8,
-              "home_m": 34.47,
-              "away_b": 61.2,
-              "away_m": 65.53
-            }
-          },
-          "team_home": "UTSA Roadrunners",
-          "team_away": "South Florida Bulls"
-        },
-        {
-          "game": "Arkansas State Red Wolves (H) vs South Alabama Jaguars (A)",
-          "spread": "ARST -3",
-          "favorite": "Arkansas State Red Wolves -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Alabama Jaguars",
-            "M2: Relevance": "TAKE: South Alabama Jaguars",
-            "M3: Efficiency": "TAKE: South Alabama Jaguars",
-            "M4: ATS Trends": "TAKE: South Alabama Jaguars",
-            "M5: Luck": "TAKE: Arkansas State Red Wolves",
-            "M6: Sharp Money": "TAKE: Arkansas State Red Wolves",
-            "CONSENSUS": "TAKE: South Alabama Jaguars"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 12,
-              "away": 25
-            },
-            "M2: Relevance": {
-              "home": 27.5408,
-              "away": 57.1539
-            },
-            "M3: Efficiency": {
-              "margin": -4.5
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 5
-            },
-            "M5: Luck": {
-              "home": "-0.2",
-              "away": "0.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": 36.9,
-              "home_m": 56.45,
-              "away_b": 63.1,
-              "away_m": 43.55
-            }
-          },
-          "team_home": "Arkansas State Red Wolves",
-          "team_away": "South Alabama Jaguars"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-08T20:00:04-04:00",
-      "games": [
-        {
-          "game": "Liberty Flames (H) vs Sam Houston Bearkats (A)",
-          "spread": "LIB -13.5",
-          "favorite": "Liberty Flames -fav",
-          "confidence": "58%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Liberty Flames",
-            "M2: Relevance": "TAKE: Liberty Flames",
-            "M3: Efficiency": "TAKE: Liberty Flames",
-            "M4: ATS Trends": "TAKE: Sam Houston Bearkats",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "TAKE: Sam Houston Bearkats",
-            "CONSENSUS": "TAKE: Liberty Flames"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 31,
-              "away": 8
-            },
-            "M2: Relevance": {
-              "home": 76.3633,
-              "away": 12.6749
-            },
-            "M3: Efficiency": {
-              "margin": 15.1
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 6
-            },
-            "M5: Luck": {
-              "home": "0.6",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 63.9,
-              "home_m": 63.83,
-              "away_b": 36.1,
-              "away_m": 36.17
-            }
-          },
-          "team_home": "Liberty Flames",
-          "team_away": "Sam Houston Bearkats"
-        },
-        {
-          "game": "Western Kentucky Hilltoppers (H) vs Missouri State Bears (A)",
-          "spread": "WKU -1.5",
-          "favorite": "Western Kentucky Hilltoppers -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Missouri State Bears",
-            "M2: Relevance": "TAKE: Missouri State Bears",
-            "M3: Efficiency": "TAKE: Missouri State Bears",
-            "M4: ATS Trends": "TAKE: Missouri State Bears",
-            "M5: Luck": "TAKE: Western Kentucky Hilltoppers",
-            "M6: Sharp Money": "TAKE: Missouri State Bears",
-            "CONSENSUS": "TAKE: Missouri State Bears"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 15,
-              "away": 24
-            },
-            "M2: Relevance": {
-              "home": 31.4651,
-              "away": 57.4544
-            },
-            "M3: Efficiency": {
-              "margin": -7.0
-            },
-            "M4: ATS Trends": {
-              "home": 3,
-              "away": 4
-            },
-            "M5: Luck": {
-              "home": "-0.7",
-              "away": "-0.5"
-            },
-            "M6: Sharp Money": {
-              "home_b": 55.21,
-              "home_m": 47.72,
-              "away_b": 44.79,
-              "away_m": 52.28
-            }
-          },
-          "team_home": "Western Kentucky Hilltoppers",
-          "team_away": "Missouri State Bears"
-        },
-        {
-          "game": "UTSA Roadrunners (H) vs South Florida Bulls (A)",
-          "spread": "UTSA -7",
-          "favorite": "UTSA Roadrunners -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Florida Bulls",
-            "M2: Relevance": "TAKE: South Florida Bulls",
-            "M3: Efficiency": "TAKE: South Florida Bulls",
-            "M4: ATS Trends": "TAKE: UTSA Roadrunners",
-            "M5: Luck": "TAKE: South Florida Bulls",
-            "M6: Sharp Money": "TAKE: South Florida Bulls",
-            "CONSENSUS": "TAKE: South Florida Bulls"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 20,
-              "away": 21
-            },
-            "M2: Relevance": {
-              "home": 44.47,
-              "away": 49.9789
-            },
-            "M3: Efficiency": {
-              "margin": -2.6
-            },
-            "M4: ATS Trends": {
-              "home": 6,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "1.0",
-              "away": "0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": 38.8,
-              "home_m": 34.47,
-              "away_b": 61.2,
-              "away_m": 65.53
-            }
-          },
-          "team_home": "UTSA Roadrunners",
-          "team_away": "South Florida Bulls"
-        },
-        {
-          "game": "Arkansas State Red Wolves (H) vs South Alabama Jaguars (A)",
-          "spread": "ARST -3",
-          "favorite": "Arkansas State Red Wolves -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Alabama Jaguars",
-            "M2: Relevance": "TAKE: South Alabama Jaguars",
-            "M3: Efficiency": "TAKE: South Alabama Jaguars",
-            "M4: ATS Trends": "TAKE: South Alabama Jaguars",
-            "M5: Luck": "TAKE: Arkansas State Red Wolves",
-            "M6: Sharp Money": "TAKE: Arkansas State Red Wolves",
-            "CONSENSUS": "TAKE: South Alabama Jaguars"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 12,
-              "away": 25
-            },
-            "M2: Relevance": {
-              "home": 27.5408,
-              "away": 57.1539
-            },
-            "M3: Efficiency": {
-              "margin": -4.5
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 5
-            },
-            "M5: Luck": {
-              "home": "-0.2",
-              "away": "0.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": 36.9,
-              "home_m": 56.45,
-              "away_b": 63.1,
-              "away_m": 43.55
-            }
-          },
-          "team_home": "Arkansas State Red Wolves",
-          "team_away": "South Alabama Jaguars"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-08T22:00:04-04:00",
-      "games": [
-        {
-          "game": "Liberty Flames (H) vs Sam Houston Bearkats (A)",
-          "spread": "LIB -13.5",
-          "favorite": "Liberty Flames -fav",
-          "confidence": "58%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Liberty Flames",
-            "M2: Relevance": "TAKE: Liberty Flames",
-            "M3: Efficiency": "TAKE: Liberty Flames",
-            "M4: ATS Trends": "TAKE: Sam Houston Bearkats",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "TAKE: Liberty Flames",
-            "CONSENSUS": "TAKE: Liberty Flames"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 31,
-              "away": 8
-            },
-            "M2: Relevance": {
-              "home": 76.3633,
-              "away": 12.6749
-            },
-            "M3: Efficiency": {
-              "margin": 15.1
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 6
-            },
-            "M5: Luck": {
-              "home": "0.6",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 64.53,
-              "home_m": 69.64,
-              "away_b": 35.47,
-              "away_m": 30.36
-            }
-          },
-          "team_home": "Liberty Flames",
-          "team_away": "Sam Houston Bearkats"
-        },
-        {
-          "game": "Western Kentucky Hilltoppers (H) vs Missouri State Bears (A)",
-          "spread": "WKU -1.5",
-          "favorite": "Western Kentucky Hilltoppers -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Missouri State Bears",
-            "M2: Relevance": "TAKE: Missouri State Bears",
-            "M3: Efficiency": "TAKE: Missouri State Bears",
-            "M4: ATS Trends": "TAKE: Missouri State Bears",
-            "M5: Luck": "TAKE: Western Kentucky Hilltoppers",
-            "M6: Sharp Money": "TAKE: Missouri State Bears",
-            "CONSENSUS": "TAKE: Missouri State Bears"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 15,
-              "away": 24
-            },
-            "M2: Relevance": {
-              "home": 31.4651,
-              "away": 57.4544
-            },
-            "M3: Efficiency": {
-              "margin": -7.0
-            },
-            "M4: ATS Trends": {
-              "home": 3,
-              "away": 4
-            },
-            "M5: Luck": {
-              "home": "-0.7",
-              "away": "-0.5"
-            },
-            "M6: Sharp Money": {
-              "home_b": 56.58,
-              "home_m": 51.81,
-              "away_b": 43.42,
-              "away_m": 48.19
-            }
-          },
-          "team_home": "Western Kentucky Hilltoppers",
-          "team_away": "Missouri State Bears"
-        },
-        {
-          "game": "UTSA Roadrunners (H) vs South Florida Bulls (A)",
-          "spread": "UTSA -7",
-          "favorite": "UTSA Roadrunners -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Florida Bulls",
-            "M2: Relevance": "TAKE: South Florida Bulls",
-            "M3: Efficiency": "TAKE: South Florida Bulls",
-            "M4: ATS Trends": "TAKE: UTSA Roadrunners",
-            "M5: Luck": "TAKE: South Florida Bulls",
-            "M6: Sharp Money": "TAKE: UTSA Roadrunners",
-            "CONSENSUS": "TAKE: South Florida Bulls"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 20,
-              "away": 21
-            },
-            "M2: Relevance": {
-              "home": 44.47,
-              "away": 49.9789
-            },
-            "M3: Efficiency": {
-              "margin": -2.6
-            },
-            "M4: ATS Trends": {
-              "home": 6,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "1.0",
-              "away": "0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": 47.52,
-              "home_m": 49.17,
-              "away_b": 52.48,
-              "away_m": 50.83
-            }
-          },
-          "team_home": "UTSA Roadrunners",
-          "team_away": "South Florida Bulls"
-        },
-        {
-          "game": "Arkansas State Red Wolves (H) vs South Alabama Jaguars (A)",
-          "spread": "ARST -3",
-          "favorite": "Arkansas State Red Wolves -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: South Alabama Jaguars",
-            "M2: Relevance": "TAKE: South Alabama Jaguars",
-            "M3: Efficiency": "TAKE: South Alabama Jaguars",
-            "M4: ATS Trends": "TAKE: South Alabama Jaguars",
-            "M5: Luck": "TAKE: Arkansas State Red Wolves",
-            "M6: Sharp Money": "TAKE: Arkansas State Red Wolves",
-            "CONSENSUS": "TAKE: South Alabama Jaguars"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 12,
-              "away": 25
-            },
-            "M2: Relevance": {
-              "home": 27.5408,
-              "away": 57.1539
-            },
-            "M3: Efficiency": {
-              "margin": -4.5
-            },
-            "M4: ATS Trends": {
-              "home": 0,
-              "away": 5
-            },
-            "M5: Luck": {
-              "home": "-0.2",
-              "away": "0.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": 34.41,
-              "home_m": 41.34,
-              "away_b": 65.59,
-              "away_m": 58.66
-            }
-          },
-          "team_home": "Arkansas State Red Wolves",
-          "team_away": "South Alabama Jaguars"
+          "team_home": "BYU Cougars",
+          "team_away": "Iowa State Cyclones"
         }
       ]
     }
