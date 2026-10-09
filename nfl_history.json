@@ -1,7 +1,61 @@
 {
   "sport": "NFL",
-  "updated": "2026-10-08T16:43:20-04:00",
+  "updated": "2026-10-09T06:05:03-04:00",
   "days": {
+    "2026-10-08": [
+      {
+        "game": "Dallas Cowboys (H) vs Tampa Bay Buccaneers (A)",
+        "team_home": "Dallas Cowboys",
+        "team_away": "Tampa Bay Buccaneers",
+        "line": "DAL -8.5",
+        "favorite": "Dallas Cowboys -fav",
+        "final": "Dallas Cowboys 16, Tampa Bay Buccaneers 24",
+        "cover": "Tampa Bay Buccaneers",
+        "status": null,
+        "confidence": "67%",
+        "sharp": {
+          "home_b": 74.26,
+          "home_m": 71.24,
+          "away_b": 25.74,
+          "away_m": 28.76
+        },
+        "graded_run": "2026-10-08T20:05:03-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Dallas Cowboys",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Dallas Cowboys",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Dallas Cowboys",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Dallas Cowboys",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Dallas Cowboys",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-07": [],
     "2026-10-06": [],
     "2026-10-05": [

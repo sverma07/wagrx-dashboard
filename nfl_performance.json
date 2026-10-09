@@ -1,38 +1,38 @@
 {
   "sport": "NFL",
-  "updated": "2026-10-09T00:05:30-04:00",
+  "updated": "2026-10-09T06:05:03-04:00",
   "models": {
     "M1: Normal Score": {
       "W": 0,
-      "L": 0
+      "L": 1
     },
     "M2: Relevance": {
       "W": 0,
-      "L": 0
+      "L": 1
     },
     "M3: Efficiency": {
-      "W": 0,
+      "W": 1,
       "L": 0
     },
     "M4: ATS Trends": {
       "W": 0,
-      "L": 0
+      "L": 1
     },
     "M5: Luck": {
-      "W": 0,
+      "W": 1,
       "L": 0
     },
     "M6: Sharp Money": {
-      "W": 0,
+      "W": 1,
       "L": 0
     },
     "M7: QB Injury Edge": {
       "W": 0,
-      "L": 0
+      "L": 1
     },
     "CONSENSUS": {
       "W": 0,
-      "L": 0
+      "L": 1
     }
   },
   "since": "2026-10-08"
