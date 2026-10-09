@@ -431,7 +431,7 @@ function renderSharpRow(g, cover = null) {
   const s = sharpStrength(g);
   let body;
   if (s) {
-    body = `<span>${s.team}</span><span class="tag ${s.cls}">${s.label}</span><span class="dim">${s.gap.toFixed(1)} pts</span>`
+    body = `<span>${s.team}</span><span class="tag ${s.cls}">${s.label}</span><span class="dim">${s.gap.toFixed(1)}% gap</span>`
       + (cover ? resultTag(s.team === cover ? "WIN" : "LOSS") : "");
   } else if (d && d.home_b !== undefined && d.home_b !== null) {
     body = `<span class="dim">Even (no gap)</span>`;
@@ -466,7 +466,7 @@ function formatDetail(g, modelKey) {
     return `${teamHome}: <span class="num">${fmtNum(d.home_b)}%</span> bets / <span class="num">${fmtNum(d.home_m)}%</span> money`
       + `&nbsp;&nbsp;|&nbsp;&nbsp;`
       + `${teamAway}: <span class="num">${fmtNum(d.away_b)}%</span> bets / <span class="num">${fmtNum(d.away_m)}%</span> money`
-      + (s ? `<br>Gap: <span class="num">${s.gap.toFixed(1)}</span> pts toward ${s.team}<span class="tag ${s.cls}">${s.label}</span>` : "");
+      + (s ? `<br>Gap: <span class="num">${s.gap.toFixed(1)}%</span> more money than bets on ${s.team}<span class="tag ${s.cls}">${s.label}</span>` : "");
   }
 
   if (modelKey.includes("QB Injury")) {
