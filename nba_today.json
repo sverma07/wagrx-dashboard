@@ -1,87 +1,87 @@
 {
   "sport": "NBA",
-  "date": "2026-10-08",
+  "date": "2026-10-09",
   "snapshots": [
     {
-      "time": "2026-10-08T23:45:20-04:00",
+      "time": "2026-10-09T23:45:36-04:00",
       "games": [
         {
-          "game": "Cleveland Cavaliers (H) vs Boston Celtics (A)",
+          "game": "Dallas Mavericks (H) vs Houston Rockets (A)",
           "spread": "N/A",
           "favorite": "?",
-          "confidence": "100%",
+          "confidence": "75%",
           "picks": {
-            "M1: Normal Score": "TAKE: Boston Celtics",
-            "M2: Relevance": "TAKE: Boston Celtics",
+            "M1: Normal Score": "TAKE: Houston Rockets",
+            "M2: Relevance": "TAKE: Houston Rockets",
             "M3: Efficiency": "N/A",
-            "M4: ATS Trends": "TAKE: Boston Celtics",
-            "M5: Luck": "TAKE: Boston Celtics",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: Boston Celtics"
+            "M4: ATS Trends": "TAKE: Houston Rockets",
+            "M5: Luck": "TAKE: Dallas Mavericks",
+            "M6: Sharp Money": "TAKE: Houston Rockets",
+            "CONSENSUS": "TAKE: Houston Rockets"
           },
           "detail": {
             "M1: Normal Score": {
               "home": 34,
-              "away": 72
+              "away": 71
             },
             "M2: Relevance": {
-              "home": 632.0617,
-              "away": 2134.8068
+              "home": 208.2219,
+              "away": 2219.854
             },
             "M3: Efficiency": {
-              "margin": -2.3
+              "margin": -4.9
             },
             "M4: ATS Trends": {
-              "home": 0,
-              "away": 14
+              "home": 6,
+              "away": 8
             },
             "M5: Luck": {
-              "home": "0.8",
-              "away": "-1.7"
+              "home": "-3.3",
+              "away": "-2.0"
             },
             "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
+              "home_b": 54.91,
+              "home_m": 53.39,
+              "away_b": 45.09,
+              "away_m": 46.61
             }
           },
-          "team_home": "Cleveland Cavaliers",
-          "team_away": "Boston Celtics"
+          "team_home": "Dallas Mavericks",
+          "team_away": "Houston Rockets"
         },
         {
-          "game": "Miami Heat (H) vs New Orleans Pelicans (A)",
+          "game": "Chicago Bulls (H) vs Memphis Grizzlies (A)",
           "spread": "N/A",
           "favorite": "?",
           "confidence": "75%",
           "picks": {
-            "M1: Normal Score": "TAKE: Miami Heat",
-            "M2: Relevance": "TAKE: Miami Heat",
+            "M1: Normal Score": "TAKE: Chicago Bulls",
+            "M2: Relevance": "TAKE: Chicago Bulls",
             "M3: Efficiency": "N/A",
-            "M4: ATS Trends": "TAKE: Miami Heat",
-            "M5: Luck": "TAKE: New Orleans Pelicans",
+            "M4: ATS Trends": "TAKE: Chicago Bulls",
+            "M5: Luck": "TAKE: Memphis Grizzlies",
             "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: Miami Heat"
+            "CONSENSUS": "TAKE: Chicago Bulls"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 79,
-              "away": 26
+              "home": 59,
+              "away": 47
             },
             "M2: Relevance": {
-              "home": 2193.2126,
-              "away": 226.8521
+              "home": 1816.7451,
+              "away": 626.7001
             },
             "M3: Efficiency": {
-              "margin": 3.2
+              "margin": 0.4
             },
             "M4: ATS Trends": {
-              "home": 9,
-              "away": 5
+              "home": 8,
+              "away": 7
             },
             "M5: Luck": {
-              "home": "-2.3",
-              "away": "-4.2"
+              "home": "1.8",
+              "away": "-3.6"
             },
             "M6: Sharp Money": {
               "home_b": null,
@@ -90,184 +90,8 @@
               "away_m": null
             }
           },
-          "team_home": "Miami Heat",
-          "team_away": "New Orleans Pelicans"
-        },
-        {
-          "game": "Brooklyn Nets (H) vs Philadelphia 76ers (A)",
-          "spread": "N/A",
-          "favorite": "?",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Philadelphia 76ers",
-            "M2: Relevance": "TAKE: Philadelphia 76ers",
-            "M3: Efficiency": "N/A",
-            "M4: ATS Trends": "TAKE: Philadelphia 76ers",
-            "M5: Luck": "TAKE: Brooklyn Nets",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: Philadelphia 76ers"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 22,
-              "away": 85
-            },
-            "M2: Relevance": {
-              "home": 227.2279,
-              "away": 2525.5798
-            },
-            "M3: Efficiency": {
-              "margin": -4.3
-            },
-            "M4: ATS Trends": {
-              "home": 3,
-              "away": 12
-            },
-            "M5: Luck": {
-              "home": "1.1",
-              "away": "5.5"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Brooklyn Nets",
-          "team_away": "Philadelphia 76ers"
-        },
-        {
-          "game": "New York Knicks (H) vs Washington Wizards (A)",
-          "spread": "N/A",
-          "favorite": "?",
-          "confidence": "100%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "N/A",
-            "M4: ATS Trends": "TAKE: New York Knicks",
-            "M5: Luck": "TAKE: New York Knicks",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: New York Knicks"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 97,
-              "away": 9
-            },
-            "M2: Relevance": {
-              "home": 2745.673,
-              "away": 19.785
-            },
-            "M3: Efficiency": {
-              "margin": 9.7
-            },
-            "M4: ATS Trends": {
-              "home": 14,
-              "away": 0
-            },
-            "M5: Luck": {
-              "home": "-2.1",
-              "away": "1.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "New York Knicks",
-          "team_away": "Washington Wizards"
-        },
-        {
-          "game": "San Antonio Spurs (H) vs Atlanta Hawks (A)",
-          "spread": "N/A",
-          "favorite": "?",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: San Antonio Spurs",
-            "M2: Relevance": "TAKE: San Antonio Spurs",
-            "M3: Efficiency": "N/A",
-            "M4: ATS Trends": "TAKE: San Antonio Spurs",
-            "M5: Luck": "TAKE: Atlanta Hawks",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: San Antonio Spurs"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 75,
-              "away": 28
-            },
-            "M2: Relevance": {
-              "home": 2657.4967,
-              "away": 108.0806
-            },
-            "M3: Efficiency": {
-              "margin": 3.3
-            },
-            "M4: ATS Trends": {
-              "home": 12,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "1.2",
-              "away": "0.9"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "San Antonio Spurs",
-          "team_away": "Atlanta Hawks"
-        },
-        {
-          "game": "Los Angeles Lakers (H) vs Sacramento Kings (A)",
-          "spread": "N/A",
-          "favorite": "?",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Los Angeles Lakers",
-            "M2: Relevance": "TAKE: Los Angeles Lakers",
-            "M3: Efficiency": "N/A",
-            "M4: ATS Trends": "TAKE: Los Angeles Lakers",
-            "M5: Luck": "TAKE: Sacramento Kings",
-            "M6: Sharp Money": "N/A",
-            "CONSENSUS": "TAKE: Los Angeles Lakers"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 87,
-              "away": 22
-            },
-            "M2: Relevance": {
-              "home": 2650.2497,
-              "away": 121.5189
-            },
-            "M3: Efficiency": {
-              "margin": 5.4
-            },
-            "M4: ATS Trends": {
-              "home": 14,
-              "away": 1
-            },
-            "M5: Luck": {
-              "home": "7.2",
-              "away": "1.2"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            }
-          },
-          "team_home": "Los Angeles Lakers",
-          "team_away": "Sacramento Kings"
+          "team_home": "Chicago Bulls",
+          "team_away": "Memphis Grizzlies"
         }
       ]
     }
