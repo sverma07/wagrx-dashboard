@@ -1,7 +1,249 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-10-09T06:00:03-04:00",
+  "updated": "2026-10-10T06:00:04-04:00",
   "days": {
+    "2026-10-09": [
+      {
+        "game": "Louisville Cardinals (H) vs Florida State Seminoles (A)",
+        "team_home": "Louisville Cardinals",
+        "team_away": "Florida State Seminoles",
+        "line": "LOU -3.5",
+        "favorite": "Louisville Cardinals -fav",
+        "final": "Louisville Cardinals 44, Florida State Seminoles 20",
+        "cover": "Louisville Cardinals",
+        "status": null,
+        "confidence": "82%",
+        "sharp": {
+          "home_b": 38.97,
+          "home_m": 53.6,
+          "away_b": 61.03,
+          "away_m": 46.4
+        },
+        "graded_run": "2026-10-09T18:00:03-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Florida State Seminoles",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Florida State Seminoles",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Florida State Seminoles",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Florida State Seminoles",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Louisville Cardinals",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Louisville Cardinals",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Florida State Seminoles",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Washington Huskies (H) vs Iowa Hawkeyes (A)",
+        "team_home": "Washington Huskies",
+        "team_away": "Iowa Hawkeyes",
+        "line": "WASH -2.5",
+        "favorite": "Washington Huskies -fav",
+        "final": "Washington Huskies 24, Iowa Hawkeyes 41",
+        "cover": "Iowa Hawkeyes",
+        "status": null,
+        "confidence": "82%",
+        "sharp": {
+          "home_b": 25.81,
+          "home_m": 45.3,
+          "away_b": 74.19,
+          "away_m": 54.7
+        },
+        "graded_run": "2026-10-09T20:00:03-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Iowa Hawkeyes",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Iowa Hawkeyes",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Iowa Hawkeyes",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Iowa Hawkeyes",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Washington Huskies",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Washington Huskies",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Iowa Hawkeyes",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Utah State Aggies (H) vs Washington State Cougars (A)",
+        "team_home": "Utah State Aggies",
+        "team_away": "Washington State Cougars",
+        "line": "USU -5.5",
+        "favorite": "Utah State Aggies -fav",
+        "final": "Utah State Aggies 17, Washington State Cougars 16",
+        "cover": "Washington State Cougars",
+        "status": null,
+        "confidence": "57%",
+        "sharp": {
+          "home_b": 52.34,
+          "home_m": 60.64,
+          "away_b": 47.66,
+          "away_m": 39.36
+        },
+        "graded_run": "2026-10-09T20:00:03-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Utah State Aggies",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Utah State Aggies",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Washington State Cougars",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Washington State Cougars",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Washington State Cougars",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Utah State Aggies",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Washington State Cougars",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "San Jose State Spartans (H) vs Wyoming Cowboys (A)",
+        "team_home": "San Jose State Spartans",
+        "team_away": "Wyoming Cowboys",
+        "line": "SJSU -4.5",
+        "favorite": "San Jose State Spartans -fav",
+        "final": "San Jose State Spartans 13, Wyoming Cowboys 16",
+        "cover": "Wyoming Cowboys",
+        "status": null,
+        "confidence": "61%",
+        "sharp": {
+          "home_b": 68.73,
+          "home_m": 70.76,
+          "away_b": 31.27,
+          "away_m": 29.24
+        },
+        "graded_run": "2026-10-09T20:00:03-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "San Jose State Spartans",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "San Jose State Spartans",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Wyoming Cowboys",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "San Jose State Spartans",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Wyoming Cowboys",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "San Jose State Spartans",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "San Jose State Spartans",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "BYU Cougars (H) vs Iowa State Cyclones (A)",
+        "team_home": "BYU Cougars",
+        "team_away": "Iowa State Cyclones",
+        "line": "BYU -10.5",
+        "favorite": "BYU Cougars -fav",
+        "final": "BYU Cougars 24, Iowa State Cyclones 10",
+        "cover": "BYU Cougars",
+        "status": null,
+        "confidence": "61%",
+        "sharp": {
+          "home_b": 53.1,
+          "home_m": 47.46,
+          "away_b": 46.9,
+          "away_m": 52.54
+        },
+        "graded_run": "2026-10-09T22:00:04-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "BYU Cougars",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "BYU Cougars",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Iowa State Cyclones",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "BYU Cougars",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Iowa State Cyclones",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Iowa State Cyclones",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "BYU Cougars",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-10-08": [
       {
         "game": "Liberty Flames (H) vs Sam Houston Bearkats (A)",
