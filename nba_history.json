@@ -1,7 +1,105 @@
 {
   "sport": "NBA",
-  "updated": "2026-10-09T06:10:05-04:00",
+  "updated": "2026-10-10T06:10:04-04:00",
   "days": {
+    "2026-10-09": [
+      {
+        "game": "Dallas Mavericks (H) vs Houston Rockets (A)",
+        "team_home": "Dallas Mavericks",
+        "team_away": "Houston Rockets",
+        "line": "HOU -3.5",
+        "favorite": "?",
+        "final": "Dallas Mavericks 117, Houston Rockets 135",
+        "cover": "Houston Rockets",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 54.91,
+          "home_m": 53.39,
+          "away_b": 45.09,
+          "away_m": 46.61
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Dallas Mavericks",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Chicago Bulls (H) vs Memphis Grizzlies (A)",
+        "team_home": "Chicago Bulls",
+        "team_away": "Memphis Grizzlies",
+        "line": "CHI -2.5",
+        "favorite": "?",
+        "final": "Chicago Bulls 100, Memphis Grizzlies 104",
+        "cover": "Memphis Grizzlies",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Chicago Bulls",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Chicago Bulls",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Chicago Bulls",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Memphis Grizzlies",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Chicago Bulls",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-08": [
       {
         "game": "Cleveland Cavaliers (H) vs Boston Celtics (A)",
