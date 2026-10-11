@@ -1,7 +1,345 @@
 {
   "sport": "NBA",
-  "updated": "2026-10-10T06:10:04-04:00",
+  "updated": "2026-10-11T06:10:05-04:00",
   "days": {
+    "2026-10-10": [
+      {
+        "game": "Toronto Raptors (H) vs Los Angeles Clippers (A)",
+        "team_home": "Toronto Raptors",
+        "team_away": "Los Angeles Clippers",
+        "line": "TOR -4.5",
+        "favorite": "?",
+        "final": "Toronto Raptors 114, Los Angeles Clippers 106",
+        "cover": "Toronto Raptors",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Toronto Raptors",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Toronto Raptors",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Toronto Raptors",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Los Angeles Clippers",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Toronto Raptors",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Indiana Pacers (H) vs Atlanta Hawks (A)",
+        "team_home": "Indiana Pacers",
+        "team_away": "Atlanta Hawks",
+        "line": "IND -1.5",
+        "favorite": "?",
+        "final": "Indiana Pacers 117, Atlanta Hawks 119",
+        "cover": "Atlanta Hawks",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Indiana Pacers",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Washington Wizards (H) vs Detroit Pistons (A)",
+        "team_home": "Washington Wizards",
+        "team_away": "Detroit Pistons",
+        "line": "DET -1.5",
+        "favorite": "?",
+        "final": "Washington Wizards 114, Detroit Pistons 108",
+        "cover": "Washington Wizards",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Detroit Pistons",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Detroit Pistons",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Detroit Pistons",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Detroit Pistons",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Detroit Pistons",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Miami Heat (H) vs Minnesota Timberwolves (A)",
+        "team_home": "Miami Heat",
+        "team_away": "Minnesota Timberwolves",
+        "line": "MIN -3.5",
+        "favorite": "?",
+        "final": "Miami Heat 124, Minnesota Timberwolves 125",
+        "cover": "Miami Heat",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 26.34,
+          "home_m": 29.82,
+          "away_b": 73.66,
+          "away_m": 70.18
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Miami Heat",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Minnesota Timberwolves",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Miami Heat",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Miami Heat",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Miami Heat",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Miami Heat",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Boston Celtics (H) vs Philadelphia 76ers (A)",
+        "team_home": "Boston Celtics",
+        "team_away": "Philadelphia 76ers",
+        "line": "BOS -7.5",
+        "favorite": "?",
+        "final": "Boston Celtics 144, Philadelphia 76ers 106",
+        "cover": "Boston Celtics",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Boston Celtics",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Boston Celtics",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Boston Celtics",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Boston Celtics",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Boston Celtics",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Golden State Warriors (H) vs Sacramento Kings (A)",
+        "team_home": "Golden State Warriors",
+        "team_away": "Sacramento Kings",
+        "line": "GS -6.5",
+        "favorite": "?",
+        "final": "Golden State Warriors 111, Sacramento Kings 106",
+        "cover": "Sacramento Kings",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Golden State Warriors",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Golden State Warriors",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Sacramento Kings",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Golden State Warriors",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Golden State Warriors",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Phoenix Suns (H) vs San Antonio Spurs (A)",
+        "team_home": "Phoenix Suns",
+        "team_away": "San Antonio Spurs",
+        "line": "SA -7.5",
+        "favorite": "?",
+        "final": "Phoenix Suns 102, San Antonio Spurs 98",
+        "cover": "Phoenix Suns",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-09": [
       {
         "game": "Dallas Mavericks (H) vs Houston Rockets (A)",
