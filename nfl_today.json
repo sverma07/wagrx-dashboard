@@ -611,6 +611,83 @@
           }
         }
       ]
+    },
+    {
+      "time": "2026-10-12T18:05:07-04:00",
+      "games": [
+        {
+          "game": "Los Angeles Rams (H) vs Buffalo Bills (A)",
+          "spread": "LAR -3.5",
+          "favorite": "Los Angeles Rams -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Buffalo Bills",
+            "M2: Relevance": "TAKE: Buffalo Bills",
+            "M3: Efficiency": "TAKE: Buffalo Bills",
+            "M4: ATS Trends": "TAKE: Buffalo Bills",
+            "M5: Luck": "TAKE: Los Angeles Rams",
+            "M6: Sharp Money": "TAKE: Buffalo Bills",
+            "M7: QB Injury Edge": "TAKE: Buffalo Bills",
+            "CONSENSUS": "TAKE: Buffalo Bills",
+            "Sharp: Circa": "TAKE: Los Angeles Rams",
+            "Sharp: DraftKings": "TAKE: Los Angeles Rams"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 15,
+              "away": 26
+            },
+            "M2: Relevance": {
+              "home": 17.2648,
+              "away": 34.5598
+            },
+            "M3: Efficiency": {
+              "margin": -2.2
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 7
+            },
+            "M5: Luck": {
+              "home": "-0.4",
+              "away": "0.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": 23.02,
+              "home_m": 21.2,
+              "away_b": 76.98,
+              "away_m": 78.8
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Matthew Caldwell (Injured Reserve) -> Matthew Stafford (Active) starting",
+              "away_status": "Josh Allen (Active)"
+            }
+          },
+          "team_home": "Los Angeles Rams",
+          "team_away": "Buffalo Bills",
+          "home_id": "14",
+          "away_id": "2",
+          "start": "2026-10-13T00:15Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 40.0,
+              "home_m": 85.0,
+              "away_b": 60.0,
+              "away_m": 15.0,
+              "line": "-3.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 28.0,
+              "home_m": 48.0,
+              "away_b": 72.0,
+              "away_m": 52.0,
+              "line": "-3.5",
+              "thin": false
+            }
+          }
+        }
+      ]
     }
   ]
 }
