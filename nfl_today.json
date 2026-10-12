@@ -400,6 +400,63 @@
           "start": "2026-10-13T00:15Z"
         }
       ]
+    },
+    {
+      "time": "2026-10-12T14:05:06-04:00",
+      "games": [
+        {
+          "game": "Los Angeles Rams (H) vs Buffalo Bills (A)",
+          "spread": "LAR -3.5",
+          "favorite": "Los Angeles Rams -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Buffalo Bills",
+            "M2: Relevance": "TAKE: Buffalo Bills",
+            "M3: Efficiency": "TAKE: Buffalo Bills",
+            "M4: ATS Trends": "TAKE: Buffalo Bills",
+            "M5: Luck": "TAKE: Los Angeles Rams",
+            "M6: Sharp Money": "TAKE: Los Angeles Rams",
+            "M7: QB Injury Edge": "TAKE: Buffalo Bills",
+            "CONSENSUS": "TAKE: Buffalo Bills"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 15,
+              "away": 26
+            },
+            "M2: Relevance": {
+              "home": 17.2648,
+              "away": 34.5598
+            },
+            "M3: Efficiency": {
+              "margin": -2.2
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 7
+            },
+            "M5: Luck": {
+              "home": "-0.4",
+              "away": "0.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": 21.77,
+              "home_m": 21.96,
+              "away_b": 78.23,
+              "away_m": 78.04
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Matthew Caldwell (Injured Reserve) -> Matthew Stafford (Active) starting",
+              "away_status": "Josh Allen (Active)"
+            }
+          },
+          "team_home": "Los Angeles Rams",
+          "team_away": "Buffalo Bills",
+          "home_id": "14",
+          "away_id": "2",
+          "start": "2026-10-13T00:15Z"
+        }
+      ]
     }
   ]
 }
