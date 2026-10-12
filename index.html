@@ -730,7 +730,8 @@ function clearFilters() {
 function startTimeLabel(g) {
   if (!g.start) return "";
   const d = new Date(g.start);
-  return isNaN(d) ? "" : d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }) + " &middot; ";
+  // Always Eastern, labeled, so everyone sees the same kickoff time.
+  return isNaN(d) ? "" : d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/New_York" }) + " ET &middot; ";
 }
 
 let currentSnap = null;
