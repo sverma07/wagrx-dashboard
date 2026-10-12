@@ -1,7 +1,201 @@
 {
   "sport": "NBA",
-  "updated": "2026-10-11T06:10:05-04:00",
+  "updated": "2026-10-12T06:10:04-04:00",
   "days": {
+    "2026-10-11": [
+      {
+        "game": "Houston Rockets (H) vs Dallas Mavericks (A)",
+        "team_home": "Houston Rockets",
+        "team_away": "Dallas Mavericks",
+        "line": "HOU -1.5",
+        "favorite": "?",
+        "final": "Houston Rockets 115, Dallas Mavericks 132",
+        "cover": "Dallas Mavericks",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 43.44,
+          "home_m": 44.96,
+          "away_b": 56.56,
+          "away_m": 55.04
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Houston Rockets",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Houston Rockets",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Houston Rockets",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Dallas Mavericks",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Houston Rockets",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Houston Rockets",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Cleveland Cavaliers (H) vs Orlando Magic (A)",
+        "team_home": "Cleveland Cavaliers",
+        "team_away": "Orlando Magic",
+        "line": "CLE -5.5",
+        "favorite": "?",
+        "final": "Cleveland Cavaliers 119, Orlando Magic 105",
+        "cover": "Cleveland Cavaliers",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Cleveland Cavaliers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Cleveland Cavaliers",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Charlotte Hornets (H) vs Milwaukee Bucks (A)",
+        "team_home": "Charlotte Hornets",
+        "team_away": "Milwaukee Bucks",
+        "line": "CHA -3.5",
+        "favorite": "?",
+        "final": "Charlotte Hornets 105, Milwaukee Bucks 90",
+        "cover": "Charlotte Hornets",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Charlotte Hornets",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Charlotte Hornets",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Charlotte Hornets",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Charlotte Hornets",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Charlotte Hornets",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Denver Nuggets (H) vs Chicago Bulls (A)",
+        "team_home": "Denver Nuggets",
+        "team_away": "Chicago Bulls",
+        "line": "DEN -7.5",
+        "favorite": "?",
+        "final": "Denver Nuggets 133, Chicago Bulls 128",
+        "cover": "Chicago Bulls",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Denver Nuggets",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Denver Nuggets",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Denver Nuggets",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Denver Nuggets",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Denver Nuggets",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-10": [
       {
         "game": "Toronto Raptors (H) vs Los Angeles Clippers (A)",
