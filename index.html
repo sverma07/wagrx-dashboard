@@ -248,6 +248,14 @@
     background: var(--accent-gradient);
     color: #fff;
   }
+  .conf-col { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
+  .agree-count { font-size: 0.72rem; color: var(--text-dim); }
+  .pick-line { font-weight: 600; color: var(--text-dim); margin-left: 6px; }
+  .line-move { color: var(--accent); }
+  .perf-note { color: var(--text-dim); font-size: 0.8rem; margin: 0 0 10px; }
+  .perf-sub { font-size: 0.76rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin: 18px 0 6px; }
+  .perf-form { font-size: 0.88rem; margin-bottom: 4px; }
+  .perf-form b { font-weight: 700; }
   .models-wrap { max-height: 0; overflow: hidden; transition: max-height 0.2s ease; }
   .game-card.expanded .models-wrap { max-height: 600px; }
   table.models { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 12px; }
@@ -576,6 +584,40 @@ function formatDetail(g, modelKey) {
     + `${teamAway}: <span class="num">${awayVal ?? "N/A"}</span>`;
 }
 
+// ---- Card helpers: pick with its line, model agreement, line movement ----
+function lineNumber(spread) {
+  if (/\b(PK|PICK|EVEN)/i.test(String(spread || ""))) return 0;
+  const m = String(spread || "").match(/(-?\d+(?:\.\d+)?)\s*$/);
+  return m ? Math.abs(parseFloat(m[1])) : null;
+}
+
+// The picked team's own line ("-3.5" / "+3.5" / "PK") and whether it is the favorite or the dog.
+// The spread text carries the favorite's number; the other side gets the opposite sign.
+function pickLineHtml(spread, favorite, team, teams) {
+  const n = lineNumber(spread);
+  const fav = String(favorite || "").replace(/\s*-fav$/, "");
+  if (n === null || !team || !fav || !teams.includes(team)) return "";
+  if (n === 0) return `<span class="pick-line">PK</span>`;
+  const isFav = team === fav;
+  return `<span class="pick-line">${isFav ? "-" : "+"}${n}</span><span class="tag neutral">${isFav ? "FAV" : "DOG"}</span>`;
+}
+
+// "5 of 7 models" backing the consensus pick. votes: team names (null where a model cast no vote).
+function agreementHtml(votes, consensusTeam) {
+  const cast = votes.filter(Boolean);
+  if (!consensusTeam || cast.length < 2) return "";
+  const n = cast.filter(t => t === consensusTeam).length;
+  return `<div class="agree-count">${n} of ${cast.length} models</div>`;
+}
+
+// Today's first run vs this one. Only shown when the line has actually moved.
+function lineMoveHtml(g) {
+  if (!allSnapshots.length || allSnapshots[0] === currentSnap) return "";
+  const first = (allSnapshots[0].games || []).find(x => x.game === g.game);
+  if (!first || !first.spread || !g.spread || first.spread === g.spread) return "";
+  return ` <span class="line-move">(from ${first.spread})</span>`;
+}
+
 // grade (History only): { cover, final, status } from that day's graded results.
 // scope keeps the detail-dropdown ids unique between the Games and History views.
 function renderGame(g, idx, grade = null, scope = "games") {
@@ -605,6 +647,10 @@ function renderGame(g, idx, grade = null, scope = "games") {
   }).join("");
 
   const consensus = picks.CONSENSUS ? picks.CONSENSUS.replace("TAKE: ", "") : "N/A";
+  const takeTeam = p => (p && p.startsWith("TAKE:")) ? p.replace("TAKE:", "").trim() : null;
+  const votes = modelKeys.filter(k => k !== "CONSENSUS" && !isSharpKey(k)).map(k => takeTeam(picks[k]));
+  const agreement = agreementHtml(votes, takeTeam(picks.CONSENSUS));
+  const consensusLine = pickLineHtml(g.spread, g.favorite, takeTeam(picks.CONSENSUS), [g.team_home, g.team_away]);
   const confidence = g.confidence || "N/A";
   const searchKey = (g.game || "").toLowerCase();
   const detailOptions = modelKeys.filter(k => !isSharpKey(k) || k === SHARP_KEY)
@@ -620,16 +666,16 @@ function renderGame(g, idx, grade = null, scope = "games") {
         <div class="game-title-row">
           <div>
             <div class="game-title">${g.game || ""}</div>
-            <div class="game-meta">${startTimeLabel(g)}Line: ${g.spread || "N/A"} &middot; Favorite: ${favoriteName(g)}${finalMeta}</div>
+            <div class="game-meta">${startTimeLabel(g)}Line: ${g.spread || "N/A"}${scope === "games" ? lineMoveHtml(g) : ""} &middot; Favorite: ${favoriteName(g)}${finalMeta}</div>
           </div>
           <span class="chevron">&#9654;</span>
         </div>
         <div class="consensus-row">
           <div>
             <div class="consensus-label">Consensus</div>
-            <div class="consensus-pick">${consensus}${consensusTag}</div>
+            <div class="consensus-pick">${consensus}${consensusLine}${consensusTag}</div>
           </div>
-          <div class="confidence-badge">${confidence}</div>
+          <div class="conf-col"><div class="confidence-badge">${confidence}</div>${agreement}</div>
         </div>
         ${renderSharpRow(g, grade && grade.cover)}
       </div>
@@ -966,6 +1012,33 @@ function selectPerformance() {
   loadPerformance();
 }
 
+// Consensus-only extras from the graded history: recent form, and record by confidence bucket.
+function perfExtrasHtml(sportKey) {
+  const games = histGames[sportKey];
+  if (!games || !games.length) return "";
+  const rec = list => {
+    const w = list.filter(x => x.result === "WIN").length, l = list.length - w;
+    return { w, l, text: `${w}-${l}`, pct: list.length ? Math.round((w / list.length) * 100) + "%" : "N/A" };
+  };
+  const cutoff = new Date(); cutoff.setHours(0, 0, 0, 0); cutoff.setDate(cutoff.getDate() - 6);
+  const week = rec(games.filter(x => x.day >= isoDay(cutoff)));
+  let streak = 0;
+  const last = games[games.length - 1].result;
+  for (let i = games.length - 1; i >= 0 && games[i].result === last; i--) streak++;
+  const form = `<div class="perf-form">Last 7 days: <b>${week.text}</b>${week.w + week.l ? ` (${week.pct})` : ""}`
+    + ` &middot; Streak: <b>${last === "WIN" ? "W" : "L"}${streak}</b></div>`;
+  const buckets = [["70%+", x => x.conf >= 70], ["60-69%", x => x.conf >= 60 && x.conf < 70], ["Under 60%", x => x.conf < 60]];
+  const rows = buckets.map(([label, f]) => {
+    const list = games.filter(x => !isNaN(x.conf) && f(x));
+    const r = rec(list);
+    return `<tr><td>${label}</td><td>${list.length ? r.text : "N/A"}</td><td class="perf-pct">${r.pct}</td></tr>`;
+  }).join("");
+  return `
+    <div class="perf-sub">Consensus form</div>${form}
+    <div class="perf-sub">Consensus by confidence</div>
+    <table class="perf"><tr><th>Confidence</th><th>Record</th><th>Win %</th></tr>${rows}</table>`;
+}
+
 function renderPerfTable(sport, data) {
   if (!data || !data.models) {
     return `<div class="empty-state">No graded ${sport.label} games yet this season.</div>`;
@@ -988,12 +1061,18 @@ function renderPerfTable(sport, data) {
     </tr>`;
   }).join("");
   const updated = data.updated ? fmtTime(data.updated) : "N/A";
+  const cons = data.models.CONSENSUS || {};
+  const graded = (cons.W || 0) + (cons.L || 0);
+  const note = graded < 30
+    ? `<div class="perf-note">Early sample: ${graded} graded game${graded === 1 ? "" : "s"}. Records this small are mostly noise.</div>` : "";
   return `
     <div class="perf-updated">Last graded: ${updated}</div>
+    ${note}
     <table class="perf">
       <tr><th>Model</th><th>Record</th><th>Win %</th></tr>
       ${rows}
     </table>
+    ${perfExtrasHtml(sport.key)}
   `;
 }
 
@@ -1031,6 +1110,7 @@ function perfCardHtml() {
 const NET_RANGES = [{ key: "1w", label: "1W", days: 7 }, { key: "1m", label: "1M", days: 30 },
                     { key: "1y", label: "1Y", days: 365 }, { key: "all", label: "All", days: null }];
 let netRange = "1m";
+let histGames = {};   // sportKey -> [{ day, conf, result }] graded consensus picks since the reset
 let netData = null;   // { sportKey: { "YYYY-MM-DD": { w, l } } }
 let netFocus = null;  // sport key emphasized from a tile/legend hover
 
@@ -1046,6 +1126,7 @@ function loadNetData() {
     fetch(sport.histFile + "?_=" + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null)
       .then(h => {
         const byDay = {};
+        const flat = [];
         // Count from the sport's last stats reset, so the chart matches the Model Records table.
         const perf = (perfResults.find(x => x.sport.key === sport.key) || {}).data;
         const since = (perf && perf.since) || "";
@@ -1055,9 +1136,11 @@ function loadNetData() {
           for (const g of games || []) {
             const r = ((g.picks || {}).CONSENSUS || {}).result;
             if (r === "WIN") w++; else if (r === "LOSS") l++;
+            if (r === "WIN" || r === "LOSS") flat.push({ day, conf: parseInt(g.confidence, 10), result: r });
           }
           if (w || l) byDay[day] = { w, l };
         }
+        histGames[sport.key] = flat.sort((a, b) => a.day < b.day ? -1 : a.day > b.day ? 1 : 0);
         return [sport.key, byDay];
       })
   )).then(entries => { netData = Object.fromEntries(entries); });
@@ -1288,7 +1371,7 @@ function loadPerformance() {
     if (!perfSport) perfSport = currentSport;
     container.innerHTML = netCardHtml() + perfCardHtml();
     selectPerfSport(perfSport);
-    loadNetData().then(() => renderNetChart(true));
+    loadNetData().then(() => { renderNetChart(true); selectPerfSport(perfSport); });
   });
 }
 
@@ -1372,6 +1455,10 @@ function renderHistoryGame(g) {
     `<tr><td>${k}</td><td>${p.pick || "N/A"}${resultTag(p.result)}</td></tr>`
   ).join("");
   const final = g.final ? ` &middot; Final: ${g.final}` : "";
+  const votes = Object.entries(picks).filter(([k]) => k !== "CONSENSUS" && !isSharpKey(k))
+    .map(([, p]) => [g.team_home, g.team_away].includes(p.pick) ? p.pick : null);
+  const agreement = agreementHtml(votes, c.pick);
+  const consensusLine = pickLineHtml(g.line, g.favorite, c.pick, [g.team_home, g.team_away]);
   const statusTag = g.status ? `<span class="tag neutral">${g.status.split(" (")[0]}</span>` : resultTag(c.result);
   const sharpGame = { ...g, detail: { "M6: Sharp Money": g.sharp || {} } };
   return `
@@ -1387,9 +1474,9 @@ function renderHistoryGame(g) {
         <div class="consensus-row">
           <div>
             <div class="consensus-label">Consensus</div>
-            <div class="consensus-pick">${c.pick || "N/A"}${statusTag}</div>
+            <div class="consensus-pick">${c.pick || "N/A"}${consensusLine}${statusTag}</div>
           </div>
-          <div class="confidence-badge">${g.confidence || "N/A"}</div>
+          <div class="conf-col"><div class="confidence-badge">${g.confidence || "N/A"}</div>${agreement}</div>
         </div>
         ${renderSharpRow(sharpGame, g.cover)}
       </div>
