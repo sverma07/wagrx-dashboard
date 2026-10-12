@@ -232,7 +232,8 @@
   .sharp-row .tag { margin-left: 0; }
   .sharp-row .dim { color: var(--text-dim); }
   .sharp-block { margin-top: 8px; padding: 0 12px; font-size: 0.85rem; }
-  .sharp-head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .sharp-head { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; margin-bottom: 4px; }
+  .sharp-head .tag { margin-left: 0; }
   .sharp-note { font-size: 0.72rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-dim); }
   .sharp-note.agree { color: var(--text); border-color: #3a3f4b; }
   .sharp-line { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; padding: 2px 0; }
@@ -515,10 +516,19 @@ function renderSharpRow(g, cover = null) {
   if (!lines.length) {
     return `<div class="sharp-row"><span class="consensus-label">Sharp money</span><span class="dim">No splits posted yet</span></div>`;
   }
+  // Two separate facts: whether the sharp sources line up with each other, and how
+  // that side compares with our consensus pick.
   const ag = sourcesAgreement(g);
-  const note = !ag ? "" : ag.agree
-    ? `<span class="sharp-note agree">${ag.n === 3 ? "All 3" : "Both"} sources agree</span>`
-    : `<span class="sharp-note split">Sources split</span>`;
+  const c = String((g.picks || {}).CONSENSUS || "");
+  const consensusTeam = c.startsWith("TAKE:") ? c.replace("TAKE:", "").trim() : null;
+  let note = "";
+  if (ag && ag.agree) {
+    note = `<span class="sharp-note">${ag.n === 3 ? "All 3" : "Both"} sharps on ${ag.team}</span>`;
+    if (consensusTeam) note += ag.team === consensusTeam
+      ? '<span class="tag agree">WITH CONSENSUS</span>' : '<span class="tag disagree">AGAINST CONSENSUS</span>';
+  } else if (ag) {
+    note = '<span class="sharp-note">Sharps split</span>';
+  }
   return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Sharp money</span>${note}</div>${lines.join("")}</div>`;
 }
 
