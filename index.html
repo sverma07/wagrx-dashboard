@@ -123,6 +123,31 @@
     .tab-btn { padding: 8px 4px; font-size: 0.78rem; }
   }
 
+
+  /* Filter & sort row: one row above the list it scopes (Games and History). */
+  .filter-bar { display: flex; align-items: center; gap: 8px 12px; margin: 0 0 12px; }
+  .filter-row { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; min-width: 0; }
+  .filter-select {
+    appearance: none; -webkit-appearance: none; cursor: pointer; field-sizing: content;
+    padding: 6px 26px 6px 11px; border: 1px solid var(--border); border-radius: 999px;
+    background: var(--card-bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%239199a8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 10px center;
+    color: var(--text-dim); font-size: 0.78rem; font-weight: 600; box-shadow: var(--shadow);
+    transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+  }
+  .filter-select:hover { color: var(--text); }
+  .filter-select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .filter-select.on { border-color: var(--accent); color: var(--accent); background-color: var(--accent-soft); }
+  .filter-select option { background: var(--card-bg); color: var(--text); }
+  .filter-meta { margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: var(--text-dim); white-space: nowrap; }
+  .filter-clear { border: none; background: none; color: var(--accent); font-size: 0.78rem; font-weight: 600; cursor: pointer; padding: 0; }
+  .filter-clear:hover { text-decoration: underline; }
+  @media (max-width: 600px) {
+    .filter-bar { flex-direction: column; align-items: stretch; min-width: 0; max-width: 100%; }
+    .filter-row { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; min-width: 0; max-width: 100%; }
+    .filter-row::-webkit-scrollbar { display: none; }
+    .filter-select { flex: 0 0 auto; }
+    .filter-meta { margin-left: 0; }
+  }
   .day-won { color: var(--win); font-weight: 700; }
   .day-lost { color: var(--loss); font-weight: 700; }
   .status-bar {
@@ -364,6 +389,7 @@
       </svg>
     </button>
   </div>
+  <div id="games-filter"></div>
   <main id="games"></main>
   <main id="performance" style="display:none;"></main>
   <main id="history" style="display:none;"></main>
@@ -526,7 +552,7 @@ function renderGame(g, idx, grade = null, scope = "games") {
         <div class="game-title-row">
           <div>
             <div class="game-title">${g.game || ""}</div>
-            <div class="game-meta">Line: ${g.spread || "N/A"} &middot; Favorite: ${favoriteName(g)}${finalMeta}</div>
+            <div class="game-meta">${startTimeLabel(g)}Line: ${g.spread || "N/A"} &middot; Favorite: ${favoriteName(g)}${finalMeta}</div>
           </div>
           <span class="chevron">&#9654;</span>
         </div>
@@ -565,7 +591,9 @@ function filterGames() {
     card.classList.toggle("hidden-by-search", !match);
     if (match) visible++;
   });
-  document.getElementById("game-count").textContent = visible + (visible === 1 ? " game" : " games");
+  const total = currentGames.length;
+  document.getElementById("game-count").textContent = visible < total
+    ? `${visible} of ${total} games` : total + (total === 1 ? " game" : " games");
 }
 
 function csvEscape(val) {
@@ -610,7 +638,105 @@ function selectSnapshot(indexStr) {
   if (snap) renderSnapshot(snap);
 }
 
+
+// ---- Filters & sort (shared by the Games and History views) ----
+const FILTER_DEFS = [
+  { key: "sort", label: "Sort", def: "start",
+    opts: [["start", "Start time"], ["consensus", "Consensus %"], ["sharp", "Sharp gap"]] },
+  { key: "cons", label: "Consensus", def: "all",
+    opts: [["all", "All"], ["strong", "70%+"], ["medium", "60-69%"], ["weak", "Under 60%"]] },
+  { key: "sharp", label: "Sharp", def: "all",
+    opts: [["all", "All"], ["extreme", "Extreme"], ["strong", "Strong"], ["lean", "Lean"], ["none", "No data"]] },
+  { key: "align", label: "Sharps vs model", def: "all",
+    opts: [["all", "All"], ["agree", "Agree"], ["disagree", "Disagree"]] },
+  { key: "result", label: "Result", def: "all", historyOnly: true,
+    opts: [["all", "All"], ["win", "Wins"], ["loss", "Losses"]] },
+];
+let filters = Object.fromEntries(FILTER_DEFS.map(d => [d.key, d.def]));
+try { Object.assign(filters, JSON.parse(localStorage.getItem("wagrx-filters") || "{}")); } catch (e) {}
+
+// Everything the filters/sorts need about one game, from a dashboard game object.
+// result: the consensus WIN/LOSS once graded (History), else null.
+function gameFacts(g, result = null) {
+  const c = String((g.picks || {}).CONSENSUS || "");
+  const consensusTeam = c.startsWith("TAKE:") ? c.replace("TAKE:", "").trim() : null;
+  const conf = parseInt(g.confidence, 10);
+  const s = sharpStrength(g);
+  return {
+    conf: isNaN(conf) ? null : conf,
+    sharp: s,
+    align: s && consensusTeam ? (s.team === consensusTeam ? "agree" : "disagree") : null,
+    start: g.start ? Date.parse(g.start) : null,
+    result,
+  };
+}
+
+function passesFilters(fx, view) {
+  if (filters.cons === "strong" && !(fx.conf >= 70)) return false;
+  if (filters.cons === "medium" && !(fx.conf >= 60 && fx.conf < 70)) return false;
+  if (filters.cons === "weak" && !(fx.conf !== null && fx.conf < 60)) return false;
+  if (filters.sharp === "none" ? fx.sharp : (filters.sharp !== "all" && (!fx.sharp || fx.sharp.label.toLowerCase() !== filters.sharp))) return false;
+  if (filters.align !== "all" && fx.align !== filters.align) return false;
+  if (view === "history" && filters.result !== "all" && fx.result !== filters.result.toUpperCase()) return false;
+  return true;
+}
+
+// items: [{ idx, fx, html }] in their original (ESPN, i.e. kickoff) order.
+function applyFilters(items, view) {
+  const kept = items.filter(it => passesFilters(it.fx, view));
+  const key = it => filters.sort === "consensus" ? it.fx.conf
+    : filters.sort === "sharp" ? (it.fx.sharp ? it.fx.sharp.gap : null)
+    : it.fx.start;
+  return kept.map((it, order) => ({ it, order, k: key(it) })).sort((a, b) => {
+    if (a.k === null && b.k === null) return a.order - b.order;
+    if (a.k === null) return 1;
+    if (b.k === null) return -1;
+    const d = filters.sort === "start" ? a.k - b.k : b.k - a.k;  // start ascending, strengths descending
+    return d || a.order - b.order;
+  }).map(x => x.it);
+}
+
+function filtersActive(view) {
+  return FILTER_DEFS.some(d => d.key !== "sort" && (!d.historyOnly || view === "history") && filters[d.key] !== d.def);
+}
+
+function renderFilterBar(view, shown, total) {
+  const selects = FILTER_DEFS.filter(d => !d.historyOnly || view === "history").map(d =>
+    `<select class="filter-select${filters[d.key] !== d.def ? " on" : ""}" aria-label="${d.label}" onchange="setFilter('${d.key}', this.value)">${
+      d.opts.map(([v, t]) => `<option value="${v}"${filters[d.key] === v ? " selected" : ""}>${d.label}: ${t}</option>`).join("")}</select>`
+  ).join("");
+  const meta = filtersActive(view)
+    ? `<span>Showing ${shown} of ${total}</span><button class="filter-clear" onclick="clearFilters()">Clear filters</button>` : "";
+  return `<div class="filter-bar"><div class="filter-row">${selects}</div><div class="filter-meta">${meta}</div></div>`;
+}
+
+function rerenderFiltered() {
+  if (currentView === "history") renderHistory();
+  else if (currentSnap) renderSnapshot(currentSnap);
+}
+
+function setFilter(key, value) {
+  filters[key] = value;
+  try { localStorage.setItem("wagrx-filters", JSON.stringify(filters)); } catch (e) {}
+  rerenderFiltered();
+}
+
+function clearFilters() {
+  for (const d of FILTER_DEFS) if (d.key !== "sort") filters[d.key] = d.def;
+  try { localStorage.setItem("wagrx-filters", JSON.stringify(filters)); } catch (e) {}
+  rerenderFiltered();
+}
+
+function startTimeLabel(g) {
+  if (!g.start) return "";
+  const d = new Date(g.start);
+  return isNaN(d) ? "" : d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }) + " &middot; ";
+}
+
+let currentSnap = null;
+
 function renderSnapshot(snap) {
+  currentSnap = snap;
   currentSnapshotTime = snap.time || "";
   document.getElementById("updated-at").textContent = "Showing: " + fmtTime(snap.time);
   currentGames = snap.games || [];
@@ -619,9 +745,14 @@ function renderSnapshot(snap) {
   const container = document.getElementById("games");
   if (currentGames.length === 0) {
     container.innerHTML = '<div class="empty-state">No games in this snapshot.</div>';
+    document.getElementById("games-filter").innerHTML = "";
     return;
   }
-  container.innerHTML = currentGames.map((g, i) => renderGame(g, i)).join("");
+  const items = applyFilters(currentGames.map((g, i) => ({ idx: i, fx: gameFacts(g), g })), "games");
+  document.getElementById("games-filter").innerHTML = renderFilterBar("games", items.length, currentGames.length);
+  container.innerHTML = items.length
+    ? items.map(it => renderGame(it.g, it.idx)).join("")
+    : '<div class="empty-state">No games match these filters.</div>';
   filterGames();
 }
 
@@ -644,6 +775,7 @@ function setViewVisibility() {
   const isGames = currentView === "games";
   document.getElementById("status-bar").style.display = isGames ? "" : "none";
   document.getElementById("controls-row").style.display = isGames ? "" : "none";
+  document.getElementById("games-filter").style.display = isGames ? "" : "none";
   document.getElementById("games").style.display = isGames ? "" : "none";
   document.getElementById("performance").style.display = currentView === "performance" ? "" : "none";
   document.getElementById("history").style.display = currentView === "history" ? "" : "none";
@@ -1213,48 +1345,61 @@ function renderHistory() {
   const gradedGames = historyData.days[historyDate] || [];
   const run = historyRun === "graded" ? null : historyRuns[historyRun];
 
-  // Graded view: each game exactly as it looked in the run that was graded (its last run
-  // before kickoff). Games graded from the morning file (no saved run) use the simple card.
+  // Build one item per game for the chosen view, then filter/sort them like the Games view.
+  let items, results, note;
   if (historyRun === "graded" && historyRuns.length) {
+    // Each game exactly as it looked in the run that was graded (its last run before
+    // kickoff). Games graded from the morning file (no saved run) use the simple card.
     historyGames = [];
-    const cards = gradedGames.map(h => {
+    items = gradedGames.map((h, order) => {
+      const res = ((h.picks || {}).CONSENSUS || {}).result || null;
       const snap = h.graded_run && historyRuns.find(r => r.time === h.graded_run);
       const g = snap && (snap.games || []).find(x => x.team_home === h.team_home && x.team_away === h.team_away);
-      if (!g) return renderHistoryGame(h);
+      if (!g) return { fx: historyEntryFacts(h, res), html: () => renderHistoryGame(h) };
       historyGames.push(g);
-      return renderGame(g, historyGames.length - 1,
-        { cover: h.cover, final: h.final, status: h.status, run: h.graded_run }, "history");
+      const idx = historyGames.length - 1;
+      return { fx: gameFacts(g, res), html: () => renderGame(g, idx,
+        { cover: h.cover, final: h.final, status: h.status, run: h.graded_run }, "history") };
     });
-    const results = gradedGames.map(g => (g.picks && g.picks.CONSENSUS || {}).result);
-    container.innerHTML = controls + dayRecordBar(results, gradedGames.length,
-      "Each game as of its last run before kickoff, which is what was graded.") + cards.join("");
-    return;
-  }
-
-  // Days from before runs were saved only have the graded morning picks.
-  if (!run) {
+    results = gradedGames.map(g => (g.picks && g.picks.CONSENSUS || {}).result);
+    note = "Each game as of its last run before kickoff, which is what was graded.";
+  } else if (!run) {
+    // Days from before runs were saved only have the graded morning picks.
     historyGames = [];
-    const results = gradedGames.map(g => (g.picks && g.picks.CONSENSUS || {}).result);
-    container.innerHTML = controls + dayRecordBar(results, gradedGames.length,
-      "Run-by-run snapshots weren't saved for this day, so this shows the graded morning picks.")
-      + gradedGames.map(renderHistoryGame).join("");
-    return;
+    items = gradedGames.map(h => {
+      const res = ((h.picks || {}).CONSENSUS || {}).result || null;
+      return { fx: historyEntryFacts(h, res), html: () => renderHistoryGame(h) };
+    });
+    results = gradedGames.map(g => (g.picks && g.picks.CONSENSUS || {}).result);
+    note = "Run-by-run snapshots weren't saved for this day, so this shows the graded morning picks.";
+  } else {
+    // A saved run: the exact cards the Games view showed at that time, plus the grade.
+    historyGames = run.games || [];
+    const grades = historyGames.map(g => {
+      const h = gradedGames.find(x => x.team_home === g.team_home && x.team_away === g.team_away);
+      return h ? { cover: h.cover, final: h.final, status: h.status } : { status: "Not graded" };
+    });
+    results = historyGames.map((g, i) => {
+      const c = (g.picks || {}).CONSENSUS || "";
+      if (!grades[i].cover || !c.startsWith("TAKE:")) return null;
+      return c.replace("TAKE:", "").trim() === grades[i].cover ? "WIN" : "LOSS";
+    });
+    items = historyGames.map((g, i) => ({ fx: gameFacts(g, results[i]), html: () => renderGame(g, i, grades[i], "history") }));
+    note = `Showing the ${fmtTime(run.time)} run, graded against final scores.`;
   }
+  const shown = applyFilters(items, "history");
+  container.innerHTML = controls + dayRecordBar(results, items.length, note)
+    + renderFilterBar("history", shown.length, items.length)
+    + (shown.length ? shown.map(it => it.html()).join("") : '<div class="empty-state">No games match these filters.</div>');
+}
 
-  // A saved run: the exact cards the Games view showed at that time, plus the grade.
-  historyGames = run.games || [];
-  const grades = historyGames.map(g => {
-    const h = gradedGames.find(x => x.team_home === g.team_home && x.team_away === g.team_away);
-    return h ? { cover: h.cover, final: h.final, status: h.status } : { status: "Not graded" };
-  });
-  const results = historyGames.map((g, i) => {
-    const c = (g.picks || {}).CONSENSUS || "";
-    if (!grades[i].cover || !c.startsWith("TAKE:")) return null;
-    return c.replace("TAKE:", "").trim() === grades[i].cover ? "WIN" : "LOSS";
-  });
-  container.innerHTML = controls + dayRecordBar(results, historyGames.length,
-    `Showing the ${fmtTime(run.time)} run, graded against final scores.`)
-    + historyGames.map((g, i) => renderGame(g, i, grades[i], "history")).join("");
+// Facts for a simple History entry (picks stored as { pick, result }, sharp as raw splits).
+function historyEntryFacts(h, result) {
+  const c = ((h.picks || {}).CONSENSUS || {}).pick;
+  const g = { team_home: h.team_home, team_away: h.team_away, confidence: h.confidence,
+              picks: { CONSENSUS: c && c !== "N/A" && c !== "SPLIT" && c !== "PUSH" ? "TAKE: " + c : "" },
+              detail: { "M6: Sharp Money": h.sharp || {} } };
+  return gameFacts(g, result);
 }
 
 function dayRecordBar(results, count, note) {
