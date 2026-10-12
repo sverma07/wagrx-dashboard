@@ -231,6 +231,14 @@
   .sharp-row .consensus-label { margin-right: 2px; }
   .sharp-row .tag { margin-left: 0; }
   .sharp-row .dim { color: var(--text-dim); }
+  .sharp-block { margin-top: 8px; padding: 0 12px; font-size: 0.85rem; }
+  .sharp-head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .sharp-note { font-size: 0.72rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-dim); }
+  .sharp-note.agree { color: var(--text); border-color: #3a3f4b; }
+  .sharp-line { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; padding: 2px 0; }
+  .sharp-line .sharp-src { width: 82px; flex: 0 0 auto; color: var(--text-dim); font-size: 0.78rem; }
+  .sharp-line .tag { margin-left: 0; }
+  .sharp-line .dim { color: var(--text-dim); }
   .confidence-badge {
     font-weight: 700;
     font-size: 0.95rem;
@@ -295,7 +303,9 @@
   table.perf th { color: var(--text-dim); font-weight: 600; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.04em; }
   table.perf tr.consensus-row-perf td { font-weight: 700; }
   table.perf tr.consensus-row-perf { background: var(--accent-soft); }
-  table.perf tr.sharp-row-perf td { color: var(--text-dim); border-top: 2px solid var(--border); }
+  table.perf tr.sharp-row-perf td { color: var(--text-dim); }
+  table.perf tr.sharp-row-perf.first td { border-top: 2px solid var(--border); }
+  table.perf .perf-info { font-size: 0.75rem; }
   .perf-pct { font-weight: 700; }
 
   /* Net-wins chart. Series colors: reference palette dark steps, slots 1-4, validated
@@ -430,15 +440,52 @@ function fmtNum(v) {
 // Tier the M6 pick by the gap between money% and bets% on the picked side:
 // under 10 pts LEAN, 10-20 STRONG, over 20 EXTREME. Null when there's no data or no gap.
 function sharpStrength(g) {
-  const d = (g.detail || {})["M6: Sharp Money"];
-  if (!d || d.home_b === undefined || d.home_b === null) return null;
-  const signed = parseFloat(d.home_m) - parseFloat(d.home_b);
+  const st = splitStrength((g.detail || {})["M6: Sharp Money"], g);
+  return st && !st.thin ? st : null;
+}
+
+// Sharp-money sources. SBD lives in detail["M6: Sharp Money"]; Circa and DraftKings
+// (from VSiN Pro) in g.sharp_books. All are info only, graded but never consensus votes.
+const SHARP_SOURCES = [
+  { key: "circa", label: "Circa", pick: "Sharp: Circa" },
+  { key: "dk", label: "DraftKings", pick: "Sharp: DraftKings" },
+  { key: "sbd", label: "SBD", pick: "M6: Sharp Money" },
+];
+function isSharpKey(k) { return k === "M6: Sharp Money" || String(k).startsWith("Sharp:"); }
+
+function sourceSplit(g, key) {
+  if (key === "sbd") return (g.detail || {})["M6: Sharp Money"] || null;
+  return (g.sharp_books || {})[key] || null;
+}
+
+// Tier one source's money-vs-bets gap. null = no data or no gap; { thin: true } = too little action.
+function splitStrength(sp, g) {
+  if (!sp || sp.home_b === undefined || sp.home_b === null) return null;
+  if (sp.thin) return { thin: true };
+  const signed = parseFloat(sp.home_m) - parseFloat(sp.home_b);
   if (isNaN(signed) || signed === 0) return null;
   const gap = Math.round(Math.abs(signed) * 10) / 10;  // tier on the same 1-decimal value that is displayed
   const team = signed > 0 ? (g.team_home || "Home") : (g.team_away || "Away");
   if (gap > 20) return { label: "EXTREME", cls: "sharp-extreme", gap, team };
   if (gap >= 10) return { label: "STRONG", cls: "sharp-strong", gap, team };
   return { label: "LEAN", cls: "sharp-lean", gap, team };
+}
+
+// The sharp read used by filters/sorts: one source, or "best" = Circa, then DraftKings, then SBD.
+function sharpFor(g, source = "best") {
+  const order = source === "best" ? ["circa", "dk", "sbd"] : [source];
+  for (const k of order) {
+    const st = splitStrength(sourceSplit(g, k), g);
+    if (st && !st.thin) return st;
+  }
+  return null;
+}
+
+// Do the sources with a real lean all point the same way?
+function sourcesAgreement(g) {
+  const teams = SHARP_SOURCES.map(src => splitStrength(sourceSplit(g, src.key), g)).filter(x => x && !x.thin).map(x => x.team);
+  if (teams.length < 2) return null;
+  return teams.every(t => t === teams[0]) ? { agree: true, team: teams[0], n: teams.length } : { agree: false, n: teams.length };
 }
 
 // The scripts store the favorite as "<Team> -fav" (an Excel summary label); drop the suffix here.
@@ -453,18 +500,26 @@ const SHARP_KEY = "M6: Sharp Money";
 // cover (History only): the team that covered, to grade the sharp side as info.
 function renderSharpRow(g, cover = null) {
   if (!g.picks || !(SHARP_KEY in g.picks)) return "";
-  const d = (g.detail || {})["M6: Sharp Money"];
-  const s = sharpStrength(g);
-  let body;
-  if (s) {
-    body = `<span>${s.team}</span><span class="tag ${s.cls}">${s.label}</span><span class="dim">${s.gap.toFixed(1)}% gap</span>`
-      + (cover ? resultTag(s.team === cover ? "WIN" : "LOSS") : "");
-  } else if (d && d.home_b !== undefined && d.home_b !== null) {
-    body = `<span class="dim">Even (no gap)</span>`;
-  } else {
-    body = `<span class="dim">No splits posted yet</span>`;
+  const lines = [];
+  for (const src of SHARP_SOURCES) {
+    const sp = sourceSplit(g, src.key);
+    if (!sp || sp.home_b === undefined || sp.home_b === null) continue;
+    const st = splitStrength(sp, g);
+    let body;
+    if (st && st.thin) body = `<span class="dim">Too little action yet</span>`;
+    else if (st) body = `<span>${st.team}</span><span class="tag ${st.cls}">${st.label}</span><span class="dim">${st.gap.toFixed(1)}% gap</span>`
+      + (cover ? resultTag(st.team === cover ? "WIN" : "LOSS") : "");
+    else body = `<span class="dim">Even (no gap)</span>`;
+    lines.push(`<div class="sharp-line"><span class="sharp-src">${src.label}</span>${body}</div>`);
   }
-  return `<div class="sharp-row"><span class="consensus-label">Sharp money</span>${body}</div>`;
+  if (!lines.length) {
+    return `<div class="sharp-row"><span class="consensus-label">Sharp money</span><span class="dim">No splits posted yet</span></div>`;
+  }
+  const ag = sourcesAgreement(g);
+  const note = !ag ? "" : ag.agree
+    ? `<span class="sharp-note agree">${ag.n === 3 ? "All 3" : "Both"} sources agree</span>`
+    : `<span class="sharp-note split">Sources split</span>`;
+  return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Sharp money</span>${note}</div>${lines.join("")}</div>`;
 }
 
 function formatDetail(g, modelKey) {
@@ -487,12 +542,14 @@ function formatDetail(g, modelKey) {
   }
 
   if (modelKey.includes("Sharp Money")) {
-    if (d.home_b === undefined || d.home_b === null) return "No sharp money data available.";
-    const s = sharpStrength(g);
-    return `${teamHome}: <span class="num">${fmtNum(d.home_b)}%</span> bets / <span class="num">${fmtNum(d.home_m)}%</span> money`
-      + `&nbsp;&nbsp;|&nbsp;&nbsp;`
-      + `${teamAway}: <span class="num">${fmtNum(d.away_b)}%</span> bets / <span class="num">${fmtNum(d.away_m)}%</span> money`
-      + (s ? `<br>Gap: <span class="num">${s.gap.toFixed(1)}%</span> more money than bets on ${s.team}<span class="tag ${s.cls}">${s.label}</span>` : "");
+    const parts = SHARP_SOURCES.map(src => {
+      const sp = sourceSplit(g, src.key);
+      if (!sp || sp.home_b === undefined || sp.home_b === null) return null;
+      if (sp.thin) return `<b>${src.label}:</b> too little action yet`;
+      return `<b>${src.label}:</b> ${teamHome} <span class="num">${fmtNum(sp.home_b)}%</span> bets / <span class="num">${fmtNum(sp.home_m)}%</span> money`
+        + ` &nbsp;|&nbsp; ${teamAway} <span class="num">${fmtNum(sp.away_b)}%</span> bets / <span class="num">${fmtNum(sp.away_m)}%</span> money`;
+    }).filter(Boolean);
+    return parts.length ? parts.join("<br>") : "No sharp money data available.";
   }
 
   if (modelKey.includes("QB Injury")) {
@@ -519,7 +576,7 @@ function renderGame(g, idx, grade = null, scope = "games") {
     return resultTag(pick.replace("TAKE:", "").trim() === grade.cover ? "WIN" : "LOSS");
   };
   const modelKeys = Object.keys(picks);
-  const modelRows = modelKeys.filter(k => k !== "CONSENSUS" && k !== SHARP_KEY).map(key => {
+  const modelRows = modelKeys.filter(k => k !== "CONSENSUS" && !isSharpKey(k)).map(key => {
     const pick = picks[key];
     const consensusPick = picks.CONSENSUS || "";
     let tag = gradeTag(pick);  // once graded, WIN/LOSS replaces AGREE/DISAGREE
@@ -540,7 +597,8 @@ function renderGame(g, idx, grade = null, scope = "games") {
   const consensus = picks.CONSENSUS ? picks.CONSENSUS.replace("TAKE: ", "") : "N/A";
   const confidence = g.confidence || "N/A";
   const searchKey = (g.game || "").toLowerCase();
-  const detailOptions = modelKeys.map(k => `<option value="${k}">${k === SHARP_KEY ? "Sharp Money (info)" : k}</option>`).join("");
+  const detailOptions = modelKeys.filter(k => !isSharpKey(k) || k === SHARP_KEY)
+    .map(k => `<option value="${k}">${k === SHARP_KEY ? "Sharp Money (info)" : k}</option>`).join("");
   const finalMeta = (grade && grade.final ? ` &middot; Final: ${grade.final}` : "")
     + (grade && grade.run ? ` &middot; Graded: ${new Date(grade.run).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })} run` : "");
   let consensusTag = gradeTag(picks.CONSENSUS || "");
@@ -645,10 +703,14 @@ const FILTER_DEFS = [
     opts: [["start", "Start time"], ["consensus", "Consensus %"], ["sharp", "Sharp gap"]] },
   { key: "cons", label: "Consensus", def: "all",
     opts: [["all", "All"], ["strong", "70%+"], ["medium", "60-69%"], ["weak", "Under 60%"]] },
+  { key: "src", label: "Source", def: "best",
+    opts: [["best", "Best available"], ["circa", "Circa"], ["dk", "DraftKings"], ["sbd", "SBD"]] },
   { key: "sharp", label: "Sharp", def: "all",
     opts: [["all", "All"], ["extreme", "Extreme"], ["strong", "Strong"], ["lean", "Lean"], ["none", "No data"]] },
   { key: "align", label: "Sharps vs model", def: "all",
     opts: [["all", "All"], ["agree", "Agree"], ["disagree", "Disagree"]] },
+  { key: "agree", label: "Sources", def: "all",
+    opts: [["all", "All"], ["agree", "Agree"], ["split", "Split"]] },
   { key: "result", label: "Result", def: "all", historyOnly: true,
     opts: [["all", "All"], ["win", "Wins"], ["loss", "Losses"]] },
 ];
@@ -661,10 +723,12 @@ function gameFacts(g, result = null) {
   const c = String((g.picks || {}).CONSENSUS || "");
   const consensusTeam = c.startsWith("TAKE:") ? c.replace("TAKE:", "").trim() : null;
   const conf = parseInt(g.confidence, 10);
-  const s = sharpStrength(g);
+  const s = sharpFor(g, filters.src);  // the chosen source drives the Sharp filter, alignment, and sort
+  const ag = sourcesAgreement(g);
   return {
     conf: isNaN(conf) ? null : conf,
     sharp: s,
+    agree: ag ? (ag.agree ? "agree" : "split") : null,
     align: s && consensusTeam ? (s.team === consensusTeam ? "agree" : "disagree") : null,
     start: g.start ? Date.parse(g.start) : null,
     result,
@@ -677,6 +741,7 @@ function passesFilters(fx, view) {
   if (filters.cons === "weak" && !(fx.conf !== null && fx.conf < 60)) return false;
   if (filters.sharp === "none" ? fx.sharp : (filters.sharp !== "all" && (!fx.sharp || fx.sharp.label.toLowerCase() !== filters.sharp))) return false;
   if (filters.align !== "all" && fx.align !== filters.align) return false;
+  if (filters.agree !== "all" && fx.agree !== filters.agree) return false;
   if (view === "history" && filters.result !== "all" && fx.result !== filters.result.toUpperCase()) return false;
   return true;
 }
@@ -697,7 +762,7 @@ function applyFilters(items, view) {
 }
 
 function filtersActive(view) {
-  return FILTER_DEFS.some(d => d.key !== "sort" && (!d.historyOnly || view === "history") && filters[d.key] !== d.def);
+  return FILTER_DEFS.some(d => d.key !== "sort" && d.key !== "src" && (!d.historyOnly || view === "history") && filters[d.key] !== d.def);
 }
 
 function renderFilterBar(view, shown, total) {
@@ -722,7 +787,7 @@ function setFilter(key, value) {
 }
 
 function clearFilters() {
-  for (const d of FILTER_DEFS) if (d.key !== "sort") filters[d.key] = d.def;
+  for (const d of FILTER_DEFS) if (d.key !== "sort" && d.key !== "src") filters[d.key] = d.def;
   try { localStorage.setItem("wagrx-filters", JSON.stringify(filters)); } catch (e) {}
   rerenderFiltered();
 }
@@ -896,15 +961,18 @@ function renderPerfTable(sport, data) {
     return `<div class="empty-state">No graded ${sport.label} games yet this season.</div>`;
   }
   // Sharp money is tracked as info only, so it sits below the models and consensus.
-  const entries = Object.entries(data.models).filter(([k]) => k !== SHARP_KEY);
-  if (data.models[SHARP_KEY]) entries.push([SHARP_KEY, data.models[SHARP_KEY]]);
-  const rows = entries.map(([key, rec]) => {
+  const entries = Object.entries(data.models).filter(([k]) => !isSharpKey(k));
+  for (const src of SHARP_SOURCES) if (data.models[src.pick]) entries.push([src.pick, data.models[src.pick], src.label]);
+  let firstSharp = true;
+  const rows = entries.map(([key, rec, srcLabel]) => {
     const w = rec.W || 0, l = rec.L || 0, total = w + l;
     const pct = total > 0 ? Math.round((w / total) * 100) + "%" : "N/A";
     const isConsensus = key === "CONSENSUS";
-    const isSharp = key === SHARP_KEY;
-    return `<tr class="${isConsensus ? "consensus-row-perf" : isSharp ? "sharp-row-perf" : ""}">
-      <td>${isSharp ? "Sharp Money (info, not in consensus)" : key}</td>
+    const isSharp = isSharpKey(key);
+    const cls = isConsensus ? "consensus-row-perf" : isSharp ? ("sharp-row-perf" + (firstSharp ? " first" : "")) : "";
+    if (isSharp) firstSharp = false;
+    return `<tr class="${cls}">
+      <td>${isSharp ? `Sharp: ${srcLabel} <span class="perf-info">(info, not in consensus)</span>` : key}</td>
       <td>${w}-${l}</td>
       <td class="perf-pct">${pct}</td>
     </tr>`;
@@ -1290,7 +1358,7 @@ function resultTag(result) {
 function renderHistoryGame(g) {
   const picks = g.picks || {};
   const c = picks.CONSENSUS || {};
-  const modelRows = Object.entries(picks).filter(([k]) => k !== "CONSENSUS" && k !== SHARP_KEY).map(([k, p]) =>
+  const modelRows = Object.entries(picks).filter(([k]) => k !== "CONSENSUS" && !isSharpKey(k)).map(([k, p]) =>
     `<tr><td>${k}</td><td>${p.pick || "N/A"}${resultTag(p.result)}</td></tr>`
   ).join("");
   const final = g.final ? ` &middot; Final: ${g.final}` : "";
