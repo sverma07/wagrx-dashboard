@@ -697,7 +697,7 @@ function fmtSpreadNum(n) { return n === 0 ? "PK" : (n > 0 ? "+" : "") + n; }
 // Open -> now on the home line, and the side the market moved toward (null = no real move).
 // noteHtml is an optional tag for the block header (e.g. WITH/AGAINST CONSENSUS).
 // keyNumbers: the spreads that matter in this sport (football 3 and 7; none for basketball).
-function lineMoveBlock({ home, open, cur, toward, noteHtml = "", keyNumbers = [3, 7] }) {
+function lineMoveBlock({ home, open, cur, toward, noteHtml = "", keyNumbers = [3, 7], extraRows = "" }) {
   const lines = [`<div class="sharp-line"><span class="sharp-src">Open &rarr; now</span>`
     + `<span>${home} ${fmtSpreadNum(open)} &rarr; ${fmtSpreadNum(cur)}</span>`
     + (toward ? "" : ` <span class="dim">(no real move)</span>`) + `</div>`];
@@ -709,15 +709,88 @@ function lineMoveBlock({ home, open, cur, toward, noteHtml = "", keyNumbers = [3
       + `<span class="dim">${size} ${size === 1 ? "pt" : "pts"}</span>`
       + keys.map(k => `<span class="tag neutral">KEY ${k}</span>`).join("") + `</div>`);
   }
-  return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Line movement</span>${noteHtml}</div>${lines.join("")}</div>`;
+  return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Line movement</span>${noteHtml}</div>${lines.join("")}${extraRows}</div>`;
+}
+
+// ---- Per-book line moves for today's games, from the day's saved refreshes ----
+// Every refresh stores VSiN's Circa and DraftKings lines (always the home team's line) in sharp_books, so a game's
+// movement at each book since the first refresh of the day can be read off the snapshots. The start is the first
+// refresh the game appears in (about 12:30 AM), not the opening line: earlier moves are not visible here.
+function parseBookLine(text) {
+  const t = String(text === undefined || text === null ? "" : text).trim().toUpperCase();
+  if (!t) return null;
+  if (["PK", "PICK", "EVEN", "EV"].includes(t)) return 0;
+  const n = parseFloat(t);
+  return isNaN(n) ? null : n;
+}
+
+function bookLineHistory(g) {
+  if (currentView !== "games" || !currentSnap || !allSnapshots.length) return null;
+  const upto = allSnapshots.slice(0, allSnapshots.indexOf(currentSnap) + 1);  // what the chosen run could have known
+  const out = {};
+  for (const key of ["circa", "dk"]) {
+    const pts = [];
+    for (const snap of upto) {
+      const x = (snap.games || []).find(y => y.team_home === g.team_home && y.team_away === g.team_away);
+      const line = parseBookLine(x && x.sharp_books && x.sharp_books[key] && x.sharp_books[key].line);
+      if (line !== null) pts.push({ t: snap.time, line });
+    }
+    if (!pts.length) continue;
+    const first = pts[0], last = pts[pts.length - 1];
+    const changed = pts.find(pt => pt.line !== first.line);
+    out[key] = { first, last, changedAt: changed ? changed.t : null };
+  }
+  return Object.keys(out).length ? out : null;
+}
+
+function etClock(iso) {
+  const d = new Date(iso);
+  return isNaN(d) ? "" : d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/New_York" });
+}
+
+const BOOK_LABELS = { circa: "Circa", dk: "DraftKings" };
+
+// Rows for each book's move, plus a note when only one book moved or the two books are far apart.
+function bookRowsHtml(g, books) {
+  if (!books) return { rows: "", note: "" };
+  const home = g.team_home || "Home", away = g.team_away || "Away";
+  const moved = {};
+  let rows = "";
+  for (const key of ["circa", "dk"]) {
+    const b = books[key];
+    if (!b) continue;
+    const delta = b.last.line - b.first.line;
+    moved[key] = Math.abs(delta) >= 0.5;
+    const toward = delta < 0 ? home : away;  // the home line getting lower = money on the home side
+    const size = Math.abs(delta);
+    rows += `<div class="sharp-line"><span class="sharp-src">${BOOK_LABELS[key]}</span>`
+      + `<span>${home} ${fmtSpreadNum(b.first.line)} &rarr; ${fmtSpreadNum(b.last.line)}</span>`
+      + (moved[key]
+        ? `<span class="dim">moved ${size} ${size === 1 ? "pt" : "pts"} toward ${toward} by ${etClock(b.changedAt)}</span>`
+        : `<span class="dim">(no move since ${etClock(b.first.t)})</span>`)
+      + `</div>`;
+  }
+  let note = "";
+  if (books.circa && books.dk) {
+    if (moved.circa && !moved.dk) note = '<span class="tag neutral">CIRCA MOVED, DK DIDN\'T</span>';
+    else if (moved.dk && !moved.circa) note = '<span class="tag neutral">DK MOVED, CIRCA DIDN\'T</span>';
+    const gap = Math.abs(books.circa.last.line - books.dk.last.line);
+    if (gap >= 1) rows += `<div class="sharp-line"><span class="sharp-src"></span><span class="dim">Circa and DraftKings are ${gap} pts apart now</span></div>`;
+  }
+  return { rows, note };
 }
 
 // Spreads that matter per sport (football's 3 and 7; basketball has none). Upcoming cards carry their own list.
 const KEY_NUMBERS_BY_SPORT = { nfl: [3, 7], ncaaf: [3, 7], nba: [], ncaa: [] };
 
 function renderLineMoveRow(g) {
+  const books = bookRowsHtml(g, bookLineHistory(g));
   const d = (g.detail || {})[LINE_MOVE_KEY];
-  if (!d || d.open_home == null || d.current_home == null) return "";
+  if (!d || d.open_home == null || d.current_home == null) {
+    // No ESPN line (e.g. odds already dropped), but the books' own moves may still be known.
+    return books.rows
+      ? `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Line movement</span>${books.note}</div>${books.rows}</div>` : "";
+  }
   const pick = String((g.picks || {})[LINE_MOVE_KEY] || "");
   const toward = pick.startsWith("TAKE:") ? pick.replace("TAKE:", "").trim() : null;
   const c = String((g.picks || {}).CONSENSUS || "");
@@ -726,8 +799,9 @@ function renderLineMoveRow(g) {
     noteHtml = c.replace("TAKE:", "").trim() === toward
       ? '<span class="tag agree">WITH CONSENSUS</span>' : '<span class="tag disagree">AGAINST CONSENSUS</span>';
   }
-  return lineMoveBlock({ home: g.team_home || "Home", open: d.open_home, cur: d.current_home, toward, noteHtml,
-    keyNumbers: g.keyNumbers || KEY_NUMBERS_BY_SPORT[currentView === "history" ? historySport : currentSport] || [3, 7] });
+  return lineMoveBlock({ home: g.team_home || "Home", open: d.open_home, cur: d.current_home, toward, noteHtml: noteHtml + books.note,
+    keyNumbers: g.keyNumbers || KEY_NUMBERS_BY_SPORT[currentView === "history" ? historySport : currentSport] || [3, 7],
+    extraRows: books.rows });
 }
 
 // History has the graded pick only (no open/now numbers).
