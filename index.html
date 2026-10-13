@@ -1039,6 +1039,29 @@ function perfExtrasHtml(sportKey) {
     <table class="perf"><tr><th>Confidence</th><th>Record</th><th>Win %</th></tr>${rows}</table>`;
 }
 
+// When consensus and a sharp source pick opposite sides, exactly one of them wins. Count those games only.
+function headToHeadHtml(sportKey) {
+  const games = histGames[sportKey];
+  if (!games) return "";
+  const rows = SHARP_SOURCES.map(src => {
+    let n = 0, consWins = 0;
+    for (const g of games) {
+      const c = (g.picks || {}).CONSENSUS, sp = (g.picks || {})[src.pick];
+      if (!c || !sp || !c.result || !sp.result || c.pick === sp.pick || c.result === sp.result) continue;
+      n++;
+      if (c.result === "WIN") consWins++;
+    }
+    if (!n) return `<tr><td>${src.label}</td><td>0</td><td>N/A</td><td>N/A</td></tr>`;
+    const pct = w => Math.round((w / n) * 100) + "%";
+    return `<tr><td>${src.label}</td><td>${n}</td><td class="perf-pct">${consWins}-${n - consWins} (${pct(consWins)})</td>`
+      + `<td class="perf-pct">${n - consWins}-${consWins} (${pct(n - consWins)})</td></tr>`;
+  }).join("");
+  return `
+    <div class="perf-sub">Consensus vs sharps</div>
+    <div class="perf-note">Only games where they picked opposite sides. Each record is that side's wins-losses in those games.</div>
+    <table class="perf"><tr><th>Source</th><th>Games</th><th>Consensus</th><th>Sharp</th></tr>${rows}</table>`;
+}
+
 function renderPerfTable(sport, data) {
   if (!data || !data.models) {
     return `<div class="empty-state">No graded ${sport.label} games yet this season.</div>`;
@@ -1073,6 +1096,7 @@ function renderPerfTable(sport, data) {
       ${rows}
     </table>
     ${perfExtrasHtml(sport.key)}
+    ${headToHeadHtml(sport.key)}
   `;
 }
 
@@ -1136,7 +1160,7 @@ function loadNetData() {
           for (const g of games || []) {
             const r = ((g.picks || {}).CONSENSUS || {}).result;
             if (r === "WIN") w++; else if (r === "LOSS") l++;
-            if (r === "WIN" || r === "LOSS") flat.push({ day, conf: parseInt(g.confidence, 10), result: r });
+            if (r === "WIN" || r === "LOSS") flat.push({ day, conf: parseInt(g.confidence, 10), result: r, picks: g.picks });
           }
           if (w || l) byDay[day] = { w, l };
         }
