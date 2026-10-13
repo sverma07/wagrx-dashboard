@@ -1058,7 +1058,7 @@ function headToHeadHtml(sportKey) {
   }).join("");
   return `
     <div class="perf-sub">Consensus vs sharps</div>
-    <div class="perf-note">Counts only games where consensus and the sharp source picked opposite sides. Each column is that side's record in those games, so the higher win % is the side that was right more often.</div>
+    <div class="perf-note">Only games where they picked opposite sides. Each record is that side's wins-losses in those games.</div>
     <table class="perf"><tr><th>Source</th><th>Games</th><th>Consensus</th><th>Sharp</th></tr>${rows}</table>`;
 }
 
