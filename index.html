@@ -565,7 +565,9 @@ function moveMatches(size, selected) {
 
 function lineMoveSize(g) {
   const d = (g.detail || {})[LINE_MOVE_KEY];
-  return d && d.open_home != null && d.current_home != null ? Math.abs(d.current_home - d.open_home) : null;
+  if (!d) return null;
+  if (d.size != null) return d.size;  // M8 reads DraftKings (since the open) and Circa (since the day's first refresh): the larger move
+  return d.open_home != null && d.current_home != null ? Math.abs(d.current_home - d.open_home) : null;
 }
 
 // Consensus strength (70%+ / 60-69% / under 60%) and sharp tier (extreme / strong / lean / none). A game with
@@ -697,16 +699,16 @@ function fmtSpreadNum(n) { return n === 0 ? "PK" : (n > 0 ? "+" : "") + n; }
 // Open -> now on the home line, and the side the market moved toward (null = no real move).
 // noteHtml is an optional tag for the block header (e.g. WITH/AGAINST CONSENSUS).
 // keyNumbers: the spreads that matter in this sport (football 3 and 7; none for basketball).
-function lineMoveBlock({ home, open, cur, toward, noteHtml = "", keyNumbers = [3, 7], extraRows = "" }) {
+function lineMoveBlock({ home, open, cur, toward, noteHtml = "", keyNumbers = [3, 7], extraRows = "", sizeOverride = null, via = "" }) {
   const lines = [`<div class="sharp-line"><span class="sharp-src">Open &rarr; now</span>`
     + `<span>${home} ${fmtSpreadNum(open)} &rarr; ${fmtSpreadNum(cur)}</span>`
     + (toward ? "" : ` <span class="dim">(no real move)</span>`) + `</div>`];
   if (toward) {
-    const size = Math.abs(cur - open);
+    const size = sizeOverride !== null && sizeOverride !== undefined ? sizeOverride : Math.abs(cur - open);
     const lo = Math.min(open, cur), hi = Math.max(open, cur);
     const keys = keyNumbers.filter(k => [k, -k].some(x => lo <= x && x <= hi));
     lines.push(`<div class="sharp-line"><span class="sharp-src">Moved toward</span><span>${toward}</span>`
-      + `<span class="dim">${size} ${size === 1 ? "pt" : "pts"}</span>`
+      + `<span class="dim">${size} ${size === 1 ? "pt" : "pts"}${via ? " " + via : ""}</span>`
       + keys.map(k => `<span class="tag neutral">KEY ${k}</span>`).join("") + `</div>`);
   }
   return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Line movement</span>${noteHtml}</div>${lines.join("")}${extraRows}</div>`;
@@ -783,14 +785,14 @@ function bookRowsHtml(g, books) {
 // Spreads that matter per sport (football's 3 and 7; basketball has none). Upcoming cards carry their own list.
 const KEY_NUMBERS_BY_SPORT = { nfl: [3, 7], ncaaf: [3, 7], nba: [], ncaa: [] };
 
+// Which book(s) the M8 move came from ("(Circa)", "(DraftKings)", "(Circa + DraftKings)"); empty for old rows.
+function moveSourceLabel(d) {
+  return d && Array.isArray(d.sources) && d.sources.length ? "(" + d.sources.map(k => BOOK_LABELS[k] || k).join(" + ") + ")" : "";
+}
+
 function renderLineMoveRow(g) {
   const books = bookRowsHtml(g, bookLineHistory(g));
   const d = (g.detail || {})[LINE_MOVE_KEY];
-  if (!d || d.open_home == null || d.current_home == null) {
-    // No ESPN line (e.g. odds already dropped), but the books' own moves may still be known.
-    return books.rows
-      ? `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Line movement</span>${books.note}</div>${books.rows}</div>` : "";
-  }
   const pick = String((g.picks || {})[LINE_MOVE_KEY] || "");
   const toward = pick.startsWith("TAKE:") ? pick.replace("TAKE:", "").trim() : null;
   const c = String((g.picks || {}).CONSENSUS || "");
@@ -799,9 +801,18 @@ function renderLineMoveRow(g) {
     noteHtml = c.replace("TAKE:", "").trim() === toward
       ? '<span class="tag agree">WITH CONSENSUS</span>' : '<span class="tag disagree">AGAINST CONSENSUS</span>';
   }
+  const via = moveSourceLabel(d);
+  if (!d || d.open_home == null || d.current_home == null) {
+    // No ESPN line (e.g. odds already dropped), but the books' own moves may still be known.
+    if (!books.rows) return "";
+    const size = d && d.size != null ? d.size : null;
+    const movedRow = toward && size !== null
+      ? `<div class="sharp-line"><span class="sharp-src">Moved toward</span><span>${toward}</span><span class="dim">${size} ${size === 1 ? "pt" : "pts"}${via ? " " + via : ""}</span></div>` : "";
+    return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Line movement</span>${noteHtml}${books.note}</div>${movedRow}${books.rows}</div>`;
+  }
   return lineMoveBlock({ home: g.team_home || "Home", open: d.open_home, cur: d.current_home, toward, noteHtml: noteHtml + books.note,
     keyNumbers: g.keyNumbers || KEY_NUMBERS_BY_SPORT[currentView === "history" ? historySport : currentSport] || [3, 7],
-    extraRows: books.rows });
+    extraRows: books.rows, sizeOverride: d.size != null ? d.size : null, via });
 }
 
 // History has the graded pick only (no open/now numbers).
