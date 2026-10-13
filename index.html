@@ -553,17 +553,18 @@ function fmtSpreadNum(n) { return n === 0 ? "PK" : (n > 0 ? "+" : "") + n; }
 
 // Open -> now on the home line, and the side the market moved toward (null = no real move).
 // noteHtml is an optional tag for the block header (e.g. WITH/AGAINST CONSENSUS).
-function lineMoveBlock({ home, open, cur, toward, noteHtml = "" }) {
+// keyNumbers: the spreads that matter in this sport (football 3 and 7; none for basketball).
+function lineMoveBlock({ home, open, cur, toward, noteHtml = "", keyNumbers = [3, 7] }) {
   const lines = [`<div class="sharp-line"><span class="sharp-src">Open &rarr; now</span>`
     + `<span>${home} ${fmtSpreadNum(open)} &rarr; ${fmtSpreadNum(cur)}</span>`
     + (toward ? "" : ` <span class="dim">(no real move)</span>`) + `</div>`];
   if (toward) {
     const size = Math.abs(cur - open);
     const lo = Math.min(open, cur), hi = Math.max(open, cur);
-    const key = [3, 7].find(k => [k, -k].some(x => lo <= x && x <= hi));
+    const keys = keyNumbers.filter(k => [k, -k].some(x => lo <= x && x <= hi));
     lines.push(`<div class="sharp-line"><span class="sharp-src">Moved toward</span><span>${toward}</span>`
       + `<span class="dim">${size} ${size === 1 ? "pt" : "pts"}</span>`
-      + (key ? `<span class="tag neutral">KEY ${key}</span>` : "") + `</div>`);
+      + keys.map(k => `<span class="tag neutral">KEY ${k}</span>`).join("") + `</div>`);
   }
   return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Line movement</span>${noteHtml}</div>${lines.join("")}</div>`;
 }
@@ -1488,7 +1489,7 @@ function etDay(iso) {
   return isNaN(d) ? "" : d.toLocaleDateString("en-CA", { timeZone: "America/New_York" });
 }
 
-function renderUpcomingGame(g) {
+function renderUpcomingGame(g, keyNumbers) {
   const cur = g.current_home;
   const fav = cur === 0 ? "PK" : cur < 0 ? `${g.team_home} ${cur}` : `${g.team_away} ${-cur}`;
   const time = etLabel(g.start, { hour: "numeric", minute: "2-digit" });
@@ -1498,7 +1499,7 @@ function renderUpcomingGame(g) {
       <div class="game-header">
         <div class="game-title">${g.game}</div>
         <div class="game-meta">${dayPrefix}${time} ET &middot; Line: ${fav}</div>
-        ${lineMoveBlock({ home: g.team_home, open: g.open_home, cur, toward: g.toward })}
+        ${lineMoveBlock({ home: g.team_home, open: g.open_home, cur, toward: g.toward, keyNumbers })}
       </div>
     </div>`;
 }
@@ -1597,7 +1598,7 @@ function renderUpcoming() {
       const label = etLabel(g.start, { weekday: "long", month: "short", day: "numeric" });
       if (label !== day) { day = label; html += `<div class="perf-sub">${label}</div>`; }
     }
-    html += renderUpcomingGame(g);
+    html += renderUpcomingGame(g, data.key_numbers || []);
   }
   el.innerHTML = seg + header + bar + (html || '<div class="empty-state">No games match these filters.</div>');
 }
