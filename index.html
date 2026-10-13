@@ -1493,11 +1493,13 @@ function etDay(iso) {
 }
 
 // The current line as the spread text the Games card expects ("<favorite> -2.5"), with its favorite label.
-function upcomingSpread(g) {
+// home/away are the MODEL's team names: the line data uses ESPN's short names ("Kennesaw State") while the
+// picks use the longer ones ("Kennesaw State Owls"), and the card matches the favorite against the picks.
+function upcomingSpread(g, home, away) {
   const cur = g.current_home;
   if (cur === null || cur === undefined) return { spread: "N/A", favorite: "?" };
   if (cur === 0) return { spread: "PK", favorite: "?" };
-  const fav = cur < 0 ? g.team_home : g.team_away;
+  const fav = cur < 0 ? home : away;
   return { spread: `${fav} -${Math.abs(cur)}`, favorite: `${fav} -fav` };
 }
 
@@ -1505,11 +1507,15 @@ function upcomingSpread(g) {
 // The line fields come from the live entry (refreshed every cycle); the picks are from the last full run.
 function upcomingAsGame(g, keyNumbers) {
   const m = g.model;
-  const { spread, favorite } = upcomingSpread(g);
+  const { spread, favorite } = upcomingSpread(g, m.team_home, m.team_away);
   const hasLine = g.current_home !== null && g.current_home !== undefined;
+  // The side the line moved toward, as the MODEL's team name so it can be compared with the consensus pick.
+  // Matched by side (home/away), never by comparing name strings across the two sources.
+  const side = g.toward_side || (g.toward === g.team_home ? "home" : g.toward === g.team_away ? "away" : null);
+  const toward = side === "home" ? m.team_home : side === "away" ? m.team_away : null;
   return {
     game: m.game, spread, favorite, confidence: m.confidence,
-    picks: { ...m.picks, [LINE_MOVE_KEY]: g.toward ? `TAKE: ${g.toward}` : (hasLine ? "PUSH" : "N/A") },
+    picks: { ...m.picks, [LINE_MOVE_KEY]: toward ? `TAKE: ${toward}` : (hasLine ? "PUSH" : "N/A") },
     detail: { ...m.detail, [LINE_MOVE_KEY]: hasLine ? { open_home: g.open_home, current_home: g.current_home } : null },
     team_home: m.team_home, team_away: m.team_away, start: g.start, sharp_books: m.sharp_books, keyNumbers,
   };
