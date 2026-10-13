@@ -406,6 +406,141 @@
           }
         }
       ]
+    },
+    {
+      "time": "2026-10-13T06:00:08-04:00",
+      "games": [
+        {
+          "game": "Middle Tennessee Blue Raiders (H) vs Delaware Fightin' Blue Hens (A)",
+          "spread": "DEL -1.5",
+          "favorite": "Delaware Fightin' Blue Hens -fav",
+          "confidence": "61%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Delaware Fightin' Blue Hens",
+            "M2: Relevance": "TAKE: Delaware Fightin' Blue Hens",
+            "M3: Efficiency": "TAKE: Middle Tennessee Blue Raiders",
+            "M4: ATS Trends": "TAKE: Middle Tennessee Blue Raiders",
+            "M5: Luck": "TAKE: Delaware Fightin' Blue Hens",
+            "M6: Sharp Money": "TAKE: Middle Tennessee Blue Raiders",
+            "CONSENSUS": "TAKE: Delaware Fightin' Blue Hens",
+            "Sharp: Circa": "TAKE: Middle Tennessee Blue Raiders",
+            "Sharp: DraftKings": "TAKE: Delaware Fightin' Blue Hens"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 16,
+              "away": 17
+            },
+            "M2: Relevance": {
+              "home": 25.9179,
+              "away": 39.2293
+            },
+            "M3: Efficiency": {
+              "margin": -0.5
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 1
+            },
+            "M5: Luck": {
+              "home": "0.3",
+              "away": "0.1"
+            },
+            "M6: Sharp Money": {
+              "home_b": 52.15,
+              "home_m": 59.21,
+              "away_b": 47.85,
+              "away_m": 40.79
+            }
+          },
+          "team_home": "Middle Tennessee Blue Raiders",
+          "team_away": "Delaware Fightin' Blue Hens",
+          "start": "2026-10-13T23:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 25.0,
+              "home_m": 89.0,
+              "away_b": 75.0,
+              "away_m": 11.0,
+              "line": "+1",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 47.0,
+              "home_m": 29.0,
+              "away_b": 53.0,
+              "away_m": 71.0,
+              "line": "+1.5",
+              "thin": false
+            }
+          }
+        },
+        {
+          "game": "Jacksonville State Gamecocks (H) vs Florida International Panthers (A)",
+          "spread": "JXST -3",
+          "favorite": "Jacksonville State Gamecocks -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Florida International Panthers",
+            "M2: Relevance": "TAKE: Florida International Panthers",
+            "M3: Efficiency": "TAKE: Florida International Panthers",
+            "M4: ATS Trends": "TAKE: Florida International Panthers",
+            "M5: Luck": "TAKE: Florida International Panthers",
+            "M6: Sharp Money": "N/A",
+            "CONSENSUS": "TAKE: Florida International Panthers",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "PUSH"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 18,
+              "away": 26
+            },
+            "M2: Relevance": {
+              "home": 33.5698,
+              "away": 47.8256
+            },
+            "M3: Efficiency": {
+              "margin": -3.3
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 6
+            },
+            "M5: Luck": {
+              "home": "0.6",
+              "away": "0.1"
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            }
+          },
+          "team_home": "Jacksonville State Gamecocks",
+          "team_away": "Florida International Panthers",
+          "start": "2026-10-14T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 100.0,
+              "home_m": 100.0,
+              "away_b": 0.0,
+              "away_m": 0.0,
+              "line": "-3",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 68.0,
+              "home_m": 68.0,
+              "away_b": 32.0,
+              "away_m": 32.0,
+              "line": "-3",
+              "thin": false
+            }
+          }
+        }
+      ]
     }
   ]
 }
