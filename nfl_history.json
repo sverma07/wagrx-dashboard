@@ -1,7 +1,69 @@
 {
   "sport": "NFL",
-  "updated": "2026-10-12T06:05:05-04:00",
+  "updated": "2026-10-13T06:05:04-04:00",
   "days": {
+    "2026-10-12": [
+      {
+        "game": "Los Angeles Rams (H) vs Buffalo Bills (A)",
+        "team_home": "Los Angeles Rams",
+        "team_away": "Buffalo Bills",
+        "line": "LAR -3.5",
+        "favorite": "Los Angeles Rams -fav",
+        "final": "Los Angeles Rams 34, Buffalo Bills 37",
+        "cover": "Buffalo Bills",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 24.52,
+          "home_m": 27.56,
+          "away_b": 75.48,
+          "away_m": 72.44
+        },
+        "graded_run": "2026-10-12T20:05:06-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Los Angeles Rams",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Los Angeles Rams",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Los Angeles Rams",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Los Angeles Rams",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-11": [
       {
         "game": "Jacksonville Jaguars (H) vs Philadelphia Eagles (A)",
