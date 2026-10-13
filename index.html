@@ -207,6 +207,7 @@
   .game-card.hidden-by-search { display: none; }
   .game-header { cursor: pointer; user-select: none; }
   .game-card.static .game-header { cursor: default; user-select: auto; }
+  .upcoming-seg { margin-bottom: 10px; }
   .game-card.static .game-meta { margin-bottom: 4px; }
   .game-title-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
   .game-title { font-weight: 700; font-size: 1.02rem; margin-bottom: 2px; }
@@ -1452,11 +1453,27 @@ function loadPerformance() {
   });
 }
 
-// ---- Upcoming tab: NFL lines for the next 7 days (lines only, no model picks), from nfl_upcoming.json ----
+// ---- Upcoming tab: lines for the next 7 days per sport (lines only, no model picks), from <sport>_upcoming.json ----
+let upcomingSport = null;      // set on first open (last choice, else the sport you were viewing)
+const upcomingCache = {};      // sport key -> parsed file, or null when it could not be loaded
+let upcomingDate = "all";      // "all" or an ET calendar day (YYYY-MM-DD); reset when the sport changes
+
 function selectUpcoming() {
   currentView = "upcoming";
+  if (!upcomingSport) {
+    let saved = null;
+    try { saved = localStorage.getItem("wagrx-upcoming-sport"); } catch (e) {}
+    upcomingSport = SPORTS.some(x => x.key === saved) ? saved : currentSport;
+  }
   renderTabs();
   setViewVisibility();
+  loadUpcoming();
+}
+
+function selectUpcomingSport(key) {
+  upcomingSport = key;
+  upcomingDate = "all";
+  try { localStorage.setItem("wagrx-upcoming-sport", key); } catch (e) {}
   loadUpcoming();
 }
 
@@ -1465,44 +1482,135 @@ function etLabel(iso, opts) {
   return isNaN(d) ? "" : d.toLocaleString("en-US", { ...opts, timeZone: "America/New_York" });
 }
 
+// ET calendar day (YYYY-MM-DD), the same clock the kickoff times use.
+function etDay(iso) {
+  const d = new Date(iso);
+  return isNaN(d) ? "" : d.toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+}
+
 function renderUpcomingGame(g) {
   const cur = g.current_home;
   const fav = cur === 0 ? "PK" : cur < 0 ? `${g.team_home} ${cur}` : `${g.team_away} ${-cur}`;
   const time = etLabel(g.start, { hour: "numeric", minute: "2-digit" });
+  const dayPrefix = upcomingFilters.sort === "start" ? "" : etLabel(g.start, { weekday: "short", month: "short", day: "numeric" }) + ", ";
   return `
     <div class="game-card static">
       <div class="game-header">
         <div class="game-title">${g.game}</div>
-        <div class="game-meta">${time} ET &middot; Line: ${fav}</div>
+        <div class="game-meta">${dayPrefix}${time} ET &middot; Line: ${fav}</div>
         ${lineMoveBlock({ home: g.team_home, open: g.open_home, cur, toward: g.toward })}
       </div>
     </div>`;
 }
 
-function loadUpcoming() {
+// Upcoming filters (separate from the Games/History set above; same look). Move size = |now - open| on the spread.
+const UPCOMING_FILTERS = [
+  { key: "sort", label: "Sort", def: "start", opts: [["start", "Start time"], ["move", "Biggest move"]] },
+  { key: "size", label: "Move", def: "all",
+    opts: [["all", "All"], ["none", "No move"], ["small", "0.5-1.5 pts"], ["medium", "2-3.5 pts"], ["big", "4+ pts"]] },
+  { key: "key", label: "Key number", def: "all", opts: [["all", "All"], ["crossed", "Touched 3 or 7"]], needsKeyNumbers: true },
+];
+let upcomingFilters = Object.fromEntries(UPCOMING_FILTERS.map(d => [d.key, d.def]));
+try { Object.assign(upcomingFilters, JSON.parse(localStorage.getItem("wagrx-upcoming-filters") || "{}")); } catch (e) {}
+
+function upcomingMoveSize(g) { return Math.abs(g.current_home - g.open_home); }
+
+function passesUpcomingFilters(g, hasKeyNumbers) {
+  const size = upcomingMoveSize(g);
+  const f = upcomingFilters;
+  if (upcomingDate !== "all" && etDay(g.start) !== upcomingDate) return false;
+  if (f.size === "none" && g.toward) return false;
+  if (f.size === "small" && !(size >= 0.5 && size <= 1.5)) return false;
+  if (f.size === "medium" && !(size >= 2 && size <= 3.5)) return false;
+  if (f.size === "big" && !(size >= 4)) return false;
+  if (hasKeyNumbers && f.key === "crossed" && !g.crosses_key) return false;
+  return true;
+}
+
+function saveUpcomingFilters() {
+  try { localStorage.setItem("wagrx-upcoming-filters", JSON.stringify(upcomingFilters)); } catch (e) {}
+}
+
+function setUpcomingFilter(key, value) {
+  upcomingFilters[key] = value;
+  saveUpcomingFilters();
+  renderUpcoming();
+}
+
+function setUpcomingDate(value) {
+  upcomingDate = value;
+  renderUpcoming();
+}
+
+function clearUpcomingFilters() {
+  for (const d of UPCOMING_FILTERS) if (d.key !== "sort") upcomingFilters[d.key] = d.def;
+  upcomingDate = "all";
+  saveUpcomingFilters();
+  renderUpcoming();
+}
+
+function renderUpcoming() {
   const el = document.getElementById("upcoming");
-  el.innerHTML = '<div class="empty-state">Loading&hellip;</div>';
-  fetch("nfl_upcoming.json?_=" + Date.now())
+  const sport = SPORTS.find(x => x.key === upcomingSport);
+  const seg = `<div class="seg upcoming-seg" role="group" aria-label="Sport">${SPORTS.map(sp =>
+    `<button class="range-btn${sp.key === upcomingSport ? " active" : ""}" onclick="selectUpcomingSport('${sp.key}')">${sp.label}</button>`).join("")}</div>`;
+  const data = upcomingCache[upcomingSport];
+  if (data === undefined) { el.innerHTML = seg + '<div class="empty-state">Loading&hellip;</div>'; return; }
+  if (data === null) { el.innerHTML = seg + `<div class="empty-state">No upcoming ${sport.label} lines posted yet.</div>`; return; }
+
+  const games = data.games || [];
+  const header = `<div class="perf-updated">${sport.label}, next 7 days. Updated ${fmtTime(data.updated)}. Lines from ESPN (DraftKings); no model picks yet.</div>`;
+  if (!games.length) {
+    el.innerHTML = seg + header + `<div class="empty-state">No upcoming ${sport.label} games with lines yet.</div>`;
+    return;
+  }
+
+  const hasKeyNumbers = (data.key_numbers || []).length > 0;
+  // Dates that actually have games, with counts. A stale selection falls back to all dates.
+  const dayCounts = {};
+  for (const g of games) { const d = etDay(g.start); dayCounts[d] = (dayCounts[d] || 0) + 1; }
+  const days = Object.keys(dayCounts).sort();
+  if (upcomingDate !== "all" && !dayCounts[upcomingDate]) upcomingDate = "all";
+
+  const kept = games.filter(g => passesUpcomingFilters(g, hasKeyNumbers));
+  if (upcomingFilters.sort === "move") kept.sort((x, y) => upcomingMoveSize(y) - upcomingMoveSize(x));  // stable: ties stay in start order
+
+  const dateSelect = `<select class="filter-select${upcomingDate !== "all" ? " on" : ""}" aria-label="Date" onchange="setUpcomingDate(this.value)">`
+    + `<option value="all">Date: All (${games.length})</option>`
+    + days.map(d => {
+      const [y, m, dd] = d.split("-").map(Number);
+      const label = new Date(y, m - 1, dd).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+      return `<option value="${d}"${upcomingDate === d ? " selected" : ""}>Date: ${label} (${dayCounts[d]})</option>`;
+    }).join("") + `</select>`;
+  const defs = UPCOMING_FILTERS.filter(d => !d.needsKeyNumbers || hasKeyNumbers);
+  const selects = dateSelect + defs.map(d =>
+    `<select class="filter-select${upcomingFilters[d.key] !== d.def ? " on" : ""}" aria-label="${d.label}" onchange="setUpcomingFilter('${d.key}', this.value)">${
+      d.opts.map(([v, t]) => `<option value="${v}"${upcomingFilters[d.key] === v ? " selected" : ""}>${d.label}: ${t}</option>`).join("")}</select>`
+  ).join("");
+  const active = upcomingDate !== "all" || defs.some(d => d.key !== "sort" && upcomingFilters[d.key] !== d.def);
+  const meta = active ? `<span>Showing ${kept.length} of ${games.length}</span><button class="filter-clear" onclick="clearUpcomingFilters()">Clear filters</button>` : "";
+  const bar = `<div class="filter-bar"><div class="filter-row">${selects}</div><div class="filter-meta">${meta}</div></div>`;
+
+  let day = null, html = "";
+  for (const g of kept) {
+    if (upcomingFilters.sort === "start") {  // day headings only make sense in kickoff order
+      const label = etLabel(g.start, { weekday: "long", month: "short", day: "numeric" });
+      if (label !== day) { day = label; html += `<div class="perf-sub">${label}</div>`; }
+    }
+    html += renderUpcomingGame(g);
+  }
+  el.innerHTML = seg + header + bar + (html || '<div class="empty-state">No games match these filters.</div>');
+}
+
+function loadUpcoming() {
+  const key = upcomingSport;
+  delete upcomingCache[key];  // always fetch fresh when the tab or sport is opened
+  renderUpcoming();
+  fetch(`${key}_upcoming.json?_=` + Date.now())
     .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(data => {
-      const games = data.games || [];
-      const header = `<div class="perf-updated">NFL, next 7 days. Updated ${fmtTime(data.updated)}. Lines from ESPN (DraftKings); no model picks yet.</div>`;
-      if (!games.length) {
-        el.innerHTML = header + '<div class="empty-state">No upcoming games with lines yet.</div>';
-        return;
-      }
-      let day = null, html = "";
-      for (const g of games) {
-        const label = etLabel(g.start, { weekday: "long", month: "short", day: "numeric" });
-        if (label !== day) { day = label; html += `<div class="perf-sub">${label}</div>`; }
-        html += renderUpcomingGame(g);
-      }
-      el.innerHTML = header + html;
-    })
-    .catch(err => {
-      el.innerHTML = '<div class="empty-state">Could not load upcoming lines yet.</div>';
-      console.error(err);
-    });
+    .then(data => { upcomingCache[key] = data; })
+    .catch(err => { upcomingCache[key] = null; console.error(err); })
+    .finally(() => { if (key === upcomingSport && currentView === "upcoming") renderUpcoming(); });
 }
 
 // ---- History tab: one graded day at a time, per sport (from <sport>_history.json) ----
