@@ -496,6 +496,38 @@ function sharpFor(g, source = "best") {
   return null;
 }
 
+// The three signals a pick can be checked against, each as a team name (null = no read):
+//   cons  = the consensus pick
+//   sharp = the side most sharp sources lean to, only when at least 2 sources lean the same way and
+//           more than lean the other way (2 of 3, or 3 of 3; with only 2 sources posted, both must agree)
+//   line  = the side the line moved toward (M8). Only some games carry it (NFL games, all Upcoming).
+function signalFacts(g) {
+  const picks = g.picks || {};
+  const take = p => { p = String(p || ""); return p.startsWith("TAKE:") ? p.replace("TAKE:", "").trim() : null; };
+  const votes = {};
+  for (const src of SHARP_SOURCES) {
+    const st = splitStrength(sourceSplit(g, src.key), g);
+    if (st && !st.thin) votes[st.team] = (votes[st.team] || 0) + 1;
+  }
+  const ranked = Object.entries(votes).sort((a, b) => b[1] - a[1]);
+  const sharp = ranked.length && ranked[0][1] >= 2 && (ranked.length === 1 || ranked[0][1] > ranked[1][1]) ? ranked[0][0] : null;
+  return { cons: take(picks.CONSENSUS), sharp, line: take(picks[LINE_MOVE_KEY]) };
+}
+
+// mode: all3 = consensus, sharps and line movement all on the same team; cs = consensus + sharps;
+// cl = consensus + line movement; conflict = at least two of the available signals disagree.
+function signalMatches(sig, mode) {
+  const { cons, sharp, line } = sig;
+  if (mode === "all3") return !!cons && cons === sharp && cons === line;
+  if (mode === "cs") return !!cons && cons === sharp;
+  if (mode === "cl") return !!cons && cons === line;
+  if (mode === "conflict") return new Set([cons, sharp, line].filter(Boolean)).size > 1;
+  return true;
+}
+
+const SIGNAL_FILTER_OPTS = [["all", "All"], ["all3", "Consensus + sharps + line move"], ["cs", "Consensus + sharps"],
+  ["cl", "Consensus + line move"], ["conflict", "Any conflict"]];
+
 // Do the sources with a real lean all point the same way?
 function sourcesAgreement(g) {
   const teams = SHARP_SOURCES.map(src => splitStrength(sourceSplit(g, src.key), g)).filter(x => x && !x.thin).map(x => x.team);
@@ -569,6 +601,9 @@ function lineMoveBlock({ home, open, cur, toward, noteHtml = "", keyNumbers = [3
   return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Line movement</span>${noteHtml}</div>${lines.join("")}</div>`;
 }
 
+// Spreads that matter per sport (football's 3 and 7; basketball has none). Upcoming cards carry their own list.
+const KEY_NUMBERS_BY_SPORT = { nfl: [3, 7], ncaaf: [3, 7], nba: [], ncaa: [] };
+
 function renderLineMoveRow(g) {
   const d = (g.detail || {})[LINE_MOVE_KEY];
   if (!d || d.open_home == null || d.current_home == null) return "";
@@ -580,7 +615,8 @@ function renderLineMoveRow(g) {
     noteHtml = c.replace("TAKE:", "").trim() === toward
       ? '<span class="tag agree">WITH CONSENSUS</span>' : '<span class="tag disagree">AGAINST CONSENSUS</span>';
   }
-  return lineMoveBlock({ home: g.team_home || "Home", open: d.open_home, cur: d.current_home, toward, noteHtml, keyNumbers: g.keyNumbers || [3, 7] });
+  return lineMoveBlock({ home: g.team_home || "Home", open: d.open_home, cur: d.current_home, toward, noteHtml,
+    keyNumbers: g.keyNumbers || KEY_NUMBERS_BY_SPORT[currentView === "history" ? historySport : currentSport] || [3, 7] });
 }
 
 // History has the graded pick only (no open/now numbers).
@@ -818,6 +854,7 @@ const FILTER_DEFS = [
     opts: [["all", "All"], ["agree", "Agree"], ["disagree", "Disagree"]] },
   { key: "agree", label: "Sources", def: "all",
     opts: [["all", "All"], ["agree", "Agree"], ["split", "Split"]] },
+  { key: "signals", label: "Signals", def: "all", opts: SIGNAL_FILTER_OPTS },
   { key: "result", label: "Result", def: "all", historyOnly: true,
     opts: [["all", "All"], ["win", "Wins"], ["loss", "Losses"]] },
 ];
@@ -837,6 +874,7 @@ function gameFacts(g, result = null) {
     sharp: s,
     agree: ag ? (ag.agree ? "agree" : "split") : null,
     align: s && consensusTeam ? (s.team === consensusTeam ? "agree" : "disagree") : null,
+    sig: signalFacts(g),
     start: g.start ? Date.parse(g.start) : null,
     result,
   };
@@ -849,6 +887,7 @@ function passesFilters(fx, view) {
   if (filters.sharp === "none" ? fx.sharp : (filters.sharp !== "all" && (!fx.sharp || fx.sharp.label.toLowerCase() !== filters.sharp))) return false;
   if (filters.align !== "all" && fx.align !== filters.align) return false;
   if (filters.agree !== "all" && fx.agree !== filters.agree) return false;
+  if (filters.signals !== "all" && !signalMatches(fx.sig, filters.signals)) return false;
   if (view === "history" && filters.result !== "all" && fx.result !== filters.result.toUpperCase()) return false;
   return true;
 }
@@ -1552,6 +1591,7 @@ const UPCOMING_FILTERS = [
   { key: "sort", label: "Sort", def: "start", opts: [["start", "Start time"], ["move", "Biggest move"], ["consensus", "Consensus %"]] },
   { key: "cons", label: "Consensus", def: "all",
     opts: [["all", "All"], ["strong", "70%+"], ["medium", "60-69%"], ["weak", "Under 60%"]] },
+  { key: "signals", label: "Signals", def: "all", opts: SIGNAL_FILTER_OPTS },
   { key: "size", label: "Move", def: "all",
     opts: [["all", "All"], ["none", "No move"], ["small", "0.5-1.5 pts"], ["medium", "2-3.5 pts"], ["big", "4+ pts"]] },
   { key: "key", label: "Key number", def: "all", opts: [["all", "All"], ["crossed", "Touched 3 or 7"]], needsKeyNumbers: true },
@@ -1572,6 +1612,7 @@ function passesUpcomingFilters(g, hasKeyNumbers) {
   const size = upcomingMoveSize(g);
   const f = upcomingFilters;
   if (upcomingDate !== "all" && etDay(g.start) !== upcomingDate) return false;
+  if (f.signals !== "all" && !(g.model && signalMatches(signalFacts(upcomingAsGame(g, [])), f.signals))) return false;
   const conf = upcomingConfidence(g);
   if (f.cons === "strong" && !(conf >= 70)) return false;
   if (f.cons === "medium" && !(conf >= 60 && conf < 70)) return false;
@@ -1988,8 +2029,10 @@ function applyHistorySearch() {
 // Facts for a simple History entry (picks stored as { pick, result }, sharp as raw splits).
 function historyEntryFacts(h, result) {
   const c = ((h.picks || {}).CONSENSUS || {}).pick;
+  const lm = ((h.picks || {})[LINE_MOVE_KEY] || {}).pick;
   const g = { team_home: h.team_home, team_away: h.team_away, confidence: h.confidence,
-              picks: { CONSENSUS: c && c !== "N/A" && c !== "SPLIT" && c !== "PUSH" ? "TAKE: " + c : "" },
+              picks: { CONSENSUS: c && c !== "N/A" && c !== "SPLIT" && c !== "PUSH" ? "TAKE: " + c : "",
+                       [LINE_MOVE_KEY]: lm && ![ "N/A", "SPLIT", "PUSH" ].includes(lm) ? "TAKE: " + lm : "" },
               detail: { "M6: Sharp Money": h.sharp || {} } };
   return gameFacts(g, result);
 }
