@@ -137,6 +137,16 @@
   .filter-select:hover { color: var(--text); }
   .filter-select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
   .filter-select.on { border-color: var(--accent); color: var(--accent); background-color: var(--accent-soft); }
+  .chip-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: -4px 0 12px; }
+  .chip-label { font-size: 0.74rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-right: 2px; }
+  .chip {
+    border: 1px solid var(--border); background: var(--card-bg); color: var(--text-dim); border-radius: 999px;
+    padding: 4px 11px; font: inherit; font-size: 0.78rem; font-weight: 600; cursor: pointer; box-shadow: var(--shadow);
+  }
+  .chip:hover { color: var(--text); }
+  .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .chip.on { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+  .chip.preset { margin-left: 4px; }
   .filter-select option { background: var(--card-bg); color: var(--text); }
   .filter-meta { margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: var(--text-dim); white-space: nowrap; }
   .filter-clear { border: none; background: none; color: var(--accent); font-size: 0.78rem; font-weight: 600; cursor: pointer; padding: 0; }
@@ -525,6 +535,57 @@ function signalMatches(sig, mode) {
   return true;
 }
 
+// Line-movement size = |current - open| on the spread. Multi-select: any combination of buckets can be on
+// ("Up to 3 pts" is simply the first four). No buckets selected means no filtering; a game with no line data
+// never matches once any bucket is selected.
+const MOVE_BUCKETS = [
+  { key: "none", label: "No move", test: s => s < 0.5 },
+  { key: "b1", label: "0.5-1", test: s => s >= 0.5 && s <= 1 },
+  { key: "b2", label: "1.5-2", test: s => s >= 1.5 && s <= 2 },
+  { key: "b3", label: "2.5-3", test: s => s >= 2.5 && s <= 3 },
+  { key: "b4", label: "3.5-4.5", test: s => s >= 3.5 && s <= 4.5 },
+  { key: "b5", label: "5+", test: s => s >= 5 },
+];
+const MOVE_UP_TO_3 = ["none", "b1", "b2", "b3"];
+
+function moveMatches(size, selected) {
+  if (!selected.length) return true;
+  if (size === null || size === undefined) return false;
+  return MOVE_BUCKETS.some(b => selected.includes(b.key) && b.test(size));
+}
+
+function lineMoveSize(g) {
+  const d = (g.detail || {})[LINE_MOVE_KEY];
+  return d && d.open_home != null && d.current_home != null ? Math.abs(d.current_home - d.open_home) : null;
+}
+
+// scope: "upcoming" (its own filter set) or "games" (Games and History share one).
+function moveChipsHtml(selected, scope) {
+  const on = key => selected.includes(key);
+  const upTo3 = selected.length === MOVE_UP_TO_3.length && MOVE_UP_TO_3.every(on);
+  const preset = upTo3 ? "[]" : `[${MOVE_UP_TO_3.map(k => `'${k}'`).join(",")}]`;
+  return `<div class="chip-row" role="group" aria-label="Line movement size"><span class="chip-label">Moved</span>`
+    + MOVE_BUCKETS.map(b => `<button type="button" class="chip${on(b.key) ? " on" : ""}" aria-pressed="${on(b.key)}" onclick="toggleMoveChip('${scope}','${b.key}')">${b.label}</button>`).join("")
+    + `<button type="button" class="chip preset${upTo3 ? " on" : ""}" aria-pressed="${upTo3}" onclick="setMoveChips('${scope}', ${preset})">Up to 3 pts</button></div>`;
+}
+
+function setMoveChips(scope, keys) {
+  if (scope === "upcoming") {
+    upcomingFilters.moves = keys;
+    saveUpcomingFilters();
+    renderUpcoming();
+  } else {
+    filters.moves = keys;
+    try { localStorage.setItem("wagrx-filters", JSON.stringify(filters)); } catch (e) {}
+    rerenderFiltered();
+  }
+}
+
+function toggleMoveChip(scope, key) {
+  const cur = scope === "upcoming" ? upcomingFilters.moves : filters.moves;
+  setMoveChips(scope, cur.includes(key) ? cur.filter(k => k !== key) : [...cur, key]);
+}
+
 const SIGNAL_FILTER_OPTS = [["all", "All"], ["all3", "Consensus + sharps + line move"], ["cs", "Consensus + sharps"],
   ["cl", "Consensus + line move"], ["conflict", "Any conflict"]];
 
@@ -859,7 +920,9 @@ const FILTER_DEFS = [
     opts: [["all", "All"], ["win", "Wins"], ["loss", "Losses"]] },
 ];
 let filters = Object.fromEntries(FILTER_DEFS.map(d => [d.key, d.def]));
+filters.moves = [];  // selected line-movement buckets (multi-select); empty = no filtering
 try { Object.assign(filters, JSON.parse(localStorage.getItem("wagrx-filters") || "{}")); } catch (e) {}
+if (!Array.isArray(filters.moves)) filters.moves = [];
 
 // Everything the filters/sorts need about one game, from a dashboard game object.
 // result: the consensus WIN/LOSS once graded (History), else null.
@@ -875,6 +938,7 @@ function gameFacts(g, result = null) {
     agree: ag ? (ag.agree ? "agree" : "split") : null,
     align: s && consensusTeam ? (s.team === consensusTeam ? "agree" : "disagree") : null,
     sig: signalFacts(g),
+    moveSize: lineMoveSize(g),
     start: g.start ? Date.parse(g.start) : null,
     result,
   };
@@ -888,6 +952,7 @@ function passesFilters(fx, view) {
   if (filters.align !== "all" && fx.align !== filters.align) return false;
   if (filters.agree !== "all" && fx.agree !== filters.agree) return false;
   if (filters.signals !== "all" && !signalMatches(fx.sig, filters.signals)) return false;
+  if (!moveMatches(fx.moveSize, filters.moves)) return false;
   if (view === "history" && filters.result !== "all" && fx.result !== filters.result.toUpperCase()) return false;
   return true;
 }
@@ -908,7 +973,7 @@ function applyFilters(items, view) {
 }
 
 function filtersActive(view) {
-  return FILTER_DEFS.some(d => d.key !== "sort" && d.key !== "src" && (!d.historyOnly || view === "history") && filters[d.key] !== d.def);
+  return filters.moves.length > 0 || FILTER_DEFS.some(d => d.key !== "sort" && d.key !== "src" && (!d.historyOnly || view === "history") && filters[d.key] !== d.def);
 }
 
 function renderFilterBar(view, shown, total) {
@@ -918,7 +983,8 @@ function renderFilterBar(view, shown, total) {
   ).join("");
   const meta = filtersActive(view)
     ? `<span>Showing ${shown} of ${total}</span><button class="filter-clear" onclick="clearFilters()">Clear filters</button>` : "";
-  return `<div class="filter-bar"><div class="filter-row">${selects}</div><div class="filter-meta">${meta}</div></div>`;
+  return `<div class="filter-bar"><div class="filter-row">${selects}</div><div class="filter-meta">${meta}</div></div>`
+    + moveChipsHtml(filters.moves, "games");
 }
 
 function rerenderFiltered() {
@@ -934,6 +1000,7 @@ function setFilter(key, value) {
 
 function clearFilters() {
   for (const d of FILTER_DEFS) if (d.key !== "sort" && d.key !== "src") filters[d.key] = d.def;
+  filters.moves = [];
   try { localStorage.setItem("wagrx-filters", JSON.stringify(filters)); } catch (e) {}
   rerenderFiltered();
 }
@@ -1592,12 +1659,12 @@ const UPCOMING_FILTERS = [
   { key: "cons", label: "Consensus", def: "all",
     opts: [["all", "All"], ["strong", "70%+"], ["medium", "60-69%"], ["weak", "Under 60%"]] },
   { key: "signals", label: "Signals", def: "all", opts: SIGNAL_FILTER_OPTS },
-  { key: "size", label: "Move", def: "all",
-    opts: [["all", "All"], ["none", "No move"], ["small", "0.5-1.5 pts"], ["medium", "2-3.5 pts"], ["big", "4+ pts"]] },
   { key: "key", label: "Key number", def: "all", opts: [["all", "All"], ["crossed", "Touched 3 or 7"]], needsKeyNumbers: true },
 ];
 let upcomingFilters = Object.fromEntries(UPCOMING_FILTERS.map(d => [d.key, d.def]));
+upcomingFilters.moves = [];  // selected line-movement buckets (multi-select); empty = no filtering
 try { Object.assign(upcomingFilters, JSON.parse(localStorage.getItem("wagrx-upcoming-filters") || "{}")); } catch (e) {}
+if (!Array.isArray(upcomingFilters.moves)) upcomingFilters.moves = [];
 
 // null = no line posted yet (never matches a move-size filter, sorts last by move)
 function upcomingMoveSize(g) {
@@ -1617,10 +1684,7 @@ function passesUpcomingFilters(g, hasKeyNumbers) {
   if (f.cons === "strong" && !(conf >= 70)) return false;
   if (f.cons === "medium" && !(conf >= 60 && conf < 70)) return false;
   if (f.cons === "weak" && !(conf !== null && conf < 60)) return false;
-  if (f.size === "none" && (size === null || g.toward)) return false;
-  if (f.size === "small" && !(size >= 0.5 && size <= 1.5)) return false;
-  if (f.size === "medium" && !(size >= 2 && size <= 3.5)) return false;
-  if (f.size === "big" && !(size >= 4)) return false;
+  if (!moveMatches(size, f.moves)) return false;
   if (hasKeyNumbers && f.key === "crossed" && !g.crosses_key) return false;
   return true;
 }
@@ -1642,6 +1706,7 @@ function setUpcomingDate(value) {
 
 function clearUpcomingFilters() {
   for (const d of UPCOMING_FILTERS) if (d.key !== "sort") upcomingFilters[d.key] = d.def;
+  upcomingFilters.moves = [];
   upcomingDate = "all";
   upcomingQuery = "";
   saveUpcomingFilters();
@@ -1695,7 +1760,8 @@ function renderUpcoming() {
       d.opts.map(([v, t]) => `<option value="${v}"${upcomingFilters[d.key] === v ? " selected" : ""}>${d.label}: ${t}</option>`).join("")}</select>`
   ).join("");
   upcomingTotal = games.length;
-  upcomingFilterActive = upcomingDate !== "all" || defs.some(d => d.key !== "sort" && upcomingFilters[d.key] !== d.def);
+  upcomingFilterActive = upcomingDate !== "all" || upcomingFilters.moves.length > 0
+    || defs.some(d => d.key !== "sort" && upcomingFilters[d.key] !== d.def);
   const search = `<div class="controls-row"><input type="search" id="upcoming-search" class="search-box" placeholder="Search teams&hellip;"`
     + ` value="${upcomingQuery.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;")}" oninput="setUpcomingSearch(this.value)"></div>`;
   const bar = `<div class="filter-bar"><div class="filter-row">${selects}</div><div class="filter-meta" id="upcoming-meta"></div></div>`;
@@ -1709,7 +1775,7 @@ function renderUpcoming() {
     }
     html += renderUpcomingGame(g, data.key_numbers || [], i);
   });
-  el.innerHTML = seg + header + search + bar
+  el.innerHTML = seg + header + search + bar + moveChipsHtml(upcomingFilters.moves, "upcoming")
     + `<div id="upcoming-list">${html}</div><div class="empty-state" id="upcoming-nomatch" hidden>No games match.</div>`;
   applyUpcomingSearch();
 }
