@@ -206,6 +206,8 @@
   }
   .game-card.hidden-by-search { display: none; }
   .game-header { cursor: pointer; user-select: none; }
+  .game-card.static .game-header { cursor: default; user-select: auto; }
+  .game-card.static .game-meta { margin-bottom: 4px; }
   .game-title-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
   .game-title { font-weight: 700; font-size: 1.02rem; margin-bottom: 2px; }
   .game-meta { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 12px; }
@@ -412,6 +414,7 @@
   <main id="games"></main>
   <main id="performance" style="display:none;"></main>
   <main id="history" style="display:none;"></main>
+  <main id="upcoming" style="display:none;"></main>
 </div>
 
 <script>
@@ -423,7 +426,7 @@ const SPORTS = [
 ];
 
 let currentSport = SPORTS[0].key;
-let currentView = "games"; // "games", "history" or "performance"
+let currentView = "games"; // "games", "upcoming", "history" or "performance"
 let allSnapshots = [];
 let currentGames = [];
 let currentSnapshotTime = "";
@@ -460,7 +463,9 @@ const SHARP_SOURCES = [
   { key: "dk", label: "DraftKings", pick: "Sharp: DraftKings" },
   { key: "sbd", label: "SBD", pick: "M6: Sharp Money" },
 ];
-function isSharpKey(k) { return k === "M6: Sharp Money" || String(k).startsWith("Sharp:"); }
+// M8 Line Movement is a market signal like the sharp sources: graded, shown as info, never a consensus vote.
+const LINE_MOVE_KEY = "M8: Line Movement";
+function isSharpKey(k) { return k === "M6: Sharp Money" || String(k).startsWith("Sharp:") || k === LINE_MOVE_KEY; }
 
 function sourceSplit(g, key) {
   if (key === "sbd") return (g.detail || {})["M6: Sharp Money"] || null;
@@ -538,6 +543,49 @@ function renderSharpRow(g, cover = null) {
     note = '<span class="sharp-note">Sharps split</span>';
   }
   return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Sharp money</span>${note}</div>${lines.join("")}</div>`;
+}
+
+// Line movement under the sharp block: open -> now on the home line, and the side the market moved toward.
+// detail comes from the script (ESPN, DraftKings line); absent for older snapshots and once ESPN drops
+// the odds at kickoff, in which case nothing is shown.
+function fmtSpreadNum(n) { return n === 0 ? "PK" : (n > 0 ? "+" : "") + n; }
+
+// Open -> now on the home line, and the side the market moved toward (null = no real move).
+// noteHtml is an optional tag for the block header (e.g. WITH/AGAINST CONSENSUS).
+function lineMoveBlock({ home, open, cur, toward, noteHtml = "" }) {
+  const lines = [`<div class="sharp-line"><span class="sharp-src">Open &rarr; now</span>`
+    + `<span>${home} ${fmtSpreadNum(open)} &rarr; ${fmtSpreadNum(cur)}</span>`
+    + (toward ? "" : ` <span class="dim">(no real move)</span>`) + `</div>`];
+  if (toward) {
+    const size = Math.abs(cur - open);
+    const lo = Math.min(open, cur), hi = Math.max(open, cur);
+    const key = [3, 7].find(k => [k, -k].some(x => lo <= x && x <= hi));
+    lines.push(`<div class="sharp-line"><span class="sharp-src">Moved toward</span><span>${toward}</span>`
+      + `<span class="dim">${size} ${size === 1 ? "pt" : "pts"}</span>`
+      + (key ? `<span class="tag neutral">KEY ${key}</span>` : "") + `</div>`);
+  }
+  return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Line movement</span>${noteHtml}</div>${lines.join("")}</div>`;
+}
+
+function renderLineMoveRow(g) {
+  const d = (g.detail || {})[LINE_MOVE_KEY];
+  if (!d || d.open_home == null || d.current_home == null) return "";
+  const pick = String((g.picks || {})[LINE_MOVE_KEY] || "");
+  const toward = pick.startsWith("TAKE:") ? pick.replace("TAKE:", "").trim() : null;
+  const c = String((g.picks || {}).CONSENSUS || "");
+  let noteHtml = "";
+  if (toward && c.startsWith("TAKE:")) {
+    noteHtml = c.replace("TAKE:", "").trim() === toward
+      ? '<span class="tag agree">WITH CONSENSUS</span>' : '<span class="tag disagree">AGAINST CONSENSUS</span>';
+  }
+  return lineMoveBlock({ home: g.team_home || "Home", open: d.open_home, cur: d.current_home, toward, noteHtml });
+}
+
+// History has the graded pick only (no open/now numbers).
+function renderLineMoveHistory(g) {
+  const p = (g.picks || {})[LINE_MOVE_KEY];
+  if (!p || ![g.team_home, g.team_away].includes(p.pick)) return "";
+  return `<div class="sharp-row"><span class="consensus-label">Line movement</span><span>${p.pick}</span>${resultTag(p.result)}</div>`;
 }
 
 function formatDetail(g, modelKey) {
@@ -678,6 +726,7 @@ function renderGame(g, idx, grade = null, scope = "games") {
           <div class="conf-col"><div class="confidence-badge">${confidence}</div>${agreement}</div>
         </div>
         ${renderSharpRow(g, grade && grade.cover)}
+        ${renderLineMoveRow(g)}
       </div>
       <div class="models-wrap">
         <table class="models">${modelRows}</table>
@@ -879,6 +928,7 @@ function renderSnapshot(snap) {
 }
 
 const UTIL_ICONS = {
+  upcoming: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
   history: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg>',
   performance: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg>',
 };
@@ -890,7 +940,8 @@ function renderTabs() {
   const util = (view, label, onclick) =>
     `<button class="util-btn${currentView === view ? " active" : ""}" onclick="${onclick}" title="${label}" aria-label="${label}">${UTIL_ICONS[view]}<span class="util-label">${label}</span></button>`;
   document.getElementById("util-tabs").innerHTML =
-    util("history", "History", "selectHistory()") + util("performance", "Performance", "selectPerformance()");
+    util("upcoming", "Upcoming", "selectUpcoming()") + util("history", "History", "selectHistory()")
+    + util("performance", "Performance", "selectPerformance()");
 }
 
 function setViewVisibility() {
@@ -901,6 +952,7 @@ function setViewVisibility() {
   document.getElementById("games").style.display = isGames ? "" : "none";
   document.getElementById("performance").style.display = currentView === "performance" ? "" : "none";
   document.getElementById("history").style.display = currentView === "history" ? "" : "none";
+  document.getElementById("upcoming").style.display = currentView === "upcoming" ? "" : "none";
 }
 
 function selectSport(key) {
@@ -1069,6 +1121,7 @@ function renderPerfTable(sport, data) {
   // Sharp money is tracked as info only, so it sits below the models and consensus.
   const entries = Object.entries(data.models).filter(([k]) => !isSharpKey(k));
   for (const src of SHARP_SOURCES) if (data.models[src.pick]) entries.push([src.pick, data.models[src.pick], src.label]);
+  if (data.models[LINE_MOVE_KEY]) entries.push([LINE_MOVE_KEY, data.models[LINE_MOVE_KEY], "Line Movement"]);
   let firstSharp = true;
   const rows = entries.map(([key, rec, srcLabel]) => {
     const w = rec.W || 0, l = rec.L || 0, total = w + l;
@@ -1078,7 +1131,7 @@ function renderPerfTable(sport, data) {
     const cls = isConsensus ? "consensus-row-perf" : isSharp ? ("sharp-row-perf" + (firstSharp ? " first" : "")) : "";
     if (isSharp) firstSharp = false;
     return `<tr class="${cls}">
-      <td>${isSharp ? `Sharp: ${srcLabel} <span class="perf-info">(info, not in consensus)</span>` : key}</td>
+      <td>${isSharp ? `${key === LINE_MOVE_KEY ? srcLabel : "Sharp: " + srcLabel} <span class="perf-info">(info, not in consensus)</span>` : key}</td>
       <td>${w}-${l}</td>
       <td class="perf-pct">${pct}</td>
     </tr>`;
@@ -1399,6 +1452,59 @@ function loadPerformance() {
   });
 }
 
+// ---- Upcoming tab: NFL lines for the next 7 days (lines only, no model picks), from nfl_upcoming.json ----
+function selectUpcoming() {
+  currentView = "upcoming";
+  renderTabs();
+  setViewVisibility();
+  loadUpcoming();
+}
+
+function etLabel(iso, opts) {
+  const d = new Date(iso);
+  return isNaN(d) ? "" : d.toLocaleString("en-US", { ...opts, timeZone: "America/New_York" });
+}
+
+function renderUpcomingGame(g) {
+  const cur = g.current_home;
+  const fav = cur === 0 ? "PK" : cur < 0 ? `${g.team_home} ${cur}` : `${g.team_away} ${-cur}`;
+  const time = etLabel(g.start, { hour: "numeric", minute: "2-digit" });
+  return `
+    <div class="game-card static">
+      <div class="game-header">
+        <div class="game-title">${g.game}</div>
+        <div class="game-meta">${time} ET &middot; Line: ${fav}</div>
+        ${lineMoveBlock({ home: g.team_home, open: g.open_home, cur, toward: g.toward })}
+      </div>
+    </div>`;
+}
+
+function loadUpcoming() {
+  const el = document.getElementById("upcoming");
+  el.innerHTML = '<div class="empty-state">Loading&hellip;</div>';
+  fetch("nfl_upcoming.json?_=" + Date.now())
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(data => {
+      const games = data.games || [];
+      const header = `<div class="perf-updated">NFL, next 7 days. Updated ${fmtTime(data.updated)}. Lines from ESPN (DraftKings); no model picks yet.</div>`;
+      if (!games.length) {
+        el.innerHTML = header + '<div class="empty-state">No upcoming games with lines yet.</div>';
+        return;
+      }
+      let day = null, html = "";
+      for (const g of games) {
+        const label = etLabel(g.start, { weekday: "long", month: "short", day: "numeric" });
+        if (label !== day) { day = label; html += `<div class="perf-sub">${label}</div>`; }
+        html += renderUpcomingGame(g);
+      }
+      el.innerHTML = header + html;
+    })
+    .catch(err => {
+      el.innerHTML = '<div class="empty-state">Could not load upcoming lines yet.</div>';
+      console.error(err);
+    });
+}
+
 // ---- History tab: one graded day at a time, per sport (from <sport>_history.json) ----
 let historySport = null;
 let historyData = null;
@@ -1503,6 +1609,7 @@ function renderHistoryGame(g) {
           <div class="conf-col"><div class="confidence-badge">${g.confidence || "N/A"}</div>${agreement}</div>
         </div>
         ${renderSharpRow(sharpGame, g.cover)}
+        ${renderLineMoveHistory(g)}
       </div>
       <div class="models-wrap">
         <table class="models">${modelRows}</table>
