@@ -41,12 +41,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
   }
   .brand-logo {
     height: auto;
     width: 100%;
-    max-width: 320px;
+    max-width: 240px;
     display: block;
   }
   .export-btn {
@@ -54,12 +54,14 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 42px;
+    gap: 6px;
+    padding: 0 12px;
     border: 1px solid var(--border);
     border-radius: 10px;
     background: var(--card-bg);
     color: var(--text-dim);
-    font-size: 1rem;
+    font-size: 0.84rem;
+    font-weight: 600;
     cursor: pointer;
     box-shadow: var(--shadow);
   }
@@ -90,10 +92,11 @@
     transition: background 0.12s ease, color 0.12s ease;
   }
   .tab-btn:hover { color: var(--text); }
+  .tab-btn:focus-visible, .util-btn:focus-visible, .range-btn:focus-visible, .export-btn:focus-visible, .filter-toggle:focus-visible, .pill:focus-visible, .game-title-row:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .tab-btn.active { background: var(--accent-gradient); color: #fff; }
   /* Sport tabs share the bar equally so every sport's box is the same size. */
   .tab-bar .tab-btn { flex: 1 1 0; min-width: 0; }
-  .nav-row { display: flex; gap: 8px; align-items: stretch; margin-bottom: 14px; }
+  .nav-row { display: flex; gap: 8px; align-items: stretch; margin: 0 0 6px; padding: 8px 0; position: sticky; top: 0; z-index: 10; background: var(--bg); }
   .nav-row .tab-bar { flex: 1; min-width: 0; margin-bottom: 0; }
   /* History / Performance: outlined utility buttons, visually separate from the sports. */
   .util-tabs { display: flex; gap: 6px; }
@@ -131,28 +134,46 @@
     appearance: none; -webkit-appearance: none; cursor: pointer; field-sizing: content;
     padding: 6px 26px 6px 11px; border: 1px solid var(--border); border-radius: 999px;
     background: var(--card-bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%239199a8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 10px center;
-    color: var(--text-dim); font-size: 0.78rem; font-weight: 600; box-shadow: var(--shadow);
+    color: var(--text-dim); font-size: 0.8rem; font-weight: 600; box-shadow: var(--shadow);
     transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
   }
   .filter-select:hover { color: var(--text); }
   .filter-select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
   .filter-select.on { border-color: var(--accent); color: var(--accent); background-color: var(--accent-soft); }
   .chip-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: -4px 0 12px; }
-  .chip-label { font-size: 0.74rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-right: 2px; }
+  .chip-label { font-size: 0.76rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; margin-right: 2px; }
   .chip {
     border: 1px solid var(--border); background: var(--card-bg); color: var(--text-dim); border-radius: 999px;
-    padding: 4px 11px; font: inherit; font-size: 0.78rem; font-weight: 600; cursor: pointer; box-shadow: var(--shadow);
+    padding: 4px 11px; font: inherit; font-size: 0.8rem; font-weight: 600; cursor: pointer; box-shadow: var(--shadow);
   }
   .chip:hover { color: var(--text); }
   .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
   .chip.on { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
   .chip.preset { margin-left: 4px; }
-  .chip-more { margin: 0 0 12px; }
-  .chip-more > summary { cursor: pointer; color: var(--accent); font-size: 0.78rem; font-weight: 600; margin: 0 0 10px; list-style: none; width: fit-content; }
-  .chip-more > summary::-webkit-details-marker { display: none; }
-  .chip-more > summary::before { content: "\25B8 "; }
-  .chip-more[open] > summary::before { content: "\25BE "; }
-  .chip-more .chip-row { margin: 0 0 10px; }
+  .filter-toggle {
+    display: inline-flex; align-items: center; gap: 6px; cursor: pointer; padding: 6px 12px;
+    border: 1px solid var(--border); border-radius: 999px; background: var(--card-bg);
+    color: var(--text-dim); font: inherit; font-size: 0.8rem; font-weight: 600; box-shadow: var(--shadow);
+  }
+  .filter-toggle:hover { color: var(--text); }
+  .filter-toggle[aria-expanded="true"], .filter-toggle.on { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+  .filter-toggle svg { flex-shrink: 0; }
+  .filter-count { background: var(--accent-gradient); color: #fff; border-radius: 999px; font-size: 0.72rem; min-width: 18px; padding: 0 6px; line-height: 18px; text-align: center; }
+  .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px; cursor: pointer; padding: 3px 4px 3px 10px;
+    border: 1px solid var(--accent); border-radius: 999px; background: var(--accent-soft); color: var(--accent);
+    font: inherit; font-size: 0.78rem; font-weight: 600;
+  }
+  .pill span { font-size: 1rem; line-height: 1; padding: 0 6px 1px; }
+  .pill:hover { background: var(--accent); color: #fff; }
+  .filter-panel { margin: 0 0 14px; padding: 12px 14px 4px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; }
+  .filter-panel[hidden] { display: none; }
+  .filter-panel .chip-row { margin: 0 0 10px; }
+  .filter-panel .chip-label { min-width: 150px; }
+  .filter-panel .filter-select { background-color: var(--neutral-bg); box-shadow: none; }
+  .filter-panel .filter-select.on { background-color: var(--accent-soft); }
+  @media (max-width: 600px) { .filter-panel .chip-label { min-width: 100%; } }
   .filter-select option { background: var(--card-bg); color: var(--text); }
   .filter-meta { margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: var(--text-dim); white-space: nowrap; }
   .filter-clear { border: none; background: none; color: var(--accent); font-size: 0.78rem; font-weight: 600; cursor: pointer; padding: 0; }
@@ -181,7 +202,11 @@
     color: var(--text-dim);
     box-shadow: var(--shadow);
   }
-  .controls-row { display: flex; gap: 8px; margin-bottom: 16px; }
+  .controls-row { display: flex; gap: 8px; margin-bottom: 16px; align-items: flex-end; }
+  .field { display: flex; flex-direction: column; gap: 3px; flex-shrink: 0; max-width: 45%; min-width: 0; }
+  .field-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-dim); padding-left: 2px; }
+  .field .runtime-select { max-width: 100%; }
+  .controls-row .search-box, .controls-row .export-btn { height: 42px; }
   .search-box {
     flex: 1;
     min-width: 0;
@@ -253,7 +278,7 @@
   .sharp-block { margin-top: 8px; padding: 0 12px; font-size: 0.85rem; }
   .sharp-head { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; margin-bottom: 4px; }
   .sharp-head .tag { margin-left: 0; }
-  .sharp-note { font-size: 0.72rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-dim); }
+  .sharp-note { font-size: 0.76rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-dim); }
   .sharp-note.agree { color: var(--text); border-color: #3a3f4b; }
   .sharp-line { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; padding: 2px 0; }
   .sharp-line .sharp-src { width: 82px; flex: 0 0 auto; color: var(--text-dim); font-size: 0.78rem; }
@@ -268,7 +293,7 @@
     color: #fff;
   }
   .conf-col { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; }
-  .agree-count { font-size: 0.72rem; color: var(--text-dim); }
+  .agree-count { font-size: 0.76rem; color: var(--text-dim); }
   .pick-line { font-weight: 600; color: var(--text-dim); margin-left: 6px; }
   .line-move { color: var(--accent); }
   .perf-note { color: var(--text-dim); font-size: 0.8rem; margin: 0 0 10px; }
@@ -276,7 +301,16 @@
   .perf-form { font-size: 0.88rem; margin-bottom: 4px; }
   .perf-form b { font-weight: 700; }
   .models-wrap { max-height: 0; overflow: hidden; transition: max-height 0.2s ease; }
-  .game-card.expanded .models-wrap { max-height: 600px; }
+  .game-card:not(.expanded) .models-wrap { visibility: hidden; }
+  .game-card.expanded .models-wrap { max-height: 2400px; }
+  /* Collapsed cards show one-line summaries; the per-source and per-book rows ("more") open with the card. */
+  .game-card.expanded .sum { display: none; }
+  .game-card:not(.expanded):not(.static) .more { display: none; }
+  .game-title-row { border-radius: 8px; }
+  .model-detail { font-size: 0.82rem; color: var(--text-dim); margin-top: 3px; }
+  .model-detail .num { color: var(--text); font-weight: 700; }
+  .model-detail b { color: var(--text); }
+  table.models tr.info-row td:first-child { color: var(--text-dim); }
   table.models { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 12px; }
   table.models td { padding: 7px 4px; border-top: 1px solid var(--border); }
   table.models td:first-child { color: var(--text-dim); width: 42%; }
@@ -357,11 +391,11 @@
     transition: border-color 0.15s ease, opacity 0.15s ease;
   }
   .net-tile:hover, .net-tile:focus-visible { border-color: #3a3f4b; outline: none; }
-  .net-tile .tile-label { display: flex; align-items: center; gap: 6px; font-size: 0.68rem; font-weight: 700;
+  .net-tile .tile-label { display: flex; align-items: center; gap: 6px; font-size: 0.74rem; font-weight: 700;
     letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); }
   .net-tile .tile-label i { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
   .net-tile .tile-value { font-size: 1.15rem; font-weight: 700; line-height: 1.2; margin-top: 3px; }
-  .net-tile .tile-meta { font-size: 0.72rem; color: var(--text-dim); margin-top: 1px; }
+  .net-tile .tile-meta { font-size: 0.76rem; color: var(--text-dim); margin-top: 1px; }
   .net-tile.dimmed { opacity: 0.45; }
   .net-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.78rem; color: var(--text); margin-bottom: 4px; }
   .net-legend span { display: inline-flex; align-items: center; gap: 6px; cursor: default; }
@@ -395,6 +429,13 @@
     .net-tile .tile-value { font-size: 1.05rem; }
   }
   .tag.neutral { background: var(--neutral-bg); color: var(--text-dim); }
+  /* Wide screens: card views use two columns so twice as many games fit. */
+  @media (min-width: 1000px) {
+    body[data-view="games"] .wrap, body[data-view="history"] .wrap, body[data-view="upcoming"] .wrap { max-width: 1080px; }
+    #games, #history-list, #upcoming-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; align-items: start; }
+    #games > .empty-state, #history-list > .empty-state, #upcoming-list > .perf-sub { grid-column: 1 / -1; }
+    #upcoming-list > .perf-sub { margin-top: 6px; }
+  }
   .hist-record { font-weight: 700; color: var(--text); }
   .hist-note { color: var(--text-dim); font-size: 0.8rem; margin: -6px 2px 12px; }
 </style>
@@ -416,15 +457,16 @@
     <span id="game-count"></span>
   </div>
   <div class="controls-row" id="controls-row">
-    <select id="date-select" class="runtime-select" onchange="selectDate(this.value)" title="Day"></select>
-    <select id="runtime-select" class="runtime-select" onchange="selectSnapshot(this.value)" title="Run time"></select>
+    <label class="field"><span class="field-label">Day</span><select id="date-select" class="runtime-select" onchange="selectDate(this.value)"></select></label>
+    <label class="field"><span class="field-label">Run</span><select id="runtime-select" class="runtime-select" onchange="selectSnapshot(this.value)"></select></label>
     <input type="search" id="search" class="search-box" placeholder="Search teams&hellip;" oninput="filterGames()">
-    <button class="export-btn" onclick="exportCSV()" title="Export current view as CSV">
+    <button class="export-btn" onclick="exportCSV()" title="Export current view as CSV" aria-label="Export current view as CSV">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
         <polyline points="7 10 12 15 17 10"/>
         <line x1="12" y1="15" x2="12" y2="3"/>
       </svg>
+      <span>CSV</span>
     </button>
   </div>
   <div id="games-filter"></div>
@@ -588,16 +630,15 @@ function sharpTierMatches(sharp, selected) {
 // Any combination can be on; no chips on in a group means that group is not filtering.
 const CHIP_GROUPS = {
   dates:    { label: "Date" },  // options come from the data (Upcoming only)
-  moves:    { label: "Moved", opts: MOVE_BUCKETS.map(b => [b.key, b.label]), preset: { label: "Up to 3 pts", keys: MOVE_UP_TO_3 } },
+  moves:    { label: "Line moved", opts: MOVE_BUCKETS.map(b => [b.key, b.label]), preset: { label: "Up to 3 pts", keys: MOVE_UP_TO_3 } },
   cons:     { label: "Consensus", opts: [["strong", "70%+"], ["medium", "60-69%"], ["weak", "Under 60%"]] },
-  sharp:    { label: "Sharp", opts: [["extreme", "Extreme"], ["strong", "Strong"], ["lean", "Lean"], ["none", "No data"]] },
-  sharpVs:  { label: "Sharps vs consensus", opts: [["agree", "Agree"], ["disagree", "Disagree"]] },
+  sharp:    { label: "Sharp strength", opts: [["extreme", "Extreme"], ["strong", "Strong"], ["lean", "Lean"], ["none", "No data"]] },
+  sharpVs:  { label: "Sharp majority vs consensus", opts: [["agree", "Agree"], ["disagree", "Disagree"]] },
   lineVs:   { label: "Line move vs consensus", opts: [["agree", "Agree"], ["disagree", "Disagree"]] },
-  conflict: { label: "Signals", opts: [["conflict", "Any conflict"]] },
+  conflict: { label: "Conflicting signals", opts: [["conflict", "Any conflict"]] },
 };
 const CHIP_KEYS = Object.keys(CHIP_GROUPS);
-const CHIPS_MORE = ["cons", "sharp", "sharpVs", "lineVs", "conflict"];  // behind "More filters"
-let chipPanelOpen = false;  // keeps "More filters" open across re-renders
+let filterPanelOpen = false;  // keeps the Filters panel open across re-renders
 
 function chipState(scope) { return scope === "upcoming" ? upcomingFilters : filters; }
 
@@ -615,14 +656,65 @@ function chipGroupHtml(scope, key, opts = CHIP_GROUPS[key].opts) {
   return html + `</div>`;
 }
 
-// dateOpts: [[value, label], ...] for the Date row (Upcoming), or null.
-function chipsPanelHtml(scope, dateOpts) {
-  const s = chipState(scope);
-  const activeMore = CHIPS_MORE.filter(k => s[k].length).length;
-  return (dateOpts ? chipGroupHtml(scope, "dates", dateOpts) : "") + chipGroupHtml(scope, "moves")
-    + `<details class="chip-more"${chipPanelOpen || activeMore ? " open" : ""} ontoggle="chipPanelOpen = this.open">`
-    + `<summary>More filters${activeMore ? ` (${activeMore} on)` : ""}</summary>`
-    + CHIPS_MORE.map(k => chipGroupHtml(scope, k)).join("") + `</details>`;
+// ---- Filter UI: Sort (and Result on History) stay visible; everything else lives in a Filters panel,
+// with a removable pill for each active filter. The filtering logic itself is unchanged.
+const PANEL_ORDER = ["cons", "moves", "sharp", "src", "align", "agree", "sharpVs", "lineVs", "conflict", "key"];
+const FILTER_ICON = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3H2l8 9.5V19l4 2v-8.5z"/></svg>';
+
+function filterSelectHtml(scope, d, inline) {
+  const st = chipState(scope);
+  const handler = scope === "upcoming" ? "setUpcomingFilter" : "setFilter";
+  return `<select class="filter-select${st[d.key] !== d.def ? " on" : ""}" aria-label="${d.label}" onchange="${handler}('${d.key}', this.value)">${
+    d.opts.map(([v, t]) => `<option value="${v}"${st[d.key] === v ? " selected" : ""}>${inline ? d.label + ": " : ""}${t}</option>`).join("")}</select>`;
+}
+
+// One pill per active filter group (sort, sharp source and the date chips are not filters, so no pill).
+function activePills(scope, selectDefs) {
+  const st = chipState(scope);
+  const pills = [];
+  for (const d of selectDefs) {
+    if (d.key === "sort" || d.key === "src" || st[d.key] === d.def) continue;
+    const o = d.opts.find(([v]) => v === st[d.key]);
+    pills.push([d.key, `${d.label}: ${o ? o[1] : st[d.key]}`]);
+  }
+  for (const k of CHIP_KEYS) {
+    if (k === "dates" || !st[k].length) continue;
+    const g = CHIP_GROUPS[k];
+    pills.push([k, `${g.label}: ${st[k].map(v => (g.opts.find(([x]) => x === v) || [v, v])[1]).join(", ")}`]);
+  }
+  return pills;
+}
+
+function clearFilterKey(scope, key) {
+  const d = (scope === "upcoming" ? UPCOMING_FILTERS : FILTER_DEFS).find(x => x.key === key);
+  setChips(scope, key, d ? d.def : []);
+}
+
+function toggleFilterPanel(btn) {
+  const panel = btn.closest(".filter-ui").querySelector(".filter-panel");
+  panel.hidden = !panel.hidden;
+  filterPanelOpen = !panel.hidden;
+  btn.setAttribute("aria-expanded", String(filterPanelOpen));
+}
+
+// defs: the select-type filters for this view. quickKeys stay on the bar; the rest go in the panel.
+// dateOpts: [[value, label], ...] for the Upcoming date chips, or null. metaHtml: "Showing X of Y" + Clear.
+function filterUiHtml(scope, defs, quickKeys, dateOpts, metaId, metaHtml) {
+  const quick = defs.filter(d => quickKeys.includes(d.key));
+  const pills = activePills(scope, defs);
+  const panel = PANEL_ORDER.map(k => {
+    const d = defs.find(x => x.key === k);
+    if (d) return quickKeys.includes(k) ? "" : `<div class="chip-row"><span class="chip-label">${d.label}</span>${filterSelectHtml(scope, d, false)}</div>`;
+    return CHIP_GROUPS[k] ? chipGroupHtml(scope, k) : "";
+  }).join("");
+  return `<div class="filter-ui"><div class="filter-bar"><div class="filter-row">${quick.map(d => filterSelectHtml(scope, d, true)).join("")}`
+    + `<button type="button" class="filter-toggle${pills.length ? " on" : ""}" aria-expanded="${filterPanelOpen}" onclick="toggleFilterPanel(this)">${FILTER_ICON}Filters`
+    + `${pills.length ? ` <span class="filter-count">${pills.length}</span>` : ""}</button></div>`
+    + `<div class="filter-meta"${metaId ? ` id="${metaId}"` : ""}>${metaHtml}</div></div>`
+    + (dateOpts ? chipGroupHtml(scope, "dates", dateOpts) : "")
+    + (pills.length ? `<div class="pill-row">${pills.map(([k, t]) =>
+        `<button type="button" class="pill" onclick="clearFilterKey('${scope}','${k}')" aria-label="Remove filter ${t}">${t}<span aria-hidden="true">&times;</span></button>`).join("")}</div>` : "")
+    + `<div class="filter-panel"${filterPanelOpen ? "" : " hidden"}>${panel}</div></div>`;
 }
 
 function saveFilters() {
@@ -660,7 +752,7 @@ const SHARP_KEY = "M6: Sharp Money";
 // cover (History only): the team that covered, to grade the sharp side as info.
 function renderSharpRow(g, cover = null) {
   if (!g.picks || !(SHARP_KEY in g.picks)) return "";
-  const lines = [];
+  const lines = [];  // { st, html(extraClass) } per source that has splits
   for (const src of SHARP_SOURCES) {
     const sp = sourceSplit(g, src.key);
     if (!sp || sp.home_b === undefined || sp.home_b === null) continue;
@@ -670,7 +762,7 @@ function renderSharpRow(g, cover = null) {
     else if (st) body = `<span>${st.team}</span><span class="tag ${st.cls}">${st.label}</span><span class="dim">${st.gap.toFixed(1)}% gap</span>`
       + (cover ? resultTag(st.team === cover ? "WIN" : "LOSS") : "");
     else body = `<span class="dim">Even (no gap)</span>`;
-    lines.push(`<div class="sharp-line"><span class="sharp-src">${src.label}</span>${body}</div>`);
+    lines.push({ st, html: cls => `<div class="sharp-line${cls}"><span class="sharp-src">${src.label}</span>${body}</div>` });
   }
   if (!lines.length) {
     return `<div class="sharp-row"><span class="consensus-label">Sharp money</span><span class="dim">No splits posted yet</span></div>`;
@@ -688,7 +780,11 @@ function renderSharpRow(g, cover = null) {
   } else if (ag) {
     note = '<span class="sharp-note">Sharps split</span>';
   }
-  return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Sharp money</span>${note}</div>${lines.join("")}</div>`;
+  // Collapsed: just the best read (Circa, then DraftKings, then SBD). Expanded: every source.
+  const many = lines.length > 1;
+  const best = lines.find(l => l.st && !l.st.thin) || lines[0];
+  return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Sharp money</span>${note}</div>`
+    + (many ? best.html(" sum") : "") + lines.map(l => l.html(many ? " more" : "")).join("") + `</div>`;
 }
 
 // Line movement under the sharp block: open -> now on the home line, and the side the market moved toward.
@@ -765,7 +861,7 @@ function bookRowsHtml(g, books) {
     moved[key] = Math.abs(delta) >= 0.5;
     const toward = delta < 0 ? home : away;  // the home line getting lower = money on the home side
     const size = Math.abs(delta);
-    rows += `<div class="sharp-line"><span class="sharp-src">${BOOK_LABELS[key]}</span>`
+    rows += `<div class="sharp-line more"><span class="sharp-src">${BOOK_LABELS[key]}</span>`
       + `<span>${home} ${fmtSpreadNum(b.first.line)} &rarr; ${fmtSpreadNum(b.last.line)}</span>`
       + (moved[key]
         ? `<span class="dim">moved ${size} ${size === 1 ? "pt" : "pts"} toward ${toward} by ${etClock(b.changedAt)}</span>`
@@ -777,7 +873,7 @@ function bookRowsHtml(g, books) {
     if (moved.circa && !moved.dk) note = '<span class="tag neutral">CIRCA MOVED, DK DIDN\'T</span>';
     else if (moved.dk && !moved.circa) note = '<span class="tag neutral">DK MOVED, CIRCA DIDN\'T</span>';
     const gap = Math.abs(books.circa.last.line - books.dk.last.line);
-    if (gap >= 1) rows += `<div class="sharp-line"><span class="sharp-src"></span><span class="dim">Circa and DraftKings are ${gap} pts apart now</span></div>`;
+    if (gap >= 1) rows += `<div class="sharp-line more"><span class="sharp-src"></span><span class="dim">Circa and DraftKings are ${gap} pts apart now</span></div>`;
   }
   return { rows, note };
 }
@@ -808,7 +904,9 @@ function renderLineMoveRow(g) {
     const size = d && d.size != null ? d.size : null;
     const movedRow = toward && size !== null
       ? `<div class="sharp-line"><span class="sharp-src">Moved toward</span><span>${toward}</span><span class="dim">${size} ${size === 1 ? "pt" : "pts"}${via ? " " + via : ""}</span></div>` : "";
-    return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Line movement</span>${noteHtml}${books.note}</div>${movedRow}${books.rows}</div>`;
+    // With no summary row, keep the book rows visible when collapsed.
+    const bookRows = movedRow ? books.rows : books.rows.replace(/sharp-line more/g, "sharp-line");
+    return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Line movement</span>${noteHtml}${books.note}</div>${movedRow}${bookRows}</div>`;
   }
   return lineMoveBlock({ home: g.team_home || "Home", open: d.open_home, cur: d.current_home, toward, noteHtml: noteHtml + books.note,
     keyNumbers: g.keyNumbers || KEY_NUMBERS_BY_SPORT[currentView === "history" ? historySport : currentSport] || [3, 7],
@@ -910,6 +1008,8 @@ function renderGame(g, idx, grade = null, scope = "games") {
     return resultTag(pick.replace("TAKE:", "").trim() === grade.cover ? "WIN" : "LOSS");
   };
   const modelKeys = Object.keys(picks);
+  // Each model's underlying numbers sit under its pick; models with nothing to show get no extra line.
+  const det = key => { const t = formatDetail(g, key); return /^No /.test(t) ? "" : `<div class="model-detail">${t}</div>`; };
   const modelRows = modelKeys.filter(k => k !== "CONSENSUS" && !isSharpKey(k)).map(key => {
     const pick = picks[key];
     const consensusPick = picks.CONSENSUS || "";
@@ -925,8 +1025,11 @@ function renderGame(g, idx, grade = null, scope = "games") {
       const s = sharpStrength(g);
       if (s) strengthTag = `<span class="tag ${s.cls}">${s.label}</span>`;
     }
-    return `<tr><td>${key}</td><td>${label}${strengthTag}${tag}</td></tr>`;
+    return `<tr><td>${key}</td><td>${label}${strengthTag}${tag}${det(key)}</td></tr>`;
   }).join("");
+  // Consensus vote and sharp money splits (info only) as extra rows, so no dropdown is needed.
+  const infoRows = (picks.CONSENSUS ? `<tr class="info-row"><td>Consensus</td><td>${det("CONSENSUS")}</td></tr>` : "")
+    + (SHARP_KEY in picks ? `<tr class="info-row"><td>Sharp Money (info)</td><td>${det(SHARP_KEY)}</td></tr>` : "");
 
   const consensus = picks.CONSENSUS ? picks.CONSENSUS.replace("TAKE: ", "") : "N/A";
   const takeTeam = p => (p && p.startsWith("TAKE:")) ? p.replace("TAKE:", "").trim() : null;
@@ -935,8 +1038,6 @@ function renderGame(g, idx, grade = null, scope = "games") {
   const consensusLine = pickLineHtml(g.spread, g.favorite, takeTeam(picks.CONSENSUS), [g.team_home, g.team_away]);
   const confidence = g.confidence || "N/A";
   const searchKey = (g.game || "").toLowerCase();
-  const detailOptions = modelKeys.filter(k => !isSharpKey(k) || k === SHARP_KEY)
-    .map(k => `<option value="${k}">${k === SHARP_KEY ? "Sharp Money (info)" : k}</option>`).join("");
   const finalMeta = (grade && grade.final ? ` &middot; Final: ${grade.final}` : "")
     + (grade && grade.run ? ` &middot; Graded: ${new Date(grade.run).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })} run` : "");
   let consensusTag = gradeTag(picks.CONSENSUS || "");
@@ -944,8 +1045,8 @@ function renderGame(g, idx, grade = null, scope = "games") {
 
   return `
     <div class="game-card" data-search="${searchKey}">
-      <div class="game-header" onclick="this.closest('.game-card').classList.toggle('expanded')">
-        <div class="game-title-row">
+      <div class="game-header" onclick="toggleCard(this)">
+        <div class="game-title-row" role="button" tabindex="0" aria-expanded="false">
           <div>
             <div class="game-title">${g.game || ""}</div>
             <div class="game-meta">${startTimeLabel(g, scope === "upcoming" && upcomingFilters.sort !== "start")}Line: ${g.spread || "N/A"}${scope === "games" ? lineMoveHtml(g) : ""} &middot; Favorite: ${favoriteName(g)}${finalMeta}</div>
@@ -963,21 +1064,26 @@ function renderGame(g, idx, grade = null, scope = "games") {
         ${renderLineMoveRow(g)}
       </div>
       <div class="models-wrap">
-        <table class="models">${modelRows}</table>
-        <div class="detail-box">
-          <select class="detail-select" onchange="showModelDetail('${scope}', ${idx}, this.value)">${detailOptions}</select>
-          <div class="detail-text" id="detail-${scope}-${idx}">${formatDetail(g, modelKeys[0])}</div>
-        </div>
+        <table class="models">${modelRows}${infoRows}</table>
       </div>
     </div>
   `;
 }
 
-function showModelDetail(scope, idx, modelKey) {
-  const g = (scope === "history" ? historyGames : scope === "upcoming" ? upcomingGames : currentGames)[idx];
-  if (!g) return;
-  document.getElementById(`detail-${scope}-${idx}`).innerHTML = formatDetail(g, modelKey);
+// Expand or collapse a card (click anywhere on its header, or Enter/Space on the focused title row).
+function toggleCard(header) {
+  const card = header.closest(".game-card");
+  const open = card.classList.toggle("expanded");
+  const row = header.querySelector(".game-title-row");
+  if (row) row.setAttribute("aria-expanded", String(open));
 }
+document.addEventListener("keydown", e => {
+  if (e.key !== "Enter" && e.key !== " ") return;
+  const row = e.target.closest && e.target.closest(".game-title-row[role=button]");
+  if (!row || e.target !== row) return;
+  e.preventDefault();
+  toggleCard(row.closest(".game-header"));
+});
 
 function filterGames() {
   const q = document.getElementById("search").value.trim().toLowerCase();
@@ -1040,11 +1146,11 @@ function selectSnapshot(indexStr) {
 const FILTER_DEFS = [
   { key: "sort", label: "Sort", def: "start",
     opts: [["start", "Start time"], ["consensus", "Consensus %"], ["sharp", "Sharp gap"]] },
-  { key: "src", label: "Source", def: "best",
+  { key: "src", label: "Sharp source", def: "best",
     opts: [["best", "Best available"], ["circa", "Circa"], ["dk", "DraftKings"], ["sbd", "SBD"]] },
-  { key: "align", label: "Sharps vs model", def: "all",
+  { key: "align", label: "Sharp source vs consensus", def: "all",
     opts: [["all", "All"], ["agree", "Agree"], ["disagree", "Disagree"]] },
-  { key: "agree", label: "Sources", def: "all",
+  { key: "agree", label: "Sharp sources", def: "all",
     opts: [["all", "All"], ["agree", "Agree"], ["split", "Split"]] },
   { key: "result", label: "Result", def: "all", historyOnly: true,
     opts: [["all", "All"], ["win", "Wins"], ["loss", "Losses"]] },
@@ -1106,14 +1212,10 @@ function filtersActive(view) {
 }
 
 function renderFilterBar(view, shown, total) {
-  const selects = FILTER_DEFS.filter(d => !d.historyOnly || view === "history").map(d =>
-    `<select class="filter-select${filters[d.key] !== d.def ? " on" : ""}" aria-label="${d.label}" onchange="setFilter('${d.key}', this.value)">${
-      d.opts.map(([v, t]) => `<option value="${v}"${filters[d.key] === v ? " selected" : ""}>${d.label}: ${t}</option>`).join("")}</select>`
-  ).join("");
+  const defs = FILTER_DEFS.filter(d => !d.historyOnly || view === "history");
   const meta = filtersActive(view)
     ? `<span>Showing ${shown} of ${total}</span><button class="filter-clear" onclick="clearFilters()">Clear filters</button>` : "";
-  return `<div class="filter-bar"><div class="filter-row">${selects}</div><div class="filter-meta">${meta}</div></div>`
-    + chipsPanelHtml("games", null);
+  return filterUiHtml("games", defs, ["sort", "result"], null, null, meta);
 }
 
 function rerenderFiltered() {
@@ -1185,6 +1287,7 @@ function renderTabs() {
 
 function setViewVisibility() {
   const isGames = currentView === "games";
+  document.body.dataset.view = currentView;
   document.getElementById("status-bar").style.display = isGames ? "" : "none";
   document.getElementById("controls-row").style.display = isGames ? "" : "none";
   document.getElementById("games-filter").style.display = isGames ? "" : "none";
@@ -1239,7 +1342,7 @@ function populateDateSelect(dates, latest) {
     return `<option value="${d}">${label}</option>`;
   }).join("");
   sel.value = latest || all[0] || "";
-  sel.style.display = all.length ? "" : "none";
+  sel.parentElement.style.display = all.length ? "" : "none";
 }
 
 // The day's graded consensus record (same as History's Graded view), from <sport>_history.json.
@@ -1871,16 +1974,12 @@ function renderUpcoming() {
   if (sortKey) kept.sort((x, y) => (sortKey(y) ?? -1) - (sortKey(x) ?? -1));
 
   const defs = UPCOMING_FILTERS.filter(d => !d.needsKeyNumbers || hasKeyNumbers);
-  const selects = defs.map(d =>
-    `<select class="filter-select${upcomingFilters[d.key] !== d.def ? " on" : ""}" aria-label="${d.label}" onchange="setUpcomingFilter('${d.key}', this.value)">${
-      d.opts.map(([v, t]) => `<option value="${v}"${upcomingFilters[d.key] === v ? " selected" : ""}>${d.label}: ${t}</option>`).join("")}</select>`
-  ).join("");
   upcomingTotal = games.length;
   upcomingFilterActive = CHIP_KEYS.some(k => upcomingFilters[k].length > 0)
     || defs.some(d => d.key !== "sort" && upcomingFilters[d.key] !== d.def);
   const search = `<div class="controls-row"><input type="search" id="upcoming-search" class="search-box" placeholder="Search teams&hellip;"`
     + ` value="${upcomingQuery.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;")}" oninput="setUpcomingSearch(this.value)"></div>`;
-  const bar = `<div class="filter-bar"><div class="filter-row">${selects}</div><div class="filter-meta" id="upcoming-meta"></div></div>`;
+  const bar = filterUiHtml("upcoming", defs, ["sort"], dateOpts, "upcoming-meta", "");
 
   let day = null, html = "";
   upcomingGames = [];
@@ -1891,7 +1990,7 @@ function renderUpcoming() {
     }
     html += renderUpcomingGame(g, data.key_numbers || [], i);
   });
-  el.innerHTML = seg + header + search + bar + chipsPanelHtml("upcoming", dateOpts)
+  el.innerHTML = seg + header + search + bar
     + `<div id="upcoming-list">${html}</div><div class="empty-state" id="upcoming-nomatch" hidden>No games match.</div>`;
   applyUpcomingSearch();
 }
@@ -2044,8 +2143,8 @@ function renderHistoryGame(g, date = null) {
   const sharpGame = { ...g, detail: { "M6: Sharp Money": g.sharp || {} } };
   return `
     <div class="game-card" data-search="${(g.game || "").toLowerCase()}">
-      <div class="game-header" onclick="this.closest('.game-card').classList.toggle('expanded')">
-        <div class="game-title-row">
+      <div class="game-header" onclick="toggleCard(this)">
+        <div class="game-title-row" role="button" tabindex="0" aria-expanded="false">
           <div>
             <div class="game-title">${g.game || ""}</div>
             <div class="game-meta">${dateLabel}Line: ${g.line || "N/A"}${final}</div>
@@ -2083,9 +2182,9 @@ function renderHistory() {
   ).join("");
   const controls = `
     <div class="controls-row">
-      <select class="runtime-select" onchange="loadHistory(this.value)">${sportOpts}</select>
-      <select class="runtime-select" onchange="selectHistoryDate(this.value)"${days.length ? "" : " disabled"}>${dateOpts}</select>
-      ${historyRuns.length && !scopeAll ? `<select class="runtime-select" onchange="selectHistoryRun(this.value)" title="Run time">${runOpts}</select>` : ""}
+      <label class="field"><span class="field-label">Sport</span><select class="runtime-select" onchange="loadHistory(this.value)">${sportOpts}</select></label>
+      <label class="field"><span class="field-label">Day</span><select class="runtime-select" onchange="selectHistoryDate(this.value)"${days.length ? "" : " disabled"}>${dateOpts}</select></label>
+      ${historyRuns.length && !scopeAll ? `<label class="field"><span class="field-label">Run</span><select class="runtime-select" onchange="selectHistoryRun(this.value)">${runOpts}</select></label>` : ""}
       <input type="search" id="history-search" class="search-box" placeholder="Search teams&hellip;"
         value="${historyQuery.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;")}" oninput="setHistorySearch(this.value)">
     </div>`;
