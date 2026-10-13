@@ -147,6 +147,12 @@
   .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
   .chip.on { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
   .chip.preset { margin-left: 4px; }
+  .chip-more { margin: 0 0 12px; }
+  .chip-more > summary { cursor: pointer; color: var(--accent); font-size: 0.78rem; font-weight: 600; margin: 0 0 10px; list-style: none; width: fit-content; }
+  .chip-more > summary::-webkit-details-marker { display: none; }
+  .chip-more > summary::before { content: "\25B8 "; }
+  .chip-more[open] > summary::before { content: "\25BE "; }
+  .chip-more .chip-row { margin: 0 0 10px; }
   .filter-select option { background: var(--card-bg); color: var(--text); }
   .filter-meta { margin-left: auto; display: flex; align-items: center; gap: 10px; font-size: 0.78rem; color: var(--text-dim); white-space: nowrap; }
   .filter-clear { border: none; background: none; color: var(--accent); font-size: 0.78rem; font-weight: 600; cursor: pointer; padding: 0; }
@@ -524,20 +530,23 @@ function signalFacts(g) {
   return { cons: take(picks.CONSENSUS), sharp, line: take(picks[LINE_MOVE_KEY]) };
 }
 
-// mode: all3 = consensus, sharps and line movement all on the same team; cs = consensus + sharps;
-// cl = consensus + line movement; conflict = at least two of the available signals disagree.
-function signalMatches(sig, mode) {
+// Signals compare the consensus pick with the sharp majority and with the line movement. Two chip groups,
+// AND-ed together: "Sharps vs consensus" and "Line move vs consensus" (agree / disagree). Within a group the
+// chips are OR-ed, so both on means "has a read either way". "Any conflict" = at least two of the available
+// signals point at different teams. Agree + Agree is the old "all three agree".
+function signalsMatch(sig, f) {
   const { cons, sharp, line } = sig;
-  if (mode === "all3") return !!cons && cons === sharp && cons === line;
-  if (mode === "cs") return !!cons && cons === sharp;
-  if (mode === "cl") return !!cons && cons === line;
-  if (mode === "conflict") return new Set([cons, sharp, line].filter(Boolean)).size > 1;
+  for (const [signal, selected] of [[sharp, f.sharpVs], [line, f.lineVs]]) {
+    if (!selected.length) continue;
+    if (!cons || !signal) return false;
+    if (!selected.includes(cons === signal ? "agree" : "disagree")) return false;
+  }
+  if (f.conflict.length && new Set([cons, sharp, line].filter(Boolean)).size <= 1) return false;
   return true;
 }
 
-// Line-movement size = |current - open| on the spread. Multi-select: any combination of buckets can be on
-// ("Up to 3 pts" is simply the first four). No buckets selected means no filtering; a game with no line data
-// never matches once any bucket is selected.
+// Line-movement size = |current - open| on the spread, bucketed. A game with no line data never matches
+// once any bucket is selected.
 const MOVE_BUCKETS = [
   { key: "none", label: "No move", test: s => s < 0.5 },
   { key: "b1", label: "0.5-1", test: s => s >= 0.5 && s <= 1 },
@@ -559,35 +568,76 @@ function lineMoveSize(g) {
   return d && d.open_home != null && d.current_home != null ? Math.abs(d.current_home - d.open_home) : null;
 }
 
-// scope: "upcoming" (its own filter set) or "games" (Games and History share one).
-function moveChipsHtml(selected, scope) {
-  const on = key => selected.includes(key);
-  const upTo3 = selected.length === MOVE_UP_TO_3.length && MOVE_UP_TO_3.every(on);
-  const preset = upTo3 ? "[]" : `[${MOVE_UP_TO_3.map(k => `'${k}'`).join(",")}]`;
-  return `<div class="chip-row" role="group" aria-label="Line movement size"><span class="chip-label">Moved</span>`
-    + MOVE_BUCKETS.map(b => `<button type="button" class="chip${on(b.key) ? " on" : ""}" aria-pressed="${on(b.key)}" onclick="toggleMoveChip('${scope}','${b.key}')">${b.label}</button>`).join("")
-    + `<button type="button" class="chip preset${upTo3 ? " on" : ""}" aria-pressed="${upTo3}" onclick="setMoveChips('${scope}', ${preset})">Up to 3 pts</button></div>`;
+// Consensus strength (70%+ / 60-69% / under 60%) and sharp tier (extreme / strong / lean / none). A game with
+// no value never matches a strength bucket; "No data" is the sharp option for games with no sharp read.
+function consMatches(conf, selected) {
+  if (!selected.length) return true;
+  if (conf === null || conf === undefined) return false;
+  return (selected.includes("strong") && conf >= 70) || (selected.includes("medium") && conf >= 60 && conf < 70)
+    || (selected.includes("weak") && conf < 60);
 }
 
-function setMoveChips(scope, keys) {
-  if (scope === "upcoming") {
-    upcomingFilters.moves = keys;
-    saveUpcomingFilters();
-    renderUpcoming();
-  } else {
-    filters.moves = keys;
-    try { localStorage.setItem("wagrx-filters", JSON.stringify(filters)); } catch (e) {}
-    rerenderFiltered();
+function sharpTierMatches(sharp, selected) {
+  if (!selected.length) return true;
+  return sharp ? selected.includes(sharp.label.toLowerCase()) : selected.includes("none");
+}
+
+// Multi-select chip groups, used on Games/History (one shared set, `filters`) and on Upcoming (`upcomingFilters`).
+// Any combination can be on; no chips on in a group means that group is not filtering.
+const CHIP_GROUPS = {
+  dates:    { label: "Date" },  // options come from the data (Upcoming only)
+  moves:    { label: "Moved", opts: MOVE_BUCKETS.map(b => [b.key, b.label]), preset: { label: "Up to 3 pts", keys: MOVE_UP_TO_3 } },
+  cons:     { label: "Consensus", opts: [["strong", "70%+"], ["medium", "60-69%"], ["weak", "Under 60%"]] },
+  sharp:    { label: "Sharp", opts: [["extreme", "Extreme"], ["strong", "Strong"], ["lean", "Lean"], ["none", "No data"]] },
+  sharpVs:  { label: "Sharps vs consensus", opts: [["agree", "Agree"], ["disagree", "Disagree"]] },
+  lineVs:   { label: "Line move vs consensus", opts: [["agree", "Agree"], ["disagree", "Disagree"]] },
+  conflict: { label: "Signals", opts: [["conflict", "Any conflict"]] },
+};
+const CHIP_KEYS = Object.keys(CHIP_GROUPS);
+const CHIPS_MORE = ["cons", "sharp", "sharpVs", "lineVs", "conflict"];  // behind "More filters"
+let chipPanelOpen = false;  // keeps "More filters" open across re-renders
+
+function chipState(scope) { return scope === "upcoming" ? upcomingFilters : filters; }
+
+function chipGroupHtml(scope, key, opts = CHIP_GROUPS[key].opts) {
+  const group = CHIP_GROUPS[key];
+  const selected = chipState(scope)[key];
+  const on = k => selected.includes(k);
+  let html = `<div class="chip-row" role="group" aria-label="${group.label}"><span class="chip-label">${group.label}</span>`
+    + opts.map(([k, t]) => `<button type="button" class="chip${on(k) ? " on" : ""}" aria-pressed="${on(k)}" onclick="toggleChip('${scope}','${key}','${k}')">${t}</button>`).join("");
+  if (group.preset) {
+    const active = selected.length === group.preset.keys.length && group.preset.keys.every(on);
+    const keys = active ? "[]" : `[${group.preset.keys.map(k => `'${k}'`).join(",")}]`;
+    html += `<button type="button" class="chip preset${active ? " on" : ""}" aria-pressed="${active}" onclick="setChips('${scope}','${key}',${keys})">${group.preset.label}</button>`;
   }
+  return html + `</div>`;
 }
 
-function toggleMoveChip(scope, key) {
-  const cur = scope === "upcoming" ? upcomingFilters.moves : filters.moves;
-  setMoveChips(scope, cur.includes(key) ? cur.filter(k => k !== key) : [...cur, key]);
+// dateOpts: [[value, label], ...] for the Date row (Upcoming), or null.
+function chipsPanelHtml(scope, dateOpts) {
+  const s = chipState(scope);
+  const activeMore = CHIPS_MORE.filter(k => s[k].length).length;
+  return (dateOpts ? chipGroupHtml(scope, "dates", dateOpts) : "") + chipGroupHtml(scope, "moves")
+    + `<details class="chip-more"${chipPanelOpen || activeMore ? " open" : ""} ontoggle="chipPanelOpen = this.open">`
+    + `<summary>More filters${activeMore ? ` (${activeMore} on)` : ""}</summary>`
+    + CHIPS_MORE.map(k => chipGroupHtml(scope, k)).join("") + `</details>`;
 }
 
-const SIGNAL_FILTER_OPTS = [["all", "All"], ["all3", "Consensus + sharps + line move"], ["cs", "Consensus + sharps"],
-  ["cl", "Consensus + line move"], ["conflict", "Any conflict"]];
+function saveFilters() {
+  try { localStorage.setItem("wagrx-filters", JSON.stringify(filters)); } catch (e) {}
+}
+
+function setChips(scope, key, keys) {
+  chipState(scope)[key] = keys;
+  if (scope === "upcoming") { saveUpcomingFilters(); renderUpcoming(); }
+  else { saveFilters(); rerenderFiltered(); }
+}
+
+function toggleChip(scope, key, opt) {
+  const cur = chipState(scope)[key];
+  setChips(scope, key, cur.includes(opt) ? cur.filter(k => k !== opt) : [...cur, opt]);
+}
+
 
 // Do the sources with a real lean all point the same way?
 function sourcesAgreement(g) {
@@ -905,24 +955,20 @@ function selectSnapshot(indexStr) {
 const FILTER_DEFS = [
   { key: "sort", label: "Sort", def: "start",
     opts: [["start", "Start time"], ["consensus", "Consensus %"], ["sharp", "Sharp gap"]] },
-  { key: "cons", label: "Consensus", def: "all",
-    opts: [["all", "All"], ["strong", "70%+"], ["medium", "60-69%"], ["weak", "Under 60%"]] },
   { key: "src", label: "Source", def: "best",
     opts: [["best", "Best available"], ["circa", "Circa"], ["dk", "DraftKings"], ["sbd", "SBD"]] },
-  { key: "sharp", label: "Sharp", def: "all",
-    opts: [["all", "All"], ["extreme", "Extreme"], ["strong", "Strong"], ["lean", "Lean"], ["none", "No data"]] },
   { key: "align", label: "Sharps vs model", def: "all",
     opts: [["all", "All"], ["agree", "Agree"], ["disagree", "Disagree"]] },
   { key: "agree", label: "Sources", def: "all",
     opts: [["all", "All"], ["agree", "Agree"], ["split", "Split"]] },
-  { key: "signals", label: "Signals", def: "all", opts: SIGNAL_FILTER_OPTS },
   { key: "result", label: "Result", def: "all", historyOnly: true,
     opts: [["all", "All"], ["win", "Wins"], ["loss", "Losses"]] },
 ];
 let filters = Object.fromEntries(FILTER_DEFS.map(d => [d.key, d.def]));
-filters.moves = [];  // selected line-movement buckets (multi-select); empty = no filtering
+for (const k of CHIP_KEYS) filters[k] = [];  // multi-select chip groups; empty = not filtering
 try { Object.assign(filters, JSON.parse(localStorage.getItem("wagrx-filters") || "{}")); } catch (e) {}
-if (!Array.isArray(filters.moves)) filters.moves = [];
+// Older saved filters kept consensus/sharp/signals as single strings; anything that is not a list is dropped.
+for (const k of CHIP_KEYS) if (!Array.isArray(filters[k])) filters[k] = [];
 
 // Everything the filters/sorts need about one game, from a dashboard game object.
 // result: the consensus WIN/LOSS once graded (History), else null.
@@ -945,13 +991,11 @@ function gameFacts(g, result = null) {
 }
 
 function passesFilters(fx, view) {
-  if (filters.cons === "strong" && !(fx.conf >= 70)) return false;
-  if (filters.cons === "medium" && !(fx.conf >= 60 && fx.conf < 70)) return false;
-  if (filters.cons === "weak" && !(fx.conf !== null && fx.conf < 60)) return false;
-  if (filters.sharp === "none" ? fx.sharp : (filters.sharp !== "all" && (!fx.sharp || fx.sharp.label.toLowerCase() !== filters.sharp))) return false;
+  if (!consMatches(fx.conf, filters.cons)) return false;
+  if (!sharpTierMatches(fx.sharp, filters.sharp)) return false;
   if (filters.align !== "all" && fx.align !== filters.align) return false;
   if (filters.agree !== "all" && fx.agree !== filters.agree) return false;
-  if (filters.signals !== "all" && !signalMatches(fx.sig, filters.signals)) return false;
+  if (!signalsMatch(fx.sig, filters)) return false;
   if (!moveMatches(fx.moveSize, filters.moves)) return false;
   if (view === "history" && filters.result !== "all" && fx.result !== filters.result.toUpperCase()) return false;
   return true;
@@ -973,7 +1017,7 @@ function applyFilters(items, view) {
 }
 
 function filtersActive(view) {
-  return filters.moves.length > 0 || FILTER_DEFS.some(d => d.key !== "sort" && d.key !== "src" && (!d.historyOnly || view === "history") && filters[d.key] !== d.def);
+  return CHIP_KEYS.some(k => filters[k].length > 0) || FILTER_DEFS.some(d => d.key !== "sort" && d.key !== "src" && (!d.historyOnly || view === "history") && filters[d.key] !== d.def);
 }
 
 function renderFilterBar(view, shown, total) {
@@ -984,7 +1028,7 @@ function renderFilterBar(view, shown, total) {
   const meta = filtersActive(view)
     ? `<span>Showing ${shown} of ${total}</span><button class="filter-clear" onclick="clearFilters()">Clear filters</button>` : "";
   return `<div class="filter-bar"><div class="filter-row">${selects}</div><div class="filter-meta">${meta}</div></div>`
-    + moveChipsHtml(filters.moves, "games");
+    + chipsPanelHtml("games", null);
 }
 
 function rerenderFiltered() {
@@ -1000,7 +1044,7 @@ function setFilter(key, value) {
 
 function clearFilters() {
   for (const d of FILTER_DEFS) if (d.key !== "sort" && d.key !== "src") filters[d.key] = d.def;
-  filters.moves = [];
+  for (const k of CHIP_KEYS) filters[k] = [];
   try { localStorage.setItem("wagrx-filters", JSON.stringify(filters)); } catch (e) {}
   rerenderFiltered();
 }
@@ -1569,7 +1613,6 @@ let upcomingGames = [];         // Games-style objects for the cards on screen, 
 let upcomingQuery = "";         // team search text; kept across filter changes, reset when the sport changes
 let upcomingTotal = 0;         // games in the file, and whether any filter is on (for the "Showing X of Y" note)
 let upcomingFilterActive = false;
-let upcomingDate = "all";      // "all" or an ET calendar day (YYYY-MM-DD); reset when the sport changes
 
 function selectUpcoming() {
   currentView = "upcoming";
@@ -1585,7 +1628,7 @@ function selectUpcoming() {
 
 function selectUpcomingSport(key) {
   upcomingSport = key;
-  upcomingDate = "all";
+  upcomingFilters.dates = [];
   upcomingQuery = "";
   try { localStorage.setItem("wagrx-upcoming-sport", key); } catch (e) {}
   loadUpcoming();
@@ -1656,15 +1699,12 @@ function renderUpcomingGame(g, keyNumbers, idx) {
 // Upcoming filters (separate from the Games/History set above; same look). Move size = |now - open| on the spread.
 const UPCOMING_FILTERS = [
   { key: "sort", label: "Sort", def: "start", opts: [["start", "Start time"], ["move", "Biggest move"], ["consensus", "Consensus %"]] },
-  { key: "cons", label: "Consensus", def: "all",
-    opts: [["all", "All"], ["strong", "70%+"], ["medium", "60-69%"], ["weak", "Under 60%"]] },
-  { key: "signals", label: "Signals", def: "all", opts: SIGNAL_FILTER_OPTS },
   { key: "key", label: "Key number", def: "all", opts: [["all", "All"], ["crossed", "Touched 3 or 7"]], needsKeyNumbers: true },
 ];
 let upcomingFilters = Object.fromEntries(UPCOMING_FILTERS.map(d => [d.key, d.def]));
-upcomingFilters.moves = [];  // selected line-movement buckets (multi-select); empty = no filtering
+for (const k of CHIP_KEYS) upcomingFilters[k] = [];  // multi-select chip groups; empty = not filtering
 try { Object.assign(upcomingFilters, JSON.parse(localStorage.getItem("wagrx-upcoming-filters") || "{}")); } catch (e) {}
-if (!Array.isArray(upcomingFilters.moves)) upcomingFilters.moves = [];
+for (const k of CHIP_KEYS) if (!Array.isArray(upcomingFilters[k])) upcomingFilters[k] = [];
 
 // null = no line posted yet (never matches a move-size filter, sorts last by move)
 function upcomingMoveSize(g) {
@@ -1676,21 +1716,20 @@ function upcomingConfidence(g) {
 }
 
 function passesUpcomingFilters(g, hasKeyNumbers) {
-  const size = upcomingMoveSize(g);
   const f = upcomingFilters;
-  if (upcomingDate !== "all" && etDay(g.start) !== upcomingDate) return false;
-  if (f.signals !== "all" && !(g.model && signalMatches(signalFacts(upcomingAsGame(g, [])), f.signals))) return false;
-  const conf = upcomingConfidence(g);
-  if (f.cons === "strong" && !(conf >= 70)) return false;
-  if (f.cons === "medium" && !(conf >= 60 && conf < 70)) return false;
-  if (f.cons === "weak" && !(conf !== null && conf < 60)) return false;
-  if (!moveMatches(size, f.moves)) return false;
+  if (f.dates.length && !f.dates.includes(etDay(g.start))) return false;
+  if (!moveMatches(upcomingMoveSize(g), f.moves)) return false;
+  if (!consMatches(upcomingConfidence(g), f.cons)) return false;
+  // Games with no model picks have no sharp or signal read, so they only match "No data".
+  const game = g.model ? upcomingAsGame(g, []) : null;
+  if (!sharpTierMatches(game ? sharpFor(game, "best") : null, f.sharp)) return false;
+  if (!signalsMatch(game ? signalFacts(game) : { cons: null, sharp: null, line: null }, f)) return false;
   if (hasKeyNumbers && f.key === "crossed" && !g.crosses_key) return false;
   return true;
 }
 
 function saveUpcomingFilters() {
-  try { localStorage.setItem("wagrx-upcoming-filters", JSON.stringify(upcomingFilters)); } catch (e) {}
+  try { localStorage.setItem("wagrx-upcoming-filters", JSON.stringify({ ...upcomingFilters, dates: [] })); } catch (e) {}
 }
 
 function setUpcomingFilter(key, value) {
@@ -1699,15 +1738,9 @@ function setUpcomingFilter(key, value) {
   renderUpcoming();
 }
 
-function setUpcomingDate(value) {
-  upcomingDate = value;
-  renderUpcoming();
-}
-
 function clearUpcomingFilters() {
   for (const d of UPCOMING_FILTERS) if (d.key !== "sort") upcomingFilters[d.key] = d.def;
-  upcomingFilters.moves = [];
-  upcomingDate = "all";
+  for (const k of CHIP_KEYS) upcomingFilters[k] = [];
   upcomingQuery = "";
   saveUpcomingFilters();
   renderUpcoming();
@@ -1736,31 +1769,29 @@ function renderUpcoming() {
   }
 
   const hasKeyNumbers = (data.key_numbers || []).length > 0;
-  // Dates that actually have games, with counts. A stale selection falls back to all dates.
+  // Dates that actually have games, with counts; a selected date that no longer has games is dropped.
   const dayCounts = {};
   for (const g of games) { const d = etDay(g.start); dayCounts[d] = (dayCounts[d] || 0) + 1; }
   const days = Object.keys(dayCounts).sort();
-  if (upcomingDate !== "all" && !dayCounts[upcomingDate]) upcomingDate = "all";
+  upcomingFilters.dates = upcomingFilters.dates.filter(d => dayCounts[d]);
+  const dateOpts = days.map(d => {
+    const [y, m, dd] = d.split("-").map(Number);
+    const label = new Date(y, m - 1, dd).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+    return [d, `${label} (${dayCounts[d]})`];
+  });
 
   const kept = games.filter(g => passesUpcomingFilters(g, hasKeyNumbers));
   // Stable sorts: ties (and games with no value) stay in start order, no-value games last.
   const sortKey = { move: upcomingMoveSize, consensus: upcomingConfidence }[upcomingFilters.sort];
   if (sortKey) kept.sort((x, y) => (sortKey(y) ?? -1) - (sortKey(x) ?? -1));
 
-  const dateSelect = `<select class="filter-select${upcomingDate !== "all" ? " on" : ""}" aria-label="Date" onchange="setUpcomingDate(this.value)">`
-    + `<option value="all">Date: All (${games.length})</option>`
-    + days.map(d => {
-      const [y, m, dd] = d.split("-").map(Number);
-      const label = new Date(y, m - 1, dd).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
-      return `<option value="${d}"${upcomingDate === d ? " selected" : ""}>Date: ${label} (${dayCounts[d]})</option>`;
-    }).join("") + `</select>`;
   const defs = UPCOMING_FILTERS.filter(d => !d.needsKeyNumbers || hasKeyNumbers);
-  const selects = dateSelect + defs.map(d =>
+  const selects = defs.map(d =>
     `<select class="filter-select${upcomingFilters[d.key] !== d.def ? " on" : ""}" aria-label="${d.label}" onchange="setUpcomingFilter('${d.key}', this.value)">${
       d.opts.map(([v, t]) => `<option value="${v}"${upcomingFilters[d.key] === v ? " selected" : ""}>${d.label}: ${t}</option>`).join("")}</select>`
   ).join("");
   upcomingTotal = games.length;
-  upcomingFilterActive = upcomingDate !== "all" || upcomingFilters.moves.length > 0
+  upcomingFilterActive = CHIP_KEYS.some(k => upcomingFilters[k].length > 0)
     || defs.some(d => d.key !== "sort" && upcomingFilters[d.key] !== d.def);
   const search = `<div class="controls-row"><input type="search" id="upcoming-search" class="search-box" placeholder="Search teams&hellip;"`
     + ` value="${upcomingQuery.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;")}" oninput="setUpcomingSearch(this.value)"></div>`;
@@ -1775,7 +1806,7 @@ function renderUpcoming() {
     }
     html += renderUpcomingGame(g, data.key_numbers || [], i);
   });
-  el.innerHTML = seg + header + search + bar + moveChipsHtml(upcomingFilters.moves, "upcoming")
+  el.innerHTML = seg + header + search + bar + chipsPanelHtml("upcoming", dateOpts)
     + `<div id="upcoming-list">${html}</div><div class="empty-state" id="upcoming-nomatch" hidden>No games match.</div>`;
   applyUpcomingSearch();
 }
