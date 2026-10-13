@@ -1460,6 +1460,9 @@ function loadPerformance() {
 let upcomingSport = null;      // set on first open (last choice, else the sport you were viewing)
 const upcomingCache = {};      // sport key -> parsed file, or null when it could not be loaded
 let upcomingGames = [];         // Games-style objects for the cards on screen, by index (the model dropdown reads these)
+let upcomingQuery = "";         // team search text; kept across filter changes, reset when the sport changes
+let upcomingTotal = 0;         // games in the file, and whether any filter is on (for the "Showing X of Y" note)
+let upcomingFilterActive = false;
 let upcomingDate = "all";      // "all" or an ET calendar day (YYYY-MM-DD); reset when the sport changes
 
 function selectUpcoming() {
@@ -1477,6 +1480,7 @@ function selectUpcoming() {
 function selectUpcomingSport(key) {
   upcomingSport = key;
   upcomingDate = "all";
+  upcomingQuery = "";
   try { localStorage.setItem("wagrx-upcoming-sport", key); } catch (e) {}
   loadUpcoming();
 }
@@ -1534,7 +1538,7 @@ function renderUpcomingGame(g, keyNumbers, idx) {
   const time = etLabel(g.start, { hour: "numeric", minute: "2-digit" });
   const dayPrefix = upcomingFilters.sort === "start" ? "" : etLabel(g.start, { weekday: "short", month: "short", day: "numeric" }) + ", ";
   return `
-    <div class="game-card static">
+    <div class="game-card static" data-search="${g.game.toLowerCase()}">
       <div class="game-header">
         <div class="game-title">${g.game}</div>
         <div class="game-meta">${dayPrefix}${time} ET &middot; Line: ${fav}</div>
@@ -1598,6 +1602,7 @@ function setUpcomingDate(value) {
 function clearUpcomingFilters() {
   for (const d of UPCOMING_FILTERS) if (d.key !== "sort") upcomingFilters[d.key] = d.def;
   upcomingDate = "all";
+  upcomingQuery = "";
   saveUpcomingFilters();
   renderUpcoming();
 }
@@ -1648,9 +1653,11 @@ function renderUpcoming() {
     `<select class="filter-select${upcomingFilters[d.key] !== d.def ? " on" : ""}" aria-label="${d.label}" onchange="setUpcomingFilter('${d.key}', this.value)">${
       d.opts.map(([v, t]) => `<option value="${v}"${upcomingFilters[d.key] === v ? " selected" : ""}>${d.label}: ${t}</option>`).join("")}</select>`
   ).join("");
-  const active = upcomingDate !== "all" || defs.some(d => d.key !== "sort" && upcomingFilters[d.key] !== d.def);
-  const meta = active ? `<span>Showing ${kept.length} of ${games.length}</span><button class="filter-clear" onclick="clearUpcomingFilters()">Clear filters</button>` : "";
-  const bar = `<div class="filter-bar"><div class="filter-row">${selects}</div><div class="filter-meta">${meta}</div></div>`;
+  upcomingTotal = games.length;
+  upcomingFilterActive = upcomingDate !== "all" || defs.some(d => d.key !== "sort" && upcomingFilters[d.key] !== d.def);
+  const search = `<div class="controls-row"><input type="search" id="upcoming-search" class="search-box" placeholder="Search teams&hellip;"`
+    + ` value="${upcomingQuery.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;")}" oninput="setUpcomingSearch(this.value)"></div>`;
+  const bar = `<div class="filter-bar"><div class="filter-row">${selects}</div><div class="filter-meta" id="upcoming-meta"></div></div>`;
 
   let day = null, html = "";
   upcomingGames = [];
@@ -1661,7 +1668,40 @@ function renderUpcoming() {
     }
     html += renderUpcomingGame(g, data.key_numbers || [], i);
   });
-  el.innerHTML = seg + header + bar + (html || '<div class="empty-state">No games match these filters.</div>');
+  el.innerHTML = seg + header + search + bar
+    + `<div id="upcoming-list">${html}</div><div class="empty-state" id="upcoming-nomatch" hidden>No games match.</div>`;
+  applyUpcomingSearch();
+}
+
+function setUpcomingSearch(value) {
+  upcomingQuery = value;
+  applyUpcomingSearch();
+}
+
+// Hides the cards that do not match the search text (no re-render, so typing keeps focus), hides day
+// headings left with no visible card, and updates the "Showing X of Y" note.
+function applyUpcomingSearch() {
+  const q = upcomingQuery.trim().toLowerCase();
+  const list = document.getElementById("upcoming-list");
+  if (!list) return;
+  const cards = [...list.querySelectorAll(".game-card")];
+  let visible = 0;
+  for (const card of cards) {
+    const match = !q || (card.dataset.search || "").includes(q);
+    card.classList.toggle("hidden-by-search", !match);
+    if (match) visible++;
+  }
+  for (const heading of list.querySelectorAll(".perf-sub")) {
+    let anyVisible = false;
+    for (let n = heading.nextElementSibling; n && !n.classList.contains("perf-sub"); n = n.nextElementSibling) {
+      if (n.classList.contains("game-card") && !n.classList.contains("hidden-by-search")) { anyVisible = true; break; }
+    }
+    heading.hidden = !anyVisible;
+  }
+  document.getElementById("upcoming-nomatch").hidden = visible > 0;
+  const active = upcomingFilterActive || q !== "";
+  document.getElementById("upcoming-meta").innerHTML = active
+    ? `<span>Showing ${visible} of ${upcomingTotal}</span><button class="filter-clear" onclick="clearUpcomingFilters()">Clear filters</button>` : "";
 }
 
 function loadUpcoming() {
@@ -1682,6 +1722,12 @@ let historyDate = null;
 let historyRuns = [];   // that day's saved runs (days/<sport>/<date>.json), if any
 let historyRun = "graded";  // "graded" (each game's last run before kickoff) or an index into historyRuns
 let historyGames = [];  // games currently rendered in History (for the detail dropdowns)
+let historyQuery = "";  // team search text; kept across date/run/filter changes, reset when the sport changes
+// Date scope. Untouched ("auto"): the latest day, but a search spans every graded day. Picking a date in the
+// dropdown pins the view (and the search) to that day; picking "All dates" pins it to every day.
+let historyDateExplicit = false;
+let historyAllExplicit = false;
+function historyScopeAll() { return historyAllExplicit || (!historyDateExplicit && historyQuery.trim() !== ""); }
 
 function selectHistory() {
   currentView = "history";
@@ -1702,6 +1748,9 @@ function fmtDate(d) {
 
 function loadHistory(key) {
   historySport = key;
+  historyQuery = "";
+  historyDateExplicit = false;
+  historyAllExplicit = false;
   historyData = null;
   const sport = SPORTS.find(s => s.key === key);
   document.getElementById("history").innerHTML = '<div class="empty-state">Loading&hellip;</div>';
@@ -1717,6 +1766,14 @@ function loadHistory(key) {
 }
 
 function selectHistoryDate(d) {
+  if (d === "all") {
+    historyAllExplicit = true;
+    historyDateExplicit = false;
+    renderHistory();
+    return;
+  }
+  historyAllExplicit = false;
+  historyDateExplicit = true;
   historyDate = d;
   loadHistoryRuns();
 }
@@ -1748,7 +1805,8 @@ function resultTag(result) {
   return "";
 }
 
-function renderHistoryGame(g) {
+function renderHistoryGame(g, date = null) {
+  const dateLabel = date ? (([y, m, d]) => new Date(y, m - 1, d).toLocaleDateString("en-US", { month: "short", day: "numeric" }))(date.split("-").map(Number)) + " &middot; " : "";
   const picks = g.picks || {};
   const c = picks.CONSENSUS || {};
   const modelRows = Object.entries(picks).filter(([k]) => k !== "CONSENSUS" && !isSharpKey(k)).map(([k, p]) =>
@@ -1762,12 +1820,12 @@ function renderHistoryGame(g) {
   const statusTag = g.status ? `<span class="tag neutral">${g.status.split(" (")[0]}</span>` : resultTag(c.result);
   const sharpGame = { ...g, detail: { "M6: Sharp Money": g.sharp || {} } };
   return `
-    <div class="game-card">
+    <div class="game-card" data-search="${(g.game || "").toLowerCase()}">
       <div class="game-header" onclick="this.closest('.game-card').classList.toggle('expanded')">
         <div class="game-title-row">
           <div>
             <div class="game-title">${g.game || ""}</div>
-            <div class="game-meta">Line: ${g.line || "N/A"}${final}</div>
+            <div class="game-meta">${dateLabel}Line: ${g.line || "N/A"}${final}</div>
           </div>
           <span class="chevron">&#9654;</span>
         </div>
@@ -1792,8 +1850,10 @@ function renderHistory() {
   const sport = SPORTS.find(s => s.key === historySport);
   const days = historyDays();
   const sportOpts = SPORTS.map(s => `<option value="${s.key}"${s.key === historySport ? " selected" : ""}>${s.label}</option>`).join("");
+  const scopeAll = historyScopeAll();
   const dateOpts = days.length
-    ? days.map(d => `<option value="${d}"${d === historyDate ? " selected" : ""}>${fmtDate(d)}</option>`).join("")
+    ? `<option value="all"${scopeAll ? " selected" : ""}>All dates</option>`
+      + days.map(d => `<option value="${d}"${!scopeAll && d === historyDate ? " selected" : ""}>${fmtDate(d)}</option>`).join("")
     : "<option>No graded days</option>";
   const runOpts = `<option value="graded"${historyRun === "graded" ? " selected" : ""}>Graded</option>` + historyRuns.map((r, i) =>
     `<option value="${i}"${i === historyRun ? " selected" : ""}>${new Date(r.time).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })}</option>`
@@ -1802,7 +1862,9 @@ function renderHistory() {
     <div class="controls-row">
       <select class="runtime-select" onchange="loadHistory(this.value)">${sportOpts}</select>
       <select class="runtime-select" onchange="selectHistoryDate(this.value)"${days.length ? "" : " disabled"}>${dateOpts}</select>
-      ${historyRuns.length ? `<select class="runtime-select" onchange="selectHistoryRun(this.value)" title="Run time">${runOpts}</select>` : ""}
+      ${historyRuns.length && !scopeAll ? `<select class="runtime-select" onchange="selectHistoryRun(this.value)" title="Run time">${runOpts}</select>` : ""}
+      <input type="search" id="history-search" class="search-box" placeholder="Search teams&hellip;"
+        value="${historyQuery.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;")}" oninput="setHistorySearch(this.value)">
     </div>`;
   const container = document.getElementById("history");
   if (!days.length) {
@@ -1814,7 +1876,20 @@ function renderHistory() {
 
   // Build one item per game for the chosen view, then filter/sort them like the Games view.
   let items, results, note;
-  if (historyRun === "graded" && historyRuns.length) {
+  if (scopeAll) {
+    // Every graded day, newest first, as the simple graded cards (the per-run snapshots are per day).
+    historyGames = [];
+    items = [];
+    results = [];
+    for (const d of days) {
+      for (const h of historyData.days[d] || []) {
+        const res = ((h.picks || {}).CONSENSUS || {}).result || null;
+        items.push({ fx: historyEntryFacts(h, res), html: () => renderHistoryGame(h, d) });
+        results.push(res);
+      }
+    }
+    note = `All ${days.length} graded days, newest first. Pick a date to narrow it to one day.`;
+  } else if (historyRun === "graded" && historyRuns.length) {
     // Each game exactly as it looked in the run that was graded (its last run before
     // kickoff). Games graded from the morning file (no saved run) use the simple card.
     historyGames = [];
@@ -1857,7 +1932,57 @@ function renderHistory() {
   const shown = applyFilters(items, "history");
   container.innerHTML = controls + dayRecordBar(results, items.length, note)
     + renderFilterBar("history", shown.length, items.length)
-    + (shown.length ? shown.map(it => it.html()).join("") : '<div class="empty-state">No games match these filters.</div>');
+    + `<div id="history-list">${shown.length ? shown.map(it => it.html()).join("") : '<div class="empty-state">No games match these filters.</div>'}</div>`
+    + '<div class="empty-state" id="history-nomatch" hidden>No games match.</div>';
+  applyHistorySearch();
+}
+
+function setHistorySearch(value) {
+  const wasAll = historyScopeAll();
+  historyQuery = value;
+  if (wasAll !== historyScopeAll()) {  // the first/last character switches between one day and all days
+    renderHistory();
+    const el = document.getElementById("history-search");
+    if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); }
+    return;
+  }
+  applyHistorySearch();
+}
+
+// Hides the cards that do not match the search text (no re-render, so typing keeps focus) and shows
+// "X of N games" in the record bar while a search is active.
+function applyHistorySearch() {
+  const list = document.getElementById("history-list");
+  if (!list) return;
+  const q = historyQuery.trim().toLowerCase();
+  const cards = [...list.querySelectorAll(".game-card")];
+  let visible = 0;
+  for (const card of cards) {
+    const match = !q || (card.dataset.search || "").includes(q);
+    card.classList.toggle("hidden-by-search", !match);
+    if (match) visible++;
+  }
+  const nomatch = document.getElementById("history-nomatch");
+  if (nomatch) nomatch.hidden = !(cards.length && q && visible === 0);
+  const count = document.querySelector("#history .hist-count");
+  if (count) {
+    const total = parseInt(count.dataset.count, 10);
+    count.textContent = q ? `${visible} of ${total} ${total === 1 ? "game" : "games"}` : `${total} ${total === 1 ? "game" : "games"}`;
+  }
+  // While searching, the consensus record is that of the matching games (read off their WIN/LOSS tags).
+  const rec = document.querySelector("#history .hist-rec-line");
+  if (rec) {
+    let w = parseInt(rec.dataset.w, 10), l = parseInt(rec.dataset.l, 10);
+    if (q) {
+      w = l = 0;
+      for (const card of cards) {
+        if (card.classList.contains("hidden-by-search")) continue;
+        const tags = [...card.querySelectorAll(".consensus-pick .tag")].map(x => x.textContent);  // FAV/DOG, then WIN/LOSS
+        if (tags.includes("WIN")) w++; else if (tags.includes("LOSS")) l++;
+      }
+    }
+    rec.innerHTML = `Consensus: <span class="hist-record">${w}-${l}</span>${w + l ? ` (${Math.round(w / (w + l) * 100)}%)` : ""}`;
+  }
 }
 
 // Facts for a simple History entry (picks stored as { pick, result }, sharp as raw splits).
@@ -1875,8 +2000,8 @@ function dayRecordBar(results, count, note) {
   const pct = w + l ? ` (${Math.round(w / (w + l) * 100)}%)` : "";
   return `
     <div class="status-bar">
-      <span>Consensus: <span class="hist-record">${w}-${l}</span>${pct}</span>
-      <span>${count} ${count === 1 ? "game" : "games"}</span>
+      <span class="hist-rec-line" data-w="${w}" data-l="${l}">Consensus: <span class="hist-record">${w}-${l}</span>${pct}</span>
+      <span class="hist-count" data-count="${count}">${count} ${count === 1 ? "game" : "games"}</span>
     </div>
     <div class="hist-note">${note}</div>`;
 }
