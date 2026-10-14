@@ -1456,6 +1456,14 @@ function headToHeadHtml(sportKey) {
     <table class="perf"><tr><th>Source</th><th>Games</th><th>Consensus</th><th>Sharp</th></tr>${rows}</table>`;
 }
 
+// A source added after the stats reset only has records from the day it first appeared in the graded history.
+// Returns ", first graded Oct 13" for those, "" for sources tracked since the reset (or when not yet known).
+function trackedSince(sportKey, pickKey, since) {
+  const first = (histGames[sportKey] || []).find(x => x.picks && x.picks[pickKey]);
+  if (!first || !since || first.day <= since) return "";
+  return ", first graded " + shortDay(first.day);
+}
+
 function renderPerfTable(sport, data) {
   if (!data || !data.models) {
     return `<div class="empty-state">No graded ${sport.label} games yet this season.</div>`;
@@ -1473,7 +1481,7 @@ function renderPerfTable(sport, data) {
     const cls = isConsensus ? "consensus-row-perf" : isSharp ? ("sharp-row-perf" + (firstSharp ? " first" : "")) : "";
     if (isSharp) firstSharp = false;
     return `<tr class="${cls}">
-      <td>${isSharp ? `${key === LINE_MOVE_KEY ? srcLabel : "Sharp: " + srcLabel} <span class="perf-info">(info, not in consensus)</span>` : key}</td>
+      <td>${isSharp ? `${key === LINE_MOVE_KEY ? srcLabel : "Sharp: " + srcLabel} <span class="perf-info">(info, not in consensus${trackedSince(sport.key, key, data.since)})</span>` : key}</td>
       <td>${w}-${l}</td>
       <td class="perf-pct">${pct}</td>
     </tr>`;
