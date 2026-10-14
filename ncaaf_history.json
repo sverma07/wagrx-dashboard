@@ -1,7 +1,129 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-10-13T06:00:03-04:00",
+  "updated": "2026-10-14T08:47:03-04:00",
   "days": {
+    "2026-10-13": [
+      {
+        "game": "Middle Tennessee Blue Raiders (H) vs Delaware Fightin' Blue Hens (A)",
+        "team_home": "Middle Tennessee Blue Raiders",
+        "team_away": "Delaware Fightin' Blue Hens",
+        "line": "DEL -1.5",
+        "favorite": "Delaware Fightin' Blue Hens -fav",
+        "final": "Middle Tennessee Blue Raiders 33, Delaware Fightin' Blue Hens 30",
+        "cover": "Middle Tennessee Blue Raiders",
+        "status": null,
+        "confidence": "61%",
+        "sharp": {
+          "home_b": 48.6,
+          "home_m": 49.88,
+          "away_b": 51.4,
+          "away_m": 50.12
+        },
+        "graded_run": "2026-10-13T18:19:18-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Delaware Fightin' Blue Hens",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Delaware Fightin' Blue Hens",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Middle Tennessee Blue Raiders",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Middle Tennessee Blue Raiders",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Delaware Fightin' Blue Hens",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Middle Tennessee Blue Raiders",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Middle Tennessee Blue Raiders",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Delaware Fightin' Blue Hens",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Middle Tennessee Blue Raiders",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Delaware Fightin' Blue Hens",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Jacksonville State Gamecocks (H) vs Florida International Panthers (A)",
+        "team_home": "Jacksonville State Gamecocks",
+        "team_away": "Florida International Panthers",
+        "line": "JXST -3",
+        "favorite": "Jacksonville State Gamecocks -fav",
+        "final": "Jacksonville State Gamecocks 27, Florida International Panthers 24",
+        "cover": null,
+        "status": "PUSH (not graded)",
+        "confidence": "100%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Florida International Panthers",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Florida International Panthers",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "Florida International Panthers",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Florida International Panthers",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Florida International Panthers",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Florida International Panthers",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      }
+    ],
     "2026-10-12": [],
     "2026-10-11": [],
     "2026-10-10": [
