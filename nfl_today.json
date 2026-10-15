@@ -273,6 +273,99 @@
           "event_id": "401872995"
         }
       ]
+    },
+    {
+      "time": "2026-10-15T06:05:09-04:00",
+      "games": [
+        {
+          "game": "Denver Broncos (H) vs Seattle Seahawks (A)",
+          "spread": "SEA -2.5",
+          "favorite": "Seattle Seahawks -fav",
+          "confidence": "82%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Seattle Seahawks",
+            "M2: Relevance": "TAKE: Seattle Seahawks",
+            "M3: Efficiency": "TAKE: Seattle Seahawks",
+            "M4: ATS Trends": "TAKE: Denver Broncos",
+            "M5: Luck": "TAKE: Seattle Seahawks",
+            "M6: Sharp Money": "TAKE: Seattle Seahawks",
+            "M7: QB Injury Edge": "PUSH",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Seattle Seahawks",
+            "Sharp: Circa": "TAKE: Denver Broncos",
+            "Sharp: DraftKings": "TAKE: Seattle Seahawks"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 16,
+              "away": 29
+            },
+            "M2: Relevance": {
+              "home": 18.3516,
+              "away": 35.7196
+            },
+            "M3: Efficiency": {
+              "margin": -4.3
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 1
+            },
+            "M5: Luck": {
+              "home": "0.8",
+              "away": "-0.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": 40.35,
+              "home_m": 34.89,
+              "away_b": 59.65,
+              "away_m": 65.11
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Bo Nix (Active)",
+              "away_status": "Sam Darnold (Active)"
+            },
+            "M8: Line Movement": {
+              "open_home": 2.5,
+              "current_home": 2.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": 2.5,
+                "last": 2.5,
+                "delta": 0.0
+              },
+              "vs_consensus": null
+            }
+          },
+          "team_home": "Denver Broncos",
+          "team_away": "Seattle Seahawks",
+          "start": "2026-10-16T00:15Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 33.0,
+              "home_m": 92.0,
+              "away_b": 67.0,
+              "away_m": 8.0,
+              "line": "+2.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 32.0,
+              "home_m": 11.0,
+              "away_b": 68.0,
+              "away_m": 89.0,
+              "line": "+2.5",
+              "thin": false
+            }
+          },
+          "home_id": "7",
+          "away_id": "26",
+          "event_id": "401872995"
+        }
+      ]
     }
   ]
 }
