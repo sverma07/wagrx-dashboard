@@ -2466,6 +2466,261 @@
           "event_id": "401860923"
         }
       ]
+    },
+    {
+      "time": "2026-10-15T18:00:11-04:00",
+      "games": [
+        {
+          "game": "UAB Blazers (H) vs East Carolina Pirates (A)",
+          "spread": "ECU -5.5",
+          "favorite": "East Carolina Pirates -fav",
+          "confidence": "78%",
+          "picks": {
+            "M1: Normal Score": "TAKE: East Carolina Pirates",
+            "M2: Relevance": "TAKE: East Carolina Pirates",
+            "M3: Efficiency": "TAKE: UAB Blazers",
+            "M4: ATS Trends": "TAKE: East Carolina Pirates",
+            "M5: Luck": "TAKE: East Carolina Pirates",
+            "M6: Sharp Money": "TAKE: UAB Blazers",
+            "M8: Line Movement": "TAKE: UAB Blazers",
+            "CONSENSUS": "TAKE: East Carolina Pirates",
+            "Sharp: Circa": "TAKE: UAB Blazers",
+            "Sharp: DraftKings": "TAKE: UAB Blazers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 14,
+              "away": 26
+            },
+            "M2: Relevance": {
+              "home": 23.358,
+              "away": 51.5964
+            },
+            "M3: Efficiency": {
+              "margin": -1.3
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 4
+            },
+            "M5: Luck": {
+              "home": "0.7",
+              "away": "0.0"
+            },
+            "M6: Sharp Money": {
+              "home_b": 52.7,
+              "home_m": 55.71,
+              "away_b": 47.3,
+              "away_m": 44.29
+            },
+            "M8: Line Movement": {
+              "open_home": 6.5,
+              "current_home": 4.5,
+              "delta": -2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": 5.5,
+                "last": 4.0,
+                "delta": -1.5
+              }
+            }
+          },
+          "team_home": "UAB Blazers",
+          "team_away": "East Carolina Pirates",
+          "start": "2026-10-15T23:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 45.0,
+              "home_m": 57.0,
+              "away_b": 55.0,
+              "away_m": 43.0,
+              "line": "+4",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 55.0,
+              "home_m": 61.0,
+              "away_b": 45.0,
+              "away_m": 39.0,
+              "line": "+4.5",
+              "thin": false
+            }
+          },
+          "event_id": "401862800"
+        },
+        {
+          "game": "Old Dominion Monarchs (H) vs Georgia Southern Eagles (A)",
+          "spread": "GASO -3.5",
+          "favorite": "Georgia Southern Eagles -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Georgia Southern Eagles",
+            "M2: Relevance": "TAKE: Georgia Southern Eagles",
+            "M3: Efficiency": "TAKE: Georgia Southern Eagles",
+            "M4: ATS Trends": "TAKE: Georgia Southern Eagles",
+            "M5: Luck": "TAKE: Georgia Southern Eagles",
+            "M6: Sharp Money": "TAKE: Old Dominion Monarchs",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Georgia Southern Eagles",
+            "Sharp: Circa": "TAKE: Old Dominion Monarchs",
+            "Sharp: DraftKings": "TAKE: Georgia Southern Eagles"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 10,
+              "away": 33
+            },
+            "M2: Relevance": {
+              "home": 16.6437,
+              "away": 57.5637
+            },
+            "M3: Efficiency": {
+              "margin": -4.8
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 11
+            },
+            "M5: Luck": {
+              "home": "0.0",
+              "away": "-0.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": 46.46,
+              "home_m": 48.36,
+              "away_b": 53.54,
+              "away_m": 51.64
+            },
+            "M8: Line Movement": {
+              "open_home": 2.5,
+              "current_home": 3.0,
+              "delta": 0.5,
+              "crosses_key": true,
+              "size": 1.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": 4.0,
+                "last": 3.0,
+                "delta": -1.0
+              },
+              "conflict": true
+            }
+          },
+          "team_home": "Old Dominion Monarchs",
+          "team_away": "Georgia Southern Eagles",
+          "start": "2026-10-15T23:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 58.0,
+              "home_m": 63.0,
+              "away_b": 42.0,
+              "away_m": 37.0,
+              "line": "+3",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 36.0,
+              "home_m": 23.0,
+              "away_b": 64.0,
+              "away_m": 77.0,
+              "line": "+3",
+              "thin": false
+            }
+          },
+          "event_id": "401869950"
+        },
+        {
+          "game": "Texas State Bobcats (H) vs Colorado State Rams (A)",
+          "spread": "TXST -14",
+          "favorite": "Texas State Bobcats -fav",
+          "confidence": "74%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Texas State Bobcats",
+            "M2: Relevance": "TAKE: Texas State Bobcats",
+            "M3: Efficiency": "TAKE: Colorado State Rams",
+            "M4: ATS Trends": "PUSH",
+            "M5: Luck": "TAKE: Texas State Bobcats",
+            "M6: Sharp Money": "TAKE: Colorado State Rams",
+            "M8: Line Movement": "TAKE: Texas State Bobcats",
+            "CONSENSUS": "TAKE: Texas State Bobcats",
+            "Sharp: Circa": "TAKE: Colorado State Rams",
+            "Sharp: DraftKings": "TAKE: Colorado State Rams"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 21,
+              "away": 18
+            },
+            "M2: Relevance": {
+              "home": 37.5168,
+              "away": 31.2152
+            },
+            "M3: Efficiency": {
+              "margin": -0.7
+            },
+            "M4: ATS Trends": {
+              "home": 4,
+              "away": 4
+            },
+            "M5: Luck": {
+              "home": "-0.7",
+              "away": "-0.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": 46.52,
+              "home_m": 36.36,
+              "away_b": 53.48,
+              "away_m": 63.64
+            },
+            "M8: Line Movement": {
+              "open_home": -12.5,
+              "current_home": -14.5,
+              "delta": -2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -14.0,
+                "last": -14.5,
+                "delta": -0.5
+              }
+            }
+          },
+          "team_home": "Texas State Bobcats",
+          "team_away": "Colorado State Rams",
+          "start": "2026-10-16T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 56.0,
+              "home_m": 14.0,
+              "away_b": 44.0,
+              "away_m": 86.0,
+              "line": "-14.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 50.0,
+              "home_m": 34.0,
+              "away_b": 50.0,
+              "away_m": 66.0,
+              "line": "-14.5",
+              "thin": false
+            }
+          },
+          "event_id": "401860923"
+        }
+      ]
     }
   ]
 }
