@@ -1145,6 +1145,176 @@
           "event_id": "401871068"
         }
       ]
+    },
+    {
+      "time": "2026-10-14T20:00:07-04:00",
+      "games": [
+        {
+          "game": "Missouri State Bears (H) vs Kennesaw State Owls (A)",
+          "spread": "KENN -3",
+          "favorite": "Kennesaw State Owls -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Kennesaw State Owls",
+            "M2: Relevance": "TAKE: Kennesaw State Owls",
+            "M3: Efficiency": "TAKE: Kennesaw State Owls",
+            "M4: ATS Trends": "TAKE: Kennesaw State Owls",
+            "M5: Luck": "TAKE: Kennesaw State Owls",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Missouri State Bears",
+            "CONSENSUS": "TAKE: Kennesaw State Owls",
+            "Sharp: Circa": "TAKE: Kennesaw State Owls",
+            "Sharp: DraftKings": "TAKE: Kennesaw State Owls"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 3,
+              "away": 39
+            },
+            "M2: Relevance": {
+              "home": 5.2567,
+              "away": 70.7823
+            },
+            "M3: Efficiency": {
+              "margin": -4.5
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 10
+            },
+            "M5: Luck": {
+              "home": "-0.7",
+              "away": "-1.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 3.0,
+              "current_home": 2.5,
+              "delta": -0.5,
+              "crosses_key": true,
+              "size": 0.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": 3.0,
+                "last": 2.5,
+                "delta": -0.5
+              }
+            }
+          },
+          "team_home": "Missouri State Bears",
+          "team_away": "Kennesaw State Owls",
+          "start": "2026-10-14T23:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 40.0,
+              "home_m": 35.0,
+              "away_b": 60.0,
+              "away_m": 65.0,
+              "line": "+2.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 31.0,
+              "home_m": 21.0,
+              "away_b": 69.0,
+              "away_m": 79.0,
+              "line": "+2.5",
+              "thin": false
+            }
+          },
+          "event_id": "401871054"
+        },
+        {
+          "game": "Sam Houston Bearkats (H) vs Western Kentucky Hilltoppers (A)",
+          "spread": "WKU -1.5",
+          "favorite": "Western Kentucky Hilltoppers -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Sam Houston Bearkats",
+            "M2: Relevance": "TAKE: Sam Houston Bearkats",
+            "M3: Efficiency": "TAKE: Sam Houston Bearkats",
+            "M4: ATS Trends": "TAKE: Sam Houston Bearkats",
+            "M5: Luck": "TAKE: Sam Houston Bearkats",
+            "M6: Sharp Money": "TAKE: Sam Houston Bearkats",
+            "M8: Line Movement": "TAKE: Sam Houston Bearkats",
+            "CONSENSUS": "TAKE: Sam Houston Bearkats",
+            "Sharp: Circa": "TAKE: Western Kentucky Hilltoppers",
+            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 22,
+              "away": 20
+            },
+            "M2: Relevance": {
+              "home": 39.4552,
+              "away": 37.8606
+            },
+            "M3: Efficiency": {
+              "margin": 2.8
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 5
+            },
+            "M5: Luck": {
+              "home": "-0.6",
+              "away": "-0.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": 48.62,
+              "home_m": 57.02,
+              "away_b": 51.38,
+              "away_m": 42.98
+            },
+            "M8: Line Movement": {
+              "open_home": 1.5,
+              "current_home": 1.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "circa"
+              ],
+              "circa": {
+                "first": 2.0,
+                "last": 0.0,
+                "delta": -2.0
+              }
+            }
+          },
+          "team_home": "Sam Houston Bearkats",
+          "team_away": "Western Kentucky Hilltoppers",
+          "start": "2026-10-15T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 61.0,
+              "home_m": 24.0,
+              "away_b": 39.0,
+              "away_m": 76.0,
+              "line": "0",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 51.0,
+              "home_m": 72.0,
+              "away_b": 49.0,
+              "away_m": 28.0,
+              "line": "+1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401871068"
+        }
+      ]
     }
   ]
 }
