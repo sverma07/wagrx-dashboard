@@ -370,6 +370,24 @@
   table.perf .perf-info { font-size: 0.75rem; }
   .perf-pct { font-weight: 700; }
 
+  /* Combination explorer */
+  .combo-best { background: var(--accent-soft); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin: 12px 0 14px; }
+  .combo-best-label { font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+  .combo-best-main { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
+  .combo-best-desc { font-weight: 700; font-size: 0.95rem; }
+  .combo-best-rec { color: var(--win); font-weight: 700; white-space: nowrap; }
+  .combo-apply { margin-top: 8px; padding: 4px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--neutral-bg); color: var(--text); font-size: 0.78rem; font-weight: 600; cursor: pointer; }
+  .combo-apply:hover { border-color: var(--accent); }
+  .combo-dim { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .combo-dim-label { flex: 0 0 120px; font-size: 0.82rem; color: var(--text-dim); font-weight: 600; }
+  .combo-result { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  .combo-rec { font-size: 1.6rem; font-weight: 800; }
+  .combo-pct { font-size: 1.1rem; font-weight: 700; }
+  .combo-meta { color: var(--text-dim); font-size: 0.8rem; }
+  .combo-bar { height: 6px; border-radius: 3px; background: var(--loss-bg); margin-top: 10px; overflow: hidden; }
+  .combo-bar > i { display: block; height: 100%; background: var(--win); }
+  @media (max-width: 520px) { .combo-dim-label { flex-basis: 100%; } }
+
   /* Net-wins chart. Series colors: reference palette dark steps, slots 1-4, validated
      against the card surface #17181d (adjacent CVD dE 8.4, normal-vision 19.8, all >= 3:1). */
   .net-card { padding: 18px 18px 14px; }
@@ -1516,6 +1534,7 @@ function selectPerfSport(key) {
   document.getElementById("perf-since").textContent = since
     ? `Each model's graded record since ${fmtDate(since)}. Consensus is highlighted.`
     : "Each model's graded record since the last reset. Consensus is highlighted.";
+  renderCombo();
 }
 
 function perfCardHtml() {
@@ -1532,6 +1551,130 @@ function perfCardHtml() {
     </div>`;
 }
 
+
+// ---- Performance: combination explorer. Consensus record for games matching a mix of signals, using the
+// picks saved with each graded game (so it needs no extra data). "Aligned" = the signal picked the same team as consensus.
+const COMBO_MIN_GAMES = 5;
+const COMBO_DIMS = [
+  { key: "sharp", label: "Sharps", opts: [["aligned", "Aligned"], ["against", "Against"], ["none", "No read"]] },
+  { key: "line", label: "Line movement", opts: [["aligned", "With us"], ["against", "Against us"], ["none", "No read"]] },
+  { key: "conf", label: "Confidence", opts: [["high", "70%+"], ["mid", "60-69%"], ["low", "Under 60%"]] },
+  { key: "side", label: "Our pick is", opts: [["fav", "Favorite"], ["dog", "Underdog"]] },
+];
+const COMBO_ANY = { sharp: "any", line: "any", conf: "any", side: "any" };
+let comboSel = { ...COMBO_ANY };
+
+function comboTeam(p) {
+  p = p && p.pick ? String(p.pick) : "";
+  p = p.replace(/^TAKE:/, "").trim();
+  return !p || p === "N/A" || p === "PUSH" ? null : p;
+}
+
+// The combination facts for one graded game, computed once and cached on it.
+function comboFacts(x) {
+  if (x.f) return x.f;
+  const picks = x.picks || {};
+  const cons = comboTeam(picks.CONSENSUS);
+  const votes = {};
+  for (const src of SHARP_SOURCES) { const t = comboTeam(picks[src.pick]); if (t) votes[t] = (votes[t] || 0) + 1; }
+  const ranked = Object.entries(votes).sort((a, b) => b[1] - a[1]);
+  const sharpTeam = ranked.length && ranked[0][1] >= 2 && (ranked.length === 1 || ranked[0][1] > ranked[1][1]) ? ranked[0][0] : null;
+  const lineTeam = comboTeam(picks[LINE_MOVE_KEY]);
+  const vs = t => !cons || !t ? "none" : t === cons ? "aligned" : "against";
+  const fav = String(x.fav || "").replace(/\s*-fav\s*$/, "").trim();
+  return (x.f = {
+    sharp: vs(sharpTeam), line: vs(lineTeam),
+    conf: isNaN(x.conf) ? "none" : x.conf >= 70 ? "high" : x.conf >= 60 ? "mid" : "low",
+    side: !cons || !fav ? "none" : cons === fav ? "fav" : "dog",
+  });
+}
+
+function comboRecord(games, sel) {
+  let w = 0, l = 0;
+  for (const x of games) {
+    const f = comboFacts(x);
+    if (COMBO_DIMS.some(d => sel[d.key] !== "any" && f[d.key] !== sel[d.key])) continue;
+    if (x.result === "WIN") w++; else l++;
+  }
+  return { w, l, n: w + l };
+}
+
+// Lower bound of the 95% Wilson interval: a win rate discounted when the sample is small,
+// so 3-0 does not outrank 18-7.
+function wilsonLow(w, n) {
+  if (!n) return 0;
+  const z = 1.96, p = w / n, d = 1 + z * z / n;
+  return (p + z * z / (2 * n) - z * Math.sqrt((p * (1 - p) + z * z / (4 * n)) / n)) / d;
+}
+
+function comboLabel(sel) {
+  const parts = COMBO_DIMS.filter(d => sel[d.key] !== "any").map(d => `${d.label}: ${d.opts.find(([v]) => v === sel[d.key])[1]}`);
+  return parts.length ? parts.join(" &middot; ") : "All graded games";
+}
+
+function bestCombo(games) {
+  let best = null;
+  const walk = (i, sel) => {
+    if (i === COMBO_DIMS.length) {
+      if (COMBO_DIMS.every(d => sel[d.key] === "any")) return;
+      const r = comboRecord(games, sel);
+      if (r.n < COMBO_MIN_GAMES) return;
+      const score = wilsonLow(r.w, r.n);
+      if (!best || score > best.score || (score === best.score && r.n > best.n)) best = { sel: { ...sel }, ...r, score };
+      return;
+    }
+    const d = COMBO_DIMS[i];
+    for (const v of ["any", ...d.opts.map(o => o[0])]) walk(i + 1, { ...sel, [d.key]: v });
+  };
+  walk(0, {});
+  return best;
+}
+
+function setCombo(key, val) { comboSel[key] = val; renderCombo(); }
+function applyBestCombo() { const b = bestCombo(histGames[perfSport] || []); if (b) { comboSel = { ...b.sel }; renderCombo(); } }
+function resetCombo() { comboSel = { ...COMBO_ANY }; renderCombo(); }
+
+function renderCombo() {
+  const el = document.getElementById("combo-body");
+  if (!el) return;
+  const games = histGames[perfSport] || [];
+  if (!games.length) { el.innerHTML = '<div class="empty-state">No graded games yet to combine.</div>'; return; }
+  const best = bestCombo(games);
+  const isBest = best && COMBO_DIMS.every(d => comboSel[d.key] === best.sel[d.key]);
+  const bestHtml = best
+    ? `<div class="combo-best"><div class="combo-best-label">Best combination so far</div>
+        <div class="combo-best-main"><span class="combo-best-desc">${comboLabel(best.sel)}</span>
+        <span class="combo-best-rec">${best.w}-${best.l} (${Math.round(best.w / best.n * 100)}%)</span></div>
+        ${isBest ? "" : '<button type="button" class="combo-apply" onclick="applyBestCombo()">Show this combination</button>'}</div>`
+    : `<div class="combo-best"><div class="combo-best-label">Best combination so far</div>
+        <div class="combo-meta">Needs a combination with at least ${COMBO_MIN_GAMES} graded games.</div></div>`;
+  const dims = COMBO_DIMS.map(d => `<div class="combo-dim"><span class="combo-dim-label">${d.label}</span>
+      <div class="seg" role="group" aria-label="${d.label}">${[["any", "Any"], ...d.opts].map(([v, t]) =>
+        `<button type="button" class="range-btn${comboSel[d.key] === v ? " active" : ""}" onclick="setCombo('${d.key}','${v}')">${t}</button>`).join("")}</div></div>`).join("");
+  const r = comboRecord(games, comboSel), all = comboRecord(games, COMBO_ANY);
+  const pct = r.n ? Math.round(r.w / r.n * 100) : null;
+  const result = `<div class="combo-result"><span class="combo-rec">${r.n ? r.w + "-" + r.l : "N/A"}</span>
+      <span class="combo-pct">${pct === null ? "" : pct + "%"}</span>
+      <span class="combo-meta">${r.n} game${r.n === 1 ? "" : "s"}${r.n && r.n < COMBO_MIN_GAMES ? " (small sample)" : ""} &middot; all games: ${all.w}-${all.l}</span></div>
+      ${r.n ? `<div class="combo-bar"><i style="width:${pct}%"></i></div>` : ""}`;
+  el.innerHTML = bestHtml + dims + result
+    + `<div class="perf-note" style="margin-top:12px">Consensus record in games matching your picks. "Aligned" means that signal picked the same team as consensus. `
+    + `Best is ranked by win rate discounted for sample size, so tiny samples do not top the list. <button type="button" class="filter-clear" onclick="resetCombo()">Reset</button></div>`;
+}
+
+function comboCardHtml() {
+  return `
+    <div class="perf-card">
+      <div class="net-head">
+        <div class="seg" role="group" aria-label="Sport">${SPORTS.map(sp =>
+          `<button class="range-btn perf-sport-btn${sp.key === perfSport ? " active" : ""}" data-sport="${sp.key}" onclick="selectPerfSport('${sp.key}')">${sp.label}</button>`).join("")}
+        </div>
+        <h2>Combination Explorer</h2>
+        <div class="net-sub">Pick signals to see how consensus has done when they line up.</div>
+      </div>
+      <div id="combo-body"></div>
+    </div>`;
+}
 
 // ---- Performance: net wins (consensus W minus L, against the spread) over time ----
 const NET_RANGES = [{ key: "1w", label: "1W", days: 7 }, { key: "1m", label: "1M", days: 30 },
@@ -1563,7 +1706,7 @@ function loadNetData() {
           for (const g of games || []) {
             const r = ((g.picks || {}).CONSENSUS || {}).result;
             if (r === "WIN") w++; else if (r === "LOSS") l++;
-            if (r === "WIN" || r === "LOSS") flat.push({ day, conf: parseInt(g.confidence, 10), result: r, picks: g.picks });
+            if (r === "WIN" || r === "LOSS") flat.push({ day, conf: parseInt(g.confidence, 10), result: r, picks: g.picks, fav: g.favorite });
           }
           if (w || l) byDay[day] = { w, l };
         }
@@ -1796,7 +1939,7 @@ function loadPerformance() {
   )).then(results => {
     perfResults = results;
     if (!perfSport) perfSport = currentSport;
-    container.innerHTML = netCardHtml() + perfCardHtml();
+    container.innerHTML = netCardHtml() + perfCardHtml() + comboCardHtml();
     selectPerfSport(perfSport);
     loadNetData().then(() => { renderNetChart(true); selectPerfSport(perfSport); });
   });
