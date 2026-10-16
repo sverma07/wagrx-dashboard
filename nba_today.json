@@ -1,42 +1,98 @@
 {
   "sport": "NBA",
-  "date": "2026-10-15",
+  "date": "2026-10-16",
   "snapshots": [
     {
-      "time": "2026-10-15T00:41:16-04:00",
+      "time": "2026-10-16T00:41:20-04:00",
       "games": [
         {
-          "game": "New York Knicks (H) vs Toronto Raptors (A)",
-          "spread": "NY -5.5",
-          "favorite": "New York Knicks -fav",
-          "confidence": "75%",
+          "game": "Orlando Magic (H) vs Miami Heat (A)",
+          "spread": "ORL -2.5",
+          "favorite": "Orlando Magic -fav",
+          "confidence": "100%",
           "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "TAKE: Toronto Raptors",
-            "M4: ATS Trends": "TAKE: New York Knicks",
+            "M1: Normal Score": "TAKE: Miami Heat",
+            "M2: Relevance": "TAKE: Miami Heat",
+            "M3: Efficiency": "TAKE: Miami Heat",
+            "M4: ATS Trends": "TAKE: Miami Heat",
             "M5: Luck": "N/A",
             "M6: Sharp Money": "N/A",
             "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New York Knicks",
+            "CONSENSUS": "TAKE: Miami Heat",
             "Sharp: Circa": "N/A",
             "Sharp: DraftKings": "N/A"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 71,
-              "away": 32
+              "home": 42,
+              "away": 64
             },
             "M2: Relevance": {
-              "home": 1880.621,
-              "away": 211.6437
+              "home": 817.9752,
+              "away": 1426.8036
             },
             "M3: Efficiency": {
-              "margin": 2.8
+              "margin": -0.8
             },
             "M4: ATS Trends": {
-              "home": 11,
-              "away": 3
+              "home": 2,
+              "away": 12
+            },
+            "M5: Luck": {
+              "home": "N/A",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": -2.5,
+              "delta": 0.0,
+              "crosses_key": false
+            }
+          },
+          "team_home": "Orlando Magic",
+          "team_away": "Miami Heat",
+          "start": "2026-10-16T23:00Z",
+          "sharp_books": {},
+          "event_id": "401898406"
+        },
+        {
+          "game": "Philadelphia 76ers (H) vs Boston Celtics (A)",
+          "spread": "PHI -5.5",
+          "favorite": "Philadelphia 76ers -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Boston Celtics",
+            "M2: Relevance": "TAKE: Boston Celtics",
+            "M3: Efficiency": "TAKE: Boston Celtics",
+            "M4: ATS Trends": "TAKE: Boston Celtics",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Boston Celtics",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 30,
+              "away": 74
+            },
+            "M2: Relevance": {
+              "home": 143.5145,
+              "away": 2141.3397
+            },
+            "M3: Efficiency": {
+              "margin": -4.3
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 11
             },
             "M5: Luck": {
               "home": "N/A",
@@ -55,44 +111,44 @@
               "crosses_key": false
             }
           },
-          "team_home": "New York Knicks",
-          "team_away": "Toronto Raptors",
-          "start": "2026-10-15T23:30Z",
+          "team_home": "Philadelphia 76ers",
+          "team_away": "Boston Celtics",
+          "start": "2026-10-16T23:00Z",
           "sharp_books": {},
-          "event_id": "401908945"
+          "event_id": "401898407"
         },
         {
-          "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
-          "spread": "OKC -3.5",
-          "favorite": "Oklahoma City Thunder -fav",
+          "game": "Detroit Pistons (H) vs Toronto Raptors (A)",
+          "spread": "DET -10.5",
+          "favorite": "Detroit Pistons -fav",
           "confidence": "75%",
           "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Houston Rockets",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
+            "M1: Normal Score": "TAKE: Detroit Pistons",
+            "M2: Relevance": "TAKE: Detroit Pistons",
+            "M3: Efficiency": "TAKE: Toronto Raptors",
+            "M4: ATS Trends": "TAKE: Detroit Pistons",
             "M5: Luck": "N/A",
             "M6: Sharp Money": "N/A",
             "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
+            "CONSENSUS": "TAKE: Detroit Pistons",
             "Sharp: Circa": "N/A",
             "Sharp: DraftKings": "N/A"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 37,
-              "away": 70
+              "home": 69,
+              "away": 36
             },
             "M2: Relevance": {
-              "home": 577.5685,
-              "away": 1531.4081
+              "home": 1974.3559,
+              "away": 301.6604
             },
             "M3: Efficiency": {
-              "margin": -2.7
+              "margin": 2.3
             },
             "M4: ATS Trends": {
-              "home": 4,
-              "away": 10
+              "home": 10,
+              "away": 3
             },
             "M5: Luck": {
               "home": "N/A",
@@ -105,114 +161,50 @@
               "away_m": null
             },
             "M8: Line Movement": {
-              "open_home": 3.5,
-              "current_home": 3.5,
+              "open_home": -10.5,
+              "current_home": -10.5,
               "delta": 0.0,
               "crosses_key": false
             }
           },
-          "team_home": "Houston Rockets",
-          "team_away": "Oklahoma City Thunder",
-          "start": "2026-10-16T00:30Z",
-          "sharp_books": {},
-          "event_id": "401908622"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-15T02:10:04-04:00",
-      "games": [
-        {
-          "game": "New York Knicks (H) vs Toronto Raptors (A)",
-          "spread": "NY -5.5",
-          "favorite": "New York Knicks -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "TAKE: Toronto Raptors",
-            "M4: ATS Trends": "TAKE: New York Knicks",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New York Knicks",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 71,
-              "away": 32
-            },
-            "M2: Relevance": {
-              "home": 1880.621,
-              "away": 211.6437
-            },
-            "M3: Efficiency": {
-              "margin": 2.8
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": -5.5,
-              "current_home": -5.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "New York Knicks",
+          "team_home": "Detroit Pistons",
           "team_away": "Toronto Raptors",
-          "start": "2026-10-15T23:30Z",
+          "start": "2026-10-16T23:00Z",
           "sharp_books": {},
-          "event_id": "401908945"
+          "event_id": "401908946"
         },
         {
-          "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
-          "spread": "OKC -3.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "75%",
+          "game": "Indiana Pacers (H) vs Milwaukee Bucks (A)",
+          "spread": "IND -9.5",
+          "favorite": "Indiana Pacers -fav",
+          "confidence": "50%",
           "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Houston Rockets",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
+            "M1: Normal Score": "TAKE: Indiana Pacers",
+            "M2: Relevance": "TAKE: Milwaukee Bucks",
+            "M3: Efficiency": "TAKE: Milwaukee Bucks",
+            "M4: ATS Trends": "TAKE: Indiana Pacers",
             "M5: Luck": "N/A",
             "M6: Sharp Money": "N/A",
             "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
+            "CONSENSUS": "SPLIT",
             "Sharp: Circa": "N/A",
             "Sharp: DraftKings": "N/A"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 37,
-              "away": 70
+              "home": 55,
+              "away": 45
             },
             "M2: Relevance": {
-              "home": 577.5685,
-              "away": 1531.4081
+              "home": 583.3278,
+              "away": 1374.1571
             },
             "M3: Efficiency": {
-              "margin": -2.7
+              "margin": -0.7
             },
             "M4: ATS Trends": {
-              "home": 4,
-              "away": 10
+              "home": 9,
+              "away": 4
             },
             "M5: Luck": {
               "home": "N/A",
@@ -225,423 +217,50 @@
               "away_m": null
             },
             "M8: Line Movement": {
-              "open_home": 3.5,
-              "current_home": 3.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "Houston Rockets",
-          "team_away": "Oklahoma City Thunder",
-          "start": "2026-10-16T00:30Z",
-          "sharp_books": {},
-          "event_id": "401908622"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-15T04:10:04-04:00",
-      "games": [
-        {
-          "game": "New York Knicks (H) vs Toronto Raptors (A)",
-          "spread": "NY -5.5",
-          "favorite": "New York Knicks -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "TAKE: Toronto Raptors",
-            "M4: ATS Trends": "TAKE: New York Knicks",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New York Knicks",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 71,
-              "away": 32
-            },
-            "M2: Relevance": {
-              "home": 1880.621,
-              "away": 211.6437
-            },
-            "M3: Efficiency": {
-              "margin": 2.8
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": -5.5,
-              "current_home": -5.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "New York Knicks",
-          "team_away": "Toronto Raptors",
-          "start": "2026-10-15T23:30Z",
-          "sharp_books": {},
-          "event_id": "401908945"
-        },
-        {
-          "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
-          "spread": "OKC -3.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Houston Rockets",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 37,
-              "away": 70
-            },
-            "M2: Relevance": {
-              "home": 577.5685,
-              "away": 1531.4081
-            },
-            "M3: Efficiency": {
-              "margin": -2.7
-            },
-            "M4: ATS Trends": {
-              "home": 4,
-              "away": 10
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 3.5,
-              "current_home": 3.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "Houston Rockets",
-          "team_away": "Oklahoma City Thunder",
-          "start": "2026-10-16T00:30Z",
-          "sharp_books": {},
-          "event_id": "401908622"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-15T06:10:08-04:00",
-      "games": [
-        {
-          "game": "New York Knicks (H) vs Toronto Raptors (A)",
-          "spread": "NY -5.5",
-          "favorite": "New York Knicks -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "TAKE: Toronto Raptors",
-            "M4: ATS Trends": "TAKE: New York Knicks",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New York Knicks",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 71,
-              "away": 32
-            },
-            "M2: Relevance": {
-              "home": 1880.621,
-              "away": 211.6437
-            },
-            "M3: Efficiency": {
-              "margin": 2.8
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": -5.5,
-              "current_home": -5.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "New York Knicks",
-          "team_away": "Toronto Raptors",
-          "start": "2026-10-15T23:30Z",
-          "sharp_books": {},
-          "event_id": "401908945"
-        },
-        {
-          "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
-          "spread": "OKC -3.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Houston Rockets",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: Oklahoma City Thunder",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 37,
-              "away": 70
-            },
-            "M2: Relevance": {
-              "home": 577.5685,
-              "away": 1531.4081
-            },
-            "M3: Efficiency": {
-              "margin": -2.7
-            },
-            "M4: ATS Trends": {
-              "home": 4,
-              "away": 10
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 3.5,
-              "current_home": 5.5,
-              "delta": 2.0,
-              "crosses_key": false,
-              "size": 2.0,
-              "sources": [
-                "dk"
-              ],
-              "circa": null
-            }
-          },
-          "team_home": "Houston Rockets",
-          "team_away": "Oklahoma City Thunder",
-          "start": "2026-10-16T00:30Z",
-          "sharp_books": {},
-          "event_id": "401908622"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-15T07:56:21-04:00",
-      "games": [
-        {
-          "game": "New York Knicks (H) vs Toronto Raptors (A)",
-          "spread": "NY -5.5",
-          "favorite": "New York Knicks -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "TAKE: Toronto Raptors",
-            "M4: ATS Trends": "TAKE: New York Knicks",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New York Knicks",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 71,
-              "away": 32
-            },
-            "M2: Relevance": {
-              "home": 2067.0297,
-              "away": 227.7655
-            },
-            "M3: Efficiency": {
-              "margin": 2.8
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": -5.5,
-              "current_home": -5.5,
+              "open_home": -9.5,
+              "current_home": -9.5,
               "delta": 0.0,
               "crosses_key": false
             }
           },
-          "team_home": "New York Knicks",
-          "team_away": "Toronto Raptors",
-          "start": "2026-10-15T23:30Z",
+          "team_home": "Indiana Pacers",
+          "team_away": "Milwaukee Bucks",
+          "start": "2026-10-16T23:00Z",
           "sharp_books": {},
-          "event_id": "401908945"
+          "event_id": "401914126"
         },
         {
-          "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
-          "spread": "OKC -5.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "75%",
+          "game": "Dallas Mavericks (H) vs Atlanta Hawks (A)",
+          "spread": "DAL -1.5",
+          "favorite": "Dallas Mavericks -fav",
+          "confidence": "100%",
           "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Houston Rockets",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: Oklahoma City Thunder",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 37,
-              "away": 70
-            },
-            "M2: Relevance": {
-              "home": 642.4038,
-              "away": 1670.1363
-            },
-            "M3: Efficiency": {
-              "margin": -2.7
-            },
-            "M4: ATS Trends": {
-              "home": 4,
-              "away": 10
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 3.5,
-              "current_home": 5.5,
-              "delta": 2.0,
-              "crosses_key": false
-            }
-          },
-          "team_home": "Houston Rockets",
-          "team_away": "Oklahoma City Thunder",
-          "start": "2026-10-16T00:30Z",
-          "sharp_books": {},
-          "event_id": "401908622"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-15T08:10:05-04:00",
-      "games": [
-        {
-          "game": "New York Knicks (H) vs Toronto Raptors (A)",
-          "spread": "NY -5.5",
-          "favorite": "New York Knicks -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "TAKE: Toronto Raptors",
-            "M4: ATS Trends": "TAKE: New York Knicks",
+            "M1: Normal Score": "TAKE: Atlanta Hawks",
+            "M2: Relevance": "TAKE: Atlanta Hawks",
+            "M3: Efficiency": "TAKE: Atlanta Hawks",
+            "M4: ATS Trends": "TAKE: Atlanta Hawks",
             "M5: Luck": "N/A",
             "M6: Sharp Money": "N/A",
             "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New York Knicks",
+            "CONSENSUS": "TAKE: Atlanta Hawks",
             "Sharp: Circa": "N/A",
             "Sharp: DraftKings": "N/A"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 71,
-              "away": 32
+              "home": 32,
+              "away": 74
             },
             "M2: Relevance": {
-              "home": 2067.0297,
-              "away": 227.7655
+              "home": 650.7191,
+              "away": 1658.6074
             },
             "M3: Efficiency": {
-              "margin": 2.8
+              "margin": -3.1
             },
             "M4: ATS Trends": {
-              "home": 11,
-              "away": 3
+              "home": 2,
+              "away": 12
             },
             "M5: Luck": {
               "home": "N/A",
@@ -654,53 +273,50 @@
               "away_m": null
             },
             "M8: Line Movement": {
-              "open_home": -5.5,
-              "current_home": -5.5,
+              "open_home": -1.5,
+              "current_home": -1.5,
               "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
+              "crosses_key": false
             }
           },
-          "team_home": "New York Knicks",
-          "team_away": "Toronto Raptors",
-          "start": "2026-10-15T23:30Z",
+          "team_home": "Dallas Mavericks",
+          "team_away": "Atlanta Hawks",
+          "start": "2026-10-17T00:00Z",
           "sharp_books": {},
-          "event_id": "401908945"
+          "event_id": "401898408"
         },
         {
-          "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
-          "spread": "OKC -5.5",
-          "favorite": "Oklahoma City Thunder -fav",
+          "game": "San Antonio Spurs (H) vs Sacramento Kings (A)",
+          "spread": "SA -13.5",
+          "favorite": "San Antonio Spurs -fav",
           "confidence": "75%",
           "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Houston Rockets",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
+            "M1: Normal Score": "TAKE: San Antonio Spurs",
+            "M2: Relevance": "TAKE: San Antonio Spurs",
+            "M3: Efficiency": "TAKE: Sacramento Kings",
+            "M4: ATS Trends": "TAKE: San Antonio Spurs",
             "M5: Luck": "N/A",
             "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: Oklahoma City Thunder",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: San Antonio Spurs",
             "Sharp: Circa": "N/A",
             "Sharp: DraftKings": "N/A"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 37,
-              "away": 70
+              "home": 95,
+              "away": 10
             },
             "M2: Relevance": {
-              "home": 642.4038,
-              "away": 1670.1363
+              "home": 2266.946,
+              "away": 34.338
             },
             "M3: Efficiency": {
-              "margin": -2.7
+              "margin": 8.8
             },
             "M4: ATS Trends": {
-              "home": 4,
-              "away": 10
+              "home": 13,
+              "away": 1
             },
             "M5: Luck": {
               "home": "N/A",
@@ -713,60 +329,274 @@
               "away_m": null
             },
             "M8: Line Movement": {
-              "open_home": 3.5,
-              "current_home": 5.5,
-              "delta": 2.0,
-              "crosses_key": false,
-              "size": 2.0,
-              "sources": [
-                "dk"
-              ],
-              "circa": null
+              "open_home": -13.5,
+              "current_home": -13.5,
+              "delta": 0.0,
+              "crosses_key": false
             }
           },
-          "team_home": "Houston Rockets",
-          "team_away": "Oklahoma City Thunder",
-          "start": "2026-10-16T00:30Z",
+          "team_home": "San Antonio Spurs",
+          "team_away": "Sacramento Kings",
+          "start": "2026-10-17T00:00Z",
           "sharp_books": {},
-          "event_id": "401908622"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-15T10:10:06-04:00",
-      "games": [
+          "event_id": "401898843"
+        },
         {
-          "game": "New York Knicks (H) vs Toronto Raptors (A)",
-          "spread": "NY -5.5",
-          "favorite": "New York Knicks -fav",
-          "confidence": "75%",
+          "game": "Memphis Grizzlies (H) vs Charlotte Hornets (A)",
+          "spread": "MEM -1.5",
+          "favorite": "Memphis Grizzlies -fav",
+          "confidence": "100%",
           "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "TAKE: Toronto Raptors",
-            "M4: ATS Trends": "TAKE: New York Knicks",
+            "M1: Normal Score": "TAKE: Charlotte Hornets",
+            "M2: Relevance": "TAKE: Charlotte Hornets",
+            "M3: Efficiency": "TAKE: Charlotte Hornets",
+            "M4: ATS Trends": "TAKE: Charlotte Hornets",
             "M5: Luck": "N/A",
             "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: Toronto Raptors",
-            "CONSENSUS": "TAKE: New York Knicks",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Charlotte Hornets",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 30,
+              "away": 78
+            },
+            "M2: Relevance": {
+              "home": 150.9053,
+              "away": 2159.1158
+            },
+            "M3: Efficiency": {
+              "margin": -5.0
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 13
+            },
+            "M5: Luck": {
+              "home": "N/A",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -1.5,
+              "delta": 0.0,
+              "crosses_key": false
+            }
+          },
+          "team_home": "Memphis Grizzlies",
+          "team_away": "Charlotte Hornets",
+          "start": "2026-10-17T00:00Z",
+          "sharp_books": {},
+          "event_id": "401901822"
+        },
+        {
+          "game": "New Orleans Pelicans (H) vs Washington Wizards (A)",
+          "spread": "WSH -2.5",
+          "favorite": "Washington Wizards -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: New Orleans Pelicans",
+            "M2: Relevance": "TAKE: New Orleans Pelicans",
+            "M3: Efficiency": "TAKE: New Orleans Pelicans",
+            "M4: ATS Trends": "TAKE: New Orleans Pelicans",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: New Orleans Pelicans",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 84,
+              "away": 22
+            },
+            "M2: Relevance": {
+              "home": 2154.7431,
+              "away": 152.8557
+            },
+            "M3: Efficiency": {
+              "margin": 3.6
+            },
+            "M4: ATS Trends": {
+              "home": 12,
+              "away": 1
+            },
+            "M5: Luck": {
+              "home": "N/A",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 2.5,
+              "current_home": 2.5,
+              "delta": 0.0,
+              "crosses_key": false
+            }
+          },
+          "team_home": "New Orleans Pelicans",
+          "team_away": "Washington Wizards",
+          "start": "2026-10-17T00:00Z",
+          "sharp_books": {},
+          "event_id": "401906509"
+        },
+        {
+          "game": "Chicago Bulls (H) vs Minnesota Timberwolves (A)",
+          "spread": "MIN -1.5",
+          "favorite": "Minnesota Timberwolves -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Minnesota Timberwolves",
+            "M2: Relevance": "TAKE: Minnesota Timberwolves",
+            "M3: Efficiency": "TAKE: Minnesota Timberwolves",
+            "M4: ATS Trends": "TAKE: Chicago Bulls",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Minnesota Timberwolves",
+            "CONSENSUS": "TAKE: Minnesota Timberwolves",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 40,
+              "away": 68
+            },
+            "M2: Relevance": {
+              "home": 245.7029,
+              "away": 2067.4866
+            },
+            "M3: Efficiency": {
+              "margin": -3.5
+            },
+            "M4: ATS Trends": {
+              "home": 10,
+              "away": 4
+            },
+            "M5: Luck": {
+              "home": "N/A",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": 1.5,
+              "delta": 3.0,
+              "crosses_key": false
+            }
+          },
+          "team_home": "Chicago Bulls",
+          "team_away": "Minnesota Timberwolves",
+          "start": "2026-10-17T00:00Z",
+          "sharp_books": {},
+          "event_id": "401908943"
+        },
+        {
+          "game": "Golden State Warriors (H) vs Portland Trail Blazers (A)",
+          "spread": "POR -2.5",
+          "favorite": "Portland Trail Blazers -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Portland Trail Blazers",
+            "M2: Relevance": "TAKE: Portland Trail Blazers",
+            "M3: Efficiency": "TAKE: Golden State Warriors",
+            "M4: ATS Trends": "TAKE: Portland Trail Blazers",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Portland Trail Blazers",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 47,
+              "away": 58
+            },
+            "M2: Relevance": {
+              "home": 1017.1339,
+              "away": 1245.8901
+            },
+            "M3: Efficiency": {
+              "margin": 0.1
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 13
+            },
+            "M5: Luck": {
+              "home": "N/A",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 2.5,
+              "current_home": 2.5,
+              "delta": 0.0,
+              "crosses_key": false
+            }
+          },
+          "team_home": "Golden State Warriors",
+          "team_away": "Portland Trail Blazers",
+          "start": "2026-10-17T02:00Z",
+          "sharp_books": {},
+          "event_id": "401898409"
+        },
+        {
+          "game": "Phoenix Suns (H) vs Utah Jazz (A)",
+          "spread": "PHX -4.5",
+          "favorite": "Phoenix Suns -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Phoenix Suns",
+            "M2: Relevance": "TAKE: Phoenix Suns",
+            "M3: Efficiency": "TAKE: Utah Jazz",
+            "M4: ATS Trends": "TAKE: Phoenix Suns",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Phoenix Suns",
             "Sharp: Circa": "N/A",
             "Sharp: DraftKings": "N/A"
           },
           "detail": {
             "M1: Normal Score": {
               "home": 71,
-              "away": 32
+              "away": 37
             },
             "M2: Relevance": {
-              "home": 2067.0297,
-              "away": 227.7655
+              "home": 1728.8887,
+              "away": 581.1324
             },
             "M3: Efficiency": {
-              "margin": 2.8
+              "margin": 4.3
             },
             "M4: ATS Trends": {
-              "home": 11,
-              "away": 3
+              "home": 12,
+              "away": 2
             },
             "M5: Luck": {
               "home": "N/A",
@@ -779,117 +609,46 @@
               "away_m": null
             },
             "M8: Line Movement": {
-              "open_home": -5.5,
+              "open_home": -4.5,
               "current_home": -4.5,
-              "delta": 1.0,
-              "crosses_key": false,
-              "size": 1.0,
-              "sources": [
-                "dk"
-              ],
-              "circa": null
+              "delta": 0.0,
+              "crosses_key": false
             }
           },
-          "team_home": "New York Knicks",
-          "team_away": "Toronto Raptors",
-          "start": "2026-10-15T23:30Z",
+          "team_home": "Phoenix Suns",
+          "team_away": "Utah Jazz",
+          "start": "2026-10-17T02:00Z",
           "sharp_books": {},
-          "event_id": "401908945"
+          "event_id": "401908948"
         },
         {
-          "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
-          "spread": "OKC -5.5",
-          "favorite": "Oklahoma City Thunder -fav",
+          "game": "Los Angeles Lakers (H) vs Denver Nuggets (A)",
+          "spread": "LAL -6.5",
+          "favorite": "Los Angeles Lakers -fav",
           "confidence": "75%",
           "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Houston Rockets",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: Oklahoma City Thunder",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 37,
-              "away": 70
-            },
-            "M2: Relevance": {
-              "home": 642.4038,
-              "away": 1670.1363
-            },
-            "M3: Efficiency": {
-              "margin": -2.7
-            },
-            "M4: ATS Trends": {
-              "home": 4,
-              "away": 10
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 3.5,
-              "current_home": 5.5,
-              "delta": 2.0,
-              "crosses_key": false,
-              "size": 2.0,
-              "sources": [
-                "dk"
-              ],
-              "circa": null
-            }
-          },
-          "team_home": "Houston Rockets",
-          "team_away": "Oklahoma City Thunder",
-          "start": "2026-10-16T00:30Z",
-          "sharp_books": {},
-          "event_id": "401908622"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-15T12:10:04-04:00",
-      "games": [
-        {
-          "game": "New York Knicks (H) vs Toronto Raptors (A)",
-          "spread": "NY -5.5",
-          "favorite": "New York Knicks -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "TAKE: Toronto Raptors",
-            "M4: ATS Trends": "TAKE: New York Knicks",
+            "M1: Normal Score": "TAKE: Denver Nuggets",
+            "M2: Relevance": "TAKE: Denver Nuggets",
+            "M3: Efficiency": "TAKE: Denver Nuggets",
+            "M4: ATS Trends": "TAKE: Los Angeles Lakers",
             "M5: Luck": "N/A",
             "M6: Sharp Money": "N/A",
             "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New York Knicks",
+            "CONSENSUS": "TAKE: Denver Nuggets",
             "Sharp: Circa": "N/A",
             "Sharp: DraftKings": "N/A"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 71,
-              "away": 32
+              "home": 52,
+              "away": 55
             },
             "M2: Relevance": {
-              "home": 2067.0297,
-              "away": 227.7655
+              "home": 624.0307,
+              "away": 1624.3833
             },
             "M3: Efficiency": {
-              "margin": 2.8
+              "margin": -1.7
             },
             "M4: ATS Trends": {
               "home": 11,
@@ -906,698 +665,17 @@
               "away_m": null
             },
             "M8: Line Movement": {
-              "open_home": -5.5,
-              "current_home": -5.5,
+              "open_home": -6.5,
+              "current_home": -6.5,
               "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
+              "crosses_key": false
             }
           },
-          "team_home": "New York Knicks",
-          "team_away": "Toronto Raptors",
-          "start": "2026-10-15T23:30Z",
+          "team_home": "Los Angeles Lakers",
+          "team_away": "Denver Nuggets",
+          "start": "2026-10-17T02:30Z",
           "sharp_books": {},
-          "event_id": "401908945"
-        },
-        {
-          "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
-          "spread": "OKC -5.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Houston Rockets",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: Oklahoma City Thunder",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 37,
-              "away": 70
-            },
-            "M2: Relevance": {
-              "home": 642.4038,
-              "away": 1670.1363
-            },
-            "M3: Efficiency": {
-              "margin": -2.7
-            },
-            "M4: ATS Trends": {
-              "home": 4,
-              "away": 10
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 3.5,
-              "current_home": 4.5,
-              "delta": 1.0,
-              "crosses_key": false,
-              "size": 1.0,
-              "sources": [
-                "dk"
-              ],
-              "circa": null
-            }
-          },
-          "team_home": "Houston Rockets",
-          "team_away": "Oklahoma City Thunder",
-          "start": "2026-10-16T00:30Z",
-          "sharp_books": {},
-          "event_id": "401908622"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-15T14:10:05-04:00",
-      "games": [
-        {
-          "game": "New York Knicks (H) vs Toronto Raptors (A)",
-          "spread": "NY -5.5",
-          "favorite": "New York Knicks -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "TAKE: Toronto Raptors",
-            "M4: ATS Trends": "TAKE: New York Knicks",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New York Knicks",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 71,
-              "away": 32
-            },
-            "M2: Relevance": {
-              "home": 2067.0297,
-              "away": 227.7655
-            },
-            "M3: Efficiency": {
-              "margin": 2.8
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": -5.5,
-              "current_home": -5.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "New York Knicks",
-          "team_away": "Toronto Raptors",
-          "start": "2026-10-15T23:30Z",
-          "sharp_books": {},
-          "event_id": "401908945"
-        },
-        {
-          "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
-          "spread": "OKC -5.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Houston Rockets",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: Oklahoma City Thunder",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 37,
-              "away": 70
-            },
-            "M2: Relevance": {
-              "home": 642.4038,
-              "away": 1670.1363
-            },
-            "M3: Efficiency": {
-              "margin": -2.7
-            },
-            "M4: ATS Trends": {
-              "home": 4,
-              "away": 10
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 3.5,
-              "current_home": 4.5,
-              "delta": 1.0,
-              "crosses_key": false,
-              "size": 1.0,
-              "sources": [
-                "dk"
-              ],
-              "circa": null
-            }
-          },
-          "team_home": "Houston Rockets",
-          "team_away": "Oklahoma City Thunder",
-          "start": "2026-10-16T00:30Z",
-          "sharp_books": {},
-          "event_id": "401908622"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-15T16:10:05-04:00",
-      "games": [
-        {
-          "game": "New York Knicks (H) vs Toronto Raptors (A)",
-          "spread": "NY -5.5",
-          "favorite": "New York Knicks -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "TAKE: Toronto Raptors",
-            "M4: ATS Trends": "TAKE: New York Knicks",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New York Knicks",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 71,
-              "away": 32
-            },
-            "M2: Relevance": {
-              "home": 2067.0297,
-              "away": 227.7655
-            },
-            "M3: Efficiency": {
-              "margin": 2.8
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": -5.5,
-              "current_home": -5.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "New York Knicks",
-          "team_away": "Toronto Raptors",
-          "start": "2026-10-15T23:30Z",
-          "sharp_books": {},
-          "event_id": "401908945"
-        },
-        {
-          "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
-          "spread": "OKC -5.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Houston Rockets",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 37,
-              "away": 70
-            },
-            "M2: Relevance": {
-              "home": 642.4038,
-              "away": 1670.1363
-            },
-            "M3: Efficiency": {
-              "margin": -2.7
-            },
-            "M4: ATS Trends": {
-              "home": 4,
-              "away": 10
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 3.5,
-              "current_home": 3.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "Houston Rockets",
-          "team_away": "Oklahoma City Thunder",
-          "start": "2026-10-16T00:30Z",
-          "sharp_books": {},
-          "event_id": "401908622"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-15T18:10:05-04:00",
-      "games": [
-        {
-          "game": "New York Knicks (H) vs Toronto Raptors (A)",
-          "spread": "NY -5.5",
-          "favorite": "New York Knicks -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "TAKE: Toronto Raptors",
-            "M4: ATS Trends": "TAKE: New York Knicks",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New York Knicks",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 71,
-              "away": 32
-            },
-            "M2: Relevance": {
-              "home": 2067.0297,
-              "away": 227.7655
-            },
-            "M3: Efficiency": {
-              "margin": 2.8
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": -5.5,
-              "current_home": -5.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "New York Knicks",
-          "team_away": "Toronto Raptors",
-          "start": "2026-10-15T23:30Z",
-          "sharp_books": {},
-          "event_id": "401908945"
-        },
-        {
-          "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
-          "spread": "OKC -5.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Houston Rockets",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 37,
-              "away": 70
-            },
-            "M2: Relevance": {
-              "home": 642.4038,
-              "away": 1670.1363
-            },
-            "M3: Efficiency": {
-              "margin": -2.7
-            },
-            "M4: ATS Trends": {
-              "home": 4,
-              "away": 10
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 3.5,
-              "current_home": 3.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "Houston Rockets",
-          "team_away": "Oklahoma City Thunder",
-          "start": "2026-10-16T00:30Z",
-          "sharp_books": {},
-          "event_id": "401908622"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-15T20:10:05-04:00",
-      "games": [
-        {
-          "game": "New York Knicks (H) vs Toronto Raptors (A)",
-          "spread": "NY -5.5",
-          "favorite": "New York Knicks -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "TAKE: Toronto Raptors",
-            "M4: ATS Trends": "TAKE: New York Knicks",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New York Knicks",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 71,
-              "away": 32
-            },
-            "M2: Relevance": {
-              "home": 2067.0297,
-              "away": 227.7655
-            },
-            "M3: Efficiency": {
-              "margin": 2.8
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": -5.5,
-              "current_home": -5.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "New York Knicks",
-          "team_away": "Toronto Raptors",
-          "start": "2026-10-15T23:30Z",
-          "sharp_books": {},
-          "event_id": "401908945"
-        },
-        {
-          "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
-          "spread": "OKC -5.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Houston Rockets",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 37,
-              "away": 70
-            },
-            "M2: Relevance": {
-              "home": 642.4038,
-              "away": 1670.1363
-            },
-            "M3: Efficiency": {
-              "margin": -2.7
-            },
-            "M4: ATS Trends": {
-              "home": 4,
-              "away": 10
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 3.5,
-              "current_home": 3.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "Houston Rockets",
-          "team_away": "Oklahoma City Thunder",
-          "start": "2026-10-16T00:30Z",
-          "sharp_books": {},
-          "event_id": "401908622"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-15T22:10:05-04:00",
-      "games": [
-        {
-          "game": "New York Knicks (H) vs Toronto Raptors (A)",
-          "spread": "NY -5.5",
-          "favorite": "New York Knicks -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New York Knicks",
-            "M2: Relevance": "TAKE: New York Knicks",
-            "M3: Efficiency": "TAKE: Toronto Raptors",
-            "M4: ATS Trends": "TAKE: New York Knicks",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New York Knicks",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 71,
-              "away": 32
-            },
-            "M2: Relevance": {
-              "home": 2067.0297,
-              "away": 227.7655
-            },
-            "M3: Efficiency": {
-              "margin": 2.8
-            },
-            "M4: ATS Trends": {
-              "home": 11,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": -5.5,
-              "current_home": -5.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "New York Knicks",
-          "team_away": "Toronto Raptors",
-          "start": "2026-10-15T23:30Z",
-          "sharp_books": {},
-          "event_id": "401908945"
-        },
-        {
-          "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
-          "spread": "OKC -5.5",
-          "favorite": "Oklahoma City Thunder -fav",
-          "confidence": "75%",
-          "picks": {
-            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
-            "M2: Relevance": "TAKE: Oklahoma City Thunder",
-            "M3: Efficiency": "TAKE: Houston Rockets",
-            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
-            "M5: Luck": "N/A",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: Oklahoma City Thunder",
-            "Sharp: Circa": "N/A",
-            "Sharp: DraftKings": "N/A"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 37,
-              "away": 70
-            },
-            "M2: Relevance": {
-              "home": 642.4038,
-              "away": 1670.1363
-            },
-            "M3: Efficiency": {
-              "margin": -2.7
-            },
-            "M4: ATS Trends": {
-              "home": 4,
-              "away": 10
-            },
-            "M5: Luck": {
-              "home": "N/A",
-              "away": "N/A"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 3.5,
-              "current_home": 3.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": null
-            }
-          },
-          "team_home": "Houston Rockets",
-          "team_away": "Oklahoma City Thunder",
-          "start": "2026-10-16T00:30Z",
-          "sharp_books": {},
-          "event_id": "401908622"
+          "event_id": "401898719"
         }
       ]
     }
