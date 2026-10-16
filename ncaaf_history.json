@@ -1,7 +1,189 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-10-15T06:00:29-04:00",
+  "updated": "2026-10-16T06:00:25-04:00",
   "days": {
+    "2026-10-15": [
+      {
+        "game": "UAB Blazers (H) vs East Carolina Pirates (A)",
+        "team_home": "UAB Blazers",
+        "team_away": "East Carolina Pirates",
+        "line": "ECU -5.5",
+        "favorite": "East Carolina Pirates -fav",
+        "final": "UAB Blazers 30, East Carolina Pirates 17",
+        "cover": "UAB Blazers",
+        "status": null,
+        "confidence": "78%",
+        "sharp": {
+          "home_b": 52.7,
+          "home_m": 55.71,
+          "away_b": 47.3,
+          "away_m": 44.29
+        },
+        "graded_run": "2026-10-15T18:00:11-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "East Carolina Pirates",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "East Carolina Pirates",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "UAB Blazers",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "East Carolina Pirates",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "East Carolina Pirates",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "UAB Blazers",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "UAB Blazers",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "East Carolina Pirates",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "UAB Blazers",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "UAB Blazers",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Old Dominion Monarchs (H) vs Georgia Southern Eagles (A)",
+        "team_home": "Old Dominion Monarchs",
+        "team_away": "Georgia Southern Eagles",
+        "line": "GASO -3.5",
+        "favorite": "Georgia Southern Eagles -fav",
+        "final": "Old Dominion Monarchs 15, Georgia Southern Eagles 23",
+        "cover": "Georgia Southern Eagles",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 46.46,
+          "home_m": 48.36,
+          "away_b": 53.54,
+          "away_m": 51.64
+        },
+        "graded_run": "2026-10-15T18:00:11-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Georgia Southern Eagles",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Georgia Southern Eagles",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Georgia Southern Eagles",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Georgia Southern Eagles",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Georgia Southern Eagles",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Old Dominion Monarchs",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Georgia Southern Eagles",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Old Dominion Monarchs",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Georgia Southern Eagles",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Texas State Bobcats (H) vs Colorado State Rams (A)",
+        "team_home": "Texas State Bobcats",
+        "team_away": "Colorado State Rams",
+        "line": "TXST -14",
+        "favorite": "Texas State Bobcats -fav",
+        "final": "Texas State Bobcats 66, Colorado State Rams 27",
+        "cover": "Texas State Bobcats",
+        "status": null,
+        "confidence": "74%",
+        "sharp": {
+          "home_b": 46.52,
+          "home_m": 36.36,
+          "away_b": 53.48,
+          "away_m": 63.64
+        },
+        "graded_run": "2026-10-15T18:00:11-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Texas State Bobcats",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Texas State Bobcats",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Colorado State Rams",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Texas State Bobcats",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Colorado State Rams",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Texas State Bobcats",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Texas State Bobcats",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Colorado State Rams",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Colorado State Rams",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-14": [
       {
         "game": "Missouri State Bears (H) vs Kennesaw State Owls (A)",

@@ -1,46 +1,46 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-10-16T00:30:37-04:00",
+  "updated": "2026-10-16T06:00:25-04:00",
   "models": {
     "M1: Normal Score": {
-      "W": 25,
-      "L": 31
+      "W": 27,
+      "L": 32
     },
     "M2: Relevance": {
-      "W": 27,
-      "L": 29
-    },
-    "M3: Efficiency": {
-      "W": 28,
-      "L": 28
-    },
-    "M4: ATS Trends": {
-      "W": 21,
-      "L": 31
-    },
-    "M5: Luck": {
-      "W": 25,
+      "W": 29,
       "L": 30
     },
-    "M6: Sharp Money": {
-      "W": 23,
+    "M3: Efficiency": {
+      "W": 30,
+      "L": 29
+    },
+    "M4: ATS Trends": {
+      "W": 22,
+      "L": 32
+    },
+    "M5: Luck": {
+      "W": 27,
       "L": 31
     },
+    "M6: Sharp Money": {
+      "W": 24,
+      "L": 33
+    },
     "M8: Line Movement": {
-      "W": 2,
+      "W": 4,
       "L": 1
     },
     "CONSENSUS": {
-      "W": 23,
-      "L": 33
+      "W": 25,
+      "L": 34
     },
     "Sharp: Circa": {
-      "W": 2,
-      "L": 1
+      "W": 3,
+      "L": 3
     },
     "Sharp: DraftKings": {
-      "W": 0,
-      "L": 2
+      "W": 2,
+      "L": 3
     }
   },
   "since": "2026-10-08"
