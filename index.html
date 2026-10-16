@@ -380,6 +380,8 @@
   .combo-apply:hover { border-color: var(--accent); }
   .combo-dim { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
   .combo-dim-label { flex: 0 0 120px; font-size: 0.82rem; color: var(--text-dim); font-weight: 600; }
+  .combo-slider { flex: 1 1 160px; max-width: 280px; accent-color: var(--accent); }
+  .combo-conf-val { font-weight: 700; font-size: 0.85rem; min-width: 48px; }
   .combo-result { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
   .combo-rec { font-size: 1.6rem; font-weight: 800; }
   .combo-pct { font-size: 1.1rem; font-weight: 700; }
@@ -1558,7 +1560,7 @@ const COMBO_MIN_GAMES = 5;
 const COMBO_DIMS = [
   { key: "sharp", label: "Sharps", opts: [["aligned", "Aligned"], ["against", "Against"], ["none", "No read"]] },
   { key: "line", label: "Line movement", opts: [["aligned", "Aligned"], ["against", "Against"], ["none", "No read"]] },
-  { key: "conf", label: "Confidence", opts: [["high", "70%+"], ["mid", "60-69%"], ["low", "Under 60%"]] },
+  { key: "conf", label: "Min confidence", slider: true },
   { key: "side", label: "Consensus pick is", opts: [["fav", "Favorite"], ["dog", "Underdog"]] },
 ];
 const COMBO_ANY = { sharp: "any", line: "any", conf: "any", side: "any" };
@@ -1584,16 +1586,28 @@ function comboFacts(x) {
   const fav = String(x.fav || "").replace(/\s*-fav\s*$/, "").trim();
   return (x.f = {
     sharp: vs(sharpTeam), line: vs(lineTeam),
-    conf: isNaN(x.conf) ? "none" : x.conf >= 70 ? "high" : x.conf >= 60 ? "mid" : "low",
+    conf: Number(x.conf),
     side: !cons || !fav ? "none" : cons === fav ? "fav" : "dog",
   });
+}
+
+// Confidence is a minimum threshold (slider); the other signals are exact-match buttons.
+function comboMatch(f, sel) {
+  return COMBO_DIMS.every(d => sel[d.key] === "any" || (d.slider ? f[d.key] >= sel[d.key] : f[d.key] === sel[d.key]));
+}
+
+// Whole-number confidence values seen in the graded games (the slider's range and the best search's candidates).
+function comboConfLevels(games) {
+  const set = new Set();
+  for (const x of games) { const c = comboFacts(x).conf; if (!isNaN(c)) set.add(Math.floor(c)); }
+  return [...set].sort((a, b) => a - b);
 }
 
 function comboRecord(games, sel) {
   let w = 0, l = 0;
   for (const x of games) {
     const f = comboFacts(x);
-    if (COMBO_DIMS.some(d => sel[d.key] !== "any" && f[d.key] !== sel[d.key])) continue;
+    if (!comboMatch(f, sel)) continue;
     if (x.result === "WIN") w++; else l++;
   }
   return { w, l, n: w + l };
@@ -1608,12 +1622,14 @@ function wilsonLow(w, n) {
 }
 
 function comboLabel(sel) {
-  const parts = COMBO_DIMS.filter(d => sel[d.key] !== "any").map(d => `${d.label}: ${d.opts.find(([v]) => v === sel[d.key])[1]}`);
+  const parts = COMBO_DIMS.filter(d => sel[d.key] !== "any").map(d =>
+    d.slider ? `${d.label}: ${sel[d.key]}%+` : `${d.label}: ${d.opts.find(([v]) => v === sel[d.key])[1]}`);
   return parts.length ? parts.join(" &middot; ") : "All graded games";
 }
 
 function bestCombo(games) {
   let best = null;
+  const levels = comboConfLevels(games);
   const walk = (i, sel) => {
     if (i === COMBO_DIMS.length) {
       if (COMBO_DIMS.every(d => sel[d.key] === "any")) return;
@@ -1624,7 +1640,7 @@ function bestCombo(games) {
       return;
     }
     const d = COMBO_DIMS[i];
-    for (const v of ["any", ...d.opts.map(o => o[0])]) walk(i + 1, { ...sel, [d.key]: v });
+    for (const v of ["any", ...(d.slider ? levels : d.opts.map(o => o[0]))]) walk(i + 1, { ...sel, [d.key]: v });
   };
   walk(0, {});
   return best;
@@ -1632,34 +1648,66 @@ function bestCombo(games) {
 
 function setCombo(key, val) { comboSel[key] = val; renderCombo(); }
 function applyBestCombo() { const b = bestCombo(histGames[perfSport] || []); if (b) { comboSel = { ...b.sel }; renderCombo(); } }
+function setComboConf(v) {
+  const levels = comboConfLevels(histGames[perfSport] || []);
+  v = Number(v);
+  comboSel.conf = !levels.length || v <= levels[0] ? "any" : v;
+  renderComboLive();
+}
 function resetCombo() { comboSel = { ...COMBO_ANY }; renderCombo(); }
 
-function renderCombo() {
-  const el = document.getElementById("combo-body");
-  if (!el) return;
-  const games = histGames[perfSport] || [];
-  if (!games.length) { el.innerHTML = '<div class="empty-state">No graded games yet to combine.</div>'; return; }
+function comboBestHtml(games) {
   const best = bestCombo(games);
   const isBest = best && COMBO_DIMS.every(d => comboSel[d.key] === best.sel[d.key]);
-  const bestHtml = best
+  return best
     ? `<div class="combo-best"><div class="combo-best-label">Best combination so far</div>
         <div class="combo-best-main"><span class="combo-best-desc">${comboLabel(best.sel)}</span>
         <span class="combo-best-rec">${best.w}-${best.l} (${Math.round(best.w / best.n * 100)}%)</span></div>
         ${isBest ? "" : '<button type="button" class="combo-apply" onclick="applyBestCombo()">Show this combination</button>'}</div>`
     : `<div class="combo-best"><div class="combo-best-label">Best combination so far</div>
         <div class="combo-meta">Needs a combination with at least ${COMBO_MIN_GAMES} graded games.</div></div>`;
-  const dims = COMBO_DIMS.map(d => `<div class="combo-dim"><span class="combo-dim-label">${d.label}</span>
-      <div class="seg" role="group" aria-label="${d.label}">${[["any", "Any"], ...d.opts].map(([v, t]) =>
-        `<button type="button" class="range-btn${comboSel[d.key] === v ? " active" : ""}" onclick="setCombo('${d.key}','${v}')">${t}</button>`).join("")}</div></div>`).join("");
+}
+
+function comboResultHtml(games) {
   const r = comboRecord(games, comboSel), all = comboRecord(games, COMBO_ANY);
   const pct = r.n ? Math.round(r.w / r.n * 100) : null;
-  const result = `<div class="combo-result"><span class="combo-rec">${r.n ? r.w + "-" + r.l : "N/A"}</span>
+  return `<div class="combo-result"><span class="combo-rec">${r.n ? r.w + "-" + r.l : "N/A"}</span>
       <span class="combo-pct">${pct === null ? "" : pct + "%"}</span>
       <span class="combo-meta">${r.n} game${r.n === 1 ? "" : "s"}${r.n && r.n < COMBO_MIN_GAMES ? " (small sample)" : ""} &middot; all games: ${all.w}-${all.l}</span></div>
       ${r.n ? `<div class="combo-bar"><i style="width:${pct}%"></i></div>` : ""}`;
-  el.innerHTML = bestHtml + dims + result
+}
+
+// Slider drag: refresh only the best box, the value label and the result so the slider keeps its drag.
+function renderComboLive() {
+  const games = histGames[perfSport] || [];
+  const set = (id, html) => { const e = document.getElementById(id); if (e) e.innerHTML = html; };
+  set("combo-best-wrap", comboBestHtml(games));
+  set("combo-result-wrap", comboResultHtml(games));
+  const v = document.getElementById("combo-conf-val");
+  if (v) v.textContent = comboSel.conf === "any" ? "Any" : comboSel.conf + "%+";
+}
+
+function renderCombo() {
+  const el = document.getElementById("combo-body");
+  if (!el) return;
+  const games = histGames[perfSport] || [];
+  if (!games.length) { el.innerHTML = '<div class="empty-state">No graded games yet to combine.</div>'; return; }
+  const levels = comboConfLevels(games);
+  const dims = COMBO_DIMS.map(d => {
+    if (d.slider) {
+      if (levels.length < 2) return "";
+      const cur = comboSel.conf === "any" ? levels[0] : comboSel.conf;
+      return `<div class="combo-dim"><span class="combo-dim-label">${d.label}</span>
+        <input type="range" class="combo-slider" min="${levels[0]}" max="${levels[levels.length - 1]}" step="1" value="${cur}" aria-label="${d.label}" oninput="setComboConf(this.value)">
+        <span class="combo-conf-val" id="combo-conf-val">${comboSel.conf === "any" ? "Any" : comboSel.conf + "%+"}</span></div>`;
+    }
+    return `<div class="combo-dim"><span class="combo-dim-label">${d.label}</span>
+      <div class="seg" role="group" aria-label="${d.label}">${[["any", "Any"], ...d.opts].map(([v, t]) =>
+        `<button type="button" class="range-btn${comboSel[d.key] === v ? " active" : ""}" onclick="setCombo('${d.key}','${v}')">${t}</button>`).join("")}</div></div>`;
+  }).join("");
+  el.innerHTML = `<div id="combo-best-wrap">${comboBestHtml(games)}</div>` + dims + `<div id="combo-result-wrap">${comboResultHtml(games)}</div>`
     + `<div class="perf-note" style="margin-top:12px">Consensus record in games matching your picks. "Aligned" means that signal picked the same team as consensus. `
-    + `Best is ranked by win rate discounted for sample size, so tiny samples do not top the list. <button type="button" class="filter-clear" onclick="resetCombo()">Reset</button></div>`;
+    + `Min confidence includes games at or above the slider value. Best is ranked by win rate discounted for sample size, so tiny samples do not top the list. <button type="button" class="filter-clear" onclick="resetCombo()">Reset</button></div>`;
 }
 
 function comboCardHtml() {
