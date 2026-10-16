@@ -1,7 +1,129 @@
 {
   "sport": "NBA",
-  "updated": "2026-10-15T06:10:04-04:00",
+  "updated": "2026-10-16T06:10:04-04:00",
   "days": {
+    "2026-10-15": [
+      {
+        "game": "New York Knicks (H) vs Toronto Raptors (A)",
+        "team_home": "New York Knicks",
+        "team_away": "Toronto Raptors",
+        "line": "NY -5.5",
+        "favorite": "New York Knicks -fav",
+        "final": "New York Knicks 122, Toronto Raptors 120",
+        "cover": "Toronto Raptors",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-10-15T18:10:05-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Toronto Raptors",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Houston Rockets (H) vs Oklahoma City Thunder (A)",
+        "team_home": "Houston Rockets",
+        "team_away": "Oklahoma City Thunder",
+        "line": "OKC -5.5",
+        "favorite": "Oklahoma City Thunder -fav",
+        "final": "Houston Rockets 116, Oklahoma City Thunder 89",
+        "cover": "Houston Rockets",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-10-15T20:10:05-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      }
+    ],
     "2026-10-14": [
       {
         "game": "Miami Heat (H) vs Brooklyn Nets (A)",
