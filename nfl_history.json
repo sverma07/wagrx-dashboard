@@ -1,7 +1,73 @@
 {
   "sport": "NFL",
-  "updated": "2026-10-15T06:05:03-04:00",
+  "updated": "2026-10-16T06:05:03-04:00",
   "days": {
+    "2026-10-15": [
+      {
+        "game": "Denver Broncos (H) vs Seattle Seahawks (A)",
+        "team_home": "Denver Broncos",
+        "team_away": "Seattle Seahawks",
+        "line": "SEA -2.5",
+        "favorite": "Seattle Seahawks -fav",
+        "final": "Denver Broncos 17, Seattle Seahawks 14",
+        "cover": "Denver Broncos",
+        "status": null,
+        "confidence": "82%",
+        "sharp": {
+          "home_b": 40.47,
+          "home_m": 30.81,
+          "away_b": 59.53,
+          "away_m": 69.19
+        },
+        "graded_run": "2026-10-15T20:05:07-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Seattle Seahawks",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Seattle Seahawks",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Seattle Seahawks",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Seattle Seahawks",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Seattle Seahawks",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Seattle Seahawks",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "PUSH",
+            "result": null
+          }
+        }
+      }
+    ],
     "2026-10-14": [],
     "2026-10-13": [],
     "2026-10-12": [
