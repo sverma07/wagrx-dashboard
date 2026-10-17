@@ -2682,6 +2682,259 @@
           "event_id": "401869844"
         }
       ]
+    },
+    {
+      "time": "2026-10-16T20:00:09-04:00",
+      "games": [
+        {
+          "game": "Tulane Green Wave (H) vs Memphis Tigers (A)",
+          "spread": "MEM -7",
+          "favorite": "Memphis Tigers -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Memphis Tigers",
+            "M2: Relevance": "TAKE: Memphis Tigers",
+            "M3: Efficiency": "TAKE: Memphis Tigers",
+            "M4: ATS Trends": "TAKE: Memphis Tigers",
+            "M5: Luck": "TAKE: Tulane Green Wave",
+            "M6: Sharp Money": "TAKE: Tulane Green Wave",
+            "M8: Line Movement": "TAKE: Tulane Green Wave",
+            "CONSENSUS": "TAKE: Memphis Tigers",
+            "Sharp: Circa": "TAKE: Tulane Green Wave",
+            "Sharp: DraftKings": "TAKE: Memphis Tigers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 7,
+              "away": 32
+            },
+            "M2: Relevance": {
+              "home": 9.9839,
+              "away": 61.5906
+            },
+            "M3: Efficiency": {
+              "margin": -10.3
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 6
+            },
+            "M5: Luck": {
+              "home": "-0.1",
+              "away": "0.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": 26.17,
+              "home_m": 28.89,
+              "away_b": 73.83,
+              "away_m": 71.11
+            },
+            "M8: Line Movement": {
+              "open_home": 7.0,
+              "current_home": 6.5,
+              "delta": -0.5,
+              "crosses_key": true,
+              "size": 0.5,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 7.0,
+                "last": 7.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Tulane Green Wave",
+          "team_away": "Memphis Tigers",
+          "start": "2026-10-16T23:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 28.0,
+              "home_m": 58.0,
+              "away_b": 72.0,
+              "away_m": 42.0,
+              "line": "+7",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 24.0,
+              "home_m": 23.0,
+              "away_b": 76.0,
+              "away_m": 77.0,
+              "line": "+6.5",
+              "thin": false
+            }
+          },
+          "event_id": "401862801"
+        },
+        {
+          "game": "Purdue Boilermakers (H) vs Washington Huskies (A)",
+          "spread": "PUR -3.5",
+          "favorite": "Purdue Boilermakers -fav",
+          "confidence": "52%",
+          "picks": {
+            "M1: Normal Score": "PUSH",
+            "M2: Relevance": "TAKE: Purdue Boilermakers",
+            "M3: Efficiency": "TAKE: Washington Huskies",
+            "M4: ATS Trends": "TAKE: Purdue Boilermakers",
+            "M5: Luck": "TAKE: Washington Huskies",
+            "M6: Sharp Money": "TAKE: Washington Huskies",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Washington Huskies",
+            "Sharp: Circa": "TAKE: Washington Huskies",
+            "Sharp: DraftKings": "TAKE: Purdue Boilermakers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 22,
+              "away": 22
+            },
+            "M2: Relevance": {
+              "home": 42.256,
+              "away": 36.7253
+            },
+            "M3: Efficiency": {
+              "margin": -1.2
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 5
+            },
+            "M5: Luck": {
+              "home": "0.5",
+              "away": "-0.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": 49.19,
+              "home_m": 40.81,
+              "away_b": 50.81,
+              "away_m": 59.19
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": -3.0,
+              "delta": -0.5,
+              "crosses_key": true,
+              "size": 0.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -3.5,
+                "last": -3.0,
+                "delta": 0.5
+              },
+              "conflict": true
+            }
+          },
+          "team_home": "Purdue Boilermakers",
+          "team_away": "Washington Huskies",
+          "start": "2026-10-17T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 66.0,
+              "home_m": 37.0,
+              "away_b": 34.0,
+              "away_m": 63.0,
+              "line": "-3",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 62.0,
+              "home_m": 65.0,
+              "away_b": 38.0,
+              "away_m": 35.0,
+              "line": "-3",
+              "thin": false
+            }
+          },
+          "event_id": "401858493"
+        },
+        {
+          "game": "Coastal Carolina Chanticleers (H) vs Appalachian State Mountaineers (A)",
+          "spread": "APP -1.5",
+          "favorite": "Appalachian State Mountaineers -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Appalachian State Mountaineers",
+            "M2: Relevance": "TAKE: Appalachian State Mountaineers",
+            "M3: Efficiency": "TAKE: Appalachian State Mountaineers",
+            "M4: ATS Trends": "TAKE: Appalachian State Mountaineers",
+            "M5: Luck": "TAKE: Coastal Carolina Chanticleers",
+            "M6: Sharp Money": "TAKE: Coastal Carolina Chanticleers",
+            "M8: Line Movement": "TAKE: Coastal Carolina Chanticleers",
+            "CONSENSUS": "TAKE: Appalachian State Mountaineers",
+            "Sharp: Circa": "TAKE: Coastal Carolina Chanticleers",
+            "Sharp: DraftKings": "PUSH"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 12,
+              "away": 30
+            },
+            "M2: Relevance": {
+              "home": 20.7453,
+              "away": 54.4741
+            },
+            "M3: Efficiency": {
+              "margin": -2.1
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 6
+            },
+            "M5: Luck": {
+              "home": "-0.8",
+              "away": "-0.1"
+            },
+            "M6: Sharp Money": {
+              "home_b": 56.71,
+              "home_m": 67.7,
+              "away_b": 43.29,
+              "away_m": 32.3
+            },
+            "M8: Line Movement": {
+              "open_home": 1.5,
+              "current_home": 1.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "circa"
+              ],
+              "circa": {
+                "first": 1.0,
+                "last": 0.0,
+                "delta": -1.0
+              }
+            }
+          },
+          "team_home": "Coastal Carolina Chanticleers",
+          "team_away": "Appalachian State Mountaineers",
+          "start": "2026-10-17T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 40.0,
+              "home_m": 75.0,
+              "away_b": 60.0,
+              "away_m": 25.0,
+              "line": "0",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 39.0,
+              "home_m": 39.0,
+              "away_b": 61.0,
+              "away_m": 61.0,
+              "line": "+1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401869844"
+        }
+      ]
     }
   ]
 }
