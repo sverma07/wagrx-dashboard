@@ -1,7 +1,189 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-10-16T06:00:25-04:00",
+  "updated": "2026-10-17T06:00:28-04:00",
   "days": {
+    "2026-10-16": [
+      {
+        "game": "Tulane Green Wave (H) vs Memphis Tigers (A)",
+        "team_home": "Tulane Green Wave",
+        "team_away": "Memphis Tigers",
+        "line": "MEM -7",
+        "favorite": "Memphis Tigers -fav",
+        "final": "Tulane Green Wave 31, Memphis Tigers 17",
+        "cover": "Tulane Green Wave",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 26.17,
+          "home_m": 28.89,
+          "away_b": 73.83,
+          "away_m": 71.11
+        },
+        "graded_run": "2026-10-16T18:00:13-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Memphis Tigers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Memphis Tigers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Memphis Tigers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Memphis Tigers",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Tulane Green Wave",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Tulane Green Wave",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Tulane Green Wave",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Memphis Tigers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Tulane Green Wave",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "PUSH",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Purdue Boilermakers (H) vs Washington Huskies (A)",
+        "team_home": "Purdue Boilermakers",
+        "team_away": "Washington Huskies",
+        "line": "PUR -3.5",
+        "favorite": "Purdue Boilermakers -fav",
+        "final": "Purdue Boilermakers 26, Washington Huskies 38",
+        "cover": "Washington Huskies",
+        "status": null,
+        "confidence": "52%",
+        "sharp": {
+          "home_b": 46.99,
+          "home_m": 38.92,
+          "away_b": 53.01,
+          "away_m": 61.08
+        },
+        "graded_run": "2026-10-16T18:00:13-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Purdue Boilermakers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Washington Huskies",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Purdue Boilermakers",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Washington Huskies",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Washington Huskies",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Washington Huskies",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Washington Huskies",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Purdue Boilermakers",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Coastal Carolina Chanticleers (H) vs Appalachian State Mountaineers (A)",
+        "team_home": "Coastal Carolina Chanticleers",
+        "team_away": "Appalachian State Mountaineers",
+        "line": "APP -1.5",
+        "favorite": "Appalachian State Mountaineers -fav",
+        "final": "Coastal Carolina Chanticleers 32, Appalachian State Mountaineers 35",
+        "cover": "Appalachian State Mountaineers",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 56.71,
+          "home_m": 67.7,
+          "away_b": 43.29,
+          "away_m": 32.3
+        },
+        "graded_run": "2026-10-16T18:00:13-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Appalachian State Mountaineers",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Appalachian State Mountaineers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Appalachian State Mountaineers",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Appalachian State Mountaineers",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Coastal Carolina Chanticleers",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Coastal Carolina Chanticleers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Coastal Carolina Chanticleers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Appalachian State Mountaineers",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Coastal Carolina Chanticleers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Coastal Carolina Chanticleers",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-15": [
       {
         "game": "UAB Blazers (H) vs East Carolina Pirates (A)",
