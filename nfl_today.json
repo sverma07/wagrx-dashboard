@@ -1030,6 +1030,103 @@
           "event_id": "401873008"
         }
       ]
+    },
+    {
+      "time": "2026-10-19T20:05:06-04:00",
+      "games": [
+        {
+          "game": "San Francisco 49ers (H) vs Washington Commanders (A)",
+          "spread": "SF -7.5",
+          "favorite": "San Francisco 49ers -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: San Francisco 49ers",
+            "M2: Relevance": "TAKE: San Francisco 49ers",
+            "M3: Efficiency": "TAKE: San Francisco 49ers",
+            "M4: ATS Trends": "TAKE: San Francisco 49ers",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "TAKE: Washington Commanders",
+            "M7: QB Injury Edge": "PUSH",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: San Francisco 49ers",
+            "Sharp: Circa": "TAKE: Washington Commanders",
+            "Sharp: DraftKings": "TAKE: Washington Commanders"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 40,
+              "away": 6
+            },
+            "M2: Relevance": {
+              "home": 47.7599,
+              "away": 7.7689
+            },
+            "M3: Efficiency": {
+              "margin": 9.5
+            },
+            "M4: ATS Trends": {
+              "home": 11,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "1.5",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": 71.78,
+              "home_m": 68.42,
+              "away_b": 28.22,
+              "away_m": 31.58
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Kurtis Rourke (Out) -> Brock Purdy (Active) starting",
+              "away_status": "Marcus Mariota (Out) -> Jayden Daniels (Active) starting"
+            },
+            "M8: Line Movement": {
+              "open_home": -5.5,
+              "current_home": -7.5,
+              "delta": -2.0,
+              "crosses_key": true,
+              "size": 2.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -7.5,
+                "last": -7.0,
+                "delta": 0.5
+              },
+              "conflict": true,
+              "vs_consensus": null
+            }
+          },
+          "team_home": "San Francisco 49ers",
+          "team_away": "Washington Commanders",
+          "start": "2026-10-20T00:15Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 70.0,
+              "home_m": 18.0,
+              "away_b": 30.0,
+              "away_m": 82.0,
+              "line": "-7",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 59.0,
+              "home_m": 39.0,
+              "away_b": 41.0,
+              "away_m": 61.0,
+              "line": "-7.5",
+              "thin": false
+            }
+          },
+          "home_id": "25",
+          "away_id": "28",
+          "event_id": "401873008"
+        }
+      ]
     }
   ]
 }
