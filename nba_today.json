@@ -1526,6 +1526,255 @@
           "event_id": "401909090"
         }
       ]
+    },
+    {
+      "time": "2026-10-20T14:10:07-04:00",
+      "games": [
+        {
+          "game": "Detroit Pistons (H) vs Boston Celtics (A)",
+          "spread": "BOS -1.5",
+          "favorite": "Boston Celtics -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Detroit Pistons",
+            "M2: Relevance": "TAKE: Boston Celtics",
+            "M3: Efficiency": "TAKE: Detroit Pistons",
+            "M4: ATS Trends": "TAKE: Boston Celtics",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "TAKE: Boston Celtics",
+            "M8: Line Movement": "TAKE: Boston Celtics",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "TAKE: Boston Celtics",
+            "Sharp: DraftKings": "TAKE: Boston Celtics"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 54,
+              "away": 50
+            },
+            "M2: Relevance": {
+              "home": 983.4996,
+              "away": 1136.7487
+            },
+            "M3: Efficiency": {
+              "margin": -0.2
+            },
+            "M4: ATS Trends": {
+              "home": 4,
+              "away": 10
+            },
+            "M5: Luck": {
+              "home": "N/A",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": 48.3,
+              "home_m": 44.72,
+              "away_b": 51.7,
+              "away_m": 55.28
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": 1.5,
+              "delta": 4.0,
+              "crosses_key": false,
+              "size": 4.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 2.0,
+                "last": 1.5,
+                "delta": -0.5
+              }
+            }
+          },
+          "team_home": "Detroit Pistons",
+          "team_away": "Boston Celtics",
+          "start": "2026-10-20T19:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 57.0,
+              "home_m": 20.0,
+              "away_b": 43.0,
+              "away_m": 80.0,
+              "line": "+1.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 41.0,
+              "home_m": 39.0,
+              "away_b": 59.0,
+              "away_m": 61.0,
+              "line": "+1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909088"
+        },
+        {
+          "game": "New York Knicks (H) vs Philadelphia 76ers (A)",
+          "spread": "NY -4.5",
+          "favorite": "New York Knicks -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: New York Knicks",
+            "M2: Relevance": "TAKE: New York Knicks",
+            "M3: Efficiency": "TAKE: New York Knicks",
+            "M4: ATS Trends": "TAKE: New York Knicks",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "TAKE: Philadelphia 76ers",
+            "M8: Line Movement": "TAKE: New York Knicks",
+            "CONSENSUS": "TAKE: New York Knicks",
+            "Sharp: Circa": "TAKE: Philadelphia 76ers",
+            "Sharp: DraftKings": "TAKE: New York Knicks"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 75,
+              "away": 30
+            },
+            "M2: Relevance": {
+              "home": 2067.8125,
+              "away": 158.7165
+            },
+            "M3: Efficiency": {
+              "margin": 4.6
+            },
+            "M4: ATS Trends": {
+              "home": 10,
+              "away": 3
+            },
+            "M5: Luck": {
+              "home": "N/A",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": 30.06,
+              "home_m": 27.22,
+              "away_b": 69.94,
+              "away_m": 72.78
+            },
+            "M8: Line Movement": {
+              "open_home": -3.5,
+              "current_home": -4.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -4.0,
+                "last": -4.5,
+                "delta": -0.5
+              }
+            }
+          },
+          "team_home": "New York Knicks",
+          "team_away": "Philadelphia 76ers",
+          "start": "2026-10-20T23:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 44.0,
+              "home_m": 20.0,
+              "away_b": 56.0,
+              "away_m": 80.0,
+              "line": "-4.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 56.0,
+              "home_m": 62.0,
+              "away_b": 44.0,
+              "away_m": 38.0,
+              "line": "-4.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909089"
+        },
+        {
+          "game": "San Antonio Spurs (H) vs Oklahoma City Thunder (A)",
+          "spread": "SA -1.5",
+          "favorite": "San Antonio Spurs -fav",
+          "confidence": "67%",
+          "picks": {
+            "M1: Normal Score": "PUSH",
+            "M2: Relevance": "TAKE: Oklahoma City Thunder",
+            "M3: Efficiency": "TAKE: Oklahoma City Thunder",
+            "M4: ATS Trends": "TAKE: San Antonio Spurs",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "TAKE: Oklahoma City Thunder",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Oklahoma City Thunder",
+            "Sharp: Circa": "TAKE: Oklahoma City Thunder",
+            "Sharp: DraftKings": "TAKE: San Antonio Spurs"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 53,
+              "away": 53
+            },
+            "M2: Relevance": {
+              "home": 742.6118,
+              "away": 1483.8311
+            },
+            "M3: Efficiency": {
+              "margin": -1.2
+            },
+            "M4: ATS Trends": {
+              "home": 13,
+              "away": 1
+            },
+            "M5: Luck": {
+              "home": "N/A",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": 62.11,
+              "home_m": 60.06,
+              "away_b": 37.89,
+              "away_m": 39.94
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -1.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": 0.0,
+                "last": 0.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "San Antonio Spurs",
+          "team_away": "Oklahoma City Thunder",
+          "start": "2026-10-21T01:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 44.0,
+              "home_m": 2.0,
+              "away_b": 56.0,
+              "away_m": 98.0,
+              "line": "0",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 53.0,
+              "home_m": 71.0,
+              "away_b": 47.0,
+              "away_m": 29.0,
+              "line": "-1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909090"
+        }
+      ]
     }
   ]
 }
