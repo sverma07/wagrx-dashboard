@@ -1,7 +1,73 @@
 {
   "sport": "NFL",
-  "updated": "2026-10-19T06:05:06-04:00",
+  "updated": "2026-10-20T06:05:04-04:00",
   "days": {
+    "2026-10-19": [
+      {
+        "game": "San Francisco 49ers (H) vs Washington Commanders (A)",
+        "team_home": "San Francisco 49ers",
+        "team_away": "Washington Commanders",
+        "line": "SF -7.5",
+        "favorite": "San Francisco 49ers -fav",
+        "final": "San Francisco 49ers 23, Washington Commanders 17",
+        "cover": "Washington Commanders",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 71.78,
+          "home_m": 68.42,
+          "away_b": 28.22,
+          "away_m": 31.58
+        },
+        "graded_run": "2026-10-19T20:05:06-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "San Francisco 49ers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "San Francisco 49ers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "San Francisco 49ers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "San Francisco 49ers",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Washington Commanders",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "San Francisco 49ers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Washington Commanders",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Washington Commanders",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-10-18": [
       {
         "game": "Jacksonville Jaguars (H) vs Houston Texans (A)",
