@@ -2584,11 +2584,13 @@ function renderRefresh() {
   const sp = SPORTS.find(s => s.key === currentSport);
   const st = refreshState(currentSport);
   const active = refreshActive(st);
-  const left = refreshStatus.remaining, atLimit = left <= 0;
+  // The allowance is per sport; `used` is {sport: n} (an older service sent one shared number).
+  const usedNow = typeof refreshStatus.used === "object" ? (refreshStatus.used[currentSport] || 0) : refreshStatus.used;
+  const left = Math.max(0, refreshStatus.limit - usedNow), atLimit = left <= 0;
   const justDone = refreshDoneAt[currentSport] && Date.now() - refreshDoneAt[currentSport] < 8000;
   let meta = atLimit
-    ? `Manual refresh limit reached (${refreshStatus.limit} of ${refreshStatus.limit} used today). Resets at midnight ET.`
-    : `${left} of ${refreshStatus.limit} manual refreshes left today`;
+    ? `${sp.label} manual refresh limit reached (${refreshStatus.limit} of ${refreshStatus.limit} used today). Resets at midnight ET.`
+    : `${left} of ${refreshStatus.limit} ${sp.label} manual refreshes left today`;
   if (st.state === "expired") meta = "The refresh service did not respond, so nothing was used. Try again later.";
   if (st.state === "failed") meta = "That refresh failed. The next scheduled run will still update the data.";
   const cls = atLimit || st.state === "expired" || st.state === "failed" ? " limit" : "";
