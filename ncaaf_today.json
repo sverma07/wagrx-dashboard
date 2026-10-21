@@ -2672,6 +2672,254 @@
           "event_id": "401871092"
         }
       ]
+    },
+    {
+      "time": "2026-10-20T20:00:08-04:00",
+      "games": [
+        {
+          "game": "Florida International Panthers (H) vs Middle Tennessee Blue Raiders (A)",
+          "spread": "FIU -10",
+          "favorite": "Florida International Panthers -fav",
+          "confidence": "79%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Florida International Panthers",
+            "M2: Relevance": "TAKE: Florida International Panthers",
+            "M3: Efficiency": "TAKE: Middle Tennessee Blue Raiders",
+            "M4: ATS Trends": "TAKE: Florida International Panthers",
+            "M5: Luck": "TAKE: Florida International Panthers",
+            "M6: Sharp Money": "TAKE: Middle Tennessee Blue Raiders",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Florida International Panthers",
+            "Sharp: Circa": "TAKE: Middle Tennessee Blue Raiders",
+            "Sharp: DraftKings": "TAKE: Florida International Panthers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 28,
+              "away": 13
+            },
+            "M2: Relevance": {
+              "home": 45.2982,
+              "away": 19.236
+            },
+            "M3: Efficiency": {
+              "margin": 7.0
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 3
+            },
+            "M5: Luck": {
+              "home": "-0.3",
+              "away": "0.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": 46.49,
+              "home_m": 42.15,
+              "away_b": 53.51,
+              "away_m": 57.85
+            },
+            "M8: Line Movement": {
+              "open_home": -10.0,
+              "current_home": -10.0,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": -10.0,
+                "last": -10.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Florida International Panthers",
+          "team_away": "Middle Tennessee Blue Raiders",
+          "start": "2026-10-20T23:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 68.0,
+              "home_m": 52.0,
+              "away_b": 32.0,
+              "away_m": 48.0,
+              "line": "-10",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 59.0,
+              "home_m": 64.0,
+              "away_b": 41.0,
+              "away_m": 36.0,
+              "line": "-10.5",
+              "thin": false
+            }
+          },
+          "event_id": "401871055"
+        },
+        {
+          "game": "Delaware Fightin' Blue Hens (H) vs Missouri State Bears (A)",
+          "spread": "DEL -3",
+          "favorite": "Delaware Fightin' Blue Hens -fav",
+          "confidence": "79%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Delaware Fightin' Blue Hens",
+            "M2: Relevance": "TAKE: Delaware Fightin' Blue Hens",
+            "M3: Efficiency": "TAKE: Missouri State Bears",
+            "M4: ATS Trends": "TAKE: Delaware Fightin' Blue Hens",
+            "M5: Luck": "TAKE: Delaware Fightin' Blue Hens",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Delaware Fightin' Blue Hens",
+            "Sharp: Circa": "TAKE: Delaware Fightin' Blue Hens",
+            "Sharp: DraftKings": "TAKE: Missouri State Bears"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 30,
+              "away": 12
+            },
+            "M2: Relevance": {
+              "home": 46.4639,
+              "away": 18.5561
+            },
+            "M3: Efficiency": {
+              "margin": 2.5
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 3
+            },
+            "M5: Luck": {
+              "home": "-0.5",
+              "away": "-0.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -3.0,
+              "current_home": -3.0,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": -3.0,
+                "last": -3.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Delaware Fightin' Blue Hens",
+          "team_away": "Missouri State Bears",
+          "start": "2026-10-20T23:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 75.0,
+              "home_m": 89.0,
+              "away_b": 25.0,
+              "away_m": 11.0,
+              "line": "-3",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 73.0,
+              "home_m": 47.0,
+              "away_b": 27.0,
+              "away_m": 53.0,
+              "line": "-3",
+              "thin": false
+            }
+          },
+          "event_id": "401871069"
+        },
+        {
+          "game": "Marshall Thundering Herd (H) vs South Alabama Jaguars (A)",
+          "spread": "USA -3",
+          "favorite": "South Alabama Jaguars -fav",
+          "confidence": "79%",
+          "picks": {
+            "M1: Normal Score": "TAKE: South Alabama Jaguars",
+            "M2: Relevance": "TAKE: South Alabama Jaguars",
+            "M3: Efficiency": "TAKE: South Alabama Jaguars",
+            "M4: ATS Trends": "TAKE: South Alabama Jaguars",
+            "M5: Luck": "TAKE: Marshall Thundering Herd",
+            "M6: Sharp Money": "TAKE: Marshall Thundering Herd",
+            "M8: Line Movement": "TAKE: Marshall Thundering Herd",
+            "CONSENSUS": "TAKE: South Alabama Jaguars",
+            "Sharp: Circa": "TAKE: Marshall Thundering Herd",
+            "Sharp: DraftKings": "TAKE: South Alabama Jaguars"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 14,
+              "away": 30
+            },
+            "M2: Relevance": {
+              "home": 22.1263,
+              "away": 45.8652
+            },
+            "M3: Efficiency": {
+              "margin": -7.2
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 10
+            },
+            "M5: Luck": {
+              "home": "0.7",
+              "away": "0.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": 42.9,
+              "home_m": 45.48,
+              "away_b": 57.1,
+              "away_m": 54.52
+            },
+            "M8: Line Movement": {
+              "open_home": 3.0,
+              "current_home": 2.5,
+              "delta": -0.5,
+              "crosses_key": true,
+              "size": 0.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": 3.0,
+                "last": 2.5,
+                "delta": -0.5
+              }
+            }
+          },
+          "team_home": "Marshall Thundering Herd",
+          "team_away": "South Alabama Jaguars",
+          "start": "2026-10-20T23:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 44.0,
+              "home_m": 63.0,
+              "away_b": 56.0,
+              "away_m": 37.0,
+              "line": "+1.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 36.0,
+              "home_m": 21.0,
+              "away_b": 64.0,
+              "away_m": 79.0,
+              "line": "+1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401871092"
+        }
+      ]
     }
   ]
 }
