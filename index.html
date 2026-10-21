@@ -375,7 +375,9 @@
   .combo-best-label { font-size: 0.72rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
   .combo-best-main { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
   .combo-best-desc { font-weight: 700; font-size: 0.95rem; }
-  .combo-best-rec { color: var(--win); font-weight: 700; white-space: nowrap; }
+  .combo-best-rec { font-weight: 700; white-space: nowrap; }
+  .combo-best-rec.up, .combo-pct.up { color: var(--win); }
+  .combo-best-rec.down, .combo-pct.down { color: var(--loss); }
   .combo-apply { margin-top: 8px; padding: 4px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--neutral-bg); color: var(--text); font-size: 0.78rem; font-weight: 600; cursor: pointer; }
   .combo-apply:hover { border-color: var(--accent); }
   .combo-dim { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
@@ -1645,14 +1647,19 @@ function comboLabel(sel) {
   return parts.length ? parts.join(" &middot; ") : "All graded games";
 }
 
+// The best combination must actually be a filter (pick fewer games than no filter) and beat both a coin flip and the
+// all-games win rate; otherwise there is no best combination to show.
 function bestCombo(games) {
   let best = null;
   const levels = comboConfLevels(games);
+  const base = comboRecord(games, COMBO_ANY), baseRate = base.n ? base.w / base.n : 0;
   const walk = (i, sel) => {
     if (i === COMBO_DIMS.length) {
       if (COMBO_DIMS.every(d => sel[d.key] === "any")) return;
       const r = comboRecord(games, sel);
-      if (r.n < COMBO_MIN_GAMES) return;
+      if (r.n < COMBO_MIN_GAMES || r.n === base.n) return;
+      const rate = r.w / r.n;
+      if (rate <= 0.5 || rate <= baseRate) return;
       const score = wilsonLow(r.w, r.n);
       if (!best || score > best.score || (score === best.score && r.n > best.n)) best = { sel: { ...sel }, ...r, score };
       return;
@@ -1674,23 +1681,30 @@ function setComboConf(v) {
 }
 function resetCombo() { comboSel = { ...COMBO_ANY }; renderCombo(); }
 
+function comboRateClass(w, n) {
+  const r = n ? w / n : 0.5;
+  return r > 0.5 ? "up" : r < 0.5 ? "down" : "";
+}
+
 function comboBestHtml(games) {
-  const best = bestCombo(games);
+  const best = bestCombo(games), all = comboRecord(games, COMBO_ANY);
   const isBest = best && COMBO_DIMS.every(d => comboSel[d.key] === best.sel[d.key]);
   return best
     ? `<div class="combo-best"><div class="combo-best-label">Best combination so far</div>
         <div class="combo-best-main"><span class="combo-best-desc">${comboLabel(best.sel)}</span>
-        <span class="combo-best-rec">${best.w}-${best.l} (${Math.round(best.w / best.n * 100)}%)</span></div>
+        <span class="combo-best-rec ${comboRateClass(best.w, best.n)}">${best.w}-${best.l} (${Math.round(best.w / best.n * 100)}%)</span></div>
         ${isBest ? "" : '<button type="button" class="combo-apply" onclick="applyBestCombo()">Show this combination</button>'}</div>`
     : `<div class="combo-best"><div class="combo-best-label">Best combination so far</div>
-        <div class="combo-meta">Needs a combination with at least ${COMBO_MIN_GAMES} graded games.</div></div>`;
+        <div class="combo-meta">${all.n < COMBO_MIN_GAMES
+          ? `Needs a combination with at least ${COMBO_MIN_GAMES} graded games.`
+          : `No combination is beating the overall record yet (${all.w}-${all.l}, ${Math.round(all.w / all.n * 100)}%).`}</div></div>`;
 }
 
 function comboResultHtml(games) {
   const r = comboRecord(games, comboSel), all = comboRecord(games, COMBO_ANY);
   const pct = r.n ? Math.round(r.w / r.n * 100) : null;
   return `<div class="combo-result"><span class="combo-rec">${r.n ? r.w + "-" + r.l : "N/A"}</span>
-      <span class="combo-pct">${pct === null ? "" : pct + "%"}</span>
+      <span class="combo-pct ${r.n ? comboRateClass(r.w, r.n) : ""}">${pct === null ? "" : pct + "%"}</span>
       <span class="combo-meta">${r.n} game${r.n === 1 ? "" : "s"}${r.n && r.n < COMBO_MIN_GAMES ? " (small sample)" : ""} &middot; all games: ${all.w}-${all.l}</span></div>
       ${r.n ? `<div class="combo-bar"><i style="width:${pct}%"></i></div>` : ""}`;
 }
