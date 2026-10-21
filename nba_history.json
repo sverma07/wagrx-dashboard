@@ -1,7 +1,189 @@
 {
   "sport": "NBA",
-  "updated": "2026-10-20T06:10:02-04:00",
+  "updated": "2026-10-21T06:10:03-04:00",
   "days": {
+    "2026-10-20": [
+      {
+        "game": "Detroit Pistons (H) vs Boston Celtics (A)",
+        "team_home": "Detroit Pistons",
+        "team_away": "Boston Celtics",
+        "line": "BOS -1.5",
+        "favorite": "Boston Celtics -fav",
+        "final": "Detroit Pistons 121, Boston Celtics 113",
+        "cover": "Detroit Pistons",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 48.3,
+          "home_m": 44.72,
+          "away_b": 51.7,
+          "away_m": 55.28
+        },
+        "graded_run": "2026-10-20T14:10:07-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Detroit Pistons",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Detroit Pistons",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "New York Knicks (H) vs Philadelphia 76ers (A)",
+        "team_home": "New York Knicks",
+        "team_away": "Philadelphia 76ers",
+        "line": "NY -4.5",
+        "favorite": "New York Knicks -fav",
+        "final": "New York Knicks 100, Philadelphia 76ers 106",
+        "cover": "Philadelphia 76ers",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 31.06,
+          "home_m": 30.88,
+          "away_b": 68.94,
+          "away_m": 69.12
+        },
+        "graded_run": "2026-10-20T18:10:07-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "San Antonio Spurs (H) vs Oklahoma City Thunder (A)",
+        "team_home": "San Antonio Spurs",
+        "team_away": "Oklahoma City Thunder",
+        "line": "SA -1.5",
+        "favorite": "San Antonio Spurs -fav",
+        "final": "San Antonio Spurs 104, Oklahoma City Thunder 116",
+        "cover": "Oklahoma City Thunder",
+        "status": null,
+        "confidence": "67%",
+        "sharp": {
+          "home_b": 65.66,
+          "home_m": 64.09,
+          "away_b": 34.34,
+          "away_m": 35.91
+        },
+        "graded_run": "2026-10-20T20:10:07-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Oklahoma City Thunder",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Oklahoma City Thunder",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Oklahoma City Thunder",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Oklahoma City Thunder",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Oklahoma City Thunder",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Oklahoma City Thunder",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-19": [],
     "2026-10-18": [],
     "2026-10-17": [],
