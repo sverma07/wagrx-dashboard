@@ -1031,6 +1031,175 @@
           "event_id": "401909094"
         }
       ]
+    },
+    {
+      "time": "2026-10-22T12:10:07-04:00",
+      "games": [
+        {
+          "game": "Philadelphia 76ers (H) vs Cleveland Cavaliers (A)",
+          "spread": "PHI -3.5",
+          "favorite": "Philadelphia 76ers -fav",
+          "confidence": "N/A",
+          "picks": {
+            "M1: Normal Score": "PUSH",
+            "M2: Relevance": "PUSH",
+            "M3: Efficiency": "N/A",
+            "M4: ATS Trends": "PUSH",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "TAKE: Philadelphia 76ers",
+            "M8: Line Movement": "TAKE: Cleveland Cavaliers",
+            "CONSENSUS": "N/A",
+            "Sharp: Circa": "TAKE: Cleveland Cavaliers",
+            "Sharp: DraftKings": "TAKE: Philadelphia 76ers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 0,
+              "away": 0
+            },
+            "M2: Relevance": {
+              "home": 0.0,
+              "away": 0.0
+            },
+            "M3: Efficiency": {
+              "margin": "N/A"
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "0.5",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": 44.97,
+              "home_m": 46.49,
+              "away_b": 55.03,
+              "away_m": 53.51
+            },
+            "M8: Line Movement": {
+              "open_home": -4.5,
+              "current_home": -2.5,
+              "delta": 2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -3.0,
+                "last": -3.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Philadelphia 76ers",
+          "team_away": "Cleveland Cavaliers",
+          "start": "2026-10-22T23:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 71.0,
+              "home_m": 50.0,
+              "away_b": 29.0,
+              "away_m": 50.0,
+              "line": "-3",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 66.0,
+              "home_m": 69.0,
+              "away_b": 34.0,
+              "away_m": 31.0,
+              "line": "-2.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909093"
+        },
+        {
+          "game": "Oklahoma City Thunder (H) vs Denver Nuggets (A)",
+          "spread": "OKC -8.5",
+          "favorite": "Oklahoma City Thunder -fav",
+          "confidence": "N/A",
+          "picks": {
+            "M1: Normal Score": "PUSH",
+            "M2: Relevance": "PUSH",
+            "M3: Efficiency": "N/A",
+            "M4: ATS Trends": "PUSH",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "TAKE: Oklahoma City Thunder",
+            "M8: Line Movement": "TAKE: Oklahoma City Thunder",
+            "CONSENSUS": "N/A",
+            "Sharp: Circa": "TAKE: Oklahoma City Thunder",
+            "Sharp: DraftKings": "TAKE: Denver Nuggets"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 0,
+              "away": 0
+            },
+            "M2: Relevance": {
+              "home": 0.0,
+              "away": 0.0
+            },
+            "M3: Efficiency": {
+              "margin": "N/A"
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "0.5",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": 38.31,
+              "home_m": 47.26,
+              "away_b": 61.69,
+              "away_m": 52.74
+            },
+            "M8: Line Movement": {
+              "open_home": -7.5,
+              "current_home": -8.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -8.0,
+                "last": -8.5,
+                "delta": -0.5
+              }
+            }
+          },
+          "team_home": "Oklahoma City Thunder",
+          "team_away": "Denver Nuggets",
+          "start": "2026-10-23T01:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 75.0,
+              "home_m": 100.0,
+              "away_b": 25.0,
+              "away_m": 0.0,
+              "line": "-8.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 37.0,
+              "home_m": 34.0,
+              "away_b": 63.0,
+              "away_m": 66.0,
+              "line": "-8.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909094"
+        }
+      ]
     }
   ]
 }
