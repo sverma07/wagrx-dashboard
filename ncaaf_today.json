@@ -1,124 +1,119 @@
 {
   "sport": "NCAAF",
-  "date": "2026-10-21",
+  "date": "2026-10-22",
   "snapshots": [
     {
-      "time": "2026-10-21T00:30:35-04:00",
+      "time": "2026-10-22T00:30:55-04:00",
       "games": [
         {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
+          "game": "Appalachian State Mountaineers (H) vs James Madison Dukes (A)",
+          "spread": "JMU -11.5",
+          "favorite": "James Madison Dukes -fav",
+          "confidence": "57%",
           "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: Sam Houston Bearkats",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
+            "M1: Normal Score": "TAKE: James Madison Dukes",
+            "M2: Relevance": "TAKE: James Madison Dukes",
+            "M3: Efficiency": "TAKE: Appalachian State Mountaineers",
+            "M4: ATS Trends": "TAKE: James Madison Dukes",
+            "M5: Luck": "TAKE: Appalachian State Mountaineers",
+            "M6: Sharp Money": "TAKE: James Madison Dukes",
+            "M8: Line Movement": "TAKE: James Madison Dukes",
+            "CONSENSUS": "TAKE: James Madison Dukes",
+            "Sharp: Circa": "TAKE: James Madison Dukes",
+            "Sharp: DraftKings": "TAKE: Appalachian State Mountaineers"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 11,
-              "away": 27
+              "home": 6,
+              "away": 34
             },
             "M2: Relevance": {
-              "home": 12.0125,
-              "away": 50.0282
+              "home": 7.3458,
+              "away": 53.3364
             },
             "M3: Efficiency": {
-              "margin": -4.0
+              "margin": -9.2
             },
             "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
+              "home": 1,
+              "away": 8
             },
             "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
+              "home": "0.3",
+              "away": "0.8"
             },
             "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
+              "home_b": 38.78,
+              "home_m": 35.91,
+              "away_b": 61.22,
+              "away_m": 64.09
             },
             "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 2.5,
-              "delta": 0.0,
+              "open_home": 10.5,
+              "current_home": 11.5,
+              "delta": 1.0,
               "crosses_key": false
             }
           },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
+          "team_home": "Appalachian State Mountaineers",
+          "team_away": "James Madison Dukes",
+          "start": "2026-10-22T23:00Z",
           "sharp_books": {
             "circa": {
-              "home_b": 43.0,
-              "home_m": 48.0,
-              "away_b": 57.0,
-              "away_m": 52.0,
-              "line": "+2.5",
+              "home_b": 42.0,
+              "home_m": 17.0,
+              "away_b": 58.0,
+              "away_m": 83.0,
+              "line": "+11",
               "thin": false
             },
             "dk": {
-              "home_b": 34.0,
-              "home_m": 48.0,
-              "away_b": 66.0,
-              "away_m": 52.0,
-              "line": "+2.5",
+              "home_b": 44.0,
+              "home_m": 60.0,
+              "away_b": 56.0,
+              "away_m": 40.0,
+              "line": "+11.5",
               "thin": false
             }
           },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T02:00:07-04:00",
-      "games": [
+          "event_id": "401869845"
+        },
         {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
+          "game": "Kennesaw State Owls (H) vs Liberty Flames (A)",
+          "spread": "LIB -9.5",
+          "favorite": "Liberty Flames -fav",
+          "confidence": "62%",
           "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
+            "M1: Normal Score": "TAKE: Liberty Flames",
+            "M2: Relevance": "TAKE: Liberty Flames",
+            "M3: Efficiency": "TAKE: Liberty Flames",
+            "M4: ATS Trends": "TAKE: Kennesaw State Owls",
+            "M5: Luck": "TAKE: Kennesaw State Owls",
             "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: Sam Houston Bearkats",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
+            "M8: Line Movement": "TAKE: Liberty Flames",
+            "CONSENSUS": "TAKE: Liberty Flames",
+            "Sharp: Circa": "TAKE: Kennesaw State Owls",
+            "Sharp: DraftKings": "TAKE: Kennesaw State Owls"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 11,
-              "away": 27
+              "home": 7,
+              "away": 31
             },
             "M2: Relevance": {
-              "home": 12.0125,
-              "away": 50.0282
+              "home": 7.1554,
+              "away": 52.7121
             },
             "M3: Efficiency": {
-              "margin": -4.0
+              "margin": -14.8
             },
             "M4: ATS Trends": {
-              "home": 2,
+              "home": 4,
               "away": 3
             },
             "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
+              "home": "-1.8",
+              "away": "0.6"
             },
             "M6: Sharp Money": {
               "home_b": null,
@@ -127,1423 +122,107 @@
               "away_m": null
             },
             "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 2.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": {
-                "first": 2.5,
-                "last": 2.5,
-                "delta": 0.0
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 43.0,
-              "home_m": 48.0,
-              "away_b": 57.0,
-              "away_m": 52.0,
-              "line": "+2.5",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 33.0,
-              "home_m": 48.0,
-              "away_b": 67.0,
-              "away_m": 52.0,
-              "line": "+2.5",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T04:00:05-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: Sam Houston Bearkats",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.0125,
-              "away": 50.0282
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 2.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": {
-                "first": 2.5,
-                "last": 2.5,
-                "delta": 0.0
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 43.0,
-              "home_m": 48.0,
-              "away_b": 57.0,
-              "away_m": 52.0,
-              "line": "+2.5",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 33.0,
-              "home_m": 47.0,
-              "away_b": 67.0,
-              "away_m": 53.0,
-              "line": "+2.5",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T06:00:13-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: Sam Houston Bearkats",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.0125,
-              "away": 50.0282
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 2.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": {
-                "first": 2.5,
-                "last": 2.5,
-                "delta": 0.0
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 43.0,
-              "home_m": 48.0,
-              "away_b": 57.0,
-              "away_m": 52.0,
-              "line": "+2.5",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 33.0,
-              "home_m": 50.0,
-              "away_b": 67.0,
-              "away_m": 50.0,
-              "line": "+2.5",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T07:35:15-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: Sam Houston Bearkats",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 2.5,
-              "delta": 0.0,
+              "open_home": 8.5,
+              "current_home": 9.5,
+              "delta": 1.0,
               "crosses_key": false
             }
           },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
+          "team_home": "Kennesaw State Owls",
+          "team_away": "Liberty Flames",
+          "start": "2026-10-22T23:00Z",
           "sharp_books": {
             "circa": {
-              "home_b": 47.0,
-              "home_m": 48.0,
-              "away_b": 53.0,
-              "away_m": 52.0,
-              "line": "+2.5",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 32.0,
-              "home_m": 47.0,
-              "away_b": 68.0,
-              "away_m": 53.0,
-              "line": "+2.5",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T08:00:06-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: Sam Houston Bearkats",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 2.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": {
-                "first": 2.5,
-                "last": 2.5,
-                "delta": 0.0
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 47.0,
-              "home_m": 48.0,
-              "away_b": 53.0,
-              "away_m": 52.0,
-              "line": "+2.5",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 31.0,
-              "home_m": 45.0,
-              "away_b": 69.0,
-              "away_m": 55.0,
-              "line": "+2.5",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T10:00:23-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: Sam Houston Bearkats",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 2.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": {
-                "first": 2.5,
-                "last": 2.5,
-                "delta": 0.0
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 47.0,
-              "home_m": 48.0,
-              "away_b": 53.0,
-              "away_m": 52.0,
-              "line": "+2.5",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 31.0,
-              "home_m": 43.0,
-              "away_b": 69.0,
-              "away_m": 57.0,
-              "line": "+2.5",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T12:00:06-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "PUSH",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: Sam Houston Bearkats",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 2.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.0,
-              "sources": [],
-              "circa": {
-                "first": 2.5,
-                "last": 2.5,
-                "delta": 0.0
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 37.0,
-              "home_m": 48.0,
-              "away_b": 63.0,
-              "away_m": 52.0,
-              "line": "+2.5",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 30.0,
-              "home_m": 43.0,
-              "away_b": 70.0,
-              "away_m": 57.0,
-              "line": "+2.5",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T12:51:33-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: New Mexico State Aggies",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: New Mexico State Aggies",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 2.5,
-              "delta": 0.0,
-              "crosses_key": false,
-              "size": 0.5,
-              "sources": [
-                "circa"
-              ],
-              "circa": {
-                "first": 2.5,
-                "last": 3.0,
-                "delta": 0.5
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 38.0,
-              "home_m": 25.0,
-              "away_b": 62.0,
-              "away_m": 75.0,
-              "line": "+3",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 29.0,
-              "home_m": 40.0,
-              "away_b": 71.0,
-              "away_m": 60.0,
-              "line": "+3",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T14:00:06-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: New Mexico State Aggies",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: New Mexico State Aggies",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 3.0,
-              "delta": 0.5,
-              "crosses_key": true,
-              "size": 0.5,
-              "sources": [
-                "circa",
-                "dk"
-              ],
-              "circa": {
-                "first": 2.5,
-                "last": 3.0,
-                "delta": 0.5
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 37.0,
-              "home_m": 25.0,
-              "away_b": 63.0,
-              "away_m": 75.0,
-              "line": "+3",
+              "home_b": 53.0,
+              "home_m": 95.0,
+              "away_b": 47.0,
+              "away_m": 5.0,
+              "line": "+9",
               "thin": false
             },
             "dk": {
               "home_b": 28.0,
-              "home_m": 38.0,
+              "home_m": 53.0,
               "away_b": 72.0,
-              "away_m": 62.0,
-              "line": "+3",
+              "away_m": 47.0,
+              "line": "+9.5",
               "thin": false
             }
           },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T14:18:55-04:00",
-      "games": [
+          "event_id": "401871056"
+        },
         {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
+          "game": "Memphis Tigers (H) vs East Carolina Pirates (A)",
+          "spread": "MEM -10.5",
+          "favorite": "Memphis Tigers -fav",
+          "confidence": "57%",
           "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: New Mexico State Aggies",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: New Mexico State Aggies",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
+            "M1: Normal Score": "TAKE: Memphis Tigers",
+            "M2: Relevance": "TAKE: Memphis Tigers",
+            "M3: Efficiency": "TAKE: East Carolina Pirates",
+            "M4: ATS Trends": "TAKE: Memphis Tigers",
+            "M5: Luck": "TAKE: East Carolina Pirates",
+            "M6: Sharp Money": "TAKE: Memphis Tigers",
+            "M8: Line Movement": "TAKE: Memphis Tigers",
+            "CONSENSUS": "TAKE: Memphis Tigers",
+            "Sharp: Circa": "TAKE: East Carolina Pirates",
+            "Sharp: DraftKings": "TAKE: East Carolina Pirates"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 11,
-              "away": 27
+              "home": 32,
+              "away": 11
             },
             "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
+              "home": 47.7465,
+              "away": 16.9223
             },
             "M3: Efficiency": {
-              "margin": -4.0
+              "margin": 9.2
             },
             "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
+              "home": 9,
+              "away": 1
             },
             "M5: Luck": {
-              "home": "-1.0",
+              "home": "0.0",
               "away": "-0.4"
             },
             "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
+              "home_b": 55.01,
+              "home_m": 58.54,
+              "away_b": 44.99,
+              "away_m": 41.46
             },
             "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 3.0,
-              "delta": 0.5,
-              "crosses_key": true,
-              "size": 0.5,
-              "sources": [
-                "circa",
-                "dk"
-              ],
-              "circa": {
-                "first": 2.5,
-                "last": 3.0,
-                "delta": 0.5
-              }
+              "open_home": -9.5,
+              "current_home": -10.5,
+              "delta": -1.0,
+              "crosses_key": false
             }
           },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
+          "team_home": "Memphis Tigers",
+          "team_away": "East Carolina Pirates",
+          "start": "2026-10-22T23:30Z",
           "sharp_books": {
             "circa": {
-              "home_b": 37.0,
-              "home_m": 25.0,
-              "away_b": 63.0,
-              "away_m": 75.0,
-              "line": "+3",
+              "home_b": 67.0,
+              "home_m": 64.0,
+              "away_b": 33.0,
+              "away_m": 36.0,
+              "line": "-10.5",
               "thin": false
             },
             "dk": {
-              "home_b": 28.0,
-              "home_m": 38.0,
-              "away_b": 72.0,
-              "away_m": 62.0,
-              "line": "+3",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T16:00:28-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: New Mexico State Aggies",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: New Mexico State Aggies",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 3.0,
-              "delta": 0.5,
-              "crosses_key": true,
-              "size": 0.5,
-              "sources": [
-                "circa",
-                "dk"
-              ],
-              "circa": {
-                "first": 2.5,
-                "last": 3.0,
-                "delta": 0.5
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 36.0,
-              "home_m": 26.0,
-              "away_b": 64.0,
-              "away_m": 74.0,
-              "line": "+3",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 29.0,
+              "home_b": 62.0,
               "home_m": 40.0,
-              "away_b": 71.0,
+              "away_b": 38.0,
               "away_m": 60.0,
-              "line": "+3",
+              "line": "-10.5",
               "thin": false
             }
           },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T18:00:06-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: New Mexico State Aggies",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: New Mexico State Aggies",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 3.0,
-              "delta": 0.5,
-              "crosses_key": true,
-              "size": 0.5,
-              "sources": [
-                "circa",
-                "dk"
-              ],
-              "circa": {
-                "first": 2.5,
-                "last": 3.0,
-                "delta": 0.5
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 32.0,
-              "home_m": 28.0,
-              "away_b": 68.0,
-              "away_m": 72.0,
-              "line": "+3",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 32.0,
-              "home_m": 40.0,
-              "away_b": 68.0,
-              "away_m": 60.0,
-              "line": "+3",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T18:25:33-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: New Mexico State Aggies",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: New Mexico State Aggies",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 3.0,
-              "delta": 0.5,
-              "crosses_key": true,
-              "size": 0.5,
-              "sources": [
-                "circa",
-                "dk"
-              ],
-              "circa": {
-                "first": 2.5,
-                "last": 3.0,
-                "delta": 0.5
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 30.0,
-              "home_m": 25.0,
-              "away_b": 70.0,
-              "away_m": 75.0,
-              "line": "+3",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 32.0,
-              "home_m": 37.0,
-              "away_b": 68.0,
-              "away_m": 63.0,
-              "line": "+3",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T19:05:32-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: New Mexico State Aggies",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: New Mexico State Aggies",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 3.0,
-              "delta": 0.5,
-              "crosses_key": true,
-              "size": 0.5,
-              "sources": [
-                "circa",
-                "dk"
-              ],
-              "circa": {
-                "first": 2.5,
-                "last": 3.0,
-                "delta": 0.5
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 32.0,
-              "home_m": 25.0,
-              "away_b": 68.0,
-              "away_m": 75.0,
-              "line": "+3",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 32.0,
-              "home_m": 36.0,
-              "away_b": 68.0,
-              "away_m": 64.0,
-              "line": "+3",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T19:51:32-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: New Mexico State Aggies",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: Sam Houston Bearkats",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 3.0,
-              "delta": 0.5,
-              "crosses_key": true,
-              "size": 0.5,
-              "sources": [
-                "circa",
-                "dk"
-              ],
-              "circa": {
-                "first": 2.5,
-                "last": 3.0,
-                "delta": 0.5
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 36.0,
-              "home_m": 45.0,
-              "away_b": 64.0,
-              "away_m": 55.0,
-              "line": "+3",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 32.0,
-              "home_m": 35.0,
-              "away_b": 68.0,
-              "away_m": 65.0,
-              "line": "+3",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T20:00:06-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: New Mexico State Aggies",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: Sam Houston Bearkats",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 3.0,
-              "delta": 0.5,
-              "crosses_key": true,
-              "size": 0.5,
-              "sources": [
-                "circa",
-                "dk"
-              ],
-              "circa": {
-                "first": 2.5,
-                "last": 3.0,
-                "delta": 0.5
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 37.0,
-              "home_m": 47.0,
-              "away_b": 63.0,
-              "away_m": 53.0,
-              "line": "+3",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 32.0,
-              "home_m": 35.0,
-              "away_b": 68.0,
-              "away_m": 65.0,
-              "line": "+3",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-21T22:00:06-04:00",
-      "games": [
-        {
-          "game": "Sam Houston Bearkats (H) vs New Mexico State Aggies (A)",
-          "spread": "NMSU -2.5",
-          "favorite": "New Mexico State Aggies -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: New Mexico State Aggies",
-            "M2: Relevance": "TAKE: New Mexico State Aggies",
-            "M3: Efficiency": "TAKE: New Mexico State Aggies",
-            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
-            "M5: Luck": "TAKE: Sam Houston Bearkats",
-            "M6: Sharp Money": "N/A",
-            "M8: Line Movement": "TAKE: New Mexico State Aggies",
-            "CONSENSUS": "TAKE: New Mexico State Aggies",
-            "Sharp: Circa": "TAKE: Sam Houston Bearkats",
-            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 11,
-              "away": 27
-            },
-            "M2: Relevance": {
-              "home": 12.1627,
-              "away": 48.5884
-            },
-            "M3: Efficiency": {
-              "margin": -4.0
-            },
-            "M4: ATS Trends": {
-              "home": 2,
-              "away": 3
-            },
-            "M5: Luck": {
-              "home": "-1.0",
-              "away": "-0.4"
-            },
-            "M6: Sharp Money": {
-              "home_b": null,
-              "home_m": null,
-              "away_b": null,
-              "away_m": null
-            },
-            "M8: Line Movement": {
-              "open_home": 2.5,
-              "current_home": 3.0,
-              "delta": 0.5,
-              "crosses_key": true,
-              "size": 0.5,
-              "sources": [
-                "circa",
-                "dk"
-              ],
-              "circa": {
-                "first": 2.5,
-                "last": 3.0,
-                "delta": 0.5
-              }
-            }
-          },
-          "team_home": "Sam Houston Bearkats",
-          "team_away": "New Mexico State Aggies",
-          "start": "2026-10-22T00:00Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 35.0,
-              "home_m": 47.0,
-              "away_b": 65.0,
-              "away_m": 53.0,
-              "line": "+3",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 32.0,
-              "home_m": 35.0,
-              "away_b": 68.0,
-              "away_m": 65.0,
-              "line": "+3",
-              "thin": false
-            }
-          },
-          "event_id": "401871070"
+          "event_id": "401862807"
         }
       ]
     }
