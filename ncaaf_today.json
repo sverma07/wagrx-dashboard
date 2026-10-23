@@ -4885,6 +4885,422 @@
           "event_id": "401858272"
         }
       ]
+    },
+    {
+      "time": "2026-10-23T16:12:39-04:00",
+      "games": [
+        {
+          "game": "Virginia Cavaliers (H) vs Duke Blue Devils (A)",
+          "spread": "UVA -2.5",
+          "favorite": "Virginia Cavaliers -fav",
+          "confidence": "79%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Duke Blue Devils",
+            "M2: Relevance": "TAKE: Duke Blue Devils",
+            "M3: Efficiency": "TAKE: Duke Blue Devils",
+            "M4: ATS Trends": "TAKE: Duke Blue Devils",
+            "M5: Luck": "TAKE: Virginia Cavaliers",
+            "M6: Sharp Money": "TAKE: Duke Blue Devils",
+            "M8: Line Movement": "TAKE: Duke Blue Devils",
+            "CONSENSUS": "TAKE: Duke Blue Devils",
+            "Sharp: Circa": "TAKE: Virginia Cavaliers",
+            "Sharp: DraftKings": "TAKE: Duke Blue Devils"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 13,
+              "away": 31
+            },
+            "M2: Relevance": {
+              "home": 19.0698,
+              "away": 47.2856
+            },
+            "M3: Efficiency": {
+              "margin": -2.5
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 8
+            },
+            "M5: Luck": {
+              "home": "-0.7",
+              "away": "-0.4"
+            },
+            "M6: Sharp Money": {
+              "home_b": 48.95,
+              "home_m": 41.88,
+              "away_b": 51.05,
+              "away_m": 58.12
+            },
+            "M8: Line Movement": {
+              "open_home": -6.5,
+              "current_home": -2.5,
+              "delta": 4.0,
+              "crosses_key": true,
+              "size": 4.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -2.5,
+                "last": -2.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Virginia Cavaliers",
+          "team_away": "Duke Blue Devils",
+          "start": "2026-10-23T23:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 52.0,
+              "home_m": 73.0,
+              "away_b": 48.0,
+              "away_m": 27.0,
+              "line": "-2.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 65.0,
+              "home_m": 31.0,
+              "away_b": 35.0,
+              "away_m": 69.0,
+              "line": "-2.5",
+              "thin": false
+            }
+          },
+          "event_id": "401858271"
+        },
+        {
+          "game": "UConn Huskies (H) vs UMass Minutemen (A)",
+          "spread": "CONN -14.5",
+          "favorite": "UConn Huskies -fav",
+          "confidence": "78%",
+          "picks": {
+            "M1: Normal Score": "TAKE: UConn Huskies",
+            "M2: Relevance": "TAKE: UConn Huskies",
+            "M3: Efficiency": "TAKE: UMass Minutemen",
+            "M4: ATS Trends": "TAKE: UConn Huskies",
+            "M5: Luck": "TAKE: UConn Huskies",
+            "M6: Sharp Money": "TAKE: UMass Minutemen",
+            "M8: Line Movement": "TAKE: UMass Minutemen",
+            "CONSENSUS": "TAKE: UConn Huskies",
+            "Sharp: Circa": "TAKE: UConn Huskies",
+            "Sharp: DraftKings": "TAKE: UMass Minutemen"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 27,
+              "away": 14
+            },
+            "M2: Relevance": {
+              "home": 41.4311,
+              "away": 20.9883
+            },
+            "M3: Efficiency": {
+              "margin": 0.1
+            },
+            "M4: ATS Trends": {
+              "home": 8,
+              "away": 1
+            },
+            "M5: Luck": {
+              "home": "-0.8",
+              "away": "-0.1"
+            },
+            "M6: Sharp Money": {
+              "home_b": 34.4,
+              "home_m": 26.68,
+              "away_b": 65.6,
+              "away_m": 73.32
+            },
+            "M8: Line Movement": {
+              "open_home": -15.5,
+              "current_home": -12.5,
+              "delta": 3.0,
+              "crosses_key": false,
+              "size": 3.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -14.5,
+                "last": -13.0,
+                "delta": 1.5
+              }
+            }
+          },
+          "team_home": "UConn Huskies",
+          "team_away": "UMass Minutemen",
+          "start": "2026-10-23T23:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 31.0,
+              "home_m": 35.0,
+              "away_b": 69.0,
+              "away_m": 65.0,
+              "line": "-13",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 35.0,
+              "home_m": 31.0,
+              "away_b": 65.0,
+              "away_m": 69.0,
+              "line": "-12.5",
+              "thin": false
+            }
+          },
+          "event_id": "401861965"
+        },
+        {
+          "game": "Tulsa Golden Hurricane (H) vs Army Black Knights (A)",
+          "spread": "TLSA -1.5",
+          "favorite": "Tulsa Golden Hurricane -fav",
+          "confidence": "84%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Army Black Knights",
+            "M2: Relevance": "TAKE: Army Black Knights",
+            "M3: Efficiency": "TAKE: Army Black Knights",
+            "M4: ATS Trends": "TAKE: Tulsa Golden Hurricane",
+            "M5: Luck": "TAKE: Army Black Knights",
+            "M6: Sharp Money": "TAKE: Tulsa Golden Hurricane",
+            "M8: Line Movement": "TAKE: Army Black Knights",
+            "CONSENSUS": "TAKE: Army Black Knights",
+            "Sharp: Circa": "TAKE: Tulsa Golden Hurricane",
+            "Sharp: DraftKings": "TAKE: Tulsa Golden Hurricane"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 19,
+              "away": 23
+            },
+            "M2: Relevance": {
+              "home": 20.7617,
+              "away": 44.5162
+            },
+            "M3: Efficiency": {
+              "margin": -2.9
+            },
+            "M4: ATS Trends": {
+              "home": 8,
+              "away": 1
+            },
+            "M5: Luck": {
+              "home": "0.1",
+              "away": "-0.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": 32.4,
+              "home_m": 35.35,
+              "away_b": 67.6,
+              "away_m": 64.65
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -1.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.5,
+              "sources": [
+                "circa"
+              ],
+              "circa": {
+                "first": -2.0,
+                "last": -1.5,
+                "delta": 0.5
+              }
+            }
+          },
+          "team_home": "Tulsa Golden Hurricane",
+          "team_away": "Army Black Knights",
+          "start": "2026-10-24T00:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 19.0,
+              "home_m": 40.0,
+              "away_b": 81.0,
+              "away_m": 60.0,
+              "line": "-1.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 41.0,
+              "home_m": 44.0,
+              "away_b": 59.0,
+              "away_m": 56.0,
+              "line": "-1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401862808"
+        },
+        {
+          "game": "Wyoming Cowboys (H) vs Air Force Falcons (A)",
+          "spread": "AF -5.5",
+          "favorite": "Air Force Falcons -fav",
+          "confidence": "57%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Air Force Falcons",
+            "M2: Relevance": "TAKE: Air Force Falcons",
+            "M3: Efficiency": "TAKE: Wyoming Cowboys",
+            "M4: ATS Trends": "TAKE: Air Force Falcons",
+            "M5: Luck": "TAKE: Wyoming Cowboys",
+            "M6: Sharp Money": "TAKE: Air Force Falcons",
+            "M8: Line Movement": "TAKE: Wyoming Cowboys",
+            "CONSENSUS": "TAKE: Air Force Falcons",
+            "Sharp: Circa": "TAKE: Wyoming Cowboys",
+            "Sharp: DraftKings": "TAKE: Air Force Falcons"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 12,
+              "away": 32
+            },
+            "M2: Relevance": {
+              "home": 16.0196,
+              "away": 49.2111
+            },
+            "M3: Efficiency": {
+              "margin": -5.4
+            },
+            "M4: ATS Trends": {
+              "home": 4,
+              "away": 7
+            },
+            "M5: Luck": {
+              "home": "0.8",
+              "away": "0.9"
+            },
+            "M6: Sharp Money": {
+              "home_b": 46.07,
+              "home_m": 39.36,
+              "away_b": 53.93,
+              "away_m": 60.64
+            },
+            "M8: Line Movement": {
+              "open_home": 6.5,
+              "current_home": 5.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 5.5,
+                "last": 5.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Wyoming Cowboys",
+          "team_away": "Air Force Falcons",
+          "start": "2026-10-24T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 48.0,
+              "home_m": 90.0,
+              "away_b": 53.0,
+              "away_m": 10.0,
+              "line": "+5.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 48.0,
+              "home_m": 29.0,
+              "away_b": 52.0,
+              "away_m": 71.0,
+              "line": "+5.5",
+              "thin": false
+            }
+          },
+          "event_id": "401864525"
+        },
+        {
+          "game": "Stanford Cardinal (H) vs NC State Wolfpack (A)",
+          "spread": "NCSU -6.5",
+          "favorite": "NC State Wolfpack -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: NC State Wolfpack",
+            "M2: Relevance": "TAKE: NC State Wolfpack",
+            "M3: Efficiency": "TAKE: NC State Wolfpack",
+            "M4: ATS Trends": "TAKE: NC State Wolfpack",
+            "M5: Luck": "TAKE: NC State Wolfpack",
+            "M6: Sharp Money": "TAKE: Stanford Cardinal",
+            "M8: Line Movement": "TAKE: NC State Wolfpack",
+            "CONSENSUS": "TAKE: NC State Wolfpack",
+            "Sharp: Circa": "TAKE: NC State Wolfpack",
+            "Sharp: DraftKings": "TAKE: NC State Wolfpack"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 7,
+              "away": 35
+            },
+            "M2: Relevance": {
+              "home": 7.2872,
+              "away": 56.2106
+            },
+            "M3: Efficiency": {
+              "margin": -8.8
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 7
+            },
+            "M5: Luck": {
+              "home": "1.0",
+              "away": "-0.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": 35.66,
+              "home_m": 45.88,
+              "away_b": 64.34,
+              "away_m": 54.12
+            },
+            "M8: Line Movement": {
+              "open_home": 7.5,
+              "current_home": 7.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.5,
+              "sources": [
+                "circa"
+              ],
+              "circa": {
+                "first": 7.0,
+                "last": 7.5,
+                "delta": 0.5
+              }
+            }
+          },
+          "team_home": "Stanford Cardinal",
+          "team_away": "NC State Wolfpack",
+          "start": "2026-10-24T02:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 43.0,
+              "home_m": 36.0,
+              "away_b": 57.0,
+              "away_m": 64.0,
+              "line": "+7.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 49.0,
+              "home_m": 34.0,
+              "away_b": 51.0,
+              "away_m": 66.0,
+              "line": "+7.5",
+              "thin": false
+            }
+          },
+          "event_id": "401858272"
+        }
+      ]
     }
   ]
 }
