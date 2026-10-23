@@ -1,7 +1,129 @@
 {
   "sport": "NBA",
-  "updated": "2026-10-22T06:10:04-04:00",
+  "updated": "2026-10-23T06:10:02-04:00",
   "days": {
+    "2026-10-22": [
+      {
+        "game": "Philadelphia 76ers (H) vs Cleveland Cavaliers (A)",
+        "team_home": "Philadelphia 76ers",
+        "team_away": "Cleveland Cavaliers",
+        "line": "PHI -3.5",
+        "favorite": "Philadelphia 76ers -fav",
+        "final": "Philadelphia 76ers 114, Cleveland Cavaliers 106",
+        "cover": "Philadelphia 76ers",
+        "status": null,
+        "confidence": "N/A",
+        "sharp": {
+          "home_b": 47.89,
+          "home_m": 41.86,
+          "away_b": 52.11,
+          "away_m": 58.14
+        },
+        "graded_run": "2026-10-22T18:10:08-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Cleveland Cavaliers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Cleveland Cavaliers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Cleveland Cavaliers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Cleveland Cavaliers",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Oklahoma City Thunder (H) vs Denver Nuggets (A)",
+        "team_home": "Oklahoma City Thunder",
+        "team_away": "Denver Nuggets",
+        "line": "OKC -8.5",
+        "favorite": "Oklahoma City Thunder -fav",
+        "final": "Oklahoma City Thunder 96, Denver Nuggets 84",
+        "cover": "Oklahoma City Thunder",
+        "status": null,
+        "confidence": "N/A",
+        "sharp": {
+          "home_b": 44.18,
+          "home_m": 48.28,
+          "away_b": 55.82,
+          "away_m": 51.72
+        },
+        "graded_run": "2026-10-22T20:10:07-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Oklahoma City Thunder",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Oklahoma City Thunder",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Denver Nuggets",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-21": [
       {
         "game": "Orlando Magic (H) vs Atlanta Hawks (A)",
