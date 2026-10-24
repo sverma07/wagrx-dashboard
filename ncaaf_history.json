@@ -1,7 +1,309 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-10-23T06:00:27-04:00",
+  "updated": "2026-10-24T06:00:27-04:00",
   "days": {
+    "2026-10-23": [
+      {
+        "game": "Virginia Cavaliers (H) vs Duke Blue Devils (A)",
+        "team_home": "Virginia Cavaliers",
+        "team_away": "Duke Blue Devils",
+        "line": "UVA -2.5",
+        "favorite": "Virginia Cavaliers -fav",
+        "final": "Virginia Cavaliers 16, Duke Blue Devils 19",
+        "cover": "Duke Blue Devils",
+        "status": null,
+        "confidence": "79%",
+        "sharp": {
+          "home_b": 48.95,
+          "home_m": 41.88,
+          "away_b": 51.05,
+          "away_m": 58.12
+        },
+        "graded_run": "2026-10-23T18:00:13-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Duke Blue Devils",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Duke Blue Devils",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Duke Blue Devils",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Duke Blue Devils",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Virginia Cavaliers",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Duke Blue Devils",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Duke Blue Devils",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Duke Blue Devils",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Virginia Cavaliers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Duke Blue Devils",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "UConn Huskies (H) vs UMass Minutemen (A)",
+        "team_home": "UConn Huskies",
+        "team_away": "UMass Minutemen",
+        "line": "CONN -14.5",
+        "favorite": "UConn Huskies -fav",
+        "final": "UConn Huskies 35, UMass Minutemen 16",
+        "cover": "UConn Huskies",
+        "status": null,
+        "confidence": "78%",
+        "sharp": {
+          "home_b": 32.82,
+          "home_m": 21.19,
+          "away_b": 67.18,
+          "away_m": 78.81
+        },
+        "graded_run": "2026-10-23T18:00:13-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "UConn Huskies",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "UConn Huskies",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "UConn Huskies",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "UConn Huskies",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "UConn Huskies",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "UConn Huskies",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "UConn Huskies",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Tulsa Golden Hurricane (H) vs Army Black Knights (A)",
+        "team_home": "Tulsa Golden Hurricane",
+        "team_away": "Army Black Knights",
+        "line": "TLSA -1.5",
+        "favorite": "Tulsa Golden Hurricane -fav",
+        "final": "Tulsa Golden Hurricane 35, Army Black Knights 38",
+        "cover": "Army Black Knights",
+        "status": null,
+        "confidence": "84%",
+        "sharp": {
+          "home_b": 32.4,
+          "home_m": 35.35,
+          "away_b": 67.6,
+          "away_m": 64.65
+        },
+        "graded_run": "2026-10-23T20:00:13-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Army Black Knights",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Army Black Knights",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Army Black Knights",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Tulsa Golden Hurricane",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Army Black Knights",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Tulsa Golden Hurricane",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Army Black Knights",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Army Black Knights",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Tulsa Golden Hurricane",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Army Black Knights",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Wyoming Cowboys (H) vs Air Force Falcons (A)",
+        "team_home": "Wyoming Cowboys",
+        "team_away": "Air Force Falcons",
+        "line": "AF -5.5",
+        "favorite": "Air Force Falcons -fav",
+        "final": "Wyoming Cowboys 28, Air Force Falcons 14",
+        "cover": "Wyoming Cowboys",
+        "status": null,
+        "confidence": "57%",
+        "sharp": {
+          "home_b": 44.03,
+          "home_m": 39.58,
+          "away_b": 55.97,
+          "away_m": 60.42
+        },
+        "graded_run": "2026-10-23T20:00:13-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Air Force Falcons",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Air Force Falcons",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Wyoming Cowboys",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Air Force Falcons",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Wyoming Cowboys",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Air Force Falcons",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Air Force Falcons",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Air Force Falcons",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Air Force Falcons",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Stanford Cardinal (H) vs NC State Wolfpack (A)",
+        "team_home": "Stanford Cardinal",
+        "team_away": "NC State Wolfpack",
+        "line": "NCSU -6.5",
+        "favorite": "NC State Wolfpack -fav",
+        "final": "Stanford Cardinal 31, NC State Wolfpack 28",
+        "cover": "Stanford Cardinal",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 35.66,
+          "home_m": 45.88,
+          "away_b": 64.34,
+          "away_m": 54.12
+        },
+        "graded_run": "2026-10-23T22:00:13-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "NC State Wolfpack",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "NC State Wolfpack",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "NC State Wolfpack",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "NC State Wolfpack",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "NC State Wolfpack",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Stanford Cardinal",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "NC State Wolfpack",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "NC State Wolfpack",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "NC State Wolfpack",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "NC State Wolfpack",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-22": [
       {
         "game": "Appalachian State Mountaineers (H) vs James Madison Dukes (A)",
