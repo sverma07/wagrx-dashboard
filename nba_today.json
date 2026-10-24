@@ -454,6 +454,487 @@
           "event_id": "401909860"
         }
       ]
+    },
+    {
+      "time": "2026-10-24T02:10:04-04:00",
+      "games": [
+        {
+          "game": "Charlotte Hornets (H) vs Miami Heat (A)",
+          "spread": "MIA -3.5",
+          "favorite": "Miami Heat -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Charlotte Hornets",
+            "M2: Relevance": "TAKE: Charlotte Hornets",
+            "M3: Efficiency": "TAKE: Charlotte Hornets",
+            "M4: ATS Trends": "TAKE: Charlotte Hornets",
+            "M5: Luck": "TAKE: Miami Heat",
+            "M6: Sharp Money": "TAKE: Miami Heat",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Charlotte Hornets",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 51,
+              "away": 42
+            },
+            "M2: Relevance": {
+              "home": 49.3055,
+              "away": 42.329
+            },
+            "M3: Efficiency": {
+              "margin": 0.1
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "0.1",
+              "away": "-0.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": 6.71,
+              "home_m": 2.1,
+              "away_b": 93.29,
+              "away_m": 97.9
+            },
+            "M8: Line Movement": {
+              "open_home": 3.5,
+              "current_home": 3.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Charlotte Hornets",
+          "team_away": "Miami Heat",
+          "start": "2026-10-24T22:00Z",
+          "sharp_books": {},
+          "event_id": "401909853"
+        },
+        {
+          "game": "Cleveland Cavaliers (H) vs Brooklyn Nets (A)",
+          "spread": "CLE -11.5",
+          "favorite": "Cleveland Cavaliers -fav",
+          "confidence": "67%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Cleveland Cavaliers",
+            "M2: Relevance": "TAKE: Cleveland Cavaliers",
+            "M3: Efficiency": "TAKE: Brooklyn Nets",
+            "M4: ATS Trends": "PUSH",
+            "M5: Luck": "PUSH",
+            "M6: Sharp Money": "TAKE: Cleveland Cavaliers",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Cleveland Cavaliers",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 48,
+              "away": 42
+            },
+            "M2: Relevance": {
+              "home": 47.5716,
+              "away": 41.436
+            },
+            "M3: Efficiency": {
+              "margin": -0.2
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "-0.4",
+              "away": "-0.4"
+            },
+            "M6: Sharp Money": {
+              "home_b": 84.7,
+              "home_m": 87.46,
+              "away_b": 15.3,
+              "away_m": 12.54
+            },
+            "M8: Line Movement": {
+              "open_home": -11.5,
+              "current_home": -11.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Cleveland Cavaliers",
+          "team_away": "Brooklyn Nets",
+          "start": "2026-10-24T23:30Z",
+          "sharp_books": {},
+          "event_id": "401909854"
+        },
+        {
+          "game": "Philadelphia 76ers (H) vs Milwaukee Bucks (A)",
+          "spread": "PHI -12.5",
+          "favorite": "Philadelphia 76ers -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Philadelphia 76ers",
+            "M2: Relevance": "TAKE: Philadelphia 76ers",
+            "M3: Efficiency": "TAKE: Milwaukee Bucks",
+            "M4: ATS Trends": "TAKE: Philadelphia 76ers",
+            "M5: Luck": "TAKE: Milwaukee Bucks",
+            "M6: Sharp Money": "TAKE: Philadelphia 76ers",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Philadelphia 76ers",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 67,
+              "away": 32
+            },
+            "M2: Relevance": {
+              "home": 66.056,
+              "away": 31.0338
+            },
+            "M3: Efficiency": {
+              "margin": 7.5
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "0.9",
+              "away": "-0.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": 82.49,
+              "home_m": 84.93,
+              "away_b": 17.51,
+              "away_m": 15.07
+            },
+            "M8: Line Movement": {
+              "open_home": -12.5,
+              "current_home": -12.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Philadelphia 76ers",
+          "team_away": "Milwaukee Bucks",
+          "start": "2026-10-24T23:30Z",
+          "sharp_books": {},
+          "event_id": "401909855"
+        },
+        {
+          "game": "Chicago Bulls (H) vs Washington Wizards (A)",
+          "spread": "WSH -1.5",
+          "favorite": "Washington Wizards -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Washington Wizards",
+            "M2: Relevance": "TAKE: Washington Wizards",
+            "M3: Efficiency": "TAKE: Washington Wizards",
+            "M4: ATS Trends": "TAKE: Washington Wizards",
+            "M5: Luck": "TAKE: Washington Wizards",
+            "M6: Sharp Money": "TAKE: Washington Wizards",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Washington Wizards",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 24,
+              "away": 65
+            },
+            "M2: Relevance": {
+              "home": 23.2798,
+              "away": 64.5281
+            },
+            "M3: Efficiency": {
+              "margin": -8.4
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 2
+            },
+            "M5: Luck": {
+              "home": "0.4",
+              "away": "0.0"
+            },
+            "M6: Sharp Money": {
+              "home_b": 22.39,
+              "home_m": 19.24,
+              "away_b": 77.61,
+              "away_m": 80.76
+            },
+            "M8: Line Movement": {
+              "open_home": 1.5,
+              "current_home": 1.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Chicago Bulls",
+          "team_away": "Washington Wizards",
+          "start": "2026-10-25T00:00Z",
+          "sharp_books": {},
+          "event_id": "401909857"
+        },
+        {
+          "game": "Dallas Mavericks (H) vs San Antonio Spurs (A)",
+          "spread": "SA -11.5",
+          "favorite": "San Antonio Spurs -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: San Antonio Spurs",
+            "M2: Relevance": "TAKE: San Antonio Spurs",
+            "M3: Efficiency": "TAKE: Dallas Mavericks",
+            "M4: ATS Trends": "TAKE: Dallas Mavericks",
+            "M5: Luck": "TAKE: San Antonio Spurs",
+            "M6: Sharp Money": "TAKE: San Antonio Spurs",
+            "M8: Line Movement": "TAKE: San Antonio Spurs",
+            "CONSENSUS": "TAKE: San Antonio Spurs",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 47,
+              "away": 49
+            },
+            "M2: Relevance": {
+              "home": 46.5138,
+              "away": 48.0537
+            },
+            "M3: Efficiency": {
+              "margin": 5.0
+            },
+            "M4: ATS Trends": {
+              "home": 4,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "0.4",
+              "away": "-0.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": 53.28,
+              "home_m": 48.31,
+              "away_b": 46.72,
+              "away_m": 51.69
+            },
+            "M8: Line Movement": {
+              "open_home": 11.5,
+              "current_home": 12.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Dallas Mavericks",
+          "team_away": "San Antonio Spurs",
+          "start": "2026-10-25T00:00Z",
+          "sharp_books": {},
+          "event_id": "401909858"
+        },
+        {
+          "game": "Atlanta Hawks (H) vs Houston Rockets (A)",
+          "spread": "ATL -1.5",
+          "favorite": "Atlanta Hawks -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Atlanta Hawks",
+            "M2: Relevance": "TAKE: Atlanta Hawks",
+            "M3: Efficiency": "TAKE: Atlanta Hawks",
+            "M4: ATS Trends": "PUSH",
+            "M5: Luck": "TAKE: Houston Rockets",
+            "M6: Sharp Money": "TAKE: Atlanta Hawks",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Atlanta Hawks",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 47,
+              "away": 40
+            },
+            "M2: Relevance": {
+              "home": 47.3617,
+              "away": 38.6035
+            },
+            "M3: Efficiency": {
+              "margin": 3.5
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "0.7",
+              "away": "0.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": 42.73,
+              "home_m": 56.66,
+              "away_b": 57.27,
+              "away_m": 43.34
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -1.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Atlanta Hawks",
+          "team_away": "Houston Rockets",
+          "start": "2026-10-25T00:30Z",
+          "sharp_books": {},
+          "event_id": "401909856"
+        },
+        {
+          "game": "Denver Nuggets (H) vs New Orleans Pelicans (A)",
+          "spread": "DEN -11.5",
+          "favorite": "Denver Nuggets -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: New Orleans Pelicans",
+            "M2: Relevance": "TAKE: New Orleans Pelicans",
+            "M3: Efficiency": "TAKE: New Orleans Pelicans",
+            "M4: ATS Trends": "PUSH",
+            "M5: Luck": "TAKE: New Orleans Pelicans",
+            "M6: Sharp Money": "TAKE: Denver Nuggets",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: New Orleans Pelicans",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 32,
+              "away": 58
+            },
+            "M2: Relevance": {
+              "home": 31.1656,
+              "away": 57.9394
+            },
+            "M3: Efficiency": {
+              "margin": -4.8
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "-0.2",
+              "away": "-0.4"
+            },
+            "M6: Sharp Money": {
+              "home_b": 79.28,
+              "home_m": 85.4,
+              "away_b": 20.72,
+              "away_m": 14.6
+            },
+            "M8: Line Movement": {
+              "open_home": -11.5,
+              "current_home": -11.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Denver Nuggets",
+          "team_away": "New Orleans Pelicans",
+          "start": "2026-10-25T01:00Z",
+          "sharp_books": {},
+          "event_id": "401909859"
+        },
+        {
+          "game": "Phoenix Suns (H) vs Golden State Warriors (A)",
+          "spread": "PHX -6.5",
+          "favorite": "Phoenix Suns -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Golden State Warriors",
+            "M2: Relevance": "TAKE: Golden State Warriors",
+            "M3: Efficiency": "TAKE: Golden State Warriors",
+            "M4: ATS Trends": "PUSH",
+            "M5: Luck": "PUSH",
+            "M6: Sharp Money": "TAKE: Phoenix Suns",
+            "M8: Line Movement": "TAKE: Phoenix Suns",
+            "CONSENSUS": "TAKE: Golden State Warriors",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 29,
+              "away": 62
+            },
+            "M2: Relevance": {
+              "home": 28.417,
+              "away": 61.5382
+            },
+            "M3: Efficiency": {
+              "margin": -9.7
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "-0.3",
+              "away": "-0.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": 66.17,
+              "home_m": 87.49,
+              "away_b": 33.83,
+              "away_m": 12.51
+            },
+            "M8: Line Movement": {
+              "open_home": -6.5,
+              "current_home": -9.5,
+              "delta": -3.0,
+              "crosses_key": false,
+              "size": 3.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Phoenix Suns",
+          "team_away": "Golden State Warriors",
+          "start": "2026-10-25T02:00Z",
+          "sharp_books": {},
+          "event_id": "401909860"
+        }
+      ]
     }
   ]
 }
