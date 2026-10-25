@@ -1,46 +1,46 @@
 {
   "sport": "NBA",
-  "updated": "2026-10-25T00:41:35-04:00",
+  "updated": "2026-10-25T06:10:04-04:00",
   "models": {
     "M1: Normal Score": {
-      "W": 8,
-      "L": 6
-    },
-    "M2: Relevance": {
-      "W": 8,
-      "L": 7
-    },
-    "M3: Efficiency": {
-      "W": 9,
-      "L": 6
-    },
-    "M4: ATS Trends": {
-      "W": 4,
-      "L": 5
-    },
-    "M5: Luck": {
-      "W": 3,
-      "L": 8
-    },
-    "M6: Sharp Money": {
-      "W": 14,
-      "L": 14
-    },
-    "M8: Line Movement": {
       "W": 12,
       "L": 10
     },
-    "CONSENSUS": {
-      "W": 8,
-      "L": 6
+    "M2: Relevance": {
+      "W": 12,
+      "L": 11
     },
-    "Sharp: Circa": {
-      "W": 13,
+    "M3: Efficiency": {
+      "W": 15,
+      "L": 8
+    },
+    "M4: ATS Trends": {
+      "W": 7,
+      "L": 7
+    },
+    "M5: Luck": {
+      "W": 8,
+      "L": 10
+    },
+    "M6: Sharp Money": {
+      "W": 16,
+      "L": 20
+    },
+    "M8: Line Movement": {
+      "W": 14,
       "L": 13
     },
+    "CONSENSUS": {
+      "W": 12,
+      "L": 10
+    },
+    "Sharp: Circa": {
+      "W": 19,
+      "L": 14
+    },
     "Sharp: DraftKings": {
-      "W": 10,
-      "L": 15
+      "W": 14,
+      "L": 19
     }
   },
   "since": "2026-10-20"
