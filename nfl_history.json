@@ -1,7 +1,777 @@
 {
   "sport": "NFL",
-  "updated": "2026-10-25T06:05:02-04:00",
+  "updated": "2026-10-26T06:05:05-04:00",
   "days": {
+    "2026-10-25": [
+      {
+        "game": "New Orleans Saints (H) vs Pittsburgh Steelers (A)",
+        "team_home": "New Orleans Saints",
+        "team_away": "Pittsburgh Steelers",
+        "line": "PIT -3",
+        "favorite": "Pittsburgh Steelers -fav",
+        "final": "New Orleans Saints 10, Pittsburgh Steelers 16",
+        "cover": "Pittsburgh Steelers",
+        "status": null,
+        "confidence": "58%",
+        "sharp": {
+          "home_b": 49.45,
+          "home_m": 46.52,
+          "away_b": 50.55,
+          "away_m": 53.48
+        },
+        "graded_run": "2026-10-25T08:05:36-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Pittsburgh Steelers",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Pittsburgh Steelers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "New Orleans Saints",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Pittsburgh Steelers",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "New Orleans Saints",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Pittsburgh Steelers",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Pittsburgh Steelers",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Pittsburgh Steelers",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "New Orleans Saints",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "New Orleans Saints",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Atlanta Falcons (H) vs San Francisco 49ers (A)",
+        "team_home": "Atlanta Falcons",
+        "team_away": "San Francisco 49ers",
+        "line": "SF -2.5",
+        "favorite": "San Francisco 49ers -fav",
+        "final": "Atlanta Falcons 29, San Francisco 49ers 20",
+        "cover": "Atlanta Falcons",
+        "status": null,
+        "confidence": "78%",
+        "sharp": {
+          "home_b": 38.73,
+          "home_m": 47.02,
+          "away_b": 61.27,
+          "away_m": 52.98
+        },
+        "graded_run": "2026-10-25T12:05:38-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "San Francisco 49ers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "San Francisco 49ers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "San Francisco 49ers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "San Francisco 49ers",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Atlanta Falcons",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Atlanta Falcons",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Atlanta Falcons",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "San Francisco 49ers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Atlanta Falcons",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Atlanta Falcons",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Tennessee Titans (H) vs Cleveland Browns (A)",
+        "team_home": "Tennessee Titans",
+        "team_away": "Cleveland Browns",
+        "line": "CLE -1.5",
+        "favorite": "Cleveland Browns -fav",
+        "final": "Tennessee Titans 24, Cleveland Browns 27",
+        "cover": "Cleveland Browns",
+        "status": null,
+        "confidence": "61%",
+        "sharp": {
+          "home_b": 32.68,
+          "home_m": 38.7,
+          "away_b": 67.32,
+          "away_m": 61.3
+        },
+        "graded_run": "2026-10-25T12:05:38-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Cleveland Browns",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Cleveland Browns",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Cleveland Browns",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Cleveland Browns",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Tennessee Titans",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Tennessee Titans",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Tennessee Titans",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Cleveland Browns",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Cleveland Browns",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Cleveland Browns",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Tennessee Titans",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Minnesota Vikings (H) vs Indianapolis Colts (A)",
+        "team_home": "Minnesota Vikings",
+        "team_away": "Indianapolis Colts",
+        "line": "MIN -6.5",
+        "favorite": "Minnesota Vikings -fav",
+        "final": "Minnesota Vikings 16, Indianapolis Colts 10",
+        "cover": "Indianapolis Colts",
+        "status": null,
+        "confidence": "58%",
+        "sharp": {
+          "home_b": 48.84,
+          "home_m": 48.48,
+          "away_b": 51.16,
+          "away_m": 51.52
+        },
+        "graded_run": "2026-10-25T12:05:38-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Minnesota Vikings",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Minnesota Vikings",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Indianapolis Colts",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Minnesota Vikings",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Indianapolis Colts",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Indianapolis Colts",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Minnesota Vikings",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Minnesota Vikings",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Minnesota Vikings",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Indianapolis Colts",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "New York Jets (H) vs Miami Dolphins (A)",
+        "team_home": "New York Jets",
+        "team_away": "Miami Dolphins",
+        "line": "NYJ -4.5",
+        "favorite": "New York Jets -fav",
+        "final": "New York Jets 25, Miami Dolphins 28",
+        "cover": "Miami Dolphins",
+        "status": null,
+        "confidence": "78%",
+        "sharp": {
+          "home_b": 53.66,
+          "home_m": 47.77,
+          "away_b": 46.34,
+          "away_m": 52.23
+        },
+        "graded_run": "2026-10-25T12:05:38-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "New York Jets",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "New York Jets",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "New York Jets",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "New York Jets",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Miami Dolphins",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Miami Dolphins",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "New York Jets",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Miami Dolphins",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "PUSH",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Carolina Panthers (H) vs Tampa Bay Buccaneers (A)",
+        "team_home": "Carolina Panthers",
+        "team_away": "Tampa Bay Buccaneers",
+        "line": "CAR -3",
+        "favorite": "Carolina Panthers -fav",
+        "final": "Carolina Panthers 13, Tampa Bay Buccaneers 43",
+        "cover": "Tampa Bay Buccaneers",
+        "status": null,
+        "confidence": "61%",
+        "sharp": {
+          "home_b": 63.3,
+          "home_m": 58.04,
+          "away_b": 36.7,
+          "away_m": 41.96
+        },
+        "graded_run": "2026-10-25T12:05:38-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Baltimore Ravens (H) vs Cincinnati Bengals (A)",
+        "team_home": "Baltimore Ravens",
+        "team_away": "Cincinnati Bengals",
+        "line": "CIN -3",
+        "favorite": "Cincinnati Bengals -fav",
+        "final": "Baltimore Ravens 13, Cincinnati Bengals 35",
+        "cover": "Cincinnati Bengals",
+        "status": null,
+        "confidence": "64%",
+        "sharp": {
+          "home_b": 32.44,
+          "home_m": 25.15,
+          "away_b": 67.56,
+          "away_m": 74.85
+        },
+        "graded_run": "2026-10-25T12:05:38-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Cincinnati Bengals",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Cincinnati Bengals",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Cincinnati Bengals",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Cincinnati Bengals",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Cincinnati Bengals",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Cincinnati Bengals",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Cincinnati Bengals",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Cincinnati Bengals",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Houston Texans (H) vs New York Giants (A)",
+        "team_home": "Houston Texans",
+        "team_away": "New York Giants",
+        "line": "HOU -10.5",
+        "favorite": "Houston Texans -fav",
+        "final": "Houston Texans 21, New York Giants 27",
+        "cover": "New York Giants",
+        "status": null,
+        "confidence": "74%",
+        "sharp": {
+          "home_b": 48.48,
+          "home_m": 58.67,
+          "away_b": 51.52,
+          "away_m": 41.33
+        },
+        "graded_run": "2026-10-25T12:05:38-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "New York Giants",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "New York Giants",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "New York Giants",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "New York Giants",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Houston Texans",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Houston Texans",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Houston Texans",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "New York Giants",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Houston Texans",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Houston Texans",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Arizona Cardinals (H) vs Denver Broncos (A)",
+        "team_home": "Arizona Cardinals",
+        "team_away": "Denver Broncos",
+        "line": "DEN -4.5",
+        "favorite": "Denver Broncos -fav",
+        "final": "Arizona Cardinals 16, Denver Broncos 30",
+        "cover": "Denver Broncos",
+        "status": null,
+        "confidence": "58%",
+        "sharp": {
+          "home_b": 37.53,
+          "home_m": 44.98,
+          "away_b": 62.47,
+          "away_m": 55.02
+        },
+        "graded_run": "2026-10-25T14:05:36-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Arizona Cardinals",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Arizona Cardinals",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Arizona Cardinals",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Detroit Lions (H) vs Green Bay Packers (A)",
+        "team_home": "Detroit Lions",
+        "team_away": "Green Bay Packers",
+        "line": "DET -3.5",
+        "favorite": "Detroit Lions -fav",
+        "final": "Detroit Lions 20, Green Bay Packers 17",
+        "cover": "Green Bay Packers",
+        "status": null,
+        "confidence": "52%",
+        "sharp": {
+          "home_b": 38.74,
+          "home_m": 60.81,
+          "away_b": 61.26,
+          "away_m": 39.19
+        },
+        "graded_run": "2026-10-25T16:10:04-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Detroit Lions",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Green Bay Packers",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Green Bay Packers",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Detroit Lions",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Detroit Lions",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Detroit Lions",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Green Bay Packers",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Detroit Lions",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Detroit Lions",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Las Vegas Raiders (H) vs Los Angeles Rams (A)",
+        "team_home": "Las Vegas Raiders",
+        "team_away": "Los Angeles Rams",
+        "line": "LAR -3",
+        "favorite": "Los Angeles Rams -fav",
+        "final": "Las Vegas Raiders 21, Los Angeles Rams 35",
+        "cover": "Los Angeles Rams",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 62.72,
+          "home_m": 57.16,
+          "away_b": 37.28,
+          "away_m": 42.84
+        },
+        "graded_run": "2026-10-25T16:10:04-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Los Angeles Rams",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Las Vegas Raiders",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Las Vegas Raiders",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Las Vegas Raiders",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Los Angeles Rams",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Los Angeles Rams",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Las Vegas Raiders",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Las Vegas Raiders",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Los Angeles Rams",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Los Angeles Rams",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Seattle Seahawks (H) vs Kansas City Chiefs (A)",
+        "team_home": "Seattle Seahawks",
+        "team_away": "Kansas City Chiefs",
+        "line": "SEA -3",
+        "favorite": "Seattle Seahawks -fav",
+        "final": "Seattle Seahawks 20, Kansas City Chiefs 3",
+        "cover": "Seattle Seahawks",
+        "status": null,
+        "confidence": "78%",
+        "sharp": {
+          "home_b": 16.38,
+          "home_m": 25.5,
+          "away_b": 83.62,
+          "away_m": 74.5
+        },
+        "graded_run": "2026-10-25T20:05:37-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Kansas City Chiefs",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Kansas City Chiefs",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Kansas City Chiefs",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Kansas City Chiefs",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Seattle Seahawks",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Seattle Seahawks",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Kansas City Chiefs",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Seattle Seahawks",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Seattle Seahawks",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-10-24": [],
     "2026-10-23": [],
     "2026-10-22": [
