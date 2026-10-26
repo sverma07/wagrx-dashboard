@@ -1605,6 +1605,9 @@ const COMBO_DIMS = [
 const COMBO_ANY = { sharp: "any", line: "any", conf: "any", side: "any" };
 let comboSel = { ...COMBO_ANY };
 
+// Confidence rounded to a whole number (not truncated), so 79.6 counts as 80 for the combination threshold.
+function comboConf(v) { return Math.round(parseFloat(v)); }
+
 function comboTeam(p) {
   p = p && p.pick ? String(p.pick) : "";
   p = p.replace(/^TAKE:/, "").trim();
@@ -1670,7 +1673,8 @@ function comboLabel(sel) {
 // all-games win rate; otherwise there is no best combination to show.
 function bestCombo(games) {
   let best = null;
-  const levels = comboConfLevels(games);
+  // Thresholds are searched in steps of 5 so the best cutoff does not jitter by a point (70, 75, 80, ...).
+  const levels = comboConfLevels(games).filter(c => c % 5 === 0);
   const base = comboRecord(games, COMBO_ANY), baseRate = base.n ? base.w / base.n : 0;
   const walk = (i, sel) => {
     if (i === COMBO_DIMS.length) {
@@ -1784,7 +1788,7 @@ const bestCache = {};          // sportKey -> { games, n, best, all }
 function comboFactsLive(g) {
   const picks = {};
   for (const [k, v] of Object.entries(g.picks || {})) picks[k] = { pick: v };
-  return comboFacts({ picks, fav: g.favorite, conf: parseInt(g.confidence, 10) });
+  return comboFacts({ picks, fav: g.favorite, conf: comboConf(g.confidence) });
 }
 
 // Graded games for a sport come from its history file, counted from its last reset (same as the Performance tab).
@@ -1900,7 +1904,7 @@ function gradedGamesFrom(h, since) {
     for (const g of games || []) {
       const r = ((g.picks || {}).CONSENSUS || {}).result;
       if (r === "WIN") w++; else if (r === "LOSS") l++;
-      if (r === "WIN" || r === "LOSS") flat.push({ day, conf: parseInt(g.confidence, 10), result: r, picks: g.picks, fav: g.favorite });
+      if (r === "WIN" || r === "LOSS") flat.push({ day, conf: comboConf(g.confidence), result: r, picks: g.picks, fav: g.favorite });
     }
     if (w || l) byDay[day] = { w, l };
   }
