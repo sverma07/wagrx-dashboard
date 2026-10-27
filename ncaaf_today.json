@@ -653,6 +653,157 @@
           "event_id": "401871072"
         }
       ]
+    },
+    {
+      "time": "2026-10-27T07:35:28-04:00",
+      "games": [
+        {
+          "game": "Western Kentucky Hilltoppers (H) vs Delaware Fightin' Blue Hens (A)",
+          "spread": "DEL -1.5",
+          "favorite": "Delaware Fightin' Blue Hens -fav",
+          "confidence": "83%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Delaware Fightin' Blue Hens",
+            "M2: Relevance": "TAKE: Delaware Fightin' Blue Hens",
+            "M3: Efficiency": "TAKE: Delaware Fightin' Blue Hens",
+            "M4: ATS Trends": "TAKE: Western Kentucky Hilltoppers",
+            "M5: Luck": "TAKE: Delaware Fightin' Blue Hens",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Delaware Fightin' Blue Hens",
+            "Sharp: Circa": "TAKE: Western Kentucky Hilltoppers",
+            "Sharp: DraftKings": "TAKE: Western Kentucky Hilltoppers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 18,
+              "away": 24
+            },
+            "M2: Relevance": {
+              "home": 22.1977,
+              "away": 42.3083
+            },
+            "M3: Efficiency": {
+              "margin": -6.2
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 3
+            },
+            "M5: Luck": {
+              "home": "0.0",
+              "away": "-0.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 1.5,
+              "current_home": 1.5,
+              "delta": 0.0,
+              "crosses_key": false
+            }
+          },
+          "team_home": "Western Kentucky Hilltoppers",
+          "team_away": "Delaware Fightin' Blue Hens",
+          "start": "2026-10-27T23:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 73.0,
+              "home_m": 88.0,
+              "away_b": 27.0,
+              "away_m": 12.0,
+              "line": "+1.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 72.0,
+              "home_m": 73.0,
+              "away_b": 28.0,
+              "away_m": 27.0,
+              "line": "+1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401871071"
+        },
+        {
+          "game": "Missouri State Bears (H) vs Sam Houston Bearkats (A)",
+          "spread": "MOST -4.5",
+          "favorite": "Missouri State Bears -fav",
+          "confidence": "58%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Missouri State Bears",
+            "M2: Relevance": "TAKE: Missouri State Bears",
+            "M3: Efficiency": "TAKE: Sam Houston Bearkats",
+            "M4: ATS Trends": "TAKE: Missouri State Bears",
+            "M5: Luck": "TAKE: Sam Houston Bearkats",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Sam Houston Bearkats",
+            "CONSENSUS": "TAKE: Missouri State Bears",
+            "Sharp: Circa": "TAKE: Missouri State Bears",
+            "Sharp: DraftKings": "TAKE: Sam Houston Bearkats"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 26,
+              "away": 17
+            },
+            "M2: Relevance": {
+              "home": 44.8222,
+              "away": 23.6143
+            },
+            "M3: Efficiency": {
+              "margin": -1.0
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 2
+            },
+            "M5: Luck": {
+              "home": "-0.3",
+              "away": "-1.4"
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -6.0,
+              "current_home": -4.5,
+              "delta": 1.5,
+              "crosses_key": false
+            }
+          },
+          "team_home": "Missouri State Bears",
+          "team_away": "Sam Houston Bearkats",
+          "start": "2026-10-28T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 36.0,
+              "home_m": 70.0,
+              "away_b": 64.0,
+              "away_m": 30.0,
+              "line": "-4.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 63.0,
+              "home_m": 52.0,
+              "away_b": 37.0,
+              "away_m": 48.0,
+              "line": "-4.5",
+              "thin": false
+            }
+          },
+          "event_id": "401871072"
+        }
+      ]
     }
   ]
 }
