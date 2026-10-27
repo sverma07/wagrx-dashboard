@@ -1028,6 +1028,101 @@
           "event_id": "401873009"
         }
       ]
+    },
+    {
+      "time": "2026-10-26T20:05:08-04:00",
+      "games": [
+        {
+          "game": "Philadelphia Eagles (H) vs Dallas Cowboys (A)",
+          "spread": "DAL -4.5",
+          "favorite": "Dallas Cowboys -fav",
+          "confidence": "85%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Dallas Cowboys",
+            "M2: Relevance": "TAKE: Dallas Cowboys",
+            "M3: Efficiency": "TAKE: Philadelphia Eagles",
+            "M4: ATS Trends": "TAKE: Dallas Cowboys",
+            "M5: Luck": "TAKE: Dallas Cowboys",
+            "M6: Sharp Money": "TAKE: Dallas Cowboys",
+            "M7: QB Injury Edge": "TAKE: Dallas Cowboys",
+            "M8: Line Movement": "TAKE: Dallas Cowboys",
+            "CONSENSUS": "TAKE: Dallas Cowboys",
+            "Sharp: Circa": "TAKE: Philadelphia Eagles",
+            "Sharp: DraftKings": "TAKE: Philadelphia Eagles"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 15,
+              "away": 28
+            },
+            "M2: Relevance": {
+              "home": 17.4937,
+              "away": 28.2218
+            },
+            "M3: Efficiency": {
+              "margin": -2.0
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 10
+            },
+            "M5: Luck": {
+              "home": "-0.8",
+              "away": "-1.0"
+            },
+            "M6: Sharp Money": {
+              "home_b": 57.16,
+              "home_m": 30.58,
+              "away_b": 42.84,
+              "away_m": 69.42
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Cole Payton (Out) -> Tanner McKee (Active) starting",
+              "away_status": "Dak Prescott (Active)"
+            },
+            "M8: Line Movement": {
+              "open_home": -3.0,
+              "current_home": 4.5,
+              "delta": 7.5,
+              "crosses_key": true,
+              "size": 7.5,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 4.0,
+                "last": 4.0,
+                "delta": 0.0
+              },
+              "vs_consensus": "agree"
+            }
+          },
+          "team_home": "Philadelphia Eagles",
+          "team_away": "Dallas Cowboys",
+          "start": "2026-10-27T00:15Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 38.0,
+              "home_m": 45.0,
+              "away_b": 62.0,
+              "away_m": 55.0,
+              "line": "+4",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 42.0,
+              "home_m": 56.0,
+              "away_b": 58.0,
+              "away_m": 44.0,
+              "line": "+4.5",
+              "thin": false
+            }
+          },
+          "home_id": "21",
+          "away_id": "6",
+          "event_id": "401873009"
+        }
+      ]
     }
   ]
 }
