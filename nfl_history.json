@@ -1,7 +1,73 @@
 {
   "sport": "NFL",
-  "updated": "2026-10-26T06:05:05-04:00",
+  "updated": "2026-10-27T06:05:03-04:00",
   "days": {
+    "2026-10-26": [
+      {
+        "game": "Philadelphia Eagles (H) vs Dallas Cowboys (A)",
+        "team_home": "Philadelphia Eagles",
+        "team_away": "Dallas Cowboys",
+        "line": "DAL -4.5",
+        "favorite": "Dallas Cowboys -fav",
+        "final": "Philadelphia Eagles 21, Dallas Cowboys 38",
+        "cover": "Dallas Cowboys",
+        "status": null,
+        "confidence": "85%",
+        "sharp": {
+          "home_b": 57.16,
+          "home_m": 30.58,
+          "away_b": 42.84,
+          "away_m": 69.42
+        },
+        "graded_run": "2026-10-26T20:05:08-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Philadelphia Eagles",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Philadelphia Eagles",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Philadelphia Eagles",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-25": [
       {
         "game": "New Orleans Saints (H) vs Pittsburgh Steelers (A)",
