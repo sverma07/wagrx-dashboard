@@ -2889,6 +2889,319 @@
           "event_id": "401909880"
         }
       ]
+    },
+    {
+      "time": "2026-10-27T18:10:11-04:00",
+      "games": [
+        {
+          "game": "Boston Celtics (H) vs Brooklyn Nets (A)",
+          "spread": "BOS -11.5",
+          "favorite": "Boston Celtics -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Boston Celtics",
+            "M2: Relevance": "TAKE: Boston Celtics",
+            "M3: Efficiency": "TAKE: Brooklyn Nets",
+            "M4: ATS Trends": "TAKE: Boston Celtics",
+            "M5: Luck": "TAKE: Brooklyn Nets",
+            "M6: Sharp Money": "TAKE: Boston Celtics",
+            "M8: Line Movement": "TAKE: Boston Celtics",
+            "CONSENSUS": "TAKE: Boston Celtics",
+            "Sharp: Circa": "TAKE: Boston Celtics",
+            "Sharp: DraftKings": "TAKE: Brooklyn Nets"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 77,
+              "away": 23
+            },
+            "M2: Relevance": {
+              "home": 91.6175,
+              "away": 22.5434
+            },
+            "M3: Efficiency": {
+              "margin": 10.9
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "0.1",
+              "away": "-0.9"
+            },
+            "M6: Sharp Money": {
+              "home_b": 77.12,
+              "home_m": 82.32,
+              "away_b": 22.88,
+              "away_m": 17.68
+            },
+            "M8: Line Movement": {
+              "open_home": -11.5,
+              "current_home": -12.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -11.5,
+                "last": -12.5,
+                "delta": -1.0
+              }
+            }
+          },
+          "team_home": "Boston Celtics",
+          "team_away": "Brooklyn Nets",
+          "start": "2026-10-27T23:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 75.0,
+              "home_m": 99.0,
+              "away_b": 25.0,
+              "away_m": 1.0,
+              "line": "-12.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 67.0,
+              "home_m": 51.0,
+              "away_b": 33.0,
+              "away_m": 49.0,
+              "line": "-12.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909877"
+        },
+        {
+          "game": "New York Knicks (H) vs Detroit Pistons (A)",
+          "spread": "NY -3.5",
+          "favorite": "New York Knicks -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Detroit Pistons",
+            "M2: Relevance": "TAKE: Detroit Pistons",
+            "M3: Efficiency": "TAKE: Detroit Pistons",
+            "M4: ATS Trends": "TAKE: Detroit Pistons",
+            "M5: Luck": "TAKE: New York Knicks",
+            "M6: Sharp Money": "TAKE: New York Knicks",
+            "M8: Line Movement": "TAKE: New York Knicks",
+            "CONSENSUS": "TAKE: Detroit Pistons",
+            "Sharp: Circa": "PUSH",
+            "Sharp: DraftKings": "TAKE: New York Knicks"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 22,
+              "away": 77
+            },
+            "M2: Relevance": {
+              "home": 22.3918,
+              "away": 91.282
+            },
+            "M3: Efficiency": {
+              "margin": -9.1
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 7
+            },
+            "M5: Luck": {
+              "home": "-1.5",
+              "away": "1.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": 28.87,
+              "home_m": 37.41,
+              "away_b": 71.13,
+              "away_m": 62.59
+            },
+            "M8: Line Movement": {
+              "open_home": -3.5,
+              "current_home": -4.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -4.5,
+                "last": -4.0,
+                "delta": 0.5
+              }
+            }
+          },
+          "team_home": "New York Knicks",
+          "team_away": "Detroit Pistons",
+          "start": "2026-10-28T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 54.0,
+              "home_m": 54.0,
+              "away_b": 46.0,
+              "away_m": 46.0,
+              "line": "-4",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 62.0,
+              "home_m": 85.0,
+              "away_b": 38.0,
+              "away_m": 15.0,
+              "line": "-4.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909878"
+        },
+        {
+          "game": "San Antonio Spurs (H) vs Sacramento Kings (A)",
+          "spread": "SA -17.5",
+          "favorite": "San Antonio Spurs -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: San Antonio Spurs",
+            "M2: Relevance": "TAKE: San Antonio Spurs",
+            "M3: Efficiency": "TAKE: Sacramento Kings",
+            "M4: ATS Trends": "TAKE: San Antonio Spurs",
+            "M5: Luck": "PUSH",
+            "M6: Sharp Money": "TAKE: San Antonio Spurs",
+            "M8: Line Movement": "TAKE: San Antonio Spurs",
+            "CONSENSUS": "TAKE: San Antonio Spurs",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Sacramento Kings"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 69,
+              "away": 27
+            },
+            "M2: Relevance": {
+              "home": 79.942,
+              "away": 29.4468
+            },
+            "M3: Efficiency": {
+              "margin": 7.0
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 1
+            },
+            "M5: Luck": {
+              "home": "-0.8",
+              "away": "-0.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": 54.69,
+              "home_m": 56.1,
+              "away_b": 45.31,
+              "away_m": 43.9
+            },
+            "M8: Line Movement": {
+              "open_home": -18.5,
+              "current_home": -18.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "circa"
+              ],
+              "circa": {
+                "first": -17.5,
+                "last": -18.5,
+                "delta": -1.0
+              }
+            }
+          },
+          "team_home": "San Antonio Spurs",
+          "team_away": "Sacramento Kings",
+          "start": "2026-10-28T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 0.0,
+              "home_m": 0.0,
+              "away_b": 100.0,
+              "away_m": 100.0,
+              "line": "-18.5",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 40.0,
+              "home_m": 36.0,
+              "away_b": 60.0,
+              "away_m": 64.0,
+              "line": "-18.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909879"
+        },
+        {
+          "game": "Los Angeles Lakers (H) vs Portland Trail Blazers (A)",
+          "spread": "LAL -2.5",
+          "favorite": "Los Angeles Lakers -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Portland Trail Blazers",
+            "M2: Relevance": "TAKE: Portland Trail Blazers",
+            "M3: Efficiency": "TAKE: Portland Trail Blazers",
+            "M4: ATS Trends": "TAKE: Los Angeles Lakers",
+            "M5: Luck": "TAKE: Portland Trail Blazers",
+            "M6: Sharp Money": "TAKE: Portland Trail Blazers",
+            "M8: Line Movement": "TAKE: Portland Trail Blazers",
+            "CONSENSUS": "TAKE: Portland Trail Blazers",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 43,
+              "away": 55
+            },
+            "M2: Relevance": {
+              "home": 52.2176,
+              "away": 60.3814
+            },
+            "M3: Efficiency": {
+              "margin": -5.5
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "0.9",
+              "away": "0.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": 66.78,
+              "home_m": 64.14,
+              "away_b": 33.22,
+              "away_m": 35.86
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": -1.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Los Angeles Lakers",
+          "team_away": "Portland Trail Blazers",
+          "start": "2026-10-28T03:00Z",
+          "sharp_books": {},
+          "event_id": "401909880"
+        }
+      ]
     }
   ]
 }
