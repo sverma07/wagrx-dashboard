@@ -1,7 +1,249 @@
 {
   "sport": "NBA",
-  "updated": "2026-10-27T06:10:04-04:00",
+  "updated": "2026-10-28T06:10:03-04:00",
   "days": {
+    "2026-10-27": [
+      {
+        "game": "Boston Celtics (H) vs Brooklyn Nets (A)",
+        "team_home": "Boston Celtics",
+        "team_away": "Brooklyn Nets",
+        "line": "BOS -11.5",
+        "favorite": "Boston Celtics -fav",
+        "final": "Boston Celtics 125, Brooklyn Nets 124",
+        "cover": "Brooklyn Nets",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 75.24,
+          "home_m": 82.0,
+          "away_b": 24.76,
+          "away_m": 18.0
+        },
+        "graded_run": "2026-10-27T19:23:37-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Brooklyn Nets",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Brooklyn Nets",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Brooklyn Nets",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "New York Knicks (H) vs Detroit Pistons (A)",
+        "team_home": "New York Knicks",
+        "team_away": "Detroit Pistons",
+        "line": "NY -3.5",
+        "favorite": "New York Knicks -fav",
+        "final": "New York Knicks 111, Detroit Pistons 97",
+        "cover": "New York Knicks",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 26.36,
+          "home_m": 32.72,
+          "away_b": 73.64,
+          "away_m": 67.28
+        },
+        "graded_run": "2026-10-27T19:23:37-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Detroit Pistons",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Detroit Pistons",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Detroit Pistons",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Detroit Pistons",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "New York Knicks",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "New York Knicks",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Detroit Pistons",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "New York Knicks",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "New York Knicks",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "San Antonio Spurs (H) vs Sacramento Kings (A)",
+        "team_home": "San Antonio Spurs",
+        "team_away": "Sacramento Kings",
+        "line": "SA -17.5",
+        "favorite": "San Antonio Spurs -fav",
+        "final": "San Antonio Spurs 130, Sacramento Kings 103",
+        "cover": "San Antonio Spurs",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 51.66,
+          "home_m": 51.84,
+          "away_b": 48.34,
+          "away_m": 48.16
+        },
+        "graded_run": "2026-10-27T19:23:37-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "San Antonio Spurs",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "San Antonio Spurs",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Sacramento Kings",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "San Antonio Spurs",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "San Antonio Spurs",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "San Antonio Spurs",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "San Antonio Spurs",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "San Antonio Spurs",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Sacramento Kings",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Los Angeles Lakers (H) vs Portland Trail Blazers (A)",
+        "team_home": "Los Angeles Lakers",
+        "team_away": "Portland Trail Blazers",
+        "line": "LAL -2.5",
+        "favorite": "Los Angeles Lakers -fav",
+        "final": "Los Angeles Lakers 129, Portland Trail Blazers 136",
+        "cover": "Portland Trail Blazers",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 63.62,
+          "home_m": 59.33,
+          "away_b": 36.38,
+          "away_m": 40.67
+        },
+        "graded_run": "2026-10-27T22:10:11-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Portland Trail Blazers",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Portland Trail Blazers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Portland Trail Blazers",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Los Angeles Lakers",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Portland Trail Blazers",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Portland Trail Blazers",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Portland Trail Blazers",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Portland Trail Blazers",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      }
+    ],
     "2026-10-26": [
       {
         "game": "Charlotte Hornets (H) vs Washington Wizards (A)",
