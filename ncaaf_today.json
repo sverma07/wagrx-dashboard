@@ -1295,6 +1295,174 @@
           "event_id": "401871057"
         }
       ]
+    },
+    {
+      "time": "2026-10-28T14:00:10-04:00",
+      "games": [
+        {
+          "game": "Middle Tennessee Blue Raiders (H) vs Kennesaw State Owls (A)",
+          "spread": "MTSU -2.5",
+          "favorite": "Middle Tennessee Blue Raiders -fav",
+          "confidence": "58%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Middle Tennessee Blue Raiders",
+            "M2: Relevance": "TAKE: Middle Tennessee Blue Raiders",
+            "M3: Efficiency": "TAKE: Kennesaw State Owls",
+            "M4: ATS Trends": "TAKE: Middle Tennessee Blue Raiders",
+            "M5: Luck": "TAKE: Kennesaw State Owls",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Kennesaw State Owls",
+            "CONSENSUS": "TAKE: Middle Tennessee Blue Raiders",
+            "Sharp: Circa": "TAKE: Kennesaw State Owls",
+            "Sharp: DraftKings": "PUSH"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 26,
+              "away": 15
+            },
+            "M2: Relevance": {
+              "home": 35.6809,
+              "away": 29.2125
+            },
+            "M3: Efficiency": {
+              "margin": 2.3
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 1
+            },
+            "M5: Luck": {
+              "home": "1.5",
+              "away": "-1.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": 1.5,
+              "delta": 4.0,
+              "crosses_key": false,
+              "size": 4.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -2.5,
+                "last": 0.0,
+                "delta": 2.5
+              }
+            }
+          },
+          "team_home": "Middle Tennessee Blue Raiders",
+          "team_away": "Kennesaw State Owls",
+          "start": "2026-10-28T23:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 60.0,
+              "home_m": 38.0,
+              "away_b": 40.0,
+              "away_m": 62.0,
+              "line": "0",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 78.0,
+              "home_m": 78.0,
+              "away_b": 22.0,
+              "away_m": 22.0,
+              "line": "+1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401871058"
+        },
+        {
+          "game": "New Mexico State Aggies (H) vs Jacksonville State Gamecocks (A)",
+          "spread": "JXST -3",
+          "favorite": "Jacksonville State Gamecocks -fav",
+          "confidence": "59%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Jacksonville State Gamecocks",
+            "M2: Relevance": "TAKE: Jacksonville State Gamecocks",
+            "M3: Efficiency": "TAKE: New Mexico State Aggies",
+            "M4: ATS Trends": "TAKE: New Mexico State Aggies",
+            "M5: Luck": "TAKE: New Mexico State Aggies",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: New Mexico State Aggies",
+            "Sharp: Circa": "TAKE: Jacksonville State Gamecocks",
+            "Sharp: DraftKings": "TAKE: New Mexico State Aggies"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 14,
+              "away": 29
+            },
+            "M2: Relevance": {
+              "home": 16.5442,
+              "away": 48.7989
+            },
+            "M3: Efficiency": {
+              "margin": -2.8
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 4
+            },
+            "M5: Luck": {
+              "home": "0.0",
+              "away": "1.0"
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 3.0,
+              "current_home": 3.0,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": 3.0,
+                "last": 3.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "New Mexico State Aggies",
+          "team_away": "Jacksonville State Gamecocks",
+          "start": "2026-10-29T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 56.0,
+              "home_m": 49.0,
+              "away_b": 44.0,
+              "away_m": 51.0,
+              "line": "+3",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 31.0,
+              "home_m": 33.0,
+              "away_b": 69.0,
+              "away_m": 67.0,
+              "line": "+3",
+              "thin": false
+            }
+          },
+          "event_id": "401871057"
+        }
+      ]
     }
   ]
 }
