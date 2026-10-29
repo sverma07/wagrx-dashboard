@@ -400,6 +400,234 @@
           "event_id": "401909895"
         }
       ]
+    },
+    {
+      "time": "2026-10-29T18:10:09-04:00",
+      "games": [
+        {
+          "game": "Atlanta Hawks (H) vs Cleveland Cavaliers (A)",
+          "spread": "ATL -1.5",
+          "favorite": "Atlanta Hawks -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Atlanta Hawks",
+            "M2: Relevance": "TAKE: Atlanta Hawks",
+            "M3: Efficiency": "TAKE: Cleveland Cavaliers",
+            "M4: ATS Trends": "TAKE: Atlanta Hawks",
+            "M5: Luck": "TAKE: Atlanta Hawks",
+            "M6: Sharp Money": "TAKE: Atlanta Hawks",
+            "M8: Line Movement": "TAKE: Atlanta Hawks",
+            "CONSENSUS": "TAKE: Atlanta Hawks",
+            "Sharp: Circa": "TAKE: Atlanta Hawks",
+            "Sharp: DraftKings": "TAKE: Atlanta Hawks"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 53,
+              "away": 44
+            },
+            "M2: Relevance": {
+              "home": 60.0631,
+              "away": 47.3718
+            },
+            "M3: Efficiency": {
+              "margin": 1.4
+            },
+            "M4: ATS Trends": {
+              "home": 4,
+              "away": 2
+            },
+            "M5: Luck": {
+              "home": "-0.6",
+              "away": "0.6"
+            },
+            "M6: Sharp Money": {
+              "home_b": 46.74,
+              "home_m": 47.41,
+              "away_b": 53.26,
+              "away_m": 52.59
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -1.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "circa"
+              ],
+              "circa": {
+                "first": 1.0,
+                "last": -1.0,
+                "delta": -2.0
+              }
+            }
+          },
+          "team_home": "Atlanta Hawks",
+          "team_away": "Cleveland Cavaliers",
+          "start": "2026-10-30T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 44.0,
+              "home_m": 74.0,
+              "away_b": 56.0,
+              "away_m": 26.0,
+              "line": "-1",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 29.0,
+              "home_m": 34.0,
+              "away_b": 71.0,
+              "away_m": 66.0,
+              "line": "-1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909893"
+        },
+        {
+          "game": "New Orleans Pelicans (H) vs Sacramento Kings (A)",
+          "spread": "NO -5.5",
+          "favorite": "New Orleans Pelicans -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: New Orleans Pelicans",
+            "M2: Relevance": "TAKE: New Orleans Pelicans",
+            "M3: Efficiency": "TAKE: New Orleans Pelicans",
+            "M4: ATS Trends": "TAKE: New Orleans Pelicans",
+            "M5: Luck": "TAKE: New Orleans Pelicans",
+            "M6: Sharp Money": "TAKE: Sacramento Kings",
+            "M8: Line Movement": "TAKE: New Orleans Pelicans",
+            "CONSENSUS": "TAKE: New Orleans Pelicans",
+            "Sharp: Circa": "TAKE: Sacramento Kings",
+            "Sharp: DraftKings": "TAKE: New Orleans Pelicans"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 72,
+              "away": 26
+            },
+            "M2: Relevance": {
+              "home": 78.4546,
+              "away": 29.7712
+            },
+            "M3: Efficiency": {
+              "margin": 5.8
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "-1.4",
+              "away": "-0.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": 70.75,
+              "home_m": 69.89,
+              "away_b": 29.25,
+              "away_m": 30.11
+            },
+            "M8: Line Movement": {
+              "open_home": -5.5,
+              "current_home": -6.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -6.5,
+                "last": -6.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "New Orleans Pelicans",
+          "team_away": "Sacramento Kings",
+          "start": "2026-10-30T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 64.0,
+              "home_m": 50.0,
+              "away_b": 36.0,
+              "away_m": 50.0,
+              "line": "-6.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 47.0,
+              "home_m": 62.0,
+              "away_b": 53.0,
+              "away_m": 38.0,
+              "line": "-6.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909894"
+        },
+        {
+          "game": "Portland Trail Blazers (H) vs Memphis Grizzlies (A)",
+          "spread": "POR -7.5",
+          "favorite": "Portland Trail Blazers -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Portland Trail Blazers",
+            "M2: Relevance": "TAKE: Portland Trail Blazers",
+            "M3: Efficiency": "TAKE: Memphis Grizzlies",
+            "M4: ATS Trends": "TAKE: Memphis Grizzlies",
+            "M5: Luck": "TAKE: Portland Trail Blazers",
+            "M6: Sharp Money": "TAKE: Memphis Grizzlies",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Portland Trail Blazers",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 56,
+              "away": 43
+            },
+            "M2: Relevance": {
+              "home": 65.3914,
+              "away": 44.1495
+            },
+            "M3: Efficiency": {
+              "margin": 4.3
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 7
+            },
+            "M5: Luck": {
+              "home": "1.0",
+              "away": "1.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": 71.17,
+              "home_m": 68.08,
+              "away_b": 28.83,
+              "away_m": 31.92
+            },
+            "M8: Line Movement": {
+              "open_home": -7.5,
+              "current_home": -7.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Portland Trail Blazers",
+          "team_away": "Memphis Grizzlies",
+          "start": "2026-10-30T02:00Z",
+          "sharp_books": {},
+          "event_id": "401909895"
+        }
+      ]
     }
   ]
 }
