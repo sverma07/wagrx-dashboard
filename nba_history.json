@@ -1,7 +1,729 @@
 {
   "sport": "NBA",
-  "updated": "2026-10-28T06:10:03-04:00",
+  "updated": "2026-10-29T16:10:05-04:00",
   "days": {
+    "2026-10-28": [
+      {
+        "game": "Atlanta Hawks (H) vs Miami Heat (A)",
+        "team_home": "Atlanta Hawks",
+        "team_away": "Miami Heat",
+        "line": "ATL -3.5",
+        "favorite": "Atlanta Hawks -fav",
+        "final": "Atlanta Hawks 117, Miami Heat 129",
+        "cover": "Miami Heat",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 48.23,
+          "home_m": 38.24,
+          "away_b": 51.77,
+          "away_m": 61.76
+        },
+        "graded_run": "2026-10-28T18:10:23-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Atlanta Hawks",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Atlanta Hawks",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Atlanta Hawks",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Atlanta Hawks",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Miami Heat",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Miami Heat",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Miami Heat",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Atlanta Hawks",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Miami Heat",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Miami Heat",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Cleveland Cavaliers (H) vs Washington Wizards (A)",
+        "team_home": "Cleveland Cavaliers",
+        "team_away": "Washington Wizards",
+        "line": "CLE -10.5",
+        "favorite": "Cleveland Cavaliers -fav",
+        "final": "Cleveland Cavaliers 121, Washington Wizards 111",
+        "cover": "Washington Wizards",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 61.38,
+          "home_m": 60.46,
+          "away_b": 38.62,
+          "away_m": 39.54
+        },
+        "graded_run": "2026-10-28T18:10:23-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Cleveland Cavaliers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Cleveland Cavaliers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Detroit Pistons (H) vs Charlotte Hornets (A)",
+        "team_home": "Detroit Pistons",
+        "team_away": "Charlotte Hornets",
+        "line": "DET -6.5",
+        "favorite": "Detroit Pistons -fav",
+        "final": "Detroit Pistons 97, Charlotte Hornets 89",
+        "cover": "Detroit Pistons",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 68.7,
+          "home_m": 71.67,
+          "away_b": 31.3,
+          "away_m": 28.33
+        },
+        "graded_run": "2026-10-28T18:10:23-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Detroit Pistons",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Detroit Pistons",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Charlotte Hornets",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Detroit Pistons",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Detroit Pistons",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Detroit Pistons",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Charlotte Hornets",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Detroit Pistons",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Indiana Pacers (H) vs Philadelphia 76ers (A)",
+        "team_home": "Indiana Pacers",
+        "team_away": "Philadelphia 76ers",
+        "line": "PHI -4.5",
+        "favorite": "Philadelphia 76ers -fav",
+        "final": "Indiana Pacers 109, Philadelphia 76ers 114",
+        "cover": "Philadelphia 76ers",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 27.0,
+          "home_m": 23.78,
+          "away_b": 73.0,
+          "away_m": 76.22
+        },
+        "graded_run": "2026-10-28T18:10:23-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Indiana Pacers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Indiana Pacers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Indiana Pacers",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Indiana Pacers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Indiana Pacers",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Toronto Raptors (H) vs Orlando Magic (A)",
+        "team_home": "Toronto Raptors",
+        "team_away": "Orlando Magic",
+        "line": "TOR -4.5",
+        "favorite": "Toronto Raptors -fav",
+        "final": "Toronto Raptors 129, Orlando Magic 99",
+        "cover": "Toronto Raptors",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 72.28,
+          "home_m": 72.48,
+          "away_b": 27.72,
+          "away_m": 27.52
+        },
+        "graded_run": "2026-10-28T18:10:23-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Toronto Raptors",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Toronto Raptors",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Toronto Raptors",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Toronto Raptors",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Toronto Raptors",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Toronto Raptors",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Toronto Raptors",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Chicago Bulls (H) vs New York Knicks (A)",
+        "team_home": "Chicago Bulls",
+        "team_away": "New York Knicks",
+        "line": "NY -7.5",
+        "favorite": "New York Knicks -fav",
+        "final": "Chicago Bulls 127, New York Knicks 133",
+        "cover": "Chicago Bulls",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 24.63,
+          "home_m": 23.16,
+          "away_b": 75.37,
+          "away_m": 76.84
+        },
+        "graded_run": "2026-10-28T18:10:23-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Chicago Bulls",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "New York Knicks",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Chicago Bulls",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Milwaukee Bucks (H) vs Houston Rockets (A)",
+        "team_home": "Milwaukee Bucks",
+        "team_away": "Houston Rockets",
+        "line": "HOU -8.5",
+        "favorite": "Houston Rockets -fav",
+        "final": "Milwaukee Bucks 100, Houston Rockets 132",
+        "cover": "Houston Rockets",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 32.17,
+          "home_m": 33.96,
+          "away_b": 67.83,
+          "away_m": 66.04
+        },
+        "graded_run": "2026-10-28T18:10:23-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Milwaukee Bucks",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Milwaukee Bucks",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Milwaukee Bucks",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Milwaukee Bucks",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Minnesota Timberwolves (H) vs Golden State Warriors (A)",
+        "team_home": "Minnesota Timberwolves",
+        "team_away": "Golden State Warriors",
+        "line": "MIN -3.5",
+        "favorite": "Minnesota Timberwolves -fav",
+        "final": "Minnesota Timberwolves 114, Golden State Warriors 119",
+        "cover": "Golden State Warriors",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 63.67,
+          "home_m": 57.62,
+          "away_b": 36.33,
+          "away_m": 42.38
+        },
+        "graded_run": "2026-10-28T18:10:23-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Minnesota Timberwolves",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Minnesota Timberwolves",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Minnesota Timberwolves",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Minnesota Timberwolves",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Golden State Warriors",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Golden State Warriors",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Golden State Warriors",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Minnesota Timberwolves",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Minnesota Timberwolves",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Minnesota Timberwolves",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "New Orleans Pelicans (H) vs Denver Nuggets (A)",
+        "team_home": "New Orleans Pelicans",
+        "team_away": "Denver Nuggets",
+        "line": "DEN -5.5",
+        "favorite": "Denver Nuggets -fav",
+        "final": "New Orleans Pelicans 91, Denver Nuggets 104",
+        "cover": "Denver Nuggets",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 42.3,
+          "home_m": 46.86,
+          "away_b": 57.7,
+          "away_m": 53.14
+        },
+        "graded_run": "2026-10-28T18:10:23-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Utah Jazz (H) vs San Antonio Spurs (A)",
+        "team_home": "Utah Jazz",
+        "team_away": "San Antonio Spurs",
+        "line": "SA -12.5",
+        "favorite": "San Antonio Spurs -fav",
+        "final": "Utah Jazz 111, San Antonio Spurs 117",
+        "cover": "Utah Jazz",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 42.15,
+          "home_m": 39.01,
+          "away_b": 57.85,
+          "away_m": 60.99
+        },
+        "graded_run": "2026-10-28T20:10:22-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Utah Jazz",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Utah Jazz",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "San Antonio Spurs",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Dallas Mavericks (H) vs Oklahoma City Thunder (A)",
+        "team_home": "Dallas Mavericks",
+        "team_away": "Oklahoma City Thunder",
+        "line": "OKC -6.5",
+        "favorite": "Oklahoma City Thunder -fav",
+        "final": "Dallas Mavericks 120, Oklahoma City Thunder 96",
+        "cover": "Dallas Mavericks",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 37.78,
+          "home_m": 40.56,
+          "away_b": 62.22,
+          "away_m": 59.44
+        },
+        "graded_run": "2026-10-28T20:10:22-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Dallas Mavericks",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Dallas Mavericks",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Dallas Mavericks",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Dallas Mavericks",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Dallas Mavericks",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Los Angeles Clippers (H) vs Los Angeles Lakers (A)",
+        "team_home": "Los Angeles Clippers",
+        "team_away": "Los Angeles Lakers",
+        "line": "LAL -5.5",
+        "favorite": "Los Angeles Lakers -fav",
+        "final": "Los Angeles Clippers 87, Los Angeles Lakers 103",
+        "cover": "Los Angeles Lakers",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 32.12,
+          "home_m": 40.45,
+          "away_b": 67.88,
+          "away_m": 59.55
+        },
+        "graded_run": "2026-10-28T22:10:22-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Los Angeles Clippers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Los Angeles Clippers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Los Angeles Clippers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Los Angeles Clippers",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Los Angeles Clippers",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Los Angeles Clippers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Los Angeles Clippers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Los Angeles Clippers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Los Angeles Clippers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Los Angeles Clippers",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-27": [
       {
         "game": "Boston Celtics (H) vs Brooklyn Nets (A)",
