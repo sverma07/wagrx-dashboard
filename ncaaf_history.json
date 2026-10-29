@@ -1,7 +1,129 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-10-28T06:00:25-04:00",
+  "updated": "2026-10-29T16:00:25-04:00",
   "days": {
+    "2026-10-28": [
+      {
+        "game": "Middle Tennessee Blue Raiders (H) vs Kennesaw State Owls (A)",
+        "team_home": "Middle Tennessee Blue Raiders",
+        "team_away": "Kennesaw State Owls",
+        "line": "MTSU -2.5",
+        "favorite": "Middle Tennessee Blue Raiders -fav",
+        "final": "Middle Tennessee Blue Raiders 28, Kennesaw State Owls 44",
+        "cover": "Kennesaw State Owls",
+        "status": null,
+        "confidence": "58%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-10-28T18:00:08-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Middle Tennessee Blue Raiders",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Middle Tennessee Blue Raiders",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Kennesaw State Owls",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Middle Tennessee Blue Raiders",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Kennesaw State Owls",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Kennesaw State Owls",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Middle Tennessee Blue Raiders",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Kennesaw State Owls",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Middle Tennessee Blue Raiders",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "New Mexico State Aggies (H) vs Jacksonville State Gamecocks (A)",
+        "team_home": "New Mexico State Aggies",
+        "team_away": "Jacksonville State Gamecocks",
+        "line": "JXST -3",
+        "favorite": "Jacksonville State Gamecocks -fav",
+        "final": "New Mexico State Aggies 0, Jacksonville State Gamecocks 24",
+        "cover": "Jacksonville State Gamecocks",
+        "status": null,
+        "confidence": "59%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-10-28T19:49:34-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Jacksonville State Gamecocks",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Jacksonville State Gamecocks",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "New Mexico State Aggies",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "New Mexico State Aggies",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "New Mexico State Aggies",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "New Mexico State Aggies",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "New Mexico State Aggies",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Jacksonville State Gamecocks",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-10-27": [
       {
         "game": "Western Kentucky Hilltoppers (H) vs Delaware Fightin' Blue Hens (A)",
