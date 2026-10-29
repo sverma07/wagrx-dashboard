@@ -1090,7 +1090,10 @@ function renderGame(g, idx, grade = null, scope = "games") {
   const consensusLine = pickLineHtml(g.spread, g.favorite, takeTeam(picks.CONSENSUS), [g.team_home, g.team_away]);
   const confidence = g.confidence || "N/A";
   const searchKey = (g.game || "").toLowerCase();
-  const finalMeta = (grade && grade.final ? ` &middot; Final: ${grade.final}` : "")
+  // Today's cards say which run their data is from; a started game is locked at its last run before kickoff.
+  const runAt = scope === "games" ? g.locked_run || currentSnapshotTime : "";
+  const runMeta = runAt ? ` &middot; ${g.locked_run ? "Locked at" : "Data from"} ${new Date(runAt).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })} run` : "";
+  const finalMeta = runMeta + (grade && grade.final ? ` &middot; Final: ${grade.final}` : "")
     + (grade && grade.run ? ` &middot; Graded: ${new Date(grade.run).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })} run` : "");
   let consensusTag = gradeTag(picks.CONSENSUS || "");
   if (!consensusTag && grade && grade.status) consensusTag = `<span class="tag neutral">${grade.status.split(" (")[0]}</span>`;
