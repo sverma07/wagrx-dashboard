@@ -1,7 +1,189 @@
 {
   "sport": "NBA",
-  "updated": "2026-10-29T16:10:05-04:00",
+  "updated": "2026-10-30T06:10:03-04:00",
   "days": {
+    "2026-10-29": [
+      {
+        "game": "Atlanta Hawks (H) vs Cleveland Cavaliers (A)",
+        "team_home": "Atlanta Hawks",
+        "team_away": "Cleveland Cavaliers",
+        "line": "ATL -1.5",
+        "favorite": "Atlanta Hawks -fav",
+        "final": "Atlanta Hawks 114, Cleveland Cavaliers 111",
+        "cover": "Atlanta Hawks",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 46.74,
+          "home_m": 47.41,
+          "away_b": 53.26,
+          "away_m": 52.59
+        },
+        "graded_run": "2026-10-29T18:10:09-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Cleveland Cavaliers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "New Orleans Pelicans (H) vs Sacramento Kings (A)",
+        "team_home": "New Orleans Pelicans",
+        "team_away": "Sacramento Kings",
+        "line": "NO -5.5",
+        "favorite": "New Orleans Pelicans -fav",
+        "final": "New Orleans Pelicans 132, Sacramento Kings 120",
+        "cover": "New Orleans Pelicans",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 70.75,
+          "home_m": 69.89,
+          "away_b": 29.25,
+          "away_m": 30.11
+        },
+        "graded_run": "2026-10-29T18:10:09-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "New Orleans Pelicans",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "New Orleans Pelicans",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "New Orleans Pelicans",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "New Orleans Pelicans",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "New Orleans Pelicans",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Sacramento Kings",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "New Orleans Pelicans",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "New Orleans Pelicans",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Sacramento Kings",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "New Orleans Pelicans",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Portland Trail Blazers (H) vs Memphis Grizzlies (A)",
+        "team_home": "Portland Trail Blazers",
+        "team_away": "Memphis Grizzlies",
+        "line": "POR -7.5",
+        "favorite": "Portland Trail Blazers -fav",
+        "final": "Portland Trail Blazers 103, Memphis Grizzlies 124",
+        "cover": "Memphis Grizzlies",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 64.31,
+          "home_m": 60.27,
+          "away_b": 35.69,
+          "away_m": 39.73
+        },
+        "graded_run": "2026-10-29T21:20:36-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Portland Trail Blazers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Portland Trail Blazers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Memphis Grizzlies",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Memphis Grizzlies",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Portland Trail Blazers",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Memphis Grizzlies",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Portland Trail Blazers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      }
+    ],
     "2026-10-28": [
       {
         "game": "Atlanta Hawks (H) vs Miami Heat (A)",
