@@ -260,6 +260,101 @@
           "event_id": "401873023"
         }
       ]
+    },
+    {
+      "time": "2026-10-29T20:05:07-04:00",
+      "games": [
+        {
+          "game": "Green Bay Packers (H) vs Carolina Panthers (A)",
+          "spread": "GB -3.5",
+          "favorite": "Green Bay Packers -fav",
+          "confidence": "83%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Green Bay Packers",
+            "M2: Relevance": "TAKE: Green Bay Packers",
+            "M3: Efficiency": "TAKE: Carolina Panthers",
+            "M4: ATS Trends": "TAKE: Green Bay Packers",
+            "M5: Luck": "PUSH",
+            "M6: Sharp Money": "TAKE: Carolina Panthers",
+            "M7: QB Injury Edge": "TAKE: Green Bay Packers",
+            "M8: Line Movement": "TAKE: Carolina Panthers",
+            "CONSENSUS": "TAKE: Green Bay Packers",
+            "Sharp: Circa": "TAKE: Carolina Panthers",
+            "Sharp: DraftKings": "TAKE: Carolina Panthers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 23,
+              "away": 20
+            },
+            "M2: Relevance": {
+              "home": 25.9933,
+              "away": 19.8266
+            },
+            "M3: Efficiency": {
+              "margin": 0.5
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 3
+            },
+            "M5: Luck": {
+              "home": "0.3",
+              "away": "0.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": 50.31,
+              "home_m": 41.5,
+              "away_b": 49.69,
+              "away_m": 58.5
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Jordan Love (Active)",
+              "away_status": "Haynes King (Out) -> Bryce Young (Active) starting"
+            },
+            "M8: Line Movement": {
+              "open_home": -7.0,
+              "current_home": -3.5,
+              "delta": 3.5,
+              "crosses_key": true,
+              "size": 3.5,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -3.5,
+                "last": -3.5,
+                "delta": 0.0
+              },
+              "vs_consensus": "conflict"
+            }
+          },
+          "team_home": "Green Bay Packers",
+          "team_away": "Carolina Panthers",
+          "start": "2026-10-30T00:15Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 57.0,
+              "home_m": 53.0,
+              "away_b": 43.0,
+              "away_m": 47.0,
+              "line": "-3.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 55.0,
+              "home_m": 47.0,
+              "away_b": 45.0,
+              "away_m": 53.0,
+              "line": "-3.5",
+              "thin": false
+            }
+          },
+          "home_id": "9",
+          "away_id": "29",
+          "event_id": "401873023"
+        }
+      ]
     }
   ]
 }
