@@ -1,7 +1,129 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-10-29T16:00:25-04:00",
+  "updated": "2026-10-30T06:00:03-04:00",
   "days": {
+    "2026-10-29": [
+      {
+        "game": "North Texas Mean Green (H) vs Florida Atlantic Owls (A)",
+        "team_home": "North Texas Mean Green",
+        "team_away": "Florida Atlantic Owls",
+        "line": "UNT -14",
+        "favorite": "North Texas Mean Green -fav",
+        "final": "North Texas Mean Green 48, Florida Atlantic Owls 41",
+        "cover": "Florida Atlantic Owls",
+        "status": null,
+        "confidence": "79%",
+        "sharp": {
+          "home_b": 35.02,
+          "home_m": 21.88,
+          "away_b": 64.98,
+          "away_m": 78.12
+        },
+        "graded_run": "2026-10-29T18:00:09-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "North Texas Mean Green",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "North Texas Mean Green",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Florida Atlantic Owls",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "North Texas Mean Green",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "North Texas Mean Green",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Florida Atlantic Owls",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "North Texas Mean Green",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "North Texas Mean Green",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "North Texas Mean Green",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "North Texas Mean Green",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "James Madison Dukes (H) vs Troy Trojans (A)",
+        "team_home": "James Madison Dukes",
+        "team_away": "Troy Trojans",
+        "line": "JMU -19.5",
+        "favorite": "James Madison Dukes -fav",
+        "final": "James Madison Dukes 21, Troy Trojans 24",
+        "cover": "Troy Trojans",
+        "status": null,
+        "confidence": "58%",
+        "sharp": {
+          "home_b": 53.39,
+          "home_m": 57.69,
+          "away_b": 46.61,
+          "away_m": 42.31
+        },
+        "graded_run": "2026-10-29T18:00:09-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "James Madison Dukes",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "James Madison Dukes",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Troy Trojans",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "James Madison Dukes",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Troy Trojans",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "James Madison Dukes",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "James Madison Dukes",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "James Madison Dukes",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Troy Trojans",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "James Madison Dukes",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-28": [
       {
         "game": "Middle Tennessee Blue Raiders (H) vs Kennesaw State Owls (A)",
