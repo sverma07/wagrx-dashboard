@@ -1,7 +1,73 @@
 {
   "sport": "NFL",
-  "updated": "2026-10-29T16:05:02-04:00",
+  "updated": "2026-10-30T06:05:02-04:00",
   "days": {
+    "2026-10-29": [
+      {
+        "game": "Green Bay Packers (H) vs Carolina Panthers (A)",
+        "team_home": "Green Bay Packers",
+        "team_away": "Carolina Panthers",
+        "line": "GB -3.5",
+        "favorite": "Green Bay Packers -fav",
+        "final": "Green Bay Packers 27, Carolina Panthers 19",
+        "cover": "Green Bay Packers",
+        "status": null,
+        "confidence": "83%",
+        "sharp": {
+          "home_b": 50.31,
+          "home_m": 41.5,
+          "away_b": 49.69,
+          "away_m": 58.5
+        },
+        "graded_run": "2026-10-29T20:05:07-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Green Bay Packers",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Green Bay Packers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Green Bay Packers",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Green Bay Packers",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Green Bay Packers",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-28": [],
     "2026-10-27": [],
     "2026-10-26": [
