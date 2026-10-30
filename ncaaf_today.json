@@ -1,839 +1,228 @@
 {
   "sport": "NCAAF",
-  "date": "2026-10-29",
+  "date": "2026-10-30",
   "snapshots": [
     {
-      "time": "2026-10-29T00:30:54-04:00",
+      "time": "2026-10-30T00:30:54-04:00",
       "games": [
         {
-          "game": "North Texas Mean Green (H) vs Florida Atlantic Owls (A)",
-          "spread": "UNT -14",
-          "favorite": "North Texas Mean Green -fav",
-          "confidence": "79%",
+          "game": "Charlotte 49ers (H) vs Tulane Green Wave (A)",
+          "spread": "TULN -8.5",
+          "favorite": "Tulane Green Wave -fav",
+          "confidence": "62%",
           "picks": {
-            "M1: Normal Score": "TAKE: North Texas Mean Green",
-            "M2: Relevance": "TAKE: North Texas Mean Green",
-            "M3: Efficiency": "TAKE: Florida Atlantic Owls",
-            "M4: ATS Trends": "TAKE: North Texas Mean Green",
-            "M5: Luck": "TAKE: North Texas Mean Green",
-            "M6: Sharp Money": "TAKE: Florida Atlantic Owls",
-            "M8: Line Movement": "TAKE: North Texas Mean Green",
-            "CONSENSUS": "TAKE: North Texas Mean Green",
-            "Sharp: Circa": "TAKE: Florida Atlantic Owls",
-            "Sharp: DraftKings": "TAKE: Florida Atlantic Owls"
+            "M1: Normal Score": "TAKE: Tulane Green Wave",
+            "M2: Relevance": "TAKE: Tulane Green Wave",
+            "M3: Efficiency": "TAKE: Tulane Green Wave",
+            "M4: ATS Trends": "TAKE: Charlotte 49ers",
+            "M5: Luck": "TAKE: Charlotte 49ers",
+            "M6: Sharp Money": "TAKE: Tulane Green Wave",
+            "M8: Line Movement": "TAKE: Charlotte 49ers",
+            "CONSENSUS": "TAKE: Tulane Green Wave",
+            "Sharp: Circa": "TAKE: Charlotte 49ers",
+            "Sharp: DraftKings": "TAKE: Tulane Green Wave"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 34,
-              "away": 8
+              "home": 8,
+              "away": 31
             },
             "M2: Relevance": {
-              "home": 55.2738,
-              "away": 9.4474
+              "home": 9.3119,
+              "away": 56.3131
             },
             "M3: Efficiency": {
-              "margin": 6.0
+              "margin": -10.2
             },
             "M4: ATS Trends": {
-              "home": 9,
+              "home": 4,
               "away": 2
             },
             "M5: Luck": {
-              "home": "0.6",
-              "away": "1.1"
+              "home": "0.0",
+              "away": "0.2"
             },
             "M6: Sharp Money": {
-              "home_b": 26.89,
-              "home_m": 13.74,
-              "away_b": 73.11,
-              "away_m": 86.26
+              "home_b": 44.57,
+              "home_m": 39.55,
+              "away_b": 55.43,
+              "away_m": 60.45
             },
             "M8: Line Movement": {
-              "open_home": -12.5,
-              "current_home": -14.0,
-              "delta": -1.5,
+              "open_home": 13.5,
+              "current_home": 8.5,
+              "delta": -5.0,
               "crosses_key": false
             }
           },
-          "team_home": "North Texas Mean Green",
-          "team_away": "Florida Atlantic Owls",
-          "start": "2026-10-29T23:30Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 88.0,
-              "home_m": 85.0,
-              "away_b": 13.0,
-              "away_m": 15.0,
-              "line": "-13.5",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 76.0,
-              "home_m": 70.0,
-              "away_b": 24.0,
-              "away_m": 30.0,
-              "line": "-14",
-              "thin": false
-            }
-          },
-          "event_id": "401862812"
-        },
-        {
-          "game": "James Madison Dukes (H) vs Troy Trojans (A)",
-          "spread": "JMU -19.5",
-          "favorite": "James Madison Dukes -fav",
-          "confidence": "58%",
-          "picks": {
-            "M1: Normal Score": "TAKE: James Madison Dukes",
-            "M2: Relevance": "TAKE: James Madison Dukes",
-            "M3: Efficiency": "TAKE: Troy Trojans",
-            "M4: ATS Trends": "TAKE: James Madison Dukes",
-            "M5: Luck": "TAKE: Troy Trojans",
-            "M6: Sharp Money": "TAKE: Troy Trojans",
-            "M8: Line Movement": "TAKE: James Madison Dukes",
-            "CONSENSUS": "TAKE: James Madison Dukes",
-            "Sharp: Circa": "TAKE: Troy Trojans",
-            "Sharp: DraftKings": "TAKE: James Madison Dukes"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 37,
-              "away": 7
-            },
-            "M2: Relevance": {
-              "home": 58.2982,
-              "away": 10.654
-            },
-            "M3: Efficiency": {
-              "margin": 9.8
-            },
-            "M4: ATS Trends": {
-              "home": 10,
-              "away": 1
-            },
-            "M5: Luck": {
-              "home": "0.1",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 39.31,
-              "home_m": 33.52,
-              "away_b": 60.69,
-              "away_m": 66.48
-            },
-            "M8: Line Movement": {
-              "open_home": -17.5,
-              "current_home": -19.5,
-              "delta": -2.0,
-              "crosses_key": false
-            }
-          },
-          "team_home": "James Madison Dukes",
-          "team_away": "Troy Trojans",
-          "start": "2026-10-29T23:30Z",
+          "team_home": "Charlotte 49ers",
+          "team_away": "Tulane Green Wave",
+          "start": "2026-10-30T23:00Z",
           "sharp_books": {
             "circa": {
               "home_b": 50.0,
-              "home_m": 29.0,
+              "home_m": 85.0,
               "away_b": 50.0,
-              "away_m": 71.0,
-              "line": "-19",
+              "away_m": 15.0,
+              "line": "+8.5",
               "thin": false
             },
             "dk": {
-              "home_b": 80.0,
-              "home_m": 90.0,
-              "away_b": 20.0,
-              "away_m": 10.0,
-              "line": "-19.5",
+              "home_b": 18.0,
+              "home_m": 9.0,
+              "away_b": 82.0,
+              "away_m": 91.0,
+              "line": "+8.5",
               "thin": false
             }
           },
-          "event_id": "401869963"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-29T16:00:32-04:00",
-      "games": [
-        {
-          "game": "North Texas Mean Green (H) vs Florida Atlantic Owls (A)",
-          "spread": "UNT -14",
-          "favorite": "North Texas Mean Green -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: North Texas Mean Green",
-            "M2: Relevance": "TAKE: North Texas Mean Green",
-            "M3: Efficiency": "TAKE: Florida Atlantic Owls",
-            "M4: ATS Trends": "TAKE: North Texas Mean Green",
-            "M5: Luck": "TAKE: North Texas Mean Green",
-            "M6: Sharp Money": "TAKE: Florida Atlantic Owls",
-            "M8: Line Movement": "TAKE: North Texas Mean Green",
-            "CONSENSUS": "TAKE: North Texas Mean Green",
-            "Sharp: Circa": "TAKE: North Texas Mean Green",
-            "Sharp: DraftKings": "TAKE: North Texas Mean Green"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 34,
-              "away": 8
-            },
-            "M2: Relevance": {
-              "home": 55.2738,
-              "away": 9.4474
-            },
-            "M3: Efficiency": {
-              "margin": 6.0
-            },
-            "M4: ATS Trends": {
-              "home": 9,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "0.6",
-              "away": "1.1"
-            },
-            "M6: Sharp Money": {
-              "home_b": 35.02,
-              "home_m": 21.88,
-              "away_b": 64.98,
-              "away_m": 78.12
-            },
-            "M8: Line Movement": {
-              "open_home": -12.5,
-              "current_home": -14.0,
-              "delta": -1.5,
-              "crosses_key": false,
-              "size": 1.5,
-              "sources": [
-                "circa",
-                "dk"
-              ],
-              "circa": {
-                "first": -13.5,
-                "last": -14.0,
-                "delta": -0.5
-              }
-            }
-          },
-          "team_home": "North Texas Mean Green",
-          "team_away": "Florida Atlantic Owls",
-          "start": "2026-10-29T23:30Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 31.0,
-              "home_m": 61.0,
-              "away_b": 69.0,
-              "away_m": 39.0,
-              "line": "-14",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 66.0,
-              "home_m": 73.0,
-              "away_b": 34.0,
-              "away_m": 27.0,
-              "line": "-14",
-              "thin": false
-            }
-          },
-          "event_id": "401862812"
+          "event_id": "401862813"
         },
         {
-          "game": "James Madison Dukes (H) vs Troy Trojans (A)",
-          "spread": "JMU -19.5",
-          "favorite": "James Madison Dukes -fav",
-          "confidence": "58%",
+          "game": "UCF Knights (H) vs Baylor Bears (A)",
+          "spread": "BAY -1.5",
+          "favorite": "Baylor Bears -fav",
+          "confidence": "83%",
           "picks": {
-            "M1: Normal Score": "TAKE: James Madison Dukes",
-            "M2: Relevance": "TAKE: James Madison Dukes",
-            "M3: Efficiency": "TAKE: Troy Trojans",
-            "M4: ATS Trends": "TAKE: James Madison Dukes",
-            "M5: Luck": "TAKE: Troy Trojans",
-            "M6: Sharp Money": "TAKE: James Madison Dukes",
-            "M8: Line Movement": "TAKE: James Madison Dukes",
-            "CONSENSUS": "TAKE: James Madison Dukes",
-            "Sharp: Circa": "TAKE: Troy Trojans",
-            "Sharp: DraftKings": "TAKE: James Madison Dukes"
+            "M1: Normal Score": "TAKE: Baylor Bears",
+            "M2: Relevance": "TAKE: Baylor Bears",
+            "M3: Efficiency": "TAKE: Baylor Bears",
+            "M4: ATS Trends": "TAKE: UCF Knights",
+            "M5: Luck": "TAKE: Baylor Bears",
+            "M6: Sharp Money": "TAKE: Baylor Bears",
+            "M8: Line Movement": "TAKE: Baylor Bears",
+            "CONSENSUS": "TAKE: Baylor Bears",
+            "Sharp: Circa": "TAKE: UCF Knights",
+            "Sharp: DraftKings": "TAKE: Baylor Bears"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 37,
-              "away": 7
+              "home": 13,
+              "away": 25
             },
             "M2: Relevance": {
-              "home": 58.2982,
-              "away": 10.654
+              "home": 22.5553,
+              "away": 38.6784
             },
             "M3: Efficiency": {
-              "margin": 9.8
+              "margin": -4.1
             },
             "M4: ATS Trends": {
-              "home": 10,
-              "away": 1
+              "home": 4,
+              "away": 3
             },
             "M5: Luck": {
               "home": "0.1",
-              "away": "-0.6"
+              "away": "-0.8"
             },
             "M6: Sharp Money": {
-              "home_b": 53.39,
-              "home_m": 57.69,
-              "away_b": 46.61,
-              "away_m": 42.31
+              "home_b": 67.53,
+              "home_m": 56.8,
+              "away_b": 32.47,
+              "away_m": 43.2
             },
             "M8: Line Movement": {
-              "open_home": -17.5,
-              "current_home": -19.5,
-              "delta": -2.0,
-              "crosses_key": false,
-              "size": 2.0,
-              "sources": [
-                "dk"
-              ],
-              "circa": {
-                "first": -19.0,
-                "last": -19.0,
-                "delta": 0.0
-              }
+              "open_home": -1.5,
+              "current_home": 1.5,
+              "delta": 3.0,
+              "crosses_key": false
             }
           },
-          "team_home": "James Madison Dukes",
-          "team_away": "Troy Trojans",
-          "start": "2026-10-29T23:30Z",
+          "team_home": "UCF Knights",
+          "team_away": "Baylor Bears",
+          "start": "2026-10-30T23:30Z",
           "sharp_books": {
             "circa": {
-              "home_b": 57.0,
-              "home_m": 29.0,
-              "away_b": 43.0,
-              "away_m": 71.0,
-              "line": "-19",
+              "home_b": 35.0,
+              "home_m": 47.0,
+              "away_b": 65.0,
+              "away_m": 53.0,
+              "line": "+1",
               "thin": false
             },
             "dk": {
-              "home_b": 79.0,
-              "home_m": 88.0,
-              "away_b": 21.0,
-              "away_m": 12.0,
-              "line": "-19.5",
+              "home_b": 54.0,
+              "home_m": 21.0,
+              "away_b": 46.0,
+              "away_m": 79.0,
+              "line": "+1.5",
               "thin": false
             }
           },
-          "event_id": "401869963"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-29T18:00:09-04:00",
-      "games": [
-        {
-          "game": "North Texas Mean Green (H) vs Florida Atlantic Owls (A)",
-          "spread": "UNT -14",
-          "favorite": "North Texas Mean Green -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: North Texas Mean Green",
-            "M2: Relevance": "TAKE: North Texas Mean Green",
-            "M3: Efficiency": "TAKE: Florida Atlantic Owls",
-            "M4: ATS Trends": "TAKE: North Texas Mean Green",
-            "M5: Luck": "TAKE: North Texas Mean Green",
-            "M6: Sharp Money": "TAKE: Florida Atlantic Owls",
-            "M8: Line Movement": "TAKE: North Texas Mean Green",
-            "CONSENSUS": "TAKE: North Texas Mean Green",
-            "Sharp: Circa": "TAKE: North Texas Mean Green",
-            "Sharp: DraftKings": "TAKE: North Texas Mean Green"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 34,
-              "away": 8
-            },
-            "M2: Relevance": {
-              "home": 55.2738,
-              "away": 9.4474
-            },
-            "M3: Efficiency": {
-              "margin": 6.0
-            },
-            "M4: ATS Trends": {
-              "home": 9,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "0.6",
-              "away": "1.1"
-            },
-            "M6: Sharp Money": {
-              "home_b": 35.02,
-              "home_m": 21.88,
-              "away_b": 64.98,
-              "away_m": 78.12
-            },
-            "M8: Line Movement": {
-              "open_home": -12.5,
-              "current_home": -14.0,
-              "delta": -1.5,
-              "crosses_key": false,
-              "size": 1.5,
-              "sources": [
-                "circa",
-                "dk"
-              ],
-              "circa": {
-                "first": -13.5,
-                "last": -14.0,
-                "delta": -0.5
-              }
-            }
-          },
-          "team_home": "North Texas Mean Green",
-          "team_away": "Florida Atlantic Owls",
-          "start": "2026-10-29T23:30Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 33.0,
-              "home_m": 61.0,
-              "away_b": 67.0,
-              "away_m": 39.0,
-              "line": "-14",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 65.0,
-              "home_m": 71.0,
-              "away_b": 35.0,
-              "away_m": 29.0,
-              "line": "-14",
-              "thin": false
-            }
-          },
-          "event_id": "401862812"
+          "event_id": "401856844"
         },
         {
-          "game": "James Madison Dukes (H) vs Troy Trojans (A)",
-          "spread": "JMU -19.5",
-          "favorite": "James Madison Dukes -fav",
+          "game": "Sacramento State Hornets (H) vs Kent State Golden Flashes (A)",
+          "spread": "KENT -7",
+          "favorite": "Kent State Golden Flashes -fav",
           "confidence": "58%",
           "picks": {
-            "M1: Normal Score": "TAKE: James Madison Dukes",
-            "M2: Relevance": "TAKE: James Madison Dukes",
-            "M3: Efficiency": "TAKE: Troy Trojans",
-            "M4: ATS Trends": "TAKE: James Madison Dukes",
-            "M5: Luck": "TAKE: Troy Trojans",
-            "M6: Sharp Money": "TAKE: James Madison Dukes",
-            "M8: Line Movement": "TAKE: James Madison Dukes",
-            "CONSENSUS": "TAKE: James Madison Dukes",
-            "Sharp: Circa": "TAKE: Troy Trojans",
-            "Sharp: DraftKings": "TAKE: James Madison Dukes"
+            "M1: Normal Score": "TAKE: Kent State Golden Flashes",
+            "M2: Relevance": "TAKE: Kent State Golden Flashes",
+            "M3: Efficiency": "TAKE: Sacramento State Hornets",
+            "M4: ATS Trends": "TAKE: Kent State Golden Flashes",
+            "M5: Luck": "TAKE: Sacramento State Hornets",
+            "M6: Sharp Money": "TAKE: Sacramento State Hornets",
+            "M8: Line Movement": "TAKE: Sacramento State Hornets",
+            "CONSENSUS": "TAKE: Kent State Golden Flashes",
+            "Sharp: Circa": "TAKE: Sacramento State Hornets",
+            "Sharp: DraftKings": "TAKE: Kent State Golden Flashes"
           },
           "detail": {
             "M1: Normal Score": {
-              "home": 37,
-              "away": 7
+              "home": 11,
+              "away": 32
             },
             "M2: Relevance": {
-              "home": 58.2982,
-              "away": 10.654
+              "home": 17.2249,
+              "away": 49.0832
             },
             "M3: Efficiency": {
-              "margin": 9.8
+              "margin": -3.4
             },
             "M4: ATS Trends": {
-              "home": 10,
-              "away": 1
-            },
-            "M5: Luck": {
-              "home": "0.1",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 53.39,
-              "home_m": 57.69,
-              "away_b": 46.61,
-              "away_m": 42.31
-            },
-            "M8: Line Movement": {
-              "open_home": -17.5,
-              "current_home": -19.5,
-              "delta": -2.0,
-              "crosses_key": false,
-              "size": 2.0,
-              "sources": [
-                "dk"
-              ],
-              "circa": {
-                "first": -19.0,
-                "last": -19.0,
-                "delta": 0.0
-              }
-            }
-          },
-          "team_home": "James Madison Dukes",
-          "team_away": "Troy Trojans",
-          "start": "2026-10-29T23:30Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 65.0,
-              "home_m": 30.0,
-              "away_b": 35.0,
-              "away_m": 70.0,
-              "line": "-19",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 79.0,
-              "home_m": 92.0,
-              "away_b": 21.0,
-              "away_m": 8.0,
-              "line": "-19.5",
-              "thin": false
-            }
-          },
-          "event_id": "401869963"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-29T20:00:08-04:00",
-      "games": [
-        {
-          "game": "North Texas Mean Green (H) vs Florida Atlantic Owls (A)",
-          "spread": "UNT -14",
-          "favorite": "North Texas Mean Green -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: North Texas Mean Green",
-            "M2: Relevance": "TAKE: North Texas Mean Green",
-            "M3: Efficiency": "TAKE: Florida Atlantic Owls",
-            "M4: ATS Trends": "TAKE: North Texas Mean Green",
-            "M5: Luck": "TAKE: North Texas Mean Green",
-            "M6: Sharp Money": "TAKE: Florida Atlantic Owls",
-            "M8: Line Movement": "TAKE: North Texas Mean Green",
-            "CONSENSUS": "TAKE: North Texas Mean Green",
-            "Sharp: Circa": "TAKE: North Texas Mean Green",
-            "Sharp: DraftKings": "TAKE: North Texas Mean Green"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 34,
+              "home": 2,
               "away": 8
             },
-            "M2: Relevance": {
-              "home": 55.2738,
-              "away": 9.4474
-            },
-            "M3: Efficiency": {
-              "margin": 6.0
-            },
-            "M4: ATS Trends": {
-              "home": 9,
-              "away": 2
-            },
             "M5: Luck": {
-              "home": "0.6",
-              "away": "1.1"
+              "home": "-0.7",
+              "away": "0.7"
             },
             "M6: Sharp Money": {
-              "home_b": 35.02,
-              "home_m": 21.88,
-              "away_b": 64.98,
-              "away_m": 78.12
+              "home_b": 63.48,
+              "home_m": 79.3,
+              "away_b": 36.52,
+              "away_m": 20.7
             },
             "M8: Line Movement": {
-              "open_home": -12.5,
-              "current_home": -14.0,
-              "delta": -1.5,
-              "crosses_key": false,
-              "size": 1.5,
-              "sources": [
-                "circa",
-                "dk"
-              ],
-              "circa": {
-                "first": -13.5,
-                "last": -14.0,
-                "delta": -0.5
-              }
+              "open_home": 9.5,
+              "current_home": 7.0,
+              "delta": -2.5,
+              "crosses_key": true
             }
           },
-          "team_home": "North Texas Mean Green",
-          "team_away": "Florida Atlantic Owls",
-          "start": "2026-10-29T23:30Z",
+          "team_home": "Sacramento State Hornets",
+          "team_away": "Kent State Golden Flashes",
+          "start": "2026-10-31T02:30Z",
           "sharp_books": {
             "circa": {
-              "home_b": 33.0,
-              "home_m": 61.0,
-              "away_b": 67.0,
-              "away_m": 39.0,
-              "line": "-14",
+              "home_b": 77.0,
+              "home_m": 100.0,
+              "away_b": 23.0,
+              "away_m": 0.0,
+              "line": "+7",
               "thin": false
             },
             "dk": {
-              "home_b": 65.0,
-              "home_m": 71.0,
-              "away_b": 35.0,
-              "away_m": 29.0,
-              "line": "-14",
+              "home_b": 36.0,
+              "home_m": 7.0,
+              "away_b": 64.0,
+              "away_m": 93.0,
+              "line": "+7",
               "thin": false
             }
           },
-          "event_id": "401862812",
-          "locked_run": "2026-10-29T18:00:09-04:00"
-        },
-        {
-          "game": "James Madison Dukes (H) vs Troy Trojans (A)",
-          "spread": "JMU -19.5",
-          "favorite": "James Madison Dukes -fav",
-          "confidence": "58%",
-          "picks": {
-            "M1: Normal Score": "TAKE: James Madison Dukes",
-            "M2: Relevance": "TAKE: James Madison Dukes",
-            "M3: Efficiency": "TAKE: Troy Trojans",
-            "M4: ATS Trends": "TAKE: James Madison Dukes",
-            "M5: Luck": "TAKE: Troy Trojans",
-            "M6: Sharp Money": "TAKE: James Madison Dukes",
-            "M8: Line Movement": "TAKE: James Madison Dukes",
-            "CONSENSUS": "TAKE: James Madison Dukes",
-            "Sharp: Circa": "TAKE: Troy Trojans",
-            "Sharp: DraftKings": "TAKE: James Madison Dukes"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 37,
-              "away": 7
-            },
-            "M2: Relevance": {
-              "home": 58.2982,
-              "away": 10.654
-            },
-            "M3: Efficiency": {
-              "margin": 9.8
-            },
-            "M4: ATS Trends": {
-              "home": 10,
-              "away": 1
-            },
-            "M5: Luck": {
-              "home": "0.1",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 53.39,
-              "home_m": 57.69,
-              "away_b": 46.61,
-              "away_m": 42.31
-            },
-            "M8: Line Movement": {
-              "open_home": -17.5,
-              "current_home": -19.5,
-              "delta": -2.0,
-              "crosses_key": false,
-              "size": 2.0,
-              "sources": [
-                "dk"
-              ],
-              "circa": {
-                "first": -19.0,
-                "last": -19.0,
-                "delta": 0.0
-              }
-            }
-          },
-          "team_home": "James Madison Dukes",
-          "team_away": "Troy Trojans",
-          "start": "2026-10-29T23:30Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 65.0,
-              "home_m": 30.0,
-              "away_b": 35.0,
-              "away_m": 70.0,
-              "line": "-19",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 79.0,
-              "home_m": 92.0,
-              "away_b": 21.0,
-              "away_m": 8.0,
-              "line": "-19.5",
-              "thin": false
-            }
-          },
-          "event_id": "401869963",
-          "locked_run": "2026-10-29T18:00:09-04:00"
-        }
-      ]
-    },
-    {
-      "time": "2026-10-29T22:00:09-04:00",
-      "games": [
-        {
-          "game": "North Texas Mean Green (H) vs Florida Atlantic Owls (A)",
-          "spread": "UNT -14",
-          "favorite": "North Texas Mean Green -fav",
-          "confidence": "79%",
-          "picks": {
-            "M1: Normal Score": "TAKE: North Texas Mean Green",
-            "M2: Relevance": "TAKE: North Texas Mean Green",
-            "M3: Efficiency": "TAKE: Florida Atlantic Owls",
-            "M4: ATS Trends": "TAKE: North Texas Mean Green",
-            "M5: Luck": "TAKE: North Texas Mean Green",
-            "M6: Sharp Money": "TAKE: Florida Atlantic Owls",
-            "M8: Line Movement": "TAKE: North Texas Mean Green",
-            "CONSENSUS": "TAKE: North Texas Mean Green",
-            "Sharp: Circa": "TAKE: North Texas Mean Green",
-            "Sharp: DraftKings": "TAKE: North Texas Mean Green"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 34,
-              "away": 8
-            },
-            "M2: Relevance": {
-              "home": 55.2738,
-              "away": 9.4474
-            },
-            "M3: Efficiency": {
-              "margin": 6.0
-            },
-            "M4: ATS Trends": {
-              "home": 9,
-              "away": 2
-            },
-            "M5: Luck": {
-              "home": "0.6",
-              "away": "1.1"
-            },
-            "M6: Sharp Money": {
-              "home_b": 35.02,
-              "home_m": 21.88,
-              "away_b": 64.98,
-              "away_m": 78.12
-            },
-            "M8: Line Movement": {
-              "open_home": -12.5,
-              "current_home": -14.0,
-              "delta": -1.5,
-              "crosses_key": false,
-              "size": 1.5,
-              "sources": [
-                "circa",
-                "dk"
-              ],
-              "circa": {
-                "first": -13.5,
-                "last": -14.0,
-                "delta": -0.5
-              }
-            }
-          },
-          "team_home": "North Texas Mean Green",
-          "team_away": "Florida Atlantic Owls",
-          "start": "2026-10-29T23:30Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 33.0,
-              "home_m": 61.0,
-              "away_b": 67.0,
-              "away_m": 39.0,
-              "line": "-14",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 65.0,
-              "home_m": 71.0,
-              "away_b": 35.0,
-              "away_m": 29.0,
-              "line": "-14",
-              "thin": false
-            }
-          },
-          "event_id": "401862812",
-          "locked_run": "2026-10-29T18:00:09-04:00"
-        },
-        {
-          "game": "James Madison Dukes (H) vs Troy Trojans (A)",
-          "spread": "JMU -19.5",
-          "favorite": "James Madison Dukes -fav",
-          "confidence": "58%",
-          "picks": {
-            "M1: Normal Score": "TAKE: James Madison Dukes",
-            "M2: Relevance": "TAKE: James Madison Dukes",
-            "M3: Efficiency": "TAKE: Troy Trojans",
-            "M4: ATS Trends": "TAKE: James Madison Dukes",
-            "M5: Luck": "TAKE: Troy Trojans",
-            "M6: Sharp Money": "TAKE: James Madison Dukes",
-            "M8: Line Movement": "TAKE: James Madison Dukes",
-            "CONSENSUS": "TAKE: James Madison Dukes",
-            "Sharp: Circa": "TAKE: Troy Trojans",
-            "Sharp: DraftKings": "TAKE: James Madison Dukes"
-          },
-          "detail": {
-            "M1: Normal Score": {
-              "home": 37,
-              "away": 7
-            },
-            "M2: Relevance": {
-              "home": 58.2982,
-              "away": 10.654
-            },
-            "M3: Efficiency": {
-              "margin": 9.8
-            },
-            "M4: ATS Trends": {
-              "home": 10,
-              "away": 1
-            },
-            "M5: Luck": {
-              "home": "0.1",
-              "away": "-0.6"
-            },
-            "M6: Sharp Money": {
-              "home_b": 53.39,
-              "home_m": 57.69,
-              "away_b": 46.61,
-              "away_m": 42.31
-            },
-            "M8: Line Movement": {
-              "open_home": -17.5,
-              "current_home": -19.5,
-              "delta": -2.0,
-              "crosses_key": false,
-              "size": 2.0,
-              "sources": [
-                "dk"
-              ],
-              "circa": {
-                "first": -19.0,
-                "last": -19.0,
-                "delta": 0.0
-              }
-            }
-          },
-          "team_home": "James Madison Dukes",
-          "team_away": "Troy Trojans",
-          "start": "2026-10-29T23:30Z",
-          "sharp_books": {
-            "circa": {
-              "home_b": 65.0,
-              "home_m": 30.0,
-              "away_b": 35.0,
-              "away_m": 70.0,
-              "line": "-19",
-              "thin": false
-            },
-            "dk": {
-              "home_b": 79.0,
-              "home_m": 92.0,
-              "away_b": 21.0,
-              "away_m": 8.0,
-              "line": "-19.5",
-              "thin": false
-            }
-          },
-          "event_id": "401869963",
-          "locked_run": "2026-10-29T18:00:09-04:00"
+          "event_id": "401866451"
         }
       ]
     }
