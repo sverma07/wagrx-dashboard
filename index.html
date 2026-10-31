@@ -469,6 +469,12 @@
   .best-n { color: var(--text-dim); font-weight: 500; font-size: 0.76rem; }
   .best-toggle { white-space: nowrap; flex: 0 0 auto; }
   .best-toggle:disabled { opacity: 0.45; cursor: not-allowed; }
+  .win-combos { margin-top: 8px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--accent-soft); font-size: 0.8rem; }
+  .win-combos-label { color: var(--text-dim); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+  .win-combo { display: flex; align-items: baseline; justify-content: space-between; gap: 4px 10px; flex-wrap: wrap; margin-top: 3px; }
+  .win-combo-phrase { font-weight: 600; flex: 1 1 auto; }
+  .win-combo-rec { font-weight: 700; white-space: nowrap; color: var(--win); }
+  .win-combo-more { color: var(--text-dim); margin-top: 3px; font-size: 0.74rem; }
   .refresh-row { display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; margin: 0 0 12px; }
   .refresh-btn { display: flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 12px; background: transparent; color: var(--text); font-size: 0.84rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
   .refresh-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
@@ -729,6 +735,7 @@ function activePills(scope, selectDefs) {
     pills.push([d.key, `${d.label}: ${o ? o[1] : st[d.key]}`]);
   }
   if (st.best && bestSelFor(scope === "upcoming" ? upcomingSport : currentSport) && !(scope === "games" && currentView === "history")) pills.push(["best", "Best combination"]);
+  if (st.win && winReady(scope === "upcoming" ? upcomingSport : currentSport) && !(scope === "games" && currentView === "history")) pills.push(["win", "Winning combination"]);
   for (const k of CHIP_KEYS) {
     if (k === "dates" || !st[k].length) continue;
     const g = CHIP_GROUPS[k];
@@ -739,7 +746,7 @@ function activePills(scope, selectDefs) {
 
 function clearFilterKey(scope, key) {
   const d = (scope === "upcoming" ? UPCOMING_FILTERS : FILTER_DEFS).find(x => x.key === key);
-  setChips(scope, key, key === "best" ? false : d ? d.def : []);
+  setChips(scope, key, key === "best" || key === "win" ? false : d ? d.def : []);
 }
 
 function toggleFilterPanel(btn) {
@@ -761,7 +768,7 @@ function filterUiHtml(scope, defs, quickKeys, dateOpts, metaId, metaHtml, showBe
   }).join("");
   return `<div class="filter-ui"><div class="filter-bar"><div class="filter-row">${quick.map(d => filterSelectHtml(scope, d, true)).join("")}`
     + `<button type="button" class="filter-toggle${pills.length ? " on" : ""}" aria-expanded="${filterPanelOpen}" onclick="toggleFilterPanel(this)">${FILTER_ICON}Filters`
-    + `${pills.length ? ` <span class="filter-count">${pills.length}</span>` : ""}</button>${showBest ? bestButtonHtml(scope) : ""}</div>`
+    + `${pills.length ? ` <span class="filter-count">${pills.length}</span>` : ""}</button>${showBest ? bestButtonHtml(scope) + winButtonHtml(scope) : ""}</div>`
     + `<div class="filter-meta"${metaId ? ` id="${metaId}"` : ""}>${metaHtml}</div></div>`
     + (dateOpts ? chipGroupHtml(scope, "dates", dateOpts) : "")
     + (pills.length ? `<div class="pill-row">${pills.map(([k, t]) =>
@@ -1052,7 +1059,8 @@ function lineMoveHtml(g) {
 
 // grade (History only): { cover, final, status } from that day's graded results.
 // scope keeps the detail-dropdown ids unique between the Games and History views.
-function renderGame(g, idx, grade = null, scope = "games") {
+// winMatches (Winning Combination filter only): the winning combinations this game fits, shown on its card.
+function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
   const picks = g.picks || {};
   const graded = grade && grade.cover;
   const gradeTag = pick => {
@@ -1117,6 +1125,7 @@ function renderGame(g, idx, grade = null, scope = "games") {
         </div>
         ${renderSharpRow(g, grade && grade.cover)}
         ${renderLineMoveRow(g)}
+        ${winCombosHtml(winMatches)}
       </div>
       <div class="models-wrap">
         <table class="models">${modelRows}${infoRows}</table>
@@ -1216,6 +1225,7 @@ try { Object.assign(filters, JSON.parse(localStorage.getItem("wagrx-filters") ||
 // Older saved filters kept consensus/sharp/signals as single strings; anything that is not a list is dropped.
 for (const k of CHIP_KEYS) if (!Array.isArray(filters[k])) filters[k] = [];
 filters.best = filters.best === true;  // the Best combination toggle
+filters.win = filters.win === true;    // the Winning combination toggle
 
 // Everything the filters/sorts need about one game, from a dashboard game object.
 // result: the consensus WIN/LOSS once graded (History), else null.
@@ -1245,6 +1255,7 @@ function passesFilters(fx, view) {
   if (!signalsMatch(fx.sig, filters)) return false;
   if (!moveMatches(fx.moveSize, filters.moves)) return false;
   if (view === "games" && filters.best && fx.combo && !bestMatches(currentSport, fx.combo)) return false;
+  if (view === "games" && filters.win && fx.wins && !fx.wins.length) return false;
   if (view === "history" && filters.result !== "all" && fx.result !== filters.result.toUpperCase()) return false;
   return true;
 }
@@ -1265,7 +1276,7 @@ function applyFilters(items, view) {
 }
 
 function filtersActive(view) {
-  return CHIP_KEYS.some(k => filters[k].length > 0) || (view !== "history" && filters.best && !!bestSelFor(currentSport)) || FILTER_DEFS.some(d => d.key !== "sort" && d.key !== "src" && (!d.historyOnly || view === "history") && filters[d.key] !== d.def);
+  return CHIP_KEYS.some(k => filters[k].length > 0) || (view !== "history" && filters.best && !!bestSelFor(currentSport)) || (view !== "history" && filters.win && winReady(currentSport)) || FILTER_DEFS.some(d => d.key !== "sort" && d.key !== "src" && (!d.historyOnly || view === "history") && filters[d.key] !== d.def);
 }
 
 function renderFilterBar(view, shown, total) {
@@ -1290,6 +1301,7 @@ function clearFilters() {
   for (const d of FILTER_DEFS) if (d.key !== "sort" && d.key !== "src") filters[d.key] = d.def;
   for (const k of CHIP_KEYS) filters[k] = [];
   filters.best = false;
+  filters.win = false;
   try { localStorage.setItem("wagrx-filters", JSON.stringify(filters)); } catch (e) {}
   rerenderFiltered();
 }
@@ -1318,10 +1330,14 @@ function renderSnapshot(snap) {
     document.getElementById("games-filter").innerHTML = "";
     return;
   }
-  const items = applyFilters(currentGames.map((g, i) => { const fx = gameFacts(g); fx.combo = comboFactsLive(g); return { idx: i, fx, g }; }), "games");
+  const items = applyFilters(currentGames.map((g, i) => {
+    const fx = gameFacts(g); fx.combo = comboFactsLive(g);
+    if (filters.win && winReady(currentSport)) fx.wins = winMatchesFor(currentSport, fx.combo);
+    return { idx: i, fx, g };
+  }), "games");
   document.getElementById("games-filter").innerHTML = renderFilterBar("games", items.length, currentGames.length);
   container.innerHTML = items.length
-    ? items.map(it => renderGame(it.g, it.idx)).join("")
+    ? items.map(it => renderGame(it.g, it.idx, null, "games", it.fx.wins)).join("")
     : '<div class="empty-state">No games match these filters.</div>';
   filterGames();
 }
@@ -1882,6 +1898,64 @@ function toggleBest(scope) {
   setChips(scope, "best", !chipState(scope).best);
 }
 
+// ---- Winning combination: every combination of the explorer's signals with a graded record above 50% (and at
+// least COMBO_MIN_GAMES games). The filter keeps games that fit at least one; their cards say which and its record.
+function allWinningCombos(games) {
+  const out = [];
+  const levels = comboConfLevels(games).filter(c => c % 5 === 0);
+  const base = comboRecord(games, COMBO_ANY);
+  const walk = (i, sel) => {
+    if (i === COMBO_DIMS.length) {
+      if (COMBO_DIMS.every(d => sel[d.key] === "any")) return;
+      const r = comboRecord(games, sel);
+      if (r.n < COMBO_MIN_GAMES || r.n === base.n || r.w / r.n <= 0.5) return;
+      out.push({ sel: { ...sel }, ...r, score: wilsonLow(r.w, r.n) });
+      return;
+    }
+    const d = COMBO_DIMS[i];
+    for (const v of ["any", ...(d.slider ? levels : d.opts.map(o => o[0]))]) walk(i + 1, { ...sel, [d.key]: v });
+  };
+  walk(0, {});
+  return out.sort((a, b) => b.score - a.score || b.n - a.n);
+}
+
+function winCombosFor(sportKey) {
+  const c = bestFor(sportKey);
+  if (!c) return [];
+  return c.wins || (c.wins = allWinningCombos(c.games));
+}
+
+function winReady(sportKey) { return winCombosFor(sportKey).length > 0; }
+
+// The winning combinations a game fits, best first.
+function winMatchesFor(sportKey, facts) {
+  return winCombosFor(sportKey).filter(c => comboMatch(facts, c.sel));
+}
+
+const WIN_CARD_MAX = 3;
+function winCombosHtml(matches) {
+  if (!matches || !matches.length) return "";
+  const rows = matches.slice(0, WIN_CARD_MAX).map(c =>
+    `<div class="win-combo"><span class="win-combo-phrase">${comboPhrase(c.sel)}</span>`
+    + `<span class="win-combo-rec">${c.w}-${c.l} (${Math.round(c.w / c.n * 100)}%)</span></div>`).join("");
+  const more = matches.length - WIN_CARD_MAX;
+  return `<div class="win-combos"><div class="win-combos-label">Winning combination${matches.length > 1 ? "s" : ""}</div>${rows}`
+    + (more > 0 ? `<div class="win-combo-more">+${more} more winning combination${more === 1 ? "" : "s"}</div>` : "") + `</div>`;
+}
+
+function winButtonHtml(scope) {
+  const sportKey = scope === "upcoming" ? upcomingSport : currentSport;
+  const ready = winReady(sportKey);
+  const on = ready && chipState(scope).win;
+  const title = ready ? "Show only games that fit a combination with a winning record (above 50%)" : "No winning combinations for this sport yet";
+  return `<button type="button" class="filter-toggle best-toggle${on ? " on" : ""}" aria-pressed="${on}" title="${title}"${ready ? "" : " disabled"} onclick="toggleWin('${scope}')">`
+    + `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4a2 2 0 0 1-2-2V5h4M18 9h2a2 2 0 0 0 2-2V5h-4M6 4h12v6a6 6 0 0 1-12 0zM12 16v4M8 20h8"/></svg>Winning combination</button>`;
+}
+
+function toggleWin(scope) {
+  setChips(scope, "win", !chipState(scope).win);
+}
+
 // ---- Performance: net wins (consensus W minus L, against the spread) over time ----
 const NET_RANGES = [{ key: "1w", label: "1W", days: 7 }, { key: "1m", label: "1M", days: 30 },
                     { key: "1y", label: "1Y", days: 365 }, { key: "all", label: "All", days: null }];
@@ -2230,7 +2304,8 @@ function renderUpcomingGame(g, keyNumbers, idx) {
   if (g.model) {
     const game = upcomingAsGame(g, keyNumbers);
     upcomingGames[idx] = game;
-    return renderGame(game, idx, null, "upcoming");
+    const wins = upcomingFilters.win && winReady(upcomingSport) ? winMatchesFor(upcomingSport, comboFactsLive(game)) : null;
+    return renderGame(game, idx, null, "upcoming", wins);
   }
   // Lines only: no model picks for this game (yet).
   const cur = g.current_home;
@@ -2258,6 +2333,7 @@ for (const k of CHIP_KEYS) upcomingFilters[k] = [];  // multi-select chip groups
 try { Object.assign(upcomingFilters, JSON.parse(localStorage.getItem("wagrx-upcoming-filters") || "{}")); } catch (e) {}
 for (const k of CHIP_KEYS) if (!Array.isArray(upcomingFilters[k])) upcomingFilters[k] = [];
 upcomingFilters.best = upcomingFilters.best === true;
+upcomingFilters.win = upcomingFilters.win === true;
 
 // null = no line posted yet (never matches a move-size filter, sorts last by move)
 function upcomingMoveSize(g) {
@@ -2276,6 +2352,7 @@ function passesUpcomingFilters(g, hasKeyNumbers) {
   // Games with no model picks have no sharp or signal read, so they only match "No data".
   const game = g.model ? upcomingAsGame(g, []) : null;
   if (f.best && bestSelFor(upcomingSport) && !(game && comboMatch(comboFactsLive(game), bestSelFor(upcomingSport)))) return false;
+  if (f.win && winReady(upcomingSport) && !(game && winMatchesFor(upcomingSport, comboFactsLive(game)).length)) return false;
   if (!sharpTierMatches(game ? sharpFor(game, "best") : null, f.sharp)) return false;
   if (!signalsMatch(game ? signalFacts(game) : { cons: null, sharp: null, line: null }, f)) return false;
   if (hasKeyNumbers && f.key === "crossed" && !g.crosses_key) return false;
@@ -2296,6 +2373,7 @@ function clearUpcomingFilters() {
   for (const d of UPCOMING_FILTERS) if (d.key !== "sort") upcomingFilters[d.key] = d.def;
   for (const k of CHIP_KEYS) upcomingFilters[k] = [];
   upcomingFilters.best = false;
+  upcomingFilters.win = false;
   upcomingQuery = "";
   saveUpcomingFilters();
   renderUpcoming();
@@ -2342,7 +2420,7 @@ function renderUpcoming() {
 
   const defs = UPCOMING_FILTERS.filter(d => !d.needsKeyNumbers || hasKeyNumbers);
   upcomingTotal = games.length;
-  upcomingFilterActive = CHIP_KEYS.some(k => upcomingFilters[k].length > 0) || (upcomingFilters.best && !!bestSelFor(upcomingSport))
+  upcomingFilterActive = CHIP_KEYS.some(k => upcomingFilters[k].length > 0) || (upcomingFilters.best && !!bestSelFor(upcomingSport)) || (upcomingFilters.win && winReady(upcomingSport))
     || defs.some(d => d.key !== "sort" && upcomingFilters[d.key] !== d.def);
   const search = `<div class="controls-row"><input type="search" id="upcoming-search" class="search-box" placeholder="Search teams&hellip;"`
     + ` value="${upcomingQuery.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;")}" oninput="setUpcomingSearch(this.value)"></div>`;
