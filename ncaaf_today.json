@@ -2971,6 +2971,260 @@
           "event_id": "401866451"
         }
       ]
+    },
+    {
+      "time": "2026-10-30T20:00:10-04:00",
+      "games": [
+        {
+          "game": "Charlotte 49ers (H) vs Tulane Green Wave (A)",
+          "spread": "TULN -8.5",
+          "favorite": "Tulane Green Wave -fav",
+          "confidence": "62%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Tulane Green Wave",
+            "M2: Relevance": "TAKE: Tulane Green Wave",
+            "M3: Efficiency": "TAKE: Tulane Green Wave",
+            "M4: ATS Trends": "TAKE: Charlotte 49ers",
+            "M5: Luck": "TAKE: Charlotte 49ers",
+            "M6: Sharp Money": "TAKE: Tulane Green Wave",
+            "M8: Line Movement": "TAKE: Charlotte 49ers",
+            "CONSENSUS": "TAKE: Tulane Green Wave",
+            "Sharp: Circa": "TAKE: Charlotte 49ers",
+            "Sharp: DraftKings": "TAKE: Charlotte 49ers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 8,
+              "away": 31
+            },
+            "M2: Relevance": {
+              "home": 8.6505,
+              "away": 52.7352
+            },
+            "M3: Efficiency": {
+              "margin": -10.2
+            },
+            "M4: ATS Trends": {
+              "home": 4,
+              "away": 2
+            },
+            "M5: Luck": {
+              "home": "0.0",
+              "away": "0.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": 37.45,
+              "home_m": 34.0,
+              "away_b": 62.55,
+              "away_m": 66.0
+            },
+            "M8: Line Movement": {
+              "open_home": 13.5,
+              "current_home": 8.5,
+              "delta": -5.0,
+              "crosses_key": false,
+              "size": 5.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 8.5,
+                "last": 8.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Charlotte 49ers",
+          "team_away": "Tulane Green Wave",
+          "start": "2026-10-30T23:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 34.0,
+              "home_m": 53.0,
+              "away_b": 66.0,
+              "away_m": 47.0,
+              "line": "+8.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 26.0,
+              "home_m": 35.0,
+              "away_b": 74.0,
+              "away_m": 65.0,
+              "line": "+8.5",
+              "thin": false
+            }
+          },
+          "event_id": "401862813",
+          "locked_run": "2026-10-30T18:00:10-04:00"
+        },
+        {
+          "game": "UCF Knights (H) vs Baylor Bears (A)",
+          "spread": "BAY -1.5",
+          "favorite": "Baylor Bears -fav",
+          "confidence": "83%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Baylor Bears",
+            "M2: Relevance": "TAKE: Baylor Bears",
+            "M3: Efficiency": "TAKE: Baylor Bears",
+            "M4: ATS Trends": "TAKE: UCF Knights",
+            "M5: Luck": "TAKE: Baylor Bears",
+            "M6: Sharp Money": "TAKE: Baylor Bears",
+            "M8: Line Movement": "TAKE: Baylor Bears",
+            "CONSENSUS": "TAKE: Baylor Bears",
+            "Sharp: Circa": "TAKE: Baylor Bears",
+            "Sharp: DraftKings": "TAKE: Baylor Bears"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 13,
+              "away": 25
+            },
+            "M2: Relevance": {
+              "home": 21.2023,
+              "away": 36.0347
+            },
+            "M3: Efficiency": {
+              "margin": -4.1
+            },
+            "M4: ATS Trends": {
+              "home": 4,
+              "away": 3
+            },
+            "M5: Luck": {
+              "home": "0.1",
+              "away": "-0.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": 62.71,
+              "home_m": 57.08,
+              "away_b": 37.29,
+              "away_m": 42.92
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": 2.5,
+              "delta": 4.0,
+              "crosses_key": false,
+              "size": 4.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": 1.0,
+                "last": 2.0,
+                "delta": 1.0
+              }
+            }
+          },
+          "team_home": "UCF Knights",
+          "team_away": "Baylor Bears",
+          "start": "2026-10-30T23:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 55.0,
+              "home_m": 49.0,
+              "away_b": 45.0,
+              "away_m": 51.0,
+              "line": "+2",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 50.0,
+              "home_m": 15.0,
+              "away_b": 50.0,
+              "away_m": 85.0,
+              "line": "+2.5",
+              "thin": false
+            }
+          },
+          "event_id": "401856844",
+          "locked_run": "2026-10-30T18:00:10-04:00"
+        },
+        {
+          "game": "Sacramento State Hornets (H) vs Kent State Golden Flashes (A)",
+          "spread": "KENT -7",
+          "favorite": "Kent State Golden Flashes -fav",
+          "confidence": "58%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Kent State Golden Flashes",
+            "M2: Relevance": "TAKE: Kent State Golden Flashes",
+            "M3: Efficiency": "TAKE: Sacramento State Hornets",
+            "M4: ATS Trends": "TAKE: Kent State Golden Flashes",
+            "M5: Luck": "TAKE: Sacramento State Hornets",
+            "M6: Sharp Money": "TAKE: Sacramento State Hornets",
+            "M8: Line Movement": "TAKE: Sacramento State Hornets",
+            "CONSENSUS": "TAKE: Kent State Golden Flashes",
+            "Sharp: Circa": "TAKE: Kent State Golden Flashes",
+            "Sharp: DraftKings": "TAKE: Kent State Golden Flashes"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 11,
+              "away": 32
+            },
+            "M2: Relevance": {
+              "home": 15.87,
+              "away": 45.9079
+            },
+            "M3: Efficiency": {
+              "margin": -3.4
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 8
+            },
+            "M5: Luck": {
+              "home": "-0.7",
+              "away": "0.7"
+            },
+            "M6: Sharp Money": {
+              "home_b": 55.58,
+              "home_m": 62.29,
+              "away_b": 44.42,
+              "away_m": 37.71
+            },
+            "M8: Line Movement": {
+              "open_home": 9.5,
+              "current_home": 7.0,
+              "delta": -2.5,
+              "crosses_key": true,
+              "size": 2.5,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 7.0,
+                "last": 7.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Sacramento State Hornets",
+          "team_away": "Kent State Golden Flashes",
+          "start": "2026-10-31T02:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 41.0,
+              "home_m": 35.0,
+              "away_b": 59.0,
+              "away_m": 65.0,
+              "line": "+7",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 34.0,
+              "home_m": 20.0,
+              "away_b": 66.0,
+              "away_m": 80.0,
+              "line": "+7",
+              "thin": false
+            }
+          },
+          "event_id": "401866451"
+        }
+      ]
     }
   ]
 }
