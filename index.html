@@ -469,7 +469,11 @@
   .best-n { color: var(--text-dim); font-weight: 500; font-size: 0.76rem; }
   .best-toggle { white-space: nowrap; flex: 0 0 auto; }
   .best-toggle:disabled { opacity: 0.45; cursor: not-allowed; }
-  .win-combos { margin-top: 8px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--accent-soft); font-size: 0.8rem; }
+  .win-combos { margin: 10px 0 0; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--accent-soft); font-size: 0.8rem; }
+  .win-combos summary { cursor: pointer; font-weight: 600; }
+  .win-combo-count { color: var(--text-dim); font-weight: 500; font-size: 0.74rem; margin-left: 6px; }
+  .win-combos .win-combos-label { margin-top: 8px; }
+  .win-combo-rec.lose { color: var(--loss); }
   .win-combos-label { color: var(--text-dim); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
   .win-combo { display: flex; align-items: baseline; justify-content: space-between; gap: 4px 10px; flex-wrap: wrap; margin-top: 3px; }
   .win-combo-phrase { font-weight: 600; flex: 1 1 auto; }
@@ -1059,7 +1063,7 @@ function lineMoveHtml(g) {
 
 // grade (History only): { cover, final, status } from that day's graded results.
 // scope keeps the detail-dropdown ids unique between the Games and History views.
-// winMatches (Winning Combination filter only): the winning combinations this game fits, shown on its card.
+// winMatches (Winning Combination filter only): { wins, losses } the game fits, shown in an expansion at the card's bottom.
 function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
   const picks = g.picks || {};
   const graded = grade && grade.cover;
@@ -1125,11 +1129,11 @@ function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
         </div>
         ${renderSharpRow(g, grade && grade.cover)}
         ${renderLineMoveRow(g)}
-        ${winCombosHtml(winMatches)}
       </div>
       <div class="models-wrap">
         <table class="models">${modelRows}${infoRows}</table>
       </div>
+      ${winCombosHtml(winMatches)}
     </div>
   `;
 }
@@ -1255,7 +1259,7 @@ function passesFilters(fx, view) {
   if (!signalsMatch(fx.sig, filters)) return false;
   if (!moveMatches(fx.moveSize, filters.moves)) return false;
   if (view === "games" && filters.best && fx.combo && !bestMatches(currentSport, fx.combo)) return false;
-  if (view === "games" && filters.win && fx.wins && !fx.wins.length) return false;
+  if (view === "games" && filters.win && fx.wins && !fx.wins.wins.length) return false;
   if (view === "history" && filters.result !== "all" && fx.result !== filters.result.toUpperCase()) return false;
   return true;
 }
@@ -1901,46 +1905,60 @@ function toggleBest(scope) {
 // ---- Winning combination: every combination of the explorer's signals with a graded record above 50% (and at
 // least COMBO_MIN_GAMES games). The filter keeps games that fit at least one; their cards say which and its record.
 function allWinningCombos(games) {
-  const out = [];
+  const out = [], losing = [];
   const levels = comboConfLevels(games).filter(c => c % 5 === 0);
   const base = comboRecord(games, COMBO_ANY);
   const walk = (i, sel) => {
     if (i === COMBO_DIMS.length) {
       if (COMBO_DIMS.every(d => sel[d.key] === "any")) return;
       const r = comboRecord(games, sel);
-      if (r.n < COMBO_MIN_GAMES || r.n === base.n || r.w / r.n <= 0.5) return;
-      out.push({ sel: { ...sel }, ...r, score: wilsonLow(r.w, r.n) });
+      if (r.n < COMBO_MIN_GAMES || r.n === base.n || r.w === r.l) return;
+      // Losing combos rank by how surely they lose (Wilson bound on the loss rate), worst first.
+      if (r.w > r.l) out.push({ sel: { ...sel }, ...r, score: wilsonLow(r.w, r.n) });
+      else losing.push({ sel: { ...sel }, ...r, score: wilsonLow(r.l, r.n) });
       return;
     }
     const d = COMBO_DIMS[i];
     for (const v of ["any", ...(d.slider ? levels : d.opts.map(o => o[0]))]) walk(i + 1, { ...sel, [d.key]: v });
   };
   walk(0, {});
-  return out.sort((a, b) => b.score - a.score || b.n - a.n);
+  const rank = (a, b) => b.score - a.score || b.n - a.n;
+  return { wins: out.sort(rank), losses: losing.sort(rank) };
 }
 
-function winCombosFor(sportKey) {
+function comboListsFor(sportKey) {
   const c = bestFor(sportKey);
-  if (!c) return [];
-  return c.wins || (c.wins = allWinningCombos(c.games));
+  if (!c) return { wins: [], losses: [] };
+  return c.lists || (c.lists = allWinningCombos(c.games));
 }
+
+function winCombosFor(sportKey) { return comboListsFor(sportKey).wins; }
 
 function winReady(sportKey) { return winCombosFor(sportKey).length > 0; }
 
-// The winning combinations a game fits, best first.
+// The winning and losing combinations a game fits, strongest first. The filter keys off wins only.
 function winMatchesFor(sportKey, facts) {
-  return winCombosFor(sportKey).filter(c => comboMatch(facts, c.sel));
+  const { wins, losses } = comboListsFor(sportKey);
+  const fits = list => list.filter(c => comboMatch(facts, c.sel));
+  return { wins: fits(wins), losses: fits(losses) };
 }
 
 const WIN_CARD_MAX = 3;
-function winCombosHtml(matches) {
-  if (!matches || !matches.length) return "";
-  const rows = matches.slice(0, WIN_CARD_MAX).map(c =>
+function winComboRows(list, cls) {
+  return list.slice(0, WIN_CARD_MAX).map(c =>
     `<div class="win-combo"><span class="win-combo-phrase">${comboPhrase(c.sel)}</span>`
-    + `<span class="win-combo-rec">${c.w}-${c.l} (${Math.round(c.w / c.n * 100)}%)</span></div>`).join("");
-  const more = matches.length - WIN_CARD_MAX;
-  return `<div class="win-combos"><div class="win-combos-label">Winning combination${matches.length > 1 ? "s" : ""}</div>${rows}`
-    + (more > 0 ? `<div class="win-combo-more">+${more} more winning combination${more === 1 ? "" : "s"}</div>` : "") + `</div>`;
+    + `<span class="win-combo-rec ${cls}">${c.w}-${c.l} (${Math.round(c.w / c.n * 100)}%)</span></div>`).join("");
+}
+
+// Expansion at the bottom of the card: the top 3 winning and top 3 losing combinations the game is in.
+function winCombosHtml(m) {
+  if (!m) return "";
+  const part = (label, list, cls) => `<div class="win-combos-label">${label}</div>`
+    + (list.length ? winComboRows(list, cls)
+        + (list.length > WIN_CARD_MAX ? `<div class="win-combo-more">+${list.length - WIN_CARD_MAX} more</div>` : "")
+      : `<div class="win-combo-more">None</div>`);
+  return `<details class="win-combos"><summary>Combinations this game is in <span class="win-combo-count">${m.wins.length} winning, ${m.losses.length} losing</span></summary>`
+    + part("Top winning", m.wins, "") + part("Top losing", m.losses, "lose") + `</details>`;
 }
 
 function winButtonHtml(scope) {
@@ -2352,7 +2370,7 @@ function passesUpcomingFilters(g, hasKeyNumbers) {
   // Games with no model picks have no sharp or signal read, so they only match "No data".
   const game = g.model ? upcomingAsGame(g, []) : null;
   if (f.best && bestSelFor(upcomingSport) && !(game && comboMatch(comboFactsLive(game), bestSelFor(upcomingSport)))) return false;
-  if (f.win && winReady(upcomingSport) && !(game && winMatchesFor(upcomingSport, comboFactsLive(game)).length)) return false;
+  if (f.win && winReady(upcomingSport) && !(game && winMatchesFor(upcomingSport, comboFactsLive(game)).wins.length)) return false;
   if (!sharpTierMatches(game ? sharpFor(game, "best") : null, f.sharp)) return false;
   if (!signalsMatch(game ? signalFacts(game) : { cons: null, sharp: null, line: null }, f)) return false;
   if (hasKeyNumbers && f.key === "crossed" && !g.crosses_key) return false;
