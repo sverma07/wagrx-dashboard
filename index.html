@@ -1259,7 +1259,7 @@ function passesFilters(fx, view) {
   if (!signalsMatch(fx.sig, filters)) return false;
   if (!moveMatches(fx.moveSize, filters.moves)) return false;
   if (view === "games" && filters.best && fx.combo && !bestMatches(currentSport, fx.combo)) return false;
-  if (view === "games" && filters.win && fx.wins && !fx.wins.wins.length) return false;
+  if (view === "games" && filters.win && winReady(currentSport) && fx.wins && !fx.wins.wins.length) return false;
   if (view === "history" && filters.result !== "all" && fx.result !== filters.result.toUpperCase()) return false;
   return true;
 }
@@ -1336,7 +1336,7 @@ function renderSnapshot(snap) {
   }
   const items = applyFilters(currentGames.map((g, i) => {
     const fx = gameFacts(g); fx.combo = comboFactsLive(g);
-    if (filters.win && winReady(currentSport)) fx.wins = winMatchesFor(currentSport, fx.combo);
+    if (comboCardsOn(filters, currentSport)) fx.wins = winMatchesFor(currentSport, fx.combo);
     return { idx: i, fx, g };
   }), "games");
   document.getElementById("games-filter").innerHTML = renderFilterBar("games", items.length, currentGames.length);
@@ -1944,6 +1944,9 @@ function winMatchesFor(sportKey, facts) {
   return { wins: fits(wins), losses: fits(losses) };
 }
 
+// The combinations expansion shows on cards while either combination filter is actually filtering.
+function comboCardsOn(st, sportKey) { return (st.win && winReady(sportKey)) || (st.best && !!bestSelFor(sportKey)); }
+
 const WIN_CARD_MAX = 3;
 function winComboRows(list, cls) {
   return list.slice(0, WIN_CARD_MAX).map(c =>
@@ -2321,7 +2324,7 @@ function renderUpcomingGame(g, keyNumbers, idx) {
   if (g.model) {
     const game = upcomingAsGame(g, keyNumbers);
     upcomingGames[idx] = game;
-    const wins = upcomingFilters.win && winReady(upcomingSport) ? winMatchesFor(upcomingSport, comboFactsLive(game)) : null;
+    const wins = comboCardsOn(upcomingFilters, upcomingSport) ? winMatchesFor(upcomingSport, comboFactsLive(game)) : null;
     return renderGame(game, idx, null, "upcoming", wins);
   }
   // Lines only: no model picks for this game (yet).
