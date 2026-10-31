@@ -1,7 +1,189 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-10-30T06:00:03-04:00",
+  "updated": "2026-10-31T06:00:04-04:00",
   "days": {
+    "2026-10-30": [
+      {
+        "game": "Charlotte 49ers (H) vs Tulane Green Wave (A)",
+        "team_home": "Charlotte 49ers",
+        "team_away": "Tulane Green Wave",
+        "line": "TULN -8.5",
+        "favorite": "Tulane Green Wave -fav",
+        "final": "Charlotte 49ers 31, Tulane Green Wave 38",
+        "cover": "Charlotte 49ers",
+        "status": null,
+        "confidence": "62%",
+        "sharp": {
+          "home_b": 37.45,
+          "home_m": 34.0,
+          "away_b": 62.55,
+          "away_m": 66.0
+        },
+        "graded_run": "2026-10-30T18:00:10-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Tulane Green Wave",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Tulane Green Wave",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Tulane Green Wave",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Charlotte 49ers",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Charlotte 49ers",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Tulane Green Wave",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Charlotte 49ers",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Tulane Green Wave",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Charlotte 49ers",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Charlotte 49ers",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "UCF Knights (H) vs Baylor Bears (A)",
+        "team_home": "UCF Knights",
+        "team_away": "Baylor Bears",
+        "line": "BAY -1.5",
+        "favorite": "Baylor Bears -fav",
+        "final": "UCF Knights 9, Baylor Bears 41",
+        "cover": "Baylor Bears",
+        "status": null,
+        "confidence": "83%",
+        "sharp": {
+          "home_b": 62.71,
+          "home_m": 57.08,
+          "away_b": 37.29,
+          "away_m": 42.92
+        },
+        "graded_run": "2026-10-30T18:00:10-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Baylor Bears",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Baylor Bears",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Baylor Bears",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "UCF Knights",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Baylor Bears",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Baylor Bears",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Baylor Bears",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Baylor Bears",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Baylor Bears",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Baylor Bears",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Sacramento State Hornets (H) vs Kent State Golden Flashes (A)",
+        "team_home": "Sacramento State Hornets",
+        "team_away": "Kent State Golden Flashes",
+        "line": "KENT -7",
+        "favorite": "Kent State Golden Flashes -fav",
+        "final": "Sacramento State Hornets 31, Kent State Golden Flashes 10",
+        "cover": "Sacramento State Hornets",
+        "status": null,
+        "confidence": "58%",
+        "sharp": {
+          "home_b": 55.58,
+          "home_m": 62.29,
+          "away_b": 44.42,
+          "away_m": 37.71
+        },
+        "graded_run": "2026-10-30T22:00:09-04:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Kent State Golden Flashes",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Kent State Golden Flashes",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Sacramento State Hornets",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Kent State Golden Flashes",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Sacramento State Hornets",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Sacramento State Hornets",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Kent State Golden Flashes",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Kent State Golden Flashes",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Kent State Golden Flashes",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-10-29": [
       {
         "game": "North Texas Mean Green (H) vs Florida Atlantic Owls (A)",
