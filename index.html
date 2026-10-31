@@ -1922,8 +1922,9 @@ function allWinningCombos(games) {
     for (const v of ["any", ...(d.slider ? levels : d.opts.map(o => o[0]))]) walk(i + 1, { ...sel, [d.key]: v });
   };
   walk(0, {});
-  const rank = (a, b) => b.score - a.score || b.n - a.n;
-  return { wins: out.sort(rank), losses: losing.sort(rank) };
+  // Ordered by plain win rate: winners highest first, losers lowest first (bigger samples break ties).
+  const rate = c => c.w / c.n;
+  return { wins: out.sort((a, b) => rate(b) - rate(a) || b.n - a.n), losses: losing.sort((a, b) => rate(a) - rate(b) || b.n - a.n) };
 }
 
 function comboListsFor(sportKey) {
@@ -1954,9 +1955,7 @@ function winComboRows(list, cls) {
 function winCombosHtml(m) {
   if (!m) return "";
   const part = (label, list, cls) => `<div class="win-combos-label">${label}</div>`
-    + (list.length ? winComboRows(list, cls)
-        + (list.length > WIN_CARD_MAX ? `<div class="win-combo-more">+${list.length - WIN_CARD_MAX} more</div>` : "")
-      : `<div class="win-combo-more">None</div>`);
+    + (list.length ? winComboRows(list, cls) : `<div class="win-combo-more">None</div>`);
   return `<details class="win-combos"><summary>Combinations this game is in <span class="win-combo-count">${m.wins.length} winning, ${m.losses.length} losing</span></summary>`
     + part("Top winning", m.wins, "") + part("Top losing", m.losses, "lose") + `</details>`;
 }
