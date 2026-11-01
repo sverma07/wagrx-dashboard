@@ -849,6 +849,159 @@
           "event_id": "401920409"
         }
       ]
+    },
+    {
+      "time": "2026-11-01T09:15:08-05:00",
+      "games": [
+        {
+          "game": "Villanova Wildcats (H) vs Notre Dame Fighting Irish (A)",
+          "spread": "VILL -7.5",
+          "favorite": "Villanova Wildcats -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Villanova Wildcats",
+            "M2: Relevance": "TAKE: Villanova Wildcats",
+            "M3: Efficiency": "TAKE: Notre Dame Fighting Irish",
+            "M4: ATS Trends": "TAKE: Villanova Wildcats",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "TAKE: Notre Dame Fighting Irish",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Villanova Wildcats",
+            "Sharp: Circa": "TAKE: Villanova Wildcats",
+            "Sharp: DraftKings": "TAKE: Villanova Wildcats"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 70,
+              "away": 27
+            },
+            "M2: Relevance": {
+              "home": 123.4877,
+              "away": 47.9173
+            },
+            "M3: Efficiency": {
+              "margin": 6.0
+            },
+            "M4: ATS Trends": {
+              "home": 8,
+              "away": 5
+            },
+            "M5: Luck": {
+              "home": "N/A",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": 64.81,
+              "home_m": 24.2,
+              "away_b": 35.19,
+              "away_m": 75.8
+            },
+            "M8: Line Movement": {
+              "open_home": -7.5,
+              "current_home": -7.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.5,
+              "sources": [],
+              "circa": {
+                "first": -7.0,
+                "last": -7.5,
+                "delta": -0.5
+              }
+            }
+          },
+          "team_home": "Villanova Wildcats",
+          "team_away": "Notre Dame Fighting Irish",
+          "start": "2026-11-01T14:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 75.0,
+              "home_m": 89.0,
+              "away_b": 25.0,
+              "away_m": 11.0,
+              "line": "-7.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 50.0,
+              "home_m": 57.0,
+              "away_b": 50.0,
+              "away_m": 43.0,
+              "line": "-7.5",
+              "thin": false
+            }
+          },
+          "event_id": "401920982"
+        },
+        {
+          "game": "High Point Panthers (H) vs Liberty Flames (A)",
+          "spread": "HPU -7.5",
+          "favorite": "High Point Panthers -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: High Point Panthers",
+            "M2: Relevance": "TAKE: High Point Panthers",
+            "M3: Efficiency": "TAKE: Liberty Flames",
+            "M4: ATS Trends": "TAKE: High Point Panthers",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "TAKE: High Point Panthers",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: High Point Panthers",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: High Point Panthers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 69,
+              "away": 28
+            },
+            "M2: Relevance": {
+              "home": 127.9127,
+              "away": 42.7827
+            },
+            "M3: Efficiency": {
+              "margin": 2.3
+            },
+            "M4: ATS Trends": {
+              "home": 13,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "N/A",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": 83.64,
+              "home_m": 88.58,
+              "away_b": 16.36,
+              "away_m": 11.42
+            },
+            "M8: Line Movement": {
+              "open_home": -7.5,
+              "current_home": -7.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "High Point Panthers",
+          "team_away": "Liberty Flames",
+          "start": "2026-11-02T04:59Z",
+          "sharp_books": {
+            "dk": {
+              "home_b": 52.0,
+              "home_m": 91.0,
+              "away_b": 48.0,
+              "away_m": 9.0,
+              "line": "-7.5",
+              "thin": false
+            }
+          },
+          "event_id": "401920409"
+        }
+      ]
     }
   ]
 }
