@@ -479,6 +479,8 @@
   .win-combo { display: flex; align-items: baseline; justify-content: space-between; gap: 4px 10px; flex-wrap: wrap; margin-top: 3px; }
   .win-combo-phrase { font-weight: 600; flex: 1 1 auto; }
   .win-combo-rec { font-weight: 700; white-space: nowrap; color: var(--win); }
+  .wilson-metric { margin: 6px 0 0; font-size: 0.8rem; display: flex; gap: 8px; align-items: baseline; }
+  .wilson-metric b.ok { color: var(--win); }
   .win-combo-more { color: var(--text-dim); margin-top: 3px; font-size: 0.74rem; }
   .refresh-row { display: flex; align-items: center; gap: 8px 12px; flex-wrap: wrap; margin: 0 0 12px; }
   .refresh-btn { display: flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--border); border-radius: 12px; background: transparent; color: var(--text); font-size: 0.84rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
@@ -741,6 +743,7 @@ function activePills(scope, selectDefs) {
   }
   if (st.best && bestSelFor(scope === "upcoming" ? upcomingSport : currentSport) && !(scope === "games" && currentView === "history")) pills.push(["best", "Best combination"]);
   if (st.win && winReady(scope === "upcoming" ? upcomingSport : currentSport) && !(scope === "games" && currentView === "history")) pills.push(["win", "Winning combination"]);
+  if (st.wilson && wilsonReady(scope === "upcoming" ? upcomingSport : currentSport) && !(scope === "games" && currentView === "history")) pills.push(["wilson", "Wilson combination"]);
   for (const k of CHIP_KEYS) {
     if (k === "dates" || !st[k].length) continue;
     const g = CHIP_GROUPS[k];
@@ -751,7 +754,7 @@ function activePills(scope, selectDefs) {
 
 function clearFilterKey(scope, key) {
   const d = (scope === "upcoming" ? UPCOMING_FILTERS : FILTER_DEFS).find(x => x.key === key);
-  setChips(scope, key, key === "best" || key === "win" ? false : d ? d.def : []);
+  setChips(scope, key, key === "best" || key === "win" || key === "wilson" ? false : d ? d.def : []);
 }
 
 function toggleFilterPanel(btn) {
@@ -773,7 +776,7 @@ function filterUiHtml(scope, defs, quickKeys, dateOpts, metaId, metaHtml, showBe
   }).join("");
   return `<div class="filter-ui"><div class="filter-bar"><div class="filter-row">${quick.map(d => filterSelectHtml(scope, d, true)).join("")}`
     + `<button type="button" class="filter-toggle${pills.length ? " on" : ""}" aria-expanded="${filterPanelOpen}" onclick="toggleFilterPanel(this)">${FILTER_ICON}Filters`
-    + `${pills.length ? ` <span class="filter-count">${pills.length}</span>` : ""}</button>${showBest ? bestButtonHtml(scope) + winButtonHtml(scope) : ""}</div>`
+    + `${pills.length ? ` <span class="filter-count">${pills.length}</span>` : ""}</button>${showBest ? bestButtonHtml(scope) + winButtonHtml(scope) + wilsonButtonHtml(scope) : ""}</div>`
     + `<div class="filter-meta"${metaId ? ` id="${metaId}"` : ""}>${metaHtml}</div></div>`
     + (dateOpts ? chipGroupHtml(scope, "dates", dateOpts) : "")
     + (pills.length ? `<div class="pill-row">${pills.map(([k, t]) =>
@@ -1232,6 +1235,7 @@ filters.sort = "start";  // always open sorted by start time, ascending
 for (const k of CHIP_KEYS) if (!Array.isArray(filters[k])) filters[k] = [];
 filters.best = filters.best === true;  // the Best combination toggle
 filters.win = filters.win === true;    // the Winning combination toggle
+filters.wilson = filters.wilson === true;  // the Wilson combination toggle
 
 // Everything the filters/sorts need about one game, from a dashboard game object.
 // result: the consensus WIN/LOSS once graded (History), else null.
@@ -1262,6 +1266,7 @@ function passesFilters(fx, view) {
   if (!moveMatches(fx.moveSize, filters.moves)) return false;
   if (view === "games" && filters.best && fx.combo && !bestMatches(currentSport, fx.combo)) return false;
   if (view === "games" && filters.win && winReady(currentSport) && fx.wins && !fx.wins.wins.length) return false;
+  if (view === "games" && filters.wilson && wilsonReady(currentSport) && fx.wins && !fx.wins.wilsonWins.length) return false;
   if (view === "history" && filters.result !== "all" && fx.result !== filters.result.toUpperCase()) return false;
   return true;
 }
@@ -1282,7 +1287,7 @@ function applyFilters(items, view) {
 }
 
 function filtersActive(view) {
-  return CHIP_KEYS.some(k => filters[k].length > 0) || (view !== "history" && filters.best && !!bestSelFor(currentSport)) || (view !== "history" && filters.win && winReady(currentSport)) || FILTER_DEFS.some(d => d.key !== "sort" && d.key !== "src" && (!d.historyOnly || view === "history") && filters[d.key] !== d.def);
+  return CHIP_KEYS.some(k => filters[k].length > 0) || (view !== "history" && filters.best && !!bestSelFor(currentSport)) || (view !== "history" && filters.win && winReady(currentSport)) || (view !== "history" && filters.wilson && wilsonReady(currentSport)) || FILTER_DEFS.some(d => d.key !== "sort" && d.key !== "src" && (!d.historyOnly || view === "history") && filters[d.key] !== d.def);
 }
 
 function renderFilterBar(view, shown, total) {
@@ -1308,6 +1313,7 @@ function clearFilters() {
   for (const k of CHIP_KEYS) filters[k] = [];
   filters.best = false;
   filters.win = false;
+  filters.wilson = false;
   try { localStorage.setItem("wagrx-filters", JSON.stringify(filters)); } catch (e) {}
   rerenderFiltered();
 }
@@ -1940,15 +1946,22 @@ function winCombosFor(sportKey) { return comboListsFor(sportKey).wins; }
 
 function winReady(sportKey) { return winCombosFor(sportKey).length > 0; }
 
+// Wilson combination: a winning combination whose Wilson lower bound (95%) on the win rate is itself above 50%,
+// i.e. the record is a convincing edge, not just a small-sample lead.
+const WILSON_MIN = 0.5;
+function wilsonReady(sportKey) { return winCombosFor(sportKey).some(c => c.score > WILSON_MIN); }
+
 // The winning and losing combinations a game fits, strongest first. The filter keys off wins only.
 function winMatchesFor(sportKey, facts) {
   const { wins, losses } = comboListsFor(sportKey);
   const fits = list => list.filter(c => comboMatch(facts, c.sel));
-  return { wins: fits(wins), losses: fits(losses) };
+  const w = fits(wins);
+  // wilson: the best Wilson lower bound among the winning combinations the game fits (null when it fits none).
+  return { wins: w, losses: fits(losses), wilsonWins: w.filter(c => c.score > WILSON_MIN), wilson: w.length ? Math.max(...w.map(c => c.score)) : null };
 }
 
 // The combinations expansion shows on cards while either combination filter is actually filtering.
-function comboCardsOn(st, sportKey) { return (st.win && winReady(sportKey)) || (st.best && !!bestSelFor(sportKey)); }
+function comboCardsOn(st, sportKey) { return (st.win && winReady(sportKey)) || (st.wilson && wilsonReady(sportKey)) || (st.best && !!bestSelFor(sportKey)); }
 
 const WIN_CARD_MAX = 3;
 function winComboRows(list, cls) {
@@ -1963,7 +1976,9 @@ function winCombosHtml(m) {
   const part = (label, list, cls) => `<div class="win-combos-label">${label}</div>`
     + (list.length ? winComboRows(list, cls) : `<div class="win-combo-more">None</div>`);
   return `<details class="win-combos"><summary>Combinations this game is in <span class="win-combo-count">${m.wins.length} winning, ${m.losses.length} losing</span></summary>`
-    + part("Top winning", m.wins, "") + part("Top losing", m.losses, "lose") + `</details>`;
+    + part("Top winning", m.wins, "") + part("Top losing", m.losses, "lose") + `</details>`
+    + `<div class="wilson-metric" title="Best Wilson lower bound (95%) on the win rate among the winning combinations this game fits. Above 50% means the edge holds up after allowing for small samples.">`
+    + `<span class="win-combos-label">Wilson score</span> <b class="${m.wilson > WILSON_MIN ? "ok" : ""}">${m.wilson === null ? "n/a" : Math.round(m.wilson * 100) + "%"}</b></div>`;
 }
 
 function winButtonHtml(scope) {
@@ -1974,6 +1989,20 @@ function winButtonHtml(scope) {
   const btn = `<button type="button" class="filter-toggle best-toggle${on ? " on" : ""}" aria-pressed="${on}"${ready ? ` title="${title}"` : " disabled"} onclick="toggleWin('${scope}')">`
     + `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4a2 2 0 0 1-2-2V5h4M18 9h2a2 2 0 0 0 2-2V5h-4M6 4h12v6a6 6 0 0 1-12 0zM12 16v4M8 20h8"/></svg>Winning combination</button>`;
   return ready ? btn : `<span class="tip-wrap" title="${title}">${btn}</span>`;
+}
+
+function wilsonButtonHtml(scope) {
+  const sportKey = scope === "upcoming" ? upcomingSport : currentSport;
+  const ready = wilsonReady(sportKey);
+  const on = ready && chipState(scope).wilson;
+  const title = ready ? "Show only games that fit a winning combination whose Wilson lower bound is above 50%" : "Not enough graded games yet";
+  const btn = `<button type="button" class="filter-toggle best-toggle${on ? " on" : ""}" aria-pressed="${on}"${ready ? ` title="${title}"` : " disabled"} onclick="toggleWilson('${scope}')">`
+    + `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M6 20v-6M12 20V8M18 20v-9"/></svg>Wilson combination</button>`;
+  return ready ? btn : `<span class="tip-wrap" title="${title}">${btn}</span>`;
+}
+
+function toggleWilson(scope) {
+  setChips(scope, "wilson", !chipState(scope).wilson);
 }
 
 function toggleWin(scope) {
@@ -2359,6 +2388,7 @@ upcomingFilters.sort = "start";  // always open sorted by start time, ascending
 for (const k of CHIP_KEYS) if (!Array.isArray(upcomingFilters[k])) upcomingFilters[k] = [];
 upcomingFilters.best = upcomingFilters.best === true;
 upcomingFilters.win = upcomingFilters.win === true;
+upcomingFilters.wilson = upcomingFilters.wilson === true;
 
 // null = no line posted yet (never matches a move-size filter, sorts last by move)
 function upcomingMoveSize(g) {
@@ -2378,6 +2408,7 @@ function passesUpcomingFilters(g, hasKeyNumbers) {
   const game = g.model ? upcomingAsGame(g, []) : null;
   if (f.best && bestSelFor(upcomingSport) && !(game && comboMatch(comboFactsLive(game), bestSelFor(upcomingSport)))) return false;
   if (f.win && winReady(upcomingSport) && !(game && winMatchesFor(upcomingSport, comboFactsLive(game)).wins.length)) return false;
+  if (f.wilson && wilsonReady(upcomingSport) && !(game && winMatchesFor(upcomingSport, comboFactsLive(game)).wilsonWins.length)) return false;
   if (!sharpTierMatches(game ? sharpFor(game, "best") : null, f.sharp)) return false;
   if (!signalsMatch(game ? signalFacts(game) : { cons: null, sharp: null, line: null }, f)) return false;
   if (hasKeyNumbers && f.key === "crossed" && !g.crosses_key) return false;
@@ -2399,6 +2430,7 @@ function clearUpcomingFilters() {
   for (const k of CHIP_KEYS) upcomingFilters[k] = [];
   upcomingFilters.best = false;
   upcomingFilters.win = false;
+  upcomingFilters.wilson = false;
   upcomingQuery = "";
   saveUpcomingFilters();
   renderUpcoming();
@@ -2446,7 +2478,7 @@ function renderUpcoming() {
 
   const defs = UPCOMING_FILTERS.filter(d => !d.needsKeyNumbers || hasKeyNumbers);
   upcomingTotal = games.length;
-  upcomingFilterActive = CHIP_KEYS.some(k => upcomingFilters[k].length > 0) || (upcomingFilters.best && !!bestSelFor(upcomingSport)) || (upcomingFilters.win && winReady(upcomingSport))
+  upcomingFilterActive = CHIP_KEYS.some(k => upcomingFilters[k].length > 0) || (upcomingFilters.best && !!bestSelFor(upcomingSport)) || (upcomingFilters.win && winReady(upcomingSport)) || (upcomingFilters.wilson && wilsonReady(upcomingSport))
     || defs.some(d => d.key !== "sort" && upcomingFilters[d.key] !== d.def);
   const search = `<div class="controls-row"><input type="search" id="upcoming-search" class="search-box" placeholder="Search teams&hellip;"`
     + ` value="${upcomingQuery.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;")}" oninput="setUpcomingSearch(this.value)"></div>`;
