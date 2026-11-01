@@ -468,7 +468,8 @@
   .best-rec.down { color: var(--loss); }
   .best-n { color: var(--text-dim); font-weight: 500; font-size: 0.76rem; }
   .best-toggle { white-space: nowrap; flex: 0 0 auto; }
-  .best-toggle:disabled { opacity: 0.45; cursor: not-allowed; }
+  .best-toggle:disabled { opacity: 0.45; cursor: not-allowed; pointer-events: none; }  /* hover goes to the .tip-wrap tooltip */
+  .tip-wrap { display: inline-flex; cursor: not-allowed; }
   .win-combos { margin: 10px 0 0; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--accent-soft); font-size: 0.8rem; }
   .win-combos summary { cursor: pointer; font-weight: 600; }
   .win-combo-count { color: var(--text-dim); font-weight: 500; font-size: 0.74rem; margin-left: 6px; }
@@ -1226,6 +1227,7 @@ const FILTER_DEFS = [
 let filters = Object.fromEntries(FILTER_DEFS.map(d => [d.key, d.def]));
 for (const k of CHIP_KEYS) filters[k] = [];  // multi-select chip groups; empty = not filtering
 try { Object.assign(filters, JSON.parse(localStorage.getItem("wagrx-filters") || "{}")); } catch (e) {}
+filters.sort = "start";  // always open sorted by start time, ascending
 // Older saved filters kept consensus/sharp/signals as single strings; anything that is not a list is dropped.
 for (const k of CHIP_KEYS) if (!Array.isArray(filters[k])) filters[k] = [];
 filters.best = filters.best === true;  // the Best combination toggle
@@ -1893,9 +1895,10 @@ function bestButtonHtml(scope) {
   const sportKey = scope === "upcoming" ? upcomingSport : currentSport;
   const ready = !!bestSelFor(sportKey);
   const on = ready && chipState(scope).best;
-  const title = ready ? "Show only games matching the current best combination" : "No best combination for this sport yet";
-  return `<button type="button" class="filter-toggle best-toggle${on ? " on" : ""}" aria-pressed="${on}" title="${title}"${ready ? "" : " disabled"} onclick="toggleBest('${scope}')">`
+  const title = ready ? "Show only games matching the current best combination" : "Not enough graded games yet";
+  const btn = `<button type="button" class="filter-toggle best-toggle${on ? " on" : ""}" aria-pressed="${on}"${ready ? ` title="${title}"` : " disabled"} onclick="toggleBest('${scope}')">`
     + `<svg width="14" height="14" viewBox="0 0 24 24" fill="${on ? "currentColor" : "none"}" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>Best combination</button>`;
+  return ready ? btn : `<span class="tip-wrap" title="${title}">${btn}</span>`;
 }
 
 function toggleBest(scope) {
@@ -1967,9 +1970,10 @@ function winButtonHtml(scope) {
   const sportKey = scope === "upcoming" ? upcomingSport : currentSport;
   const ready = winReady(sportKey);
   const on = ready && chipState(scope).win;
-  const title = ready ? "Show only games that fit a combination with a winning record (above 50%)" : "No winning combinations for this sport yet";
-  return `<button type="button" class="filter-toggle best-toggle${on ? " on" : ""}" aria-pressed="${on}" title="${title}"${ready ? "" : " disabled"} onclick="toggleWin('${scope}')">`
+  const title = ready ? "Show only games that fit a combination with a winning record (above 50%)" : "Not enough graded games yet";
+  const btn = `<button type="button" class="filter-toggle best-toggle${on ? " on" : ""}" aria-pressed="${on}"${ready ? ` title="${title}"` : " disabled"} onclick="toggleWin('${scope}')">`
     + `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4a2 2 0 0 1-2-2V5h4M18 9h2a2 2 0 0 0 2-2V5h-4M6 4h12v6a6 6 0 0 1-12 0zM12 16v4M8 20h8"/></svg>Winning combination</button>`;
+  return ready ? btn : `<span class="tip-wrap" title="${title}">${btn}</span>`;
 }
 
 function toggleWin(scope) {
@@ -2351,6 +2355,7 @@ const UPCOMING_FILTERS = [
 let upcomingFilters = Object.fromEntries(UPCOMING_FILTERS.map(d => [d.key, d.def]));
 for (const k of CHIP_KEYS) upcomingFilters[k] = [];  // multi-select chip groups; empty = not filtering
 try { Object.assign(upcomingFilters, JSON.parse(localStorage.getItem("wagrx-upcoming-filters") || "{}")); } catch (e) {}
+upcomingFilters.sort = "start";  // always open sorted by start time, ascending
 for (const k of CHIP_KEYS) if (!Array.isArray(upcomingFilters[k])) upcomingFilters[k] = [];
 upcomingFilters.best = upcomingFilters.best === true;
 upcomingFilters.win = upcomingFilters.win === true;
@@ -2437,6 +2442,7 @@ function renderUpcoming() {
   // Stable sorts: ties (and games with no value) stay in start order, no-value games last.
   const sortKey = { move: upcomingMoveSize, consensus: upcomingConfidence }[upcomingFilters.sort];
   if (sortKey) kept.sort((x, y) => (sortKey(y) ?? -1) - (sortKey(x) ?? -1));
+  else kept.sort((x, y) => String(x.start).localeCompare(String(y.start)));  // start time ascending (ISO strings)
 
   const defs = UPCOMING_FILTERS.filter(d => !d.needsKeyNumbers || hasKeyNumbers);
   upcomingTotal = games.length;
