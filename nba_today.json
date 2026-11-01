@@ -714,6 +714,333 @@
           "event_id": "401909906"
         }
       ]
+    },
+    {
+      "time": "2026-11-01T05:10:10-05:00",
+      "games": [
+        {
+          "game": "Orlando Magic (H) vs Boston Celtics (A)",
+          "spread": "BOS -6.5",
+          "favorite": "Boston Celtics -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Boston Celtics",
+            "M2: Relevance": "TAKE: Boston Celtics",
+            "M3: Efficiency": "TAKE: Boston Celtics",
+            "M4: ATS Trends": "TAKE: Boston Celtics",
+            "M5: Luck": "TAKE: Orlando Magic",
+            "M6: Sharp Money": "TAKE: Orlando Magic",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Boston Celtics",
+            "Sharp: Circa": "TAKE: Orlando Magic",
+            "Sharp: DraftKings": "TAKE: Boston Celtics"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 26,
+              "away": 72
+            },
+            "M2: Relevance": {
+              "home": 24.8179,
+              "away": 71.6383
+            },
+            "M3: Efficiency": {
+              "margin": -8.4
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 4
+            },
+            "M5: Luck": {
+              "home": "0.2",
+              "away": "0.4"
+            },
+            "M6: Sharp Money": {
+              "home_b": 28.35,
+              "home_m": 30.53,
+              "away_b": 71.65,
+              "away_m": 69.47
+            },
+            "M8: Line Movement": {
+              "open_home": 6.5,
+              "current_home": 6.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": 6.5,
+                "last": 6.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Orlando Magic",
+          "team_away": "Boston Celtics",
+          "start": "2026-11-01T20:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 67.0,
+              "away_b": 50.0,
+              "away_m": 33.0,
+              "line": "+6.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 37.0,
+              "home_m": 11.0,
+              "away_b": 63.0,
+              "away_m": 89.0,
+              "line": "+6.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909903"
+        },
+        {
+          "game": "Indiana Pacers (H) vs Brooklyn Nets (A)",
+          "spread": "IND -4.5",
+          "favorite": "Indiana Pacers -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Indiana Pacers",
+            "M2: Relevance": "TAKE: Brooklyn Nets",
+            "M3: Efficiency": "TAKE: Brooklyn Nets",
+            "M4: ATS Trends": "TAKE: Indiana Pacers",
+            "M5: Luck": "TAKE: Brooklyn Nets",
+            "M6: Sharp Money": "TAKE: Brooklyn Nets",
+            "M8: Line Movement": "TAKE: Brooklyn Nets",
+            "CONSENSUS": "TAKE: Brooklyn Nets",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Indiana Pacers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 55,
+              "away": 50
+            },
+            "M2: Relevance": {
+              "home": 51.2449,
+              "away": 51.9459
+            },
+            "M3: Efficiency": {
+              "margin": 3.6
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 3
+            },
+            "M5: Luck": {
+              "home": "-1.2",
+              "away": "-1.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": 76.35,
+              "home_m": 71.39,
+              "away_b": 23.65,
+              "away_m": 28.61
+            },
+            "M8: Line Movement": {
+              "open_home": -4.5,
+              "current_home": -3.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -4.0,
+                "last": -4.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Indiana Pacers",
+          "team_away": "Brooklyn Nets",
+          "start": "2026-11-01T22:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 100.0,
+              "home_m": 100.0,
+              "away_b": 0.0,
+              "away_m": 0.0,
+              "line": "-4",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 69.0,
+              "home_m": 91.0,
+              "away_b": 31.0,
+              "away_m": 9.0,
+              "line": "-3.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909904"
+        },
+        {
+          "game": "Golden State Warriors (H) vs Los Angeles Clippers (A)",
+          "spread": "GS -2.5",
+          "favorite": "Golden State Warriors -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Golden State Warriors",
+            "M2: Relevance": "TAKE: Golden State Warriors",
+            "M3: Efficiency": "TAKE: Golden State Warriors",
+            "M4: ATS Trends": "TAKE: Golden State Warriors",
+            "M5: Luck": "TAKE: Los Angeles Clippers",
+            "M6: Sharp Money": "TAKE: Los Angeles Clippers",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Golden State Warriors",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Los Angeles Clippers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 61,
+              "away": 41
+            },
+            "M2: Relevance": {
+              "home": 62.9191,
+              "away": 37.3072
+            },
+            "M3: Efficiency": {
+              "margin": 3.7
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 4
+            },
+            "M5: Luck": {
+              "home": "0.4",
+              "away": "-0.6"
+            },
+            "M6: Sharp Money": {
+              "home_b": 83.74,
+              "home_m": 82.14,
+              "away_b": 16.26,
+              "away_m": 17.86
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": -2.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": -2.5,
+                "last": -2.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Golden State Warriors",
+          "team_away": "Los Angeles Clippers",
+          "start": "2026-11-02T01:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 100.0,
+              "home_m": 100.0,
+              "away_b": 0.0,
+              "away_m": 0.0,
+              "line": "-2.5",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 83.0,
+              "home_m": 81.0,
+              "away_b": 17.0,
+              "away_m": 19.0,
+              "line": "-2.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909905"
+        },
+        {
+          "game": "Los Angeles Lakers (H) vs Toronto Raptors (A)",
+          "spread": "LAL -4.5",
+          "favorite": "Los Angeles Lakers -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Toronto Raptors",
+            "M2: Relevance": "TAKE: Toronto Raptors",
+            "M3: Efficiency": "TAKE: Toronto Raptors",
+            "M4: ATS Trends": "TAKE: Toronto Raptors",
+            "M5: Luck": "TAKE: Toronto Raptors",
+            "M6: Sharp Money": "TAKE: Toronto Raptors",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Toronto Raptors",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Los Angeles Lakers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 40,
+              "away": 62
+            },
+            "M2: Relevance": {
+              "home": 41.1127,
+              "away": 59.2335
+            },
+            "M3: Efficiency": {
+              "margin": -2.5
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 7
+            },
+            "M5: Luck": {
+              "home": "0.2",
+              "away": "-0.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": 75.84,
+              "home_m": 75.05,
+              "away_b": 24.16,
+              "away_m": 24.95
+            },
+            "M8: Line Movement": {
+              "open_home": -4.5,
+              "current_home": -4.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": -4.5,
+                "last": -4.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Los Angeles Lakers",
+          "team_away": "Toronto Raptors",
+          "start": "2026-11-02T02:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 50.0,
+              "away_b": 50.0,
+              "away_m": 50.0,
+              "line": "-4.5",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 56.0,
+              "home_m": 87.0,
+              "away_b": 44.0,
+              "away_m": 13.0,
+              "line": "-4.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909906"
+        }
+      ]
     }
   ]
 }
