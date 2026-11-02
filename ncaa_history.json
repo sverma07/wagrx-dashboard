@@ -1,7 +1,129 @@
 {
   "sport": "NCAAB",
-  "updated": "2026-11-01T07:15:02-05:00",
+  "updated": "2026-11-02T07:15:03-05:00",
   "days": {
+    "2026-11-01": [
+      {
+        "game": "Villanova Wildcats (H) vs Notre Dame Fighting Irish (A)",
+        "team_home": "Villanova Wildcats",
+        "team_away": "Notre Dame Fighting Irish",
+        "line": "VILL -7.5",
+        "favorite": "Villanova Wildcats -fav",
+        "final": "Villanova Wildcats 72, Notre Dame Fighting Irish 74",
+        "cover": "Notre Dame Fighting Irish",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 64.81,
+          "home_m": 24.2,
+          "away_b": 35.19,
+          "away_m": 75.8
+        },
+        "graded_run": "2026-11-01T09:15:08-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Villanova Wildcats",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Villanova Wildcats",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Notre Dame Fighting Irish",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Villanova Wildcats",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Notre Dame Fighting Irish",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Villanova Wildcats",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Villanova Wildcats",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Villanova Wildcats",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "High Point Panthers (H) vs Liberty Flames (A)",
+        "team_home": "High Point Panthers",
+        "team_away": "Liberty Flames",
+        "line": "HPU -7.5",
+        "favorite": "High Point Panthers -fav",
+        "final": "High Point Panthers 72, Liberty Flames 57",
+        "cover": "High Point Panthers",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 34.15,
+          "home_m": 21.67,
+          "away_b": 65.85,
+          "away_m": 78.33
+        },
+        "graded_run": "2026-11-01T23:15:28-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "High Point Panthers",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "High Point Panthers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Liberty Flames",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "High Point Panthers",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Liberty Flames",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "High Point Panthers",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "High Point Panthers",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "High Point Panthers",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-10-31": [],
     "2026-10-30": [],
     "2026-10-29": [],
