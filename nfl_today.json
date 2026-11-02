@@ -14607,6 +14607,1108 @@
           "event_id": "401873035"
         }
       ]
+    },
+    {
+      "time": "2026-11-01T19:58:21-05:00",
+      "games": [
+        {
+          "game": "Buffalo Bills (H) vs Baltimore Ravens (A)",
+          "spread": "BUF -3",
+          "favorite": "Buffalo Bills -fav",
+          "confidence": "69%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Buffalo Bills",
+            "M2: Relevance": "TAKE: Buffalo Bills",
+            "M3: Efficiency": "TAKE: Baltimore Ravens",
+            "M4: ATS Trends": "TAKE: Buffalo Bills",
+            "M5: Luck": "TAKE: Baltimore Ravens",
+            "M6: Sharp Money": "TAKE: Baltimore Ravens",
+            "M7: QB Injury Edge": "TAKE: Buffalo Bills",
+            "M8: Line Movement": "TAKE: Buffalo Bills",
+            "CONSENSUS": "TAKE: Buffalo Bills",
+            "Sharp: Circa": "TAKE: Baltimore Ravens",
+            "Sharp: DraftKings": "TAKE: Buffalo Bills"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 26,
+              "away": 18
+            },
+            "M2: Relevance": {
+              "home": 26.8593,
+              "away": 21.2039
+            },
+            "M3: Efficiency": {
+              "margin": 2.0
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 1
+            },
+            "M5: Luck": {
+              "home": "1.3",
+              "away": "0.0"
+            },
+            "M6: Sharp Money": {
+              "home_b": 55.08,
+              "home_m": 40.47,
+              "away_b": 44.92,
+              "away_m": 59.53
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Josh Allen (Active)",
+              "away_status": "Joe Fagnano (Out) -> Lamar Jackson (Active) starting"
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": -3.0,
+              "delta": -0.5,
+              "crosses_key": true,
+              "size": 0.5,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -3.0,
+                "last": -3.0,
+                "delta": 0.0
+              },
+              "vs_consensus": "agree"
+            }
+          },
+          "team_home": "Buffalo Bills",
+          "team_away": "Baltimore Ravens",
+          "start": "2026-11-01T18:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 67.0,
+              "home_m": 42.0,
+              "away_b": 33.0,
+              "away_m": 58.0,
+              "line": "-3",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 70.0,
+              "home_m": 72.0,
+              "away_b": 30.0,
+              "away_m": 28.0,
+              "line": "-3",
+              "thin": false
+            }
+          },
+          "home_id": "2",
+          "away_id": "33",
+          "event_id": "401873026",
+          "locked_run": "2026-11-01T12:30:23-05:00"
+        },
+        {
+          "game": "Cincinnati Bengals (H) vs Tennessee Titans (A)",
+          "spread": "CIN -12.5",
+          "favorite": "Cincinnati Bengals -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Cincinnati Bengals",
+            "M2: Relevance": "TAKE: Cincinnati Bengals",
+            "M3: Efficiency": "TAKE: Tennessee Titans",
+            "M4: ATS Trends": "TAKE: Cincinnati Bengals",
+            "M5: Luck": "TAKE: Tennessee Titans",
+            "M6: Sharp Money": "TAKE: Cincinnati Bengals",
+            "M7: QB Injury Edge": "PUSH",
+            "M8: Line Movement": "TAKE: Cincinnati Bengals",
+            "CONSENSUS": "TAKE: Cincinnati Bengals",
+            "Sharp: Circa": "TAKE: Cincinnati Bengals",
+            "Sharp: DraftKings": "TAKE: Cincinnati Bengals"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 35,
+              "away": 11
+            },
+            "M2: Relevance": {
+              "home": 39.882,
+              "away": 10.4174
+            },
+            "M3: Efficiency": {
+              "margin": 6.8
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 5
+            },
+            "M5: Luck": {
+              "home": "0.4",
+              "away": "-1.6"
+            },
+            "M6: Sharp Money": {
+              "home_b": 71.26,
+              "home_m": 75.51,
+              "away_b": 28.74,
+              "away_m": 24.49
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Joe Burrow (Active)",
+              "away_status": "Cam Ward (Active)"
+            },
+            "M8: Line Movement": {
+              "open_home": -6.5,
+              "current_home": -13.5,
+              "delta": -7.0,
+              "crosses_key": true,
+              "size": 7.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -12.5,
+                "last": -13.5,
+                "delta": -1.0
+              },
+              "vs_consensus": "agree"
+            }
+          },
+          "team_home": "Cincinnati Bengals",
+          "team_away": "Tennessee Titans",
+          "start": "2026-11-01T18:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 79.0,
+              "away_b": 50.0,
+              "away_m": 21.0,
+              "line": "-13.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 58.0,
+              "home_m": 72.0,
+              "away_b": 42.0,
+              "away_m": 28.0,
+              "line": "-13.5",
+              "thin": false
+            }
+          },
+          "home_id": "4",
+          "away_id": "10",
+          "event_id": "401873031",
+          "locked_run": "2026-11-01T12:30:23-05:00"
+        },
+        {
+          "game": "Dallas Cowboys (H) vs Arizona Cardinals (A)",
+          "spread": "DAL -7",
+          "favorite": "Dallas Cowboys -fav",
+          "confidence": "86%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Dallas Cowboys",
+            "M2: Relevance": "TAKE: Dallas Cowboys",
+            "M3: Efficiency": "TAKE: Arizona Cardinals",
+            "M4: ATS Trends": "TAKE: Dallas Cowboys",
+            "M5: Luck": "TAKE: Dallas Cowboys",
+            "M6: Sharp Money": "TAKE: Arizona Cardinals",
+            "M7: QB Injury Edge": "TAKE: Dallas Cowboys",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Dallas Cowboys",
+            "Sharp: Circa": "TAKE: Dallas Cowboys",
+            "Sharp: DraftKings": "TAKE: Dallas Cowboys"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 27,
+              "away": 17
+            },
+            "M2: Relevance": {
+              "home": 30.1419,
+              "away": 18.5955
+            },
+            "M3: Efficiency": {
+              "margin": 5.4
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 4
+            },
+            "M5: Luck": {
+              "home": "-0.7",
+              "away": "0.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": 54.84,
+              "home_m": 51.69,
+              "away_b": 45.16,
+              "away_m": 48.31
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Dak Prescott (Active)",
+              "away_status": "Carson Beck (Out) -> Jacoby Brissett (Active) starting"
+            },
+            "M8: Line Movement": {
+              "open_home": -10.5,
+              "current_home": -7.0,
+              "delta": 3.5,
+              "crosses_key": true,
+              "size": 3.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -7.0,
+                "last": -7.5,
+                "delta": -0.5
+              },
+              "conflict": true,
+              "vs_consensus": null
+            }
+          },
+          "team_home": "Dallas Cowboys",
+          "team_away": "Arizona Cardinals",
+          "start": "2026-11-01T18:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 47.0,
+              "home_m": 54.0,
+              "away_b": 53.0,
+              "away_m": 46.0,
+              "line": "-7.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 51.0,
+              "home_m": 57.0,
+              "away_b": 49.0,
+              "away_m": 43.0,
+              "line": "-7",
+              "thin": false
+            }
+          },
+          "home_id": "6",
+          "away_id": "22",
+          "event_id": "401873024",
+          "locked_run": "2026-11-01T12:30:23-05:00"
+        },
+        {
+          "game": "Detroit Lions (H) vs Minnesota Vikings (A)",
+          "spread": "DET -3",
+          "favorite": "Detroit Lions -fav",
+          "confidence": "61%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Minnesota Vikings",
+            "M2: Relevance": "TAKE: Minnesota Vikings",
+            "M3: Efficiency": "TAKE: Minnesota Vikings",
+            "M4: ATS Trends": "TAKE: Minnesota Vikings",
+            "M5: Luck": "TAKE: Detroit Lions",
+            "M6: Sharp Money": "TAKE: Detroit Lions",
+            "M7: QB Injury Edge": "TAKE: Detroit Lions",
+            "M8: Line Movement": "TAKE: Minnesota Vikings",
+            "CONSENSUS": "TAKE: Minnesota Vikings",
+            "Sharp: Circa": "TAKE: Minnesota Vikings",
+            "Sharp: DraftKings": "TAKE: Detroit Lions"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 15,
+              "away": 30
+            },
+            "M2: Relevance": {
+              "home": 12.5778,
+              "away": 36.0245
+            },
+            "M3: Efficiency": {
+              "margin": -2.6
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 11
+            },
+            "M5: Luck": {
+              "home": "0.3",
+              "away": "2.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": 41.66,
+              "home_m": 44.86,
+              "away_b": 58.34,
+              "away_m": 55.14
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Jared Goff (Active)",
+              "away_status": "Max Brosmer (Out) -> Kyler Murray (Active) starting"
+            },
+            "M8: Line Movement": {
+              "open_home": -4.5,
+              "current_home": -3.0,
+              "delta": 1.5,
+              "crosses_key": true,
+              "size": 1.5,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -3.5,
+                "last": -3.5,
+                "delta": 0.0
+              },
+              "vs_consensus": "agree"
+            }
+          },
+          "team_home": "Detroit Lions",
+          "team_away": "Minnesota Vikings",
+          "start": "2026-11-01T18:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 51.0,
+              "home_m": 49.0,
+              "away_b": 49.0,
+              "away_m": 51.0,
+              "line": "-3.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 66.0,
+              "home_m": 87.0,
+              "away_b": 34.0,
+              "away_m": 13.0,
+              "line": "-3",
+              "thin": false
+            }
+          },
+          "home_id": "8",
+          "away_id": "16",
+          "event_id": "401873030",
+          "locked_run": "2026-11-01T12:30:23-05:00"
+        },
+        {
+          "game": "New York Jets (H) vs Las Vegas Raiders (A)",
+          "spread": "NYJ -1.5",
+          "favorite": "New York Jets -fav",
+          "confidence": "69%",
+          "picks": {
+            "M1: Normal Score": "TAKE: New York Jets",
+            "M2: Relevance": "TAKE: New York Jets",
+            "M3: Efficiency": "TAKE: Las Vegas Raiders",
+            "M4: ATS Trends": "TAKE: Las Vegas Raiders",
+            "M5: Luck": "TAKE: New York Jets",
+            "M6: Sharp Money": "TAKE: New York Jets",
+            "M7: QB Injury Edge": "TAKE: New York Jets",
+            "M8: Line Movement": "TAKE: New York Jets",
+            "CONSENSUS": "TAKE: New York Jets",
+            "Sharp: Circa": "TAKE: New York Jets",
+            "Sharp: DraftKings": "TAKE: New York Jets"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 24,
+              "away": 20
+            },
+            "M2: Relevance": {
+              "home": 27.4948,
+              "away": 19.7774
+            },
+            "M3: Efficiency": {
+              "margin": 0.1
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 7
+            },
+            "M5: Luck": {
+              "home": "-0.8",
+              "away": "0.0"
+            },
+            "M6: Sharp Money": {
+              "home_b": 18.48,
+              "home_m": 24.0,
+              "away_b": 81.52,
+              "away_m": 76.0
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Geno Smith (Active)",
+              "away_status": "Aidan O'Connell (Out) -> Kirk Cousins (Active) starting"
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -1.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.5,
+              "sources": [
+                "circa"
+              ],
+              "circa": {
+                "first": -1.5,
+                "last": -2.0,
+                "delta": -0.5
+              },
+              "vs_consensus": "agree"
+            }
+          },
+          "team_home": "New York Jets",
+          "team_away": "Las Vegas Raiders",
+          "start": "2026-11-01T18:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 36.0,
+              "home_m": 91.0,
+              "away_b": 64.0,
+              "away_m": 9.0,
+              "line": "-2",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 36.0,
+              "home_m": 54.0,
+              "away_b": 64.0,
+              "away_m": 46.0,
+              "line": "-1.5",
+              "thin": false
+            }
+          },
+          "home_id": "20",
+          "away_id": "13",
+          "event_id": "401873029",
+          "locked_run": "2026-11-01T12:30:23-05:00"
+        },
+        {
+          "game": "Pittsburgh Steelers (H) vs Cleveland Browns (A)",
+          "spread": "PIT -3.5",
+          "favorite": "Pittsburgh Steelers -fav",
+          "confidence": "82%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Pittsburgh Steelers",
+            "M2: Relevance": "TAKE: Pittsburgh Steelers",
+            "M3: Efficiency": "TAKE: Cleveland Browns",
+            "M4: ATS Trends": "TAKE: Pittsburgh Steelers",
+            "M5: Luck": "TAKE: Pittsburgh Steelers",
+            "M6: Sharp Money": "TAKE: Pittsburgh Steelers",
+            "M7: QB Injury Edge": "PUSH",
+            "M8: Line Movement": "TAKE: Cleveland Browns",
+            "CONSENSUS": "TAKE: Pittsburgh Steelers",
+            "Sharp: Circa": "TAKE: Cleveland Browns",
+            "Sharp: DraftKings": "TAKE: Cleveland Browns"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 28,
+              "away": 15
+            },
+            "M2: Relevance": {
+              "home": 31.9853,
+              "away": 14.5023
+            },
+            "M3: Efficiency": {
+              "margin": 2.0
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 4
+            },
+            "M5: Luck": {
+              "home": "1.3",
+              "away": "2.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": 48.3,
+              "home_m": 55.43,
+              "away_b": 51.7,
+              "away_m": 44.57
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Will Howard (Out) -> Aaron Rodgers (Active) starting",
+              "away_status": "Dillon Gabriel (Out) -> Deshaun Watson (Active) starting"
+            },
+            "M8: Line Movement": {
+              "open_home": -5.5,
+              "current_home": -3.5,
+              "delta": 2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -3.5,
+                "last": -3.5,
+                "delta": 0.0
+              },
+              "vs_consensus": "conflict"
+            }
+          },
+          "team_home": "Pittsburgh Steelers",
+          "team_away": "Cleveland Browns",
+          "start": "2026-11-01T18:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 45.0,
+              "home_m": 26.0,
+              "away_b": 55.0,
+              "away_m": 74.0,
+              "line": "-3.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 41.0,
+              "home_m": 30.0,
+              "away_b": 59.0,
+              "away_m": 70.0,
+              "line": "-3.5",
+              "thin": false
+            }
+          },
+          "home_id": "23",
+          "away_id": "5",
+          "event_id": "401873027",
+          "locked_run": "2026-11-01T12:30:23-05:00"
+        },
+        {
+          "game": "Tampa Bay Buccaneers (H) vs Atlanta Falcons (A)",
+          "spread": "TB -1.5",
+          "favorite": "Tampa Bay Buccaneers -fav",
+          "confidence": "69%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Tampa Bay Buccaneers",
+            "M2: Relevance": "TAKE: Tampa Bay Buccaneers",
+            "M3: Efficiency": "TAKE: Atlanta Falcons",
+            "M4: ATS Trends": "TAKE: Atlanta Falcons",
+            "M5: Luck": "TAKE: Tampa Bay Buccaneers",
+            "M6: Sharp Money": "TAKE: Tampa Bay Buccaneers",
+            "M7: QB Injury Edge": "TAKE: Tampa Bay Buccaneers",
+            "M8: Line Movement": "TAKE: Atlanta Falcons",
+            "CONSENSUS": "TAKE: Tampa Bay Buccaneers",
+            "Sharp: Circa": "PUSH",
+            "Sharp: DraftKings": "TAKE: Tampa Bay Buccaneers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 26,
+              "away": 21
+            },
+            "M2: Relevance": {
+              "home": 29.5513,
+              "away": 21.4216
+            },
+            "M3: Efficiency": {
+              "margin": 1.0
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 10
+            },
+            "M5: Luck": {
+              "home": "-1.6",
+              "away": "-0.1"
+            },
+            "M6: Sharp Money": {
+              "home_b": 35.66,
+              "home_m": 35.98,
+              "away_b": 64.34,
+              "away_m": 64.02
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Baker Mayfield (Active)",
+              "away_status": "Andy Dalton (Out) -> Michael Penix Jr. (Active) starting"
+            },
+            "M8: Line Movement": {
+              "open_home": -4.5,
+              "current_home": -1.5,
+              "delta": 3.0,
+              "crosses_key": true,
+              "size": 3.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -2.5,
+                "last": -2.0,
+                "delta": 0.5
+              },
+              "vs_consensus": "conflict"
+            }
+          },
+          "team_home": "Tampa Bay Buccaneers",
+          "team_away": "Atlanta Falcons",
+          "start": "2026-11-01T18:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 46.0,
+              "home_m": 46.0,
+              "away_b": 54.0,
+              "away_m": 54.0,
+              "line": "-2",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 50.0,
+              "home_m": 59.0,
+              "away_b": 50.0,
+              "away_m": 41.0,
+              "line": "-2.5",
+              "thin": false
+            }
+          },
+          "home_id": "27",
+          "away_id": "1",
+          "event_id": "401873025",
+          "locked_run": "2026-11-01T12:30:23-05:00"
+        },
+        {
+          "game": "Jacksonville Jaguars (H) vs Indianapolis Colts (A)",
+          "spread": "JAX -10",
+          "favorite": "Jacksonville Jaguars -fav",
+          "confidence": "51%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Jacksonville Jaguars",
+            "M2: Relevance": "TAKE: Jacksonville Jaguars",
+            "M3: Efficiency": "TAKE: Indianapolis Colts",
+            "M4: ATS Trends": "TAKE: Indianapolis Colts",
+            "M5: Luck": "TAKE: Indianapolis Colts",
+            "M6: Sharp Money": "TAKE: Indianapolis Colts",
+            "M7: QB Injury Edge": "TAKE: Jacksonville Jaguars",
+            "M8: Line Movement": "TAKE: Jacksonville Jaguars",
+            "CONSENSUS": "TAKE: Jacksonville Jaguars",
+            "Sharp: Circa": "TAKE: Indianapolis Colts",
+            "Sharp: DraftKings": "TAKE: Jacksonville Jaguars"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 28,
+              "away": 17
+            },
+            "M2: Relevance": {
+              "home": 29.5726,
+              "away": 18.6859
+            },
+            "M3: Efficiency": {
+              "margin": 6.0
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 8
+            },
+            "M5: Luck": {
+              "home": "0.3",
+              "away": "-1.0"
+            },
+            "M6: Sharp Money": {
+              "home_b": 65.87,
+              "home_m": 59.6,
+              "away_b": 34.13,
+              "away_m": 40.4
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Trevor Lawrence (Active)",
+              "away_status": "Riley Leonard (Out) -> Daniel Jones (Active) starting"
+            },
+            "M8: Line Movement": {
+              "open_home": -4.5,
+              "current_home": -10.0,
+              "delta": -5.5,
+              "crosses_key": true,
+              "size": 5.5,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -10.0,
+                "last": -10.0,
+                "delta": 0.0
+              },
+              "vs_consensus": "agree"
+            }
+          },
+          "team_home": "Jacksonville Jaguars",
+          "team_away": "Indianapolis Colts",
+          "start": "2026-11-01T18:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 80.0,
+              "home_m": 68.0,
+              "away_b": 20.0,
+              "away_m": 32.0,
+              "line": "-10",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 58.0,
+              "home_m": 76.0,
+              "away_b": 42.0,
+              "away_m": 24.0,
+              "line": "-10",
+              "thin": false
+            }
+          },
+          "home_id": "30",
+          "away_id": "11",
+          "event_id": "401873028",
+          "locked_run": "2026-11-01T12:30:23-05:00"
+        },
+        {
+          "game": "Los Angeles Rams (H) vs Los Angeles Chargers (A)",
+          "spread": "LAR -6",
+          "favorite": "Los Angeles Rams -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Los Angeles Rams",
+            "M2: Relevance": "TAKE: Los Angeles Rams",
+            "M3: Efficiency": "TAKE: Los Angeles Chargers",
+            "M4: ATS Trends": "TAKE: Los Angeles Rams",
+            "M5: Luck": "TAKE: Los Angeles Chargers",
+            "M6: Sharp Money": "TAKE: Los Angeles Chargers",
+            "M7: QB Injury Edge": "PUSH",
+            "M8: Line Movement": "TAKE: Los Angeles Rams",
+            "CONSENSUS": "TAKE: Los Angeles Rams",
+            "Sharp: Circa": "TAKE: Los Angeles Chargers",
+            "Sharp: DraftKings": "TAKE: Los Angeles Chargers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 41,
+              "away": 4
+            },
+            "M2: Relevance": {
+              "home": 45.9635,
+              "away": 3.4588
+            },
+            "M3: Efficiency": {
+              "margin": 5.9
+            },
+            "M4: ATS Trends": {
+              "home": 10,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "-1.3",
+              "away": "-2.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": 70.02,
+              "home_m": 64.28,
+              "away_b": 29.98,
+              "away_m": 35.72
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Ty Simpson (Out) -> Matthew Stafford (Active) starting",
+              "away_status": "Trey Lance (Injured Reserve) -> Justin Herbert (Active) starting"
+            },
+            "M8: Line Movement": {
+              "open_home": -3.5,
+              "current_home": -6.5,
+              "delta": -3.0,
+              "crosses_key": false,
+              "size": 3.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -6.5,
+                "last": -6.5,
+                "delta": 0.0
+              },
+              "vs_consensus": "agree"
+            }
+          },
+          "team_home": "Los Angeles Rams",
+          "team_away": "Los Angeles Chargers",
+          "start": "2026-11-01T21:05Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 67.0,
+              "home_m": 42.0,
+              "away_b": 33.0,
+              "away_m": 58.0,
+              "line": "-6.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 74.0,
+              "home_m": 59.0,
+              "away_b": 26.0,
+              "away_m": 41.0,
+              "line": "-6.5",
+              "thin": false
+            }
+          },
+          "home_id": "14",
+          "away_id": "24",
+          "event_id": "401873032",
+          "locked_run": "2026-11-01T15:48:23-05:00"
+        },
+        {
+          "game": "Denver Broncos (H) vs Kansas City Chiefs (A)",
+          "spread": "KC -1.5",
+          "favorite": "Kansas City Chiefs -fav",
+          "confidence": "78%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Kansas City Chiefs",
+            "M2: Relevance": "TAKE: Kansas City Chiefs",
+            "M3: Efficiency": "TAKE: Kansas City Chiefs",
+            "M4: ATS Trends": "TAKE: Denver Broncos",
+            "M5: Luck": "TAKE: Kansas City Chiefs",
+            "M6: Sharp Money": "TAKE: Denver Broncos",
+            "M7: QB Injury Edge": "PUSH",
+            "M8: Line Movement": "TAKE: Denver Broncos",
+            "CONSENSUS": "TAKE: Kansas City Chiefs",
+            "Sharp: Circa": "TAKE: Denver Broncos",
+            "Sharp: DraftKings": "TAKE: Kansas City Chiefs"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 17,
+              "away": 29
+            },
+            "M2: Relevance": {
+              "home": 20.6894,
+              "away": 30.1894
+            },
+            "M3: Efficiency": {
+              "margin": -3.1
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 3
+            },
+            "M5: Luck": {
+              "home": "1.4",
+              "away": "1.1"
+            },
+            "M6: Sharp Money": {
+              "home_b": 46.58,
+              "home_m": 47.1,
+              "away_b": 53.42,
+              "away_m": 52.9
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Sam Ehlinger (Out) -> Bo Nix (Active) starting",
+              "away_status": "Garrett Nussmeier (Out) -> Patrick Mahomes (Active) starting"
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -1.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "circa"
+              ],
+              "circa": {
+                "first": 1.0,
+                "last": 0.0,
+                "delta": -1.0
+              },
+              "vs_consensus": "conflict"
+            }
+          },
+          "team_home": "Denver Broncos",
+          "team_away": "Kansas City Chiefs",
+          "start": "2026-11-01T21:25Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 53.0,
+              "home_m": 95.0,
+              "away_b": 47.0,
+              "away_m": 5.0,
+              "line": "0",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 54.0,
+              "home_m": 42.0,
+              "away_b": 46.0,
+              "away_m": 58.0,
+              "line": "+1.5",
+              "thin": false
+            }
+          },
+          "home_id": "7",
+          "away_id": "12",
+          "event_id": "401873033",
+          "locked_run": "2026-11-01T15:48:23-05:00"
+        },
+        {
+          "game": "Miami Dolphins (H) vs New England Patriots (A)",
+          "spread": "NE -7",
+          "favorite": "New England Patriots -fav",
+          "confidence": "64%",
+          "picks": {
+            "M1: Normal Score": "TAKE: New England Patriots",
+            "M2: Relevance": "TAKE: New England Patriots",
+            "M3: Efficiency": "TAKE: Miami Dolphins",
+            "M4: ATS Trends": "PUSH",
+            "M5: Luck": "TAKE: Miami Dolphins",
+            "M6: Sharp Money": "TAKE: New England Patriots",
+            "M7: QB Injury Edge": "TAKE: Miami Dolphins",
+            "M8: Line Movement": "TAKE: New England Patriots",
+            "CONSENSUS": "TAKE: Miami Dolphins",
+            "Sharp: Circa": "TAKE: Miami Dolphins",
+            "Sharp: DraftKings": "TAKE: Miami Dolphins"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 12,
+              "away": 31
+            },
+            "M2: Relevance": {
+              "home": 12.4967,
+              "away": 34.3587
+            },
+            "M3: Efficiency": {
+              "margin": -6.1
+            },
+            "M4: ATS Trends": {
+              "home": 4,
+              "away": 4
+            },
+            "M5: Luck": {
+              "home": "-0.4",
+              "away": "0.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": 25.02,
+              "home_m": 23.14,
+              "away_b": 74.98,
+              "away_m": 76.86
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Malik Willis (Active)",
+              "away_status": "Behren Morton (Out) -> Drake Maye (Active) starting"
+            },
+            "M8: Line Movement": {
+              "open_home": 7.0,
+              "current_home": 7.0,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.5,
+              "sources": [
+                "circa"
+              ],
+              "circa": {
+                "first": 6.5,
+                "last": 7.0,
+                "delta": 0.5
+              },
+              "vs_consensus": "conflict"
+            }
+          },
+          "team_home": "Miami Dolphins",
+          "team_away": "New England Patriots",
+          "start": "2026-11-01T21:25Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 28.0,
+              "home_m": 65.0,
+              "away_b": 72.0,
+              "away_m": 35.0,
+              "line": "+7",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 22.0,
+              "home_m": 40.0,
+              "away_b": 78.0,
+              "away_m": 60.0,
+              "line": "+7",
+              "thin": false
+            }
+          },
+          "home_id": "15",
+          "away_id": "17",
+          "event_id": "401873034",
+          "locked_run": "2026-11-01T15:48:23-05:00"
+        },
+        {
+          "game": "Washington Commanders (H) vs Philadelphia Eagles (A)",
+          "spread": "WSH -6.5",
+          "favorite": "Washington Commanders -fav",
+          "confidence": "77%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Washington Commanders",
+            "M2: Relevance": "TAKE: Washington Commanders",
+            "M3: Efficiency": "TAKE: Philadelphia Eagles",
+            "M4: ATS Trends": "TAKE: Washington Commanders",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "TAKE: Washington Commanders",
+            "M7: QB Injury Edge": "PUSH",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Washington Commanders",
+            "Sharp: Circa": "TAKE: Philadelphia Eagles",
+            "Sharp: DraftKings": "TAKE: Washington Commanders"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 29,
+              "away": 15
+            },
+            "M2: Relevance": {
+              "home": 31.1955,
+              "away": 17.8267
+            },
+            "M3: Efficiency": {
+              "margin": 0.1
+            },
+            "M4: ATS Trends": {
+              "home": 8,
+              "away": 3
+            },
+            "M5: Luck": {
+              "home": "N/A",
+              "away": "-1.1"
+            },
+            "M6: Sharp Money": {
+              "home_b": 48.14,
+              "home_m": 55.9,
+              "away_b": 51.86,
+              "away_m": 44.1
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Athan Kaliakmanis (Out) -> Jayden Daniels (Active) starting",
+              "away_status": "Jalen Hurts (Injured Reserve) -> Tanner McKee (Active) starting"
+            },
+            "M8: Line Movement": {
+              "open_home": 2.5,
+              "current_home": -6.0,
+              "delta": -8.5,
+              "crosses_key": true,
+              "size": 8.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -6.0,
+                "last": -5.5,
+                "delta": 0.5
+              },
+              "conflict": true,
+              "vs_consensus": null
+            }
+          },
+          "team_home": "Washington Commanders",
+          "team_away": "Philadelphia Eagles",
+          "start": "2026-11-02T01:20Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 39.0,
+              "home_m": 29.0,
+              "away_b": 61.0,
+              "away_m": 71.0,
+              "line": "-5.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 50.0,
+              "home_m": 55.0,
+              "away_b": 50.0,
+              "away_m": 45.0,
+              "line": "-6",
+              "thin": false
+            }
+          },
+          "home_id": "28",
+          "away_id": "21",
+          "event_id": "401873035"
+        }
+      ]
     }
   ]
 }
