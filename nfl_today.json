@@ -482,6 +482,101 @@
           "event_id": "401873036"
         }
       ]
+    },
+    {
+      "time": "2026-11-02T17:05:06-05:00",
+      "games": [
+        {
+          "game": "Seattle Seahawks (H) vs Chicago Bears (A)",
+          "spread": "SEA -3",
+          "favorite": "Seattle Seahawks -fav",
+          "confidence": "78%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Chicago Bears",
+            "M2: Relevance": "TAKE: Chicago Bears",
+            "M3: Efficiency": "TAKE: Chicago Bears",
+            "M4: ATS Trends": "TAKE: Chicago Bears",
+            "M5: Luck": "TAKE: Seattle Seahawks",
+            "M6: Sharp Money": "TAKE: Chicago Bears",
+            "M7: QB Injury Edge": "PUSH",
+            "M8: Line Movement": "TAKE: Chicago Bears",
+            "CONSENSUS": "TAKE: Chicago Bears",
+            "Sharp: Circa": "TAKE: Chicago Bears",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 15,
+              "away": 29
+            },
+            "M2: Relevance": {
+              "home": 16.7895,
+              "away": 29.3183
+            },
+            "M3: Efficiency": {
+              "margin": 0.4
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 10
+            },
+            "M5: Luck": {
+              "home": "-0.5",
+              "away": "0.7"
+            },
+            "M6: Sharp Money": {
+              "home_b": 43.87,
+              "home_m": 36.28,
+              "away_b": 56.13,
+              "away_m": 63.72
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Sam Darnold (Active)",
+              "away_status": "Caleb Williams (Active)"
+            },
+            "M8: Line Movement": {
+              "open_home": -4.5,
+              "current_home": -3.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -3.0,
+                "last": -3.0,
+                "delta": 0.0
+              },
+              "vs_consensus": "agree"
+            }
+          },
+          "team_home": "Seattle Seahawks",
+          "team_away": "Chicago Bears",
+          "start": "2026-11-03T01:15Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 57.0,
+              "home_m": 49.0,
+              "away_b": 43.0,
+              "away_m": 51.0,
+              "line": "-3",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 50.0,
+              "home_m": 50.0,
+              "away_b": 50.0,
+              "away_m": 50.0,
+              "line": "-3.5",
+              "thin": true
+            }
+          },
+          "home_id": "26",
+          "away_id": "3",
+          "event_id": "401873036"
+        }
+      ]
     }
   ]
 }
