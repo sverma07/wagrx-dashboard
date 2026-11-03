@@ -152,6 +152,175 @@
           "event_id": "401866454"
         }
       ]
+    },
+    {
+      "time": "2026-11-03T07:00:27-05:00",
+      "games": [
+        {
+          "game": "Akron Zips (H) vs Ohio Bobcats (A)",
+          "spread": "OHIO -14",
+          "favorite": "Ohio Bobcats -fav",
+          "confidence": "58%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Ohio Bobcats",
+            "M2: Relevance": "TAKE: Ohio Bobcats",
+            "M3: Efficiency": "TAKE: Akron Zips",
+            "M4: ATS Trends": "TAKE: Ohio Bobcats",
+            "M5: Luck": "TAKE: Akron Zips",
+            "M6: Sharp Money": "TAKE: Ohio Bobcats",
+            "M8: Line Movement": "TAKE: Ohio Bobcats",
+            "CONSENSUS": "TAKE: Ohio Bobcats",
+            "Sharp: Circa": "TAKE: Ohio Bobcats",
+            "Sharp: DraftKings": "TAKE: Akron Zips"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 5,
+              "away": 38
+            },
+            "M2: Relevance": {
+              "home": 6.5994,
+              "away": 46.4918
+            },
+            "M3: Efficiency": {
+              "margin": -12.8
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 7
+            },
+            "M5: Luck": {
+              "home": "-1.3",
+              "away": "0.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": 45.2,
+              "home_m": 40.79,
+              "away_b": 54.8,
+              "away_m": 59.21
+            },
+            "M8: Line Movement": {
+              "open_home": 12.5,
+              "current_home": 14.0,
+              "delta": 1.5,
+              "crosses_key": false,
+              "size": 1.5,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 14.0,
+                "last": 14.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Akron Zips",
+          "team_away": "Ohio Bobcats",
+          "start": "2026-11-04T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 53.0,
+              "home_m": 28.0,
+              "away_b": 47.0,
+              "away_m": 72.0,
+              "line": "+14",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 43.0,
+              "home_m": 68.0,
+              "away_b": 57.0,
+              "away_m": 32.0,
+              "line": "+14",
+              "thin": false
+            }
+          },
+          "event_id": "401866453"
+        },
+        {
+          "game": "Miami (OH) RedHawks (H) vs Buffalo Bulls (A)",
+          "spread": "M-OH -6",
+          "favorite": "Miami (OH) RedHawks -fav",
+          "confidence": "62%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Miami (OH) RedHawks",
+            "M2: Relevance": "TAKE: Miami (OH) RedHawks",
+            "M3: Efficiency": "TAKE: Buffalo Bulls",
+            "M4: ATS Trends": "TAKE: Buffalo Bulls",
+            "M5: Luck": "TAKE: Miami (OH) RedHawks",
+            "M6: Sharp Money": "TAKE: Miami (OH) RedHawks",
+            "M8: Line Movement": "TAKE: Buffalo Bulls",
+            "CONSENSUS": "TAKE: Miami (OH) RedHawks",
+            "Sharp: Circa": "TAKE: Miami (OH) RedHawks",
+            "Sharp: DraftKings": "TAKE: Buffalo Bulls"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 25,
+              "away": 19
+            },
+            "M2: Relevance": {
+              "home": 32.9385,
+              "away": 21.674
+            },
+            "M3: Efficiency": {
+              "margin": 0.4
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 6
+            },
+            "M5: Luck": {
+              "home": "0.7",
+              "away": "1.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": 50.72,
+              "home_m": 56.24,
+              "away_b": 49.28,
+              "away_m": 43.76
+            },
+            "M8: Line Movement": {
+              "open_home": -6.5,
+              "current_home": -6.0,
+              "delta": 0.5,
+              "crosses_key": false,
+              "size": 0.5,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -6.0,
+                "last": -6.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Miami (OH) RedHawks",
+          "team_away": "Buffalo Bulls",
+          "start": "2026-11-04T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 25.0,
+              "home_m": 33.0,
+              "away_b": 75.0,
+              "away_m": 67.0,
+              "line": "-6",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 57.0,
+              "home_m": 48.0,
+              "away_b": 43.0,
+              "away_m": 52.0,
+              "line": "-6",
+              "thin": false
+            }
+          },
+          "event_id": "401866454"
+        }
+      ]
     }
   ]
 }
