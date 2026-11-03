@@ -1,7 +1,73 @@
 {
   "sport": "NFL",
-  "updated": "2026-11-02T06:15:05-05:00",
+  "updated": "2026-11-03T06:15:02-05:00",
   "days": {
+    "2026-11-02": [
+      {
+        "game": "Seattle Seahawks (H) vs Chicago Bears (A)",
+        "team_home": "Seattle Seahawks",
+        "team_away": "Chicago Bears",
+        "line": "SEA -3",
+        "favorite": "Seattle Seahawks -fav",
+        "final": "Seattle Seahawks 17, Chicago Bears 34",
+        "cover": "Chicago Bears",
+        "status": null,
+        "confidence": "78%",
+        "sharp": {
+          "home_b": 41.79,
+          "home_m": 35.95,
+          "away_b": 58.21,
+          "away_m": 64.05
+        },
+        "graded_run": "2026-11-02T20:00:31-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Chicago Bears",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Chicago Bears",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Chicago Bears",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Chicago Bears",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Seattle Seahawks",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Chicago Bears",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Chicago Bears",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Chicago Bears",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Chicago Bears",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Seattle Seahawks",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-11-01": [
       {
         "game": "Buffalo Bills (H) vs Baltimore Ravens (A)",
