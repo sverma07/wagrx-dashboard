@@ -1,18 +1,18 @@
 {
   "sport": "NCAAB",
-  "updated": "2026-11-03T08:16:34-05:00",
+  "updated": "2026-11-04T07:15:08-05:00",
   "models": {
     "M1: Normal Score": {
-      "W": 1,
-      "L": 1
+      "W": 12,
+      "L": 6
     },
     "M2: Relevance": {
-      "W": 1,
-      "L": 1
+      "W": 12,
+      "L": 6
     },
     "M3: Efficiency": {
-      "W": 1,
-      "L": 1
+      "W": 5,
+      "L": 13
     },
     "M4: ATS Trends": {
       "W": 1,
@@ -23,24 +23,24 @@
       "L": 0
     },
     "M6: Sharp Money": {
-      "W": 1,
-      "L": 1
+      "W": 13,
+      "L": 7
     },
     "M8: Line Movement": {
-      "W": 1,
-      "L": 0
+      "W": 11,
+      "L": 6
     },
     "CONSENSUS": {
-      "W": 1,
-      "L": 1
+      "W": 12,
+      "L": 6
     },
     "Sharp: Circa": {
-      "W": 0,
-      "L": 1
+      "W": 4,
+      "L": 7
     },
     "Sharp: DraftKings": {
-      "W": 1,
-      "L": 1
+      "W": 4,
+      "L": 11
     }
   },
   "since": "2026-10-08"
