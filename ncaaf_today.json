@@ -2355,6 +2355,178 @@
           "event_id": "401869964"
         }
       ]
+    },
+    {
+      "time": "2026-11-05T17:30:44-05:00",
+      "games": [
+        {
+          "game": "Florida Atlantic Owls (H) vs UTSA Roadrunners (A)",
+          "spread": "UTSA -7",
+          "favorite": "UTSA Roadrunners -fav",
+          "confidence": "58%",
+          "picks": {
+            "M1: Normal Score": "TAKE: UTSA Roadrunners",
+            "M2: Relevance": "TAKE: UTSA Roadrunners",
+            "M3: Efficiency": "TAKE: Florida Atlantic Owls",
+            "M4: ATS Trends": "TAKE: UTSA Roadrunners",
+            "M5: Luck": "TAKE: Florida Atlantic Owls",
+            "M6: Sharp Money": "TAKE: Florida Atlantic Owls",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: UTSA Roadrunners",
+            "Sharp: Circa": "TAKE: Florida Atlantic Owls",
+            "Sharp: DraftKings": "TAKE: Florida Atlantic Owls"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 11,
+              "away": 28
+            },
+            "M2: Relevance": {
+              "home": 13.4684,
+              "away": 29.6761
+            },
+            "M3: Efficiency": {
+              "margin": -5.1
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 4
+            },
+            "M5: Luck": {
+              "home": "0.8",
+              "away": "1.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": 54.1,
+              "home_m": 64.2,
+              "away_b": 45.9,
+              "away_m": 35.8
+            },
+            "M8: Line Movement": {
+              "open_home": 6.5,
+              "current_home": 7.0,
+              "delta": 0.5,
+              "crosses_key": true,
+              "size": 0.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": 7.0,
+                "last": 6.5,
+                "delta": -0.5
+              },
+              "conflict": true
+            }
+          },
+          "team_home": "Florida Atlantic Owls",
+          "team_away": "UTSA Roadrunners",
+          "start": "2026-11-06T00:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 53.0,
+              "home_m": 95.0,
+              "away_b": 47.0,
+              "away_m": 5.0,
+              "line": "+6.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 51.0,
+              "home_m": 69.0,
+              "away_b": 49.0,
+              "away_m": 31.0,
+              "line": "+6.5",
+              "thin": false
+            }
+          },
+          "event_id": "401862817"
+        },
+        {
+          "game": "Southern Miss Golden Eagles (H) vs James Madison Dukes (A)",
+          "spread": "JMU -14.5",
+          "favorite": "James Madison Dukes -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: James Madison Dukes",
+            "M2: Relevance": "TAKE: James Madison Dukes",
+            "M3: Efficiency": "TAKE: Southern Miss Golden Eagles",
+            "M4: ATS Trends": "TAKE: James Madison Dukes",
+            "M5: Luck": "TAKE: James Madison Dukes",
+            "M6: Sharp Money": "TAKE: Southern Miss Golden Eagles",
+            "M8: Line Movement": "TAKE: Southern Miss Golden Eagles",
+            "CONSENSUS": "TAKE: James Madison Dukes",
+            "Sharp: Circa": "TAKE: James Madison Dukes",
+            "Sharp: DraftKings": "TAKE: James Madison Dukes"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 4,
+              "away": 37
+            },
+            "M2: Relevance": {
+              "home": 4.4137,
+              "away": 41.6575
+            },
+            "M3: Efficiency": {
+              "margin": -11.8
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 6
+            },
+            "M5: Luck": {
+              "home": "0.0",
+              "away": "-0.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": 36.16,
+              "home_m": 44.83,
+              "away_b": 63.84,
+              "away_m": 55.17
+            },
+            "M8: Line Movement": {
+              "open_home": 15.5,
+              "current_home": 14.0,
+              "delta": -1.5,
+              "crosses_key": false,
+              "size": 1.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": 14.5,
+                "last": 13.5,
+                "delta": -1.0
+              }
+            }
+          },
+          "team_home": "Southern Miss Golden Eagles",
+          "team_away": "James Madison Dukes",
+          "start": "2026-11-06T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 44.0,
+              "home_m": 23.0,
+              "away_b": 56.0,
+              "away_m": 77.0,
+              "line": "+13.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 32.0,
+              "home_m": 24.0,
+              "away_b": 68.0,
+              "away_m": 76.0,
+              "line": "+13.5",
+              "thin": false
+            }
+          },
+          "event_id": "401869964"
+        }
+      ]
     }
   ]
 }
