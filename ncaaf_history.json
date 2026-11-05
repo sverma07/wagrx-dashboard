@@ -1,7 +1,189 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-11-04T06:35:03-05:00",
+  "updated": "2026-11-05T06:35:03-05:00",
   "days": {
+    "2026-11-04": [
+      {
+        "game": "UMass Minutemen (H) vs Ball State Cardinals (A)",
+        "team_home": "UMass Minutemen",
+        "team_away": "Ball State Cardinals",
+        "line": "MASS -3.5",
+        "favorite": "UMass Minutemen -fav",
+        "final": "UMass Minutemen 31, Ball State Cardinals 30",
+        "cover": "Ball State Cardinals",
+        "status": null,
+        "confidence": "82%",
+        "sharp": {
+          "home_b": 60.77,
+          "home_m": 82.58,
+          "away_b": 39.23,
+          "away_m": 17.42
+        },
+        "graded_run": "2026-11-04T18:52:36-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Ball State Cardinals",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Ball State Cardinals",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Ball State Cardinals",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Ball State Cardinals",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Sacramento State Hornets (H) vs Toledo Rockets (A)",
+        "team_home": "Sacramento State Hornets",
+        "team_away": "Toledo Rockets",
+        "line": "TOL -25.5",
+        "favorite": "Toledo Rockets -fav",
+        "final": "Sacramento State Hornets 17, Toledo Rockets 20",
+        "cover": "Sacramento State Hornets",
+        "status": null,
+        "confidence": "58%",
+        "sharp": {
+          "home_b": 47.9,
+          "home_m": 55.45,
+          "away_b": 52.1,
+          "away_m": 44.55
+        },
+        "graded_run": "2026-11-04T18:52:36-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Toledo Rockets",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Toledo Rockets",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Sacramento State Hornets",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Toledo Rockets",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Sacramento State Hornets",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Sacramento State Hornets",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Toledo Rockets",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Sacramento State Hornets",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Sacramento State Hornets",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Eastern Michigan Eagles (H) vs Central Michigan Chippewas (A)",
+        "team_home": "Eastern Michigan Eagles",
+        "team_away": "Central Michigan Chippewas",
+        "line": "EMU -1.5",
+        "favorite": "Eastern Michigan Eagles -fav",
+        "final": "Eastern Michigan Eagles 7, Central Michigan Chippewas 35",
+        "cover": "Central Michigan Chippewas",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 56.03,
+          "home_m": 47.26,
+          "away_b": 43.97,
+          "away_m": 52.74
+        },
+        "graded_run": "2026-11-04T19:00:07-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Eastern Michigan Eagles",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Eastern Michigan Eagles",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-11-03": [
       {
         "game": "Akron Zips (H) vs Ohio Bobcats (A)",
