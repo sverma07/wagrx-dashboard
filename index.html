@@ -1345,7 +1345,7 @@ function renderSnapshot(snap) {
   }
   const items = applyFilters(currentGames.map((g, i) => {
     const fx = gameFacts(g); fx.combo = comboFactsLive(g);
-    if (comboCardsOn(filters, currentSport)) fx.wins = winMatchesFor(currentSport, fx.combo);
+    fx.wins = { ...winMatchesFor(currentSport, fx.combo), expand: comboCardsOn(filters, currentSport) };  // Wilson score is always shown; the expansion only while a combination filter is on
     return { idx: i, fx, g };
   }), "games");
   document.getElementById("games-filter").innerHTML = renderFilterBar("games", items.length, currentGames.length);
@@ -1989,8 +1989,9 @@ function winCombosHtml(m) {
   if (!m) return "";
   const part = (label, list, cls) => `<div class="win-combos-label">${label}</div>`
     + (list.length ? winComboRows(list, cls) : `<div class="win-combo-more">None</div>`);
-  return `<details class="win-combos"><summary>Combinations this game is in <span class="win-combo-count">${m.wins.length} winning, ${m.losses.length} losing</span></summary>`
-    + part("Top winning", m.wins, "") + part("Top losing", m.losses, "lose") + `</details>`
+  const expansion = !m.expand ? "" : `<details class="win-combos"><summary>Combinations this game is in <span class="win-combo-count">${m.wins.length} winning, ${m.losses.length} losing</span></summary>`
+    + part("Top winning", m.wins, "") + part("Top losing", m.losses, "lose") + `</details>`;
+  return expansion
     + `<div class="wilson-metric" title="Best Wilson lower bound (95%) on the win rate among the winning combinations this game fits. Above 50% means the edge holds up after allowing for small samples.">`
     + `<span class="win-combos-label">Wilson score</span> <b class="${m.wilson > WILSON_MIN ? "ok" : ""}">${m.wilson === null ? "n/a" : Math.round(m.wilson * 100) + "%"}</b></div>`;
 }
@@ -2371,7 +2372,7 @@ function renderUpcomingGame(g, keyNumbers, idx) {
   if (g.model) {
     const game = upcomingAsGame(g, keyNumbers);
     upcomingGames[idx] = game;
-    const wins = comboCardsOn(upcomingFilters, upcomingSport) ? winMatchesFor(upcomingSport, comboFactsLive(game)) : null;
+    const wins = { ...winMatchesFor(upcomingSport, comboFactsLive(game)), expand: comboCardsOn(upcomingFilters, upcomingSport) };
     return renderGame(game, idx, null, "upcoming", wins);
   }
   // Lines only: no model picks for this game (yet).
