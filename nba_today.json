@@ -3708,6 +3708,178 @@
           "locked_run": "2026-11-05T21:40:06-05:00"
         }
       ]
+    },
+    {
+      "time": "2026-11-05T22:40:05-05:00",
+      "games": [
+        {
+          "game": "Phoenix Suns (H) vs Orlando Magic (A)",
+          "spread": "PHX -1.5",
+          "favorite": "Phoenix Suns -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Orlando Magic",
+            "M2: Relevance": "TAKE: Orlando Magic",
+            "M3: Efficiency": "TAKE: Orlando Magic",
+            "M4: ATS Trends": "TAKE: Orlando Magic",
+            "M5: Luck": "TAKE: Phoenix Suns",
+            "M6: Sharp Money": "TAKE: Phoenix Suns",
+            "M8: Line Movement": "TAKE: Phoenix Suns",
+            "CONSENSUS": "TAKE: Orlando Magic",
+            "Sharp: Circa": "TAKE: Orlando Magic",
+            "Sharp: DraftKings": "TAKE: Orlando Magic"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 44,
+              "away": 57
+            },
+            "M2: Relevance": {
+              "home": 53.7188,
+              "away": 66.5012
+            },
+            "M3: Efficiency": {
+              "margin": -1.0
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 9
+            },
+            "M5: Luck": {
+              "home": "-0.9",
+              "away": "-0.6"
+            },
+            "M6: Sharp Money": {
+              "home_b": 64.17,
+              "home_m": 64.29,
+              "away_b": 35.83,
+              "away_m": 35.71
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -1.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "circa"
+              ],
+              "circa": {
+                "first": 0.0,
+                "last": -1.0,
+                "delta": -1.0
+              }
+            }
+          },
+          "team_home": "Phoenix Suns",
+          "team_away": "Orlando Magic",
+          "start": "2026-11-06T02:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 9.0,
+              "away_b": 50.0,
+              "away_m": 91.0,
+              "line": "-1",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 48.0,
+              "home_m": 42.0,
+              "away_b": 52.0,
+              "away_m": 58.0,
+              "line": "-1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909936",
+          "locked_run": "2026-11-05T20:40:40-05:00"
+        },
+        {
+          "game": "Golden State Warriors (H) vs Miami Heat (A)",
+          "spread": "GS -7.5",
+          "favorite": "Golden State Warriors -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Golden State Warriors",
+            "M2: Relevance": "TAKE: Golden State Warriors",
+            "M3: Efficiency": "TAKE: Miami Heat",
+            "M4: ATS Trends": "TAKE: Golden State Warriors",
+            "M5: Luck": "TAKE: Miami Heat",
+            "M6: Sharp Money": "TAKE: Miami Heat",
+            "M8: Line Movement": "TAKE: Miami Heat",
+            "CONSENSUS": "TAKE: Golden State Warriors",
+            "Sharp: Circa": "TAKE: Miami Heat",
+            "Sharp: DraftKings": "TAKE: Golden State Warriors"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 63,
+              "away": 42
+            },
+            "M2: Relevance": {
+              "home": 86.6117,
+              "away": 39.1376
+            },
+            "M3: Efficiency": {
+              "margin": 3.6
+            },
+            "M4: ATS Trends": {
+              "home": 12,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "1.1",
+              "away": "-0.7"
+            },
+            "M6: Sharp Money": {
+              "home_b": 49.97,
+              "home_m": 39.65,
+              "away_b": 50.03,
+              "away_m": 60.35
+            },
+            "M8: Line Movement": {
+              "open_home": -4.5,
+              "current_home": -3.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 3.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -7.0,
+                "last": -3.5,
+                "delta": 3.5
+              }
+            }
+          },
+          "team_home": "Golden State Warriors",
+          "team_away": "Miami Heat",
+          "start": "2026-11-06T03:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 64.0,
+              "home_m": 57.0,
+              "away_b": 36.0,
+              "away_m": 43.0,
+              "line": "-3.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 54.0,
+              "home_m": 79.0,
+              "away_b": 46.0,
+              "away_m": 21.0,
+              "line": "-3.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909937",
+          "locked_run": "2026-11-05T21:40:06-05:00"
+        }
+      ]
     }
   ]
 }
