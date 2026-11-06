@@ -1,7 +1,129 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-11-05T06:35:03-05:00",
+  "updated": "2026-11-06T06:35:03-05:00",
   "days": {
+    "2026-11-05": [
+      {
+        "game": "Florida Atlantic Owls (H) vs UTSA Roadrunners (A)",
+        "team_home": "Florida Atlantic Owls",
+        "team_away": "UTSA Roadrunners",
+        "line": "UTSA -7",
+        "favorite": "UTSA Roadrunners -fav",
+        "final": "Florida Atlantic Owls 60, UTSA Roadrunners 29",
+        "cover": "Florida Atlantic Owls",
+        "status": null,
+        "confidence": "58%",
+        "sharp": {
+          "home_b": 54.1,
+          "home_m": 64.2,
+          "away_b": 45.9,
+          "away_m": 35.8
+        },
+        "graded_run": "2026-11-05T19:00:45-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "UTSA Roadrunners",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "UTSA Roadrunners",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Florida Atlantic Owls",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "UTSA Roadrunners",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Florida Atlantic Owls",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Florida Atlantic Owls",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "UTSA Roadrunners",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Florida Atlantic Owls",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Florida Atlantic Owls",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Southern Miss Golden Eagles (H) vs James Madison Dukes (A)",
+        "team_home": "Southern Miss Golden Eagles",
+        "team_away": "James Madison Dukes",
+        "line": "JMU -14.5",
+        "favorite": "James Madison Dukes -fav",
+        "final": "Southern Miss Golden Eagles 23, James Madison Dukes 54",
+        "cover": "James Madison Dukes",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 36.16,
+          "home_m": 44.83,
+          "away_b": 63.84,
+          "away_m": 55.17
+        },
+        "graded_run": "2026-11-05T19:30:44-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "James Madison Dukes",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "James Madison Dukes",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Southern Miss Golden Eagles",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "James Madison Dukes",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "James Madison Dukes",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Southern Miss Golden Eagles",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Southern Miss Golden Eagles",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "James Madison Dukes",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "James Madison Dukes",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "James Madison Dukes",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-11-04": [
       {
         "game": "UMass Minutemen (H) vs Ball State Cardinals (A)",
