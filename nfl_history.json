@@ -1,7 +1,73 @@
 {
   "sport": "NFL",
-  "updated": "2026-11-05T06:15:02-05:00",
+  "updated": "2026-11-06T06:15:25-05:00",
   "days": {
+    "2026-11-05": [
+      {
+        "game": "Baltimore Ravens (H) vs Jacksonville Jaguars (A)",
+        "team_home": "Baltimore Ravens",
+        "team_away": "Jacksonville Jaguars",
+        "line": "JAX -10",
+        "favorite": "Jacksonville Jaguars -fav",
+        "final": "Baltimore Ravens 10, Jacksonville Jaguars 33",
+        "cover": "Jacksonville Jaguars",
+        "status": null,
+        "confidence": "70%",
+        "sharp": {
+          "home_b": 31.25,
+          "home_m": 47.42,
+          "away_b": 68.75,
+          "away_m": 52.58
+        },
+        "graded_run": "2026-11-05T20:06:29-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Jacksonville Jaguars",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Jacksonville Jaguars",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Jacksonville Jaguars",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Jacksonville Jaguars",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Jacksonville Jaguars",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-11-04": [],
     "2026-11-03": [],
     "2026-11-02": [
