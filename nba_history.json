@@ -1,7 +1,129 @@
 {
   "sport": "NBA",
-  "updated": "2026-11-05T06:55:05-05:00",
+  "updated": "2026-11-06T06:55:03-05:00",
   "days": {
+    "2026-11-05": [
+      {
+        "game": "Phoenix Suns (H) vs Orlando Magic (A)",
+        "team_home": "Phoenix Suns",
+        "team_away": "Orlando Magic",
+        "line": "PHX -1.5",
+        "favorite": "Phoenix Suns -fav",
+        "final": "Phoenix Suns 117, Orlando Magic 104",
+        "cover": "Phoenix Suns",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 64.17,
+          "home_m": 64.29,
+          "away_b": 35.83,
+          "away_m": 35.71
+        },
+        "graded_run": "2026-11-05T20:40:40-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Phoenix Suns",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Phoenix Suns",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Phoenix Suns",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Golden State Warriors (H) vs Miami Heat (A)",
+        "team_home": "Golden State Warriors",
+        "team_away": "Miami Heat",
+        "line": "GS -7.5",
+        "favorite": "Golden State Warriors -fav",
+        "final": "Golden State Warriors 120, Miami Heat 100",
+        "cover": "Golden State Warriors",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 49.97,
+          "home_m": 39.65,
+          "away_b": 50.03,
+          "away_m": 60.35
+        },
+        "graded_run": "2026-11-05T21:40:06-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Golden State Warriors",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Golden State Warriors",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Miami Heat",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Golden State Warriors",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Miami Heat",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Miami Heat",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Miami Heat",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Golden State Warriors",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Miami Heat",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Golden State Warriors",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-11-04": [
       {
         "game": "Detroit Pistons (H) vs Philadelphia 76ers (A)",
