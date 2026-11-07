@@ -5108,6 +5108,430 @@
           "event_id": "401909944"
         }
       ]
+    },
+    {
+      "time": "2026-11-07T14:40:17-05:00",
+      "games": [
+        {
+          "game": "Indiana Pacers (H) vs Denver Nuggets (A)",
+          "spread": "DEN -7.5",
+          "favorite": "Denver Nuggets -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Denver Nuggets",
+            "M2: Relevance": "TAKE: Denver Nuggets",
+            "M3: Efficiency": "TAKE: Indiana Pacers",
+            "M4: ATS Trends": "TAKE: Indiana Pacers",
+            "M5: Luck": "TAKE: Indiana Pacers",
+            "M6: Sharp Money": "TAKE: Denver Nuggets",
+            "M8: Line Movement": "TAKE: Denver Nuggets",
+            "CONSENSUS": "TAKE: Indiana Pacers",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 49,
+              "away": 54
+            },
+            "M2: Relevance": {
+              "home": 52.6123,
+              "away": 83.2355
+            },
+            "M3: Efficiency": {
+              "margin": -1.8
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 5
+            },
+            "M5: Luck": {
+              "home": "-1.7",
+              "away": "0.1"
+            },
+            "M6: Sharp Money": {
+              "home_b": 22.33,
+              "home_m": 21.74,
+              "away_b": 77.67,
+              "away_m": 78.26
+            },
+            "M8: Line Movement": {
+              "open_home": 6.5,
+              "current_home": 7.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Indiana Pacers",
+          "team_away": "Denver Nuggets",
+          "start": "2026-11-07T22:00Z",
+          "sharp_books": {},
+          "event_id": "401909938"
+        },
+        {
+          "game": "Atlanta Hawks (H) vs Brooklyn Nets (A)",
+          "spread": "ATL -6.5",
+          "favorite": "Atlanta Hawks -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Atlanta Hawks",
+            "M2: Relevance": "TAKE: Atlanta Hawks",
+            "M3: Efficiency": "TAKE: Brooklyn Nets",
+            "M4: ATS Trends": "TAKE: Brooklyn Nets",
+            "M5: Luck": "TAKE: Brooklyn Nets",
+            "M6: Sharp Money": "TAKE: Atlanta Hawks",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Brooklyn Nets",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 54,
+              "away": 52
+            },
+            "M2: Relevance": {
+              "home": 80.0651,
+              "away": 58.6708
+            },
+            "M3: Efficiency": {
+              "margin": 4.5
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 12
+            },
+            "M5: Luck": {
+              "home": "0.4",
+              "away": "-0.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": 76.22,
+              "home_m": 83.92,
+              "away_b": 23.78,
+              "away_m": 16.08
+            },
+            "M8: Line Movement": {
+              "open_home": -6.5,
+              "current_home": -6.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Atlanta Hawks",
+          "team_away": "Brooklyn Nets",
+          "start": "2026-11-08T00:30Z",
+          "sharp_books": {},
+          "event_id": "401909939"
+        },
+        {
+          "game": "Cleveland Cavaliers (H) vs New York Knicks (A)",
+          "spread": "NY -4.5",
+          "favorite": "New York Knicks -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Cleveland Cavaliers",
+            "M2: Relevance": "TAKE: Cleveland Cavaliers",
+            "M3: Efficiency": "TAKE: Cleveland Cavaliers",
+            "M4: ATS Trends": "TAKE: Cleveland Cavaliers",
+            "M5: Luck": "TAKE: New York Knicks",
+            "M6: Sharp Money": "TAKE: Cleveland Cavaliers",
+            "M8: Line Movement": "TAKE: New York Knicks",
+            "CONSENSUS": "TAKE: Cleveland Cavaliers",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 60,
+              "away": 44
+            },
+            "M2: Relevance": {
+              "home": 83.0145,
+              "away": 55.3287
+            },
+            "M3: Efficiency": {
+              "margin": -0.3
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 3
+            },
+            "M5: Luck": {
+              "home": "-0.1",
+              "away": "-1.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": 44.12,
+              "home_m": 51.18,
+              "away_b": 55.88,
+              "away_m": 48.82
+            },
+            "M8: Line Movement": {
+              "open_home": 3.5,
+              "current_home": 5.5,
+              "delta": 2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Cleveland Cavaliers",
+          "team_away": "New York Knicks",
+          "start": "2026-11-08T01:00Z",
+          "sharp_books": {},
+          "event_id": "401909940"
+        },
+        {
+          "game": "Oklahoma City Thunder (H) vs Washington Wizards (A)",
+          "spread": "OKC -11.5",
+          "favorite": "Oklahoma City Thunder -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
+            "M2: Relevance": "TAKE: Oklahoma City Thunder",
+            "M3: Efficiency": "TAKE: Washington Wizards",
+            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
+            "M5: Luck": "TAKE: Washington Wizards",
+            "M6: Sharp Money": "TAKE: Washington Wizards",
+            "M8: Line Movement": "TAKE: Oklahoma City Thunder",
+            "CONSENSUS": "TAKE: Oklahoma City Thunder",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 67,
+              "away": 37
+            },
+            "M2: Relevance": {
+              "home": 94.4458,
+              "away": 42.9633
+            },
+            "M3: Efficiency": {
+              "margin": 2.6
+            },
+            "M4: ATS Trends": {
+              "home": 10,
+              "away": 2
+            },
+            "M5: Luck": {
+              "home": "0.9",
+              "away": "-0.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": 77.36,
+              "home_m": 77.04,
+              "away_b": 22.64,
+              "away_m": 22.96
+            },
+            "M8: Line Movement": {
+              "open_home": -11.5,
+              "current_home": -12.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Oklahoma City Thunder",
+          "team_away": "Washington Wizards",
+          "start": "2026-11-08T01:00Z",
+          "sharp_books": {},
+          "event_id": "401909941"
+        },
+        {
+          "game": "Golden State Warriors (H) vs Orlando Magic (A)",
+          "spread": "GS -6.5",
+          "favorite": "Golden State Warriors -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Golden State Warriors",
+            "M2: Relevance": "TAKE: Golden State Warriors",
+            "M3: Efficiency": "TAKE: Golden State Warriors",
+            "M4: ATS Trends": "TAKE: Golden State Warriors",
+            "M5: Luck": "TAKE: Orlando Magic",
+            "M6: Sharp Money": "TAKE: Orlando Magic",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Golden State Warriors",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 82,
+              "away": 20
+            },
+            "M2: Relevance": {
+              "home": 117.3694,
+              "away": 18.1734
+            },
+            "M3: Efficiency": {
+              "margin": 7.0
+            },
+            "M4: ATS Trends": {
+              "home": 14,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "1.3",
+              "away": "-0.9"
+            },
+            "M6: Sharp Money": {
+              "home_b": 89.03,
+              "home_m": 61.02,
+              "away_b": 10.97,
+              "away_m": 38.98
+            },
+            "M8: Line Movement": {
+              "open_home": -6.5,
+              "current_home": -6.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Golden State Warriors",
+          "team_away": "Orlando Magic",
+          "start": "2026-11-08T01:30Z",
+          "sharp_books": {},
+          "event_id": "401909942"
+        },
+        {
+          "game": "Phoenix Suns (H) vs Houston Rockets (A)",
+          "spread": "HOU -7.5",
+          "favorite": "Houston Rockets -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Houston Rockets",
+            "M2: Relevance": "TAKE: Houston Rockets",
+            "M3: Efficiency": "TAKE: Houston Rockets",
+            "M4: ATS Trends": "TAKE: Houston Rockets",
+            "M5: Luck": "TAKE: Phoenix Suns",
+            "M6: Sharp Money": "TAKE: Phoenix Suns",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Houston Rockets",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 25,
+              "away": 81
+            },
+            "M2: Relevance": {
+              "home": 37.564,
+              "away": 101.24
+            },
+            "M3: Efficiency": {
+              "margin": -8.7
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 12
+            },
+            "M5: Luck": {
+              "home": "-0.6",
+              "away": "1.3"
+            },
+            "M6: Sharp Money": {
+              "home_b": 17.32,
+              "home_m": 26.06,
+              "away_b": 82.68,
+              "away_m": 73.94
+            },
+            "M8: Line Movement": {
+              "open_home": 6.5,
+              "current_home": 6.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Phoenix Suns",
+          "team_away": "Houston Rockets",
+          "start": "2026-11-08T02:00Z",
+          "sharp_books": {},
+          "event_id": "401909943"
+        },
+        {
+          "game": "Portland Trail Blazers (H) vs San Antonio Spurs (A)",
+          "spread": "SA -5.5",
+          "favorite": "San Antonio Spurs -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Portland Trail Blazers",
+            "M2: Relevance": "TAKE: Portland Trail Blazers",
+            "M3: Efficiency": "TAKE: Portland Trail Blazers",
+            "M4: ATS Trends": "TAKE: Portland Trail Blazers",
+            "M5: Luck": "TAKE: San Antonio Spurs",
+            "M6: Sharp Money": "TAKE: Portland Trail Blazers",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Portland Trail Blazers",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 58,
+              "away": 45
+            },
+            "M2: Relevance": {
+              "home": 80.5026,
+              "away": 54.6692
+            },
+            "M3: Efficiency": {
+              "margin": 0.0
+            },
+            "M4: ATS Trends": {
+              "home": 12,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "1.1",
+              "away": "0.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": 26.15,
+              "home_m": 43.9,
+              "away_b": 73.85,
+              "away_m": 56.1
+            },
+            "M8: Line Movement": {
+              "open_home": 4.5,
+              "current_home": 4.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Portland Trail Blazers",
+          "team_away": "San Antonio Spurs",
+          "start": "2026-11-08T03:00Z",
+          "sharp_books": {},
+          "event_id": "401909944"
+        }
+      ]
     }
   ]
 }
