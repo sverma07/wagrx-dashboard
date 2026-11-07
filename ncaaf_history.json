@@ -1,7 +1,309 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-11-06T06:35:03-05:00",
+  "updated": "2026-11-07T06:35:03-05:00",
   "days": {
+    "2026-11-06": [
+      {
+        "game": "SMU Mustangs (H) vs Virginia Tech Hokies (A)",
+        "team_home": "SMU Mustangs",
+        "team_away": "Virginia Tech Hokies",
+        "line": "SMU -6.5",
+        "favorite": "SMU Mustangs -fav",
+        "final": "SMU Mustangs 51, Virginia Tech Hokies 28",
+        "cover": "SMU Mustangs",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 48.56,
+          "home_m": 32.81,
+          "away_b": 51.44,
+          "away_m": 67.19
+        },
+        "graded_run": "2026-11-06T18:51:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "SMU Mustangs",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "SMU Mustangs",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Virginia Tech Hokies",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Virginia Tech Hokies",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Virginia Tech Hokies",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Virginia Tech Hokies",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Virginia Tech Hokies",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Virginia Tech Hokies",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "East Carolina Pirates (H) vs South Florida Bulls (A)",
+        "team_home": "East Carolina Pirates",
+        "team_away": "South Florida Bulls",
+        "line": "ECU -2.5",
+        "favorite": "East Carolina Pirates -fav",
+        "final": "East Carolina Pirates 20, South Florida Bulls 17",
+        "cover": "East Carolina Pirates",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 37.93,
+          "home_m": 20.3,
+          "away_b": 62.07,
+          "away_m": 79.7
+        },
+        "graded_run": "2026-11-06T19:26:45-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "South Florida Bulls",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "South Florida Bulls",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "South Florida Bulls",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "East Carolina Pirates",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "East Carolina Pirates",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "South Florida Bulls",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "East Carolina Pirates",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "South Florida Bulls",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Illinois Fighting Illini (H) vs Nebraska Cornhuskers (A)",
+        "team_home": "Illinois Fighting Illini",
+        "team_away": "Nebraska Cornhuskers",
+        "line": "NEB -4.5",
+        "favorite": "Nebraska Cornhuskers -fav",
+        "final": "Illinois Fighting Illini 24, Nebraska Cornhuskers 13",
+        "cover": "Illinois Fighting Illini",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 55.47,
+          "home_m": 65.49,
+          "away_b": 44.53,
+          "away_m": 34.51
+        },
+        "graded_run": "2026-11-06T19:30:18-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Nebraska Cornhuskers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Nebraska Cornhuskers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Nebraska Cornhuskers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Nebraska Cornhuskers",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Nebraska Cornhuskers",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Illinois Fighting Illini",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Illinois Fighting Illini",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Nebraska Cornhuskers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Nevada Wolf Pack (H) vs New Mexico Lobos (A)",
+        "team_home": "Nevada Wolf Pack",
+        "team_away": "New Mexico Lobos",
+        "line": "UNM -10",
+        "favorite": "New Mexico Lobos -fav",
+        "final": "Nevada Wolf Pack 3, New Mexico Lobos 31",
+        "cover": "New Mexico Lobos",
+        "status": null,
+        "confidence": "57%",
+        "sharp": {
+          "home_b": 36.44,
+          "home_m": 48.89,
+          "away_b": 63.56,
+          "away_m": 51.11
+        },
+        "graded_run": "2026-11-06T20:30:19-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "New Mexico Lobos",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "New Mexico Lobos",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Nevada Wolf Pack",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "New Mexico Lobos",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Nevada Wolf Pack",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Nevada Wolf Pack",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Nevada Wolf Pack",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "New Mexico Lobos",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Arizona Wildcats (H) vs TCU Horned Frogs (A)",
+        "team_home": "Arizona Wildcats",
+        "team_away": "TCU Horned Frogs",
+        "line": "ARIZ -7.5",
+        "favorite": "Arizona Wildcats -fav",
+        "final": "Arizona Wildcats 29, TCU Horned Frogs 28",
+        "cover": "TCU Horned Frogs",
+        "status": null,
+        "confidence": "52%",
+        "sharp": {
+          "home_b": 65.54,
+          "home_m": 61.86,
+          "away_b": 34.46,
+          "away_m": 38.14
+        },
+        "graded_run": "2026-11-06T22:00:19-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Arizona Wildcats",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Arizona Wildcats",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "TCU Horned Frogs",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "TCU Horned Frogs",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "TCU Horned Frogs",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "TCU Horned Frogs",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "TCU Horned Frogs",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      }
+    ],
     "2026-11-05": [
       {
         "game": "Florida Atlantic Owls (H) vs UTSA Roadrunners (A)",
