@@ -1,7 +1,2169 @@
 {
   "sport": "NCAAB",
-  "updated": "2026-11-08T07:20:18-05:00",
+  "updated": "2026-11-09T07:20:13-05:00",
   "days": {
+    "2026-11-08": [
+      {
+        "game": "St. John's Red Storm (H) vs Iona Gaels (A)",
+        "team_home": "St. John's Red Storm",
+        "team_away": "Iona Gaels",
+        "line": "SJU -29.5",
+        "favorite": "St. John's Red Storm -fav",
+        "final": "St. John's Red Storm 104, Iona Gaels 65",
+        "cover": "St. John's Red Storm",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 49.52,
+          "home_m": 23.92,
+          "away_b": 50.48,
+          "away_m": 76.08
+        },
+        "graded_run": "2026-11-08T11:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "St. John's Red Storm",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "St. John's Red Storm",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Iona Gaels",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Iona Gaels",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "St. John's Red Storm",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Iona Gaels",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "St. John's Red Storm",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "St. John's Red Storm",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Virginia Cavaliers (H) vs Arkansas Razorbacks (A)",
+        "team_home": "Virginia Cavaliers",
+        "team_away": "Arkansas Razorbacks",
+        "line": "UVA -3.5",
+        "favorite": "Virginia Cavaliers -fav",
+        "final": "Virginia Cavaliers 91, Arkansas Razorbacks 72",
+        "cover": "Virginia Cavaliers",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 36.07,
+          "home_m": 29.19,
+          "away_b": 63.93,
+          "away_m": 70.81
+        },
+        "graded_run": "2026-11-08T12:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Arkansas Razorbacks",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Arkansas Razorbacks",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Arkansas Razorbacks",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Arkansas Razorbacks",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Arkansas Razorbacks",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Virginia Cavaliers",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Arkansas Razorbacks",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Milwaukee Panthers (H) vs Arkansas State Red Wolves (A)",
+        "team_home": "Milwaukee Panthers",
+        "team_away": "Arkansas State Red Wolves",
+        "line": "N/A",
+        "favorite": "?",
+        "final": null,
+        "cover": null,
+        "status": "NO FINAL SCORE FOUND (not graded)",
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Arkansas State Red Wolves",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Arkansas State Red Wolves",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Arkansas State Red Wolves",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Milwaukee Panthers",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Arkansas State Red Wolves",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Siena Saints (H) vs Princeton Tigers (A)",
+        "team_home": "Siena Saints",
+        "team_away": "Princeton Tigers",
+        "line": "SIE -1.5",
+        "favorite": "Siena Saints -fav",
+        "final": "Siena Saints 82, Princeton Tigers 68",
+        "cover": "Siena Saints",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 29.39,
+          "home_m": 29.04,
+          "away_b": 70.61,
+          "away_m": 70.96
+        },
+        "graded_run": "2026-11-08T12:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Princeton Tigers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Princeton Tigers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Siena Saints",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Siena Saints",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Princeton Tigers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Princeton Tigers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "South Carolina Gamecocks (H) vs Southeast Missouri State Redhawks (A)",
+        "team_home": "South Carolina Gamecocks",
+        "team_away": "Southeast Missouri State Redhawks",
+        "line": "SC -17.5",
+        "favorite": "South Carolina Gamecocks -fav",
+        "final": "South Carolina Gamecocks 78, Southeast Missouri State Redhawks 68",
+        "cover": "Southeast Missouri State Redhawks",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 66.4,
+          "home_m": 74.29,
+          "away_b": 33.6,
+          "away_m": 25.71
+        },
+        "graded_run": "2026-11-08T12:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "South Carolina Gamecocks",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "South Carolina Gamecocks",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Southeast Missouri State Redhawks",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "South Carolina Gamecocks",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "South Carolina Gamecocks",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "South Carolina Gamecocks",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "UMass Lowell River Hawks (H) vs Marist Red Foxes (A)",
+        "team_home": "UMass Lowell River Hawks",
+        "team_away": "Marist Red Foxes",
+        "line": "UML -1.5",
+        "favorite": "?",
+        "final": "UMass Lowell River Hawks 63, Marist Red Foxes 61",
+        "cover": "UMass Lowell River Hawks",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 83.44,
+          "home_m": 88.58,
+          "away_b": 16.56,
+          "away_m": 11.42
+        },
+        "graded_run": "2026-11-08T12:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "UMass Lowell River Hawks",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "UMass Lowell River Hawks",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "UMass Lowell River Hawks",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Marist Red Foxes",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "UMass Lowell River Hawks",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "UMass Lowell River Hawks",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "New Hampshire Wildcats (H) vs Sacred Heart Pioneers (A)",
+        "team_home": "New Hampshire Wildcats",
+        "team_away": "Sacred Heart Pioneers",
+        "line": "UNH -1.5",
+        "favorite": "?",
+        "final": "New Hampshire Wildcats 76, Sacred Heart Pioneers 81",
+        "cover": "Sacred Heart Pioneers",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-11-08T12:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "New Hampshire Wildcats",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "New Hampshire Wildcats",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "New Hampshire Wildcats",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Sacred Heart Pioneers",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Sacred Heart Pioneers",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "New Hampshire Wildcats",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Maine Black Bears (H) vs Manhattan Jaspers (A)",
+        "team_home": "Maine Black Bears",
+        "team_away": "Manhattan Jaspers",
+        "line": "ME -2.5",
+        "favorite": "?",
+        "final": "Maine Black Bears 62, Manhattan Jaspers 68",
+        "cover": "Manhattan Jaspers",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-11-08T12:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Maine Black Bears",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Maine Black Bears",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Maine Black Bears",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Manhattan Jaspers",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Maine Black Bears",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Bryant Bulldogs (H) vs Fairfield Stags (A)",
+        "team_home": "Bryant Bulldogs",
+        "team_away": "Fairfield Stags",
+        "line": "FAIR -1.5",
+        "favorite": "?",
+        "final": "Bryant Bulldogs 59, Fairfield Stags 68",
+        "cover": "Fairfield Stags",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-11-08T12:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Bryant Bulldogs",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Bryant Bulldogs",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Bryant Bulldogs",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Fairfield Stags",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Bryant Bulldogs",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Navy Midshipmen (H) vs Central Connecticut Blue Devils (A)",
+        "team_home": "Navy Midshipmen",
+        "team_away": "Central Connecticut Blue Devils",
+        "line": "N/A",
+        "favorite": "?",
+        "final": null,
+        "cover": null,
+        "status": "NO FINAL SCORE FOUND (not graded)",
+        "confidence": "67%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Central Connecticut Blue Devils",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Navy Midshipmen",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Central Connecticut Blue Devils",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Central Connecticut Blue Devils",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Illinois Chicago Flames (H) vs Harvard Crimson (A)",
+        "team_home": "Illinois Chicago Flames",
+        "team_away": "Harvard Crimson",
+        "line": "N/A",
+        "favorite": "?",
+        "final": null,
+        "cover": null,
+        "status": "NO FINAL SCORE FOUND (not graded)",
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Illinois Chicago Flames",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Illinois Chicago Flames",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Illinois Chicago Flames",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Harvard Crimson",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Illinois Chicago Flames",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Wofford Terriers (H) vs Georgia Tech Yellow Jackets (A)",
+        "team_home": "Wofford Terriers",
+        "team_away": "Georgia Tech Yellow Jackets",
+        "line": "N/A",
+        "favorite": "?",
+        "final": null,
+        "cover": null,
+        "status": "NO FINAL SCORE FOUND (not graded)",
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Wofford Terriers",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Georgia Tech Yellow Jackets",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Georgia Tech Yellow Jackets",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Georgia Tech Yellow Jackets",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Georgia Tech Yellow Jackets",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Cornell Big Red (H) vs St. John's Red Storm (A)",
+        "team_home": "Cornell Big Red",
+        "team_away": "St. John's Red Storm",
+        "line": "N/A",
+        "favorite": "?",
+        "final": null,
+        "cover": null,
+        "status": "NO FINAL SCORE FOUND (not graded)",
+        "confidence": "67%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "St. John's Red Storm",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "St. John's Red Storm",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Cornell Big Red",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "St. John's Red Storm",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Albany Great Danes (H) vs Merrimack Warriors (A)",
+        "team_home": "Albany Great Danes",
+        "team_away": "Merrimack Warriors",
+        "line": "MRMK -2.5",
+        "favorite": "?",
+        "final": "Albany Great Danes 60, Merrimack Warriors 73",
+        "cover": "Merrimack Warriors",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-11-08T13:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Albany Great Danes",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Albany Great Danes",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Albany Great Danes",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Merrimack Warriors",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Albany Great Danes",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "St. Thomas Tommies (H) vs Green Bay Phoenix (A)",
+        "team_home": "St. Thomas Tommies",
+        "team_away": "Green Bay Phoenix",
+        "line": "STMN -8.5",
+        "favorite": "St. Thomas Tommies -fav",
+        "final": "St. Thomas Tommies 67, Green Bay Phoenix 76",
+        "cover": "Green Bay Phoenix",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 49.29,
+          "home_m": 44.13,
+          "away_b": 50.71,
+          "away_m": 55.87
+        },
+        "graded_run": "2026-11-08T13:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "St. Thomas Tommies",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "St. Thomas Tommies",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Green Bay Phoenix",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Green Bay Phoenix",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Green Bay Phoenix",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Western Michigan Broncos (H) vs Campbell Fighting Camels (A)",
+        "team_home": "Western Michigan Broncos",
+        "team_away": "Campbell Fighting Camels",
+        "line": "WMU -5.5",
+        "favorite": "Western Michigan Broncos -fav",
+        "final": "Western Michigan Broncos 87, Campbell Fighting Camels 71",
+        "cover": "Western Michigan Broncos",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 60.45,
+          "home_m": 36.58,
+          "away_b": 39.55,
+          "away_m": 63.42
+        },
+        "graded_run": "2026-11-08T13:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Campbell Fighting Camels",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Western Michigan Broncos",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Campbell Fighting Camels",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Campbell Fighting Camels",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Western Michigan Broncos",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Campbell Fighting Camels",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Campbell Fighting Camels",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Campbell Fighting Camels",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Vermont Catamounts (H) vs Quinnipiac Bobcats (A)",
+        "team_home": "Vermont Catamounts",
+        "team_away": "Quinnipiac Bobcats",
+        "line": "UVM -8.5",
+        "favorite": "?",
+        "final": "Vermont Catamounts 76, Quinnipiac Bobcats 79",
+        "cover": "Quinnipiac Bobcats",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 90.58,
+          "home_m": 94.95,
+          "away_b": 9.42,
+          "away_m": 5.05
+        },
+        "graded_run": "2026-11-08T13:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Vermont Catamounts",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Vermont Catamounts",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Vermont Catamounts",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Vermont Catamounts",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Vermont Catamounts",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Vermont Catamounts",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Vermont Catamounts",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Dartmouth Big Green (H) vs Central Connecticut Blue Devils (A)",
+        "team_home": "Dartmouth Big Green",
+        "team_away": "Central Connecticut Blue Devils",
+        "line": "DART -8.5",
+        "favorite": "?",
+        "final": "Dartmouth Big Green 71, Central Connecticut Blue Devils 78",
+        "cover": "Central Connecticut Blue Devils",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-11-08T13:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Dartmouth Big Green",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Dartmouth Big Green",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Dartmouth Big Green",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Dartmouth Big Green",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Dartmouth Big Green",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Lehigh Mountain Hawks (H) vs Brown Bears (A)",
+        "team_home": "Lehigh Mountain Hawks",
+        "team_away": "Brown Bears",
+        "line": "LEH -5.5",
+        "favorite": "?",
+        "final": "Lehigh Mountain Hawks 55, Brown Bears 65",
+        "cover": "Brown Bears",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-11-08T13:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Brown Bears",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Brown Bears",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Lehigh Mountain Hawks",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Brown Bears",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Lehigh Mountain Hawks",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Brown Bears",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Boise State Broncos (H) vs Butler Bulldogs (A)",
+        "team_home": "Boise State Broncos",
+        "team_away": "Butler Bulldogs",
+        "line": "BOIS -2.5",
+        "favorite": "Boise State Broncos -fav",
+        "final": "Boise State Broncos 100, Butler Bulldogs 81",
+        "cover": "Boise State Broncos",
+        "status": null,
+        "confidence": "67%",
+        "sharp": {
+          "home_b": 43.93,
+          "home_m": 32.88,
+          "away_b": 56.07,
+          "away_m": 67.12
+        },
+        "graded_run": "2026-11-08T13:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Boise State Broncos",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Butler Bulldogs",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Butler Bulldogs",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Butler Bulldogs",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Boise State Broncos",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Butler Bulldogs",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Drake Bulldogs (H) vs Southern Jaguars (A)",
+        "team_home": "Drake Bulldogs",
+        "team_away": "Southern Jaguars",
+        "line": "DRKE -13.5",
+        "favorite": "?",
+        "final": "Drake Bulldogs 75, Southern Jaguars 68",
+        "cover": "Southern Jaguars",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 84.8,
+          "home_m": 94.59,
+          "away_b": 15.2,
+          "away_m": 5.41
+        },
+        "graded_run": "2026-11-08T14:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Southern Jaguars",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Southern Jaguars",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Southern Jaguars",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Drake Bulldogs",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Drake Bulldogs",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Southern Jaguars",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Tennessee Tech Golden Eagles (H) vs Western Kentucky Hilltoppers (A)",
+        "team_home": "Tennessee Tech Golden Eagles",
+        "team_away": "Western Kentucky Hilltoppers",
+        "line": "WKU -3.5",
+        "favorite": "Western Kentucky Hilltoppers -fav",
+        "final": "Tennessee Tech Golden Eagles 97, Western Kentucky Hilltoppers 94",
+        "cover": "Tennessee Tech Golden Eagles",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 27.82,
+          "home_m": 35.07,
+          "away_b": 72.18,
+          "away_m": 64.93
+        },
+        "graded_run": "2026-11-08T14:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Western Kentucky Hilltoppers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Western Kentucky Hilltoppers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Western Kentucky Hilltoppers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Tennessee Tech Golden Eagles",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Western Kentucky Hilltoppers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Air Force Falcons (H) vs Idaho State Bengals (A)",
+        "team_home": "Air Force Falcons",
+        "team_away": "Idaho State Bengals",
+        "line": "AF -6.5",
+        "favorite": "Air Force Falcons -fav",
+        "final": "Air Force Falcons 89, Idaho State Bengals 82",
+        "cover": "Air Force Falcons",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 56.92,
+          "home_m": 49.98,
+          "away_b": 43.08,
+          "away_m": 50.02
+        },
+        "graded_run": "2026-11-08T14:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Air Force Falcons",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Air Force Falcons",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Idaho State Bengals",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Air Force Falcons",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Idaho State Bengals",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Idaho State Bengals",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Air Force Falcons",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "NJIT Highlanders (H) vs Saint Peter's Peacocks (A)",
+        "team_home": "NJIT Highlanders",
+        "team_away": "Saint Peter's Peacocks",
+        "line": "SPU -1.5",
+        "favorite": "?",
+        "final": "NJIT Highlanders 54, Saint Peter's Peacocks 52",
+        "cover": "NJIT Highlanders",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-11-08T15:45:41-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Saint Peter's Peacocks",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Saint Peter's Peacocks",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Saint Peter's Peacocks",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Saint Peter's Peacocks",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Binghamton Bearcats (H) vs Rider Broncs (A)",
+        "team_home": "Binghamton Bearcats",
+        "team_away": "Rider Broncs",
+        "line": "BING -5.5",
+        "favorite": "?",
+        "final": "Binghamton Bearcats 75, Rider Broncs 63",
+        "cover": "Binghamton Bearcats",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-11-08T15:45:41-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Binghamton Bearcats",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Binghamton Bearcats",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Binghamton Bearcats",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Rider Broncs",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Binghamton Bearcats",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Nevada Wolf Pack (H) vs Saint Mary's Gaels (A)",
+        "team_home": "Nevada Wolf Pack",
+        "team_away": "Saint Mary's Gaels",
+        "line": "NEV -1.5",
+        "favorite": "Nevada Wolf Pack -fav",
+        "final": "Nevada Wolf Pack 96, Saint Mary's Gaels 95",
+        "cover": "Saint Mary's Gaels",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 32.0,
+          "home_m": 13.02,
+          "away_b": 68.0,
+          "away_m": 86.98
+        },
+        "graded_run": "2026-11-08T16:15:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Nevada Wolf Pack",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Nevada Wolf Pack",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Saint Mary's Gaels",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Nevada Wolf Pack",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Nevada Wolf Pack",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Saint Mary's Gaels",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Nevada Wolf Pack",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Nevada Wolf Pack",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Idaho Vandals (H) vs Nicholls Colonels (A)",
+        "team_home": "Idaho Vandals",
+        "team_away": "Nicholls Colonels",
+        "line": "N/A",
+        "favorite": "?",
+        "final": null,
+        "cover": null,
+        "status": "NO FINAL SCORE FOUND (not graded)",
+        "confidence": "100%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Nicholls Colonels",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Nicholls Colonels",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Nicholls Colonels",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Nicholls Colonels",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Nicholls Colonels",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Temple Owls (H) vs Richmond Spiders (A)",
+        "team_home": "Temple Owls",
+        "team_away": "Richmond Spiders",
+        "line": "RICH -1.5",
+        "favorite": "Richmond Spiders -fav",
+        "final": "Temple Owls 53, Richmond Spiders 79",
+        "cover": "Richmond Spiders",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 31.22,
+          "home_m": 17.71,
+          "away_b": 68.78,
+          "away_m": 82.29
+        },
+        "graded_run": "2026-11-08T16:45:41-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Richmond Spiders",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Richmond Spiders",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Temple Owls",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Richmond Spiders",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Richmond Spiders",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Richmond Spiders",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "William & Mary Tribe (H) vs Norfolk State Spartans (A)",
+        "team_home": "William & Mary Tribe",
+        "team_away": "Norfolk State Spartans",
+        "line": "W&M -10.5",
+        "favorite": "?",
+        "final": "William & Mary Tribe 104, Norfolk State Spartans 73",
+        "cover": "William & Mary Tribe",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 55.7,
+          "home_m": 77.32,
+          "away_b": 44.3,
+          "away_m": 22.68
+        },
+        "graded_run": "2026-11-08T17:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "William & Mary Tribe",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "William & Mary Tribe",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "William & Mary Tribe",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "William & Mary Tribe",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "William & Mary Tribe",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Cal State Bakersfield Roadrunners (H) vs North Dakota State Bison (A)",
+        "team_home": "Cal State Bakersfield Roadrunners",
+        "team_away": "North Dakota State Bison",
+        "line": "NDSU -2.5",
+        "favorite": "North Dakota State Bison -fav",
+        "final": "Cal State Bakersfield Roadrunners 91, North Dakota State Bison 80",
+        "cover": "Cal State Bakersfield Roadrunners",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 33.05,
+          "home_m": 10.71,
+          "away_b": 66.95,
+          "away_m": 89.29
+        },
+        "graded_run": "2026-11-08T17:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "North Dakota State Bison",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "North Dakota State Bison",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "North Dakota State Bison",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "North Dakota State Bison",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "North Dakota State Bison",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "North Dakota State Bison",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "North Dakota State Bison",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "UTEP Miners (H) vs Incarnate Word Cardinals (A)",
+        "team_home": "UTEP Miners",
+        "team_away": "Incarnate Word Cardinals",
+        "line": "UTEP -13.5",
+        "favorite": "?",
+        "final": "UTEP Miners 79, Incarnate Word Cardinals 60",
+        "cover": "UTEP Miners",
+        "status": null,
+        "confidence": "67%",
+        "sharp": {
+          "home_b": 75.22,
+          "home_m": 87.92,
+          "away_b": 24.78,
+          "away_m": 12.08
+        },
+        "graded_run": "2026-11-08T18:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "UTEP Miners",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "UTEP Miners",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Incarnate Word Cardinals",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "UTEP Miners",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "UTEP Miners",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "UTEP Miners",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Illinois Chicago Flames (H) vs Portland Pilots (A)",
+        "team_home": "Illinois Chicago Flames",
+        "team_away": "Portland Pilots",
+        "line": "N/A",
+        "favorite": "?",
+        "final": null,
+        "cover": null,
+        "status": "NO FINAL SCORE FOUND (not graded)",
+        "confidence": "75%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Illinois Chicago Flames",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Illinois Chicago Flames",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Illinois Chicago Flames",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Portland Pilots",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Illinois Chicago Flames",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Penn State Nittany Lions (H) vs Pittsburgh Panthers (A)",
+        "team_home": "Penn State Nittany Lions",
+        "team_away": "Pittsburgh Panthers",
+        "line": "PITT -2.5",
+        "favorite": "Pittsburgh Panthers -fav",
+        "final": "Penn State Nittany Lions 76, Pittsburgh Panthers 82",
+        "cover": "Pittsburgh Panthers",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 44.35,
+          "home_m": 47.14,
+          "away_b": 55.65,
+          "away_m": 52.86
+        },
+        "graded_run": "2026-11-08T19:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Pittsburgh Panthers",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Pittsburgh Panthers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Pittsburgh Panthers",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Pittsburgh Panthers",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Penn State Nittany Lions",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Pittsburgh Panthers",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "California Golden Bears (H) vs Houston Cougars (A)",
+        "team_home": "California Golden Bears",
+        "team_away": "Houston Cougars",
+        "line": "HOU -19.5",
+        "favorite": "Houston Cougars -fav",
+        "final": null,
+        "cover": null,
+        "status": "NO FINAL SCORE FOUND (not graded)",
+        "confidence": "80%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Houston Cougars",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Houston Cougars",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "California Golden Bears",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Houston Cougars",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Houston Cougars",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Houston Cougars",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Wichita State Shockers (H) vs USC Trojans (A)",
+        "team_home": "Wichita State Shockers",
+        "team_away": "USC Trojans",
+        "line": "USC -6.5",
+        "favorite": "USC Trojans -fav",
+        "final": null,
+        "cover": null,
+        "status": "NO FINAL SCORE FOUND (not graded)",
+        "confidence": "80%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "USC Trojans",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "USC Trojans",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "Wichita State Shockers",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "USC Trojans",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "USC Trojans",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "N/A",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "USC Trojans",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Hawai'i Rainbow Warriors (H) vs UT Arlington Mavericks (A)",
+        "team_home": "Hawai'i Rainbow Warriors",
+        "team_away": "UT Arlington Mavericks",
+        "line": "HAW -10.5",
+        "favorite": "Hawai'i Rainbow Warriors -fav",
+        "final": "Hawai'i Rainbow Warriors 71, UT Arlington Mavericks 62",
+        "cover": "UT Arlington Mavericks",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 53.9,
+          "home_m": 68.21,
+          "away_b": 46.1,
+          "away_m": 31.79
+        },
+        "graded_run": "2026-11-08T21:45:42-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Hawai'i Rainbow Warriors",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Hawai'i Rainbow Warriors",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "UT Arlington Mavericks",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "UT Arlington Mavericks",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Hawai'i Rainbow Warriors",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Hawai'i Rainbow Warriors",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "UT Arlington Mavericks",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Hawai'i Rainbow Warriors",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      }
+    ],
     "2026-11-07": [
       {
         "game": "Louisville Cardinals (H) vs Morehead State Eagles (A)",
