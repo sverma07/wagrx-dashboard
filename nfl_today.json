@@ -1828,6 +1828,79 @@
           "event_id": "401873051"
         }
       ]
+    },
+    {
+      "time": "2026-11-09T20:35:47-05:00",
+      "games": [
+        {
+          "game": "Minnesota Vikings (H) vs Buffalo Bills (A)",
+          "spread": "BUF -3",
+          "favorite": "Buffalo Bills -fav",
+          "confidence": "87%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Buffalo Bills",
+            "M2: Relevance": "TAKE: Buffalo Bills",
+            "M3: Efficiency": "TAKE: Minnesota Vikings",
+            "M4: ATS Trends": "TAKE: Buffalo Bills",
+            "M5: Luck": "TAKE: Buffalo Bills",
+            "M6: Sharp Money": "TAKE: Minnesota Vikings",
+            "M7: QB Injury Edge": "TAKE: Buffalo Bills",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Buffalo Bills",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 18,
+              "away": 28
+            },
+            "M2: Relevance": {
+              "home": 24.4044,
+              "away": 34.1891
+            },
+            "M3: Efficiency": {
+              "margin": -0.4
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 9
+            },
+            "M5: Luck": {
+              "home": "1.9",
+              "away": "1.4"
+            },
+            "M6: Sharp Money": {
+              "home_b": 38.25,
+              "home_m": 49.86,
+              "away_b": 61.75,
+              "away_m": 50.14
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Kyler Murray (Out) -> Carson Wentz (Active) starting",
+              "away_status": "Josh Allen (Active)"
+            },
+            "M8: Line Movement": {
+              "open_home": 3.0,
+              "current_home": 3.0,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null,
+              "vs_consensus": null
+            }
+          },
+          "team_home": "Minnesota Vikings",
+          "team_away": "Buffalo Bills",
+          "start": "2026-11-10T01:15Z",
+          "sharp_books": {},
+          "home_id": "16",
+          "away_id": "2",
+          "event_id": "401873051",
+          "locked_run": "2026-11-09T20:05:47-05:00"
+        }
+      ]
     }
   ]
 }
