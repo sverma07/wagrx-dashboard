@@ -2021,6 +2021,259 @@
           "event_id": "401866460"
         }
       ]
+    },
+    {
+      "time": "2026-11-10T18:45:30-05:00",
+      "games": [
+        {
+          "game": "Akron Zips (H) vs Western Michigan Broncos (A)",
+          "spread": "WMU -14",
+          "favorite": "Western Michigan Broncos -fav",
+          "confidence": "61%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Western Michigan Broncos",
+            "M2: Relevance": "TAKE: Western Michigan Broncos",
+            "M3: Efficiency": "TAKE: Akron Zips",
+            "M4: ATS Trends": "TAKE: Akron Zips",
+            "M5: Luck": "TAKE: Akron Zips",
+            "M6: Sharp Money": "TAKE: Akron Zips",
+            "M8: Line Movement": "TAKE: Western Michigan Broncos",
+            "CONSENSUS": "TAKE: Akron Zips",
+            "Sharp: Circa": "TAKE: Western Michigan Broncos",
+            "Sharp: DraftKings": "TAKE: Akron Zips"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 12,
+              "away": 32
+            },
+            "M2: Relevance": {
+              "home": 8.3461,
+              "away": 40.2853
+            },
+            "M3: Efficiency": {
+              "margin": -11.3
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 1
+            },
+            "M5: Luck": {
+              "home": "-1.6",
+              "away": "0.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": 38.38,
+              "home_m": 50.93,
+              "away_b": 61.62,
+              "away_m": 49.07
+            },
+            "M8: Line Movement": {
+              "open_home": 13.5,
+              "current_home": 15.5,
+              "delta": 2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": 14.0,
+                "last": 15.5,
+                "delta": 1.5
+              }
+            }
+          },
+          "team_home": "Akron Zips",
+          "team_away": "Western Michigan Broncos",
+          "start": "2026-11-11T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 53.0,
+              "home_m": 45.0,
+              "away_b": 47.0,
+              "away_m": 55.0,
+              "line": "+15.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 43.0,
+              "home_m": 58.0,
+              "away_b": 57.0,
+              "away_m": 42.0,
+              "line": "+15.5",
+              "thin": false
+            }
+          },
+          "event_id": "401866458"
+        },
+        {
+          "game": "Bowling Green Falcons (H) vs Kent State Golden Flashes (A)",
+          "spread": "BGSU -5.5",
+          "favorite": "Bowling Green Falcons -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Bowling Green Falcons",
+            "M2: Relevance": "TAKE: Bowling Green Falcons",
+            "M3: Efficiency": "TAKE: Kent State Golden Flashes",
+            "M4: ATS Trends": "TAKE: Bowling Green Falcons",
+            "M5: Luck": "TAKE: Bowling Green Falcons",
+            "M6: Sharp Money": "TAKE: Kent State Golden Flashes",
+            "M8: Line Movement": "TAKE: Kent State Golden Flashes",
+            "CONSENSUS": "TAKE: Bowling Green Falcons",
+            "Sharp: Circa": "TAKE: Kent State Golden Flashes",
+            "Sharp: DraftKings": "TAKE: Kent State Golden Flashes"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 28,
+              "away": 11
+            },
+            "M2: Relevance": {
+              "home": 34.4174,
+              "away": 13.1554
+            },
+            "M3: Efficiency": {
+              "margin": 4.5
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 1
+            },
+            "M5: Luck": {
+              "home": "-0.8",
+              "away": "0.4"
+            },
+            "M6: Sharp Money": {
+              "home_b": 53.98,
+              "home_m": 40.68,
+              "away_b": 46.02,
+              "away_m": 59.32
+            },
+            "M8: Line Movement": {
+              "open_home": -5.5,
+              "current_home": -3.5,
+              "delta": 2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -5.5,
+                "last": -5.0,
+                "delta": 0.5
+              }
+            }
+          },
+          "team_home": "Bowling Green Falcons",
+          "team_away": "Kent State Golden Flashes",
+          "start": "2026-11-11T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 42.0,
+              "home_m": 41.0,
+              "away_b": 58.0,
+              "away_m": 59.0,
+              "line": "-5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 56.0,
+              "home_m": 36.0,
+              "away_b": 44.0,
+              "away_m": 64.0,
+              "line": "-4.5",
+              "thin": false
+            }
+          },
+          "event_id": "401866459"
+        },
+        {
+          "game": "Miami (OH) RedHawks (H) vs Ohio Bobcats (A)",
+          "spread": "OHIO -1.5",
+          "favorite": "Ohio Bobcats -fav",
+          "confidence": "78%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Ohio Bobcats",
+            "M2: Relevance": "TAKE: Ohio Bobcats",
+            "M3: Efficiency": "TAKE: Ohio Bobcats",
+            "M4: ATS Trends": "TAKE: Ohio Bobcats",
+            "M5: Luck": "TAKE: Miami (OH) RedHawks",
+            "M6: Sharp Money": "TAKE: Ohio Bobcats",
+            "M8: Line Movement": "TAKE: Ohio Bobcats",
+            "CONSENSUS": "TAKE: Ohio Bobcats",
+            "Sharp: Circa": "TAKE: Miami (OH) RedHawks",
+            "Sharp: DraftKings": "TAKE: Miami (OH) RedHawks"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 12,
+              "away": 28
+            },
+            "M2: Relevance": {
+              "home": 12.1351,
+              "away": 33.4958
+            },
+            "M3: Efficiency": {
+              "margin": -4.6
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 5
+            },
+            "M5: Luck": {
+              "home": "0.2",
+              "away": "1.1"
+            },
+            "M6: Sharp Money": {
+              "home_b": 38.11,
+              "home_m": 30.72,
+              "away_b": 61.89,
+              "away_m": 69.28
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": 1.5,
+              "delta": 3.0,
+              "crosses_key": false,
+              "size": 3.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 1.0,
+                "last": 1.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Miami (OH) RedHawks",
+          "team_away": "Ohio Bobcats",
+          "start": "2026-11-11T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 17.0,
+              "home_m": 20.0,
+              "away_b": 83.0,
+              "away_m": 80.0,
+              "line": "+1",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 39.0,
+              "home_m": 50.0,
+              "away_b": 61.0,
+              "away_m": 50.0,
+              "line": "+1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401866460"
+        }
+      ]
     }
   ]
 }
