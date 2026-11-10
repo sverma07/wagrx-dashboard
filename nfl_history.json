@@ -1,7 +1,73 @@
 {
   "sport": "NFL",
-  "updated": "2026-11-09T06:15:27-05:00",
+  "updated": "2026-11-10T06:05:03-05:00",
   "days": {
+    "2026-11-09": [
+      {
+        "game": "Minnesota Vikings (H) vs Buffalo Bills (A)",
+        "team_home": "Minnesota Vikings",
+        "team_away": "Buffalo Bills",
+        "line": "BUF -3",
+        "favorite": "Buffalo Bills -fav",
+        "final": "Minnesota Vikings 6, Buffalo Bills 23",
+        "cover": "Buffalo Bills",
+        "status": null,
+        "confidence": "87%",
+        "sharp": {
+          "home_b": 38.25,
+          "home_m": 49.86,
+          "away_b": 61.75,
+          "away_m": 50.14
+        },
+        "graded_run": "2026-11-09T20:05:47-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Minnesota Vikings",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Minnesota Vikings",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      }
+    ],
     "2026-11-08": [
       {
         "game": "Atlanta Falcons (H) vs Cincinnati Bengals (A)",
