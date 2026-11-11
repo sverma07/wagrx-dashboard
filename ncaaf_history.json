@@ -1,7 +1,189 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-11-10T06:00:03-05:00",
+  "updated": "2026-11-11T06:35:02-05:00",
   "days": {
+    "2026-11-10": [
+      {
+        "game": "Akron Zips (H) vs Western Michigan Broncos (A)",
+        "team_home": "Akron Zips",
+        "team_away": "Western Michigan Broncos",
+        "line": "WMU -14",
+        "favorite": "Western Michigan Broncos -fav",
+        "final": "Akron Zips 14, Western Michigan Broncos 42",
+        "cover": "Western Michigan Broncos",
+        "status": null,
+        "confidence": "61%",
+        "sharp": {
+          "home_b": 38.38,
+          "home_m": 50.93,
+          "away_b": 61.62,
+          "away_m": 49.07
+        },
+        "graded_run": "2026-11-10T18:45:30-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Western Michigan Broncos",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Western Michigan Broncos",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Akron Zips",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Akron Zips",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Akron Zips",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Akron Zips",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Western Michigan Broncos",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Akron Zips",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Western Michigan Broncos",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Akron Zips",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Bowling Green Falcons (H) vs Kent State Golden Flashes (A)",
+        "team_home": "Bowling Green Falcons",
+        "team_away": "Kent State Golden Flashes",
+        "line": "BGSU -5.5",
+        "favorite": "Bowling Green Falcons -fav",
+        "final": "Bowling Green Falcons 33, Kent State Golden Flashes 28",
+        "cover": "Kent State Golden Flashes",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 53.98,
+          "home_m": 40.68,
+          "away_b": 46.02,
+          "away_m": 59.32
+        },
+        "graded_run": "2026-11-10T18:45:30-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Bowling Green Falcons",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Bowling Green Falcons",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Kent State Golden Flashes",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Bowling Green Falcons",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Bowling Green Falcons",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Kent State Golden Flashes",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Kent State Golden Flashes",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Bowling Green Falcons",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Kent State Golden Flashes",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Kent State Golden Flashes",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Miami (OH) RedHawks (H) vs Ohio Bobcats (A)",
+        "team_home": "Miami (OH) RedHawks",
+        "team_away": "Ohio Bobcats",
+        "line": "OHIO -1.5",
+        "favorite": "Ohio Bobcats -fav",
+        "final": "Miami (OH) RedHawks 34, Ohio Bobcats 17",
+        "cover": "Miami (OH) RedHawks",
+        "status": null,
+        "confidence": "78%",
+        "sharp": {
+          "home_b": 38.11,
+          "home_m": 30.72,
+          "away_b": 61.89,
+          "away_m": 69.28
+        },
+        "graded_run": "2026-11-10T19:00:37-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Ohio Bobcats",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Ohio Bobcats",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Ohio Bobcats",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Ohio Bobcats",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Miami (OH) RedHawks",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Ohio Bobcats",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Ohio Bobcats",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Ohio Bobcats",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Miami (OH) RedHawks",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Miami (OH) RedHawks",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-11-09": [],
     "2026-11-08": [],
     "2026-11-07": [
