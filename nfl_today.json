@@ -372,6 +372,101 @@
           "event_id": "401873052"
         }
       ]
+    },
+    {
+      "time": "2026-11-12T15:05:04-05:00",
+      "games": [
+        {
+          "game": "New York Giants (H) vs Washington Commanders (A)",
+          "spread": "NYG -2.5",
+          "favorite": "New York Giants -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: New York Giants",
+            "M2: Relevance": "TAKE: New York Giants",
+            "M3: Efficiency": "TAKE: Washington Commanders",
+            "M4: ATS Trends": "TAKE: New York Giants",
+            "M5: Luck": "N/A",
+            "M6: Sharp Money": "TAKE: Washington Commanders",
+            "M7: QB Injury Edge": "TAKE: Washington Commanders",
+            "M8: Line Movement": "TAKE: New York Giants",
+            "CONSENSUS": "TAKE: New York Giants",
+            "Sharp: Circa": "TAKE: New York Giants",
+            "Sharp: DraftKings": "TAKE: New York Giants"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 36,
+              "away": 11
+            },
+            "M2: Relevance": {
+              "home": 47.2279,
+              "away": 13.2003
+            },
+            "M3: Efficiency": {
+              "margin": 2.5
+            },
+            "M4: ATS Trends": {
+              "home": 12,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "N/A",
+              "away": "N/A"
+            },
+            "M6: Sharp Money": {
+              "home_b": 52.44,
+              "home_m": 33.91,
+              "away_b": 47.56,
+              "away_m": 66.09
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Jaxson Dart (Injured Reserve) -> J.J. McCarthy (Questionable) starting",
+              "away_status": "Jayden Daniels (Active)"
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -2.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -2.0,
+                "last": -2.0,
+                "delta": 0.0
+              },
+              "vs_consensus": "agree"
+            }
+          },
+          "team_home": "New York Giants",
+          "team_away": "Washington Commanders",
+          "start": "2026-11-13T01:15Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 85.0,
+              "home_m": 89.0,
+              "away_b": 15.0,
+              "away_m": 11.0,
+              "line": "-2",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 75.0,
+              "home_m": 76.0,
+              "away_b": 25.0,
+              "away_m": 24.0,
+              "line": "-2.5",
+              "thin": false
+            }
+          },
+          "home_id": "19",
+          "away_id": "28",
+          "event_id": "401873052"
+        }
+      ]
     }
   ]
 }
