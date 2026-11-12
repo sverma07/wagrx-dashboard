@@ -1986,6 +1986,261 @@
           "event_id": "401866463"
         }
       ]
+    },
+    {
+      "time": "2026-11-11T21:00:03-05:00",
+      "games": [
+        {
+          "game": "Ball State Cardinals (H) vs Buffalo Bulls (A)",
+          "spread": "BUF -1.5",
+          "favorite": "Buffalo Bulls -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Buffalo Bulls",
+            "M2: Relevance": "TAKE: Buffalo Bulls",
+            "M3: Efficiency": "TAKE: Buffalo Bulls",
+            "M4: ATS Trends": "TAKE: Ball State Cardinals",
+            "M5: Luck": "TAKE: Ball State Cardinals",
+            "M6: Sharp Money": "TAKE: Buffalo Bulls",
+            "M8: Line Movement": "TAKE: Ball State Cardinals",
+            "CONSENSUS": "TAKE: Buffalo Bulls",
+            "Sharp: Circa": "TAKE: Ball State Cardinals",
+            "Sharp: DraftKings": "TAKE: Ball State Cardinals"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 15,
+              "away": 27
+            },
+            "M2: Relevance": {
+              "home": 14.6161,
+              "away": 30.2216
+            },
+            "M3: Efficiency": {
+              "margin": -6.3
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 3
+            },
+            "M5: Luck": {
+              "home": "0.1",
+              "away": "1.9"
+            },
+            "M6: Sharp Money": {
+              "home_b": 30.38,
+              "home_m": 18.92,
+              "away_b": 69.62,
+              "away_m": 81.08
+            },
+            "M8: Line Movement": {
+              "open_home": 3.0,
+              "current_home": 1.5,
+              "delta": -1.5,
+              "crosses_key": true,
+              "size": 1.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": 1.5,
+                "last": 1.0,
+                "delta": -0.5
+              }
+            }
+          },
+          "team_home": "Ball State Cardinals",
+          "team_away": "Buffalo Bulls",
+          "start": "2026-11-12T00:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 32.0,
+              "home_m": 49.0,
+              "away_b": 68.0,
+              "away_m": 51.0,
+              "line": "+1",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 26.0,
+              "home_m": 46.0,
+              "away_b": 74.0,
+              "away_m": 54.0,
+              "line": "+1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401866461",
+          "locked_run": "2026-11-11T19:00:03-05:00"
+        },
+        {
+          "game": "Central Michigan Chippewas (H) vs Sacramento State Hornets (A)",
+          "spread": "CMU -18.5",
+          "favorite": "Central Michigan Chippewas -fav",
+          "confidence": "58%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Central Michigan Chippewas",
+            "M2: Relevance": "TAKE: Central Michigan Chippewas",
+            "M3: Efficiency": "TAKE: Sacramento State Hornets",
+            "M4: ATS Trends": "TAKE: Central Michigan Chippewas",
+            "M5: Luck": "TAKE: Sacramento State Hornets",
+            "M6: Sharp Money": "TAKE: Central Michigan Chippewas",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Central Michigan Chippewas",
+            "Sharp: Circa": "TAKE: Central Michigan Chippewas",
+            "Sharp: DraftKings": "TAKE: Central Michigan Chippewas"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 35,
+              "away": 9
+            },
+            "M2: Relevance": {
+              "home": 36.5047,
+              "away": 10.7798
+            },
+            "M3: Efficiency": {
+              "margin": 7.2
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 3
+            },
+            "M5: Luck": {
+              "home": "-0.2",
+              "away": "-0.7"
+            },
+            "M6: Sharp Money": {
+              "home_b": 51.16,
+              "home_m": 52.75,
+              "away_b": 48.84,
+              "away_m": 47.25
+            },
+            "M8: Line Movement": {
+              "open_home": -15.5,
+              "current_home": -17.5,
+              "delta": -2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -18.0,
+                "last": -17.0,
+                "delta": 1.0
+              },
+              "conflict": true
+            }
+          },
+          "team_home": "Central Michigan Chippewas",
+          "team_away": "Sacramento State Hornets",
+          "start": "2026-11-12T00:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 83.0,
+              "home_m": 100.0,
+              "away_b": 17.0,
+              "away_m": 0.0,
+              "line": "-17",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 67.0,
+              "home_m": 68.0,
+              "away_b": 33.0,
+              "away_m": 32.0,
+              "line": "-17.5",
+              "thin": false
+            }
+          },
+          "event_id": "401866462",
+          "locked_run": "2026-11-11T19:00:03-05:00"
+        },
+        {
+          "game": "Toledo Rockets (H) vs UMass Minutemen (A)",
+          "spread": "TOL -14",
+          "favorite": "Toledo Rockets -fav",
+          "confidence": "58%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Toledo Rockets",
+            "M2: Relevance": "TAKE: Toledo Rockets",
+            "M3: Efficiency": "TAKE: UMass Minutemen",
+            "M4: ATS Trends": "TAKE: Toledo Rockets",
+            "M5: Luck": "TAKE: UMass Minutemen",
+            "M6: Sharp Money": "TAKE: Toledo Rockets",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Toledo Rockets",
+            "Sharp: Circa": "TAKE: UMass Minutemen",
+            "Sharp: DraftKings": "TAKE: UMass Minutemen"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 31,
+              "away": 8
+            },
+            "M2: Relevance": {
+              "home": 35.9605,
+              "away": 9.7164
+            },
+            "M3: Efficiency": {
+              "margin": 3.2
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 2
+            },
+            "M5: Luck": {
+              "home": "0.6",
+              "away": "0.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": 47.3,
+              "home_m": 52.77,
+              "away_b": 52.7,
+              "away_m": 47.23
+            },
+            "M8: Line Movement": {
+              "open_home": -14.0,
+              "current_home": -14.0,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": -14.0,
+                "last": -14.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Toledo Rockets",
+          "team_away": "UMass Minutemen",
+          "start": "2026-11-12T00:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 42.0,
+              "home_m": 20.0,
+              "away_b": 58.0,
+              "away_m": 80.0,
+              "line": "-14",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 58.0,
+              "home_m": 55.0,
+              "away_b": 42.0,
+              "away_m": 45.0,
+              "line": "-14",
+              "thin": false
+            }
+          },
+          "event_id": "401866463",
+          "locked_run": "2026-11-11T19:00:03-05:00"
+        }
+      ]
     }
   ]
 }
