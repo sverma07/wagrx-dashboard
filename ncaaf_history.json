@@ -1,7 +1,189 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-11-11T06:35:02-05:00",
+  "updated": "2026-11-12T06:35:02-05:00",
   "days": {
+    "2026-11-11": [
+      {
+        "game": "Ball State Cardinals (H) vs Buffalo Bulls (A)",
+        "team_home": "Ball State Cardinals",
+        "team_away": "Buffalo Bulls",
+        "line": "BUF -1.5",
+        "favorite": "Buffalo Bulls -fav",
+        "final": "Ball State Cardinals 7, Buffalo Bulls 28",
+        "cover": "Buffalo Bulls",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 30.38,
+          "home_m": 18.92,
+          "away_b": 69.62,
+          "away_m": 81.08
+        },
+        "graded_run": "2026-11-11T19:00:03-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Buffalo Bulls",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Buffalo Bulls",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Buffalo Bulls",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Ball State Cardinals",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Ball State Cardinals",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Buffalo Bulls",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Ball State Cardinals",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Buffalo Bulls",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Ball State Cardinals",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Ball State Cardinals",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Central Michigan Chippewas (H) vs Sacramento State Hornets (A)",
+        "team_home": "Central Michigan Chippewas",
+        "team_away": "Sacramento State Hornets",
+        "line": "CMU -18.5",
+        "favorite": "Central Michigan Chippewas -fav",
+        "final": "Central Michigan Chippewas 28, Sacramento State Hornets 7",
+        "cover": "Central Michigan Chippewas",
+        "status": null,
+        "confidence": "58%",
+        "sharp": {
+          "home_b": 51.16,
+          "home_m": 52.75,
+          "away_b": 48.84,
+          "away_m": 47.25
+        },
+        "graded_run": "2026-11-11T19:00:03-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Sacramento State Hornets",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Sacramento State Hornets",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Central Michigan Chippewas",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Toledo Rockets (H) vs UMass Minutemen (A)",
+        "team_home": "Toledo Rockets",
+        "team_away": "UMass Minutemen",
+        "line": "TOL -14",
+        "favorite": "Toledo Rockets -fav",
+        "final": "Toledo Rockets 24, UMass Minutemen 0",
+        "cover": "Toledo Rockets",
+        "status": null,
+        "confidence": "58%",
+        "sharp": {
+          "home_b": 47.3,
+          "home_m": 52.77,
+          "away_b": 52.7,
+          "away_m": 47.23
+        },
+        "graded_run": "2026-11-11T19:00:03-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Toledo Rockets",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Toledo Rockets",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Toledo Rockets",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Toledo Rockets",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Toledo Rockets",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-11-10": [
       {
         "game": "Akron Zips (H) vs Western Michigan Broncos (A)",
