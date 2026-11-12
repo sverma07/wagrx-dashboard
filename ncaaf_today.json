@@ -827,6 +827,175 @@
           "event_id": "401869969"
         }
       ]
+    },
+    {
+      "time": "2026-11-12T17:00:02-05:00",
+      "games": [
+        {
+          "game": "South Florida Bulls (H) vs Memphis Tigers (A)",
+          "spread": "MEM -3.5",
+          "favorite": "Memphis Tigers -fav",
+          "confidence": "59%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Memphis Tigers",
+            "M2: Relevance": "TAKE: Memphis Tigers",
+            "M3: Efficiency": "TAKE: South Florida Bulls",
+            "M4: ATS Trends": "TAKE: Memphis Tigers",
+            "M5: Luck": "TAKE: South Florida Bulls",
+            "M6: Sharp Money": "TAKE: South Florida Bulls",
+            "M8: Line Movement": "TAKE: South Florida Bulls",
+            "CONSENSUS": "TAKE: Memphis Tigers",
+            "Sharp: Circa": "TAKE: Memphis Tigers",
+            "Sharp: DraftKings": "TAKE: Memphis Tigers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 15,
+              "away": 24
+            },
+            "M2: Relevance": {
+              "home": 18.0696,
+              "away": 25.7949
+            },
+            "M3: Efficiency": {
+              "margin": -3.0
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 6
+            },
+            "M5: Luck": {
+              "home": "-0.4",
+              "away": "0.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": 34.95,
+              "home_m": 48.69,
+              "away_b": 65.05,
+              "away_m": 51.31
+            },
+            "M8: Line Movement": {
+              "open_home": 6.0,
+              "current_home": 4.0,
+              "delta": -2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 3.5,
+                "last": 3.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "South Florida Bulls",
+          "team_away": "Memphis Tigers",
+          "start": "2026-11-13T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 62.0,
+              "home_m": 51.0,
+              "away_b": 38.0,
+              "away_m": 49.0,
+              "line": "+3.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 40.0,
+              "home_m": 17.0,
+              "away_b": 60.0,
+              "away_m": 83.0,
+              "line": "+3.5",
+              "thin": false
+            }
+          },
+          "event_id": "401862824"
+        },
+        {
+          "game": "Louisiana-Monroe Warhawks (H) vs Louisiana Ragin' Cajuns (A)",
+          "spread": "UL -10.5",
+          "favorite": "Louisiana Ragin' Cajuns -fav",
+          "confidence": "79%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Louisiana Ragin' Cajuns",
+            "M2: Relevance": "TAKE: Louisiana Ragin' Cajuns",
+            "M3: Efficiency": "TAKE: Louisiana Ragin' Cajuns",
+            "M4: ATS Trends": "TAKE: Louisiana Ragin' Cajuns",
+            "M5: Luck": "TAKE: Louisiana-Monroe Warhawks",
+            "M6: Sharp Money": "TAKE: Louisiana-Monroe Warhawks",
+            "M8: Line Movement": "TAKE: Louisiana-Monroe Warhawks",
+            "CONSENSUS": "TAKE: Louisiana Ragin' Cajuns",
+            "Sharp: Circa": "TAKE: Louisiana Ragin' Cajuns",
+            "Sharp: DraftKings": "TAKE: Louisiana Ragin' Cajuns"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 6,
+              "away": 37
+            },
+            "M2: Relevance": {
+              "home": 8.9192,
+              "away": 41.925
+            },
+            "M3: Efficiency": {
+              "margin": -10.7
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 9
+            },
+            "M5: Luck": {
+              "home": "0.1",
+              "away": "0.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": 31.99,
+              "home_m": 36.38,
+              "away_b": 68.01,
+              "away_m": 63.62
+            },
+            "M8: Line Movement": {
+              "open_home": 10.5,
+              "current_home": 10.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.5,
+              "sources": [
+                "circa"
+              ],
+              "circa": {
+                "first": 10.5,
+                "last": 10.0,
+                "delta": -0.5
+              }
+            }
+          },
+          "team_home": "Louisiana-Monroe Warhawks",
+          "team_away": "Louisiana Ragin' Cajuns",
+          "start": "2026-11-13T02:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 11.0,
+              "home_m": 0.0,
+              "away_b": 89.0,
+              "away_m": 100.0,
+              "line": "+10",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 29.0,
+              "home_m": 17.0,
+              "away_b": 71.0,
+              "away_m": 83.0,
+              "line": "+10",
+              "thin": false
+            }
+          },
+          "event_id": "401869969"
+        }
+      ]
     }
   ]
 }
