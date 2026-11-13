@@ -1,7 +1,73 @@
 {
   "sport": "NFL",
-  "updated": "2026-11-12T06:15:02-05:00",
+  "updated": "2026-11-13T06:15:02-05:00",
   "days": {
+    "2026-11-12": [
+      {
+        "game": "New York Giants (H) vs Washington Commanders (A)",
+        "team_home": "New York Giants",
+        "team_away": "Washington Commanders",
+        "line": "NYG -2.5",
+        "favorite": "New York Giants -fav",
+        "final": "New York Giants 21, Washington Commanders 24",
+        "cover": "Washington Commanders",
+        "status": null,
+        "confidence": "79%",
+        "sharp": {
+          "home_b": 55.59,
+          "home_m": 36.21,
+          "away_b": 44.41,
+          "away_m": 63.79
+        },
+        "graded_run": "2026-11-12T19:46:08-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "New York Giants",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "New York Giants",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Washington Commanders",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "New York Giants",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Washington Commanders",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "New York Giants",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "New York Giants",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "New York Giants",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-11-11": [],
     "2026-11-10": [],
     "2026-11-09": [
