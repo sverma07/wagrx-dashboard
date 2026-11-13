@@ -1,7 +1,129 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-11-12T06:35:02-05:00",
+  "updated": "2026-11-13T06:35:02-05:00",
   "days": {
+    "2026-11-12": [
+      {
+        "game": "South Florida Bulls (H) vs Memphis Tigers (A)",
+        "team_home": "South Florida Bulls",
+        "team_away": "Memphis Tigers",
+        "line": "MEM -3.5",
+        "favorite": "Memphis Tigers -fav",
+        "final": "South Florida Bulls 41, Memphis Tigers 52",
+        "cover": "Memphis Tigers",
+        "status": null,
+        "confidence": "59%",
+        "sharp": {
+          "home_b": 34.95,
+          "home_m": 48.69,
+          "away_b": 65.05,
+          "away_m": 51.31
+        },
+        "graded_run": "2026-11-12T19:00:03-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Memphis Tigers",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Memphis Tigers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "South Florida Bulls",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Memphis Tigers",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "South Florida Bulls",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "South Florida Bulls",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "South Florida Bulls",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Memphis Tigers",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Memphis Tigers",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Memphis Tigers",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Louisiana-Monroe Warhawks (H) vs Louisiana Ragin' Cajuns (A)",
+        "team_home": "Louisiana-Monroe Warhawks",
+        "team_away": "Louisiana Ragin' Cajuns",
+        "line": "UL -10.5",
+        "favorite": "Louisiana Ragin' Cajuns -fav",
+        "final": "Louisiana-Monroe Warhawks 21, Louisiana Ragin' Cajuns 42",
+        "cover": "Louisiana Ragin' Cajuns",
+        "status": null,
+        "confidence": "79%",
+        "sharp": {
+          "home_b": 31.99,
+          "home_m": 36.38,
+          "away_b": 68.01,
+          "away_m": 63.62
+        },
+        "graded_run": "2026-11-12T19:00:03-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Louisiana Ragin' Cajuns",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Louisiana Ragin' Cajuns",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Louisiana Ragin' Cajuns",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Louisiana Ragin' Cajuns",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Louisiana-Monroe Warhawks",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Louisiana-Monroe Warhawks",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Louisiana-Monroe Warhawks",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Louisiana Ragin' Cajuns",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Louisiana Ragin' Cajuns",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Louisiana Ragin' Cajuns",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-11-11": [
       {
         "game": "Ball State Cardinals (H) vs Buffalo Bulls (A)",
