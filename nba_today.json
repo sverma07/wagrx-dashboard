@@ -2969,6 +2969,344 @@
           "event_id": "401909979"
         }
       ]
+    },
+    {
+      "time": "2026-11-12T21:10:03-05:00",
+      "games": [
+        {
+          "game": "Philadelphia 76ers (H) vs Toronto Raptors (A)",
+          "spread": "PHI -9.5",
+          "favorite": "Philadelphia 76ers -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Toronto Raptors",
+            "M2: Relevance": "TAKE: Toronto Raptors",
+            "M3: Efficiency": "TAKE: Toronto Raptors",
+            "M4: ATS Trends": "TAKE: Philadelphia 76ers",
+            "M5: Luck": "TAKE: Toronto Raptors",
+            "M6: Sharp Money": "TAKE: Toronto Raptors",
+            "M8: Line Movement": "TAKE: Toronto Raptors",
+            "CONSENSUS": "TAKE: Toronto Raptors",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Philadelphia 76ers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 50,
+              "away": 53
+            },
+            "M2: Relevance": {
+              "home": 56.4186,
+              "away": 88.51
+            },
+            "M3: Efficiency": {
+              "margin": -0.7
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 3
+            },
+            "M5: Luck": {
+              "home": "2.1",
+              "away": "-1.4"
+            },
+            "M6: Sharp Money": {
+              "home_b": 64.65,
+              "home_m": 63.66,
+              "away_b": 35.35,
+              "away_m": 36.34
+            },
+            "M8: Line Movement": {
+              "open_home": -9.5,
+              "current_home": -7.5,
+              "delta": 2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -10.0,
+                "last": -8.5,
+                "delta": 1.5
+              }
+            }
+          },
+          "team_home": "Philadelphia 76ers",
+          "team_away": "Toronto Raptors",
+          "start": "2026-11-13T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 100.0,
+              "home_m": 100.0,
+              "away_b": 0.0,
+              "away_m": 0.0,
+              "line": "-8.5",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 60.0,
+              "home_m": 87.0,
+              "away_b": 40.0,
+              "away_m": 13.0,
+              "line": "-8.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909976",
+          "locked_run": "2026-11-12T18:56:03-05:00"
+        },
+        {
+          "game": "Washington Wizards (H) vs Detroit Pistons (A)",
+          "spread": "DET -10.5",
+          "favorite": "Detroit Pistons -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Detroit Pistons",
+            "M2: Relevance": "TAKE: Detroit Pistons",
+            "M3: Efficiency": "TAKE: Washington Wizards",
+            "M4: ATS Trends": "TAKE: Detroit Pistons",
+            "M5: Luck": "TAKE: Washington Wizards",
+            "M6: Sharp Money": "TAKE: Washington Wizards",
+            "M8: Line Movement": "TAKE: Detroit Pistons",
+            "CONSENSUS": "TAKE: Detroit Pistons",
+            "Sharp: Circa": "TAKE: Detroit Pistons",
+            "Sharp: DraftKings": "TAKE: Detroit Pistons"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 27,
+              "away": 78
+            },
+            "M2: Relevance": {
+              "home": 25.4435,
+              "away": 122.2725
+            },
+            "M3: Efficiency": {
+              "margin": -6.9
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 10
+            },
+            "M5: Luck": {
+              "home": "-0.6",
+              "away": "0.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": 38.07,
+              "home_m": 39.43,
+              "away_b": 61.93,
+              "away_m": 60.57
+            },
+            "M8: Line Movement": {
+              "open_home": 9.5,
+              "current_home": 10.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 10.5,
+                "last": 11.0,
+                "delta": 0.5
+              }
+            }
+          },
+          "team_home": "Washington Wizards",
+          "team_away": "Detroit Pistons",
+          "start": "2026-11-13T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 67.0,
+              "home_m": 3.0,
+              "away_b": 33.0,
+              "away_m": 97.0,
+              "line": "+11",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 41.0,
+              "home_m": 12.0,
+              "away_b": 60.0,
+              "away_m": 88.0,
+              "line": "+10.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909977",
+          "locked_run": "2026-11-12T18:56:03-05:00"
+        },
+        {
+          "game": "Minnesota Timberwolves (H) vs Dallas Mavericks (A)",
+          "spread": "MIN -5.5",
+          "favorite": "Minnesota Timberwolves -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Minnesota Timberwolves",
+            "M2: Relevance": "TAKE: Minnesota Timberwolves",
+            "M3: Efficiency": "TAKE: Dallas Mavericks",
+            "M4: ATS Trends": "TAKE: Minnesota Timberwolves",
+            "M5: Luck": "TAKE: Minnesota Timberwolves",
+            "M6: Sharp Money": "TAKE: Dallas Mavericks",
+            "M8: Line Movement": "TAKE: Minnesota Timberwolves",
+            "CONSENSUS": "TAKE: Minnesota Timberwolves",
+            "Sharp: Circa": "TAKE: Dallas Mavericks",
+            "Sharp: DraftKings": "TAKE: Dallas Mavericks"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 76,
+              "away": 29
+            },
+            "M2: Relevance": {
+              "home": 110.2423,
+              "away": 38.6434
+            },
+            "M3: Efficiency": {
+              "margin": 3.1
+            },
+            "M4: ATS Trends": {
+              "home": 12,
+              "away": 1
+            },
+            "M5: Luck": {
+              "home": "0.4",
+              "away": "1.5"
+            },
+            "M6: Sharp Money": {
+              "home_b": 41.45,
+              "home_m": 33.77,
+              "away_b": 58.55,
+              "away_m": 66.23
+            },
+            "M8: Line Movement": {
+              "open_home": -4.5,
+              "current_home": -5.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -5.5,
+                "last": -5.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Minnesota Timberwolves",
+          "team_away": "Dallas Mavericks",
+          "start": "2026-11-13T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 33.0,
+              "home_m": 0.0,
+              "away_b": 67.0,
+              "away_m": 100.0,
+              "line": "-5.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 50.0,
+              "home_m": 44.0,
+              "away_b": 50.0,
+              "away_m": 56.0,
+              "line": "-5.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909978",
+          "locked_run": "2026-11-12T19:46:11-05:00"
+        },
+        {
+          "game": "Phoenix Suns (H) vs Charlotte Hornets (A)",
+          "spread": "PHX -6.5",
+          "favorite": "Phoenix Suns -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Phoenix Suns",
+            "M2: Relevance": "TAKE: Phoenix Suns",
+            "M3: Efficiency": "TAKE: Charlotte Hornets",
+            "M4: ATS Trends": "TAKE: Charlotte Hornets",
+            "M5: Luck": "PUSH",
+            "M6: Sharp Money": "TAKE: Phoenix Suns",
+            "M8: Line Movement": "TAKE: Charlotte Hornets",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Charlotte Hornets"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 53,
+              "away": 49
+            },
+            "M2: Relevance": {
+              "home": 81.033,
+              "away": 62.2715
+            },
+            "M3: Efficiency": {
+              "margin": 3.2
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 6
+            },
+            "M5: Luck": {
+              "home": "0.2",
+              "away": "0.2"
+            },
+            "M6: Sharp Money": {
+              "home_b": 76.86,
+              "home_m": 78.85,
+              "away_b": 23.14,
+              "away_m": 21.15
+            },
+            "M8: Line Movement": {
+              "open_home": -7.5,
+              "current_home": -6.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -6.5,
+                "last": -6.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Phoenix Suns",
+          "team_away": "Charlotte Hornets",
+          "start": "2026-11-13T02:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 100.0,
+              "home_m": 100.0,
+              "away_b": 0.0,
+              "away_m": 0.0,
+              "line": "-6.5",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 73.0,
+              "home_m": 46.0,
+              "away_b": 27.0,
+              "away_m": 54.0,
+              "line": "-6.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909979",
+          "locked_run": "2026-11-12T19:46:11-05:00"
+        }
+      ]
     }
   ]
 }
