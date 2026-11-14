@@ -1298,6 +1298,193 @@
           "event_id": "401856860"
         }
       ]
+    },
+    {
+      "time": "2026-11-13T19:00:03-05:00",
+      "games": [
+        {
+          "game": "Pittsburgh Panthers (H) vs Florida State Seminoles (A)",
+          "spread": "PITT -3.5",
+          "favorite": "Pittsburgh Panthers -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Pittsburgh Panthers",
+            "M2: Relevance": "TAKE: Pittsburgh Panthers",
+            "M3: Efficiency": "TAKE: Florida State Seminoles",
+            "M4: ATS Trends": "TAKE: Florida State Seminoles",
+            "M5: Luck": "TAKE: Florida State Seminoles",
+            "M6: Sharp Money": "TAKE: Florida State Seminoles",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Florida State Seminoles",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 25,
+              "away": 20
+            },
+            "M2: Relevance": {
+              "home": 28.9506,
+              "away": 25.3506
+            },
+            "M3: Efficiency": {
+              "margin": 3.5
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 7
+            },
+            "M5: Luck": {
+              "home": "-0.3",
+              "away": "-0.7"
+            },
+            "M6: Sharp Money": {
+              "home_b": 47.46,
+              "home_m": 22.24,
+              "away_b": 52.54,
+              "away_m": 77.76
+            },
+            "M8: Line Movement": {
+              "open_home": -3.0,
+              "current_home": -3.0,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Pittsburgh Panthers",
+          "team_away": "Florida State Seminoles",
+          "start": "2026-11-14T00:00Z",
+          "sharp_books": {},
+          "event_id": "401858293",
+          "locked_run": "2026-11-13T18:41:06-05:00"
+        },
+        {
+          "game": "UCLA Bruins (H) vs Illinois Fighting Illini (A)",
+          "spread": "UCLA -10",
+          "favorite": "UCLA Bruins -fav",
+          "confidence": "59%",
+          "picks": {
+            "M1: Normal Score": "TAKE: UCLA Bruins",
+            "M2: Relevance": "TAKE: UCLA Bruins",
+            "M3: Efficiency": "TAKE: Illinois Fighting Illini",
+            "M4: ATS Trends": "TAKE: UCLA Bruins",
+            "M5: Luck": "TAKE: Illinois Fighting Illini",
+            "M6: Sharp Money": "TAKE: Illinois Fighting Illini",
+            "M8: Line Movement": "TAKE: Illinois Fighting Illini",
+            "CONSENSUS": "TAKE: UCLA Bruins",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 35,
+              "away": 6
+            },
+            "M2: Relevance": {
+              "home": 41.3274,
+              "away": 9.7463
+            },
+            "M3: Efficiency": {
+              "margin": 9.0
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 0
+            },
+            "M5: Luck": {
+              "home": "1.7",
+              "away": "0.8"
+            },
+            "M6: Sharp Money": {
+              "home_b": 57.01,
+              "home_m": 50.6,
+              "away_b": 42.99,
+              "away_m": 49.4
+            },
+            "M8: Line Movement": {
+              "open_home": -12.5,
+              "current_home": -10.5,
+              "delta": 2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "UCLA Bruins",
+          "team_away": "Illinois Fighting Illini",
+          "start": "2026-11-14T02:00Z",
+          "sharp_books": {},
+          "event_id": "401858526"
+        },
+        {
+          "game": "Colorado Buffaloes (H) vs Houston Cougars (A)",
+          "spread": "HOU -9.5",
+          "favorite": "Houston Cougars -fav",
+          "confidence": "74%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Houston Cougars",
+            "M2: Relevance": "TAKE: Houston Cougars",
+            "M3: Efficiency": "TAKE: Houston Cougars",
+            "M4: ATS Trends": "PUSH",
+            "M5: Luck": "TAKE: Colorado Buffaloes",
+            "M6: Sharp Money": "TAKE: Colorado Buffaloes",
+            "M8: Line Movement": "TAKE: Colorado Buffaloes",
+            "CONSENSUS": "TAKE: Houston Cougars",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 14,
+              "away": 31
+            },
+            "M2: Relevance": {
+              "home": 18.1407,
+              "away": 36.2774
+            },
+            "M3: Efficiency": {
+              "margin": -10.2
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 6
+            },
+            "M5: Luck": {
+              "home": "0.4",
+              "away": "0.6"
+            },
+            "M6: Sharp Money": {
+              "home_b": 15.63,
+              "home_m": 23.14,
+              "away_b": 84.37,
+              "away_m": 76.86
+            },
+            "M8: Line Movement": {
+              "open_home": 10.5,
+              "current_home": 7.5,
+              "delta": -3.0,
+              "crosses_key": false,
+              "size": 3.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Colorado Buffaloes",
+          "team_away": "Houston Cougars",
+          "start": "2026-11-14T03:15Z",
+          "sharp_books": {},
+          "event_id": "401856860"
+        }
+      ]
     }
   ]
 }
