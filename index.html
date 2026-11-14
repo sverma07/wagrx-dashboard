@@ -1795,7 +1795,7 @@ function renderCombo() {
   el.innerHTML = `<div id="combo-best-wrap">${comboBestHtml(games)}</div>` + dims + `<div id="combo-result-wrap">${comboResultHtml(games)}</div>`
     + `<div class="perf-note" style="margin-top:12px">Consensus record in games matching your picks. "Aligned" means that signal picked the same team as consensus. `
     + `Min confidence includes games at or above the slider value. Best is ranked by win rate discounted for sample size, so tiny samples do not top the list. <button type="button" class="filter-clear" onclick="resetCombo()">Reset</button></div>`
-    + wilsonTableHtml(perfSport);
+    + wilsonTableHtml(perfSport) + wilsonSliderHtml(perfSport);
 }
 
 // Every winning combination for the sport ranked by Wilson score (95% lower bound on its win rate), top 10.
@@ -1808,6 +1808,59 @@ function wilsonTableHtml(sportKey) {
   return `<div class="win-combos" style="margin-top:14px"><div class="win-combos-label">Top combinations by Wilson score</div>`
     + (rows || `<div class="win-combo-more">No winning combinations yet.</div>`)
     + `<div class="win-combo-more">Wilson score is a cautious estimate of the true win rate, discounted for small samples. Above 50% means the edge is likely real.</div></div>`;
+}
+
+// ---- Record by Wilson score: each graded game's Wilson score is the best Wilson bound among the winning combinations
+// it fits (0 when it fits none). The slider sets a minimum, and the readout is consensus's record in games at or above it.
+let wilsonSlider = 50;
+function gameWilsonPct(sportKey, x) {
+  const lists = comboListsFor(sportKey);
+  if (x.wsLists === lists) return x.ws;
+  const f = comboFacts(x);
+  const fit = lists.wins.filter(c => comboMatch(f, c.sel));
+  x.wsLists = lists;
+  return (x.ws = fit.length ? Math.floor(Math.max(...fit.map(c => c.score)) * 100 + 1e-9) : 0);
+}
+function wilsonRecord(sportKey, min) {
+  let w = 0, l = 0;
+  for (const x of histGames[sportKey] || []) {
+    if (gameWilsonPct(sportKey, x) < min) continue;
+    if (x.result === "WIN") w++; else l++;
+  }
+  return { w, l, n: w + l };
+}
+function wilsonRecordText(sportKey, min) {
+  const r = wilsonRecord(sportKey, min);
+  if (!r.n) return `<span class="win-combo-more">No graded games at ${min}% or higher.</span>`;
+  const rate = Math.round(r.w / r.n * 100);
+  return `<b>${r.w}-${r.l}</b> (${rate}%) in ${r.n} game${r.n === 1 ? "" : "s"} with a Wilson score of ${min}% or higher`;
+}
+function setWilsonSlider(v) {
+  wilsonSlider = Number(v);
+  const val = document.getElementById("wilson-slider-val"), out = document.getElementById("wilson-slider-out");
+  if (val) val.textContent = wilsonSlider + "%+";
+  if (out) out.innerHTML = wilsonRecordText(perfSport, wilsonSlider);
+}
+function wilsonSliderHtml(sportKey) {
+  const games = histGames[sportKey] || [];
+  const scores = games.map(x => gameWilsonPct(sportKey, x)).filter(v => v > 0);
+  const top = scores.length ? Math.max(...scores) : 0;
+  if (top < 51) {
+    return `<div class="win-combos" style="margin-top:14px"><div class="win-combos-label">Record by Wilson score</div>`
+      + `<div class="win-combo-more">No graded game has a Wilson score above 50% yet, so there is nothing to slide over.</div></div>`;
+  }
+  const cur = Math.min(Math.max(wilsonSlider, 50), top);
+  const steps = [50, 55, 60, 65, 70].filter(v => v <= top).map(v => {
+    const r = wilsonRecord(sportKey, v);
+    return `<span class="win-combo-more">${v}%+: ${r.w}-${r.l}${r.n ? " (" + Math.round(r.w / r.n * 100) + "%)" : ""}</span>`;
+  }).join(" &middot; ");
+  return `<div class="win-combos" style="margin-top:14px"><div class="win-combos-label">Record by Wilson score</div>`
+    + `<div class="combo-dim"><span class="combo-dim-label">Min Wilson</span>`
+    + `<input type="range" class="combo-slider" min="50" max="${top}" step="1" value="${cur}" aria-label="Minimum Wilson score" oninput="setWilsonSlider(this.value)">`
+    + `<span class="combo-conf-val" id="wilson-slider-val">${cur}%+</span></div>`
+    + `<div id="wilson-slider-out" style="margin-top:6px">${wilsonRecordText(sportKey, cur)}</div>`
+    + `<div style="margin-top:6px">${steps}</div>`
+    + `<div class="win-combo-more">A game's Wilson score is the best score among the winning combinations it fits. Those combinations were found in these same graded games, so these records look better than future results will.</div></div>`;
 }
 
 function comboCardHtml() {
