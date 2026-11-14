@@ -1,7 +1,189 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-11-13T06:35:02-05:00",
+  "updated": "2026-11-14T06:35:02-05:00",
   "days": {
+    "2026-11-13": [
+      {
+        "game": "Pittsburgh Panthers (H) vs Florida State Seminoles (A)",
+        "team_home": "Pittsburgh Panthers",
+        "team_away": "Florida State Seminoles",
+        "line": "PITT -3.5",
+        "favorite": "Pittsburgh Panthers -fav",
+        "final": "Pittsburgh Panthers 10, Florida State Seminoles 16",
+        "cover": "Florida State Seminoles",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 47.46,
+          "home_m": 22.24,
+          "away_b": 52.54,
+          "away_m": 77.76
+        },
+        "graded_run": "2026-11-13T18:41:06-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Pittsburgh Panthers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Pittsburgh Panthers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Florida State Seminoles",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Florida State Seminoles",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Florida State Seminoles",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Florida State Seminoles",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Florida State Seminoles",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "UCLA Bruins (H) vs Illinois Fighting Illini (A)",
+        "team_home": "UCLA Bruins",
+        "team_away": "Illinois Fighting Illini",
+        "line": "UCLA -10",
+        "favorite": "UCLA Bruins -fav",
+        "final": "UCLA Bruins 22, Illinois Fighting Illini 14",
+        "cover": "Illinois Fighting Illini",
+        "status": null,
+        "confidence": "59%",
+        "sharp": {
+          "home_b": 57.01,
+          "home_m": 50.6,
+          "away_b": 42.99,
+          "away_m": 49.4
+        },
+        "graded_run": "2026-11-13T19:00:03-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "UCLA Bruins",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "UCLA Bruins",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Illinois Fighting Illini",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "UCLA Bruins",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Illinois Fighting Illini",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Illinois Fighting Illini",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Illinois Fighting Illini",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "UCLA Bruins",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Colorado Buffaloes (H) vs Houston Cougars (A)",
+        "team_home": "Colorado Buffaloes",
+        "team_away": "Houston Cougars",
+        "line": "HOU -9.5",
+        "favorite": "Houston Cougars -fav",
+        "final": "Colorado Buffaloes 42, Houston Cougars 32",
+        "cover": "Colorado Buffaloes",
+        "status": null,
+        "confidence": "74%",
+        "sharp": {
+          "home_b": 15.5,
+          "home_m": 20.85,
+          "away_b": 84.5,
+          "away_m": 79.15
+        },
+        "graded_run": "2026-11-13T21:00:04-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Houston Cougars",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Houston Cougars",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Houston Cougars",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Luck": {
+            "pick": "Colorado Buffaloes",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Colorado Buffaloes",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Colorado Buffaloes",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Houston Cougars",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      }
+    ],
     "2026-11-12": [
       {
         "game": "South Florida Bulls (H) vs Memphis Tigers (A)",
