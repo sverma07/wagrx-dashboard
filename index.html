@@ -499,6 +499,8 @@
   .refresh-prog.done .refresh-stage { color: var(--win); font-weight: 600; }
   .refresh-check { flex: 0 0 auto; display: block; }
   .hist-record { font-weight: 700; color: var(--text); }
+  .vsin-warn { margin: 0 0 10px; padding: 9px 12px; border: 1px solid #f59e0b; border-radius: 12px; background: rgba(245,158,11,0.14); color: #fbbf24; font-size: 0.84rem; line-height: 1.35; }
+  .vsin-warn b { color: #fcd34d; }
   .hist-note { color: var(--text-dim); font-size: 0.8rem; margin: -6px 2px 12px; }
 </style>
 </head>
@@ -507,6 +509,8 @@
   <div class="brand-row">
     <img src="logo-banner.png" alt="WagrX" class="brand-logo">
   </div>
+
+  <div id="vsin-status"></div>
 
   <div class="nav-row">
     <div class="tab-bar" id="tab-bar"></div>
@@ -3019,6 +3023,26 @@ function refreshNow() {
     .then(() => { refreshBusy = false; pollRefresh(); });
 }
 
+// ---- VSiN status: the Circa and DraftKings splits are pulled from the owner's laptop (VSiN blocks the server), so an
+// amber bar shows when the last pull failed or is older than VSIN_STALE_MIN (laptop off or offline). vsin_status.json
+// is written by the server; a missing or unreadable file shows nothing.
+const VSIN_STALE_MIN = 330;
+function vsinStatusHtml(st) {
+  if (!st) return "";
+  const last = st.last_success ? Date.parse(st.last_success) : NaN;
+  const stale = !isNaN(last) && (Date.now() - last) / 60000 > VSIN_STALE_MIN;
+  if (st.ok && !stale) return "";
+  const when = !isNaN(last) ? new Date(last).toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" }) : null;
+  return `<div class="vsin-warn"><b>VSiN pull unsuccessful due to laptop connectivity.</b> Circa and DraftKings splits `
+    + `may be missing or out of date${when ? ` (last good pull ${when})` : ""}.</div>`;
+}
+function loadVsinStatus() {
+  fetch("vsin_status.json?ts=" + Date.now(), { cache: "no-store" })
+    .then(r => r.ok ? r.json() : null)
+    .then(st => { const el = document.getElementById("vsin-status"); if (el) el.innerHTML = vsinStatusHtml(st); })
+    .catch(() => {});
+}
+
 (function init() {
   let saved = null;
   try { saved = localStorage.getItem("wagrx-last-sport"); } catch (e) {}
@@ -3027,6 +3051,8 @@ function refreshNow() {
   setViewVisibility();
   loadSport(currentSport);
   pollRefresh();
+  loadVsinStatus();
+  setInterval(loadVsinStatus, 5 * 60000);
 })();
 </script>
 </body>
