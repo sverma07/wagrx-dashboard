@@ -3023,9 +3023,9 @@ function refreshNow() {
     .then(() => { refreshBusy = false; pollRefresh(); });
 }
 
-// ---- VSiN status: the Circa and DraftKings splits are pulled from the owner's laptop (VSiN blocks the server), so an
-// amber bar shows when the last pull failed or is older than VSIN_STALE_MIN (laptop off or offline). vsin_status.json
-// is written by the server; a missing or unreadable file shows nothing.
+// ---- Splits status: the Circa and DraftKings splits come from the Owls Insight API, so an amber bar shows when the last
+// pull failed or is older than VSIN_STALE_MIN. vsin_status.json is written by the server; a missing or unreadable file
+// shows nothing.
 const VSIN_STALE_MIN = 330;
 function vsinStatusHtml(st) {
   if (!st) return "";
@@ -3033,8 +3033,8 @@ function vsinStatusHtml(st) {
   const stale = !isNaN(last) && (Date.now() - last) / 60000 > VSIN_STALE_MIN;
   if (st.ok && !stale) return "";
   const when = !isNaN(last) ? new Date(last).toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" }) : null;
-  return `<div class="vsin-warn"><b>VSiN pull unsuccessful due to laptop connectivity.</b> Circa and DraftKings splits `
-    + `may be missing or out of date${when ? ` (last good pull ${when})` : ""}.</div>`;
+  return `<div class="vsin-warn"><b>Betting splits are unavailable right now.</b> Circa and DraftKings splits `
+    + `may be missing or out of date${when ? ` (last good pull ${when})` : ""}. Model picks are not affected.</div>`;
 }
 function loadVsinStatus() {
   fetch("vsin_status.json?ts=" + Date.now(), { cache: "no-store" })
