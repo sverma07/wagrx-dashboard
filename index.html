@@ -501,6 +501,15 @@
   .hist-record { font-weight: 700; color: var(--text); }
   .vsin-warn { margin: 0 0 10px; padding: 9px 12px; border: 1px solid #f59e0b; border-radius: 12px; background: rgba(245,158,11,0.14); color: #fbbf24; font-size: 0.84rem; line-height: 1.35; }
   .vsin-warn b { color: #fcd34d; }
+  .books-dd { margin: 10px 0 0; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--accent-soft); font-size: 0.8rem; }
+  .books-dd summary { cursor: pointer; font-weight: 600; }
+  .books-scroll { overflow-x: auto; margin-top: 8px; -webkit-overflow-scrolling: touch; }
+  .books-table { border-collapse: collapse; width: 100%; font-size: 0.76rem; white-space: nowrap; }
+  .books-table th { color: var(--text-dim); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; text-align: left; padding: 4px 8px 4px 0; }
+  .books-table td { padding: 4px 8px 4px 0; border-top: 1px solid var(--border); }
+  .books-table td:first-child { font-weight: 600; padding-right: 12px; }
+  .books-table .best { color: var(--win); font-weight: 700; }
+  .books-note { color: var(--text-dim); font-size: 0.7rem; margin-top: 6px; }
   .hist-note { color: var(--text-dim); font-size: 0.8rem; margin: -6px 2px 12px; }
 </style>
 </head>
@@ -1142,6 +1151,7 @@ function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
       <div class="models-wrap">
         <table class="models">${modelRows}${infoRows}</table>
       </div>
+      ${booksDropdownHtml(g, scope)}
       ${winCombosHtml(winMatches)}
     </div>
   `;
@@ -2039,6 +2049,75 @@ function winComboRows(list, cls) {
   return list.slice(0, WIN_CARD_MAX).map(c =>
     `<div class="win-combo"><span class="win-combo-phrase">${comboPhrase(c.sel)}</span>`
     + `<span class="win-combo-rec ${cls}">${c.w}-${c.l} (${Math.round(c.w / c.n * 100)}%)</span></div>`).join("");
+}
+
+// ---- Books dropdown: every book's lines and the betting splits for one game, from the Owls Insight API. The server writes
+// {sport}_books.json with each refresh; it is fetched the first time a Books dropdown is opened and shared by every card.
+const booksFiles = {};
+function booksDropdownHtml(g, scope) {
+  const sport = scope === "upcoming" ? upcomingSport : currentSport;
+  return `<details class="books-dd" data-sport="${sport}" data-game="${encodeURIComponent(g.game || "")}" ontoggle="loadBooks(this)">`
+    + `<summary>Books <span class="win-combo-count">lines and splits by book</span></summary><div class="books-body"></div></details>`;
+}
+function loadBooks(el) {
+  if (!el.open || el.dataset.loaded) return;
+  el.dataset.loaded = "1";
+  const body = el.querySelector(".books-body");
+  body.innerHTML = '<div class="win-combo-more">Loading&hellip;</div>';
+  const sport = el.dataset.sport;
+  if (!booksFiles[sport] || Date.now() - booksFiles[sport].at > 5 * 60000) {
+    booksFiles[sport] = { at: Date.now(), p: fetch(`${sport}_books.json?ts=${Date.now()}`, { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null) };
+  }
+  booksFiles[sport].p.then(data => {
+    const entry = data && data.games && data.games[decodeURIComponent(el.dataset.game)];
+    body.innerHTML = entry ? booksBodyHtml(entry, data.updated) : '<div class="win-combo-more">No book data for this game yet.</div>';
+  });
+}
+const fmtPrice = p => (p === null || p === undefined) ? "&ndash;" : (p > 0 ? "+" + p : String(p));
+const fmtPoint = p => (p === null || p === undefined) ? "" : (p > 0 ? "+" + p : String(p));
+function bestSet(rows, valueOf, groupOf) {
+  // Highest price among the books that share the most common line, so a better price at a worse number is not flagged.
+  const counts = {};
+  rows.forEach(r => { const g = groupOf(r); if (g !== null && g !== undefined) counts[g] = (counts[g] || 0) + 1; });
+  const common = Object.keys(counts).sort((a, b) => counts[b] - counts[a])[0];
+  let best = -Infinity;
+  rows.forEach(r => { if (String(groupOf(r)) === common && valueOf(r) > best) best = valueOf(r); });
+  return r => String(groupOf(r)) === common && valueOf(r) === best;
+}
+function booksBodyHtml(entry, updated) {
+  const rows = Object.entries(entry.books || {}).map(([key, b]) => ({ key, ...b }));
+  const spread = r => r.spread && r.spread.home, total = r => r.total;
+  const bestHomeSpread = bestSet(rows.filter(spread), r => r.spread.home.price, r => r.spread.home.point);
+  const bestOver = bestSet(rows.filter(total), r => r.total.over, r => r.total.point);
+  const bestUnder = bestSet(rows.filter(total), r => r.total.under, r => r.total.point);
+  const mlBest = side => { const vals = rows.map(r => r.ml && r.ml[side]).filter(x => typeof x === "number"); return Math.max(...vals); };
+  const bestMlHome = mlBest("home"), bestMlAway = mlBest("away");
+  const cls = f => f ? ' class="best"' : "";
+  const lineRows = rows.map(r => {
+    const sp = r.spread, tt = r.total, ml = r.ml;
+    const homeS = sp && sp.home ? `<span${cls(bestHomeSpread(r))}>${fmtPoint(sp.home.point)} (${fmtPrice(sp.home.price)})</span>` : "&ndash;";
+    const tot = tt ? `<span${cls(bestOver(r))}>o${tt.point} ${fmtPrice(tt.over)}</span> / <span${cls(bestUnder(r))}>u${tt.point} ${fmtPrice(tt.under)}</span>` : "&ndash;";
+    const m = ml ? `<span${cls(ml.home === bestMlHome)}>${fmtPrice(ml.home)}</span> / <span${cls(ml.away === bestMlAway)}>${fmtPrice(ml.away)}</span>` : "&ndash;";
+    return `<tr><td>${r.title}</td><td>${homeS}</td><td>${tot}</td><td>${m}</td></tr>`;
+  }).join("");
+  const lines = rows.length
+    ? `<div class="books-scroll"><table class="books-table"><tr><th>Book</th><th>Spread (home)</th><th>Total (over / under)</th><th>Moneyline (home / away)</th></tr>${lineRows}</table></div>`
+      + `<div class="books-note">Green is the best price among the books on the most common number.</div>`
+    : '<div class="win-combo-more">No lines from the books yet.</div>';
+  const names = { dk: "DraftKings", circa: "Circa", betmgm: "BetMGM (bets only)" };
+  const pct = (m, a, b) => (m && m[a] !== undefined && m[a] !== null)
+    ? `${m[a]}% bets${m[b] !== undefined && m[b] !== null ? ` / ${m[b]}% money` : ""}` : "&ndash;";
+  const splitRows = Object.entries(entry.splits || {}).map(([book, sp]) => {
+    const t = sp.total, s = sp.spread, m = sp.moneyline;
+    return `<tr><td>${names[book] || book}</td><td>${s ? pct(s, "home_bets_pct", "home_handle_pct") : "&ndash;"}</td>`
+      + `<td>${t ? pct(t, "over_bets_pct", "over_handle_pct") : "&ndash;"}</td><td>${m ? pct(m, "home_bets_pct", "home_handle_pct") : "&ndash;"}</td></tr>`;
+  }).join("");
+  const splits = splitRows
+    ? `<div class="win-combos-label" style="margin-top:10px">Betting splits</div><div class="books-scroll"><table class="books-table">`
+      + `<tr><th>Book</th><th>Spread (home)</th><th>Total (over)</th><th>Moneyline (home)</th></tr>${splitRows}</table></div>`
+    : "";
+  const when = updated ? `Updated ${new Date(updated).toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" })}. ` : "";
+  return lines + splits + `<div class="books-note">${when}Source: Owls Insight.</div>`;
 }
 
 // Expansion at the bottom of the card: the top 3 winning and top 3 losing combinations the game is in.
