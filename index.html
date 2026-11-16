@@ -509,6 +509,7 @@
   .books-table td { padding: 4px 6px 4px 0; border-top: 1px solid var(--border); vertical-align: top; }
   .books-table td:first-child { font-weight: 600; }
   .books-table .best { color: var(--win); font-weight: 700; }
+  .books-dim { color: var(--text-dim); font-style: italic; }
   .books-note { color: var(--text-dim); font-size: 0.7rem; margin-top: 6px; }
   .hist-note { color: var(--text-dim); font-size: 0.8rem; margin: -6px 2px 12px; }
 </style>
@@ -2106,12 +2107,14 @@ function booksBodyHtml(entry, updated) {
     return `<tr><td>${shortName(r.title)}</td><td>${homeS}</td><td>${tot}</td><td>${m}</td></tr>`;
   }).join("");
   const lines = rows.length
-    ? `<div class="books-scroll"><table class="books-table"><tr><th>Book</th><th>Spread</th><th>Total o/u</th><th>Money H/A</th></tr>${lineRows}</table></div>`
-      + `<div class="books-note">Spread is for the home team; moneyline is home / away. Green is the best price among the books on the most common number.</div>`
+    ? `<div class="books-scroll"><table class="books-table"><tr><th>Book</th><th>Spread</th><th>Total o/u</th><th>ML H/A</th></tr>${lineRows}</table></div>`
+      + `<div class="books-note">Spread is for the home team (away is the opposite); ML is home / away. Green is the best price among the books on the most common number.</div>`
     : '<div class="win-combo-more">No lines from the books yet.</div>';
   const names = { dk: "DraftKings", circa: "Circa", betmgm: "BetMGM" };
-  const cell = (m, a, b) => (m && m[a] !== undefined && m[a] !== null)
-    ? `${m[a]}%${m[b] !== undefined && m[b] !== null ? ` / ${m[b]}%` : ""}` : "&ndash;";
+  // Early-week placeholders (every figure 0, 50 or 100) mean almost no action yet, the same rule the sharp-money row uses.
+  const thin = m => { const v = Object.entries(m).filter(([k, x]) => /_pct$/.test(k) && typeof x === "number").map(([, x]) => x); return v.length > 0 && v.every(x => x === 0 || x === 50 || x === 100); };
+  const cell = (m, a, b) => !(m && m[a] !== undefined && m[a] !== null) ? "&ndash;" : thin(m) ? '<span class="books-dim">little action</span>'
+    : `${m[a]}%${m[b] !== undefined && m[b] !== null ? ` / ${m[b]}%` : ""}`;
   const splitRows = Object.entries(entry.splits || {}).map(([book, sp]) => {
     const t = sp.total, s = sp.spread, m = sp.moneyline;
     return `<tr><td>${names[book] || book}</td><td>${s ? cell(s, "home_bets_pct", "home_handle_pct") : "&ndash;"}</td>`
@@ -2119,8 +2122,8 @@ function booksBodyHtml(entry, updated) {
   }).join("");
   const splits = splitRows
     ? `<div class="win-combos-label" style="margin-top:10px">Betting splits (bets % / money %)</div><div class="books-scroll"><table class="books-table">`
-      + `<tr><th>Book</th><th>Spread</th><th>Over</th><th>Money</th></tr>${splitRows}</table></div>`
-      + `<div class="books-note">Home side for spread and moneyline, the over for totals. BetMGM shows bets only.</div>`
+      + `<tr><th>Book</th><th>Spread</th><th>Over</th><th>ML</th></tr>${splitRows}</table></div>`
+      + `<div class="books-note">Home side for spread and ML, the over for totals. BetMGM shows bets only. Little action means the figures are still early-week placeholders.</div>`
     : "";
   const when = updated ? `Updated ${new Date(updated).toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" })}. ` : "";
   return lines + splits + `<div class="books-note">${when}Source: Owls Insight.</div>`;
