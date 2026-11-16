@@ -1,7 +1,69 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-11-15T06:35:07-05:00",
+  "updated": "2026-11-16T06:35:02-05:00",
   "days": {
+    "2026-11-15": [
+      {
+        "game": "Oklahoma Sooners (H) vs Ole Miss Rebels (A)",
+        "team_home": "Oklahoma Sooners",
+        "team_away": "Ole Miss Rebels",
+        "line": "OU -2.5",
+        "favorite": "Oklahoma Sooners -fav",
+        "final": "Oklahoma Sooners 24, Ole Miss Rebels 17",
+        "cover": "Oklahoma Sooners",
+        "status": null,
+        "confidence": "61%",
+        "sharp": {
+          "home_b": 14.85,
+          "home_m": 7.85,
+          "away_b": 85.15,
+          "away_m": 92.15
+        },
+        "graded_run": "2026-11-15T11:00:03-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Ole Miss Rebels",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Oklahoma Sooners",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Ole Miss Rebels",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Oklahoma Sooners",
+            "result": "WIN"
+          },
+          "M5: Luck": {
+            "pick": "Oklahoma Sooners",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Ole Miss Rebels",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Ole Miss Rebels",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Oklahoma Sooners",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      }
+    ],
     "2026-11-14": [
       {
         "game": "Miami (FL) Hurricanes (H) vs Duke Blue Devils (A)",
