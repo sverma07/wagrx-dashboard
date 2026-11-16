@@ -2066,12 +2066,15 @@ function loadBooks(el) {
   const body = el.querySelector(".books-body");
   body.innerHTML = '<div class="win-combo-more">Loading&hellip;</div>';
   const sport = el.dataset.sport;
-  if (!booksFiles[sport] || Date.now() - booksFiles[sport].at > 5 * 60000) {
+  if (!booksFiles[sport] || Date.now() - booksFiles[sport].at > 2 * 60000) {
     booksFiles[sport] = { at: Date.now(), p: fetch(`${sport}_books.json?ts=${Date.now()}`, { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null) };
   }
   booksFiles[sport].p.then(data => {
     const entry = data && data.games && data.games[decodeURIComponent(el.dataset.game)];
     body.innerHTML = entry ? booksBodyHtml(entry, data.updated) : '<div class="win-combo-more">No book data for this game yet.</div>';
+    // A miss is not remembered: the next time the section is opened the file is fetched again (the server updates it
+    // with every refresh, and a copy loaded just before an update would otherwise stay wrong until the page reloads).
+    if (!entry) { delete booksFiles[sport]; delete el.dataset.loaded; }
   });
 }
 const fmtPrice = p => (p === null || p === undefined) ? "&ndash;" : (p > 0 ? "+" + p : String(p));
