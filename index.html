@@ -503,11 +503,11 @@
   .splits-warn b { color: #fcd34d; }
   .books-dd { margin: 10px 0 0; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--accent-soft); font-size: 0.8rem; }
   .books-dd summary { cursor: pointer; font-weight: 600; }
-  .books-scroll { overflow-x: auto; margin-top: 8px; -webkit-overflow-scrolling: touch; }
-  .books-table { border-collapse: collapse; width: 100%; font-size: 0.76rem; white-space: nowrap; }
-  .books-table th { color: var(--text-dim); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; text-align: left; padding: 4px 8px 4px 0; }
-  .books-table td { padding: 4px 8px 4px 0; border-top: 1px solid var(--border); }
-  .books-table td:first-child { font-weight: 600; padding-right: 12px; }
+  .books-scroll { margin-top: 8px; }
+  .books-table { border-collapse: collapse; width: 100%; table-layout: auto; font-size: 0.74rem; }
+  .books-table th { color: var(--text-dim); font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; text-align: left; padding: 3px 6px 3px 0; }
+  .books-table td { padding: 4px 6px 4px 0; border-top: 1px solid var(--border); vertical-align: top; }
+  .books-table td:first-child { font-weight: 600; }
   .books-table .best { color: var(--win); font-weight: 700; }
   .books-note { color: var(--text-dim); font-size: 0.7rem; margin-top: 6px; }
   .hist-note { color: var(--text-dim); font-size: 0.8rem; margin: -6px 2px 12px; }
@@ -2055,8 +2055,9 @@ function winComboRows(list, cls) {
 // {sport}_books.json with each refresh; it is fetched the first time a Books dropdown is opened and shared by every card.
 const booksFiles = {};
 function booksDropdownHtml(g, scope) {
+  if (scope === "history" || !g.event_id) return "";  // keyed by ESPN event id: the same two teams can play twice in a week
   const sport = scope === "upcoming" ? upcomingSport : currentSport;
-  return `<details class="books-dd" data-sport="${sport}" data-game="${encodeURIComponent(g.game || "")}" ontoggle="loadBooks(this)">`
+  return `<details class="books-dd" data-sport="${sport}" data-game="${encodeURIComponent(String(g.event_id))}" ontoggle="loadBooks(this)">`
     + `<summary>Books <span class="win-combo-count">lines and splits by book</span></summary><div class="books-body"></div></details>`;
 }
 function loadBooks(el) {
@@ -2093,28 +2094,30 @@ function booksBodyHtml(entry, updated) {
   const mlBest = side => { const vals = rows.map(r => r.ml && r.ml[side]).filter(x => typeof x === "number"); return Math.max(...vals); };
   const bestMlHome = mlBest("home"), bestMlAway = mlBest("away");
   const cls = f => f ? ' class="best"' : "";
+  const shortName = t => String(t || "").replace(" (exchange)", "").replace("Station Casinos", "Stations");
   const lineRows = rows.map(r => {
     const sp = r.spread, tt = r.total, ml = r.ml;
     const homeS = sp && sp.home ? `<span${cls(bestHomeSpread(r))}>${fmtPoint(sp.home.point)} (${fmtPrice(sp.home.price)})</span>` : "&ndash;";
-    const tot = tt ? `<span${cls(bestOver(r))}>o${tt.point} ${fmtPrice(tt.over)}</span> / <span${cls(bestUnder(r))}>u${tt.point} ${fmtPrice(tt.under)}</span>` : "&ndash;";
-    const m = ml ? `<span${cls(ml.home === bestMlHome)}>${fmtPrice(ml.home)}</span> / <span${cls(ml.away === bestMlAway)}>${fmtPrice(ml.away)}</span>` : "&ndash;";
-    return `<tr><td>${r.title}</td><td>${homeS}</td><td>${tot}</td><td>${m}</td></tr>`;
+    const tot = tt ? `${tt.point} <span${cls(bestOver(r))}>${fmtPrice(tt.over)}</span>/<span${cls(bestUnder(r))}>${fmtPrice(tt.under)}</span>` : "&ndash;";
+    const m = ml ? `<span${cls(ml.home === bestMlHome)}>${fmtPrice(ml.home)}</span>/<span${cls(ml.away === bestMlAway)}>${fmtPrice(ml.away)}</span>` : "&ndash;";
+    return `<tr><td>${shortName(r.title)}</td><td>${homeS}</td><td>${tot}</td><td>${m}</td></tr>`;
   }).join("");
   const lines = rows.length
-    ? `<div class="books-scroll"><table class="books-table"><tr><th>Book</th><th>Spread (home)</th><th>Total (over / under)</th><th>Moneyline (home / away)</th></tr>${lineRows}</table></div>`
-      + `<div class="books-note">Green is the best price among the books on the most common number.</div>`
+    ? `<div class="books-scroll"><table class="books-table"><tr><th>Book</th><th>Spread</th><th>Total o/u</th><th>Money H/A</th></tr>${lineRows}</table></div>`
+      + `<div class="books-note">Spread is for the home team; moneyline is home / away. Green is the best price among the books on the most common number.</div>`
     : '<div class="win-combo-more">No lines from the books yet.</div>';
-  const names = { dk: "DraftKings", circa: "Circa", betmgm: "BetMGM (bets only)" };
-  const pct = (m, a, b) => (m && m[a] !== undefined && m[a] !== null)
-    ? `${m[a]}% bets${m[b] !== undefined && m[b] !== null ? ` / ${m[b]}% money` : ""}` : "&ndash;";
+  const names = { dk: "DraftKings", circa: "Circa", betmgm: "BetMGM" };
+  const cell = (m, a, b) => (m && m[a] !== undefined && m[a] !== null)
+    ? `${m[a]}%${m[b] !== undefined && m[b] !== null ? ` / ${m[b]}%` : ""}` : "&ndash;";
   const splitRows = Object.entries(entry.splits || {}).map(([book, sp]) => {
     const t = sp.total, s = sp.spread, m = sp.moneyline;
-    return `<tr><td>${names[book] || book}</td><td>${s ? pct(s, "home_bets_pct", "home_handle_pct") : "&ndash;"}</td>`
-      + `<td>${t ? pct(t, "over_bets_pct", "over_handle_pct") : "&ndash;"}</td><td>${m ? pct(m, "home_bets_pct", "home_handle_pct") : "&ndash;"}</td></tr>`;
+    return `<tr><td>${names[book] || book}</td><td>${s ? cell(s, "home_bets_pct", "home_handle_pct") : "&ndash;"}</td>`
+      + `<td>${t ? cell(t, "over_bets_pct", "over_handle_pct") : "&ndash;"}</td><td>${m ? cell(m, "home_bets_pct", "home_handle_pct") : "&ndash;"}</td></tr>`;
   }).join("");
   const splits = splitRows
-    ? `<div class="win-combos-label" style="margin-top:10px">Betting splits</div><div class="books-scroll"><table class="books-table">`
-      + `<tr><th>Book</th><th>Spread (home)</th><th>Total (over)</th><th>Moneyline (home)</th></tr>${splitRows}</table></div>`
+    ? `<div class="win-combos-label" style="margin-top:10px">Betting splits (bets % / money %)</div><div class="books-scroll"><table class="books-table">`
+      + `<tr><th>Book</th><th>Spread</th><th>Over</th><th>Money</th></tr>${splitRows}</table></div>`
+      + `<div class="books-note">Home side for spread and moneyline, the over for totals. BetMGM shows bets only.</div>`
     : "";
   const when = updated ? `Updated ${new Date(updated).toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" })}. ` : "";
   return lines + splits + `<div class="books-note">${when}Source: Owls Insight.</div>`;
@@ -2500,7 +2503,7 @@ function upcomingAsGame(g, keyNumbers) {
     game: m.game, spread, favorite, confidence: m.confidence,
     picks: { ...m.picks, [LINE_MOVE_KEY]: toward ? `TAKE: ${toward}` : (hasLine ? "PUSH" : "N/A") },
     detail: { ...m.detail, [LINE_MOVE_KEY]: hasLine ? { open_home: g.open_home, current_home: g.current_home } : null },
-    team_home: m.team_home, team_away: m.team_away, start: g.start, sharp_books: m.sharp_books, keyNumbers,
+    team_home: m.team_home, team_away: m.team_away, start: g.start, sharp_books: m.sharp_books, keyNumbers, event_id: g.id,
   };
 }
 
