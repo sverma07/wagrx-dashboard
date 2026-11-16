@@ -499,8 +499,8 @@
   .refresh-prog.done .refresh-stage { color: var(--win); font-weight: 600; }
   .refresh-check { flex: 0 0 auto; display: block; }
   .hist-record { font-weight: 700; color: var(--text); }
-  .vsin-warn { margin: 0 0 10px; padding: 9px 12px; border: 1px solid #f59e0b; border-radius: 12px; background: rgba(245,158,11,0.14); color: #fbbf24; font-size: 0.84rem; line-height: 1.35; }
-  .vsin-warn b { color: #fcd34d; }
+  .splits-warn { margin: 0 0 10px; padding: 9px 12px; border: 1px solid #f59e0b; border-radius: 12px; background: rgba(245,158,11,0.14); color: #fbbf24; font-size: 0.84rem; line-height: 1.35; }
+  .splits-warn b { color: #fcd34d; }
   .books-dd { margin: 10px 0 0; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--accent-soft); font-size: 0.8rem; }
   .books-dd summary { cursor: pointer; font-weight: 600; }
   .books-scroll { overflow-x: auto; margin-top: 8px; -webkit-overflow-scrolling: touch; }
@@ -519,7 +519,7 @@
     <img src="logo-banner.png" alt="WagrX" class="brand-logo">
   </div>
 
-  <div id="vsin-status"></div>
+  <div id="splits-status"></div>
 
   <div class="nav-row">
     <div class="tab-bar" id="tab-bar"></div>
@@ -594,7 +594,7 @@ function sharpStrength(g) {
 }
 
 // Sharp-money sources. SBD lives in detail["M6: Sharp Money"]; Circa and DraftKings
-// (from VSiN Pro) in g.sharp_books. All are info only, graded but never consensus votes.
+// (from Owls Insight) in g.sharp_books. All are info only, graded but never consensus votes.
 const SHARP_SOURCES = [
   { key: "circa", label: "Circa", pick: "Sharp: Circa" },
   { key: "dk", label: "DraftKings", pick: "Sharp: DraftKings" },
@@ -892,7 +892,7 @@ function lineMoveBlock({ home, open, cur, toward, noteHtml = "", keyNumbers = [3
 }
 
 // ---- Per-book line moves for today's games, from the day's saved refreshes ----
-// Every refresh stores VSiN's Circa and DraftKings lines (always the home team's line) in sharp_books, so a game's
+// Every refresh stores Owls Insight's Circa and DraftKings lines (always the home team's line) in sharp_books, so a game's
 // movement at each book since the first refresh of the day can be read off the snapshots. The start is the first
 // refresh the game appears in (about 12:30 AM), not the opening line: earlier moves are not visible here.
 function parseBookLine(text) {
@@ -3103,22 +3103,22 @@ function refreshNow() {
 }
 
 // ---- Splits status: the Circa and DraftKings splits come from the Owls Insight API, so an amber bar shows when the last
-// pull failed or is older than VSIN_STALE_MIN. vsin_status.json is written by the server; a missing or unreadable file
+// pull failed or is older than SPLITS_STALE_MIN. splits_status.json is written by the server; a missing or unreadable file
 // shows nothing.
-const VSIN_STALE_MIN = 330;
-function vsinStatusHtml(st) {
+const SPLITS_STALE_MIN = 330;
+function splitsStatusHtml(st) {
   if (!st) return "";
   const last = st.last_success ? Date.parse(st.last_success) : NaN;
-  const stale = !isNaN(last) && (Date.now() - last) / 60000 > VSIN_STALE_MIN;
+  const stale = !isNaN(last) && (Date.now() - last) / 60000 > SPLITS_STALE_MIN;
   if (st.ok && !stale) return "";
   const when = !isNaN(last) ? new Date(last).toLocaleString([], { weekday: "short", hour: "numeric", minute: "2-digit" }) : null;
-  return `<div class="vsin-warn"><b>Betting splits are unavailable right now.</b> Circa and DraftKings splits `
+  return `<div class="splits-warn"><b>Betting splits are unavailable right now.</b> Circa and DraftKings splits `
     + `may be missing or out of date${when ? ` (last good pull ${when})` : ""}. Model picks are not affected.</div>`;
 }
-function loadVsinStatus() {
-  fetch("vsin_status.json?ts=" + Date.now(), { cache: "no-store" })
+function loadSplitsStatus() {
+  fetch("splits_status.json?ts=" + Date.now(), { cache: "no-store" })
     .then(r => r.ok ? r.json() : null)
-    .then(st => { const el = document.getElementById("vsin-status"); if (el) el.innerHTML = vsinStatusHtml(st); })
+    .then(st => { const el = document.getElementById("splits-status"); if (el) el.innerHTML = splitsStatusHtml(st); })
     .catch(() => {});
 }
 
@@ -3130,8 +3130,8 @@ function loadVsinStatus() {
   setViewVisibility();
   loadSport(currentSport);
   pollRefresh();
-  loadVsinStatus();
-  setInterval(loadVsinStatus, 5 * 60000);
+  loadSplitsStatus();
+  setInterval(loadSplitsStatus, 5 * 60000);
 })();
 </script>
 </body>
