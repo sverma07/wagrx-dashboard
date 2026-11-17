@@ -169,7 +169,12 @@
   .pill:hover { background: var(--accent); color: #fff; }
   .filter-panel { margin: 0 0 14px; padding: 12px 14px 4px; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; }
   .filter-panel[hidden] { display: none; }
-  .filter-panel .chip-row { margin: 0 0 10px; }
+  .filter-panel .chip-row { margin: 0 0 8px; }
+  .filter-section { padding: 10px 0; border-top: 1px solid var(--border); }
+  .filter-section:first-child { border-top: 0; padding-top: 2px; }
+  .filter-section:last-child { padding-bottom: 0; }
+  .filter-section-title { margin: 0 0 8px; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .filter-combos { gap: 6px; }
   .filter-panel .chip-label { min-width: 150px; }
   .filter-panel .filter-select { background-color: var(--neutral-bg); box-shadow: none; }
   .filter-panel .filter-select.on { background-color: var(--accent-soft); }
@@ -752,7 +757,14 @@ function chipGroupHtml(scope, key, opts = CHIP_GROUPS[key].opts) {
 
 // ---- Filter UI: Sort (and Result on History) stay visible; everything else lives in a Filters panel,
 // with a removable pill for each active filter. The filtering logic itself is unchanged.
-const PANEL_ORDER = ["cons", "moves", "sharp", "src", "align", "agree", "sharpVs", "lineVs", "conflict", "key"];
+// The panel groups related filters under a heading. "combos" holds the Best / Winning / Wilson combination buttons.
+const PANEL_SECTIONS = [
+  ["Combinations", ["combos"]],
+  ["Strength", ["cons", "sharp"]],
+  ["Line movement", ["moves", "lineVs"]],
+  ["Sharp money", ["src", "align", "agree", "sharpVs"]],
+  ["Other", ["conflict", "key"]],
+];
 const FILTER_ICON = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3H2l8 9.5V19l4 2v-8.5z"/></svg>';
 
 function filterSelectHtml(scope, d, inline) {
@@ -799,14 +811,19 @@ function toggleFilterPanel(btn) {
 function filterUiHtml(scope, defs, quickKeys, dateOpts, metaId, metaHtml, showBest = false) {
   const quick = defs.filter(d => quickKeys.includes(d.key));
   const pills = activePills(scope, defs);
-  const panel = PANEL_ORDER.map(k => {
+  const panelRow = k => {
+    if (k === "combos") return showBest ? `<div class="chip-row filter-combos">${bestButtonHtml(scope)}${winButtonHtml(scope)}${wilsonButtonHtml(scope)}</div>` : "";
     const d = defs.find(x => x.key === k);
     if (d) return quickKeys.includes(k) ? "" : `<div class="chip-row"><span class="chip-label">${d.label}</span>${filterSelectHtml(scope, d, false)}</div>`;
     return CHIP_GROUPS[k] ? chipGroupHtml(scope, k) : "";
+  };
+  const panel = PANEL_SECTIONS.map(([title, keys]) => {
+    const rows = keys.map(panelRow).join("");
+    return rows ? `<section class="filter-section"><h4 class="filter-section-title">${title}</h4>${rows}</section>` : "";
   }).join("");
   return `<div class="filter-ui"><div class="filter-bar"><div class="filter-row">${quick.map(d => filterSelectHtml(scope, d, true)).join("")}`
     + `<button type="button" class="filter-toggle${pills.length ? " on" : ""}" aria-expanded="${filterPanelOpen}" onclick="toggleFilterPanel(this)">${FILTER_ICON}Filters`
-    + `${pills.length ? ` <span class="filter-count">${pills.length}</span>` : ""}</button>${showBest ? bestButtonHtml(scope) + winButtonHtml(scope) + wilsonButtonHtml(scope) : ""}</div>`
+    + `${pills.length ? ` <span class="filter-count">${pills.length}</span>` : ""}</button></div>`
     + `<div class="filter-meta"${metaId ? ` id="${metaId}"` : ""}>${metaHtml}</div></div>`
     + (dateOpts ? chipGroupHtml(scope, "dates", dateOpts) : "")
     + (pills.length ? `<div class="pill-row">${pills.map(([k, t]) =>
