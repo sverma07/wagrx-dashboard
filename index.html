@@ -2150,7 +2150,12 @@ function scorePick(sp, g) {
     const tier = st && st.team === team ? { EXTREME: 6, STRONG: 3, LEAN: 0 }[st.label] || 0 : 0;
     score += tier;
     why.push({ t: `Sharp sources side with it${st && st.team === team ? ` (${st.label.toLowerCase()} money gap, ${st.gap} pts)` : ""}` });
-  } else if (f.sharp === "against") { score -= 15; why.push({ t: "Sharp sources lean the other way", warn: true }); }
+  } else if (f.sharp === "against") {
+    score -= 15;
+    const other = SHARP_SOURCES.filter(src => { const t = take(picks[src.pick]); return t && t !== team; }).map(src => src.label);
+    const cast = SHARP_SOURCES.filter(src => take(picks[src.pick])).length;
+    why.push({ t: `Most sharp sources lean the other way (${other.length} of ${cast}: ${other.join(", ")})`, warn: true });
+  }
   if (f.line === "aligned") { score += 8; why.push({ t: "The line has moved toward it" }); }
   else if (f.line === "against") { score -= 8; why.push({ t: "The line has moved against it", warn: true }); }
   const m = winMatchesFor(sp.key, f);
