@@ -909,7 +909,7 @@ function renderSharpRow(g, cover = null) {
     const st = splitStrength(sp, g);
     let body;
     if (st && st.thin) body = `<span class="dim">Too little action yet</span>`;
-    else if (st) body = `<span>${st.team}</span><span class="tag ${st.cls}">${st.label}</span><span class="dim">${st.gap.toFixed(1)}% gap</span>`
+    else if (st) body = `<span>${st.team}</span><span class="tag ${st.cls}">${st.label}</span><span class="dim" title="Share of the money on this side minus its share of the bets">${st.gap.toFixed(1)} pts more money than bets</span>`
       + (cover ? resultTag(st.team === cover ? "WIN" : "LOSS") : "");
     else body = `<span class="dim">Even (no gap)</span>`;
     lines.push({ st, html: cls => `<div class="sharp-line${cls}"><span class="sharp-src">${src.label}</span>${body}</div>` });
@@ -928,7 +928,7 @@ function renderSharpRow(g, cover = null) {
     if (consensusTeam) note += ag.team === consensusTeam
       ? '<span class="tag agree">WITH CONSENSUS</span>' : '<span class="tag disagree">AGAINST CONSENSUS</span>';
   } else if (ag) {
-    note = '<span class="sharp-note">Sharps split</span>';
+    note = '<span class="sharp-note">Sharp sources disagree</span>';
   }
   // Collapsed: just the best read (Circa, then DraftKings, then SBD). Expanded: every source.
   const many = lines.length > 1;
@@ -948,14 +948,14 @@ function fmtSpreadNum(n) { return n === 0 ? "PK" : (n > 0 ? "+" : "") + n; }
 function lineMoveBlock({ home, open, cur, toward, noteHtml = "", keyNumbers = [3, 7], extraRows = "", sizeOverride = null, via = "" }) {
   const lines = [`<div class="sharp-line"><span class="sharp-src">Open &rarr; now</span>`
     + `<span>${home} ${fmtSpreadNum(open)} &rarr; ${fmtSpreadNum(cur)}</span>`
-    + (toward ? "" : ` <span class="dim">(no real move)</span>`) + `</div>`];
+    + (toward ? "" : ` <span class="dim">(line hasn't moved)</span>`) + `</div>`];
   if (toward) {
     const size = sizeOverride !== null && sizeOverride !== undefined ? sizeOverride : Math.abs(cur - open);
     const lo = Math.min(open, cur), hi = Math.max(open, cur);
     const keys = keyNumbers.filter(k => [k, -k].some(x => lo <= x && x <= hi));
     lines.push(`<div class="sharp-line"><span class="sharp-src">Moved toward</span><span>${toward}</span>`
       + `<span class="dim">${size} ${size === 1 ? "pt" : "pts"}${via ? " " + via : ""}</span>`
-      + keys.map(k => `<span class="tag neutral">KEY ${k}</span>`).join("") + `</div>`);
+      + keys.map(k => `<span class="tag neutral" title="The line crossed ${k}, a common final margin in football">KEY ${k}</span>`).join("") + `</div>`);
   }
   return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Line movement</span>${noteHtml}</div>${lines.join("")}${extraRows}</div>`;
 }
@@ -1080,7 +1080,7 @@ function formatDetail(g, modelKey) {
 
   if (modelKey === "CONSENSUS") {
     const pick = (g.picks && g.picks.CONSENSUS) ? g.picks.CONSENSUS.replace("TAKE: ", "") : "N/A";
-    return `Weighted vote: <span class="num">${g.confidence || "N/A"}</span> for ${pick}`;
+    return `Model vote: <span class="num">${g.confidence || "N/A"}</span> for ${pick}`;
   }
 
   const d = (g.detail || {})[modelKey];
@@ -1106,14 +1106,14 @@ function formatDetail(g, modelKey) {
 
   if (modelKey.includes("Injury") && d.home_out !== undefined) {
     // NBA: the five biggest-minute players who are hurt, with the best healthy bench player as the replacement.
-    const side = (team, out, repl, impact) => `<b>${team}</b>` + (impact ? ` <span class="books-dim">(injury impact ${impact})</span>` : "")
+    const side = (team, out, repl, impact) => `<b>${team}</b>` + (impact ? ` <span class="books-dim">(injury impact ${impact}, higher is worse)</span>` : "")
       + (out.length ? out.map((p, i) => `<br>${p.name} <span class="num">(${p.status})</span>, ${p.min} min${repl[i] ? ` &rarr; ${repl[i]} in` : ""}`).join("") : `<br>No starters hurt`);
     return side(teamHome, d.home_out, d.home_repl || [], d.home_impact) + "<br><br>" + side(teamAway, d.away_out, d.away_repl || [], d.away_impact);
   }
   if (modelKey.includes("Injury")) {
     if (!d.home_status) return "No injury data available.";
     // QB first, then RB and middle linebacker (older snapshots only carry the QB).
-    const side = (team, qb, rb, mlb, impact) => `<b>${team}</b>` + (impact ? ` <span class="books-dim">(injury impact ${impact})</span>` : "")
+    const side = (team, qb, rb, mlb, impact) => `<b>${team}</b>` + (impact ? ` <span class="books-dim">(injury impact ${impact}, higher is worse)</span>` : "")
       + `<br>QB: <span class="num">${qb}</span>`
       + (rb !== undefined ? `<br>RB: <span class="num">${rb || "N/A"}</span><br>MLB: <span class="num">${mlb || "N/A"}</span>` : "");
     return side(teamHome, d.home_status, d.home_rb, d.home_mlb, d.home_impact) + "<br><br>" + side(teamAway, d.away_status, d.away_rb, d.away_mlb, d.away_impact);
@@ -1260,7 +1260,7 @@ function hydrateMarketStrips() {
       const sm = e.summary || {}, parts = [];
       const pickSide = el.dataset.pick === el.dataset.home ? "home" : el.dataset.pick === el.dataset.away ? "away" : null;
       const b = pickSide && sm.best && sm.best[pickSide];
-      if (b) parts.push(`<span class="mkt-chip" title="Best spread for the consensus pick across the books">Best: <b>${mktShort(el.dataset.pick)} ${signedPt(b.point)}</b> (${fmtPrice(b.price)}) ${String(b.book).replace(" (exchange)", "")}</span>`);
+      if (b) parts.push(`<span class="mkt-chip" title="Best spread for the consensus pick across the books">Best line: <b>${mktShort(el.dataset.pick)} ${signedPt(b.point)}</b> (${fmtPrice(b.price)}) ${String(b.book).replace(" (exchange)", "")}</span>`);
       if (sm.range && sm.range[1] - sm.range[0] >= 1.5) parts.push(`<span class="mkt-chip warn" title="The books are ${sm.range[1] - sm.range[0]} points apart on this game">Books differ ${sm.range[1] - sm.range[0]} pts</span>`);
       const hot = x => x.status === "Out" || x.status === "Doubtful";
       const n = e.inj ? e.inj.home.filter(hot).length + e.inj.away.filter(hot).length : 0;
@@ -1653,7 +1653,7 @@ function perfExtrasHtml(sportKey) {
   return `
     <div class="perf-sub">Consensus form</div>${form}
     <div class="perf-sub">Consensus by confidence</div>
-    <div class="perf-note">Calibration: if the consensus is well calibrated, the win rate rises with the confidence it states.</div>
+    <div class="perf-note">Calibration check: the higher the confidence the consensus states, the more often it should win.</div>
     <table class="perf"><tr><th>Confidence</th><th>Record</th><th>Win %</th><th>Avg stated</th></tr>${rows}</table>
     ${situationHtml(games)}${sourceQualityHtml(games)}${marketValueHtml(games)}`;
 }
@@ -2003,7 +2003,7 @@ function wilsonTableHtml(sportKey) {
     + `<span class="win-combo-rec">${c.w}-${c.l} (${Math.round(c.w / c.n * 100)}%) &middot; <b class="${c.score > WILSON_MIN ? "wilson-ok" : "wilson-low"}">Wilson ${Math.round(c.score * 100)}%</b></span></div>`).join("");
   return `<div class="win-combos" style="margin-top:14px"><div class="win-combos-label">Top combinations by Wilson score</div>`
     + (rows || `<div class="win-combo-more">No winning combinations yet.</div>`)
-    + `<div class="win-combo-more">Wilson score is a cautious estimate of the true win rate, discounted for small samples. Above 50% means the edge is likely real.</div></div>`;
+    + `<div class="win-combo-more">Wilson score is a cautious estimate of a combination's true win rate: a high win rate over few games is marked down. Above 50% suggests the edge is real, not luck.</div></div>`;
 }
 
 // ---- Record by Wilson score: each graded game's Wilson score is the best Wilson bound among the winning combinations
