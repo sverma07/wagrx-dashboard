@@ -3605,9 +3605,7 @@ function loadSplitsStatus() {
   let saved = null;
   try { saved = localStorage.getItem("wagrx-last-sport"); } catch (e) {}
   if (saved && SPORTS.some(s => s.key === saved)) currentSport = saved;
-  renderTabs();
-  setViewVisibility();
-  loadSport(currentSport);
+  selectTop();  // the dashboard opens on Top picks; currentSport is still the last sport you viewed
   refreshTopStars();
   setInterval(refreshTopStars, 10 * 60000);
   setInterval(pollNewRun, 2 * 60000);  // an open Today or Top picks tab picks up each new run on its own
