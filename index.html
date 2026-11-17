@@ -2190,8 +2190,8 @@ function winMatchesFor(sportKey, facts) {
   return { wins: w, losses: fits(losses), wilsonWins: w.filter(c => c.score > WILSON_MIN), wilson: w.length ? Math.max(...w.map(c => c.score)) : null };
 }
 
-// The combinations expansion shows on cards while either combination filter is actually filtering.
-function comboCardsOn(st, sportKey) { return (st.win && winReady(sportKey)) || (st.wilson && wilsonReady(sportKey)) || (st.best && !!bestSelFor(sportKey)); }
+// The combinations expansion is on every card once there are combinations to show (collapsed); the combination filters only narrow which games are listed.
+function comboCardsOn(st, sportKey) { return winReady(sportKey) || wilsonReady(sportKey) || !!bestSelFor(sportKey); }  // always offered once combinations exist; the filters only narrow the list
 
 const WIN_CARD_MAX = 3;
 function winComboRows(list, cls) {
