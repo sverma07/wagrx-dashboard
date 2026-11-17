@@ -1598,7 +1598,6 @@ function renderPerfTable(sport, data) {
       <td>${isSharp ? `${key === LINE_MOVE_KEY ? srcLabel : "Sharp: " + srcLabel} <span class="perf-info">(info, not in consensus${trackedSince(sport.key, key, data.since)})</span>` : key}</td>
       <td>${w}-${l}</td>
       <td class="perf-pct">${pct}</td>
-      <td class="perf-units ${sign}">${unitsTxt}</td>
       <td class="perf-units ${sign}">${roiTxt}</td>
     </tr>`;
   }).join("");
@@ -1611,7 +1610,7 @@ function renderPerfTable(sport, data) {
     <div class="perf-updated">Last graded: ${updated}</div>
     ${note}
     <table class="perf">
-      <tr><th>Model</th><th>Record</th><th>Win %</th><th title="Flat one-unit bets at -110">Units</th><th title="Units won per unit staked">ROI</th></tr>
+      <tr><th>Model</th><th>Record</th><th>Win %</th><th title="Units won per unit staked">ROI</th></tr>
       ${rows}
     </table>
     ${perfExtrasHtml(sport.key)}
