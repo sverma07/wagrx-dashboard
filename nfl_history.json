@@ -1,7 +1,73 @@
 {
   "sport": "NFL",
-  "updated": "2026-11-16T06:15:02-05:00",
+  "updated": "2026-11-17T06:15:02-05:00",
   "days": {
+    "2026-11-16": [
+      {
+        "game": "Baltimore Ravens (H) vs Los Angeles Chargers (A)",
+        "team_home": "Baltimore Ravens",
+        "team_away": "Los Angeles Chargers",
+        "line": "BAL -4.5",
+        "favorite": "Baltimore Ravens -fav",
+        "final": "Baltimore Ravens 20, Los Angeles Chargers 23",
+        "cover": "Los Angeles Chargers",
+        "status": null,
+        "confidence": "66%",
+        "sharp": {
+          "home_b": 49.58,
+          "home_m": 60.3,
+          "away_b": 50.42,
+          "away_m": 39.7
+        },
+        "graded_run": "2026-11-16T20:01:05-05:00",
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Los Angeles Chargers",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          },
+          "M5: Luck": {
+            "pick": "Los Angeles Chargers",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Baltimore Ravens",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Los Angeles Chargers",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-11-15": [
       {
         "game": "Detroit Lions (H) vs New England Patriots (A)",
