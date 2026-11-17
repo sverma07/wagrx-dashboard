@@ -528,8 +528,8 @@
   .mkt-tile-v { font-size: 0.95rem; font-weight: 700; margin: 2px 0; }
   .mkt-tile-s { font-size: 0.68rem; color: var(--text-dim); line-height: 1.25; }
   .mkt-tile.warn .mkt-tile-s { color: var(--loss); }
-  .mkt-line-hist { display: flex; align-items: center; gap: 8px; font-size: 0.72rem; color: var(--text-dim); }
-  .mkt-line-hist svg { color: var(--accent); flex-shrink: 0; }
+  .mkt-line-hist { font-size: 0.74rem; color: var(--text-dim); }
+  .mkt-line-hist b { color: var(--text); }
   .inj-team { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-top: 4px; }
   .inj-team-name { font-size: 0.74rem; font-weight: 700; margin-right: 2px; }
   .inj-chip { font-size: 0.68rem; border: 1px solid var(--border); border-radius: 999px; padding: 1px 7px; color: var(--text-dim); }
@@ -2247,15 +2247,13 @@ const escAttr = t => String(t || "").replace(/&/g, "&amp;").replace(/"/g, "&quot
 const mktShort = t => String(t || "").split(" ").slice(-1)[0];
 const signedPt = v => (v > 0 ? "+" : "") + v;
 
-// Sparkline of the home-side spread since we first saw the game.
-function sparklineHtml(series) {
+// Line movement since we first saw the game, as one plain sentence (the graph was a bare diagonal line that said nothing more).
+function sparklineHtml(series, homeShort, awayShort) {
   if (!series || series.length < 2) return "";
-  const W = 160, H = 30, ys = series.map(p => p[1]), lo = Math.min(...ys), hi = Math.max(...ys), span = hi - lo || 1;
-  const t0 = series[0][0], t1 = series[series.length - 1][0], tspan = t1 - t0 || 1;
-  const pts = series.map(p => `${(((p[0] - t0) / tspan) * (W - 6) + 3).toFixed(1)},${(H - 4 - ((p[1] - lo) / span) * (H - 8)).toFixed(1)}`).join(" ");
-  const last = series[series.length - 1][1], first = series[0][1];
-  return `<div class="mkt-line-hist"><svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Home spread moved from ${first} to ${last}"><polyline points="${pts}" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>`
-    + `<span>Line since first seen: ${signedPt(first)} &rarr; ${signedPt(last)}</span></div>`;
+  const first = series[0][1], last = series[series.length - 1][1], d = last - first;
+  if (d === 0) return "";
+  const toward = d > 0 ? awayShort : homeShort;  // a higher home number means the home side is less favored
+  return `<div class="mkt-line-hist">Line moved <b>${Math.abs(d)} pt${Math.abs(d) === 1 ? "" : "s"}</b> toward ${toward} since we first saw it (${homeShort} ${signedPt(first)} &rarr; ${signedPt(last)})</div>`;
 }
 
 // Market block at the top of the Books dropdown: three small tiles (market fair line, our model, spread across books), the line's
@@ -2288,7 +2286,7 @@ function marketBlockHtml(entry, ctx) {
       + `<div class="mkt-tile-v">${signedPt(sm.range[0])}${gap ? " to " + signedPt(sm.range[1]) : ""}</div><div class="mkt-tile-s">${gap >= 1.5 ? `Books differ ${gap} pts` : gap ? "Books close together" : "Books agree"}</div></div>`);
   }
   let html = tiles.length ? `<div class="mkt-tiles">${tiles.join("")}</div>` : "";
-  html += sparklineHtml(entry.series);
+  html += sparklineHtml(entry.series, hs, as);
   const inj = entry.inj;
   if (inj && (inj.home.length || inj.away.length)) {
     const chips = (team, arr) => arr.length
