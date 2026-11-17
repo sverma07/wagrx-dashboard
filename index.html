@@ -490,6 +490,9 @@
   .top-guide summary { cursor: pointer; font-weight: 700; }
   .top-guide p { color: var(--text-dim); margin: 8px 0; }
   .top-guide table.perf { margin: 6px 0; }
+  .score-dd .top-why { display: grid; margin: 4px 0; }
+  .score-dd .top-star { color: #fbbf24; margin-right: 6px; vertical-align: -3px; }
+  .score-dd .top-star svg { width: 15px; height: 15px; }
   .top-score { flex: 0 0 auto; text-align: right; font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
   .top-score b { display: block; font-size: 1.15rem; color: var(--text); letter-spacing: 0; }
   /* Manual refresh: button, allowance note and progress bar, under the status line. */
@@ -1167,6 +1170,7 @@ function lineMoveHtml(g) {
 // winMatches (Winning Combination filter only): { wins, losses } the game fits, shown in an expansion at the card's bottom.
 function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
   const picks = g.picks || {};
+  const sc = scope === "games" ? scorePick(SPORTS.find(x => x.key === currentSport), g) : null;  // same score as the Top picks tab
   const graded = grade && grade.cover;
   const gradeTag = pick => {
     if (!graded || !pick || !pick.startsWith("TAKE:")) return "";
@@ -1215,11 +1219,11 @@ function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
   if (!consensusTag && grade && grade.status) consensusTag = `<span class="tag neutral">${grade.status.split(" (")[0]}</span>`;
 
   return `
-    <div class="game-card" data-search="${searchKey}"${scope === "history" ? "" : ` data-topkey="${escAttr(topKey(scope === "upcoming" ? upcomingSport : currentSport, g.game))}"`}>
+    <div class="game-card" data-search="${searchKey}"${scope === "upcoming" ? ` data-topkey="${escAttr(topKey(upcomingSport, g.game))}"` : ""}>
       <div class="game-header" onclick="toggleCard(this)">
         <div class="game-title-row" role="button" tabindex="0" aria-expanded="false">
           <div>
-            <div class="game-title">${g.game || ""}</div>
+            <div class="game-title">${sc && sc.score >= STAR_MIN ? `<span class="top-star" title="Top pick: score ${STAR_MIN} or more">${STAR_SVG}</span>` : ""}${g.game || ""}</div>
             <div class="game-meta">${startTimeLabel(g, scope === "upcoming" && upcomingFilters.sort !== "start")}Line: ${g.spread || "N/A"}${scope === "games" ? lineMoveHtml(g) : ""} &middot; Favorite: ${favoriteName(g)}${finalMeta}</div>
           </div>
           <span class="chevron">&#9654;</span>
@@ -1238,6 +1242,7 @@ function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
       <div class="models-wrap">
         <table class="models">${modelRows}${infoRows}</table>
       </div>
+      ${scoreBlockHtml(sc)}
       ${booksDropdownHtml(g, scope)}
       ${winCombosHtml(winMatches)}
     </div>
@@ -2091,6 +2096,22 @@ function selectTop() {
   loadTop();
 }
 
+// Every run: when a new run has been published, the Today cards (if you are on the latest run) and the Top picks tab redraw together.
+function pollNewRun() {
+  if (currentView === "top") { loadTop(true); return; }
+  if (currentView !== "games" || !allSnapshots.length || currentSnap !== allSnapshots[allSnapshots.length - 1]) return;
+  const key = currentSport, sport = SPORTS.find(x => x.key === key);
+  fetch(sport.file, { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null).then(data => {
+    if (!data || key !== currentSport || currentView !== "games" || data.date !== todayDate) return;
+    const snaps = data.snapshots || [];
+    if (snaps.length <= allSnapshots.length) return;
+    allSnapshots = snaps;
+    populateRuntimeSelect(snaps);
+    renderSnapshot(snaps[snaps.length - 1]);
+    refreshTopStars();
+  });
+}
+
 function loadTop(silent) {
   const el = document.getElementById("toppicks");
   if (!silent) el.innerHTML = '<div class="empty-state">Loading&hellip;</div>';
@@ -2102,10 +2123,16 @@ function loadTop(silent) {
 
 // Score and reasons for one not-yet-started game, or null when it has no consensus pick to rate.
 function topPick(sp, g, ref, day) {
+  if (g.locked_run || (g.start && (new Date(g.start) <= ref || etDay(g.start) !== day))) return null;
+  return scorePick(sp, g);
+}
+
+// The score and reasons for any game with a consensus pick: the same numbers the Top picks tab and the game cards both show.
+function scorePick(sp, g) {
   const picks = g.picks || {};
   const take = p => { p = String(p || ""); return p.startsWith("TAKE:") ? p.replace("TAKE:", "").trim() : null; };
   const team = take(picks.CONSENSUS);
-  if (!team || g.locked_run || (g.start && (new Date(g.start) <= ref || etDay(g.start) !== day))) return null;
+  if (!team) return null;
   const why = [];
   let score = 0;
   const conf = parseFloat(g.confidence);
@@ -2138,6 +2165,13 @@ function topPick(sp, g, ref, day) {
     why.push({ t: `Fits a losing pattern: ${comboPhrase(c.sel)} (${c.w}-${c.l}, ${Math.round(c.w / c.n * 100)}%)`, warn: true });
   }
   return { sp, g, team, score, why };
+}
+
+// Collapsible "Pick score" row on a game card: the same score, tier and reasons as the Top picks tab.
+function scoreBlockHtml(sc) {
+  if (!sc) return "";
+  return `<details class="books-dd score-dd"><summary>${sc.score >= STAR_MIN ? `<span class="top-star">${STAR_SVG}</span>` : ""}Pick score <b>${Math.round(sc.score)}</b> `
+    + `<span class="win-combo-count">${topTier(sc.score)}</span></summary><div class="books-body"><ul class="top-why">${sc.why.map(w => `<li${w.warn ? ' class="warn"' : ""}>${w.t}</li>`).join("")}</ul></div></details>`;
 }
 
 function topItemHtml(it, rank) {
@@ -3576,7 +3610,7 @@ function loadSplitsStatus() {
   loadSport(currentSport);
   refreshTopStars();
   setInterval(refreshTopStars, 10 * 60000);
-  setInterval(() => { if (currentView === "top") loadTop(true); }, 2 * 60000);  // keep an open Top picks tab in step with the latest run
+  setInterval(pollNewRun, 2 * 60000);  // an open Today or Top picks tab picks up each new run on its own
   pollRefresh();
   loadSplitsStatus();
   setInterval(loadSplitsStatus, 5 * 60000);
