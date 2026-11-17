@@ -1142,7 +1142,9 @@ function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
     if (!graded || !pick || !pick.startsWith("TAKE:")) return "";
     return resultTag(pick.replace("TAKE:", "").trim() === grade.cover ? "WIN" : "LOSS");
   };
-  const modelKeys = Object.keys(picks);
+  // Models in number order (M1, M2, ...), whatever order the server wrote them in; non-model keys keep their place after.
+  const mNum = k => { const m = /^M(\d+):/.exec(k); return m ? +m[1] : 999; };
+  const modelKeys = Object.keys(picks).sort((a, b) => mNum(a) - mNum(b));
   // Each model's underlying numbers sit under its pick; models with nothing to show get no extra line.
   const det = key => { const t = formatDetail(g, key); return /^No /.test(t) ? "" : `<div class="model-detail">${t}</div>`; };
   const modelRows = modelKeys.filter(k => k !== "CONSENSUS" && !isSharpKey(k)).map(key => {
