@@ -2091,13 +2091,13 @@ function selectTop() {
   loadTop();
 }
 
-function loadTop() {
+function loadTop(silent) {
   const el = document.getElementById("toppicks");
-  if (!topRows) el.innerHTML = '<div class="empty-state">Loading&hellip;</div>';
+  if (!silent) el.innerHTML = '<div class="empty-state">Loading&hellip;</div>';
   Promise.all(SPORTS.map(sp => Promise.all([
     fetch(sp.file + "?_=" + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null),
     ensureBestCombo(sp.key).catch(() => {}),
-  ]).then(([d]) => [sp, d]))).then(rows => { topRows = rows; topRanks = {}; computeTop(null).items.filter(it => it.score >= STAR_MIN).forEach((it, i) => { topRanks[topKey(it.sp.key, it.g.game)] = i + 1; }); renderTop(); });
+  ]).then(([d]) => [sp, d]))).then(rows => { topRows = rows; topRanks = {}; computeTop(null).items.filter(it => it.score >= STAR_MIN).forEach((it, i) => { topRanks[topKey(it.sp.key, it.g.game)] = i + 1; }); if (currentView === "top") renderTop(); });
 }
 
 // Score and reasons for one not-yet-started game, or null when it has no consensus pick to rate.
@@ -2147,7 +2147,7 @@ function topItemHtml(it, rank) {
     <div class="top-main">
       <div><span class="top-sport">${it.sp.label}</span><b>${g.game || ""}</b></div>
       <div class="top-pick">${it.team}${pickLineHtml(g.spread, g.favorite, it.team, [g.team_home, g.team_away])}</div>
-      <div class="game-meta">${startTimeLabel(g, true)}Line: ${g.spread || "N/A"}</div>
+      <div class="game-meta">${startTimeLabel(g, true)}Line: ${g.spread || "N/A"} &middot; From the ${etClock(it.runAt)} ET run</div>
       <ul class="top-why">${it.why.map(w => `<li${w.warn ? ' class="warn"' : ""}>${w.t}</li>`).join("")}</ul>
       <div class="top-foot"><button type="button" class="filter-clear" onclick="event.stopPropagation(); selectSport('${it.sp.key}')">Open full ${it.sp.label} card</button></div>
     </div>
@@ -2182,7 +2182,7 @@ function computeTop(slot) {
     const snap = snaps[snaps.length - 1];
     if (!snap) { stale.push(sp.label); continue; }
     asOf.push(`${sp.label} ${new Date(snap.time).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })}`);
-    for (const g of snap.games || []) { const r = topPick(sp, g, ref, day); if (r) items.push(r); }
+    for (const g of snap.games || []) { const r = topPick(sp, g, ref, day); if (r) { r.runAt = snap.time; items.push(r); } }
   }
   items.sort((x, y) => y.score - x.score);
   return { slots, at, items, shown: items.slice(0, TOP_N), asOf, stale };
@@ -2293,7 +2293,7 @@ function comboPhrase(sel) {
   const parts = [];
   const rel = { aligned: "with consensus", against: "against consensus" };
   if (sel.sharp !== "any") parts.push(sel.sharp === "none" ? "No sharp consensus" : `Sharps ${rel[sel.sharp]}`);
-  if (sel.line !== "any") parts.push(sel.line === "none" ? "No line-move read" : `Line move ${rel[sel.line]}`);
+  if (sel.line !== "any") parts.push(sel.line === "none" ? "No line move yet" : `Line move ${rel[sel.line]}`);
   if (sel.conf !== "any") parts.push(`Confidence ${sel.conf}%+`);
   if (sel.side !== "any") parts.push(`Consensus on the ${sel.side === "fav" ? "favorite" : "underdog"}`);
   return parts.length ? parts.join(" &middot; ") : "All games";
@@ -3576,6 +3576,7 @@ function loadSplitsStatus() {
   loadSport(currentSport);
   refreshTopStars();
   setInterval(refreshTopStars, 10 * 60000);
+  setInterval(() => { if (currentView === "top") loadTop(true); }, 2 * 60000);  // keep an open Top picks tab in step with the latest run
   pollRefresh();
   loadSplitsStatus();
   setInterval(loadSplitsStatus, 5 * 60000);
