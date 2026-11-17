@@ -2164,6 +2164,7 @@ function topSlots() {
   for (const t of times) { if (slots.length && t - slots[slots.length - 1] < 20 * 60000) slots[slots.length - 1] = t; else slots.push(t); }
   return slots;
 }
+let topGuideOpen = false;  // the score guide starts rolled up and stays as left while the run changes
 let topSlot = null;  // chosen slot time in ms; null = the latest
 function setTopSlot(v) { topSlot = v === "" ? null : Number(v); renderTop(); }
 
@@ -2218,7 +2219,7 @@ function renderTop() {
   const sel = `<div class="controls-row"><label class="runtime-label">Run <select class="filter-select" onchange="setTopSlot(this.value)">`
     + slots.slice().reverse().map(t => `<option value="${t}"${t === at ? " selected" : ""}>${new Date(t).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })}${t === slots[slots.length - 1] ? " (latest)" : ""}</option>`).join("")
     + `</select></label></div>`;
-  const guide = `<details class="top-guide" open><summary>How the score works</summary>
+  const guide = `<details class="top-guide"${topGuideOpen ? " open" : ""} ontoggle="topGuideOpen = this.open"><summary>How the score works</summary>
     <div class="top-guide-body">
     <p>Each game's pick is our consensus: the vote of our models. The score rates how well other evidence backs that pick. Higher is stronger. It ranks picks against each other and is not a win probability.</p>
     <table class="perf"><tr><th>Signal</th><th>Points</th></tr>
