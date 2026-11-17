@@ -1144,7 +1144,8 @@ function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
   };
   // Models in number order (M1, M2, ...), whatever order the server wrote them in; non-model keys keep their place after.
   const mNum = k => { const m = /^M(\d+):/.exec(k); return m ? +m[1] : 999; };
-  const modelKeys = Object.keys(picks).sort((a, b) => mNum(a) - mNum(b));
+  // NBA and NCAAB replaced M5 Luck with M5 Rest: when a game has both (older games got Rest backfilled), show only Rest.
+  const modelKeys = Object.keys(picks).filter(k => !(k === "M5: Luck" && "M5: Rest" in picks)).sort((a, b) => mNum(a) - mNum(b));
   // Each model's underlying numbers sit under its pick; models with nothing to show get no extra line.
   const det = key => { const t = formatDetail(g, key); return /^No /.test(t) ? "" : `<div class="model-detail">${t}</div>`; };
   const modelRows = modelKeys.filter(k => k !== "CONSENSUS" && !isSharpKey(k)).map(key => {
@@ -3025,11 +3026,15 @@ function renderHistoryGame(g, date = null) {
   const dateLabel = date ? (([y, m, d]) => new Date(y, m - 1, d).toLocaleDateString("en-US", { month: "short", day: "numeric" }))(date.split("-").map(Number)) + " &middot; " : "";
   const picks = g.picks || {};
   const c = picks.CONSENSUS || {};
-  const modelRows = Object.entries(picks).filter(([k]) => k !== "CONSENSUS" && !isSharpKey(k)).map(([k, p]) =>
-    `<tr><td>${k}</td><td>${p.pick || "N/A"}${resultTag(p.result)}</td></tr>`
+  // Models in number order. A pick flagged "backfill" was computed afterwards (the rest model did not exist that day), so it is
+  // labelled and left out of the agreement count, which describes the consensus as it was made.
+  const mNum = k => { const m = /^M(\d+):/.exec(k); return m ? +m[1] : 999; };
+  const entries = Object.entries(picks).filter(([k]) => k !== "CONSENSUS" && !isSharpKey(k)).sort((a, b) => mNum(a[0]) - mNum(b[0]));
+  const modelRows = entries.map(([k, p]) =>
+    `<tr><td>${modelLabel(k)}${p.backfill ? ' <span class="books-dim">(added later, did not vote)</span>' : ""}</td><td>${p.pick || "N/A"}${resultTag(p.result)}</td></tr>`
   ).join("");
   const final = g.final ? ` &middot; Final: ${g.final}` : "";
-  const votes = Object.entries(picks).filter(([k]) => k !== "CONSENSUS" && !isSharpKey(k))
+  const votes = entries.filter(([, p]) => !p.backfill)
     .map(([, p]) => [g.team_home, g.team_away].includes(p.pick) ? p.pick : null);
   const agreement = agreementHtml(votes, c.pick);
   const consensusLine = pickLineHtml(g.line, g.favorite, c.pick, [g.team_home, g.team_away]);
