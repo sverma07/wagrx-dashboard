@@ -1068,6 +1068,12 @@ function formatDetail(g, modelKey) {
     return parts.length ? parts.join("<br>") : "No sharp money data available.";
   }
 
+  if (modelKey.includes("Injury") && d.home_out !== undefined) {
+    // NBA: the five biggest-minute players who are hurt, with the best healthy bench player as the replacement.
+    const side = (team, out, repl, impact) => `<b>${team}</b>` + (impact ? ` <span class="books-dim">(injury impact ${impact})</span>` : "")
+      + (out.length ? out.map((p, i) => `<br>${p.name} <span class="num">(${p.status})</span>, ${p.min} min${repl[i] ? ` &rarr; ${repl[i]} in` : ""}`).join("") : `<br>No starters hurt`);
+    return side(teamHome, d.home_out, d.home_repl || [], d.home_impact) + "<br><br>" + side(teamAway, d.away_out, d.away_repl || [], d.away_impact);
+  }
   if (modelKey.includes("Injury")) {
     if (!d.home_status) return "No injury data available.";
     // QB first, then RB and middle linebacker (older snapshots only carry the QB).
