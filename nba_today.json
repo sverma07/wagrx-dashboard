@@ -3404,6 +3404,513 @@
           "event_id": "401910005"
         }
       ]
+    },
+    {
+      "time": "2026-11-17T12:42:58-05:00",
+      "games": [
+        {
+          "game": "Toronto Raptors (H) vs New York Knicks (A)",
+          "spread": "NY -2.5",
+          "favorite": "New York Knicks -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: New York Knicks",
+            "M2: Relevance": "TAKE: Toronto Raptors",
+            "M3: Efficiency": "TAKE: New York Knicks",
+            "M4: ATS Trends": "TAKE: New York Knicks",
+            "M6: Sharp Money": "TAKE: Toronto Raptors",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: New York Knicks",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: New York Knicks",
+            "M7: Injury Edge": "PUSH",
+            "M5: Rest": "PUSH"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 50,
+              "away": 53
+            },
+            "M2: Relevance": {
+              "home": 66.4906,
+              "away": 59.0576
+            },
+            "M3: Efficiency": {
+              "margin": -2.5
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 6
+            },
+            "M6: Sharp Money": {
+              "home_b": 27.54,
+              "home_m": 40.95,
+              "away_b": 72.46,
+              "away_m": 59.05
+            },
+            "M8: Line Movement": {
+              "open_home": 3.5,
+              "current_home": 3.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.5,
+              "sources": [],
+              "circa": {
+                "first": 2.5,
+                "last": 3.0,
+                "delta": 0.5
+              }
+            },
+            "M7: Injury Edge": {
+              "home_out": [
+                {
+                  "name": "Scottie Barnes",
+                  "status": "Day to day",
+                  "min": 36.0
+                }
+              ],
+              "away_out": [],
+              "home_repl": [
+                "Jamal Shead"
+              ],
+              "away_repl": [],
+              "home_impact": 1.4,
+              "away_impact": 0.0
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            }
+          },
+          "team_home": "Toronto Raptors",
+          "team_away": "New York Knicks",
+          "start": "2026-11-18T00:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 0.0,
+              "home_m": 0.0,
+              "away_b": 100.0,
+              "away_m": 100.0,
+              "line": "+3",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 24.0,
+              "home_m": 9.0,
+              "away_b": 76.0,
+              "away_m": 91.0,
+              "line": "+3.5",
+              "thin": false
+            }
+          },
+          "event_id": "401910002"
+        },
+        {
+          "game": "Minnesota Timberwolves (H) vs Portland Trail Blazers (A)",
+          "spread": "MIN -2.5",
+          "favorite": "Minnesota Timberwolves -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Minnesota Timberwolves",
+            "M2: Relevance": "TAKE: Minnesota Timberwolves",
+            "M3: Efficiency": "TAKE: Portland Trail Blazers",
+            "M4: ATS Trends": "TAKE: Minnesota Timberwolves",
+            "M6: Sharp Money": "TAKE: Portland Trail Blazers",
+            "M8: Line Movement": "TAKE: Portland Trail Blazers",
+            "CONSENSUS": "TAKE: Minnesota Timberwolves",
+            "Sharp: Circa": "TAKE: Portland Trail Blazers",
+            "Sharp: DraftKings": "TAKE: Minnesota Timberwolves",
+            "M7: Injury Edge": "PUSH",
+            "M5: Rest": "PUSH"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 63,
+              "away": 38
+            },
+            "M2: Relevance": {
+              "home": 77.7632,
+              "away": 47.3969
+            },
+            "M3: Efficiency": {
+              "margin": 2.2
+            },
+            "M4: ATS Trends": {
+              "home": 12,
+              "away": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": 66.68,
+              "home_m": 55.78,
+              "away_b": 33.32,
+              "away_m": 44.22
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": -1.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -2.5,
+                "last": -1.5,
+                "delta": 1.0
+              }
+            },
+            "M7: Injury Edge": {
+              "home_out": [
+                {
+                  "name": "Jonathan Kuminga",
+                  "status": "Day to day",
+                  "min": 28.2
+                }
+              ],
+              "away_out": [],
+              "home_repl": [
+                "Terrence Shannon Jr."
+              ],
+              "away_repl": [],
+              "home_impact": 1.1,
+              "away_impact": 0.0
+            },
+            "M5: Rest": {
+              "home": 1,
+              "away": 1,
+              "home_last3": 2,
+              "away_last3": 1
+            }
+          },
+          "team_home": "Minnesota Timberwolves",
+          "team_away": "Portland Trail Blazers",
+          "start": "2026-11-18T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 18.0,
+              "away_b": 50.0,
+              "away_m": 82.0,
+              "line": "-1.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 71.0,
+              "home_m": 74.0,
+              "away_b": 29.0,
+              "away_m": 26.0,
+              "line": "-1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401910003"
+        },
+        {
+          "game": "San Antonio Spurs (H) vs Detroit Pistons (A)",
+          "spread": "SA -9.5",
+          "favorite": "San Antonio Spurs -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: San Antonio Spurs",
+            "M2: Relevance": "TAKE: San Antonio Spurs",
+            "M3: Efficiency": "TAKE: Detroit Pistons",
+            "M4: ATS Trends": "TAKE: Detroit Pistons",
+            "M6: Sharp Money": "TAKE: San Antonio Spurs",
+            "M8: Line Movement": "TAKE: San Antonio Spurs",
+            "CONSENSUS": "TAKE: San Antonio Spurs",
+            "Sharp: Circa": "TAKE: San Antonio Spurs",
+            "Sharp: DraftKings": "TAKE: San Antonio Spurs",
+            "M7: Injury Edge": "TAKE: San Antonio Spurs",
+            "M5: Rest": "PUSH"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 64,
+              "away": 40
+            },
+            "M2: Relevance": {
+              "home": 72.6049,
+              "away": 54.201
+            },
+            "M3: Efficiency": {
+              "margin": 3.6
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 10
+            },
+            "M6: Sharp Money": {
+              "home_b": 62.58,
+              "home_m": 63.26,
+              "away_b": 37.42,
+              "away_m": 36.74
+            },
+            "M8: Line Movement": {
+              "open_home": -7.5,
+              "current_home": -9.5,
+              "delta": -2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -9.0,
+                "last": -9.5,
+                "delta": -0.5
+              }
+            },
+            "M7: Injury Edge": {
+              "home_out": [],
+              "away_out": [
+                {
+                  "name": "Duncan Robinson",
+                  "status": "Out",
+                  "min": 29.8
+                }
+              ],
+              "home_repl": [],
+              "away_repl": [
+                "John Collins"
+              ],
+              "home_impact": 0.0,
+              "away_impact": 3.0
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 3,
+              "home_last3": 1,
+              "away_last3": 1
+            }
+          },
+          "team_home": "San Antonio Spurs",
+          "team_away": "Detroit Pistons",
+          "start": "2026-11-18T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 98.0,
+              "away_b": 50.0,
+              "away_m": 2.0,
+              "line": "-9.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 49.0,
+              "home_m": 72.0,
+              "away_b": 51.0,
+              "away_m": 28.0,
+              "line": "-9.5",
+              "thin": false
+            }
+          },
+          "event_id": "401910004"
+        },
+        {
+          "game": "Los Angeles Clippers (H) vs Utah Jazz (A)",
+          "spread": "LAC -6.5",
+          "favorite": "Los Angeles Clippers -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Los Angeles Clippers",
+            "M2: Relevance": "TAKE: Los Angeles Clippers",
+            "M3: Efficiency": "TAKE: Utah Jazz",
+            "M4: ATS Trends": "TAKE: Los Angeles Clippers",
+            "M6: Sharp Money": "TAKE: Utah Jazz",
+            "M8: Line Movement": "TAKE: Los Angeles Clippers",
+            "CONSENSUS": "TAKE: Los Angeles Clippers",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Los Angeles Clippers",
+            "M7: Injury Edge": "PUSH",
+            "M5: Rest": "PUSH"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 66,
+              "away": 37
+            },
+            "M2: Relevance": {
+              "home": 89.8831,
+              "away": 38.3355
+            },
+            "M3: Efficiency": {
+              "margin": 3.2
+            },
+            "M4: ATS Trends": {
+              "home": 12,
+              "away": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": 71.87,
+              "home_m": 71.55,
+              "away_b": 28.13,
+              "away_m": 28.45
+            },
+            "M8: Line Movement": {
+              "open_home": -5.5,
+              "current_home": -6.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -6.0,
+                "last": -6.0,
+                "delta": 0.0
+              }
+            },
+            "M7: Injury Edge": {
+              "home_out": [],
+              "away_out": [],
+              "home_repl": [],
+              "away_repl": [],
+              "home_impact": 0.0,
+              "away_impact": 0.0
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            }
+          },
+          "team_home": "Los Angeles Clippers",
+          "team_away": "Utah Jazz",
+          "start": "2026-11-18T03:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 0.0,
+              "home_m": 0.0,
+              "away_b": 100.0,
+              "away_m": 100.0,
+              "line": "-6",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 63.0,
+              "home_m": 68.0,
+              "away_b": 37.0,
+              "away_m": 32.0,
+              "line": "-6.5",
+              "thin": false
+            }
+          },
+          "event_id": "401910006"
+        },
+        {
+          "game": "Los Angeles Lakers (H) vs Charlotte Hornets (A)",
+          "spread": "LAL -8.5",
+          "favorite": "Los Angeles Lakers -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Los Angeles Lakers",
+            "M2: Relevance": "TAKE: Los Angeles Lakers",
+            "M3: Efficiency": "TAKE: Los Angeles Lakers",
+            "M4: ATS Trends": "TAKE: Los Angeles Lakers",
+            "M6: Sharp Money": "TAKE: Charlotte Hornets",
+            "M8: Line Movement": "TAKE: Charlotte Hornets",
+            "CONSENSUS": "TAKE: Los Angeles Lakers",
+            "Sharp: Circa": "TAKE: Los Angeles Lakers",
+            "Sharp: DraftKings": "TAKE: Los Angeles Lakers",
+            "M7: Injury Edge": "TAKE: Charlotte Hornets",
+            "M5: Rest": "PUSH"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 70,
+              "away": 36
+            },
+            "M2: Relevance": {
+              "home": 97.0693,
+              "away": 33.5081
+            },
+            "M3: Efficiency": {
+              "margin": 9.2
+            },
+            "M4: ATS Trends": {
+              "home": 13,
+              "away": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": 85.91,
+              "home_m": 77.74,
+              "away_b": 14.09,
+              "away_m": 22.26
+            },
+            "M8: Line Movement": {
+              "open_home": -10.5,
+              "current_home": -7.5,
+              "delta": 3.0,
+              "crosses_key": false,
+              "size": 3.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -7.5,
+                "last": -7.5,
+                "delta": 0.0
+              }
+            },
+            "M7: Injury Edge": {
+              "home_out": [
+                {
+                  "name": "Austin Reaves",
+                  "status": "Out",
+                  "min": 31.0
+                },
+                {
+                  "name": "Walker Kessler",
+                  "status": "Out",
+                  "min": 30.0
+                }
+              ],
+              "away_out": [],
+              "home_repl": [
+                "Matisse Thybulle",
+                "Sandro Mamukelashvili"
+              ],
+              "away_repl": [],
+              "home_impact": 6.1,
+              "away_impact": 0.0
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            }
+          },
+          "team_home": "Los Angeles Lakers",
+          "team_away": "Charlotte Hornets",
+          "start": "2026-11-18T04:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 60.0,
+              "home_m": 66.0,
+              "away_b": 40.0,
+              "away_m": 34.0,
+              "line": "-7.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 72.0,
+              "home_m": 86.0,
+              "away_b": 28.0,
+              "away_m": 14.0,
+              "line": "-7.5",
+              "thin": false
+            }
+          },
+          "event_id": "401910005"
+        }
+      ]
     }
   ]
 }
