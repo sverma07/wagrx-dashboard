@@ -484,6 +484,8 @@
   .top-why li::before { content: "+"; color: var(--win); font-weight: 700; margin-right: 6px; }
   .top-why li.warn { color: var(--loss); }
   .top-why li.warn::before { content: "-"; color: var(--loss); }
+  .game-title .top-star { color: #fbbf24; margin-right: 5px; vertical-align: -3px; }
+  .game-title .top-star svg { width: 15px; height: 15px; }
   .top-score { flex: 0 0 auto; text-align: right; font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
   .top-score b { display: block; font-size: 1.15rem; color: var(--text); letter-spacing: 0; }
   /* Manual refresh: button, allowance note and progress bar, under the status line. */
@@ -1209,7 +1211,7 @@ function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
   if (!consensusTag && grade && grade.status) consensusTag = `<span class="tag neutral">${grade.status.split(" (")[0]}</span>`;
 
   return `
-    <div class="game-card" data-search="${searchKey}">
+    <div class="game-card" data-search="${searchKey}"${scope === "history" ? "" : ` data-topkey="${escAttr(topKey(scope === "upcoming" ? upcomingSport : currentSport, g.game))}"`}>
       <div class="game-header" onclick="toggleCard(this)">
         <div class="game-title-row" role="button" tabindex="0" aria-expanded="false">
           <div>
@@ -1263,7 +1265,7 @@ function hydrateMarketStrips() {
     });
   });
 }
-new MutationObserver(() => { clearTimeout(window.__mktT); window.__mktT = setTimeout(hydrateMarketStrips, 60); })
+new MutationObserver(() => { clearTimeout(window.__mktT); window.__mktT = setTimeout(() => { hydrateMarketStrips(); applyTopStars(); }, 60); })
   .observe(document.body, { childList: true, subtree: true });
 
 // Expand or collapse a card (click anywhere on its header, or Enter/Space on the focused title row).
@@ -2086,15 +2088,15 @@ function loadTop() {
   Promise.all(SPORTS.map(sp => Promise.all([
     fetch(sp.file + "?_=" + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null),
     ensureBestCombo(sp.key).catch(() => {}),
-  ]).then(([d]) => [sp, d]))).then(rows => { topRows = rows; renderTop(); });
+  ]).then(([d]) => [sp, d]))).then(rows => { topRows = rows; topRanks = {}; computeTop(null).shown.forEach((it, i) => { topRanks[topKey(it.sp.key, it.g.game)] = i + 1; }); renderTop(); });
 }
 
 // Score and reasons for one not-yet-started game, or null when it has no consensus pick to rate.
-function topPick(sp, g, ref) {
+function topPick(sp, g, ref, day) {
   const picks = g.picks || {};
   const take = p => { p = String(p || ""); return p.startsWith("TAKE:") ? p.replace("TAKE:", "").trim() : null; };
   const team = take(picks.CONSENSUS);
-  if (!team || g.locked_run || (g.start && new Date(g.start) <= ref)) return null;
+  if (!team || g.locked_run || (g.start && (new Date(g.start) <= ref || etDay(g.start) !== day))) return null;
   const why = [];
   let score = 0;
   const conf = parseFloat(g.confidence);
@@ -2157,22 +2159,54 @@ function topSlots() {
 let topSlot = null;  // chosen slot time in ms; null = the latest
 function setTopSlot(v) { topSlot = v === "" ? null : Number(v); renderTop(); }
 
-function renderTop() {
-  const el = document.getElementById("toppicks");
+// The ranked picks for one run slot (ms; null = the latest). Only games starting on that run's own ET day count.
+function computeTop(slot) {
   const slots = topSlots();
-  const at = topSlot !== null && slots.includes(topSlot) ? topSlot : slots[slots.length - 1];
+  const at = slot !== null && slots.includes(slot) ? slot : slots[slots.length - 1];
   const isLatest = at === slots[slots.length - 1];
   const ref = isLatest ? Date.now() : at + 20 * 60000;  // games that started before this run's time are left out
+  const day = etDay(new Date(isLatest ? Date.now() : at).toISOString());
   const items = [], asOf = [], stale = [];
   for (const [sp, data] of topRows || []) {
-    const snaps = ((data && data.snapshots) || []).filter(s => new Date(s.time).getTime() <= at + 20 * 60000);
+    const snaps = ((data && data.snapshots) || []).filter(s => new Date(s.time).getTime() <= at + 20 * 60000 && etDay(s.time) === day);
     const snap = snaps[snaps.length - 1];
     if (!snap) { stale.push(sp.label); continue; }
     asOf.push(`${sp.label} ${new Date(snap.time).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })}`);
-    for (const g of snap.games || []) { const r = topPick(sp, g, ref); if (r) items.push(r); }
+    for (const g of snap.games || []) { const r = topPick(sp, g, ref, day); if (r) items.push(r); }
   }
-  items.sort((a, b) => b.score - a.score);
-  const shown = items.slice(0, TOP_N);
+  items.sort((x, y) => y.score - x.score);
+  return { slots, at, items, shown: items.slice(0, TOP_N), asOf, stale };
+}
+
+// Stars on the sport and Upcoming cards for picks in today's latest top list; filled in once the data is loaded.
+let topRanks = {};  // "sport|game" -> rank
+function topKey(sportKey, game) { return sportKey + "|" + String(game || "").toLowerCase(); }
+function applyTopStars() {
+  document.querySelectorAll(".game-card[data-topkey]").forEach(card => {
+    const t = card.querySelector(".game-title");
+    if (!t) return;
+    const rank = topRanks[card.dataset.topkey];
+    const have = t.querySelector(".top-star");
+    if (!rank) { if (have) have.remove(); return; }
+    if (have) return;
+    t.insertAdjacentHTML("afterbegin", `<span class="top-star" title="Top pick #${rank} across all sports (see Top picks)">${STAR_SVG}</span>`);
+  });
+}
+function refreshTopStars() {
+  Promise.all(SPORTS.map(sp => Promise.all([
+    fetch(sp.file + "?_=" + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null),
+    ensureBestCombo(sp.key).catch(() => {}),
+  ]).then(([d]) => [sp, d]))).then(rows => {
+    topRows = rows;
+    topRanks = {};
+    computeTop(null).shown.forEach((it, i) => { topRanks[topKey(it.sp.key, it.g.game)] = i + 1; });
+    applyTopStars();
+  });
+}
+
+function renderTop() {
+  const el = document.getElementById("toppicks");
+  const { slots, at, shown, asOf, stale } = computeTop(topSlot);
   const sel = `<div class="controls-row"><label class="runtime-label">Run <select class="filter-select" onchange="setTopSlot(this.value)">`
     + slots.slice().reverse().map(t => `<option value="${t}"${t === at ? " selected" : ""}>${new Date(t).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })}${t === slots[slots.length - 1] ? " (latest)" : ""}</option>`).join("")
     + `</select></label></div>`;
@@ -3514,6 +3548,8 @@ function loadSplitsStatus() {
   renderTabs();
   setViewVisibility();
   loadSport(currentSport);
+  refreshTopStars();
+  setInterval(refreshTopStars, 10 * 60000);
   pollRefresh();
   loadSplitsStatus();
   setInterval(loadSplitsStatus, 5 * 60000);
