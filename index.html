@@ -369,6 +369,9 @@
   table.perf tr.sharp-row-perf.first td { border-top: 2px solid var(--border); }
   table.perf .perf-info { font-size: 0.75rem; }
   .perf-pct { font-weight: 700; }
+  .perf-units { font-weight: 600; white-space: nowrap; }
+  .perf-units.pos { color: var(--win); }
+  .perf-units.neg { color: var(--loss); }
 
   /* Combination explorer */
   .combo-best { background: var(--accent-soft); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin: 12px 0 14px; }
@@ -1586,10 +1589,17 @@ function renderPerfTable(sport, data) {
     const isSharp = isSharpKey(key);
     const cls = isConsensus ? "consensus-row-perf" : isSharp ? ("sharp-row-perf" + (firstSharp ? " first" : "")) : "";
     if (isSharp) firstSharp = false;
+    // Flat one-unit bets at the standard -110: a win pays 100/110, a loss costs 1.
+    const units = w * (100 / 110) - l;
+    const unitsTxt = total > 0 ? (units >= 0 ? "+" : "") + units.toFixed(1) : "N/A";
+    const roiTxt = total > 0 ? (units >= 0 ? "+" : "") + ((units / total) * 100).toFixed(1) + "%" : "N/A";
+    const sign = total > 0 ? (units >= 0 ? "pos" : "neg") : "";
     return `<tr class="${cls}">
       <td>${isSharp ? `${key === LINE_MOVE_KEY ? srcLabel : "Sharp: " + srcLabel} <span class="perf-info">(info, not in consensus${trackedSince(sport.key, key, data.since)})</span>` : key}</td>
       <td>${w}-${l}</td>
       <td class="perf-pct">${pct}</td>
+      <td class="perf-units ${sign}">${unitsTxt}</td>
+      <td class="perf-units ${sign}">${roiTxt}</td>
     </tr>`;
   }).join("");
   const updated = data.updated ? fmtTime(data.updated) : "N/A";
@@ -1601,7 +1611,7 @@ function renderPerfTable(sport, data) {
     <div class="perf-updated">Last graded: ${updated}</div>
     ${note}
     <table class="perf">
-      <tr><th>Model</th><th>Record</th><th>Win %</th></tr>
+      <tr><th>Model</th><th>Record</th><th>Win %</th><th title="Flat one-unit bets at -110">Units</th><th title="Units won per unit staked">ROI</th></tr>
       ${rows}
     </table>
     ${perfExtrasHtml(sport.key)}
