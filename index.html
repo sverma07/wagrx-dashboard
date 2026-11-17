@@ -1034,6 +1034,10 @@ function renderLineMoveHistory(g) {
   return `<div class="sharp-row"><span class="consensus-label">Line movement</span><span>${p.pick}</span>${resultTag(p.result)}</div>`;
 }
 
+// M7 now weighs the QB, RB and middle linebacker, so the card calls it the Injury Edge (the stored key is unchanged).
+const MODEL_LABELS = { "M7: QB Injury Edge": "M7: Injury Edge" };
+const modelLabel = k => MODEL_LABELS[k] || k;
+
 function formatDetail(g, modelKey) {
   const teamHome = g.team_home || "Home";
   const teamAway = g.team_away || "Away";
@@ -1064,12 +1068,16 @@ function formatDetail(g, modelKey) {
     return parts.length ? parts.join("<br>") : "No sharp money data available.";
   }
 
-  if (modelKey.includes("QB Injury")) {
+  if (modelKey.includes("Injury")) {
     if (!d.home_status) return "No injury data available.";
-    return `${teamHome}: <span class="num">${d.home_status}</span>&nbsp;&nbsp;|&nbsp;&nbsp;${teamAway}: <span class="num">${d.away_status}</span>`;
+    // QB first, then RB and middle linebacker (older snapshots only carry the QB).
+    const side = (team, qb, rb, mlb, impact) => `<b>${team}</b>` + (impact ? ` <span class="books-dim">(injury impact ${impact})</span>` : "")
+      + `<br>QB: <span class="num">${qb}</span>`
+      + (rb !== undefined ? `<br>RB: <span class="num">${rb || "N/A"}</span><br>MLB: <span class="num">${mlb || "N/A"}</span>` : "");
+    return side(teamHome, d.home_status, d.home_rb, d.home_mlb, d.home_impact) + "<br><br>" + side(teamAway, d.away_status, d.away_rb, d.away_mlb, d.away_impact);
   }
 
-  // M1 Normal Score, M2 Relevance, M4 ATS Trends, M5 Luck all share a simple home/away numeric pair.
+  // M1 Normal Score, M2 Relevance, M4 ATS Trends share a simple home/away numeric pair.
   const homeVal = fmtNum(d.home);
   const awayVal = fmtNum(d.away);
   if (homeVal === null && awayVal === null) return "No data available for this model.";
@@ -1140,7 +1148,7 @@ function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
       const s = sharpStrength(g);
       if (s) strengthTag = `<span class="tag ${s.cls}">${s.label}</span>`;
     }
-    return `<tr><td>${key}</td><td>${label}${strengthTag}${tag}${det(key)}</td></tr>`;
+    return `<tr><td>${modelLabel(key)}</td><td>${label}${strengthTag}${tag}${det(key)}</td></tr>`;
   }).join("");
   // Consensus vote and sharp money splits (info only) as extra rows, so no dropdown is needed.
   const infoRows = (picks.CONSENSUS ? `<tr class="info-row"><td>Consensus</td><td>${det("CONSENSUS")}</td></tr>` : "")
@@ -1648,7 +1656,7 @@ function renderPerfTable(sport, data) {
     const cls = isConsensus ? "consensus-row-perf" : isSharp ? ("sharp-row-perf" + (firstSharp ? " first" : "")) : "";
     if (isSharp) firstSharp = false;
     return `<tr class="${cls}">
-      <td>${isSharp ? `${key === LINE_MOVE_KEY ? srcLabel : "Sharp: " + srcLabel} <span class="perf-info">(info, not in consensus${trackedSince(sport.key, key, data.since)})</span>` : key}</td>
+      <td>${isSharp ? `${key === LINE_MOVE_KEY ? srcLabel : "Sharp: " + srcLabel} <span class="perf-info">(info, not in consensus${trackedSince(sport.key, key, data.since)})</span>` : modelLabel(key)}</td>
       <td>${w}-${l}</td>
       <td class="perf-pct">${pct}</td>
     </tr>`;
