@@ -2269,7 +2269,7 @@ function marketBlockHtml(entry, ctx) {
     marketMargin = -f.spread;
     const fav = marketMargin >= 0 ? hs : as, n = Math.abs(marketMargin);
     tiles.push(`<div class="mkt-tile" title="Pinnacle's spread with the bookmaker's margin removed. ${home} covers ${(f.p_cover * 100).toFixed(1)}% at Pinnacle's number${f.p_win ? ` and wins outright ${(f.p_win * 100).toFixed(0)}%` : ""}.">`
-      + `<div class="mkt-tile-k">Market fair line</div><div class="mkt-tile-v">${fav} ${n === 0 ? "PK" : "-" + n.toFixed(1)}</div><div class="mkt-tile-s">Pinnacle, vig removed</div></div>`);
+      + `<div class="mkt-tile-k">Market line</div><div class="mkt-tile-v">${fav} ${n === 0 ? "PK" : "-" + n.toFixed(1)}</div><div class="mkt-tile-s">Pinnacle, fee removed</div></div>`);
   }
   if (ctx.margin !== null && ctx.margin !== undefined && !isNaN(ctx.margin)) {
     const fav = ctx.margin >= 0 ? hs : as;
@@ -2281,9 +2281,19 @@ function marketBlockHtml(entry, ctx) {
     tiles.push(`<div class="mkt-tile"><div class="mkt-tile-k">Our model</div><div class="mkt-tile-v">${fav} -${Math.abs(ctx.margin).toFixed(1)}</div><div class="mkt-tile-s">${note}</div></div>`);
   }
   if (sm.range) {
-    const gap = sm.range[1] - sm.range[0];
-    tiles.push(`<div class="mkt-tile${gap >= 1.5 ? " warn" : ""}" title="The home spread at each book, lowest to highest. A wide gap often means a stale line or fresh news."><div class="mkt-tile-k">${hs} spread</div>`
-      + `<div class="mkt-tile-v">${signedPt(sm.range[0])}${gap ? " to " + signedPt(sm.range[1]) : ""}</div><div class="mkt-tile-s">${gap >= 1.5 ? `Books differ ${gap} pts` : gap ? "Books close together" : "Books agree"}</div></div>`);
+    // The range of numbers across the books, from the favorite's side: "Knicks -3 to -4.5" instead of the home team's raw spread.
+    const [lo, hi] = sm.range, gap = hi - lo, abs = Math.abs;
+    let label, value;
+    if (lo >= 0 || hi <= 0) {
+      const fav = hi <= 0 ? hs : as, a = Math.min(abs(lo), abs(hi)), b = Math.max(abs(lo), abs(hi));
+      label = "Spread at the books";
+      value = `${fav} -${a}${b !== a ? " to -" + b : ""}`;
+    } else {
+      label = "Spread at the books";
+      value = `${hs} ${signedPt(lo)} to ${signedPt(hi)}`;  // the line crosses pick'em: show the home side
+    }
+    tiles.push(`<div class="mkt-tile${gap >= 1.5 ? " warn" : ""}" title="The lowest and highest number among the books for the favorite. A wide gap often means a stale line or fresh news."><div class="mkt-tile-k">${label}</div>`
+      + `<div class="mkt-tile-v">${value}</div><div class="mkt-tile-s">${gap >= 1.5 ? `Books differ ${gap} pts, shop for the best number` : gap ? `Books within ${gap} pt${gap === 1 ? "" : "s"}` : "All books agree"}</div></div>`);
   }
   let html = tiles.length ? `<div class="mkt-tiles">${tiles.join("")}</div>` : "";
   html += sparklineHtml(entry.series, hs, as);
