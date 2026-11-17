@@ -2156,13 +2156,13 @@ function topItemHtml(it, rank) {
   </div>`;
 }
 
-// Run slots: every sport's snapshot times, with runs less than 20 minutes apart (the sports run back to back) merged into one slot.
+// Run slots: every sport's snapshot times, with runs less than 10 minutes apart (the sports run back to back) merged into one slot.
 function topSlots() {
   const times = [];
   for (const [, data] of topRows || []) for (const s of (data && data.snapshots) || []) times.push(new Date(s.time).getTime());
   times.sort((x, y) => x - y);
   const slots = [];
-  for (const t of times) { if (slots.length && t - slots[slots.length - 1] < 20 * 60000) slots[slots.length - 1] = t; else slots.push(t); }
+  for (const t of times) { if (slots.length && t - slots[slots.length - 1] < 10 * 60000) slots[slots.length - 1] = t; else slots.push(t); }
   return slots;
 }
 let topGuideOpen = false;  // the score guide starts rolled up and stays as left while the run changes
@@ -2174,11 +2174,11 @@ function computeTop(slot) {
   const slots = topSlots();
   const at = slot !== null && slots.includes(slot) ? slot : slots[slots.length - 1];
   const isLatest = at === slots[slots.length - 1];
-  const ref = isLatest ? Date.now() : at + 20 * 60000;  // games that started before this run's time are left out
+  const ref = isLatest ? Date.now() : at;  // games that started before this run's time are left out
   const day = etDay(new Date(isLatest ? Date.now() : at).toISOString());
   const items = [], asOf = [], stale = [];
   for (const [sp, data] of topRows || []) {
-    const snaps = ((data && data.snapshots) || []).filter(s => new Date(s.time).getTime() <= at + 20 * 60000 && etDay(s.time) === day);
+    const snaps = ((data && data.snapshots) || []).filter(s => new Date(s.time).getTime() <= at && etDay(s.time) === day);
     const snap = snaps[snaps.length - 1];
     if (!snap) { stale.push(sp.label); continue; }
     asOf.push(`${sp.label} ${new Date(snap.time).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })}`);
