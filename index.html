@@ -520,16 +520,22 @@
   .mkt-chip { font-size: 0.72rem; color: var(--text-dim); border: 1px solid var(--border); border-radius: 999px; padding: 2px 8px; }
   .mkt-chip b { color: var(--text); }
   .mkt-chip.warn { color: var(--loss); border-color: var(--loss); }
-  .mkt-block { display: grid; gap: 6px; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
-  .mkt-row { display: grid; grid-template-columns: 110px 1fr; gap: 8px; font-size: 0.78rem; }
-  .mkt-k { color: var(--text-dim); font-weight: 600; }
-  .mkt-line-hist { display: flex; align-items: center; gap: 8px; font-size: 0.74rem; color: var(--text-dim); }
+  .mkt-block { display: grid; gap: 8px; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+  .mkt-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)); gap: 6px; }
+  .mkt-tile { border: 1px solid var(--border); border-radius: 8px; padding: 6px 8px; background: var(--bg, transparent); min-width: 0; }
+  .mkt-tile.warn { border-color: var(--loss); }
+  .mkt-tile-k { font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-dim); font-weight: 600; }
+  .mkt-tile-v { font-size: 0.95rem; font-weight: 700; margin: 2px 0; }
+  .mkt-tile-s { font-size: 0.68rem; color: var(--text-dim); line-height: 1.25; }
+  .mkt-tile.warn .mkt-tile-s { color: var(--loss); }
+  .mkt-line-hist { display: flex; align-items: center; gap: 8px; font-size: 0.72rem; color: var(--text-dim); }
   .mkt-line-hist svg { color: var(--accent); flex-shrink: 0; }
-  .inj-team { font-size: 0.76rem; line-height: 1.5; }
-  .inj-st { font-size: 0.68rem; font-weight: 600; }
-  .inj-out, .inj-doubtful { color: var(--loss); }
-  .inj-questionable, .inj-daytoday { color: var(--text-dim); }
-  @media (max-width: 600px) { .mkt-row { grid-template-columns: 1fr; gap: 0; } }
+  .inj-team { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-top: 4px; }
+  .inj-team-name { font-size: 0.74rem; font-weight: 700; margin-right: 2px; }
+  .inj-chip { font-size: 0.68rem; border: 1px solid var(--border); border-radius: 999px; padding: 1px 7px; color: var(--text-dim); }
+  .inj-chip i { font-style: normal; opacity: 0.7; }
+  .inj-chip.inj-out, .inj-chip.inj-doubtful { color: var(--loss); border-color: var(--loss); }
+  .inj-more { font-size: 0.68rem; color: var(--text-dim); }
   .books-note { color: var(--text-dim); font-size: 0.7rem; margin-top: 6px; }
   .hist-note { color: var(--text-dim); font-size: 0.8rem; margin: -6px 2px 12px; }
 </style>
@@ -1606,12 +1612,77 @@ function perfExtrasHtml(sportKey) {
   const rows = buckets.map(([label, f]) => {
     const list = games.filter(x => !isNaN(x.conf) && f(x));
     const r = rec(list);
-    return `<tr><td>${label}</td><td>${list.length ? r.text : "N/A"}</td><td class="perf-pct">${r.pct}</td></tr>`;
+    const avg = list.length ? Math.round(list.reduce((a, x) => a + x.conf, 0) / list.length) : null;
+    return `<tr><td>${label}</td><td>${list.length ? r.text : "N/A"}</td><td class="perf-pct">${r.pct}</td><td>${avg === null ? "N/A" : avg + "%"}</td></tr>`;
   }).join("");
   return `
     <div class="perf-sub">Consensus form</div>${form}
     <div class="perf-sub">Consensus by confidence</div>
-    <table class="perf"><tr><th>Confidence</th><th>Record</th><th>Win %</th></tr>${rows}</table>`;
+    <div class="perf-note">Calibration: if the consensus is well calibrated, the win rate rises with the confidence it states.</div>
+    <table class="perf"><tr><th>Confidence</th><th>Record</th><th>Win %</th><th>Avg stated</th></tr>${rows}</table>
+    ${situationHtml(games)}${sourceQualityHtml(games)}${marketValueHtml(games)}`;
+}
+
+// Records for consensus picks split by situation: favorite or underdog, home or away, size of the spread.
+function situationHtml(games) {
+  const team = g => (((g.picks || {}).CONSENSUS || {}).pick || "").trim();
+  const fav = g => String(g.fav || "").replace(/\s*-fav$/, "");
+  const groups = [
+    ["Picked the favorite", g => fav(g) && team(g) === fav(g)],
+    ["Picked the underdog", g => fav(g) && team(g) && team(g) !== fav(g)],
+    ["Picked the home team", g => team(g) && team(g) === g.home],
+    ["Picked the away team", g => team(g) && team(g) === g.away],
+  ];
+  const size = [["Spread under 3", n => n < 3], ["Spread 3 to 6.5", n => n >= 3 && n < 7], ["Spread 7 to 9.5", n => n >= 7 && n < 10], ["Spread 10 or more", n => n >= 10]];
+  const row = (label, list) => {
+    const w = list.filter(x => x.result === "WIN").length, l = list.length - w;
+    return `<tr><td>${label}</td><td>${list.length ? w + "-" + l : "N/A"}</td><td class="perf-pct">${list.length ? Math.round((w / list.length) * 100) + "%" : "N/A"}</td></tr>`;
+  };
+  const rows = groups.map(([label, f]) => row(label, games.filter(f))).join("")
+    + size.map(([label, f]) => row(label, games.filter(g => { const n = lineNumber(g.line); return n !== null && f(n); }))).join("");
+  return `<div class="perf-sub">Consensus by situation</div><table class="perf"><tr><th>Situation</th><th>Record</th><th>Win %</th></tr>${rows}</table>`;
+}
+
+// How each sharp source does when it backs the consensus side and when it does not.
+function sourceQualityHtml(games) {
+  const rows = SHARP_SOURCES.map(src => {
+    let aw = 0, al = 0, dw = 0, dl = 0;
+    for (const g of games) {
+      const c = (g.picks || {}).CONSENSUS, sp = (g.picks || {})[src.pick];
+      if (!c || !sp || !sp.result || !c.pick || !sp.pick) continue;
+      const agree = c.pick === sp.pick;
+      if (sp.result === "WIN") agree ? aw++ : dw++; else agree ? al++ : dl++;
+    }
+    const f = (w, l) => w + l ? `${w}-${l} (${Math.round((w / (w + l)) * 100)}%)` : "N/A";
+    return `<tr><td>${src.label}</td><td class="perf-pct">${f(aw, al)}</td><td class="perf-pct">${f(dw, dl)}</td></tr>`;
+  }).join("");
+  return `<div class="perf-sub">Sharp sources by agreement</div>
+    <div class="perf-note">Each source's own record when its pick matched the consensus, and when it went the other way.</div>
+    <table class="perf"><tr><th>Source</th><th>With consensus</th><th>Against</th></tr>${rows}</table>`;
+}
+
+// Closing line value, as far as the saved market data allows: did the line move toward the consensus pick between the first
+// reading we saw and the close? (home spread is the Owls median across the books; a higher home number favors the home side.)
+function marketValueHtml(games) {
+  const MIN = 20;
+  const have = games.filter(g => g.market && g.market.open && g.market.close && g.market.open.sp !== undefined && g.market.close.sp !== undefined);
+  if (have.length < MIN) {
+    return `<div class="perf-sub">Closing line value</div><div class="perf-note">Collecting market data: ${have.length} of the ${MIN} graded games needed so far.</div>`;
+  }
+  let toward = 0, away = 0, sum = 0, n = 0;
+  for (const g of have) {
+    const t = (((g.picks || {}).CONSENSUS || {}).pick || "").trim();
+    if (!t || (t !== g.home && t !== g.away)) continue;
+    const move = g.market.close.sp - g.market.open.sp;      // positive: the home number got better for home bettors
+    const clv = t === g.home ? -move : move;                // points the pick's number is better than the close
+    n++; sum += clv;
+    if (clv > 0) toward++; else if (clv < 0) away++;
+  }
+  if (!n) return "";
+  return `<div class="perf-sub">Closing line value</div>
+    <div class="perf-note">Points the line moved toward the consensus pick from the first reading we saw to the close. Positive means the market agreed with the pick.</div>
+    <table class="perf"><tr><th>Games</th><th>Moved toward</th><th>Moved against</th><th>Average</th></tr>
+    <tr><td>${n}</td><td class="perf-pct">${toward}</td><td class="perf-pct">${away}</td><td class="perf-pct">${sum / n >= 0 ? "+" : ""}${(sum / n).toFixed(2)} pts</td></tr></table>`;
 }
 
 // When consensus and a sharp source pick opposite sides, exactly one of them wins. Count those games only.
@@ -2182,37 +2253,47 @@ function sparklineHtml(series) {
   const pts = series.map(p => `${(((p[0] - t0) / tspan) * (W - 6) + 3).toFixed(1)},${(H - 4 - ((p[1] - lo) / span) * (H - 8)).toFixed(1)}`).join(" ");
   const last = series[series.length - 1][1], first = series[0][1];
   return `<div class="mkt-line-hist"><svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Home spread moved from ${first} to ${last}"><polyline points="${pts}" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>`
-    + `<span>Home spread ${signedPt(first)} &rarr; ${signedPt(last)}</span></div>`;
+    + `<span>Line since first seen: ${signedPt(first)} &rarr; ${signedPt(last)}</span></div>`;
 }
 
-// Market block at the top of the Books dropdown: Pinnacle's fair line, model vs market, line history, injuries.
+// Market block at the top of the Books dropdown: three small tiles (market fair line, our model, spread across books), the line's
+// path, and the hurt players as chips.
 function marketBlockHtml(entry, ctx) {
   const home = ctx.home || "Home", away = ctx.away || "Away";
+  const hs = mktShort(home), as = mktShort(away);
   const sm = entry.summary || {};
-  let html = "";
+  const tiles = [];
   const f = sm.fair;
+  let marketMargin = null;  // positive: the home team is favored by the market
   if (f) {
-    const side = f.spread <= 0 ? home : away, pts = Math.abs(f.spread);
-    html += `<div class="mkt-row"><span class="mkt-k">Pinnacle fair line</span><span><b>${side} ${pts === 0 ? "PK" : "-" + pts}</b> `
-      + `<span class="books-dim">(vig removed; ${home} covers ${(f.p_cover * 100).toFixed(1)}%${f.p_win ? `, wins ${(f.p_win * 100).toFixed(0)}%` : ""})</span></span></div>`;
-    if (ctx.margin !== null && ctx.margin !== undefined && !isNaN(ctx.margin)) {
-      const marketMargin = -f.spread;  // positive = home favored
-      const diff = ctx.margin - marketMargin;
-      const lean = Math.abs(diff) < 0.5 ? "in line with the market" : `${Math.abs(diff).toFixed(1)} pts more on ${diff > 0 ? home : away} than the market`;
-      html += `<div class="mkt-row"><span class="mkt-k">Model vs market</span><span>Efficiency model: <b>${ctx.margin >= 0 ? home : away} by ${Math.abs(ctx.margin).toFixed(1)}</b>`
-        + ` vs market ${marketMargin >= 0 ? home : away} by ${Math.abs(marketMargin).toFixed(1)}. <span class="books-dim">${lean}</span></span></div>`;
+    marketMargin = -f.spread;
+    const fav = marketMargin >= 0 ? hs : as, n = Math.abs(marketMargin);
+    tiles.push(`<div class="mkt-tile" title="Pinnacle's spread with the bookmaker's margin removed. ${home} covers ${(f.p_cover * 100).toFixed(1)}% at Pinnacle's number${f.p_win ? ` and wins outright ${(f.p_win * 100).toFixed(0)}%` : ""}.">`
+      + `<div class="mkt-tile-k">Market fair line</div><div class="mkt-tile-v">${fav} ${n === 0 ? "PK" : "-" + n.toFixed(1)}</div><div class="mkt-tile-s">Pinnacle, vig removed</div></div>`);
+  }
+  if (ctx.margin !== null && ctx.margin !== undefined && !isNaN(ctx.margin)) {
+    const fav = ctx.margin >= 0 ? hs : as;
+    let note = "Efficiency model";
+    if (marketMargin !== null) {
+      const diff = ctx.margin - marketMargin;  // positive: the model likes the home team more than the market does
+      note = Math.abs(diff) < 0.5 ? "In line with the market" : `${Math.abs(diff).toFixed(1)} pts more on ${diff > 0 ? hs : as} than market`;
     }
+    tiles.push(`<div class="mkt-tile"><div class="mkt-tile-k">Our model</div><div class="mkt-tile-v">${fav} -${Math.abs(ctx.margin).toFixed(1)}</div><div class="mkt-tile-s">${note}</div></div>`);
   }
-  if (sm.range && sm.range[1] - sm.range[0] >= 1.5) {
-    html += `<div class="mkt-row"><span class="mkt-k">Books disagree</span><span>Home spread runs from ${signedPt(sm.range[0])} to ${signedPt(sm.range[1])}. <span class="books-dim">A wide gap often means a stale line or fresh news.</span></span></div>`;
+  if (sm.range) {
+    const gap = sm.range[1] - sm.range[0];
+    tiles.push(`<div class="mkt-tile${gap >= 1.5 ? " warn" : ""}" title="The home spread at each book, lowest to highest. A wide gap often means a stale line or fresh news."><div class="mkt-tile-k">${hs} spread</div>`
+      + `<div class="mkt-tile-v">${signedPt(sm.range[0])}${gap ? " to " + signedPt(sm.range[1]) : ""}</div><div class="mkt-tile-s">${gap >= 1.5 ? `Books differ ${gap} pts` : gap ? "Books close together" : "Books agree"}</div></div>`);
   }
+  let html = tiles.length ? `<div class="mkt-tiles">${tiles.join("")}</div>` : "";
   html += sparklineHtml(entry.series);
   const inj = entry.inj;
   if (inj && (inj.home.length || inj.away.length)) {
-    const list = (team, arr) => arr.length
-      ? `<div class="inj-team"><b>${team}</b>: ` + arr.slice(0, 8).map(x => `${x.name}${x.pos ? ` (${x.pos})` : ""} <span class="inj-st inj-${x.status.replace(/\W/g, "").toLowerCase()}">${x.status}</span>`).join(", ")
-        + (arr.length > 8 ? `, +${arr.length - 8} more` : "") + `</div>` : "";
-    html += `<div class="win-combos-label" style="margin-top:8px">Injuries</div>` + list(home, inj.home) + list(away, inj.away);
+    const chips = (team, arr) => arr.length
+      ? `<div class="inj-team"><span class="inj-team-name">${team}</span>` + arr.slice(0, 6).map(x =>
+          `<span class="inj-chip inj-${x.status.replace(/\W/g, "").toLowerCase()}">${x.name}${x.pos ? ` <i>${x.pos}</i>` : ""} &middot; ${x.status}</span>`).join("")
+        + (arr.length > 6 ? `<span class="inj-more">+${arr.length - 6} more</span>` : "") + `</div>` : "";
+    html += `<div class="win-combos-label" style="margin-top:8px">Injuries</div>` + chips(home, inj.home) + chips(away, inj.away);
   }
   return html ? `<div class="mkt-block">${html}</div>` : "";
 }
@@ -2322,7 +2403,7 @@ function gradedGamesFrom(h, since) {
     for (const g of games || []) {
       const r = ((g.picks || {}).CONSENSUS || {}).result;
       if (r === "WIN") w++; else if (r === "LOSS") l++;
-      if (r === "WIN" || r === "LOSS") flat.push({ day, conf: comboConf(g.confidence), result: r, picks: g.picks, fav: g.favorite });
+      if (r === "WIN" || r === "LOSS") flat.push({ day, conf: comboConf(g.confidence), result: r, picks: g.picks, fav: g.favorite, home: g.team_home, away: g.team_away, line: g.line, market: g.market });
     }
     if (w || l) byDay[day] = { w, l };
   }
