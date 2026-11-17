@@ -1660,7 +1660,23 @@ function perfExtrasHtml(sportKey) {
     <div class="perf-sub">Consensus by confidence</div>
     <div class="perf-note">Calibration check: the higher the confidence the consensus states, the more often it should win.</div>
     <table class="perf"><tr><th>Confidence</th><th>Record</th><th>Win %</th><th>Avg stated</th></tr>${rows}</table>
-    ${situationHtml(games)}${sourceQualityHtml(games)}${marketValueHtml(games)}`;
+    ${topPickRecordHtml(games)}${situationHtml(games)}${sourceQualityHtml(games)}${marketValueHtml(games)}`;
+}
+
+// Record of the consensus pick by its saved pick score (the score and star the Top picks tab showed at the last run before kickoff).
+function topPickRecordHtml(games) {
+  const have = games.filter(x => x.score && typeof x.score.value === "number");
+  const head = `<div class="perf-sub">Top picks by pick score</div>`;
+  if (!have.length) return head + `<div class="perf-note">Collecting data: each game's pick score is saved at its last run before kickoff, and the record fills in as those games are graded.</div>`;
+  const row = (label, list) => {
+    const w = list.filter(x => x.result === "WIN").length, l = list.length - w;
+    return `<tr><td>${label}</td><td>${list.length ? w + "-" + l : "N/A"}</td><td class="perf-pct">${list.length ? Math.round(w / list.length * 100) + "%" : "N/A"}</td></tr>`;
+  };
+  const tiers = [["Strong (55+)", v => v >= 55], ["Good (45 to 54)", v => v >= 45 && v < 55], ["Fair (30 to 44)", v => v >= 30 && v < 45], ["Weak (0 to 29)", v => v >= 0 && v < 30], ["Conflicted (below 0)", v => v < 0]];
+  const rows = row("Starred (45+)", have.filter(x => x.score.value >= STAR_MIN)) + row("Not starred", have.filter(x => x.score.value < STAR_MIN))
+    + tiers.map(([label, f]) => row(label, have.filter(x => f(x.score.value)))).join("");
+  return head + `<div class="perf-note">Graded consensus picks by the score they had before kickoff. Tracking began ${shortDay(have[0].day)} (${have.length} graded game${have.length === 1 ? "" : "s"} so far). A star should win more often than the rest if the score means something.</div>`
+    + `<table class="perf"><tr><th>Pick score</th><th>Record</th><th>Win %</th></tr>${rows}</table>`;
 }
 
 // Records for consensus picks split by situation: favorite or underdog, home or away, size of the spread.
@@ -2133,6 +2149,8 @@ function scorePick(sp, g) {
   const take = p => { p = String(p || ""); return p.startsWith("TAKE:") ? p.replace("TAKE:", "").trim() : null; };
   const team = take(picks.CONSENSUS);
   if (!team) return null;
+  // Runs since the server started saving it carry the score; older snapshots fall back to the same rules below.
+  if (g.score && typeof g.score.value === "number") return { sp, g, team, score: g.score.value, why: g.score.why || [] };
   const why = [];
   let score = 0;
   const conf = parseFloat(g.confidence);
@@ -2665,7 +2683,7 @@ function gradedGamesFrom(h, since) {
     for (const g of games || []) {
       const r = ((g.picks || {}).CONSENSUS || {}).result;
       if (r === "WIN") w++; else if (r === "LOSS") l++;
-      if (r === "WIN" || r === "LOSS") flat.push({ day, conf: comboConf(g.confidence), result: r, picks: g.picks, fav: g.favorite, home: g.team_home, away: g.team_away, line: g.line, market: g.market });
+      if (r === "WIN" || r === "LOSS") flat.push({ day, conf: comboConf(g.confidence), result: r, picks: g.picks, fav: g.favorite, home: g.team_home, away: g.team_away, line: g.line, market: g.market, score: g.score });
     }
     if (w || l) byDay[day] = { w, l };
   }
