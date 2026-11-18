@@ -418,6 +418,225 @@
           }
         }
       ]
+    },
+    {
+      "time": "2026-11-18T09:30:03-05:00",
+      "games": [
+        {
+          "game": "UMass Minutemen (H) vs Akron Zips (A)",
+          "spread": "MASS -3",
+          "favorite": "UMass Minutemen -fav",
+          "confidence": "78%",
+          "picks": {
+            "M1: Normal Score": "TAKE: UMass Minutemen",
+            "M2: Relevance": "TAKE: UMass Minutemen",
+            "M3: Efficiency": "TAKE: UMass Minutemen",
+            "M4: ATS Trends": "TAKE: UMass Minutemen",
+            "M5: Luck": "TAKE: Akron Zips",
+            "M6: Sharp Money": "TAKE: UMass Minutemen",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: UMass Minutemen",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: UMass Minutemen"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 34,
+              "away": 6
+            },
+            "M2: Relevance": {
+              "home": 42.1036,
+              "away": 4.4708
+            },
+            "M3: Efficiency": {
+              "margin": 8.2
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 2
+            },
+            "M5: Luck": {
+              "home": "0.2",
+              "away": "-1.6"
+            },
+            "M6: Sharp Money": {
+              "home_b": 64.56,
+              "home_m": 76.23,
+              "away_b": 35.44,
+              "away_m": 23.77
+            },
+            "M8: Line Movement": {
+              "open_home": -3.5,
+              "current_home": -3.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "UMass Minutemen",
+          "team_away": "Akron Zips",
+          "start": "2026-11-19T00:00Z",
+          "sharp_books": {
+            "dk": {
+              "home_b": 85.0,
+              "home_m": 99.0,
+              "away_b": 15.0,
+              "away_m": 1.0,
+              "line": "-3.5",
+              "thin": false
+            }
+          },
+          "event_id": "401866467",
+          "score": {
+            "value": 48.0,
+            "tier": "Good",
+            "star": true,
+            "why": [
+              {
+                "t": "Consensus confidence 78%"
+              },
+              {
+                "t": "4 of 5 models back it"
+              },
+              {
+                "t": "Sharp sources side with it (strong money gap, 14 pts)"
+              },
+              {
+                "t": "Fits a losing pattern: Sharps with consensus &middot; No line move yet &middot; Confidence 60%+ &middot; Consensus on the favorite (4-12, 25%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.9333,
+              "agree": 0.8,
+              "sharp": 1.0,
+              "tier": 0.5,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Buffalo Bulls (H) vs Central Michigan Chippewas (A)",
+          "spread": "BUF -1.5",
+          "favorite": "Buffalo Bulls -fav",
+          "confidence": "59%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Buffalo Bulls",
+            "M2: Relevance": "TAKE: Buffalo Bulls",
+            "M3: Efficiency": "TAKE: Central Michigan Chippewas",
+            "M4: ATS Trends": "TAKE: Buffalo Bulls",
+            "M5: Luck": "TAKE: Central Michigan Chippewas",
+            "M6: Sharp Money": "TAKE: Central Michigan Chippewas",
+            "M8: Line Movement": "TAKE: Buffalo Bulls",
+            "CONSENSUS": "TAKE: Buffalo Bulls",
+            "Sharp: Circa": "TAKE: Central Michigan Chippewas",
+            "Sharp: DraftKings": "TAKE: Buffalo Bulls"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 23,
+              "away": 19
+            },
+            "M2: Relevance": {
+              "home": 26.0049,
+              "away": 21.3075
+            },
+            "M3: Efficiency": {
+              "margin": 0.7
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 2
+            },
+            "M5: Luck": {
+              "home": "2.0",
+              "away": "-0.1"
+            },
+            "M6: Sharp Money": {
+              "home_b": 59.83,
+              "home_m": 44.83,
+              "away_b": 40.17,
+              "away_m": 55.17
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -2.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -1.0,
+                "last": -1.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Buffalo Bulls",
+          "team_away": "Central Michigan Chippewas",
+          "start": "2026-11-19T00:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 75.0,
+              "home_m": 9.0,
+              "away_b": 25.0,
+              "away_m": 91.0,
+              "line": "-1",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 60.0,
+              "home_m": 67.0,
+              "away_b": 40.0,
+              "away_m": 33.0,
+              "line": "-2.5",
+              "thin": false
+            }
+          },
+          "event_id": "401866469",
+          "score": {
+            "value": 1.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 59%"
+              },
+              {
+                "t": "3 of 5 models back it"
+              },
+              {
+                "t": "Most sharp sources lean the other way (2 of 3: Circa, SBD)",
+                "warn": true
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a losing pattern: Sharps against consensus &middot; Consensus on the favorite (60-71, 46%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.3,
+              "agree": 0.6,
+              "sharp": -1.0,
+              "tier": 0.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        }
+      ]
     }
   ]
 }
