@@ -2146,7 +2146,7 @@ function loadTop(silent) {
 
 // Score and reasons for one not-yet-started game, or null when it has no consensus pick to rate.
 function topPick(sp, g, ref, day) {
-  if (g.locked_run || (g.start && (new Date(g.start) <= ref || etDay(g.start) !== day))) return null;
+  if (g.start && etDay(g.start) !== day) return null;  // today's games only; started games stay on the list, locked at their last pre-kickoff run
   return scorePick(sp, g);
 }
 
@@ -2211,7 +2211,7 @@ function topItemHtml(it, rank) {
     <div class="top-main">
       <div><span class="top-sport">${it.sp.label}</span><b>${g.game || ""}</b></div>
       <div class="top-pick">${it.team}${pickLineHtml(g.spread, g.favorite, it.team, [g.team_home, g.team_away])}</div>
-      <div class="game-meta">${startTimeLabel(g, true)}Line: ${g.spread || "N/A"} &middot; From the ${etClock(it.runAt)} ET run</div>
+      <div class="game-meta">${startTimeLabel(g, true)}Line: ${g.spread || "N/A"} &middot; ${g.locked_run ? `<span class="tag neutral">LOCKED</span> at the ${etClock(g.locked_run)} ET run` : `From the ${etClock(it.runAt)} ET run`}</div>
       <ul class="top-why">${it.why.map(w => `<li${w.warn ? ' class="warn"' : ""}>${w.t}</li>`).join("")}</ul>
       <div class="top-foot"><button type="button" class="filter-clear" onclick="event.stopPropagation(); selectSport('${it.sp.key}')">Open full ${it.sp.label} card</button></div>
     </div>
@@ -2308,7 +2308,7 @@ function renderTop() {
     <p>A gold star means a score of ${STAR_MIN} or more, so some days have several stars and some have none. Stars also show on the game cards.</p>
     <p>${tuneNote}</p>
     </div></details>`;
-  el.innerHTML = sel + guide + `<div class="perf-updated">Today's picks across all sports (${asOf.join(", ") || "no runs yet"}). Tap a pick for the reasons. Games already started at that run are left out.</div>`
+  el.innerHTML = sel + guide + `<div class="perf-updated">Today's picks across all sports (${asOf.join(", ") || "no runs yet"}). Tap a pick for the reasons. Once a game starts, its card is locked at the last run before kickoff.</div>`
     + (shown.length ? shown.map((it, i) => topItemHtml(it, i + 1)).join("") : '<div class="empty-state">No upcoming picks to rank for this run.</div>')
     + `<div class="perf-note">Winning and losing patterns use today's graded history, even for earlier runs.${stale.length ? ` No data yet for ${stale.join(", ")} at this run.` : ""}</div>`;
 }
