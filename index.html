@@ -1487,6 +1487,24 @@ function renderSnapshot(snap) {
     ? items.map(it => renderGame(it.g, it.idx, null, "games", it.fx.wins)).join("")
     : '<div class="empty-state">No games match these filters.</div>';
   filterGames();
+  showPendingCard();
+}
+
+// "Open full card" on the Top picks tab: after the sport's cards render, expand that game's card and scroll to it.
+let pendingCard = null;
+function openFullCard(sportKey, game) {
+  pendingCard = { sp: sportKey, game: String(game || "").toLowerCase() };
+  selectSport(sportKey);
+}
+function showPendingCard() {
+  if (!pendingCard || pendingCard.sp !== currentSport) return;
+  const card = [...document.querySelectorAll("#games .game-card")].find(c => c.dataset.search === pendingCard.game);
+  if (!card) return;
+  pendingCard = null;
+  card.classList.add("expanded");
+  const row = card.querySelector(".game-title-row");
+  if (row) row.setAttribute("aria-expanded", "true");
+  card.scrollIntoView({ block: "start", behavior: "smooth" });
 }
 
 const UTIL_ICONS = {
@@ -2213,7 +2231,7 @@ function topItemHtml(it, rank) {
       <div class="top-pick">${it.team}${pickLineHtml(g.spread, g.favorite, it.team, [g.team_home, g.team_away])}</div>
       <div class="game-meta">${startTimeLabel(g, true)}Line: ${g.spread || "N/A"} &middot; ${g.locked_run ? `<span class="tag neutral">LOCKED</span> at the ${etClock(g.locked_run)} ET run` : `From the ${etClock(it.runAt)} ET run`}</div>
       <ul class="top-why">${it.why.map(w => `<li${w.warn ? ' class="warn"' : ""}>${w.t}</li>`).join("")}</ul>
-      <div class="top-foot"><button type="button" class="filter-clear" onclick="event.stopPropagation(); selectSport('${it.sp.key}')">Open full ${it.sp.label} card</button></div>
+      <div class="top-foot"><button type="button" class="filter-clear" data-game="${escAttr(g.game || "")}" onclick="event.stopPropagation(); openFullCard('${it.sp.key}', this.dataset.game)">Open full ${it.sp.label} card</button></div>
     </div>
     <div class="top-score"><b>${Math.round(it.score)}</b>${topTier(it.score)}</div>
     <span class="chevron">&#9654;</span>
