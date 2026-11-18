@@ -1,7 +1,5877 @@
 {
   "sport": "NCAAB",
-  "updated": "2026-11-17T07:20:04-05:00",
+  "updated": "2026-11-18T07:20:06-05:00",
   "days": {
+    "2026-11-17": [
+      {
+        "game": "Murray State Racers (H) vs Hofstra Pride (A)",
+        "team_home": "Murray State Racers",
+        "team_away": "Hofstra Pride",
+        "line": "MUR -11.5",
+        "favorite": "Murray State Racers -fav",
+        "final": "Murray State Racers 82, Hofstra Pride 66",
+        "cover": "Murray State Racers",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 73.39,
+          "home_m": 64.63,
+          "away_b": 26.61,
+          "away_m": 35.37
+        },
+        "graded_run": "2026-11-17T11:15:08-05:00",
+        "score": null,
+        "market": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Murray State Racers",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Murray State Racers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Hofstra Pride",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Rest": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Hofstra Pride",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Murray State Racers",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Hofstra Pride",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Murray State Racers",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Houston Cougars (H) vs Rutgers Scarlet Knights (A)",
+        "team_home": "Houston Cougars",
+        "team_away": "Rutgers Scarlet Knights",
+        "line": "HOU -16.5",
+        "favorite": "Houston Cougars -fav",
+        "final": "Houston Cougars 85, Rutgers Scarlet Knights 73",
+        "cover": "Rutgers Scarlet Knights",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 66.18,
+          "home_m": 48.35,
+          "away_b": 33.82,
+          "away_m": 51.65
+        },
+        "graded_run": "2026-11-17T13:15:04-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 10,
+            "sp": -16.5,
+            "best_h": -16.5,
+            "best_a": 17,
+            "tot": 143.0,
+            "pin_sp": -16.5,
+            "pin_h": -111,
+            "pin_a": -105,
+            "pin_tot": 143.5
+          },
+          "close": {
+            "t": "2026-11-17T13:15:05-0500",
+            "n": 11,
+            "sp": -16.5,
+            "best_h": -16.5,
+            "best_a": 17,
+            "tot": 143.5,
+            "pin_sp": -16.5,
+            "pin_h": -115,
+            "pin_a": -101,
+            "pin_tot": 143.5
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Houston Cougars",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Houston Cougars",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Rutgers Scarlet Knights",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M5: Rest": {
+            "pick": "Houston Cougars",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Rutgers Scarlet Knights",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Houston Cougars",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Houston Cougars",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Rutgers Scarlet Knights",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Houston Cougars",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Florida Gators (H) vs Notre Dame Fighting Irish (A)",
+        "team_home": "Florida Gators",
+        "team_away": "Notre Dame Fighting Irish",
+        "line": "FLA -15.5",
+        "favorite": "Florida Gators -fav",
+        "final": "Florida Gators 86, Notre Dame Fighting Irish 78",
+        "cover": "Notre Dame Fighting Irish",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 61.68,
+          "home_m": 63.75,
+          "away_b": 38.32,
+          "away_m": 36.25
+        },
+        "graded_run": "2026-11-17T15:15:04-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -15.5,
+            "best_h": -15.5,
+            "best_a": 16,
+            "tot": 150.5,
+            "pin_sp": -16,
+            "pin_h": -104,
+            "pin_a": -112,
+            "pin_tot": 150.5,
+            "pin_ml": [
+              -1765,
+              986
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T15:15:04-0500",
+            "n": 13,
+            "sp": -15.5,
+            "best_h": -15,
+            "best_a": 15.5,
+            "tot": 150.5,
+            "pin_sp": -15,
+            "pin_h": -110,
+            "pin_a": -106,
+            "pin_tot": 150.5,
+            "pin_ml": [
+              -1575,
+              919
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Notre Dame Fighting Irish",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Notre Dame Fighting Irish",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Notre Dame Fighting Irish",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Notre Dame Fighting Irish",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Notre Dame Fighting Irish",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Florida Gators",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Florida Gators",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Notre Dame Fighting Irish",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Notre Dame Fighting Irish",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Florida Gators",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "UMass Lowell River Hawks (H) vs Saint Peter's Peacocks (A)",
+        "team_home": "UMass Lowell River Hawks",
+        "team_away": "Saint Peter's Peacocks",
+        "line": "UML -5.5",
+        "favorite": "UMass Lowell River Hawks -fav",
+        "final": "UMass Lowell River Hawks 66, Saint Peter's Peacocks 51",
+        "cover": "UMass Lowell River Hawks",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 69.86,
+          "home_m": 73.22,
+          "away_b": 30.14,
+          "away_m": 26.78
+        },
+        "graded_run": "2026-11-17T17:30:16-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 7,
+            "sp": -6,
+            "best_h": -5.5,
+            "best_a": 6.5,
+            "tot": 129,
+            "pin_sp": -6,
+            "pin_h": -112,
+            "pin_a": -104,
+            "pin_tot": 129.5,
+            "pin_ml": [
+              -265,
+              220
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T17:30:16-0500",
+            "n": 7,
+            "sp": -5,
+            "best_h": -4.5,
+            "best_a": 5.5,
+            "tot": 129,
+            "pin_sp": -5,
+            "pin_h": -108,
+            "pin_a": -108,
+            "pin_tot": 129.5,
+            "pin_ml": [
+              -218,
+              183
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "UMass Lowell River Hawks",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "UMass Lowell River Hawks",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Saint Peter's Peacocks",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "UMass Lowell River Hawks",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "UMass Lowell River Hawks",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "UMass Lowell River Hawks",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "UMass Lowell River Hawks",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Southern Illinois Salukis (H) vs Liberty Flames (A)",
+        "team_home": "Southern Illinois Salukis",
+        "team_away": "Liberty Flames",
+        "line": "SIU -1.5",
+        "favorite": "Southern Illinois Salukis -fav",
+        "final": "Southern Illinois Salukis 78, Liberty Flames 87",
+        "cover": "Liberty Flames",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 40.0,
+          "home_m": 27.29,
+          "away_b": 60.0,
+          "away_m": 72.71
+        },
+        "graded_run": "2026-11-17T17:30:16-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -2,
+            "best_h": -1.5,
+            "best_a": 2.5,
+            "tot": 145,
+            "pin_sp": -2,
+            "pin_h": -109,
+            "pin_a": -107,
+            "pin_tot": 145,
+            "pin_ml": [
+              -132,
+              113
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T17:30:16-0500",
+            "n": 13,
+            "sp": -2,
+            "best_h": -1.5,
+            "best_a": 2.5,
+            "tot": 144.5,
+            "pin_sp": -2,
+            "pin_h": -109,
+            "pin_a": -107,
+            "pin_tot": 145,
+            "pin_ml": [
+              -132,
+              113
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Southern Illinois Salukis",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Southern Illinois Salukis",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Liberty Flames",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Southern Illinois Salukis",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Liberty Flames",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Southern Illinois Salukis",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Southern Illinois Salukis",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Army Black Knights (H) vs Marist Red Foxes (A)",
+        "team_home": "Army Black Knights",
+        "team_away": "Marist Red Foxes",
+        "line": "MRST -1.5",
+        "favorite": "Marist Red Foxes -fav",
+        "final": "Army Black Knights 68, Marist Red Foxes 73",
+        "cover": "Marist Red Foxes",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 67.36,
+          "home_m": 80.36,
+          "away_b": 32.64,
+          "away_m": 19.64
+        },
+        "graded_run": "2026-11-17T17:30:16-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": -1.5,
+            "best_h": -1,
+            "best_a": 1.5,
+            "tot": 131.5,
+            "pin_sp": -1.5,
+            "pin_h": -109,
+            "pin_a": -107,
+            "pin_tot": 132.5,
+            "pin_ml": [
+              -120,
+              103
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T17:30:16-0500",
+            "n": 9,
+            "sp": -1.5,
+            "best_h": -1,
+            "best_a": 1.5,
+            "tot": 131.5,
+            "pin_sp": -1.5,
+            "pin_h": 101,
+            "pin_a": -118,
+            "pin_tot": 132.5,
+            "pin_ml": [
+              -107,
+              -109
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Marist Red Foxes",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Marist Red Foxes",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Marist Red Foxes",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Army Black Knights",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Army Black Knights",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Army Black Knights",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Marist Red Foxes",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "Marist Red Foxes",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Purdue Boilermakers (H) vs Lipscomb Bisons (A)",
+        "team_home": "Purdue Boilermakers",
+        "team_away": "Lipscomb Bisons",
+        "line": "PUR -20.5",
+        "favorite": "Purdue Boilermakers -fav",
+        "final": "Purdue Boilermakers 95, Lipscomb Bisons 78",
+        "cover": "Lipscomb Bisons",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 49.03,
+          "home_m": 62.6,
+          "away_b": 50.97,
+          "away_m": 37.4
+        },
+        "graded_run": "2026-11-17T18:00:19-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": -22,
+            "best_h": -21.5,
+            "best_a": 22.5,
+            "tot": 148.5,
+            "pin_sp": -21.5,
+            "pin_h": -118,
+            "pin_a": 101,
+            "pin_tot": 148
+          },
+          "close": {
+            "t": "2026-11-17T18:00:20-0500",
+            "n": 9,
+            "sp": -22.5,
+            "best_h": -21.5,
+            "best_a": 22.5,
+            "tot": 148.5,
+            "pin_sp": -22.5,
+            "pin_h": -110,
+            "pin_a": -106,
+            "pin_tot": 148
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Purdue Boilermakers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Purdue Boilermakers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Lipscomb Bisons",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Lipscomb Bisons",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Purdue Boilermakers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Purdue Boilermakers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Purdue Boilermakers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Lipscomb Bisons",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Duke Blue Devils (H) vs Illinois Fighting Illini (A)",
+        "team_home": "Duke Blue Devils",
+        "team_away": "Illinois Fighting Illini",
+        "line": "DUKE -7.5",
+        "favorite": "Duke Blue Devils -fav",
+        "final": "Duke Blue Devils 78, Illinois Fighting Illini 99",
+        "cover": "Illinois Fighting Illini",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 50.57,
+          "home_m": 57.03,
+          "away_b": 49.43,
+          "away_m": 42.97
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -8,
+            "best_h": -7.5,
+            "best_a": 8.5,
+            "tot": 167,
+            "pin_sp": -8,
+            "pin_h": -114,
+            "pin_a": -102,
+            "pin_tot": 167,
+            "pin_ml": [
+              -385,
+              309
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 13,
+            "sp": -9,
+            "best_h": -8,
+            "best_a": 9.5,
+            "tot": 167,
+            "pin_sp": -8,
+            "pin_h": -110,
+            "pin_a": -106,
+            "pin_tot": 167,
+            "pin_ml": [
+              -383,
+              307
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Illinois Fighting Illini",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Duke Blue Devils",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Illinois Fighting Illini",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Duke Blue Devils",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Duke Blue Devils",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Duke Blue Devils",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Duke Blue Devils",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Illinois Fighting Illini",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Miami Hurricanes (H) vs Rider Broncs (A)",
+        "team_home": "Miami Hurricanes",
+        "team_away": "Rider Broncs",
+        "line": "MIA -41.5",
+        "favorite": "Miami Hurricanes -fav",
+        "final": "Miami Hurricanes 95, Rider Broncs 48",
+        "cover": "Miami Hurricanes",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 50.26,
+          "home_m": 62.92,
+          "away_b": 49.74,
+          "away_m": 37.08
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 36.25,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Sharp sources side with it (strong money gap, 13 pts)"
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Line move against consensus &middot; Consensus on the favorite (44-61, 42%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": 1.0,
+            "tier": 0.5,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Miami Hurricanes",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Miami Hurricanes",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Rider Broncs",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Miami Hurricanes",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Miami Hurricanes",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Rider Broncs",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Miami Hurricanes",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "Miami Hurricanes",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Davidson Wildcats (H) vs Charlotte 49ers (A)",
+        "team_home": "Davidson Wildcats",
+        "team_away": "Charlotte 49ers",
+        "line": "DAV -3.5",
+        "favorite": "Davidson Wildcats -fav",
+        "final": "Davidson Wildcats 66, Charlotte 49ers 73",
+        "cover": "Charlotte 49ers",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 68.67,
+          "home_m": 54.23,
+          "away_b": 31.33,
+          "away_m": 45.77
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 35.0,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 100%"
+            },
+            {
+              "t": "4 of 4 models back it"
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet &middot; Confidence 75%+ &middot; Consensus on the favorite (6-15, 29%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 1.0,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -4,
+            "best_h": -3.5,
+            "best_a": 4.5,
+            "tot": 132.5,
+            "pin_sp": -4,
+            "pin_h": -109,
+            "pin_a": -107,
+            "pin_tot": 132,
+            "pin_ml": [
+              -179,
+              152
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 13,
+            "sp": -3.5,
+            "best_h": -3.5,
+            "best_a": 4,
+            "tot": 133,
+            "pin_sp": -4,
+            "pin_h": 102,
+            "pin_a": -119,
+            "pin_tot": 133,
+            "pin_ml": [
+              -163,
+              139
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Davidson Wildcats",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Davidson Wildcats",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Davidson Wildcats",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Davidson Wildcats",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Charlotte 49ers",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Davidson Wildcats",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "Davidson Wildcats",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Bucknell Bison (H) vs Akron Zips (A)",
+        "team_home": "Bucknell Bison",
+        "team_away": "Akron Zips",
+        "line": "AKR -14.5",
+        "favorite": "Akron Zips -fav",
+        "final": "Bucknell Bison 53, Akron Zips 49",
+        "cover": "Bucknell Bison",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 28.74,
+          "home_m": 16.98,
+          "away_b": 71.26,
+          "away_m": 83.02
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 55.25,
+          "tier": "Strong",
+          "star": true,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Sharp sources side with it (extreme money gap, 39 pts)"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a losing pattern: Confidence 75%+ &middot; Consensus on the favorite (59-70, 46%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": 1.0,
+            "tier": 1.0,
+            "line": 1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": 14.5,
+            "best_h": 15,
+            "best_a": -14.5,
+            "tot": 146.5,
+            "pin_sp": 14.5,
+            "pin_h": -105,
+            "pin_a": -112,
+            "pin_tot": 146.5,
+            "pin_ml": [
+              843,
+              -1379
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 9,
+            "sp": 15.5,
+            "best_h": 15.5,
+            "best_a": -14.5,
+            "tot": 146.5,
+            "pin_sp": 15.5,
+            "pin_h": -113,
+            "pin_a": -104,
+            "pin_tot": 146.5,
+            "pin_ml": [
+              860,
+              -1423
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Akron Zips",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Akron Zips",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Bucknell Bison",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Akron Zips",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Akron Zips",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Akron Zips",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Akron Zips",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "Akron Zips",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "UCF Knights (H) vs Mississippi State Bulldogs (A)",
+        "team_home": "UCF Knights",
+        "team_away": "Mississippi State Bulldogs",
+        "line": "MSST -1.5",
+        "favorite": "Mississippi State Bulldogs -fav",
+        "final": "UCF Knights 83, Mississippi State Bulldogs 86",
+        "cover": "Mississippi State Bulldogs",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 50.93,
+          "home_m": 24.99,
+          "away_b": 49.07,
+          "away_m": 75.01
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 11.25,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: Circa, DraftKings)",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: No line move yet &middot; Confidence 75%+ &middot; Consensus on the favorite (15-23, 39%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": 1.0,
+            "best_h": 1.5,
+            "best_a": 1.5,
+            "tot": 154.5,
+            "pin_sp": 1,
+            "pin_h": -109,
+            "pin_a": -107,
+            "pin_tot": 153.5,
+            "pin_ml": [
+              -104,
+              -112
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 13,
+            "sp": -1.5,
+            "best_h": -1,
+            "best_a": 1.5,
+            "tot": 155,
+            "pin_sp": -1.5,
+            "pin_h": -104,
+            "pin_a": -112,
+            "pin_tot": 155,
+            "pin_ml": [
+              -115,
+              -102
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Mississippi State Bulldogs",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Mississippi State Bulldogs",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "UCF Knights",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Mississippi State Bulldogs",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Mississippi State Bulldogs",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Mississippi State Bulldogs",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "UCF Knights",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "UCF Knights",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Mount St. Mary's Mountaineers (H) vs Lehigh Mountain Hawks (A)",
+        "team_home": "Mount St. Mary's Mountaineers",
+        "team_away": "Lehigh Mountain Hawks",
+        "line": "MSM -1.5",
+        "favorite": "Mount St. Mary's Mountaineers -fav",
+        "final": "Mount St. Mary's Mountaineers 65, Lehigh Mountain Hawks 99",
+        "cover": "Lehigh Mountain Hawks",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 66.08,
+          "home_m": 72.1,
+          "away_b": 33.92,
+          "away_m": 27.9
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 35.0,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 100%"
+            },
+            {
+              "t": "4 of 4 models back it"
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet &middot; Confidence 80%+ &middot; Consensus on the underdog (2-5, 29%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 1.0,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 8,
+            "sp": -1.5,
+            "best_h": -1.5,
+            "best_a": 2,
+            "tot": 137.5,
+            "pin_sp": -2,
+            "pin_h": 101,
+            "pin_a": -118,
+            "pin_tot": 138.5,
+            "pin_ml": [
+              -121,
+              104
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 8,
+            "sp": -1.5,
+            "best_h": -1.5,
+            "best_a": 2,
+            "tot": 137.5,
+            "pin_sp": -2,
+            "pin_h": 101,
+            "pin_a": -118,
+            "pin_tot": 138.5,
+            "pin_ml": [
+              -121,
+              104
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Lehigh Mountain Hawks",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Lehigh Mountain Hawks",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Lehigh Mountain Hawks",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Lehigh Mountain Hawks",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Mount St. Mary's Mountaineers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Lehigh Mountain Hawks",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Marshall Thundering Herd (H) vs East Tennessee State Buccaneers (A)",
+        "team_home": "Marshall Thundering Herd",
+        "team_away": "East Tennessee State Buccaneers",
+        "line": "MRSH -1.5",
+        "favorite": "Marshall Thundering Herd -fav",
+        "final": "Marshall Thundering Herd 67, East Tennessee State Buccaneers 55",
+        "cover": "Marshall Thundering Herd",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 61.73,
+          "home_m": 30.1,
+          "away_b": 38.27,
+          "away_m": 69.9
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 32.0,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 80%"
+            },
+            {
+              "t": "4 of 5 models back it"
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet &middot; Confidence 80%+ &middot; Consensus on the underdog (2-5, 29%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 0.8,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": -1.5,
+            "best_h": -1.5,
+            "best_a": 1.5,
+            "tot": 146,
+            "pin_sp": -1.5,
+            "pin_h": -110,
+            "pin_a": -106,
+            "pin_tot": 147,
+            "pin_ml": [
+              -122,
+              105
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 9,
+            "sp": -1.5,
+            "best_h": -1.5,
+            "best_a": 1.5,
+            "tot": 146,
+            "pin_sp": -1.5,
+            "pin_h": -109,
+            "pin_a": -107,
+            "pin_tot": 147,
+            "pin_ml": [
+              -121,
+              104
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "East Tennessee State Buccaneers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Marshall Thundering Herd",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "East Tennessee State Buccaneers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "East Tennessee State Buccaneers",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "East Tennessee State Buccaneers",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "East Tennessee State Buccaneers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "East Tennessee State Buccaneers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Georgia Tech Yellow Jackets (H) vs Norfolk State Spartans (A)",
+        "team_home": "Georgia Tech Yellow Jackets",
+        "team_away": "Norfolk State Spartans",
+        "line": "GT -21.5",
+        "favorite": "Georgia Tech Yellow Jackets -fav",
+        "final": "Georgia Tech Yellow Jackets 93, Norfolk State Spartans 79",
+        "cover": "Norfolk State Spartans",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 58.27,
+          "home_m": 56.44,
+          "away_b": 41.73,
+          "away_m": 43.56
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 3.25,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 2: Circa, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Line move against consensus &middot; Consensus on the favorite (44-61, 42%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": -21,
+            "best_h": -20.5,
+            "best_a": 21.5,
+            "tot": 150.5,
+            "pin_sp": -21,
+            "pin_h": -111,
+            "pin_a": -105,
+            "pin_tot": 150.5
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 9,
+            "sp": -20.5,
+            "best_h": -20.5,
+            "best_a": 20.5,
+            "tot": 147.5,
+            "pin_sp": -20.5,
+            "pin_h": -109,
+            "pin_a": -107,
+            "pin_tot": 148
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Georgia Tech Yellow Jackets",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Georgia Tech Yellow Jackets",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Norfolk State Spartans",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Georgia Tech Yellow Jackets",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Norfolk State Spartans",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Norfolk State Spartans",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Georgia Tech Yellow Jackets",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Norfolk State Spartans",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "PUSH",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Troy Trojans (H) vs Cal State Northridge Matadors (A)",
+        "team_home": "Troy Trojans",
+        "team_away": "Cal State Northridge Matadors",
+        "line": "TROY -2.5",
+        "favorite": "Troy Trojans -fav",
+        "final": "Troy Trojans 84, Cal State Northridge Matadors 74",
+        "cover": "Troy Trojans",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 68.21,
+          "home_m": 63.27,
+          "away_b": 31.79,
+          "away_m": 36.73
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 35.18,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a winning pattern: Line move with consensus &middot; Consensus on the underdog (37-21, 64%, Wilson 51%)"
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 75%+ (37-58, 39%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": 1.0,
+            "pattern": 0.0371,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -1.5,
+            "best_h": -1.5,
+            "best_a": 2,
+            "tot": 151.5,
+            "pin_sp": -1.5,
+            "pin_h": -114,
+            "pin_a": -102,
+            "pin_tot": 151.5,
+            "pin_ml": [
+              -125,
+              107
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 13,
+            "sp": -2,
+            "best_h": -1.5,
+            "best_a": 2.5,
+            "tot": 151.5,
+            "pin_sp": -2,
+            "pin_h": -109,
+            "pin_a": -107,
+            "pin_tot": 151.5,
+            "pin_ml": [
+              -131,
+              112
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Troy Trojans",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Cal State Northridge Matadors",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Cal State Northridge Matadors",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Cal State Northridge Matadors",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Cal State Northridge Matadors",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Cal State Northridge Matadors",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Cal State Northridge Matadors",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Saint Joseph's Hawks (H) vs Wagner Seahawks (A)",
+        "team_home": "Saint Joseph's Hawks",
+        "team_away": "Wagner Seahawks",
+        "line": "JOES -16.5",
+        "favorite": "Saint Joseph's Hawks -fav",
+        "final": "Saint Joseph's Hawks 84, Wagner Seahawks 65",
+        "cover": "Saint Joseph's Hawks",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 68.81,
+          "home_m": 75.07,
+          "away_b": 31.19,
+          "away_m": 24.93
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 24.0,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 60%"
+            },
+            {
+              "t": "3 of 5 models back it"
+            },
+            {
+              "t": "Sharp sources side with it"
+            },
+            {
+              "t": "Fits a losing pattern: No line move yet &middot; Consensus on the favorite (34-43, 44%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.3333,
+            "agree": 0.6,
+            "sharp": 1.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": -16.5,
+            "best_h": -16.5,
+            "best_a": 16.5,
+            "tot": 137.5,
+            "pin_sp": -16.5,
+            "pin_h": -110,
+            "pin_a": -106,
+            "pin_tot": 137.5
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 9,
+            "sp": -16.25,
+            "best_h": -15.5,
+            "best_a": 16.5,
+            "tot": 137.5,
+            "pin_sp": -16,
+            "pin_h": -108,
+            "pin_a": -108,
+            "pin_tot": 137.5,
+            "pin_ml": [
+              -1823,
+              1005
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Saint Joseph's Hawks",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Saint Joseph's Hawks",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Wagner Seahawks",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Saint Joseph's Hawks",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Wagner Seahawks",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Saint Joseph's Hawks",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Saint Joseph's Hawks",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Wagner Seahawks",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Saint Joseph's Hawks",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "South Florida Bulls (H) vs Tennessee State Tigers (A)",
+        "team_home": "South Florida Bulls",
+        "team_away": "Tennessee State Tigers",
+        "line": "USF -11.5",
+        "favorite": "South Florida Bulls -fav",
+        "final": "South Florida Bulls 98, Tennessee State Tigers 71",
+        "cover": "South Florida Bulls",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 56.42,
+          "home_m": 60.75,
+          "away_b": 43.58,
+          "away_m": 39.25
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -11.5,
+            "best_h": -11.5,
+            "best_a": 12,
+            "tot": 165.5,
+            "pin_sp": -11.5,
+            "pin_h": -106,
+            "pin_a": -110,
+            "pin_tot": 165,
+            "pin_ml": [
+              -700,
+              512
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 13,
+            "sp": -11,
+            "best_h": -10.5,
+            "best_a": 11.5,
+            "tot": 164.5,
+            "pin_sp": -11.5,
+            "pin_h": -100,
+            "pin_a": -117,
+            "pin_tot": 165,
+            "pin_ml": [
+              -671,
+              495
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "South Florida Bulls",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "South Florida Bulls",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Tennessee State Tigers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Tennessee State Tigers",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "South Florida Bulls",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Tennessee State Tigers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Tennessee State Tigers",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Manhattan Jaspers (H) vs Fordham Rams (A)",
+        "team_home": "Manhattan Jaspers",
+        "team_away": "Fordham Rams",
+        "line": "FOR -11.5",
+        "favorite": "Fordham Rams -fav",
+        "final": "Manhattan Jaspers 61, Fordham Rams 80",
+        "cover": "Fordham Rams",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 43.37,
+          "home_m": 31.96,
+          "away_b": 56.63,
+          "away_m": 68.04
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 3.25,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: Circa, DraftKings)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Line move against consensus &middot; Consensus on the favorite (44-61, 42%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": 11.5,
+            "best_h": 12,
+            "best_a": -11,
+            "tot": 144.5,
+            "pin_sp": 11,
+            "pin_h": -100,
+            "pin_a": -117,
+            "pin_tot": 145,
+            "pin_ml": [
+              522,
+              -717
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 13,
+            "sp": 11.5,
+            "best_h": 12.5,
+            "best_a": -11.5,
+            "tot": 145,
+            "pin_sp": 11.5,
+            "pin_h": 101,
+            "pin_a": -118,
+            "pin_tot": 145,
+            "pin_ml": [
+              554,
+              -773
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Fordham Rams",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Fordham Rams",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Manhattan Jaspers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Fordham Rams",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Fordham Rams",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Manhattan Jaspers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Fordham Rams",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Manhattan Jaspers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Manhattan Jaspers",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Dayton Flyers (H) vs Central Michigan Chippewas (A)",
+        "team_home": "Dayton Flyers",
+        "team_away": "Central Michigan Chippewas",
+        "line": "DAY -10.5",
+        "favorite": "Dayton Flyers -fav",
+        "final": "Dayton Flyers 88, Central Michigan Chippewas 63",
+        "cover": "Dayton Flyers",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 58.12,
+          "home_m": 74.02,
+          "away_b": 41.88,
+          "away_m": 25.98
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 18.25,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; Line move against consensus &middot; Confidence 75%+ &middot; Consensus on the underdog (6-12, 33%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 12,
+            "sp": -12.5,
+            "best_h": -11.5,
+            "best_a": 12.5,
+            "tot": 145.0,
+            "pin_sp": -12.5,
+            "pin_h": -106,
+            "pin_a": -110,
+            "pin_tot": 145.5,
+            "pin_ml": [
+              -720,
+              523
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 13,
+            "sp": -13,
+            "best_h": -12.5,
+            "best_a": 13.5,
+            "tot": 144.5,
+            "pin_sp": -13.5,
+            "pin_h": -101,
+            "pin_a": -116,
+            "pin_tot": 145.5,
+            "pin_ml": [
+              -1020,
+              683
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Central Michigan Chippewas",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Dayton Flyers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Central Michigan Chippewas",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Central Michigan Chippewas",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Dayton Flyers",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Dayton Flyers",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Central Michigan Chippewas",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "William & Mary Tribe (H) vs Bowling Green Falcons (A)",
+        "team_home": "William & Mary Tribe",
+        "team_away": "Bowling Green Falcons",
+        "line": "W&M -2.5",
+        "favorite": "William & Mary Tribe -fav",
+        "final": "William & Mary Tribe 77, Bowling Green Falcons 73",
+        "cover": "William & Mary Tribe",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 52.71,
+          "home_m": 56.46,
+          "away_b": 47.29,
+          "away_m": 43.54
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 32.0,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 80%"
+            },
+            {
+              "t": "4 of 5 models back it"
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet &middot; Confidence 80%+ &middot; Consensus on the underdog (2-5, 29%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 0.8,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -2.5,
+            "best_h": -1.5,
+            "best_a": 2.5,
+            "tot": 169.5,
+            "pin_sp": -2,
+            "pin_h": -117,
+            "pin_a": 100,
+            "pin_tot": 168.5,
+            "pin_ml": [
+              -141,
+              121
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 13,
+            "sp": -2.5,
+            "best_h": -2.5,
+            "best_a": 3,
+            "tot": 169.5,
+            "pin_sp": -3,
+            "pin_h": -108,
+            "pin_a": -108,
+            "pin_tot": 168.5,
+            "pin_ml": [
+              -158,
+              135
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Bowling Green Falcons",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Bowling Green Falcons",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Bowling Green Falcons",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "William & Mary Tribe",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Bowling Green Falcons",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "William & Mary Tribe",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Bowling Green Falcons",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "Bowling Green Falcons",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Wake Forest Demon Deacons (H) vs Monmouth Hawks (A)",
+        "team_home": "Wake Forest Demon Deacons",
+        "team_away": "Monmouth Hawks",
+        "line": "WAKE -14.5",
+        "favorite": "Wake Forest Demon Deacons -fav",
+        "final": "Wake Forest Demon Deacons 81, Monmouth Hawks 76",
+        "cover": "Monmouth Hawks",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 75.14,
+          "home_m": 83.42,
+          "away_b": 24.86,
+          "away_m": 16.58
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": -6.0,
+          "tier": "Conflicted",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 60%"
+            },
+            {
+              "t": "3 of 5 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (3 of 3: Circa, DraftKings, SBD)",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Sharps against consensus &middot; No line move yet (12-14, 46%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.3333,
+            "agree": 0.6,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 11,
+            "sp": -14.5,
+            "best_h": -14.5,
+            "best_a": 15.5,
+            "tot": 144,
+            "pin_sp": -14.5,
+            "pin_h": -108,
+            "pin_a": -108,
+            "pin_tot": 144,
+            "pin_ml": [
+              -1434,
+              865
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 11,
+            "sp": -15.5,
+            "best_h": -14.5,
+            "best_a": 15.5,
+            "tot": 144,
+            "pin_sp": -14.5,
+            "pin_h": -108,
+            "pin_a": -108,
+            "pin_tot": 144,
+            "pin_ml": [
+              -1434,
+              865
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Wake Forest Demon Deacons",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Wake Forest Demon Deacons",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Monmouth Hawks",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Monmouth Hawks",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Monmouth Hawks",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Wake Forest Demon Deacons",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Monmouth Hawks",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Wake Forest Demon Deacons",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Wake Forest Demon Deacons",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Pittsburgh Panthers (H) vs Villanova Wildcats (A)",
+        "team_home": "Pittsburgh Panthers",
+        "team_away": "Villanova Wildcats",
+        "line": "VILL -1.5",
+        "favorite": "Villanova Wildcats -fav",
+        "final": "Pittsburgh Panthers 81, Villanova Wildcats 61",
+        "cover": "Pittsburgh Panthers",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 42.38,
+          "home_m": 43.24,
+          "away_b": 57.62,
+          "away_m": 56.76
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": 1.5,
+            "best_h": 1.5,
+            "best_a": -1,
+            "tot": 148.5,
+            "pin_sp": 1.5,
+            "pin_h": -104,
+            "pin_a": -112,
+            "pin_tot": 148.5,
+            "pin_ml": [
+              107,
+              -125
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 13,
+            "sp": 1.5,
+            "best_h": 2,
+            "best_a": -1.5,
+            "tot": 148.5,
+            "pin_sp": 2,
+            "pin_h": -104,
+            "pin_a": -113,
+            "pin_tot": 148,
+            "pin_ml": [
+              117,
+              -137
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Villanova Wildcats",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Pittsburgh Panthers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Villanova Wildcats",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Pittsburgh Panthers",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Pittsburgh Panthers",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Villanova Wildcats",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Pittsburgh Panthers",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Villanova Wildcats",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Florida State Seminoles (H) vs Ball State Cardinals (A)",
+        "team_home": "Florida State Seminoles",
+        "team_away": "Ball State Cardinals",
+        "line": "FSU -26.5",
+        "favorite": "Florida State Seminoles -fav",
+        "final": "Florida State Seminoles 85, Ball State Cardinals 71",
+        "cover": "Ball State Cardinals",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 56.28,
+          "home_m": 62.61,
+          "away_b": 43.72,
+          "away_m": 37.39
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 41.25,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Sharp sources side with it"
+            },
+            {
+              "t": "Fits a losing pattern: No line move yet &middot; Confidence 75%+ &middot; Consensus on the favorite (15-23, 39%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": 1.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -26.5,
+            "best_h": -26.5,
+            "best_a": 27.5,
+            "tot": 151,
+            "pin_sp": -26.5,
+            "pin_h": -107,
+            "pin_a": -109,
+            "pin_tot": 150.5
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 13,
+            "sp": -25.5,
+            "best_h": -25.5,
+            "best_a": 25.5,
+            "tot": 150.5,
+            "pin_sp": -25.5,
+            "pin_h": -111,
+            "pin_a": -105,
+            "pin_tot": 150.5
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Florida State Seminoles",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Florida State Seminoles",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Ball State Cardinals",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Florida State Seminoles",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Florida State Seminoles",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Florida State Seminoles",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Ball State Cardinals",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Florida State Seminoles",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Xavier Musketeers (H) vs Cleveland State Vikings (A)",
+        "team_home": "Xavier Musketeers",
+        "team_away": "Cleveland State Vikings",
+        "line": "XAV -33.5",
+        "favorite": "Xavier Musketeers -fav",
+        "final": "Xavier Musketeers 75, Cleveland State Vikings 67",
+        "cover": "Cleveland State Vikings",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 39.92,
+          "home_m": 45.92,
+          "away_b": 60.08,
+          "away_m": 54.08
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": 39.0,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 80%"
+            },
+            {
+              "t": "4 of 5 models back it"
+            },
+            {
+              "t": "Sharp sources side with it"
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus &middot; Line move against consensus &middot; Confidence 80%+ (4-9, 31%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 0.8,
+            "sharp": 1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -33,
+            "best_h": -32.5,
+            "best_a": 34.5,
+            "tot": 158,
+            "pin_sp": -33,
+            "pin_h": -101,
+            "pin_a": -115,
+            "pin_tot": 157.5
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 13,
+            "sp": -32.5,
+            "best_h": -32,
+            "best_a": 33,
+            "tot": 157.5,
+            "pin_sp": -33,
+            "pin_h": -102,
+            "pin_a": -115,
+            "pin_tot": 157.5
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Xavier Musketeers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Xavier Musketeers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Cleveland State Vikings",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Xavier Musketeers",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "Xavier Musketeers",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Xavier Musketeers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Cleveland State Vikings",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Xavier Musketeers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Cleveland State Vikings",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Xavier Musketeers",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Providence Friars (H) vs Sacred Heart Pioneers (A)",
+        "team_home": "Providence Friars",
+        "team_away": "Sacred Heart Pioneers",
+        "line": "PROV -29.5",
+        "favorite": "Providence Friars -fav",
+        "final": "Providence Friars 86, Sacred Heart Pioneers 67",
+        "cover": "Sacred Heart Pioneers",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 35.09,
+          "home_m": 50.99,
+          "away_b": 64.91,
+          "away_m": 49.01
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": {
+          "value": -14.0,
+          "tier": "Conflicted",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 60%"
+            },
+            {
+              "t": "3 of 5 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 2: DraftKings, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Line move against consensus (72-94, 43%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.3333,
+            "agree": 0.6,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -29.5,
+            "best_h": -29,
+            "best_a": 30,
+            "tot": 154,
+            "pin_sp": -30,
+            "pin_h": -103,
+            "pin_a": -113,
+            "pin_tot": 154
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 13,
+            "sp": -30.5,
+            "best_h": -29,
+            "best_a": 30.5,
+            "tot": 154,
+            "pin_sp": -30.5,
+            "pin_h": -112,
+            "pin_a": -104,
+            "pin_tot": 154
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Providence Friars",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Providence Friars",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Sacred Heart Pioneers",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Sacred Heart Pioneers",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Sacred Heart Pioneers",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Providence Friars",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Providence Friars",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Sacred Heart Pioneers",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "Providence Friars",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Butler Bulldogs (H) vs Western Carolina Catamounts (A)",
+        "team_home": "Butler Bulldogs",
+        "team_away": "Western Carolina Catamounts",
+        "line": "BTLR -11.5",
+        "favorite": "Butler Bulldogs -fav",
+        "final": "Butler Bulldogs 89, Western Carolina Catamounts 64",
+        "cover": "Butler Bulldogs",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 71.65,
+          "home_m": 62.61,
+          "away_b": 28.35,
+          "away_m": 37.39
+        },
+        "graded_run": "2026-11-17T18:46:19-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -11.5,
+            "best_h": -11.5,
+            "best_a": 12,
+            "tot": 160.5,
+            "pin_sp": -11.5,
+            "pin_h": -114,
+            "pin_a": -102,
+            "pin_tot": 160.5,
+            "pin_ml": [
+              -748,
+              539
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T18:46:20-0500",
+            "n": 13,
+            "sp": -11.5,
+            "best_h": -11.5,
+            "best_a": 12,
+            "tot": 159,
+            "pin_sp": -11.5,
+            "pin_h": -111,
+            "pin_a": -105,
+            "pin_tot": 159,
+            "pin_ml": [
+              -739,
+              534
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Butler Bulldogs",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Butler Bulldogs",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Western Carolina Catamounts",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Western Carolina Catamounts",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Western Carolina Catamounts",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Alabama Crimson Tide (H) vs Kennesaw State Owls (A)",
+        "team_home": "Alabama Crimson Tide",
+        "team_away": "Kennesaw State Owls",
+        "line": "ALA -25.5",
+        "favorite": "Alabama Crimson Tide -fav",
+        "final": "Alabama Crimson Tide 109, Kennesaw State Owls 91",
+        "cover": "Kennesaw State Owls",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 69.15,
+          "home_m": 82.89,
+          "away_b": 30.85,
+          "away_m": 17.11
+        },
+        "graded_run": "2026-11-17T19:00:16-05:00",
+        "score": {
+          "value": 26.25,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet (18-35, 34%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -25.5,
+            "best_h": -25.5,
+            "best_a": 25.5,
+            "tot": 177,
+            "pin_sp": -25.5,
+            "pin_h": -111,
+            "pin_a": -105,
+            "pin_tot": 177
+          },
+          "close": {
+            "t": "2026-11-17T19:00:16-0500",
+            "n": 13,
+            "sp": -25.5,
+            "best_h": -25,
+            "best_a": 25.5,
+            "tot": 179.5,
+            "pin_sp": -25.5,
+            "pin_h": -109,
+            "pin_a": -107,
+            "pin_tot": 178.5
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Kennesaw State Owls",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Kennesaw State Owls",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Kennesaw State Owls",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Alabama Crimson Tide",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Alabama Crimson Tide",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Kennesaw State Owls",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "Kennesaw State Owls",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Indiana Hoosiers (H) vs Arkansas Razorbacks (A)",
+        "team_home": "Indiana Hoosiers",
+        "team_away": "Arkansas Razorbacks",
+        "line": "ARK -2.5",
+        "favorite": "Arkansas Razorbacks -fav",
+        "final": "Indiana Hoosiers 81, Arkansas Razorbacks 76",
+        "cover": "Indiana Hoosiers",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 36.92,
+          "home_m": 57.63,
+          "away_b": 63.08,
+          "away_m": 42.37
+        },
+        "graded_run": "2026-11-17T19:00:16-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -1.5,
+            "best_h": -1,
+            "best_a": 1.5,
+            "tot": 153.5,
+            "pin_sp": -1.5,
+            "pin_h": -113,
+            "pin_a": -103,
+            "pin_tot": 153.5,
+            "pin_ml": [
+              -125,
+              107
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T19:00:16-0500",
+            "n": 13,
+            "sp": -1.5,
+            "best_h": -1.5,
+            "best_a": 2,
+            "tot": 153.5,
+            "pin_sp": -1.5,
+            "pin_h": -113,
+            "pin_a": -103,
+            "pin_tot": 153.5,
+            "pin_ml": [
+              -125,
+              107
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Indiana Hoosiers",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Indiana Hoosiers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Arkansas Razorbacks",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Arkansas Razorbacks",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Indiana Hoosiers",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Indiana Hoosiers",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Indiana Hoosiers",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Arkansas Razorbacks",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Louisiana Tech Bulldogs (H) vs Jacksonville State Gamecocks (A)",
+        "team_home": "Louisiana Tech Bulldogs",
+        "team_away": "Jacksonville State Gamecocks",
+        "line": "LT -2.5",
+        "favorite": "Louisiana Tech Bulldogs -fav",
+        "final": "Louisiana Tech Bulldogs 68, Jacksonville State Gamecocks 63",
+        "cover": "Louisiana Tech Bulldogs",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 62.41,
+          "home_m": 81.26,
+          "away_b": 37.59,
+          "away_m": 18.74
+        },
+        "graded_run": "2026-11-17T19:00:16-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -2.0,
+            "best_h": -1.5,
+            "best_a": 2.5,
+            "tot": 130.5,
+            "pin_sp": -2,
+            "pin_h": -112,
+            "pin_a": -104,
+            "pin_tot": 131,
+            "pin_ml": [
+              -135,
+              116
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T19:00:16-0500",
+            "n": 13,
+            "sp": -1.5,
+            "best_h": -1,
+            "best_a": 1.5,
+            "tot": 130.5,
+            "pin_sp": -1.5,
+            "pin_h": -105,
+            "pin_a": -111,
+            "pin_tot": 131,
+            "pin_ml": [
+              -117,
+              -100
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Louisiana Tech Bulldogs",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Louisiana Tech Bulldogs",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Jacksonville State Gamecocks",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Jacksonville State Gamecocks",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Louisiana Tech Bulldogs",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Jacksonville State Gamecocks",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "UAB Blazers (H) vs Florida International Panthers (A)",
+        "team_home": "UAB Blazers",
+        "team_away": "Florida International Panthers",
+        "line": "UAB -4.5",
+        "favorite": "UAB Blazers -fav",
+        "final": "UAB Blazers 94, Florida International Panthers 82",
+        "cover": "UAB Blazers",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 51.28,
+          "home_m": 35.41,
+          "away_b": 48.72,
+          "away_m": 64.59
+        },
+        "graded_run": "2026-11-17T19:00:16-05:00",
+        "score": {
+          "value": 35.0,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 100%"
+            },
+            {
+              "t": "4 of 4 models back it"
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet &middot; Confidence 80%+ &middot; Consensus on the underdog (2-5, 29%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 1.0,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": -4,
+            "best_h": -3.5,
+            "best_a": 4.5,
+            "tot": 168.5,
+            "pin_sp": -4,
+            "pin_h": -108,
+            "pin_a": -108,
+            "pin_tot": 169,
+            "pin_ml": [
+              -178,
+              151
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T19:00:16-0500",
+            "n": 9,
+            "sp": -3.5,
+            "best_h": -3.5,
+            "best_a": 4,
+            "tot": 169,
+            "pin_sp": -4,
+            "pin_h": -108,
+            "pin_a": -108,
+            "pin_tot": 169,
+            "pin_ml": [
+              -178,
+              151
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Florida International Panthers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Florida International Panthers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Florida International Panthers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Florida International Panthers",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Florida International Panthers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Florida International Panthers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Massachusetts Minutemen (H) vs Bryant Bulldogs (A)",
+        "team_home": "Massachusetts Minutemen",
+        "team_away": "Bryant Bulldogs",
+        "line": "MASS -11.5",
+        "favorite": "Massachusetts Minutemen -fav",
+        "final": "Massachusetts Minutemen 79, Bryant Bulldogs 83",
+        "cover": "Bryant Bulldogs",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 28.2,
+          "home_m": 5.25,
+          "away_b": 71.8,
+          "away_m": 94.75
+        },
+        "graded_run": "2026-11-17T19:00:16-05:00",
+        "score": {
+          "value": 24.0,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 80%"
+            },
+            {
+              "t": "4 of 5 models back it"
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; Line move against consensus &middot; Consensus on the favorite (10-20, 33%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 0.8,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": -10,
+            "best_h": -9.5,
+            "best_a": 11.5,
+            "tot": 141.5,
+            "pin_sp": -10,
+            "pin_h": -107,
+            "pin_a": -109,
+            "pin_tot": 141.5,
+            "pin_ml": [
+              -585,
+              442
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T19:00:16-0500",
+            "n": 9,
+            "sp": -10,
+            "best_h": -9.5,
+            "best_a": 10.5,
+            "tot": 141.5,
+            "pin_sp": -10,
+            "pin_h": -109,
+            "pin_a": -107,
+            "pin_tot": 141.5,
+            "pin_ml": [
+              -592,
+              447
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Massachusetts Minutemen",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Massachusetts Minutemen",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Bryant Bulldogs",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Massachusetts Minutemen",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "Massachusetts Minutemen",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Bryant Bulldogs",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Bryant Bulldogs",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Massachusetts Minutemen",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Vanderbilt Commodores (H) vs Eastern Illinois Panthers (A)",
+        "team_home": "Vanderbilt Commodores",
+        "team_away": "Eastern Illinois Panthers",
+        "line": "VAN -43.5",
+        "favorite": "Vanderbilt Commodores -fav",
+        "final": "Vanderbilt Commodores 96, Eastern Illinois Panthers 50",
+        "cover": "Vanderbilt Commodores",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 43.05,
+          "home_m": 47.49,
+          "away_b": 56.95,
+          "away_m": 52.51
+        },
+        "graded_run": "2026-11-17T19:30:16-05:00",
+        "score": {
+          "value": 24.0,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 80%"
+            },
+            {
+              "t": "4 of 5 models back it"
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; Line move against consensus &middot; Consensus on the favorite (10-20, 33%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 0.8,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -41.5,
+            "best_h": -41.5,
+            "best_a": 42.5,
+            "tot": 146.5,
+            "pin_sp": -41.5,
+            "pin_h": -111,
+            "pin_a": -106,
+            "pin_tot": 146
+          },
+          "close": {
+            "t": "2026-11-17T19:30:16-0500",
+            "n": 13,
+            "sp": -40.5,
+            "best_h": -40.5,
+            "best_a": 41.5,
+            "tot": 147.5,
+            "pin_sp": -41,
+            "pin_h": -102,
+            "pin_a": -115,
+            "pin_tot": 148
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Vanderbilt Commodores",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Vanderbilt Commodores",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Eastern Illinois Panthers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Vanderbilt Commodores",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Vanderbilt Commodores",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Vanderbilt Commodores",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Eastern Illinois Panthers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Vanderbilt Commodores",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Southern Miss Golden Eagles (H) vs UT Arlington Mavericks (A)",
+        "team_home": "Southern Miss Golden Eagles",
+        "team_away": "UT Arlington Mavericks",
+        "line": "USM -2.5",
+        "favorite": "Southern Miss Golden Eagles -fav",
+        "final": "Southern Miss Golden Eagles 72, UT Arlington Mavericks 83",
+        "cover": "UT Arlington Mavericks",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 34.17,
+          "home_m": 18.65,
+          "away_b": 65.83,
+          "away_m": 81.35
+        },
+        "graded_run": "2026-11-17T19:30:16-05:00",
+        "score": {
+          "value": 64.93,
+          "tier": "Strong",
+          "star": true,
+          "why": [
+            {
+              "t": "Consensus confidence 100%"
+            },
+            {
+              "t": "4 of 4 models back it"
+            },
+            {
+              "t": "Sharp sources side with it (extreme money gap, 44 pts)"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a winning pattern: Line move with consensus &middot; Consensus on the underdog (37-21, 64%, Wilson 51%)"
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus &middot; Line move with consensus &middot; Confidence 100%+ &middot; Consensus on the underdog (2-3, 40%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 1.0,
+            "sharp": 1.0,
+            "tier": 1.0,
+            "line": 1.0,
+            "pattern": 0.0371,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": -2.5,
+            "best_h": -2.5,
+            "best_a": 2.5,
+            "tot": 149,
+            "pin_sp": -2.5,
+            "pin_h": -107,
+            "pin_a": -109,
+            "pin_tot": 148.5,
+            "pin_ml": [
+              -137,
+              118
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T19:30:16-0500",
+            "n": 9,
+            "sp": -1.5,
+            "best_h": -1.5,
+            "best_a": 2,
+            "tot": 148.5,
+            "pin_sp": -2,
+            "pin_h": -106,
+            "pin_a": -110,
+            "pin_tot": 148.5,
+            "pin_ml": [
+              -125,
+              107
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "UT Arlington Mavericks",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "UT Arlington Mavericks",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "UT Arlington Mavericks",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "UT Arlington Mavericks",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "UT Arlington Mavericks",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "UT Arlington Mavericks",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "UT Arlington Mavericks",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "UT Arlington Mavericks",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "UT Arlington Mavericks",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Northern Iowa Panthers (H) vs Lindenwood Lions (A)",
+        "team_home": "Northern Iowa Panthers",
+        "team_away": "Lindenwood Lions",
+        "line": "UNI -12.5",
+        "favorite": "Northern Iowa Panthers -fav",
+        "final": "Northern Iowa Panthers 81, Lindenwood Lions 74",
+        "cover": "Lindenwood Lions",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 67.35,
+          "home_m": 69.59,
+          "away_b": 32.65,
+          "away_m": 30.41
+        },
+        "graded_run": "2026-11-17T19:30:16-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -12.5,
+            "best_h": -12.5,
+            "best_a": 13.5,
+            "tot": 154,
+            "pin_sp": -13,
+            "pin_h": -109,
+            "pin_a": -107,
+            "pin_tot": 154,
+            "pin_ml": [
+              -939,
+              642
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T19:30:16-0500",
+            "n": 13,
+            "sp": -13.5,
+            "best_h": -12.5,
+            "best_a": 13.5,
+            "tot": 154,
+            "pin_sp": -13.5,
+            "pin_h": -110,
+            "pin_a": -106,
+            "pin_tot": 154,
+            "pin_ml": [
+              -1011,
+              678
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Northern Iowa Panthers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Northern Iowa Panthers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Lindenwood Lions",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Lindenwood Lions",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Northern Iowa Panthers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Northern Iowa Panthers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Northern Iowa Panthers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Northern Iowa Panthers",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "North Dakota Fighting Hawks (H) vs SIU Edwardsville Cougars (A)",
+        "team_home": "North Dakota Fighting Hawks",
+        "team_away": "SIU Edwardsville Cougars",
+        "line": "UND -2.5",
+        "favorite": "North Dakota Fighting Hawks -fav",
+        "final": "North Dakota Fighting Hawks 83, SIU Edwardsville Cougars 78",
+        "cover": "North Dakota Fighting Hawks",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 50.0,
+          "home_m": 30.08,
+          "away_b": 50.0,
+          "away_m": 69.92
+        },
+        "graded_run": "2026-11-17T19:30:16-05:00",
+        "score": {
+          "value": 18.25,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; Line move against consensus &middot; Consensus on the favorite (10-20, 33%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 7,
+            "sp": -2,
+            "best_h": -1.5,
+            "best_a": 2.5,
+            "tot": 144.5,
+            "pin_sp": -1.5,
+            "pin_h": -117,
+            "pin_a": 101,
+            "pin_tot": 145,
+            "pin_ml": [
+              -129,
+              110
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T19:30:16-0500",
+            "n": 7,
+            "sp": -2,
+            "best_h": -1.5,
+            "best_a": 2.5,
+            "tot": 145.5,
+            "pin_sp": -2,
+            "pin_h": -111,
+            "pin_a": -105,
+            "pin_tot": 145.5,
+            "pin_ml": [
+              -134,
+              115
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "North Dakota Fighting Hawks",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "North Dakota Fighting Hawks",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "SIU Edwardsville Cougars",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "North Dakota Fighting Hawks",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "SIU Edwardsville Cougars",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "SIU Edwardsville Cougars",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "North Dakota Fighting Hawks",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "North Dakota Fighting Hawks",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Omaha Mavericks (H) vs Lamar Cardinals (A)",
+        "team_home": "Omaha Mavericks",
+        "team_away": "Lamar Cardinals",
+        "line": "LAM -1.5",
+        "favorite": "Lamar Cardinals -fav",
+        "final": "Omaha Mavericks 74, Lamar Cardinals 104",
+        "cover": "Lamar Cardinals",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 57.38,
+          "home_m": 73.96,
+          "away_b": 42.62,
+          "away_m": 26.04
+        },
+        "graded_run": "2026-11-17T19:30:16-05:00",
+        "score": {
+          "value": -14.0,
+          "tier": "Conflicted",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 60%"
+            },
+            {
+              "t": "3 of 5 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 2: DraftKings, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Line move against consensus &middot; Consensus on the favorite (44-61, 42%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.3333,
+            "agree": 0.6,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": 2,
+            "best_h": 2.5,
+            "best_a": -1.5,
+            "tot": 159,
+            "pin_sp": 2.5,
+            "pin_h": -116,
+            "pin_a": -100,
+            "pin_tot": 158.5,
+            "pin_ml": [
+              114,
+              -133
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T19:30:16-0500",
+            "n": 9,
+            "sp": -1.25,
+            "best_h": -1,
+            "best_a": 1.5,
+            "tot": 158.5,
+            "pin_sp": -1,
+            "pin_h": -105,
+            "pin_a": -111,
+            "pin_tot": 159.5,
+            "pin_ml": [
+              -110,
+              -106
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Lamar Cardinals",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Lamar Cardinals",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Omaha Mavericks",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Omaha Mavericks",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "Lamar Cardinals",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Omaha Mavericks",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Omaha Mavericks",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Lamar Cardinals",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "Omaha Mavericks",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Illinois State Redbirds (H) vs Bellarmine Knights (A)",
+        "team_home": "Illinois State Redbirds",
+        "team_away": "Bellarmine Knights",
+        "line": "ILST -18.5",
+        "favorite": "Illinois State Redbirds -fav",
+        "final": "Illinois State Redbirds 76, Bellarmine Knights 59",
+        "cover": "Bellarmine Knights",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 51.57,
+          "home_m": 47.99,
+          "away_b": 48.43,
+          "away_m": 52.01
+        },
+        "graded_run": "2026-11-17T19:30:16-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": -18,
+            "best_h": -17.5,
+            "best_a": 18.5,
+            "tot": 142.5,
+            "pin_sp": -18,
+            "pin_h": -113,
+            "pin_a": -103,
+            "pin_tot": 142
+          },
+          "close": {
+            "t": "2026-11-17T19:30:16-0500",
+            "n": 9,
+            "sp": -17.5,
+            "best_h": -17.5,
+            "best_a": 18,
+            "tot": 142.5,
+            "pin_sp": -18,
+            "pin_h": 102,
+            "pin_a": -119,
+            "pin_tot": 142
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Illinois State Redbirds",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Illinois State Redbirds",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Bellarmine Knights",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Bellarmine Knights",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Bellarmine Knights",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Bellarmine Knights",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "Illinois State Redbirds",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Rice Owls (H) vs Texas A&M-Corpus Christi Islanders (A)",
+        "team_home": "Rice Owls",
+        "team_away": "Texas A&M-Corpus Christi Islanders",
+        "line": "RICE -1.5",
+        "favorite": "Rice Owls -fav",
+        "final": "Rice Owls 81, Texas A&M-Corpus Christi Islanders 74",
+        "cover": "Rice Owls",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-11-17T19:30:16-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": -2,
+            "best_h": -1.5,
+            "best_a": 2.5,
+            "tot": 141.5,
+            "pin_sp": -2.5,
+            "pin_h": -105,
+            "pin_a": -111,
+            "pin_tot": 141.5,
+            "pin_ml": [
+              -139,
+              119
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T19:30:16-0500",
+            "n": 9,
+            "sp": -2,
+            "best_h": -1.5,
+            "best_a": 2.5,
+            "tot": 141.5,
+            "pin_sp": -2.5,
+            "pin_h": -101,
+            "pin_a": -115,
+            "pin_tot": 141.5,
+            "pin_ml": [
+              -133,
+              114
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Rice Owls",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Rice Owls",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Texas A&M-Corpus Christi Islanders",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Texas A&M-Corpus Christi Islanders",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Rice Owls",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Georgia Southern Eagles (H) vs Middle Tennessee Blue Raiders (A)",
+        "team_home": "Georgia Southern Eagles",
+        "team_away": "Middle Tennessee Blue Raiders",
+        "line": "MTSU -2.5",
+        "favorite": "Middle Tennessee Blue Raiders -fav",
+        "final": "Georgia Southern Eagles 78, Middle Tennessee Blue Raiders 85",
+        "cover": "Middle Tennessee Blue Raiders",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 36.44,
+          "home_m": 28.23,
+          "away_b": 63.56,
+          "away_m": 71.77
+        },
+        "graded_run": "2026-11-17T19:30:16-05:00",
+        "score": {
+          "value": 35.18,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a winning pattern: Line move with consensus &middot; Consensus on the underdog (37-21, 64%, Wilson 51%)"
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 75%+ (37-58, 39%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": 1.0,
+            "pattern": 0.0371,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": 2,
+            "best_h": 2.5,
+            "best_a": -1.5,
+            "tot": 154.5,
+            "pin_sp": 2,
+            "pin_h": -113,
+            "pin_a": -103,
+            "pin_tot": 155,
+            "pin_ml": [
+              107,
+              -125
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T19:30:16-0500",
+            "n": 9,
+            "sp": 1.5,
+            "best_h": 2.5,
+            "best_a": -1.5,
+            "tot": 155.5,
+            "pin_sp": 2,
+            "pin_h": -114,
+            "pin_a": -103,
+            "pin_tot": 155,
+            "pin_ml": [
+              106,
+              -124
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Georgia Southern Eagles",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Georgia Southern Eagles",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Middle Tennessee Blue Raiders",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Georgia Southern Eagles",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Middle Tennessee Blue Raiders",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Georgia Southern Eagles",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Georgia Southern Eagles",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Evansville Purple Aces (H) vs Le Moyne Dolphins (A)",
+        "team_home": "Evansville Purple Aces",
+        "team_away": "Le Moyne Dolphins",
+        "line": "EVAN -6.5",
+        "favorite": "Evansville Purple Aces -fav",
+        "final": "Evansville Purple Aces 79, Le Moyne Dolphins 65",
+        "cover": "Evansville Purple Aces",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 50.96,
+          "home_m": 58.77,
+          "away_b": 49.04,
+          "away_m": 41.23
+        },
+        "graded_run": "2026-11-17T19:30:16-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": -7.5,
+            "best_h": -7.5,
+            "best_a": 8.5,
+            "tot": 147,
+            "pin_sp": -8,
+            "pin_h": 101,
+            "pin_a": -117,
+            "pin_tot": 146.5,
+            "pin_ml": [
+              -337,
+              274
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T19:30:16-0500",
+            "n": 9,
+            "sp": -7.5,
+            "best_h": -7.5,
+            "best_a": 7.5,
+            "tot": 147,
+            "pin_sp": -7.5,
+            "pin_h": -107,
+            "pin_a": -109,
+            "pin_tot": 146.5,
+            "pin_ml": [
+              -332,
+              270
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Evansville Purple Aces",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Evansville Purple Aces",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Le Moyne Dolphins",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Le Moyne Dolphins",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Evansville Purple Aces",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Evansville Purple Aces",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "Evansville Purple Aces",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "SMU Mustangs (H) vs Oral Roberts Golden Eagles (A)",
+        "team_home": "SMU Mustangs",
+        "team_away": "Oral Roberts Golden Eagles",
+        "line": "SMU -26.5",
+        "favorite": "SMU Mustangs -fav",
+        "final": "SMU Mustangs 76, Oral Roberts Golden Eagles 72",
+        "cover": "Oral Roberts Golden Eagles",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 45.21,
+          "home_m": 46.49,
+          "away_b": 54.79,
+          "away_m": 53.51
+        },
+        "graded_run": "2026-11-17T19:30:16-05:00",
+        "score": {
+          "value": 33.25,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Sharp sources side with it"
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Line move against consensus &middot; Consensus on the favorite (44-61, 42%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": 1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 12,
+            "sp": -24.5,
+            "best_h": -24.5,
+            "best_a": 25.5,
+            "tot": 156.5,
+            "pin_sp": -25,
+            "pin_h": -105,
+            "pin_a": -111,
+            "pin_tot": 156.5
+          },
+          "close": {
+            "t": "2026-11-17T19:30:16-0500",
+            "n": 12,
+            "sp": -22.5,
+            "best_h": -21.5,
+            "best_a": 22.5,
+            "tot": 155.75,
+            "pin_sp": -22.5,
+            "pin_h": -105,
+            "pin_a": -111,
+            "pin_tot": 155.5
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "SMU Mustangs",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "SMU Mustangs",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Oral Roberts Golden Eagles",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "SMU Mustangs",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "SMU Mustangs",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Oral Roberts Golden Eagles",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "SMU Mustangs",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Oral Roberts Golden Eagles",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "SMU Mustangs",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "DePaul Blue Demons (H) vs Maryland Eastern Shore Hawks (A)",
+        "team_home": "DePaul Blue Demons",
+        "team_away": "Maryland Eastern Shore Hawks",
+        "line": "DEP -33.5",
+        "favorite": "DePaul Blue Demons -fav",
+        "final": "DePaul Blue Demons 83, Maryland Eastern Shore Hawks 39",
+        "cover": "DePaul Blue Demons",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 28.74,
+          "home_m": 26.21,
+          "away_b": 71.26,
+          "away_m": 73.79
+        },
+        "graded_run": "2026-11-17T19:30:16-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": -31,
+            "best_h": -30.5,
+            "best_a": 31.5,
+            "tot": 126,
+            "pin_sp": -31,
+            "pin_h": -104,
+            "pin_a": -113,
+            "pin_tot": 126.5
+          },
+          "close": {
+            "t": "2026-11-17T19:30:16-0500",
+            "n": 9,
+            "sp": -30.5,
+            "best_h": -29.5,
+            "best_a": 30.5,
+            "tot": 125.5,
+            "pin_sp": -30,
+            "pin_h": -108,
+            "pin_a": -108,
+            "pin_tot": 125.5
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "DePaul Blue Demons",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "DePaul Blue Demons",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Maryland Eastern Shore Hawks",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Maryland Eastern Shore Hawks",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Maryland Eastern Shore Hawks",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Maryland Eastern Shore Hawks",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Mississippi Rebels (H) vs Nicholls Colonels (A)",
+        "team_home": "Mississippi Rebels",
+        "team_away": "Nicholls Colonels",
+        "line": "MISS -30.5",
+        "favorite": "Mississippi Rebels -fav",
+        "final": "Mississippi Rebels 76, Nicholls Colonels 41",
+        "cover": "Mississippi Rebels",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 56.05,
+          "home_m": 64.91,
+          "away_b": 43.95,
+          "away_m": 35.09
+        },
+        "graded_run": "2026-11-17T20:00:20-05:00",
+        "score": {
+          "value": 24.0,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 80%"
+            },
+            {
+              "t": "4 of 5 models back it"
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; Line move against consensus &middot; Consensus on the favorite (10-20, 33%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 0.8,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Mississippi Rebels",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Mississippi Rebels",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Nicholls Colonels",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Mississippi Rebels",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Mississippi Rebels",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Mississippi Rebels",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Nicholls Colonels",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Mississippi Rebels",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Wyoming Cowboys (H) vs Sam Houston Bearkats (A)",
+        "team_home": "Wyoming Cowboys",
+        "team_away": "Sam Houston Bearkats",
+        "line": "WYO -11.5",
+        "favorite": "Wyoming Cowboys -fav",
+        "final": "Wyoming Cowboys 81, Sam Houston Bearkats 79",
+        "cover": "Sam Houston Bearkats",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 59.26,
+          "home_m": 65.08,
+          "away_b": 40.74,
+          "away_m": 34.92
+        },
+        "graded_run": "2026-11-17T20:00:20-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 8,
+            "sp": -12,
+            "best_h": -11.5,
+            "best_a": 12.5,
+            "tot": 150.0,
+            "pin_sp": -12.5,
+            "pin_h": -101,
+            "pin_a": -115,
+            "pin_tot": 149.5,
+            "pin_ml": [
+              -826,
+              583
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T20:00:20-0500",
+            "n": 8,
+            "sp": -12.5,
+            "best_h": -12,
+            "best_a": 12.5,
+            "tot": 150.5,
+            "pin_sp": -12.5,
+            "pin_h": -103,
+            "pin_a": -113,
+            "pin_tot": 149.5,
+            "pin_ml": [
+              -837,
+              589
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Wyoming Cowboys",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Wyoming Cowboys",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Sam Houston Bearkats",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Sam Houston Bearkats",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Wyoming Cowboys",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Wyoming Cowboys",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Wyoming Cowboys",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Sam Houston Bearkats",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Utah Utes (H) vs Eastern Washington Eagles (A)",
+        "team_home": "Utah Utes",
+        "team_away": "Eastern Washington Eagles",
+        "line": "UTAH -12.5",
+        "favorite": "Utah Utes -fav",
+        "final": "Utah Utes 67, Eastern Washington Eagles 71",
+        "cover": "Eastern Washington Eagles",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-11-17T20:00:20-05:00",
+        "score": {
+          "value": 9.0,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 60%"
+            },
+            {
+              "t": "3 of 5 models back it"
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet &middot; Consensus on the favorite (11-23, 32%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.3333,
+            "agree": 0.6,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -13,
+            "best_h": -12.5,
+            "best_a": 13.5,
+            "tot": 145.5,
+            "pin_sp": -12.5,
+            "pin_h": -113,
+            "pin_a": -104,
+            "pin_tot": 145.5,
+            "pin_ml": [
+              -838,
+              590
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T20:00:20-0500",
+            "n": 13,
+            "sp": -13,
+            "best_h": -12.5,
+            "best_a": 13.5,
+            "tot": 145.5,
+            "pin_sp": -13.5,
+            "pin_h": -103,
+            "pin_a": -113,
+            "pin_tot": 145.5,
+            "pin_ml": [
+              -887,
+              616
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Utah Utes",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Utah Utes",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Eastern Washington Eagles",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Eastern Washington Eagles",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Utah Utes",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Utah Utes",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Tennessee Volunteers (H) vs Michigan State Spartans (A)",
+        "team_home": "Tennessee Volunteers",
+        "team_away": "Michigan State Spartans",
+        "line": "MSU -2.5",
+        "favorite": "Michigan State Spartans -fav",
+        "final": "Tennessee Volunteers 61, Michigan State Spartans 46",
+        "cover": "Tennessee Volunteers",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 35.32,
+          "home_m": 30.78,
+          "away_b": 64.68,
+          "away_m": 69.22
+        },
+        "graded_run": "2026-11-17T20:30:16-05:00",
+        "score": {
+          "value": 33.25,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Sharp sources side with it"
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Line move against consensus &middot; Consensus on the favorite (44-61, 42%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": 1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": 2.5,
+            "best_h": 3,
+            "best_a": -2.5,
+            "tot": 149.5,
+            "pin_sp": 2.5,
+            "pin_h": -109,
+            "pin_a": -107,
+            "pin_tot": 149.5,
+            "pin_ml": [
+              121,
+              -141
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T20:30:17-0500",
+            "n": 13,
+            "sp": 2.5,
+            "best_h": 2.5,
+            "best_a": -2,
+            "tot": 149.5,
+            "pin_sp": 2.5,
+            "pin_h": -114,
+            "pin_a": -103,
+            "pin_tot": 149.5,
+            "pin_ml": [
+              115,
+              -135
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Michigan State Spartans",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Michigan State Spartans",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Tennessee Volunteers",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Michigan State Spartans",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Michigan State Spartans",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Tennessee Volunteers",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Michigan State Spartans",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Tennessee Volunteers",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Michigan State Spartans",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Virginia Cavaliers (H) vs Old Dominion Monarchs (A)",
+        "team_home": "Virginia Cavaliers",
+        "team_away": "Old Dominion Monarchs",
+        "line": "UVA -26.5",
+        "favorite": "Virginia Cavaliers -fav",
+        "final": "Virginia Cavaliers 85, Old Dominion Monarchs 65",
+        "cover": "Old Dominion Monarchs",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 73.08,
+          "home_m": 58.4,
+          "away_b": 26.92,
+          "away_m": 41.6
+        },
+        "graded_run": "2026-11-17T20:30:16-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -26.5,
+            "best_h": -25.5,
+            "best_a": 27,
+            "tot": 144.5,
+            "pin_sp": -27,
+            "pin_h": 102,
+            "pin_a": -119,
+            "pin_tot": 144
+          },
+          "close": {
+            "t": "2026-11-17T20:30:17-0500",
+            "n": 13,
+            "sp": -26,
+            "best_h": -25.5,
+            "best_a": 26.5,
+            "tot": 144.5,
+            "pin_sp": -25.5,
+            "pin_h": -113,
+            "pin_a": -103,
+            "pin_tot": 144.5
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Virginia Cavaliers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Virginia Cavaliers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Old Dominion Monarchs",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Old Dominion Monarchs",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Old Dominion Monarchs",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Old Dominion Monarchs",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Old Dominion Monarchs",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "UC Davis Aggies (H) vs Alabama State Hornets (A)",
+        "team_home": "UC Davis Aggies",
+        "team_away": "Alabama State Hornets",
+        "line": "UCD -10.5",
+        "favorite": "UC Davis Aggies -fav",
+        "final": "UC Davis Aggies 68, Alabama State Hornets 75",
+        "cover": "Alabama State Hornets",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 80.89,
+          "home_m": 89.58,
+          "away_b": 19.11,
+          "away_m": 10.42
+        },
+        "graded_run": "2026-11-17T20:30:16-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 9,
+            "sp": -11.5,
+            "best_h": -11.5,
+            "best_a": 12,
+            "tot": 142.5,
+            "pin_sp": -12,
+            "pin_h": -103,
+            "pin_a": -113,
+            "pin_tot": 143,
+            "pin_ml": [
+              -689,
+              505
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T20:30:17-0500",
+            "n": 9,
+            "sp": -12,
+            "best_h": -11.5,
+            "best_a": 12.5,
+            "tot": 142.5,
+            "pin_sp": -12.5,
+            "pin_h": -101,
+            "pin_a": -116,
+            "pin_tot": 143,
+            "pin_ml": [
+              -724,
+              526
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "UC Davis Aggies",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "UC Davis Aggies",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Alabama State Hornets",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Alabama State Hornets",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "UC Davis Aggies",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "UC Davis Aggies",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "UC Davis Aggies",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "UC Davis Aggies",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Kansas Jayhawks (H) vs UNLV Rebels (A)",
+        "team_home": "Kansas Jayhawks",
+        "team_away": "UNLV Rebels",
+        "line": "KU -18.5",
+        "favorite": "Kansas Jayhawks -fav",
+        "final": "Kansas Jayhawks 102, UNLV Rebels 77",
+        "cover": "Kansas Jayhawks",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-11-17T21:00:17-05:00",
+        "score": {
+          "value": 9.0,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 80%"
+            },
+            {
+              "t": "4 of 5 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 2: Circa, DraftKings)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Line move against consensus &middot; Consensus on the favorite (44-61, 42%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 0.8,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -16.5,
+            "best_h": -16.5,
+            "best_a": 17,
+            "tot": 158,
+            "pin_sp": -17,
+            "pin_h": -105,
+            "pin_a": -111,
+            "pin_tot": 158
+          },
+          "close": {
+            "t": "2026-11-17T21:00:18-0500",
+            "n": 13,
+            "sp": -16,
+            "best_h": -15.5,
+            "best_a": 16.5,
+            "tot": 158.5,
+            "pin_sp": -16,
+            "pin_h": -109,
+            "pin_a": -107,
+            "pin_tot": 158,
+            "pin_ml": [
+              -1838,
+              1010
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Kansas Jayhawks",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Kansas Jayhawks",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "UNLV Rebels",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Kansas Jayhawks",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Kansas Jayhawks",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "UNLV Rebels",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Kansas Jayhawks",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "UNLV Rebels",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "UNLV Rebels",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Stanford Cardinal (H) vs UC Irvine Anteaters (A)",
+        "team_home": "Stanford Cardinal",
+        "team_away": "UC Irvine Anteaters",
+        "line": "STAN -7.5",
+        "favorite": "Stanford Cardinal -fav",
+        "final": "Stanford Cardinal 65, UC Irvine Anteaters 61",
+        "cover": "UC Irvine Anteaters",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 41.02,
+          "home_m": 45.38,
+          "away_b": 58.98,
+          "away_m": 54.62
+        },
+        "graded_run": "2026-11-17T21:52:09-05:00",
+        "score": {
+          "value": 29.85,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 100%"
+            },
+            {
+              "t": "5 of 5 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: Circa, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a winning pattern: Sharps against consensus &middot; Confidence 80%+ &middot; Consensus on the underdog (16-6, 73%, Wilson 52%)"
+            },
+            {
+              "t": "Fits a losing pattern: Line move with consensus &middot; Confidence 100%+ (9-13, 41%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 1.0,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": 1.0,
+            "pattern": 0.0739,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -6.5,
+            "best_h": -6,
+            "best_a": 7,
+            "tot": 143.5,
+            "pin_sp": -6.5,
+            "pin_h": -107,
+            "pin_a": -109,
+            "pin_tot": 144,
+            "pin_ml": [
+              -297,
+              244
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T21:52:10-0500",
+            "n": 13,
+            "sp": -6.5,
+            "best_h": -5.5,
+            "best_a": 6.5,
+            "tot": 142.5,
+            "pin_sp": -6.5,
+            "pin_h": -104,
+            "pin_a": -112,
+            "pin_tot": 141.5,
+            "pin_ml": [
+              -295,
+              243
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "UC Irvine Anteaters",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "UC Irvine Anteaters",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "UC Irvine Anteaters",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "UC Irvine Anteaters",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "UC Irvine Anteaters",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Stanford Cardinal",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "UC Irvine Anteaters",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "UC Irvine Anteaters",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Stanford Cardinal",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "UC Irvine Anteaters",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "California Baptist Lancers (H) vs Seattle Redhawks (A)",
+        "team_home": "California Baptist Lancers",
+        "team_away": "Seattle Redhawks",
+        "line": "SEA -9.5",
+        "favorite": "Seattle Redhawks -fav",
+        "final": "California Baptist Lancers 54, Seattle Redhawks 83",
+        "cover": "Seattle Redhawks",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 47.72,
+          "home_m": 65.21,
+          "away_b": 52.28,
+          "away_m": 34.79
+        },
+        "graded_run": "2026-11-17T21:52:09-05:00",
+        "score": {
+          "value": 17.0,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 60%"
+            },
+            {
+              "t": "3 of 5 models back it"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; Consensus on the favorite (38-56, 40%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.3333,
+            "agree": 0.6,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": 1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": null,
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Seattle Redhawks",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Seattle Redhawks",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "California Baptist Lancers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Seattle Redhawks",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "California Baptist Lancers",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "California Baptist Lancers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Seattle Redhawks",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Seattle Redhawks",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Gonzaga Bulldogs (H) vs Montana State Bobcats (A)",
+        "team_home": "Gonzaga Bulldogs",
+        "team_away": "Montana State Bobcats",
+        "line": "GONZ -23.5",
+        "favorite": "Gonzaga Bulldogs -fav",
+        "final": "Gonzaga Bulldogs 74, Montana State Bobcats 62",
+        "cover": "Montana State Bobcats",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 80.88,
+          "home_m": 92.41,
+          "away_b": 19.12,
+          "away_m": 7.59
+        },
+        "graded_run": "2026-11-17T22:30:14-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -22.5,
+            "best_h": -22.5,
+            "best_a": 23.5,
+            "tot": 152.5,
+            "pin_sp": -22.5,
+            "pin_h": -111,
+            "pin_a": -105,
+            "pin_tot": 152.5
+          },
+          "close": {
+            "t": "2026-11-17T22:30:15-0500",
+            "n": 13,
+            "sp": -23,
+            "best_h": -22.5,
+            "best_a": 23.5,
+            "tot": 152.5,
+            "pin_sp": -22.5,
+            "pin_h": -116,
+            "pin_a": -101,
+            "pin_tot": 153.5
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Gonzaga Bulldogs",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Gonzaga Bulldogs",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Montana State Bobcats",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Montana State Bobcats",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Gonzaga Bulldogs",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Montana State Bobcats",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Gonzaga Bulldogs",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "PUSH",
+            "result": null
+          }
+        }
+      },
+      {
+        "game": "Auburn Tigers (H) vs West Virginia Mountaineers (A)",
+        "team_home": "Auburn Tigers",
+        "team_away": "West Virginia Mountaineers",
+        "line": "WVU -1.5",
+        "favorite": "West Virginia Mountaineers -fav",
+        "final": "Auburn Tigers 70, West Virginia Mountaineers 76",
+        "cover": "West Virginia Mountaineers",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 75.79,
+          "home_m": 86.5,
+          "away_b": 24.21,
+          "away_m": 13.5
+        },
+        "graded_run": "2026-11-17T23:00:16-05:00",
+        "score": {
+          "value": 3.25,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: Circa, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Line move against consensus &middot; Consensus on the favorite (44-61, 42%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:34:59-0500",
+            "n": 13,
+            "sp": -1,
+            "best_h": 1,
+            "best_a": 1.5,
+            "tot": 144,
+            "pin_sp": -1,
+            "pin_h": -102,
+            "pin_a": -115,
+            "pin_tot": 144,
+            "pin_ml": [
+              -107,
+              -109
+            ]
+          },
+          "close": {
+            "t": "2026-11-17T23:48:12-0500",
+            "n": 13,
+            "sp": -1,
+            "best_h": 1.5,
+            "best_a": 1.5,
+            "tot": 144,
+            "pin_sp": -1,
+            "pin_h": -106,
+            "pin_a": -110,
+            "pin_tot": 144,
+            "pin_ml": [
+              -111,
+              -105
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "West Virginia Mountaineers",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "West Virginia Mountaineers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Auburn Tigers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "West Virginia Mountaineers",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Auburn Tigers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Auburn Tigers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "West Virginia Mountaineers",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Auburn Tigers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "West Virginia Mountaineers",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-11-16": [
       {
         "game": "UTEP Miners (H) vs Florida A&M Rattlers (A)",
