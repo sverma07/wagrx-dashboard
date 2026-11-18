@@ -2605,6 +2605,322 @@
           }
         }
       ]
+    },
+    {
+      "time": "2026-11-17T19:00:04-05:00",
+      "games": [
+        {
+          "game": "Western Michigan Broncos (H) vs Eastern Michigan Eagles (A)",
+          "spread": "WMU -14.5",
+          "favorite": "Western Michigan Broncos -fav",
+          "confidence": "61%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Western Michigan Broncos",
+            "M2: Relevance": "TAKE: Western Michigan Broncos",
+            "M3: Efficiency": "TAKE: Eastern Michigan Eagles",
+            "M4: ATS Trends": "TAKE: Eastern Michigan Eagles",
+            "M5: Luck": "TAKE: Eastern Michigan Eagles",
+            "M6: Sharp Money": "TAKE: Eastern Michigan Eagles",
+            "M8: Line Movement": "TAKE: Western Michigan Broncos",
+            "CONSENSUS": "TAKE: Eastern Michigan Eagles",
+            "Sharp: Circa": "TAKE: Western Michigan Broncos",
+            "Sharp: DraftKings": "TAKE: Eastern Michigan Eagles"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 33,
+              "away": 9
+            },
+            "M2: Relevance": {
+              "home": 38.3944,
+              "away": 6.3496
+            },
+            "M3: Efficiency": {
+              "margin": 8.2
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 6
+            },
+            "M5: Luck": {
+              "home": "0.5",
+              "away": "0.1"
+            },
+            "M6: Sharp Money": {
+              "home_b": 62.29,
+              "home_m": 57.42,
+              "away_b": 37.71,
+              "away_m": 42.58
+            },
+            "M8: Line Movement": {
+              "open_home": -14.5,
+              "current_home": -16.5,
+              "delta": -2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -15.0,
+                "last": -15.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Western Michigan Broncos",
+          "team_away": "Eastern Michigan Eagles",
+          "start": "2026-11-17T23:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 36.0,
+              "home_m": 63.0,
+              "away_b": 64.0,
+              "away_m": 37.0,
+              "line": "-15",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 70.0,
+              "home_m": 69.0,
+              "away_b": 30.0,
+              "away_m": 31.0,
+              "line": "-17.5",
+              "thin": false
+            }
+          },
+          "event_id": "401866465",
+          "locked_run": "2026-11-17T17:30:03-05:00"
+        },
+        {
+          "game": "Ohio Bobcats (H) vs Ball State Cardinals (A)",
+          "spread": "OHIO -11.5",
+          "favorite": "Ohio Bobcats -fav",
+          "confidence": "61%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Ohio Bobcats",
+            "M2: Relevance": "TAKE: Ohio Bobcats",
+            "M3: Efficiency": "TAKE: Ball State Cardinals",
+            "M4: ATS Trends": "TAKE: Ball State Cardinals",
+            "M5: Luck": "TAKE: Ball State Cardinals",
+            "M6: Sharp Money": "TAKE: Ball State Cardinals",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Ball State Cardinals",
+            "Sharp: Circa": "TAKE: Ohio Bobcats",
+            "Sharp: DraftKings": "PUSH"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 30,
+              "away": 11
+            },
+            "M2: Relevance": {
+              "home": 38.0344,
+              "away": 8.8138
+            },
+            "M3: Efficiency": {
+              "margin": 9.8
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 8
+            },
+            "M5: Luck": {
+              "home": "0.8",
+              "away": "-0.1"
+            },
+            "M6: Sharp Money": {
+              "home_b": 67.49,
+              "home_m": 49.97,
+              "away_b": 32.51,
+              "away_m": 50.03
+            },
+            "M8: Line Movement": {
+              "open_home": -9.5,
+              "current_home": -10.0,
+              "delta": -0.5,
+              "crosses_key": false,
+              "size": 0.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -11.0,
+                "last": -10.5,
+                "delta": 0.5
+              },
+              "conflict": true
+            }
+          },
+          "team_home": "Ohio Bobcats",
+          "team_away": "Ball State Cardinals",
+          "start": "2026-11-18T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 80.0,
+              "home_m": 100.0,
+              "away_b": 20.0,
+              "away_m": 0.0,
+              "line": "-10.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 84.0,
+              "home_m": 84.0,
+              "away_b": 16.0,
+              "away_m": 16.0,
+              "line": "-10",
+              "thin": false
+            }
+          },
+          "event_id": "401866464",
+          "score": {
+            "value": 10.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 61%"
+              },
+              {
+                "t": "3 of 5 models back it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus (4-7, 36%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.3667,
+              "agree": 0.6,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-17T18:46:14-05:00"
+        },
+        {
+          "game": "Kent State Golden Flashes (H) vs Miami (OH) RedHawks (A)",
+          "spread": "M-OH -9.5",
+          "favorite": "Miami (OH) RedHawks -fav",
+          "confidence": "59%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Miami (OH) RedHawks",
+            "M2: Relevance": "TAKE: Miami (OH) RedHawks",
+            "M3: Efficiency": "TAKE: Kent State Golden Flashes",
+            "M4: ATS Trends": "TAKE: Miami (OH) RedHawks",
+            "M5: Luck": "TAKE: Kent State Golden Flashes",
+            "M6: Sharp Money": "TAKE: Kent State Golden Flashes",
+            "M8: Line Movement": "TAKE: Miami (OH) RedHawks",
+            "CONSENSUS": "TAKE: Miami (OH) RedHawks",
+            "Sharp: Circa": "TAKE: Miami (OH) RedHawks",
+            "Sharp: DraftKings": "TAKE: Miami (OH) RedHawks"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 10,
+              "away": 34
+            },
+            "M2: Relevance": {
+              "home": 9.9329,
+              "away": 38.1569
+            },
+            "M3: Efficiency": {
+              "margin": -8.8
+            },
+            "M4: ATS Trends": {
+              "home": 4,
+              "away": 6
+            },
+            "M5: Luck": {
+              "home": "0.1",
+              "away": "0.4"
+            },
+            "M6: Sharp Money": {
+              "home_b": 35.41,
+              "home_m": 62.83,
+              "away_b": 64.59,
+              "away_m": 37.17
+            },
+            "M8: Line Movement": {
+              "open_home": 8.5,
+              "current_home": 9.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 9.5,
+                "last": 9.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Kent State Golden Flashes",
+          "team_away": "Miami (OH) RedHawks",
+          "start": "2026-11-18T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 12.0,
+              "away_b": 50.0,
+              "away_m": 88.0,
+              "line": "+9.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 28.0,
+              "home_m": 12.0,
+              "away_b": 72.0,
+              "away_m": 88.0,
+              "line": "+9.5",
+              "thin": false
+            }
+          },
+          "event_id": "401866466",
+          "score": {
+            "value": 37.0,
+            "tier": "Fair",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 59%"
+              },
+              {
+                "t": "3 of 5 models back it"
+              },
+              {
+                "t": "Sharp sources side with it (extreme money gap, 38 pts)"
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a losing pattern: Sharps with consensus (75-84, 47%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.3,
+              "agree": 0.6,
+              "sharp": 1.0,
+              "tier": 1.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-17T18:46:14-05:00"
+        }
+      ]
     }
   ]
 }
