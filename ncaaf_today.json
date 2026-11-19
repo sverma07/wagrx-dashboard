@@ -114,6 +114,128 @@
           }
         }
       ]
+    },
+    {
+      "time": "2026-11-19T09:00:03-05:00",
+      "games": [
+        {
+          "game": "Temple Owls (H) vs Rice Owls (A)",
+          "spread": "TEM -3",
+          "favorite": "Temple Owls -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Temple Owls",
+            "M2: Relevance": "TAKE: Temple Owls",
+            "M3: Efficiency": "TAKE: Temple Owls",
+            "M4: ATS Trends": "TAKE: Temple Owls",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Rice Owls",
+            "M8: Line Movement": "TAKE: Rice Owls",
+            "CONSENSUS": "TAKE: Temple Owls",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Temple Owls"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 32,
+              "away": 12
+            },
+            "M2: Relevance": {
+              "home": 34.1856,
+              "away": 13.6095
+            },
+            "M3: Efficiency": {
+              "margin": 3.6
+            },
+            "M4: ATS Trends": {
+              "home": 10,
+              "away": 1
+            },
+            "M5: Rest": {
+              "home": 5,
+              "away": 5,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": 50.88,
+              "home_m": 21.92,
+              "away_b": 49.12,
+              "away_m": 78.08
+            },
+            "M8: Line Movement": {
+              "open_home": -4.0,
+              "current_home": -2.5,
+              "delta": 1.5,
+              "crosses_key": true,
+              "size": 1.5,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -3.0,
+                "last": -3.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Temple Owls",
+          "team_away": "Rice Owls",
+          "start": "2026-11-20T00:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 0.0,
+              "home_m": 0.0,
+              "away_b": 100.0,
+              "away_m": 100.0,
+              "line": "-3",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 78.0,
+              "home_m": 89.0,
+              "away_b": 22.0,
+              "away_m": 11.0,
+              "line": "-2.5",
+              "thin": false
+            }
+          },
+          "espn_home": "Temple Owls",
+          "espn_away": "Rice Owls",
+          "event_id": "401862830",
+          "score": {
+            "value": 27.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 100%"
+              },
+              {
+                "t": "4 of 4 models back it"
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 60%+ &middot; Consensus on the favorite (2-5, 29%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 1.0,
+              "agree": 1.0,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        }
+      ]
     }
   ]
 }
