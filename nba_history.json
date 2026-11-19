@@ -1,7 +1,1411 @@
 {
   "sport": "NBA",
-  "updated": "2026-11-18T06:55:02-05:00",
+  "updated": "2026-11-19T06:55:03-05:00",
   "days": {
+    "2026-11-18": [
+      {
+        "game": "Cleveland Cavaliers (H) vs Memphis Grizzlies (A)",
+        "team_home": "Cleveland Cavaliers",
+        "team_away": "Memphis Grizzlies",
+        "line": "CLE -4.5",
+        "favorite": "Cleveland Cavaliers -fav",
+        "final": "Cleveland Cavaliers 121, Memphis Grizzlies 124",
+        "cover": "Memphis Grizzlies",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 59.4,
+          "home_m": 57.33,
+          "away_b": 40.6,
+          "away_m": 42.67
+        },
+        "graded_run": "2026-11-18T18:30:12-05:00",
+        "score": {
+          "value": 64.0,
+          "tier": "Strong",
+          "star": true,
+          "why": [
+            {
+              "t": "Consensus confidence 100%"
+            },
+            {
+              "t": "5 of 5 models back it"
+            },
+            {
+              "t": "Sharp sources side with it (extreme money gap, 33 pts)"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus &middot; Confidence 75%+ &middot; Consensus on the underdog (7-12, 37%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 1.0,
+            "sharp": 1.0,
+            "tier": 1.0,
+            "line": 1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T17:30:11-0500",
+            "n": 1,
+            "sp": -5.5,
+            "best_h": -5.5,
+            "best_a": 5.5,
+            "tot": 234.5
+          },
+          "close": {
+            "t": "2026-11-18T18:30:12-0500",
+            "n": 13,
+            "sp": -4.5,
+            "best_h": -4.5,
+            "best_a": 5,
+            "tot": 238,
+            "pin_sp": -4.5,
+            "pin_h": -106,
+            "pin_a": -104,
+            "pin_tot": 237.5,
+            "pin_ml": [
+              -172,
+              158
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Memphis Grizzlies",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Memphis Grizzlies",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Memphis Grizzlies",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Memphis Grizzlies",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Memphis Grizzlies",
+            "result": "WIN"
+          },
+          "M7: Injury Edge": {
+            "pick": "Memphis Grizzlies",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Memphis Grizzlies",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Memphis Grizzlies",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Memphis Grizzlies",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Cleveland Cavaliers",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Indiana Pacers (H) vs Houston Rockets (A)",
+        "team_home": "Indiana Pacers",
+        "team_away": "Houston Rockets",
+        "line": "HOU -7.5",
+        "favorite": "Houston Rockets -fav",
+        "final": "Indiana Pacers 104, Houston Rockets 119",
+        "cover": "Houston Rockets",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 33.69,
+          "home_m": 36.93,
+          "away_b": 66.31,
+          "away_m": 63.07
+        },
+        "graded_run": "2026-11-18T18:30:12-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T17:30:11-0500",
+            "n": 1,
+            "sp": 6.5,
+            "best_h": 6.5,
+            "best_a": -6.5,
+            "tot": 226.5
+          },
+          "close": {
+            "t": "2026-11-18T18:30:12-0500",
+            "n": 13,
+            "sp": 8.5,
+            "best_h": 9,
+            "best_a": -8.5,
+            "tot": 225,
+            "pin_sp": 8.5,
+            "pin_h": -108,
+            "pin_a": -102,
+            "pin_tot": 225,
+            "pin_ml": [
+              272,
+              -319
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Indiana Pacers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Indiana Pacers",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "Indiana Pacers",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Indiana Pacers",
+            "result": "LOSS"
+          },
+          "M7: Injury Edge": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Indiana Pacers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Houston Rockets",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Miami Heat (H) vs Milwaukee Bucks (A)",
+        "team_home": "Miami Heat",
+        "team_away": "Milwaukee Bucks",
+        "line": "MIA -12.5",
+        "favorite": "Miami Heat -fav",
+        "final": "Miami Heat 137, Milwaukee Bucks 130",
+        "cover": "Milwaukee Bucks",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 80.96,
+          "home_m": 80.71,
+          "away_b": 19.04,
+          "away_m": 19.29
+        },
+        "graded_run": "2026-11-18T18:30:12-05:00",
+        "score": {
+          "value": -4.0,
+          "tier": "Conflicted",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 60%"
+            },
+            {
+              "t": "3 of 5 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (3 of 3: Circa, DraftKings, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.3333,
+            "agree": 0.6,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 0.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T18:46:07-0500",
+            "n": 1,
+            "sp": -12.5,
+            "best_h": -12.5,
+            "best_a": 12.5,
+            "tot": 236.5
+          },
+          "close": {
+            "t": "2026-11-18T18:30:12-0500",
+            "n": 13,
+            "sp": -12,
+            "best_h": -11.5,
+            "best_a": 12.5,
+            "tot": 236.5,
+            "pin_sp": -12,
+            "pin_h": -103,
+            "pin_a": -107,
+            "pin_tot": 236,
+            "pin_ml": [
+              -617,
+              507
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Miami Heat",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Miami Heat",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Milwaukee Bucks",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Milwaukee Bucks",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Milwaukee Bucks",
+            "result": "WIN"
+          },
+          "M7: Injury Edge": {
+            "pick": "Miami Heat",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Milwaukee Bucks",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Miami Heat",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Milwaukee Bucks",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Milwaukee Bucks",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Orlando Magic (H) vs Philadelphia 76ers (A)",
+        "team_home": "Orlando Magic",
+        "team_away": "Philadelphia 76ers",
+        "line": "PHI -2.5",
+        "favorite": "Philadelphia 76ers -fav",
+        "final": "Orlando Magic 116, Philadelphia 76ers 121",
+        "cover": "Philadelphia 76ers",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 19.62,
+          "home_m": 42.29,
+          "away_b": 80.38,
+          "away_m": 57.71
+        },
+        "graded_run": "2026-11-18T18:30:12-05:00",
+        "score": {
+          "value": 42.0,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 80%"
+            },
+            {
+              "t": "4 of 5 models back it"
+            },
+            {
+              "t": "Sharp sources side with it (strong money gap, 15 pts)"
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus &middot; Line move against consensus &middot; Confidence 75%+ (6-10, 38%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 0.8,
+            "sharp": 1.0,
+            "tier": 0.5,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T18:00:16-0500",
+            "n": 1,
+            "sp": 2.5,
+            "best_h": 2.5,
+            "best_a": -2.5,
+            "tot": 223.5
+          },
+          "close": {
+            "t": "2026-11-18T18:30:12-0500",
+            "n": 13,
+            "sp": -2.5,
+            "best_h": -1.5,
+            "best_a": 2.5,
+            "tot": 219.5,
+            "pin_sp": -2,
+            "pin_h": -105,
+            "pin_a": -109,
+            "pin_tot": 219,
+            "pin_ml": [
+              -125,
+              109
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          },
+          "M7: Injury Edge": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Orlando Magic",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Philadelphia 76ers",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Brooklyn Nets (H) vs Chicago Bulls (A)",
+        "team_home": "Brooklyn Nets",
+        "team_away": "Chicago Bulls",
+        "line": "BKN -2.5",
+        "favorite": "Brooklyn Nets -fav",
+        "final": "Brooklyn Nets 107, Chicago Bulls 137",
+        "cover": "Chicago Bulls",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 34.78,
+          "home_m": 34.23,
+          "away_b": 65.22,
+          "away_m": 65.77
+        },
+        "graded_run": "2026-11-18T19:00:19-05:00",
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-17T17:30:11-0500",
+            "n": 1,
+            "sp": -1.5,
+            "best_h": -1.5,
+            "best_a": 1.5,
+            "tot": 237.5
+          },
+          "close": {
+            "t": "2026-11-18T19:00:20-0500",
+            "n": 13,
+            "sp": -1.5,
+            "best_h": -1.5,
+            "best_a": 2,
+            "tot": 239.5,
+            "pin_sp": -1.5,
+            "pin_h": -108,
+            "pin_a": -102,
+            "pin_tot": 238.5,
+            "pin_ml": [
+              -119,
+              110
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Brooklyn Nets",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Brooklyn Nets",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Chicago Bulls",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Chicago Bulls",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Chicago Bulls",
+            "result": "WIN"
+          },
+          "M7: Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Chicago Bulls",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "SPLIT",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "Brooklyn Nets",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Brooklyn Nets",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Toronto Raptors (H) vs Washington Wizards (A)",
+        "team_home": "Toronto Raptors",
+        "team_away": "Washington Wizards",
+        "line": "TOR -6.5",
+        "favorite": "Toronto Raptors -fav",
+        "final": "Toronto Raptors 99, Washington Wizards 103",
+        "cover": "Washington Wizards",
+        "status": null,
+        "confidence": "67%",
+        "sharp": {
+          "home_b": 62.68,
+          "home_m": 35.27,
+          "away_b": 37.32,
+          "away_m": 64.73
+        },
+        "graded_run": "2026-11-18T19:00:19-05:00",
+        "score": {
+          "value": 46.0,
+          "tier": "Good",
+          "star": true,
+          "why": [
+            {
+              "t": "Consensus confidence 67%"
+            },
+            {
+              "t": "4 of 6 models back it"
+            },
+            {
+              "t": "Sharp sources side with it (extreme money gap, 38 pts)"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus (34-41, 45%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.5667,
+            "agree": 0.6667,
+            "sharp": 1.0,
+            "tier": 1.0,
+            "line": 1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T18:00:16-0500",
+            "n": 1,
+            "sp": -6.5,
+            "best_h": -6.5,
+            "best_a": 6.5,
+            "tot": 227.5
+          },
+          "close": {
+            "t": "2026-11-18T19:00:20-0500",
+            "n": 13,
+            "sp": -4,
+            "best_h": -4,
+            "best_a": 4.5,
+            "tot": 224,
+            "pin_sp": -4,
+            "pin_h": -109,
+            "pin_a": -101,
+            "pin_tot": 224,
+            "pin_ml": [
+              -170,
+              156
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Toronto Raptors",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Toronto Raptors",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "M7: Injury Edge": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Washington Wizards",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "New Orleans Pelicans (H) vs Detroit Pistons (A)",
+        "team_home": "New Orleans Pelicans",
+        "team_away": "Detroit Pistons",
+        "line": "DET -7.5",
+        "favorite": "Detroit Pistons -fav",
+        "final": "New Orleans Pelicans 109, Detroit Pistons 122",
+        "cover": "Detroit Pistons",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 20.5,
+          "home_m": 37.44,
+          "away_b": 79.5,
+          "away_m": 62.56
+        },
+        "graded_run": "2026-11-18T19:30:14-05:00",
+        "score": {
+          "value": -4.0,
+          "tier": "Conflicted",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 60%"
+            },
+            {
+              "t": "3 of 5 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (3 of 3: Circa, DraftKings, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.3333,
+            "agree": 0.6,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 0.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T18:00:16-0500",
+            "n": 1,
+            "sp": 6.5,
+            "best_h": 6.5,
+            "best_a": -6.5,
+            "tot": 228.5
+          },
+          "close": {
+            "t": "2026-11-18T19:30:14-0500",
+            "n": 13,
+            "sp": 5.5,
+            "best_h": 5.5,
+            "best_a": -4.5,
+            "tot": 226.5,
+            "pin_sp": 5.5,
+            "pin_h": -105,
+            "pin_a": -109,
+            "pin_tot": 226,
+            "pin_ml": [
+              180,
+              -213
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Detroit Pistons",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Detroit Pistons",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Detroit Pistons",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          },
+          "M7: Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Detroit Pistons",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "New Orleans Pelicans",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Oklahoma City Thunder (H) vs Atlanta Hawks (A)",
+        "team_home": "Oklahoma City Thunder",
+        "team_away": "Atlanta Hawks",
+        "line": "OKC -6.5",
+        "favorite": "Oklahoma City Thunder -fav",
+        "final": "Oklahoma City Thunder 112, Atlanta Hawks 117",
+        "cover": "Atlanta Hawks",
+        "status": null,
+        "confidence": "80%",
+        "sharp": {
+          "home_b": 55.22,
+          "home_m": 57.63,
+          "away_b": 44.78,
+          "away_m": 42.37
+        },
+        "graded_run": "2026-11-18T19:30:14-05:00",
+        "score": {
+          "value": 20.21,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 80%"
+            },
+            {
+              "t": "4 of 5 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: Circa, DraftKings)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a winning pattern: Sharps against consensus &middot; Line move against consensus &middot; Confidence 75%+ &middot; Consensus on the favorite (14-5, 74%, Wilson 51%)"
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 0.8,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0483,
+            "loss": 0.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T18:00:16-0500",
+            "n": 1,
+            "sp": -6.5,
+            "best_h": -6.5,
+            "best_a": 6.5,
+            "tot": 228.5
+          },
+          "close": {
+            "t": "2026-11-18T19:30:14-0500",
+            "n": 13,
+            "sp": -6.5,
+            "best_h": -6.5,
+            "best_a": 6.5,
+            "tot": 228.5,
+            "pin_sp": -6.5,
+            "pin_h": -106,
+            "pin_a": -104,
+            "pin_tot": 228,
+            "pin_ml": [
+              -253,
+              227
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "M7: Injury Edge": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Oklahoma City Thunder",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Atlanta Hawks",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Dallas Mavericks (H) vs Golden State Warriors (A)",
+        "team_home": "Dallas Mavericks",
+        "team_away": "Golden State Warriors",
+        "line": "DAL -6.5",
+        "favorite": "Dallas Mavericks -fav",
+        "final": "Dallas Mavericks 116, Golden State Warriors 94",
+        "cover": "Dallas Mavericks",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 65.48,
+          "home_m": 60.32,
+          "away_b": 34.52,
+          "away_m": 39.68
+        },
+        "graded_run": "2026-11-18T19:30:14-05:00",
+        "score": {
+          "value": 61.0,
+          "tier": "Strong",
+          "star": true,
+          "why": [
+            {
+              "t": "Consensus confidence 100%"
+            },
+            {
+              "t": "4 of 4 models back it"
+            },
+            {
+              "t": "Sharp sources side with it (strong money gap, 14 pts)"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus &middot; Confidence 75%+ &middot; Consensus on the underdog (7-12, 37%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 1.0,
+            "sharp": 1.0,
+            "tier": 0.5,
+            "line": 1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T18:00:16-0500",
+            "n": 1,
+            "sp": -4.5,
+            "best_h": -4.5,
+            "best_a": 4.5,
+            "tot": 221.5
+          },
+          "close": {
+            "t": "2026-11-18T19:30:14-0500",
+            "n": 13,
+            "sp": -4.5,
+            "best_h": -4.5,
+            "best_a": 5,
+            "tot": 223.5,
+            "pin_sp": -4.5,
+            "pin_h": -110,
+            "pin_a": -100,
+            "pin_tot": 223.5,
+            "pin_ml": [
+              -190,
+              169
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Golden State Warriors",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Golden State Warriors",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Golden State Warriors",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Golden State Warriors",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Golden State Warriors",
+            "result": "LOSS"
+          },
+          "M7: Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Golden State Warriors",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Golden State Warriors",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Golden State Warriors",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Dallas Mavericks",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Denver Nuggets (H) vs Boston Celtics (A)",
+        "team_home": "Denver Nuggets",
+        "team_away": "Boston Celtics",
+        "line": "BOS -2.5",
+        "favorite": "Boston Celtics -fav",
+        "final": "Denver Nuggets 105, Boston Celtics 101",
+        "cover": "Denver Nuggets",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": null,
+          "home_m": null,
+          "away_b": null,
+          "away_m": null
+        },
+        "graded_run": "2026-11-18T21:00:14-05:00",
+        "score": {
+          "value": 50.0,
+          "tier": "Good",
+          "star": true,
+          "why": [
+            {
+              "t": "Consensus confidence 100%"
+            },
+            {
+              "t": "4 of 4 models back it"
+            },
+            {
+              "t": "Sharp sources side with it (lean money gap, 8 pts)"
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus &middot; No line move yet &middot; Confidence 80%+ (1-5, 17%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 1.0,
+            "sharp": 1.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T18:00:16-0500",
+            "n": 1,
+            "sp": 2.5,
+            "best_h": 2.5,
+            "best_a": -2.5,
+            "tot": 220.5
+          },
+          "close": {
+            "t": "2026-11-18T21:00:14-0500",
+            "n": 13,
+            "sp": 2.5,
+            "best_h": 2.5,
+            "best_a": -2,
+            "tot": 220,
+            "pin_sp": 2.5,
+            "pin_h": -109,
+            "pin_a": -101,
+            "pin_tot": 220,
+            "pin_ml": [
+              120,
+              -130
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "N/A",
+            "result": null
+          },
+          "M7: Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Boston Celtics",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Los Angeles Lakers (H) vs Utah Jazz (A)",
+        "team_home": "Los Angeles Lakers",
+        "team_away": "Utah Jazz",
+        "line": "LAL -10.5",
+        "favorite": "Los Angeles Lakers -fav",
+        "final": "Los Angeles Lakers 97, Utah Jazz 109",
+        "cover": "Utah Jazz",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 68.67,
+          "home_m": 66.6,
+          "away_b": 31.33,
+          "away_m": 33.4
+        },
+        "graded_run": "2026-11-18T21:30:12-05:00",
+        "score": {
+          "value": 11.25,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: DraftKings, SBD)",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Sharps against consensus &middot; No line move yet &middot; Confidence 75%+ &middot; Consensus on the favorite (3-7, 30%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T18:00:16-0500",
+            "n": 1,
+            "sp": -12.5,
+            "best_h": -12.5,
+            "best_a": 12.5,
+            "tot": 230.5
+          },
+          "close": {
+            "t": "2026-11-18T21:30:12-0500",
+            "n": 13,
+            "sp": -11.5,
+            "best_h": -10,
+            "best_a": 12.5,
+            "tot": 229.5,
+            "pin_sp": -11.5,
+            "pin_h": -109,
+            "pin_a": -101,
+            "pin_tot": 229,
+            "pin_ml": [
+              -537,
+              449
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Los Angeles Lakers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Los Angeles Lakers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Utah Jazz",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Los Angeles Lakers",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Utah Jazz",
+            "result": "WIN"
+          },
+          "M7: Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Los Angeles Lakers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Los Angeles Lakers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Utah Jazz",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Sacramento Kings (H) vs Phoenix Suns (A)",
+        "team_home": "Sacramento Kings",
+        "team_away": "Phoenix Suns",
+        "line": "PHX -6.5",
+        "favorite": "Phoenix Suns -fav",
+        "final": "Sacramento Kings 107, Phoenix Suns 128",
+        "cover": "Phoenix Suns",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 25.16,
+          "home_m": 29.24,
+          "away_b": 74.84,
+          "away_m": 70.76
+        },
+        "graded_run": "2026-11-18T21:30:12-05:00",
+        "score": {
+          "value": 12.0,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 60%"
+            },
+            {
+              "t": "3 of 5 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: DraftKings, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved toward it"
+            }
+          ],
+          "x": {
+            "conf": 0.3333,
+            "agree": 0.6,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": 1.0,
+            "pattern": 0.0,
+            "loss": 0.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T18:00:16-0500",
+            "n": 1,
+            "sp": 6.5,
+            "best_h": 6.5,
+            "best_a": -6.5,
+            "tot": 226.5
+          },
+          "close": {
+            "t": "2026-11-18T21:30:12-0500",
+            "n": 13,
+            "sp": 7.5,
+            "best_h": 7.5,
+            "best_a": -6.5,
+            "tot": 227,
+            "pin_sp": 7,
+            "pin_h": -103,
+            "pin_a": -107,
+            "pin_tot": 227,
+            "pin_ml": [
+              235,
+              -263
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Phoenix Suns",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Phoenix Suns",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Sacramento Kings",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Phoenix Suns",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Sacramento Kings",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Sacramento Kings",
+            "result": "LOSS"
+          },
+          "M7: Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Phoenix Suns",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Phoenix Suns",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Phoenix Suns",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Sacramento Kings",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-11-17": [
       {
         "game": "Toronto Raptors (H) vs New York Knicks (A)",
