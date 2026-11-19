@@ -1,7 +1,261 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-11-18T06:35:02-05:00",
+  "updated": "2026-11-19T06:35:02-05:00",
   "days": {
+    "2026-11-18": [
+      {
+        "game": "UMass Minutemen (H) vs Akron Zips (A)",
+        "team_home": "UMass Minutemen",
+        "team_away": "Akron Zips",
+        "line": "MASS -3",
+        "favorite": "UMass Minutemen -fav",
+        "final": "UMass Minutemen 33, Akron Zips 34",
+        "cover": "Akron Zips",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 67.48,
+          "home_m": 63.77,
+          "away_b": 32.52,
+          "away_m": 36.23
+        },
+        "graded_run": "2026-11-18T18:30:03-05:00",
+        "score": {
+          "value": 27.0,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 100%"
+            },
+            {
+              "t": "4 of 4 models back it"
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 60%+ &middot; Consensus on the favorite (2-4, 33%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 1.0,
+            "sharp": 0.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T13:00:04-0500",
+            "n": 12,
+            "sp": -3.0,
+            "best_h": -3,
+            "best_a": 3.5,
+            "tot": 46.5,
+            "pin_sp": -3,
+            "pin_h": -113,
+            "pin_a": -104,
+            "pin_tot": 46.5,
+            "pin_ml": [
+              -157,
+              136
+            ]
+          },
+          "close": {
+            "t": "2026-11-18T18:30:04-0500",
+            "n": 12,
+            "sp": -3.0,
+            "best_h": -3,
+            "best_a": 3.5,
+            "tot": 46.5,
+            "pin_sp": -3,
+            "pin_h": -106,
+            "pin_a": -106,
+            "pin_tot": 47.5,
+            "pin_ml": [
+              -150,
+              135
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Akron Zips",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Akron Zips",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "UMass Minutemen",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Buffalo Bulls (H) vs Central Michigan Chippewas (A)",
+        "team_home": "Buffalo Bulls",
+        "team_away": "Central Michigan Chippewas",
+        "line": "BUF -1.5",
+        "favorite": "Buffalo Bulls -fav",
+        "final": "Buffalo Bulls 40, Central Michigan Chippewas 21",
+        "cover": "Buffalo Bulls",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 72.44,
+          "home_m": 82.82,
+          "away_b": 27.56,
+          "away_m": 17.18
+        },
+        "graded_run": "2026-11-18T19:00:04-05:00",
+        "score": {
+          "value": 49.25,
+          "tier": "Good",
+          "star": true,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Sharp sources side with it"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a losing pattern: Confidence 75%+ &middot; Consensus on the favorite (51-66, 44%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": 1.0,
+            "tier": 0.0,
+            "line": 1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T13:00:04-0500",
+            "n": 12,
+            "sp": -1.5,
+            "best_h": -1,
+            "best_a": 1.5,
+            "tot": 45.5,
+            "pin_sp": -1,
+            "pin_h": -112,
+            "pin_a": -104,
+            "pin_tot": 45.5,
+            "pin_ml": [
+              -117,
+              102
+            ]
+          },
+          "close": {
+            "t": "2026-11-18T19:00:05-0500",
+            "n": 12,
+            "sp": -2.5,
+            "best_h": -2,
+            "best_a": 2.5,
+            "tot": 46.5,
+            "pin_sp": -2.5,
+            "pin_h": -114,
+            "pin_a": 102,
+            "pin_tot": 47,
+            "pin_ml": [
+              -141,
+              128
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Buffalo Bulls",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Buffalo Bulls",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Central Michigan Chippewas",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Buffalo Bulls",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Buffalo Bulls",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Buffalo Bulls",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Buffalo Bulls",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Central Michigan Chippewas",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Buffalo Bulls",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-11-17": [
       {
         "game": "Western Michigan Broncos (H) vs Eastern Michigan Eagles (A)",
