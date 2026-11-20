@@ -4113,6 +4113,145 @@
           "locked_run": "2026-11-19T20:00:25-05:00"
         }
       ]
+    },
+    {
+      "time": "2026-11-19T22:30:09-05:00",
+      "games": [
+        {
+          "game": "Houston Texans (H) vs Indianapolis Colts (A)",
+          "spread": "HOU -12.5",
+          "favorite": "Houston Texans -fav",
+          "confidence": "63%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Houston Texans",
+            "M2: Relevance": "TAKE: Houston Texans",
+            "M3: Efficiency": "TAKE: Indianapolis Colts",
+            "M4: ATS Trends": "TAKE: Indianapolis Colts",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Houston Texans",
+            "M7: QB Injury Edge": "TAKE: Houston Texans",
+            "M8: Line Movement": "TAKE: Houston Texans",
+            "CONSENSUS": "TAKE: Houston Texans",
+            "Sharp: Circa": "TAKE: Houston Texans",
+            "Sharp: DraftKings": "TAKE: Houston Texans"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 28,
+              "away": 18
+            },
+            "M2: Relevance": {
+              "home": 37.7965,
+              "away": 26.0673
+            },
+            "M3: Efficiency": {
+              "margin": 4.0
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 10
+            },
+            "M5: Rest": {
+              "home": 4,
+              "away": 4,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": 52.05,
+              "home_m": 57.9,
+              "away_b": 47.95,
+              "away_m": 42.1
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "C.J. Stroud (Active)",
+              "away_status": "Riley Leonard (Out) -> Daniel Jones (Active) starting",
+              "home_rb": "Woody Marks (Out) -> David Montgomery (Active) starting",
+              "away_rb": "Jonathan Taylor (Active)",
+              "home_mlb": "Azeez Al-Shaair (Injured Reserve) -> Henry To'oTo'o (Active) starting",
+              "away_mlb": "Jaylon Carlies (Injured Reserve) -> CJ Allen (Active) starting",
+              "home_impact": 4.0,
+              "away_impact": 7.0
+            },
+            "M8: Line Movement": {
+              "open_home": -5.5,
+              "current_home": -12.5,
+              "delta": -7.0,
+              "crosses_key": true,
+              "size": 7.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -12.5,
+                "last": -12.5,
+                "delta": 0.0
+              },
+              "vs_consensus": "agree"
+            }
+          },
+          "team_home": "Houston Texans",
+          "team_away": "Indianapolis Colts",
+          "start": "2026-11-20T01:15Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 27.0,
+              "home_m": 67.0,
+              "away_b": 73.0,
+              "away_m": 33.0,
+              "line": "-12.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 37.0,
+              "home_m": 48.0,
+              "away_b": 63.0,
+              "away_m": 52.0,
+              "line": "-12.5",
+              "thin": false
+            }
+          },
+          "home_id": "34",
+          "away_id": "11",
+          "espn_home": "Houston Texans",
+          "espn_away": "Indianapolis Colts",
+          "event_id": "401873066",
+          "score": {
+            "value": 41.0,
+            "tier": "Fair",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 63%"
+              },
+              {
+                "t": "3 of 5 models back it"
+              },
+              {
+                "t": "Sharp sources side with it (extreme money gap, 40 pts)"
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a losing pattern: Sharps with consensus &middot; Line move with consensus (4-6, 40%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.4333,
+              "agree": 0.6,
+              "sharp": 1.0,
+              "tier": 1.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-19T20:00:25-05:00"
+        }
+      ]
     }
   ]
 }
