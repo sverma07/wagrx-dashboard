@@ -1,7 +1,138 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-11-19T06:35:02-05:00",
+  "updated": "2026-11-20T06:35:02-05:00",
   "days": {
+    "2026-11-19": [
+      {
+        "game": "Temple Owls (H) vs Rice Owls (A)",
+        "team_home": "Temple Owls",
+        "team_away": "Rice Owls",
+        "line": "TEM -3",
+        "favorite": "Temple Owls -fav",
+        "final": "Temple Owls 27, Rice Owls 31",
+        "cover": "Rice Owls",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 56.89,
+          "home_m": 37.85,
+          "away_b": 43.11,
+          "away_m": 62.15
+        },
+        "graded_run": "2026-11-19T19:00:03-05:00",
+        "score": {
+          "value": 12.0,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 100%"
+            },
+            {
+              "t": "4 of 4 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (3 of 3: Circa, DraftKings, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Line move against consensus &middot; Confidence 100%+ &middot; Consensus on the favorite (4-8, 33%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 1.0,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T13:00:04-0500",
+            "n": 12,
+            "sp": -3.0,
+            "best_h": -2.5,
+            "best_a": 3,
+            "tot": 50.5,
+            "pin_sp": -3,
+            "pin_h": -105,
+            "pin_a": -111,
+            "pin_tot": 49.5,
+            "pin_ml": [
+              -149,
+              129
+            ]
+          },
+          "close": {
+            "t": "2026-11-19T19:00:04-0500",
+            "n": 12,
+            "sp": -2.5,
+            "best_h": -2.5,
+            "best_a": 3,
+            "tot": 52.0,
+            "pin_sp": -3,
+            "pin_h": 102,
+            "pin_a": -114,
+            "pin_tot": 52.5,
+            "pin_ml": [
+              -141,
+              127
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Temple Owls",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Temple Owls",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Temple Owls",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Temple Owls",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Rice Owls",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Rice Owls",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Temple Owls",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Rice Owls",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Rice Owls",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-11-18": [
       {
         "game": "UMass Minutemen (H) vs Akron Zips (A)",
