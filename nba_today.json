@@ -41382,6 +41382,1465 @@
           "locked_run": "2026-11-20T21:30:13-05:00"
         }
       ]
+    },
+    {
+      "time": "2026-11-20T23:00:11-05:00",
+      "games": [
+        {
+          "game": "Atlanta Hawks (H) vs Charlotte Hornets (A)",
+          "spread": "ATL -6.5",
+          "favorite": "Atlanta Hawks -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Atlanta Hawks",
+            "M2: Relevance": "TAKE: Atlanta Hawks",
+            "M3: Efficiency": "TAKE: Charlotte Hornets",
+            "M4: ATS Trends": "TAKE: Charlotte Hornets",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Charlotte Hornets",
+            "M7: Injury Edge": "PUSH",
+            "M8: Line Movement": "TAKE: Atlanta Hawks",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "TAKE: Atlanta Hawks",
+            "Sharp: DraftKings": "TAKE: Atlanta Hawks"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 56,
+              "away": 51
+            },
+            "M2: Relevance": {
+              "home": 62.0633,
+              "away": 53.8449
+            },
+            "M3: Efficiency": {
+              "margin": 6.0
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 10
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 3,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": 73.44,
+              "home_m": 72.63,
+              "away_b": 26.56,
+              "away_m": 27.37
+            },
+            "M7: Injury Edge": {
+              "home_out": [
+                {
+                  "name": "CJ McCollum",
+                  "status": "Out",
+                  "min": 31.0
+                }
+              ],
+              "away_out": [
+                {
+                  "name": "Grayson Allen",
+                  "status": "Out",
+                  "min": 29.5
+                }
+              ],
+              "home_repl": [
+                "Aaron Wiggins"
+              ],
+              "away_repl": [
+                "Royce O'Neale"
+              ],
+              "home_impact": 3.1,
+              "away_impact": 3.0,
+              "home_other": [
+                {
+                  "name": "Asa Newell",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Henri Veesaar",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Mouhamed Gueye",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Jock Landale",
+                  "status": "Out",
+                  "kind": "bench"
+                },
+                {
+                  "name": "Kingston Flemings",
+                  "status": "Out",
+                  "kind": "bench"
+                }
+              ],
+              "away_other": [
+                {
+                  "name": "Dennis Schroder",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Kon Knueppel",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Grant Williams",
+                  "status": "Out",
+                  "kind": "bench"
+                }
+              ]
+            },
+            "M8: Line Movement": {
+              "open_home": -5.5,
+              "current_home": -7.5,
+              "delta": -2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -6.0,
+                "last": -7.5,
+                "delta": -1.5
+              }
+            }
+          },
+          "team_home": "Atlanta Hawks",
+          "team_away": "Charlotte Hornets",
+          "start": "2026-11-21T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 75.0,
+              "home_m": 88.0,
+              "away_b": 25.0,
+              "away_m": 12.0,
+              "line": "-7.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 66.0,
+              "home_m": 73.0,
+              "away_b": 34.0,
+              "away_m": 27.0,
+              "line": "-7.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909305",
+          "espn_home": "Atlanta Hawks",
+          "espn_away": "Charlotte Hornets",
+          "locked_run": "2026-11-20T18:30:12-05:00"
+        },
+        {
+          "game": "Brooklyn Nets (H) vs Orlando Magic (A)",
+          "spread": "ORL -5.5",
+          "favorite": "Orlando Magic -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Orlando Magic",
+            "M2: Relevance": "TAKE: Brooklyn Nets",
+            "M3: Efficiency": "TAKE: Brooklyn Nets",
+            "M4: ATS Trends": "TAKE: Brooklyn Nets",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Orlando Magic",
+            "M7: Injury Edge": "PUSH",
+            "M8: Line Movement": "TAKE: Orlando Magic",
+            "CONSENSUS": "TAKE: Brooklyn Nets",
+            "Sharp: Circa": "TAKE: Orlando Magic",
+            "Sharp: DraftKings": "TAKE: Brooklyn Nets"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 46,
+              "away": 60
+            },
+            "M2: Relevance": {
+              "home": 59.7738,
+              "away": 55.2632
+            },
+            "M3: Efficiency": {
+              "margin": -2.3
+            },
+            "M4: ATS Trends": {
+              "home": 8,
+              "away": 6
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": 34.93,
+              "home_m": 33.55,
+              "away_b": 65.07,
+              "away_m": 66.45
+            },
+            "M7: Injury Edge": {
+              "home_out": [],
+              "away_out": [],
+              "home_repl": [],
+              "away_repl": [],
+              "home_impact": 0.0,
+              "away_impact": 0.0,
+              "home_other": [
+                {
+                  "name": "Grant Nelson",
+                  "status": "Out",
+                  "kind": "long"
+                }
+              ],
+              "away_other": [
+                {
+                  "name": "Izaiyah Nelson",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Jonathan Isaac",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Noah Penda",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Paolo Banchero",
+                  "status": "Out",
+                  "kind": "long"
+                }
+              ]
+            },
+            "M8: Line Movement": {
+              "open_home": 5.5,
+              "current_home": 6.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": 5.5,
+                "last": 6.5,
+                "delta": 1.0
+              }
+            }
+          },
+          "team_home": "Brooklyn Nets",
+          "team_away": "Orlando Magic",
+          "start": "2026-11-21T00:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 40.0,
+              "home_m": 0.0,
+              "away_b": 60.0,
+              "away_m": 100.0,
+              "line": "+6.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 21.0,
+              "home_m": 42.0,
+              "away_b": 79.0,
+              "away_m": 58.0,
+              "line": "+6.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909306",
+          "espn_home": "Brooklyn Nets",
+          "espn_away": "Orlando Magic",
+          "score": {
+            "value": 3.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "Most sharp sources lean the other way (2 of 3: Circa, SBD)",
+                "warn": true
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: Line move against consensus &middot; Consensus on the underdog (10-14, 42%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": -1.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-20T19:00:10-05:00"
+        },
+        {
+          "game": "Cleveland Cavaliers (H) vs Indiana Pacers (A)",
+          "spread": "CLE -7.5",
+          "favorite": "Cleveland Cavaliers -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Cleveland Cavaliers",
+            "M2: Relevance": "TAKE: Cleveland Cavaliers",
+            "M3: Efficiency": "TAKE: Indiana Pacers",
+            "M4: ATS Trends": "TAKE: Indiana Pacers",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Indiana Pacers",
+            "M7: Injury Edge": "TAKE: Indiana Pacers",
+            "M8: Line Movement": "TAKE: Indiana Pacers",
+            "CONSENSUS": "TAKE: Indiana Pacers",
+            "Sharp: Circa": "TAKE: Cleveland Cavaliers",
+            "Sharp: DraftKings": "PUSH"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 54,
+              "away": 52
+            },
+            "M2: Relevance": {
+              "home": 64.9067,
+              "away": 50.8336
+            },
+            "M3: Efficiency": {
+              "margin": 2.5
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 13
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": 69.4,
+              "home_m": 68.15,
+              "away_b": 30.6,
+              "away_m": 31.85
+            },
+            "M7: Injury Edge": {
+              "home_out": [
+                {
+                  "name": "Jaylon Tyson",
+                  "status": "Out",
+                  "min": 32.0
+                }
+              ],
+              "away_out": [],
+              "home_repl": [
+                "Meleek Thomas"
+              ],
+              "away_repl": [],
+              "home_impact": 3.2,
+              "away_impact": 0.0,
+              "home_other": [
+                {
+                  "name": "Evan Mobley",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Nae'Qwan Tomlin",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Peyton Watson",
+                  "status": "Day to day",
+                  "kind": "bench"
+                }
+              ],
+              "away_other": [
+                {
+                  "name": "Ben Sheppard",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Johnny Furphy",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Tyrese Haliburton",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "T.J. McConnell",
+                  "status": "Day to day",
+                  "kind": "bench"
+                }
+              ]
+            },
+            "M8: Line Movement": {
+              "open_home": -7.5,
+              "current_home": -6.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -7.0,
+                "last": -5.5,
+                "delta": 1.5
+              }
+            }
+          },
+          "team_home": "Cleveland Cavaliers",
+          "team_away": "Indiana Pacers",
+          "start": "2026-11-21T00:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 67.0,
+              "home_m": 79.0,
+              "away_b": 33.0,
+              "away_m": 21.0,
+              "line": "-5.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 69.0,
+              "home_m": 69.0,
+              "away_b": 31.0,
+              "away_m": 31.0,
+              "line": "-6.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909307",
+          "espn_home": "Cleveland Cavaliers",
+          "espn_away": "Indiana Pacers",
+          "score": {
+            "value": 17.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 60%"
+              },
+              {
+                "t": "3 of 5 models back it"
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a losing pattern: Consensus on the underdog (33-35, 49%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.3333,
+              "agree": 0.6,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-20T19:00:10-05:00"
+        },
+        {
+          "game": "Detroit Pistons (H) vs Toronto Raptors (A)",
+          "spread": "DET -7.5",
+          "favorite": "Detroit Pistons -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Detroit Pistons",
+            "M2: Relevance": "TAKE: Detroit Pistons",
+            "M3: Efficiency": "TAKE: Toronto Raptors",
+            "M4: ATS Trends": "TAKE: Detroit Pistons",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Detroit Pistons",
+            "M7: Injury Edge": "PUSH",
+            "M8: Line Movement": "TAKE: Detroit Pistons",
+            "CONSENSUS": "TAKE: Detroit Pistons",
+            "Sharp: Circa": "TAKE: Toronto Raptors",
+            "Sharp: DraftKings": "TAKE: Detroit Pistons"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 68,
+              "away": 35
+            },
+            "M2: Relevance": {
+              "home": 76.5185,
+              "away": 33.6613
+            },
+            "M3: Efficiency": {
+              "margin": 3.1
+            },
+            "M4: ATS Trends": {
+              "home": 12,
+              "away": 1
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 2,
+              "away_last3": 2
+            },
+            "M6: Sharp Money": {
+              "home_b": 63.45,
+              "home_m": 68.26,
+              "away_b": 36.55,
+              "away_m": 31.74
+            },
+            "M7: Injury Edge": {
+              "home_out": [
+                {
+                  "name": "Cade Cunningham",
+                  "status": "Day to day",
+                  "min": 40.7
+                },
+                {
+                  "name": "Duncan Robinson",
+                  "status": "Out",
+                  "min": 29.0
+                }
+              ],
+              "away_out": [
+                {
+                  "name": "RJ Barrett",
+                  "status": "Out",
+                  "min": 37.7
+                },
+                {
+                  "name": "Collin Murray-Boyles",
+                  "status": "Out",
+                  "min": 27.5
+                }
+              ],
+              "home_repl": [
+                "Paul Reed",
+                "John Collins"
+              ],
+              "away_repl": [
+                "Jamal Shead",
+                "Jakob Poeltl"
+              ],
+              "home_impact": 4.5,
+              "away_impact": 6.5,
+              "home_other": [
+                {
+                  "name": "Ebuka Okorie",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Jalen Duren",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Ugonna Onyenso",
+                  "status": "Day to day",
+                  "kind": "long"
+                },
+                {
+                  "name": "Ronald Holland II",
+                  "status": "Day to day",
+                  "kind": "bench"
+                },
+                {
+                  "name": "Taurean Prince",
+                  "status": "Out",
+                  "kind": "bench"
+                }
+              ],
+              "away_other": [
+                {
+                  "name": "Kawhi Leonard",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Nate Bittle",
+                  "status": "Out",
+                  "kind": "long"
+                }
+              ]
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -6.5,
+              "delta": -5.0,
+              "crosses_key": false,
+              "size": 5.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -7.0,
+                "last": -7.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Detroit Pistons",
+          "team_away": "Toronto Raptors",
+          "start": "2026-11-21T00:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 70.0,
+              "home_m": 10.0,
+              "away_b": 30.0,
+              "away_m": 90.0,
+              "line": "-7",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 78.0,
+              "home_m": 95.0,
+              "away_b": 22.0,
+              "away_m": 5.0,
+              "line": "-6.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909308",
+          "espn_home": "Detroit Pistons",
+          "espn_away": "Toronto Raptors",
+          "score": {
+            "value": 49.25,
+            "tier": "Good",
+            "star": true,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "Sharp sources side with it"
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a losing pattern: Sharps with consensus &middot; Line move with consensus &middot; Consensus on the favorite (9-14, 39%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 1.0,
+              "tier": 0.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-20T19:00:10-05:00"
+        },
+        {
+          "game": "Chicago Bulls (H) vs Washington Wizards (A)",
+          "spread": "CHI -2.5",
+          "favorite": "Chicago Bulls -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Washington Wizards",
+            "M2: Relevance": "TAKE: Chicago Bulls",
+            "M3: Efficiency": "TAKE: Washington Wizards",
+            "M4: ATS Trends": "TAKE: Chicago Bulls",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Washington Wizards",
+            "M7: Injury Edge": "TAKE: Washington Wizards",
+            "M8: Line Movement": "TAKE: Washington Wizards",
+            "CONSENSUS": "TAKE: Washington Wizards",
+            "Sharp: Circa": "TAKE: Washington Wizards",
+            "Sharp: DraftKings": "TAKE: Chicago Bulls"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 52,
+              "away": 53
+            },
+            "M2: Relevance": {
+              "home": 66.3181,
+              "away": 47.6118
+            },
+            "M3: Efficiency": {
+              "margin": -0.4
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 5
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": 64.9,
+              "home_m": 52.68,
+              "away_b": 35.1,
+              "away_m": 47.32
+            },
+            "M7: Injury Edge": {
+              "home_out": [
+                {
+                  "name": "Jalen Smith",
+                  "status": "Out",
+                  "min": 27.0
+                }
+              ],
+              "away_out": [],
+              "home_repl": [
+                "Buddy Hield"
+              ],
+              "away_repl": [],
+              "home_impact": 2.7,
+              "away_impact": 0.0,
+              "home_other": [
+                {
+                  "name": "Caleb Wilson",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Tobe Awaka",
+                  "status": "Out",
+                  "kind": "long"
+                }
+              ],
+              "away_other": [
+                {
+                  "name": "Felix Okpara",
+                  "status": "Day to day",
+                  "kind": "long"
+                },
+                {
+                  "name": "Jamir Watkins",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Justin Champagnie",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Reece Beekman",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Tristan Vukcevic",
+                  "status": "Out",
+                  "kind": "long"
+                }
+              ]
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": -1.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -3.0,
+                "last": -2.5,
+                "delta": 0.5
+              }
+            }
+          },
+          "team_home": "Chicago Bulls",
+          "team_away": "Washington Wizards",
+          "start": "2026-11-21T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 60.0,
+              "home_m": 4.0,
+              "away_b": 40.0,
+              "away_m": 96.0,
+              "line": "-2.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 49.0,
+              "home_m": 69.0,
+              "away_b": 51.0,
+              "away_m": 31.0,
+              "line": "-1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909309",
+          "espn_home": "Chicago Bulls",
+          "espn_away": "Washington Wizards",
+          "score": {
+            "value": 38.0,
+            "tier": "Fair",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 60%"
+              },
+              {
+                "t": "3 of 5 models back it"
+              },
+              {
+                "t": "Sharp sources side with it (extreme money gap, 56 pts)"
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a losing pattern: Sharps with consensus (38-44, 46%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.3333,
+              "agree": 0.6,
+              "sharp": 1.0,
+              "tier": 1.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-20T19:30:11-05:00"
+        },
+        {
+          "game": "Oklahoma City Thunder (H) vs New Orleans Pelicans (A)",
+          "spread": "OKC -11.5",
+          "favorite": "Oklahoma City Thunder -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Oklahoma City Thunder",
+            "M2: Relevance": "TAKE: Oklahoma City Thunder",
+            "M3: Efficiency": "TAKE: New Orleans Pelicans",
+            "M4: ATS Trends": "TAKE: Oklahoma City Thunder",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Oklahoma City Thunder",
+            "M7: Injury Edge": "PUSH",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Oklahoma City Thunder",
+            "Sharp: Circa": "TAKE: New Orleans Pelicans",
+            "Sharp: DraftKings": "TAKE: Oklahoma City Thunder"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 70,
+              "away": 35
+            },
+            "M2: Relevance": {
+              "home": 73.1194,
+              "away": 41.4208
+            },
+            "M3: Efficiency": {
+              "margin": 5.6
+            },
+            "M4: ATS Trends": {
+              "home": 8,
+              "away": 5
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": 51.2,
+              "home_m": 59.7,
+              "away_b": 48.8,
+              "away_m": 40.3
+            },
+            "M7: Injury Edge": {
+              "home_out": [],
+              "away_out": [],
+              "home_repl": [],
+              "away_repl": [],
+              "home_impact": 0.0,
+              "away_impact": 0.0,
+              "home_other": [
+                {
+                  "name": "Cason Wallace",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Chet Holmgren",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Jalen Williams",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Thomas Sorber",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Alex Caruso",
+                  "status": "Out",
+                  "kind": "bench"
+                },
+                {
+                  "name": "Nikola Topic",
+                  "status": "Out",
+                  "kind": "bench"
+                }
+              ],
+              "away_other": [
+                {
+                  "name": "Bryce McGowens",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Dejounte Murray",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Trendon Watford",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Bennedict Mathurin",
+                  "status": "Out",
+                  "kind": "bench"
+                }
+              ]
+            },
+            "M8: Line Movement": {
+              "open_home": -11.5,
+              "current_home": -11.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.5,
+              "sources": [],
+              "circa": {
+                "first": -11.0,
+                "last": -11.5,
+                "delta": -0.5
+              }
+            }
+          },
+          "team_home": "Oklahoma City Thunder",
+          "team_away": "New Orleans Pelicans",
+          "start": "2026-11-21T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 57.0,
+              "home_m": 12.0,
+              "away_b": 43.0,
+              "away_m": 88.0,
+              "line": "-11.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 62.0,
+              "home_m": 90.0,
+              "away_b": 38.0,
+              "away_m": 10.0,
+              "line": "-11.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909310",
+          "espn_home": "Oklahoma City Thunder",
+          "espn_away": "New Orleans Pelicans",
+          "score": {
+            "value": 41.25,
+            "tier": "Fair",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "Sharp sources side with it"
+              },
+              {
+                "t": "Fits a losing pattern: Sharps with consensus &middot; No line move yet &middot; Confidence 75%+ (3-6, 33%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 1.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-20T19:30:11-05:00"
+        },
+        {
+          "game": "Utah Jazz (H) vs Phoenix Suns (A)",
+          "spread": "PHX -4.5",
+          "favorite": "Phoenix Suns -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Phoenix Suns",
+            "M2: Relevance": "TAKE: Phoenix Suns",
+            "M3: Efficiency": "TAKE: Utah Jazz",
+            "M4: ATS Trends": "TAKE: Utah Jazz",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Utah Jazz",
+            "M7: Injury Edge": "PUSH",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "TAKE: Phoenix Suns",
+            "Sharp: DraftKings": "TAKE: Utah Jazz"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 43,
+              "away": 62
+            },
+            "M2: Relevance": {
+              "home": 41.9747,
+              "away": 71.8931
+            },
+            "M3: Efficiency": {
+              "margin": -2.7
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 5
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 2,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": 27.6,
+              "home_m": 30.38,
+              "away_b": 72.4,
+              "away_m": 69.62
+            },
+            "M7: Injury Edge": {
+              "home_out": [],
+              "away_out": [],
+              "home_repl": [],
+              "away_repl": [],
+              "home_impact": 0.0,
+              "away_impact": 0.0,
+              "home_other": [
+                {
+                  "name": "Jaren Jackson Jr.",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Jusuf Nurkic",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Lauri Markkanen",
+                  "status": "Out",
+                  "kind": "long"
+                }
+              ],
+              "away_other": [
+                {
+                  "name": "Mark Williams",
+                  "status": "Out",
+                  "kind": "long"
+                }
+              ]
+            },
+            "M8: Line Movement": {
+              "open_home": 4.5,
+              "current_home": 4.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": 4.5,
+                "last": 4.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Utah Jazz",
+          "team_away": "Phoenix Suns",
+          "start": "2026-11-21T02:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 45.0,
+              "home_m": 13.0,
+              "away_b": 55.0,
+              "away_m": 87.0,
+              "line": "+4.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 35.0,
+              "home_m": 43.0,
+              "away_b": 65.0,
+              "away_m": 57.0,
+              "line": "+4.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909311",
+          "espn_home": "Utah Jazz",
+          "espn_away": "Phoenix Suns",
+          "locked_run": "2026-11-20T21:00:10-05:00"
+        },
+        {
+          "game": "Denver Nuggets (H) vs Houston Rockets (A)",
+          "spread": "DEN -1.5",
+          "favorite": "Denver Nuggets -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Houston Rockets",
+            "M2: Relevance": "TAKE: Houston Rockets",
+            "M3: Efficiency": "TAKE: Houston Rockets",
+            "M4: ATS Trends": "TAKE: Houston Rockets",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Denver Nuggets",
+            "M7: Injury Edge": "PUSH",
+            "M8: Line Movement": "TAKE: Houston Rockets",
+            "CONSENSUS": "TAKE: Houston Rockets",
+            "Sharp: Circa": "TAKE: Denver Nuggets",
+            "Sharp: DraftKings": "TAKE: Houston Rockets"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 39,
+              "away": 68
+            },
+            "M2: Relevance": {
+              "home": 35.9454,
+              "away": 80.3913
+            },
+            "M3: Efficiency": {
+              "margin": -3.8
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 10
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": 38.51,
+              "home_m": 46.8,
+              "away_b": 61.49,
+              "away_m": 53.2
+            },
+            "M7: Injury Edge": {
+              "home_out": [],
+              "away_out": [],
+              "home_repl": [],
+              "away_repl": [],
+              "home_impact": 0.0,
+              "away_impact": 0.0,
+              "home_other": [
+                {
+                  "name": "Julian Strawther",
+                  "status": "Out",
+                  "kind": "long"
+                }
+              ],
+              "away_other": [
+                {
+                  "name": "Clint Capela",
+                  "status": "Out",
+                  "kind": "long"
+                }
+              ]
+            },
+            "M8: Line Movement": {
+              "open_home": -3.5,
+              "current_home": 1.5,
+              "delta": 5.0,
+              "crosses_key": false,
+              "size": 5.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -1.5,
+                "last": 1.0,
+                "delta": 2.5
+              }
+            }
+          },
+          "team_home": "Denver Nuggets",
+          "team_away": "Houston Rockets",
+          "start": "2026-11-21T03:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 64.0,
+              "home_m": 83.0,
+              "away_b": 36.0,
+              "away_m": 17.0,
+              "line": "+1",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 46.0,
+              "home_m": 11.0,
+              "away_b": 54.0,
+              "away_m": 89.0,
+              "line": "+1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909312",
+          "espn_home": "Denver Nuggets",
+          "espn_away": "Houston Rockets",
+          "score": {
+            "value": 28.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 100%"
+              },
+              {
+                "t": "4 of 4 models back it"
+              },
+              {
+                "t": "Most sharp sources lean the other way (2 of 3: Circa, SBD)",
+                "warn": true
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a losing pattern: Sharps against consensus &middot; Line move with consensus &middot; Confidence 80%+ &middot; Consensus on the underdog (3-6, 33%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 1.0,
+              "agree": 1.0,
+              "sharp": -1.0,
+              "tier": 0.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-20T21:30:13-05:00"
+        },
+        {
+          "game": "Los Angeles Lakers (H) vs Sacramento Kings (A)",
+          "spread": "LAL -14.5",
+          "favorite": "Los Angeles Lakers -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Los Angeles Lakers",
+            "M2: Relevance": "TAKE: Los Angeles Lakers",
+            "M3: Efficiency": "TAKE: Sacramento Kings",
+            "M4: ATS Trends": "TAKE: Los Angeles Lakers",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Sacramento Kings",
+            "M7: Injury Edge": "PUSH",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Los Angeles Lakers",
+            "Sharp: Circa": "TAKE: Sacramento Kings",
+            "Sharp: DraftKings": "TAKE: Sacramento Kings"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 85,
+              "away": 22
+            },
+            "M2: Relevance": {
+              "home": 101.6387,
+              "away": 15.0164
+            },
+            "M3: Efficiency": {
+              "margin": 9.8
+            },
+            "M4: ATS Trends": {
+              "home": 14,
+              "away": 0
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 2,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": 58.66,
+              "home_m": 51.3,
+              "away_b": 41.34,
+              "away_m": 48.7
+            },
+            "M7: Injury Edge": {
+              "home_out": [],
+              "away_out": [],
+              "home_repl": [],
+              "away_repl": [],
+              "home_impact": 0.0,
+              "away_impact": 0.0,
+              "home_other": [
+                {
+                  "name": "Austin Reaves",
+                  "status": "Out",
+                  "kind": "bench"
+                }
+              ],
+              "away_other": [
+                {
+                  "name": "Ben Simmons",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Maxime Raynaud",
+                  "status": "Out",
+                  "kind": "long"
+                },
+                {
+                  "name": "Precious Achiuwa",
+                  "status": "Out",
+                  "kind": "bench"
+                }
+              ]
+            },
+            "M8: Line Movement": {
+              "open_home": -14.5,
+              "current_home": -14.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.5,
+              "sources": [],
+              "circa": {
+                "first": -14.5,
+                "last": -14.0,
+                "delta": 0.5
+              }
+            }
+          },
+          "team_home": "Los Angeles Lakers",
+          "team_away": "Sacramento Kings",
+          "start": "2026-11-21T03:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 73.0,
+              "home_m": 15.0,
+              "away_b": 27.0,
+              "away_m": 85.0,
+              "line": "-14",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 57.0,
+              "home_m": 54.0,
+              "away_b": 43.0,
+              "away_m": 46.0,
+              "line": "-14.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909313",
+          "espn_home": "Los Angeles Lakers",
+          "espn_away": "Sacramento Kings",
+          "score": {
+            "value": 11.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "Most sharp sources lean the other way (3 of 3: Circa, DraftKings, SBD)",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: Sharps against consensus &middot; No line move yet &middot; Confidence 75%+ &middot; Consensus on the favorite (3-8, 27%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": -1.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-20T21:30:13-05:00"
+        }
+      ]
     }
   ]
 }
