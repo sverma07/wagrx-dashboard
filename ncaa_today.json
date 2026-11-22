@@ -44531,6 +44531,3798 @@
           }
         }
       ]
+    },
+    {
+      "time": "2026-11-22T14:00:40-05:00",
+      "games": [
+        {
+          "game": "Butler Bulldogs (H) vs Nebraska Cornhuskers (A)",
+          "spread": "NEB -12.5",
+          "favorite": "Nebraska Cornhuskers -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Nebraska Cornhuskers",
+            "M2: Relevance": "TAKE: Nebraska Cornhuskers",
+            "M3: Efficiency": "TAKE: Butler Bulldogs",
+            "M4: ATS Trends": "TAKE: Nebraska Cornhuskers",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Nebraska Cornhuskers",
+            "Sharp: Circa": "TAKE: Butler Bulldogs",
+            "Sharp: DraftKings": "TAKE: Nebraska Cornhuskers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 22,
+              "away": 68
+            },
+            "M2: Relevance": {
+              "home": 17.7993,
+              "away": 54.0748
+            },
+            "M3: Efficiency": {
+              "margin": -6.1
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 6
+            },
+            "M5: Rest": {
+              "home": 3,
+              "away": 4,
+              "home_last3": 1,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 11.5,
+              "current_home": 11.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": 12.0,
+                "last": 12.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Butler Bulldogs",
+          "team_away": "Nebraska Cornhuskers",
+          "start": "2026-11-22T17:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 83.0,
+              "home_m": 87.0,
+              "away_b": 17.0,
+              "away_m": 13.0,
+              "line": "+12",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 29.0,
+              "home_m": 3.0,
+              "away_b": 71.0,
+              "away_m": 97.0,
+              "line": "+11.5",
+              "thin": false
+            }
+          },
+          "event_id": "401902281",
+          "espn_home": "Butler Bulldogs",
+          "espn_away": "Nebraska Cornhuskers",
+          "score": {
+            "value": 26.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet &middot; Confidence 75%+ &middot; Consensus on the favorite (9-24, 27%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-22T11:30:27-05:00"
+        },
+        {
+          "game": "Illinois Chicago Flames (H) vs Miami (OH) RedHawks (A)",
+          "spread": "M-OH -1.5",
+          "favorite": "Miami (OH) RedHawks -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Miami (OH) RedHawks",
+            "M2: Relevance": "TAKE: Miami (OH) RedHawks",
+            "M3: Efficiency": "TAKE: Miami (OH) RedHawks",
+            "M4: ATS Trends": "TAKE: Miami (OH) RedHawks",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Miami (OH) RedHawks",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 38,
+              "away": 52
+            },
+            "M2: Relevance": {
+              "home": 22.3517,
+              "away": 48.1419
+            },
+            "M3: Efficiency": {
+              "margin": -2.0
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 5
+            },
+            "M5: Rest": {
+              "home": 4,
+              "away": 4,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -1.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Illinois Chicago Flames",
+          "team_away": "Miami (OH) RedHawks",
+          "start": "2026-11-22T17:00Z",
+          "sharp_books": {},
+          "event_id": "401911024",
+          "espn_home": "UIC Flames",
+          "espn_away": "Miami (OH) RedHawks",
+          "score": {
+            "value": 35.0,
+            "tier": "Fair",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 100%"
+              },
+              {
+                "t": "4 of 4 models back it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet &middot; Confidence 75%+ &middot; Consensus on the favorite (9-24, 27%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 1.0,
+              "agree": 1.0,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-22T11:30:27-05:00"
+        },
+        {
+          "game": "Canisius Golden Griffins (H) vs Western Illinois Leathernecks (A)",
+          "spread": "CAN -4.5",
+          "favorite": "Canisius Golden Griffins -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Western Illinois Leathernecks",
+            "M2: Relevance": "TAKE: Western Illinois Leathernecks",
+            "M3: Efficiency": "TAKE: Canisius Golden Griffins",
+            "M4: ATS Trends": "TAKE: Western Illinois Leathernecks",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Western Illinois Leathernecks",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Canisius Golden Griffins"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 44,
+              "away": 47
+            },
+            "M2: Relevance": {
+              "home": 30.4531,
+              "away": 38.1339
+            },
+            "M3: Efficiency": {
+              "margin": 6.4
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 6
+            },
+            "M5: Rest": {
+              "home": 1,
+              "away": 1,
+              "home_last3": 2,
+              "away_last3": 2
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -3.5,
+              "current_home": -3.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": -4.0,
+                "last": -4.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Canisius Golden Griffins",
+          "team_away": "Western Illinois Leathernecks",
+          "start": "2026-11-22T18:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 100.0,
+              "home_m": 100.0,
+              "away_b": 0.0,
+              "away_m": 0.0,
+              "line": "-4",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 56.0,
+              "home_m": 93.0,
+              "away_b": 44.0,
+              "away_m": 7.0,
+              "line": "-3.5",
+              "thin": false
+            }
+          },
+          "event_id": "401929023",
+          "espn_home": "Canisius Golden Griffins",
+          "espn_away": "Western Illinois Leathernecks",
+          "score": {
+            "value": 26.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet (26-52, 33%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-22T12:52:29-05:00"
+        },
+        {
+          "game": "Northwestern Wildcats (H) vs Dayton Flyers (A)",
+          "spread": "DAY -3.5",
+          "favorite": "Dayton Flyers -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Dayton Flyers",
+            "M2: Relevance": "TAKE: Dayton Flyers",
+            "M3: Efficiency": "TAKE: Northwestern Wildcats",
+            "M4: ATS Trends": "TAKE: Dayton Flyers",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Dayton Flyers",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Dayton Flyers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 30,
+              "away": 57
+            },
+            "M2: Relevance": {
+              "home": 18.5389,
+              "away": 53.2305
+            },
+            "M3: Efficiency": {
+              "margin": 0.9
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 4
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 3.5,
+              "current_home": 3.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": 3.5,
+                "last": 3.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Northwestern Wildcats",
+          "team_away": "Dayton Flyers",
+          "start": "2026-11-22T18:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 0.0,
+              "home_m": 0.0,
+              "away_b": 100.0,
+              "away_m": 100.0,
+              "line": "+3.5",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 28.0,
+              "home_m": 22.0,
+              "away_b": 72.0,
+              "away_m": 78.0,
+              "line": "+3.5",
+              "thin": false
+            }
+          },
+          "event_id": "401920736",
+          "espn_home": "Northwestern Wildcats",
+          "espn_away": "Dayton Flyers",
+          "score": {
+            "value": 26.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet &middot; Confidence 75%+ &middot; Consensus on the favorite (9-24, 27%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-22T12:52:29-05:00"
+        },
+        {
+          "game": "Long Island Sharks (H) vs Fairfield Stags (A)",
+          "spread": "LIU -2.5",
+          "favorite": "Long Island Sharks -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Fairfield Stags",
+            "M2: Relevance": "TAKE: Fairfield Stags",
+            "M3: Efficiency": "TAKE: Fairfield Stags",
+            "M4: ATS Trends": "TAKE: Long Island Sharks",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Long Island Sharks",
+            "CONSENSUS": "TAKE: Fairfield Stags",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Long Island Sharks"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 42,
+              "away": 48
+            },
+            "M2: Relevance": {
+              "home": 32.1186,
+              "away": 38.5861
+            },
+            "M3: Efficiency": {
+              "margin": 0.5
+            },
+            "M4: ATS Trends": {
+              "home": 4,
+              "away": 2
+            },
+            "M5: Rest": {
+              "home": 4,
+              "away": 4,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": -3.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -3.0,
+                "last": -3.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Long Island Sharks",
+          "team_away": "Fairfield Stags",
+          "start": "2026-11-22T18:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 50.0,
+              "away_b": 50.0,
+              "away_m": 50.0,
+              "line": "-3",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 75.0,
+              "home_m": 95.0,
+              "away_b": 25.0,
+              "away_m": 5.0,
+              "line": "-2.5",
+              "thin": false
+            }
+          },
+          "event_id": "401919809",
+          "espn_home": "Long Island University Sharks",
+          "espn_away": "Fairfield Stags",
+          "score": {
+            "value": 18.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Line move against consensus &middot; Confidence 75%+ &middot; Consensus on the underdog (11-17, 39%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-22T12:52:29-05:00"
+        },
+        {
+          "game": "American Eagles (H) vs Towson Tigers (A)",
+          "spread": "AMER -1.5",
+          "favorite": "American Eagles -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Towson Tigers",
+            "M2: Relevance": "TAKE: Towson Tigers",
+            "M3: Efficiency": "TAKE: Towson Tigers",
+            "M4: ATS Trends": "TAKE: American Eagles",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Towson Tigers",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: American Eagles"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 41,
+              "away": 51
+            },
+            "M2: Relevance": {
+              "home": 33.3043,
+              "away": 37.8497
+            },
+            "M3: Efficiency": {
+              "margin": -3.2
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 0
+            },
+            "M5: Rest": {
+              "home": 3,
+              "away": 4,
+              "home_last3": 1,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -1.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": 0.0,
+                "last": 0.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "American Eagles",
+          "team_away": "Towson Tigers",
+          "start": "2026-11-22T18:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 50.0,
+              "away_b": 50.0,
+              "away_m": 50.0,
+              "line": "+0",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 44.0,
+              "home_m": 48.0,
+              "away_b": 56.0,
+              "away_m": 52.0,
+              "line": "-1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401912212",
+          "espn_home": "American University Eagles",
+          "espn_away": "Towson Tigers",
+          "score": {
+            "value": 26.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet (26-52, 33%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-22T12:52:29-05:00"
+        },
+        {
+          "game": "Marquette Golden Eagles (H) vs Chicago State Cougars (A)",
+          "spread": "MARQ -34.5",
+          "favorite": "Marquette Golden Eagles -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Marquette Golden Eagles",
+            "M2: Relevance": "TAKE: Marquette Golden Eagles",
+            "M3: Efficiency": "TAKE: Chicago State Cougars",
+            "M4: ATS Trends": "TAKE: Chicago State Cougars",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Marquette Golden Eagles",
+            "M8: Line Movement": "TAKE: Marquette Golden Eagles",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Marquette Golden Eagles"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 75,
+              "away": 17
+            },
+            "M2: Relevance": {
+              "home": 54.0437,
+              "away": 17.6683
+            },
+            "M3: Efficiency": {
+              "margin": 14.5
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 5
+            },
+            "M5: Rest": {
+              "home": 4,
+              "away": 4,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": 58.41,
+              "home_m": 82.57,
+              "away_b": 41.59,
+              "away_m": 17.43
+            },
+            "M8: Line Movement": {
+              "open_home": -33.5,
+              "current_home": -35.5,
+              "delta": -2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -34.5,
+                "last": -34.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Marquette Golden Eagles",
+          "team_away": "Chicago State Cougars",
+          "start": "2026-11-22T18:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 0.0,
+              "home_m": 0.0,
+              "away_b": 100.0,
+              "away_m": 100.0,
+              "line": "-34.5",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 50.0,
+              "home_m": 87.0,
+              "away_b": 50.0,
+              "away_m": 13.0,
+              "line": "-35.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909527",
+          "espn_home": "Marquette Golden Eagles",
+          "espn_away": "Chicago State Cougars",
+          "locked_run": "2026-11-22T12:52:29-05:00"
+        },
+        {
+          "game": "Western Kentucky Hilltoppers (H) vs George Washington Revolutionaries (A)",
+          "spread": "GW -5.5",
+          "favorite": "George Washington Revolutionaries -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: George Washington Revolutionaries",
+            "M2: Relevance": "TAKE: George Washington Revolutionaries",
+            "M3: Efficiency": "TAKE: Western Kentucky Hilltoppers",
+            "M4: ATS Trends": "TAKE: Western Kentucky Hilltoppers",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Western Kentucky Hilltoppers",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: George Washington Revolutionaries"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 31,
+              "away": 59
+            },
+            "M2: Relevance": {
+              "home": 33.1895,
+              "away": 40.1583
+            },
+            "M3: Efficiency": {
+              "margin": -5.0
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 1
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 5.5,
+              "current_home": 3.5,
+              "delta": -2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Western Kentucky Hilltoppers",
+          "team_away": "George Washington Revolutionaries",
+          "start": "2026-11-22T19:00Z",
+          "sharp_books": {
+            "dk": {
+              "home_b": 39.0,
+              "home_m": 4.0,
+              "away_b": 61.0,
+              "away_m": 96.0,
+              "line": "+3.5",
+              "thin": false
+            }
+          },
+          "event_id": "401928802",
+          "espn_home": "Western Kentucky Hilltoppers",
+          "espn_away": "George Washington Revolutionaries",
+          "locked_run": "2026-11-22T13:30:28-05:00"
+        },
+        {
+          "game": "Utah Tech Trailblazers (H) vs South Dakota Coyotes (A)",
+          "spread": "UTU -1.5",
+          "favorite": "Utah Tech Trailblazers -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: South Dakota Coyotes",
+            "M2: Relevance": "TAKE: South Dakota Coyotes",
+            "M3: Efficiency": "TAKE: Utah Tech Trailblazers",
+            "M4: ATS Trends": "TAKE: Utah Tech Trailblazers",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Utah Tech Trailblazers",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "TAKE: Utah Tech Trailblazers",
+            "Sharp: DraftKings": "TAKE: Utah Tech Trailblazers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 38,
+              "away": 52
+            },
+            "M2: Relevance": {
+              "home": 16.4273,
+              "away": 53.9501
+            },
+            "M3: Efficiency": {
+              "margin": 3.8
+            },
+            "M4: ATS Trends": {
+              "home": 4,
+              "away": 3
+            },
+            "M5: Rest": {
+              "home": 3,
+              "away": 4,
+              "home_last3": 1,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 1.5,
+              "current_home": -1.5,
+              "delta": -3.0,
+              "crosses_key": false,
+              "size": 3.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 0.0,
+                "last": 0.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Utah Tech Trailblazers",
+          "team_away": "South Dakota Coyotes",
+          "start": "2026-11-22T19:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 88.0,
+              "home_m": 91.0,
+              "away_b": 13.0,
+              "away_m": 9.0,
+              "line": "+0",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 58.0,
+              "home_m": 99.0,
+              "away_b": 42.0,
+              "away_m": 1.0,
+              "line": "-1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401925942",
+          "espn_home": "Utah Tech Trailblazers",
+          "espn_away": "South Dakota Coyotes",
+          "locked_run": "2026-11-22T13:30:28-05:00"
+        },
+        {
+          "game": "Cincinnati Bearcats (H) vs UMass Lowell River Hawks (A)",
+          "spread": "CIN -30.5",
+          "favorite": "Cincinnati Bearcats -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Cincinnati Bearcats",
+            "M2: Relevance": "TAKE: Cincinnati Bearcats",
+            "M3: Efficiency": "TAKE: UMass Lowell River Hawks",
+            "M4: ATS Trends": "TAKE: UMass Lowell River Hawks",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: UMass Lowell River Hawks",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: UMass Lowell River Hawks"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 56,
+              "away": 34
+            },
+            "M2: Relevance": {
+              "home": 40.7924,
+              "away": 30.3337
+            },
+            "M3: Efficiency": {
+              "margin": 16.2
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 5
+            },
+            "M5: Rest": {
+              "home": 4,
+              "away": 5,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -31.5,
+              "current_home": -29.5,
+              "delta": 2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -29.5,
+                "last": -29.0,
+                "delta": 0.5
+              }
+            }
+          },
+          "team_home": "Cincinnati Bearcats",
+          "team_away": "UMass Lowell River Hawks",
+          "start": "2026-11-22T19:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 50.0,
+              "away_b": 50.0,
+              "away_m": 50.0,
+              "line": "-29",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 50.0,
+              "home_m": 17.0,
+              "away_b": 50.0,
+              "away_m": 83.0,
+              "line": "-29.5",
+              "thin": false
+            }
+          },
+          "event_id": "401921748",
+          "espn_home": "Cincinnati Bearcats",
+          "espn_away": "UMass Lowell River Hawks",
+          "locked_run": "2026-11-22T13:30:28-05:00"
+        },
+        {
+          "game": "Duquesne Dukes (H) vs Wyoming Cowboys (A)",
+          "spread": "WYO -3.5",
+          "favorite": "Wyoming Cowboys -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Wyoming Cowboys",
+            "M2: Relevance": "TAKE: Wyoming Cowboys",
+            "M3: Efficiency": "TAKE: Duquesne Dukes",
+            "M4: ATS Trends": "TAKE: Wyoming Cowboys",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Wyoming Cowboys",
+            "Sharp: Circa": "TAKE: Duquesne Dukes",
+            "Sharp: DraftKings": "TAKE: Wyoming Cowboys"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 39,
+              "away": 49
+            },
+            "M2: Relevance": {
+              "home": 32.1654,
+              "away": 36.628
+            },
+            "M3: Efficiency": {
+              "margin": -1.7
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 4
+            },
+            "M5: Rest": {
+              "home": 4,
+              "away": 5,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 4.5,
+              "current_home": 4.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": 4.0,
+                "last": 4.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Duquesne Dukes",
+          "team_away": "Wyoming Cowboys",
+          "start": "2026-11-22T19:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 98.0,
+              "away_b": 50.0,
+              "away_m": 2.0,
+              "line": "+4",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 16.0,
+              "home_m": 2.0,
+              "away_b": 84.0,
+              "away_m": 98.0,
+              "line": "+4.5",
+              "thin": false
+            }
+          },
+          "event_id": "401921706",
+          "espn_home": "Duquesne Dukes",
+          "espn_away": "Wyoming Cowboys",
+          "score": {
+            "value": 26.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet &middot; Confidence 75%+ &middot; Consensus on the favorite (9-24, 27%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-22T13:30:28-05:00"
+        },
+        {
+          "game": "Memphis Tigers (H) vs Evansville Purple Aces (A)",
+          "spread": "MEM -21.5",
+          "favorite": "Memphis Tigers -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Evansville Purple Aces",
+            "M2: Relevance": "TAKE: Memphis Tigers",
+            "M3: Efficiency": "TAKE: Evansville Purple Aces",
+            "M4: ATS Trends": "PUSH",
+            "M5: Rest": "TAKE: Memphis Tigers",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Evansville Purple Aces",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "TAKE: Evansville Purple Aces",
+            "Sharp: DraftKings": "TAKE: Evansville Purple Aces"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 43,
+              "away": 44
+            },
+            "M2: Relevance": {
+              "home": 37.6761,
+              "away": 33.719
+            },
+            "M3: Efficiency": {
+              "margin": 7.7
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 1
+            },
+            "M5: Rest": {
+              "home": 7,
+              "away": 5,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -21.5,
+              "current_home": -20.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -21.5,
+                "last": -20.5,
+                "delta": 1.0
+              }
+            }
+          },
+          "team_home": "Memphis Tigers",
+          "team_away": "Evansville Purple Aces",
+          "start": "2026-11-22T19:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 43.0,
+              "home_m": 31.0,
+              "away_b": 57.0,
+              "away_m": 69.0,
+              "line": "-20.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 93.0,
+              "home_m": 86.0,
+              "away_b": 7.0,
+              "away_m": 14.0,
+              "line": "-20.5",
+              "thin": false
+            }
+          },
+          "event_id": "401918988",
+          "espn_home": "Memphis Tigers",
+          "espn_away": "Evansville Purple Aces",
+          "locked_run": "2026-11-22T13:30:28-05:00"
+        },
+        {
+          "game": "Youngstown State Penguins (H) vs William & Mary Tribe (A)",
+          "spread": "W&M -2.5",
+          "favorite": "William & Mary Tribe -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: William & Mary Tribe",
+            "M2: Relevance": "TAKE: William & Mary Tribe",
+            "M3: Efficiency": "TAKE: Youngstown State Penguins",
+            "M4: ATS Trends": "TAKE: William & Mary Tribe",
+            "M5: Rest": "TAKE: Youngstown State Penguins",
+            "M6: Sharp Money": "TAKE: William & Mary Tribe",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: William & Mary Tribe",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Youngstown State Penguins"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 30,
+              "away": 62
+            },
+            "M2: Relevance": {
+              "home": 25.935,
+              "away": 46.9646
+            },
+            "M3: Efficiency": {
+              "margin": -1.1
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 5
+            },
+            "M5: Rest": {
+              "home": 4,
+              "away": 2,
+              "home_last3": 0,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": 44.44,
+              "home_m": 36.08,
+              "away_b": 55.56,
+              "away_m": 63.92
+            },
+            "M8: Line Movement": {
+              "open_home": 2.5,
+              "current_home": 2.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": 2.5,
+                "last": 2.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Youngstown State Penguins",
+          "team_away": "William & Mary Tribe",
+          "start": "2026-11-22T19:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 100.0,
+              "home_m": 100.0,
+              "away_b": 0.0,
+              "away_m": 0.0,
+              "line": "+2.5",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 40.0,
+              "home_m": 85.0,
+              "away_b": 60.0,
+              "away_m": 15.0,
+              "line": "+2.5",
+              "thin": false
+            }
+          },
+          "event_id": "401918455",
+          "espn_home": "Youngstown State Penguins",
+          "espn_away": "William & Mary Tribe",
+          "score": {
+            "value": 9.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 60%"
+              },
+              {
+                "t": "3 of 5 models back it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet &middot; Consensus on the favorite (15-36, 29%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.3333,
+              "agree": 0.6,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-22T13:30:28-05:00"
+        },
+        {
+          "game": "Fordham Rams (H) vs San Diego Toreros (A)",
+          "spread": "FOR -2.5",
+          "favorite": "Fordham Rams -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Fordham Rams",
+            "M2: Relevance": "TAKE: Fordham Rams",
+            "M3: Efficiency": "TAKE: San Diego Toreros",
+            "M4: ATS Trends": "TAKE: San Diego Toreros",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Fordham Rams"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 60,
+              "away": 31
+            },
+            "M2: Relevance": {
+              "home": 40.7713,
+              "away": 28.6046
+            },
+            "M3: Efficiency": {
+              "margin": 1.9
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 7
+            },
+            "M5: Rest": {
+              "home": 1,
+              "away": 1,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": -2.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": -3.0,
+                "last": -3.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Fordham Rams",
+          "team_away": "San Diego Toreros",
+          "start": "2026-11-22T19:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 0.0,
+              "home_m": 0.0,
+              "away_b": 100.0,
+              "away_m": 100.0,
+              "line": "-3",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 88.0,
+              "home_m": 100.0,
+              "away_b": 12.0,
+              "away_m": 0.0,
+              "line": "-2.5",
+              "thin": false
+            }
+          },
+          "event_id": "401911200",
+          "espn_home": "Fordham Rams",
+          "espn_away": "San Diego Toreros",
+          "locked_run": "2026-11-22T13:30:28-05:00"
+        },
+        {
+          "game": "New Mexico State Aggies (H) vs Robert Morris Colonials (A)",
+          "spread": "NMSU -1.5",
+          "favorite": "New Mexico State Aggies -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Robert Morris Colonials",
+            "M2: Relevance": "TAKE: Robert Morris Colonials",
+            "M3: Efficiency": "TAKE: Robert Morris Colonials",
+            "M4: ATS Trends": "TAKE: Robert Morris Colonials",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Robert Morris Colonials",
+            "CONSENSUS": "TAKE: Robert Morris Colonials",
+            "Sharp: Circa": "TAKE: Robert Morris Colonials",
+            "Sharp: DraftKings": "TAKE: New Mexico State Aggies"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 18,
+              "away": 70
+            },
+            "M2: Relevance": {
+              "home": 23.9672,
+              "away": 44.8143
+            },
+            "M3: Efficiency": {
+              "margin": -1.7
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 6
+            },
+            "M5: Rest": {
+              "home": 3,
+              "away": 3,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": -1.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -2.0,
+                "last": -1.5,
+                "delta": 0.5
+              }
+            }
+          },
+          "team_home": "New Mexico State Aggies",
+          "team_away": "Robert Morris Colonials",
+          "start": "2026-11-22T19:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 67.0,
+              "home_m": 8.0,
+              "away_b": 33.0,
+              "away_m": 92.0,
+              "line": "-1.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 42.0,
+              "home_m": 97.0,
+              "away_b": 58.0,
+              "away_m": 3.0,
+              "line": "-1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401928790",
+          "espn_home": "New Mexico State Aggies",
+          "espn_away": "Robert Morris Colonials",
+          "score": {
+            "value": 43.0,
+            "tier": "Fair",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 100%"
+              },
+              {
+                "t": "4 of 4 models back it"
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Line move with consensus &middot; Confidence 100%+ (4-8, 33%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 1.0,
+              "agree": 1.0,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Texas Longhorns (H) vs Southern Indiana Screaming Eagles (A)",
+          "spread": "TEX -39.5",
+          "favorite": "Texas Longhorns -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Texas Longhorns",
+            "M2: Relevance": "TAKE: Texas Longhorns",
+            "M3: Efficiency": "TAKE: Southern Indiana Screaming Eagles",
+            "M4: ATS Trends": "TAKE: Southern Indiana Screaming Eagles",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Texas Longhorns",
+            "M8: Line Movement": "TAKE: Southern Indiana Screaming Eagles",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Texas Longhorns"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 81,
+              "away": 12
+            },
+            "M2: Relevance": {
+              "home": 64.7308,
+              "away": 9.1064
+            },
+            "M3: Efficiency": {
+              "margin": 18.9
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 7
+            },
+            "M5: Rest": {
+              "home": 3,
+              "away": 4,
+              "home_last3": 1,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": 62.57,
+              "home_m": 74.4,
+              "away_b": 37.43,
+              "away_m": 25.6
+            },
+            "M8: Line Movement": {
+              "open_home": -39.5,
+              "current_home": -38.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -40.0,
+                "last": -38.5,
+                "delta": 1.5
+              }
+            }
+          },
+          "team_home": "Texas Longhorns",
+          "team_away": "Southern Indiana Screaming Eagles",
+          "start": "2026-11-22T20:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 0.0,
+              "home_m": 0.0,
+              "away_b": 100.0,
+              "away_m": 100.0,
+              "line": "-38.5",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 71.0,
+              "home_m": 80.0,
+              "away_b": 29.0,
+              "away_m": 20.0,
+              "line": "-38.5",
+              "thin": false
+            }
+          },
+          "event_id": "401906868",
+          "espn_home": "Texas Longhorns",
+          "espn_away": "Southern Indiana Screaming Eagles"
+        },
+        {
+          "game": "Nicholls Colonels (H) vs Troy Trojans (A)",
+          "spread": "TROY -6.5",
+          "favorite": "Troy Trojans -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Troy Trojans",
+            "M2: Relevance": "TAKE: Troy Trojans",
+            "M3: Efficiency": "TAKE: Nicholls Colonels",
+            "M4: ATS Trends": "TAKE: Troy Trojans",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Troy Trojans",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Troy Trojans"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 38,
+              "away": 54
+            },
+            "M2: Relevance": {
+              "home": 33.2235,
+              "away": 40.0214
+            },
+            "M3: Efficiency": {
+              "margin": -4.0
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 6
+            },
+            "M5: Rest": {
+              "home": 1,
+              "away": 1,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 5.5,
+              "current_home": 5.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": 6.0,
+                "last": 6.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Nicholls Colonels",
+          "team_away": "Troy Trojans",
+          "start": "2026-11-22T20:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 50.0,
+              "away_b": 50.0,
+              "away_m": 50.0,
+              "line": "+6",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 23.0,
+              "home_m": 2.0,
+              "away_b": 77.0,
+              "away_m": 98.0,
+              "line": "+5.5",
+              "thin": false
+            }
+          },
+          "event_id": "401925066",
+          "espn_home": "Nicholls Colonels",
+          "espn_away": "Troy Trojans",
+          "score": {
+            "value": 26.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet &middot; Confidence 75%+ &middot; Consensus on the favorite (9-24, 27%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Texas State Bobcats (H) vs McNeese Cowboys (A)",
+          "spread": "TXST -2.5",
+          "favorite": "Texas State Bobcats -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Texas State Bobcats",
+            "M2: Relevance": "TAKE: Texas State Bobcats",
+            "M3: Efficiency": "TAKE: McNeese Cowboys",
+            "M4: ATS Trends": "TAKE: Texas State Bobcats",
+            "M5: Rest": "TAKE: McNeese Cowboys",
+            "M6: Sharp Money": "TAKE: Texas State Bobcats",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Texas State Bobcats",
+            "Sharp: Circa": "TAKE: McNeese Cowboys",
+            "Sharp: DraftKings": "TAKE: Texas State Bobcats"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 59,
+              "away": 31
+            },
+            "M2: Relevance": {
+              "home": 48.2517,
+              "away": 22.2419
+            },
+            "M3: Efficiency": {
+              "margin": -8.4
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 0
+            },
+            "M5: Rest": {
+              "home": 4,
+              "away": 7,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": 56.82,
+              "home_m": 64.49,
+              "away_b": 43.18,
+              "away_m": 35.51
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": -2.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.5,
+              "sources": [],
+              "circa": {
+                "first": -2.5,
+                "last": -2.0,
+                "delta": 0.5
+              }
+            }
+          },
+          "team_home": "Texas State Bobcats",
+          "team_away": "McNeese Cowboys",
+          "start": "2026-11-22T20:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 67.0,
+              "home_m": 23.0,
+              "away_b": 33.0,
+              "away_m": 77.0,
+              "line": "-2",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 45.0,
+              "home_m": 67.0,
+              "away_b": 55.0,
+              "away_m": 33.0,
+              "line": "-2.5",
+              "thin": false
+            }
+          },
+          "event_id": "401929202",
+          "espn_home": "Texas State Bobcats",
+          "espn_away": "McNeese Cowboys",
+          "score": {
+            "value": 24.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 60%"
+              },
+              {
+                "t": "3 of 5 models back it"
+              },
+              {
+                "t": "Sharp sources side with it"
+              },
+              {
+                "t": "Fits a losing pattern: No line move yet &middot; Consensus on the favorite (45-61, 42%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.3333,
+              "agree": 0.6,
+              "sharp": 1.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Albany Great Danes (H) vs Mercyhurst Lakers (A)",
+          "spread": "UALB -1.5",
+          "favorite": "Albany Great Danes -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Albany Great Danes",
+            "M2: Relevance": "TAKE: Albany Great Danes",
+            "M3: Efficiency": "TAKE: Mercyhurst Lakers",
+            "M4: ATS Trends": "TAKE: Mercyhurst Lakers",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Mercyhurst Lakers",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 59,
+              "away": 30
+            },
+            "M2: Relevance": {
+              "home": 52.0038,
+              "away": 18.7232
+            },
+            "M3: Efficiency": {
+              "margin": -2.1
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 8
+            },
+            "M5: Rest": {
+              "home": 1,
+              "away": 1,
+              "home_last3": 2,
+              "away_last3": 2
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": 1.5,
+              "delta": 3.0,
+              "crosses_key": false,
+              "size": 3.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Albany Great Danes",
+          "team_away": "Mercyhurst Lakers",
+          "start": "2026-11-22T20:30Z",
+          "sharp_books": {},
+          "event_id": "401923323",
+          "espn_home": "UAlbany Great Danes",
+          "espn_away": "Mercyhurst Lakers"
+        },
+        {
+          "game": "Oklahoma State Cowboys (H) vs Virginia Tech Hokies (A)",
+          "spread": "VT -1.5",
+          "favorite": "Virginia Tech Hokies -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Virginia Tech Hokies",
+            "M2: Relevance": "TAKE: Virginia Tech Hokies",
+            "M3: Efficiency": "TAKE: Virginia Tech Hokies",
+            "M4: ATS Trends": "TAKE: Virginia Tech Hokies",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Virginia Tech Hokies",
+            "CONSENSUS": "TAKE: Virginia Tech Hokies",
+            "Sharp: Circa": "TAKE: Oklahoma State Cowboys",
+            "Sharp: DraftKings": "TAKE: Oklahoma State Cowboys"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 39,
+              "away": 52
+            },
+            "M2: Relevance": {
+              "home": 35.5671,
+              "away": 38.005
+            },
+            "M3: Efficiency": {
+              "margin": -2.0
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 8
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": 1.5,
+              "delta": 3.0,
+              "crosses_key": false,
+              "size": 3.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 1.5,
+                "last": 1.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Oklahoma State Cowboys",
+          "team_away": "Virginia Tech Hokies",
+          "start": "2026-11-22T20:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 25.0,
+              "home_m": 51.0,
+              "away_b": 75.0,
+              "away_m": 49.0,
+              "line": "+1.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 17.0,
+              "home_m": 49.0,
+              "away_b": 83.0,
+              "away_m": 51.0,
+              "line": "+1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401920381",
+          "espn_home": "Oklahoma State Cowboys",
+          "espn_away": "Virginia Tech Hokies",
+          "score": {
+            "value": 29.31,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 100%"
+              },
+              {
+                "t": "4 of 4 models back it"
+              },
+              {
+                "t": "Most sharp sources lean the other way (2 of 2: Circa, DraftKings)",
+                "warn": true
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a winning pattern: Sharps against consensus &middot; Confidence 80%+ (32-17, 65%, Wilson 51%)"
+              },
+              {
+                "t": "Fits a losing pattern: Line move with consensus &middot; Confidence 100%+ &middot; Consensus on the favorite (1-5, 17%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 1.0,
+              "agree": 1.0,
+              "sharp": -1.0,
+              "tier": 0.0,
+              "line": 1.0,
+              "pattern": 0.0524,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Liberty Flames (H) vs Richmond Spiders (A)",
+          "spread": "LIB -1.5",
+          "favorite": "Liberty Flames -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Liberty Flames",
+            "M2: Relevance": "TAKE: Liberty Flames",
+            "M3: Efficiency": "TAKE: Liberty Flames",
+            "M4: ATS Trends": "TAKE: Liberty Flames",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Richmond Spiders",
+            "CONSENSUS": "TAKE: Liberty Flames",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Richmond Spiders"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 49,
+              "away": 41
+            },
+            "M2: Relevance": {
+              "home": 40.777,
+              "away": 31.5491
+            },
+            "M3: Efficiency": {
+              "margin": 2.4
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 1
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": 1.5,
+              "delta": 3.0,
+              "crosses_key": false,
+              "size": 3.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -2.0,
+                "last": 1.0,
+                "delta": 3.0
+              }
+            }
+          },
+          "team_home": "Liberty Flames",
+          "team_away": "Richmond Spiders",
+          "start": "2026-11-22T21:30Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 0.0,
+              "home_m": 0.0,
+              "away_b": 100.0,
+              "away_m": 100.0,
+              "line": "+1",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 74.0,
+              "home_m": 42.0,
+              "away_b": 26.0,
+              "away_m": 58.0,
+              "line": "+1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401926795",
+          "espn_home": "Liberty Flames",
+          "espn_away": "Richmond Spiders",
+          "score": {
+            "value": 27.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 100%"
+              },
+              {
+                "t": "4 of 4 models back it"
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 100%+ &middot; Consensus on the favorite (4-9, 31%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 1.0,
+              "agree": 1.0,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Maryland Eastern Shore Hawks (H) vs IU Indy Jaguars (A)",
+          "spread": "IUIN -10.5",
+          "favorite": "IU Indy Jaguars -fav",
+          "confidence": "60%",
+          "picks": {
+            "M1: Normal Score": "TAKE: IU Indy Jaguars",
+            "M2: Relevance": "TAKE: IU Indy Jaguars",
+            "M3: Efficiency": "TAKE: Maryland Eastern Shore Hawks",
+            "M4: ATS Trends": "TAKE: Maryland Eastern Shore Hawks",
+            "M5: Rest": "TAKE: IU Indy Jaguars",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: IU Indy Jaguars",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 26,
+              "away": 67
+            },
+            "M2: Relevance": {
+              "home": 21.2889,
+              "away": 50.5009
+            },
+            "M3: Efficiency": {
+              "margin": -5.7
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 4
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 4,
+              "home_last3": 1,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 10.5,
+              "current_home": 10.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "Maryland Eastern Shore Hawks",
+          "team_away": "IU Indy Jaguars",
+          "start": "2026-11-22T21:30Z",
+          "sharp_books": {},
+          "event_id": "401921176",
+          "espn_home": "Maryland Eastern Shore Hawks",
+          "espn_away": "IU Indianapolis Jaguars",
+          "score": {
+            "value": 9.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 60%"
+              },
+              {
+                "t": "3 of 5 models back it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet &middot; Consensus on the favorite (15-36, 29%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.3333,
+              "agree": 0.6,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Loyola Marymount Lions (H) vs UC Irvine Anteaters (A)",
+          "spread": "UCI -3.5",
+          "favorite": "UC Irvine Anteaters -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: UC Irvine Anteaters",
+            "M2: Relevance": "TAKE: UC Irvine Anteaters",
+            "M3: Efficiency": "TAKE: Loyola Marymount Lions",
+            "M4: ATS Trends": "TAKE: UC Irvine Anteaters",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Loyola Marymount Lions",
+            "CONSENSUS": "TAKE: UC Irvine Anteaters",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 2,
+              "away": 9
+            },
+            "M2: Relevance": {
+              "home": 0.512,
+              "away": 4.3214
+            },
+            "M3: Efficiency": {
+              "margin": -2.0
+            },
+            "M4: ATS Trends": {
+              "home": 1,
+              "away": 7
+            },
+            "M5: Rest": {
+              "home": 1,
+              "away": 1,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 2.5,
+              "current_home": 1.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Loyola Marymount Lions",
+          "team_away": "UC Irvine Anteaters",
+          "start": "2026-11-22T21:30Z",
+          "sharp_books": {},
+          "event_id": "401917540",
+          "espn_home": "Loyola Marymount Lions",
+          "espn_away": "UC Irvine Anteaters",
+          "score": {
+            "value": 18.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 75%+ &middot; Consensus on the favorite (37-61, 38%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Lamar Cardinals (H) vs Rice Owls (A)",
+          "spread": "LAM -2.5",
+          "favorite": "Lamar Cardinals -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Lamar Cardinals",
+            "M2: Relevance": "TAKE: Lamar Cardinals",
+            "M3: Efficiency": "TAKE: Rice Owls",
+            "M4: ATS Trends": "TAKE: Rice Owls",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Rice Owls",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Lamar Cardinals"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 47,
+              "away": 40
+            },
+            "M2: Relevance": {
+              "home": 41.2273,
+              "away": 28.4359
+            },
+            "M3: Efficiency": {
+              "margin": -2.0
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 6
+            },
+            "M5: Rest": {
+              "home": 5,
+              "away": 5,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -2.5,
+              "current_home": -1.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -2.5,
+                "last": -2.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Lamar Cardinals",
+          "team_away": "Rice Owls",
+          "start": "2026-11-22T22:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 50.0,
+              "away_b": 50.0,
+              "away_m": 50.0,
+              "line": "-2.5",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 83.0,
+              "home_m": 99.0,
+              "away_b": 17.0,
+              "away_m": 1.0,
+              "line": "-1.5",
+              "thin": false
+            }
+          },
+          "event_id": "401925013",
+          "espn_home": "Lamar Cardinals",
+          "espn_away": "Rice Owls"
+        },
+        {
+          "game": "Samford Bulldogs (H) vs UNC Asheville Bulldogs (A)",
+          "spread": "SAM -9.5",
+          "favorite": "Samford Bulldogs -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Samford Bulldogs",
+            "M2: Relevance": "TAKE: Samford Bulldogs",
+            "M3: Efficiency": "TAKE: UNC Asheville Bulldogs",
+            "M4: ATS Trends": "TAKE: Samford Bulldogs",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Samford Bulldogs",
+            "CONSENSUS": "TAKE: Samford Bulldogs",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Samford Bulldogs"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 55,
+              "away": 35
+            },
+            "M2: Relevance": {
+              "home": 46.7453,
+              "away": 23.5699
+            },
+            "M3: Efficiency": {
+              "margin": 0.8
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 1
+            },
+            "M5: Rest": {
+              "home": 4,
+              "away": 4,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -9.5,
+              "current_home": -10.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Samford Bulldogs",
+          "team_away": "UNC Asheville Bulldogs",
+          "start": "2026-11-22T22:00Z",
+          "sharp_books": {
+            "dk": {
+              "home_b": 69.0,
+              "home_m": 98.0,
+              "away_b": 31.0,
+              "away_m": 2.0,
+              "line": "-10.5",
+              "thin": false
+            }
+          },
+          "event_id": "401922293",
+          "espn_home": "Samford Bulldogs",
+          "espn_away": "UNC Asheville Bulldogs",
+          "score": {
+            "value": 34.25,
+            "tier": "Fair",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 75%+ &middot; Consensus on the favorite (37-61, 38%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Portland State Vikings (H) vs Cal State Fullerton Titans (A)",
+          "spread": "PRST -4.5",
+          "favorite": "Portland State Vikings -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Portland State Vikings",
+            "M2: Relevance": "TAKE: Portland State Vikings",
+            "M3: Efficiency": "TAKE: Cal State Fullerton Titans",
+            "M4: ATS Trends": "TAKE: Portland State Vikings",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Portland State Vikings",
+            "CONSENSUS": "TAKE: Portland State Vikings",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Portland State Vikings"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 49,
+              "away": 39
+            },
+            "M2: Relevance": {
+              "home": 41.6387,
+              "away": 28.1714
+            },
+            "M3: Efficiency": {
+              "margin": 1.3
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 2
+            },
+            "M5: Rest": {
+              "home": 3,
+              "away": 4,
+              "home_last3": 1,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -3.5,
+              "current_home": -4.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -4.5,
+                "last": -4.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Portland State Vikings",
+          "team_away": "Cal State Fullerton Titans",
+          "start": "2026-11-22T22:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 0.0,
+              "home_m": 0.0,
+              "away_b": 100.0,
+              "away_m": 100.0,
+              "line": "-4.5",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 73.0,
+              "home_m": 98.0,
+              "away_b": 27.0,
+              "away_m": 2.0,
+              "line": "-4.5",
+              "thin": false
+            }
+          },
+          "event_id": "401920159",
+          "espn_home": "Portland State Vikings",
+          "espn_away": "Cal State Fullerton Titans",
+          "score": {
+            "value": 34.25,
+            "tier": "Fair",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 75%+ &middot; Consensus on the favorite (37-61, 38%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Boston College Eagles (H) vs NJIT Highlanders (A)",
+          "spread": "BC -24.5",
+          "favorite": "Boston College Eagles -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Boston College Eagles",
+            "M2: Relevance": "TAKE: Boston College Eagles",
+            "M3: Efficiency": "TAKE: NJIT Highlanders",
+            "M4: ATS Trends": "TAKE: Boston College Eagles",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: NJIT Highlanders",
+            "CONSENSUS": "TAKE: Boston College Eagles",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: Boston College Eagles"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 90,
+              "away": 4
+            },
+            "M2: Relevance": {
+              "home": 69.5845,
+              "away": 3.0682
+            },
+            "M3: Efficiency": {
+              "margin": 8.2
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 0
+            },
+            "M5: Rest": {
+              "home": 4,
+              "away": 4,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -24.5,
+              "current_home": -23.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -23.5,
+                "last": -23.5,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "Boston College Eagles",
+          "team_away": "NJIT Highlanders",
+          "start": "2026-11-22T22:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 50.0,
+              "away_b": 50.0,
+              "away_m": 50.0,
+              "line": "-23.5",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 82.0,
+              "home_m": 99.0,
+              "away_b": 18.0,
+              "away_m": 1.0,
+              "line": "-23.5",
+              "thin": false
+            }
+          },
+          "event_id": "401909556",
+          "espn_home": "Boston College Eagles",
+          "espn_away": "NJIT Highlanders",
+          "score": {
+            "value": 18.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 75%+ &middot; Consensus on the favorite (37-61, 38%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Stephen F. Austin Lumberjacks (H) vs Temple Owls (A)",
+          "spread": "TEM -1.5",
+          "favorite": "Temple Owls -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Stephen F. Austin Lumberjacks",
+            "M2: Relevance": "TAKE: Stephen F. Austin Lumberjacks",
+            "M3: Efficiency": "TAKE: Stephen F. Austin Lumberjacks",
+            "M4: ATS Trends": "TAKE: Temple Owls",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Temple Owls",
+            "CONSENSUS": "TAKE: Stephen F. Austin Lumberjacks",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 60,
+              "away": 34
+            },
+            "M2: Relevance": {
+              "home": 44.6096,
+              "away": 29.0422
+            },
+            "M3: Efficiency": {
+              "margin": 3.4
+            },
+            "M4: ATS Trends": {
+              "home": 3,
+              "away": 7
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 1.5,
+              "current_home": 2.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Stephen F. Austin Lumberjacks",
+          "team_away": "Temple Owls",
+          "start": "2026-11-22T22:30Z",
+          "sharp_books": {},
+          "event_id": "401921205",
+          "espn_home": "Stephen F. Austin Lumberjacks",
+          "espn_away": "Temple Owls",
+          "score": {
+            "value": 18.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Line move against consensus &middot; Confidence 75%+ &middot; Consensus on the underdog (11-17, 39%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Valparaiso Beacons (H) vs Southern Miss Golden Eagles (A)",
+          "spread": "VAL -8.5",
+          "favorite": "Valparaiso Beacons -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Valparaiso Beacons",
+            "M2: Relevance": "TAKE: Valparaiso Beacons",
+            "M3: Efficiency": "TAKE: Southern Miss Golden Eagles",
+            "M4: ATS Trends": "TAKE: Valparaiso Beacons",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Valparaiso Beacons",
+            "CONSENSUS": "TAKE: Valparaiso Beacons",
+            "Sharp: Circa": "TAKE: Southern Miss Golden Eagles",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 71,
+              "away": 22
+            },
+            "M2: Relevance": {
+              "home": 48.8824,
+              "away": 22.1828
+            },
+            "M3: Efficiency": {
+              "margin": 1.9
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 2
+            },
+            "M5: Rest": {
+              "home": 1,
+              "away": 1,
+              "home_last3": 1,
+              "away_last3": 2
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -8.5,
+              "current_home": -8.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "circa"
+              ],
+              "circa": {
+                "first": -8.0,
+                "last": -9.0,
+                "delta": -1.0
+              }
+            }
+          },
+          "team_home": "Valparaiso Beacons",
+          "team_away": "Southern Miss Golden Eagles",
+          "start": "2026-11-22T23:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 67.0,
+              "home_m": 51.0,
+              "away_b": 33.0,
+              "away_m": 49.0,
+              "line": "-9",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 100.0,
+              "home_m": 100.0,
+              "away_b": 0.0,
+              "away_m": 0.0,
+              "line": "-8.5",
+              "thin": true
+            }
+          },
+          "event_id": "401928999",
+          "espn_home": "Valparaiso Beacons",
+          "espn_away": "Southern Miss Golden Eagles",
+          "score": {
+            "value": 34.25,
+            "tier": "Fair",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 75%+ &middot; Consensus on the favorite (37-61, 38%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Minnesota Golden Gophers (H) vs Utah Utes (A)",
+          "spread": "MINN -10.5",
+          "favorite": "Minnesota Golden Gophers -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Minnesota Golden Gophers",
+            "M2: Relevance": "TAKE: Minnesota Golden Gophers",
+            "M3: Efficiency": "TAKE: Utah Utes",
+            "M4: ATS Trends": "TAKE: Minnesota Golden Gophers",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Utah Utes",
+            "CONSENSUS": "TAKE: Minnesota Golden Gophers",
+            "Sharp: Circa": "TAKE: Utah Utes",
+            "Sharp: DraftKings": "TAKE: Utah Utes"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 9,
+              "away": 1
+            },
+            "M2: Relevance": {
+              "home": 4.2111,
+              "away": 0.1098
+            },
+            "M3: Efficiency": {
+              "margin": 3.7
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 0
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -10.5,
+              "current_home": -9.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -11.0,
+                "last": -9.0,
+                "delta": 2.0
+              }
+            }
+          },
+          "team_home": "Minnesota Golden Gophers",
+          "team_away": "Utah Utes",
+          "start": "2026-11-22T23:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 3.0,
+              "away_b": 50.0,
+              "away_m": 97.0,
+              "line": "-9",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 94.0,
+              "home_m": 90.0,
+              "away_b": 6.0,
+              "away_m": 10.0,
+              "line": "-9.5",
+              "thin": false
+            }
+          },
+          "event_id": "401921420",
+          "espn_home": "Minnesota Golden Gophers",
+          "espn_away": "Utah Utes",
+          "score": {
+            "value": 3.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "Most sharp sources lean the other way (2 of 2: Circa, DraftKings)",
+                "warn": true
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: Line move against consensus &middot; Consensus on the favorite (69-94, 42%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": -1.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "UCLA Bruins (H) vs Delaware Blue Hens (A)",
+          "spread": "UCLA -29.5",
+          "favorite": "UCLA Bruins -fav",
+          "confidence": "80%",
+          "picks": {
+            "M1: Normal Score": "TAKE: UCLA Bruins",
+            "M2: Relevance": "TAKE: UCLA Bruins",
+            "M3: Efficiency": "TAKE: Delaware Blue Hens",
+            "M4: ATS Trends": "TAKE: UCLA Bruins",
+            "M5: Rest": "TAKE: UCLA Bruins",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Delaware Blue Hens",
+            "CONSENSUS": "TAKE: UCLA Bruins",
+            "Sharp: Circa": "TAKE: Delaware Blue Hens",
+            "Sharp: DraftKings": "TAKE: UCLA Bruins"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 74,
+              "away": 18
+            },
+            "M2: Relevance": {
+              "home": 57.1676,
+              "away": 13.8895
+            },
+            "M3: Efficiency": {
+              "margin": 15.8
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 3
+            },
+            "M5: Rest": {
+              "home": 4,
+              "away": 2,
+              "home_last3": 0,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -29.5,
+              "current_home": -28.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -30.0,
+                "last": -28.0,
+                "delta": 2.0
+              }
+            }
+          },
+          "team_home": "UCLA Bruins",
+          "team_away": "Delaware Blue Hens",
+          "start": "2026-11-23T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 67.0,
+              "home_m": 7.0,
+              "away_b": 33.0,
+              "away_m": 93.0,
+              "line": "-28",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 89.0,
+              "home_m": 99.0,
+              "away_b": 11.0,
+              "away_m": 1.0,
+              "line": "-28.5",
+              "thin": false
+            }
+          },
+          "event_id": "401920905",
+          "espn_home": "UCLA Bruins",
+          "espn_away": "Delaware Blue Hens",
+          "score": {
+            "value": 24.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 80%"
+              },
+              {
+                "t": "4 of 5 models back it"
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 75%+ &middot; Consensus on the favorite (37-61, 38%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 1.0,
+              "agree": 0.8,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "UAB Blazers (H) vs Rhode Island Rams (A)",
+          "spread": "URI -2.5",
+          "favorite": "Rhode Island Rams -fav",
+          "confidence": "50%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Rhode Island Rams",
+            "M2: Relevance": "TAKE: Rhode Island Rams",
+            "M3: Efficiency": "TAKE: UAB Blazers",
+            "M4: ATS Trends": "TAKE: UAB Blazers",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "SPLIT",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: UAB Blazers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 34,
+              "away": 58
+            },
+            "M2: Relevance": {
+              "home": 25.051,
+              "away": 48.4187
+            },
+            "M3: Efficiency": {
+              "margin": 0.9
+            },
+            "M4: ATS Trends": {
+              "home": 6,
+              "away": 1
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": 2.5,
+              "current_home": 2.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": {
+                "first": 2.0,
+                "last": 2.0,
+                "delta": 0.0
+              }
+            }
+          },
+          "team_home": "UAB Blazers",
+          "team_away": "Rhode Island Rams",
+          "start": "2026-11-23T00:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 50.0,
+              "away_b": 50.0,
+              "away_m": 50.0,
+              "line": "+2",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 60.0,
+              "home_m": 97.0,
+              "away_b": 40.0,
+              "away_m": 3.0,
+              "line": "+2.5",
+              "thin": false
+            }
+          },
+          "event_id": "401919020",
+          "espn_home": "UAB Blazers",
+          "espn_away": "Rhode Island Rams"
+        },
+        {
+          "game": "Portland Pilots (H) vs California Baptist Lancers (A)",
+          "spread": "PORT -9.5",
+          "favorite": "Portland Pilots -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Portland Pilots",
+            "M2: Relevance": "TAKE: Portland Pilots",
+            "M3: Efficiency": "TAKE: California Baptist Lancers",
+            "M4: ATS Trends": "TAKE: Portland Pilots",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: California Baptist Lancers",
+            "CONSENSUS": "TAKE: Portland Pilots",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 54,
+              "away": 37
+            },
+            "M2: Relevance": {
+              "home": 50.5737,
+              "away": 21.0878
+            },
+            "M3: Efficiency": {
+              "margin": -4.6
+            },
+            "M4: ATS Trends": {
+              "home": 7,
+              "away": 3
+            },
+            "M5: Rest": {
+              "home": 1,
+              "away": 1,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -10.5,
+              "current_home": -7.5,
+              "delta": 3.0,
+              "crosses_key": false,
+              "size": 3.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Portland Pilots",
+          "team_away": "California Baptist Lancers",
+          "start": "2026-11-23T00:00Z",
+          "sharp_books": {},
+          "event_id": "401917541",
+          "espn_home": "Portland Pilots",
+          "espn_away": "California Baptist Lancers",
+          "score": {
+            "value": 18.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 75%+ &middot; Consensus on the favorite (37-61, 38%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "USC Trojans (H) vs Louisiana Ragin' Cajuns (A)",
+          "spread": "USC -33.5",
+          "favorite": "USC Trojans -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: USC Trojans",
+            "M2: Relevance": "TAKE: USC Trojans",
+            "M3: Efficiency": "TAKE: Louisiana Ragin' Cajuns",
+            "M4: ATS Trends": "TAKE: USC Trojans",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Louisiana Ragin' Cajuns",
+            "CONSENSUS": "TAKE: USC Trojans",
+            "Sharp: Circa": "TAKE: Louisiana Ragin' Cajuns",
+            "Sharp: DraftKings": "TAKE: USC Trojans"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 79,
+              "away": 14
+            },
+            "M2: Relevance": {
+              "home": 59.2641,
+              "away": 12.1601
+            },
+            "M3: Efficiency": {
+              "margin": 10.9
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 0
+            },
+            "M5: Rest": {
+              "home": 3,
+              "away": 4,
+              "home_last3": 1,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -33.5,
+              "current_home": -32.5,
+              "delta": 1.0,
+              "crosses_key": false,
+              "size": 1.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -33.0,
+                "last": -31.5,
+                "delta": 1.5
+              }
+            }
+          },
+          "team_home": "USC Trojans",
+          "team_away": "Louisiana Ragin' Cajuns",
+          "start": "2026-11-23T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 4.0,
+              "away_b": 50.0,
+              "away_m": 96.0,
+              "line": "-31.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 63.0,
+              "home_m": 71.0,
+              "away_b": 37.0,
+              "away_m": 29.0,
+              "line": "-32.5",
+              "thin": false
+            }
+          },
+          "event_id": "401926774",
+          "espn_home": "USC Trojans",
+          "espn_away": "Louisiana Ragin' Cajuns",
+          "score": {
+            "value": 18.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 75%+ &middot; Consensus on the favorite (37-61, 38%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Utah Valley Wolverines (H) vs UT Martin Skyhawks (A)",
+          "spread": "UVU -7.5",
+          "favorite": "Utah Valley Wolverines -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Utah Valley Wolverines",
+            "M2: Relevance": "TAKE: Utah Valley Wolverines",
+            "M3: Efficiency": "TAKE: Utah Valley Wolverines",
+            "M4: ATS Trends": "TAKE: Utah Valley Wolverines",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: UT Martin Skyhawks",
+            "CONSENSUS": "TAKE: Utah Valley Wolverines",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "TAKE: UT Martin Skyhawks"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 53,
+              "away": 37
+            },
+            "M2: Relevance": {
+              "home": 43.3551,
+              "away": 27.1686
+            },
+            "M3: Efficiency": {
+              "margin": 7.8
+            },
+            "M4: ATS Trends": {
+              "home": 4,
+              "away": 1
+            },
+            "M5: Rest": {
+              "home": 2,
+              "away": 2,
+              "home_last3": 1,
+              "away_last3": 1
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -8.5,
+              "current_home": -6.5,
+              "delta": 2.0,
+              "crosses_key": false,
+              "size": 2.0,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -8.0,
+                "last": -6.5,
+                "delta": 1.5
+              }
+            }
+          },
+          "team_home": "Utah Valley Wolverines",
+          "team_away": "UT Martin Skyhawks",
+          "start": "2026-11-23T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 0.0,
+              "home_m": 0.0,
+              "away_b": 100.0,
+              "away_m": 100.0,
+              "line": "-6.5",
+              "thin": true
+            },
+            "dk": {
+              "home_b": 88.0,
+              "home_m": 51.0,
+              "away_b": 13.0,
+              "away_m": 49.0,
+              "line": "-6.5",
+              "thin": false
+            }
+          },
+          "event_id": "401921206",
+          "espn_home": "Utah Valley Wolverines",
+          "espn_away": "UT Martin Skyhawks",
+          "score": {
+            "value": 27.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 100%"
+              },
+              {
+                "t": "4 of 4 models back it"
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Confidence 100%+ &middot; Consensus on the favorite (4-9, 31%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 1.0,
+              "agree": 1.0,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "UC San Diego Tritons (H) vs Seattle Redhawks (A)",
+          "spread": "UCSD -1.5",
+          "favorite": "UC San Diego Tritons -fav",
+          "confidence": "100%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Seattle Redhawks",
+            "M2: Relevance": "TAKE: Seattle Redhawks",
+            "M3: Efficiency": "TAKE: Seattle Redhawks",
+            "M4: ATS Trends": "TAKE: Seattle Redhawks",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "PUSH",
+            "CONSENSUS": "TAKE: Seattle Redhawks",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 1,
+              "away": 10
+            },
+            "M2: Relevance": {
+              "home": 0.1098,
+              "away": 2.9112
+            },
+            "M3: Efficiency": {
+              "margin": -1.1
+            },
+            "M4: ATS Trends": {
+              "home": 0,
+              "away": 8
+            },
+            "M5: Rest": {
+              "home": 6,
+              "away": 5,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -1.5,
+              "current_home": -1.5,
+              "delta": 0.0,
+              "crosses_key": false,
+              "size": 0.0,
+              "sources": [],
+              "circa": null
+            }
+          },
+          "team_home": "UC San Diego Tritons",
+          "team_away": "Seattle Redhawks",
+          "start": "2026-11-23T02:30Z",
+          "sharp_books": {},
+          "event_id": "401917542",
+          "espn_home": "UC San Diego Tritons",
+          "espn_away": "Seattle U Redhawks",
+          "score": {
+            "value": 35.0,
+            "tier": "Fair",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 100%"
+              },
+              {
+                "t": "4 of 4 models back it"
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; No line move yet (26-52, 33%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 1.0,
+              "agree": 1.0,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 0.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        },
+        {
+          "game": "Loyola Chicago Ramblers (H) vs San Jose State Spartans (A)",
+          "spread": "LUC -3.5",
+          "favorite": "Loyola Chicago Ramblers -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: San Jose State Spartans",
+            "M2: Relevance": "TAKE: San Jose State Spartans",
+            "M3: Efficiency": "TAKE: San Jose State Spartans",
+            "M4: ATS Trends": "TAKE: Loyola Chicago Ramblers",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "N/A",
+            "M8: Line Movement": "TAKE: Loyola Chicago Ramblers",
+            "CONSENSUS": "TAKE: San Jose State Spartans",
+            "Sharp: Circa": "N/A",
+            "Sharp: DraftKings": "N/A"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 27,
+              "away": 66
+            },
+            "M2: Relevance": {
+              "home": 8.2007,
+              "away": 63.2586
+            },
+            "M3: Efficiency": {
+              "margin": -2.6
+            },
+            "M4: ATS Trends": {
+              "home": 9,
+              "away": 0
+            },
+            "M5: Rest": {
+              "home": 4,
+              "away": 4,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": null,
+              "home_m": null,
+              "away_b": null,
+              "away_m": null
+            },
+            "M8: Line Movement": {
+              "open_home": -3.5,
+              "current_home": -4.5,
+              "delta": -1.0,
+              "crosses_key": false,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": null
+            }
+          },
+          "team_home": "Loyola Chicago Ramblers",
+          "team_away": "San Jose State Spartans",
+          "start": "2026-11-23T04:59Z",
+          "sharp_books": {},
+          "event_id": "401911233",
+          "espn_home": "Loyola Chicago Ramblers",
+          "espn_away": "San Jos\u00e9 State Spartans",
+          "score": {
+            "value": 18.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: No sharp consensus &middot; Line move against consensus &middot; Confidence 75%+ &middot; Consensus on the underdog (11-17, 39%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        }
+      ]
     }
   ]
 }
