@@ -390,6 +390,13 @@
   .combo-apply:hover { border-color: var(--accent); }
   .combo-dim { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
   .combo-dim-label { flex: 0 0 120px; font-size: 0.82rem; color: var(--text-dim); font-weight: 600; }
+  .score-tiles { display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
+  .score-tile { flex: 1 1 140px; border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; }
+  .score-tile-label { color: var(--text-dim); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+  .score-tile-rec { font-size: 1.5rem; font-weight: 800; margin-top: 2px; }
+  .score-tile-rec.good { color: var(--win); }
+  .score-tile-pct { color: var(--text-dim); font-size: 0.78rem; }
+  .score-star-line { margin-top: 8px; font-size: 0.85rem; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
   .combo-slider { flex: 1 1 160px; max-width: 280px; accent-color: var(--accent); }
   .combo-conf-val { font-weight: 700; font-size: 0.85rem; min-width: 48px; }
   .combo-result { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border); display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
@@ -1687,23 +1694,53 @@ function perfExtrasHtml(sportKey) {
     <div class="perf-sub">Consensus by confidence</div>
     <div class="perf-note">Calibration check: the higher the confidence the consensus states, the more often it should win.</div>
     <table class="perf"><tr><th>Confidence</th><th>Record</th><th>Win %</th><th>Avg stated</th></tr>${rows}</table>
-    ${topPickRecordHtml(games)}${situationHtml(games)}${sourceQualityHtml(games)}${marketValueHtml(games)}`;
+    ${topPickRecordHtml(games, sportKey)}${situationHtml(games)}${sourceQualityHtml(games)}${marketValueHtml(games)}`;
 }
 
 // Record of the consensus pick by its saved pick score (the score and star the Top picks tab showed at the last run before kickoff).
-function topPickRecordHtml(games) {
+let scoreSlider = 45;  // the star line (STAR_MIN is declared further down)
+function scoreGames(sportKey) { return (histGames[sportKey] || []).filter(x => x.score && typeof x.score.value === "number"); }
+function scoreRec(list) {
+  const w = list.filter(x => x.result === "WIN").length, l = list.length - w;
+  return { w, l, n: list.length, text: list.length ? `${w}-${l}` : "N/A", pct: list.length ? Math.round(w / list.length * 100) + "%" : "N/A" };
+}
+function scoreRecordText(sportKey, min) {
+  const have = scoreGames(sportKey);
+  const at = scoreRec(have.filter(x => x.score.value >= min)), below = scoreRec(have.filter(x => x.score.value < min));
+  const tile = (label, r, good) => `<div class="score-tile"><div class="score-tile-label">${label}</div><div class="score-tile-rec${good ? " good" : ""}">${r.text}</div><div class="score-tile-pct">${r.n ? r.pct + " win rate" : "No games"}</div></div>`;
+  return `<div class="score-tiles">${tile(`Score ${min}+`, at, true)}${tile(`Below ${min}`, below, false)}</div>`;
+}
+function setScoreSlider(v) {
+  scoreSlider = Number(v);
+  const val = document.getElementById("score-slider-val"), out = document.getElementById("score-slider-out");
+  if (val) val.textContent = scoreSlider + "+";
+  if (out) out.innerHTML = scoreRecordText(perfSport, scoreSlider);
+}
+function topPickRecordHtml(games, sportKey) {
+  sportKey = sportKey || perfSport;
   const have = games.filter(x => x.score && typeof x.score.value === "number");
   const head = `<div class="perf-sub">Top picks by pick score</div>`;
   if (!have.length) return head + `<div class="perf-note">Collecting data: each game's pick score is saved at its last run before kickoff, and the record fills in as those games are graded.</div>`;
-  const row = (label, list) => {
-    const w = list.filter(x => x.result === "WIN").length, l = list.length - w;
-    return `<tr><td>${label}</td><td>${list.length ? w + "-" + l : "N/A"}</td><td class="perf-pct">${list.length ? Math.round(w / list.length * 100) + "%" : "N/A"}</td></tr>`;
-  };
+  const vals = have.map(x => x.score.value);
+  const lo = Math.floor(Math.min(...vals) / 5) * 5, hi = Math.max(lo + 5, Math.ceil(Math.max(...vals) / 5) * 5);
+  const cur = Math.min(Math.max(scoreSlider, lo), hi);
+  const star = scoreRec(have.filter(x => x.score.value >= STAR_MIN)), rest = scoreRec(have.filter(x => x.score.value < STAR_MIN));
+  const starLine = `<div class="score-star-line"><span class="top-star">${STAR_SVG}</span> Starred (${STAR_MIN}+): <b>${star.text}</b>${star.n ? ` (${star.pct})` : ""}`
+    + ` &middot; Not starred: <b>${rest.text}</b>${rest.n ? ` (${rest.pct})` : ""}</div>`;
+  const chips = [30, STAR_MIN, 55].filter(v => v >= lo && v <= hi).map(v => {
+    const r = scoreRec(have.filter(x => x.score.value >= v));
+    return `<span class="win-combo-more">${v}+: ${r.text}${r.n ? " (" + r.pct + ")" : ""}</span>`;
+  }).join(" &middot; ");
   const tiers = [["Strong (55+)", v => v >= 55], ["Good (45 to 54)", v => v >= 45 && v < 55], ["Fair (30 to 44)", v => v >= 30 && v < 45], ["Weak (0 to 29)", v => v >= 0 && v < 30], ["Conflicted (below 0)", v => v < 0]];
-  const rows = row("Starred (45+)", have.filter(x => x.score.value >= STAR_MIN)) + row("Not starred", have.filter(x => x.score.value < STAR_MIN))
-    + tiers.map(([label, f]) => row(label, have.filter(x => f(x.score.value)))).join("");
-  return head + `<div class="perf-note">Graded consensus picks by the score they had before kickoff. Tracking began ${shortDay(have[0].day)} (${have.length} graded game${have.length === 1 ? "" : "s"} so far). A star should win more often than the rest if the score means something.</div>`
-    + `<table class="perf"><tr><th>Pick score</th><th>Record</th><th>Win %</th></tr>${rows}</table>`;
+  const rows = tiers.map(([label, f]) => { const r = scoreRec(have.filter(x => f(x.score.value))); return `<tr><td>${label}</td><td>${r.text}</td><td class="perf-pct">${r.pct}</td></tr>`; }).join("");
+  return head + `<div class="perf-note">Graded consensus picks by the score they had before kickoff. Tracking began ${shortDay(have[0].day)} (${have.length} graded game${have.length === 1 ? "" : "s"} so far). If the score means something, higher scores should win more often.</div>`
+    + starLine
+    + `<div class="combo-dim" style="margin-top:10px"><span class="combo-dim-label">Min score</span>`
+    + `<input type="range" class="combo-slider" min="${lo}" max="${hi}" step="5" value="${cur}" aria-label="Minimum pick score" oninput="setScoreSlider(this.value)">`
+    + `<span class="combo-conf-val" id="score-slider-val">${cur}+</span></div>`
+    + `<div id="score-slider-out">${scoreRecordText(sportKey, cur)}</div>`
+    + (chips ? `<div style="margin-top:6px">${chips}</div>` : "")
+    + `<details class="books-dd" style="margin-top:10px"><summary>By tier</summary><div class="books-body"><table class="perf"><tr><th>Pick score</th><th>Record</th><th>Win %</th></tr>${rows}</table></div></details>`;
 }
 
 // Records for consensus picks split by situation: favorite or underdog, home or away, size of the spread.
