@@ -396,6 +396,10 @@
   .score-tile-rec { font-size: 1.5rem; font-weight: 800; margin-top: 2px; }
   .score-tile-rec.good { color: var(--win); }
   .score-tile-pct { color: var(--text-dim); font-size: 0.78rem; }
+  .today-list { margin-top: 6px; font-size: 0.84rem; }
+  .today-row { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; border-bottom: 1px solid var(--border); }
+  .today-win { color: var(--win); font-weight: 700; }
+  .today-loss { color: var(--loss); font-weight: 700; }
   .score-star-line { margin-top: 8px; font-size: 0.85rem; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
   .combo-slider { flex: 1 1 160px; max-width: 280px; accent-color: var(--accent); }
   .combo-conf-val { font-weight: 700; font-size: 0.85rem; min-width: 48px; }
@@ -1716,11 +1720,81 @@ function setScoreSlider(v) {
   if (val) val.textContent = scoreSlider + "+";
   if (out) out.innerHTML = scoreRecordText(perfSport, scoreSlider);
 }
+// "Graded so far today": today's saved pick scores against the games that have finished (ESPN finals, the same line grading uses).
+const ESPN_BOARD = {
+  nba: "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={d}",
+  ncaa: "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates={d}&groups=50&limit=357",
+  nfl: "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates={d}&limit=100",
+  ncaaf: "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates={d}&groups=80&limit=400",
+};
+const todayGradeCache = {};
+async function todayGrades(sportKey) {
+  const c = todayGradeCache[sportKey];
+  if (c && Date.now() - c.at < 60000) return c.rows;
+  const sp = SPORTS.find(x => x.key === sportKey);
+  const data = await fetch(sp.file + "?_=" + Date.now()).then(r => r.json());
+  const snap = (data.snapshots || [])[data.snapshots.length - 1] || { games: [] };
+  const day = String(data.date || "").replace(/-/g, "");
+  const board = await fetch(ESPN_BOARD[sportKey].replace("{d}", day)).then(r => r.json());
+  const finals = {};
+  for (const ev of board.events || []) {
+    const comp = (ev.competitions || [])[0] || {};
+    if (!((comp.status || {}).type || {}).completed) continue;
+    const sc = {};
+    for (const t of comp.competitors || []) sc[t.homeAway] = Number(t.score);
+    if (!isNaN(sc.home) && !isNaN(sc.away)) finals[ev.id] = sc;
+  }
+  const rows = [];
+  for (const g of snap.games || []) {
+    if (!g.score || typeof g.score.value !== "number") continue;
+    const pick = String((g.picks || {}).CONSENSUS || ""), team = pick.startsWith("TAKE:") ? pick.slice(5).trim() : "";
+    if (!team) continue;
+    const fin = finals[g.event_id];
+    let result = null, note = "";
+    if (fin) {
+      const parts = String(g.spread || "").trim().split(/\s+/), line = parseFloat(parts[parts.length - 1]);
+      const fav = String(g.favorite || "").replace(/\s*-fav$/, "");
+      if (parts.length < 2 || isNaN(line) || !fav) note = "no line";
+      else {
+        const adj = fin.home - fin.away + (fav === g.team_home ? line : -line);
+        if (Math.abs(adj) < 0.5) note = "push";
+        else result = (adj > 0 ? g.team_home : g.team_away) === team ? "WIN" : "LOSS";
+      }
+    }
+    rows.push({ game: g.game, team, value: g.score.value, fin, result, note, done: !!fin });
+  }
+  todayGradeCache[sportKey] = { at: Date.now(), rows };
+  return rows;
+}
+async function fillScoreToday(sportKey) {
+  const el = document.getElementById("score-today");
+  if (!el) return;
+  try {
+    const rows = await todayGrades(sportKey);
+    if (!document.getElementById("score-today")) return;
+    const stars = rows.filter(r => r.value >= STAR_MIN), others = rows.filter(r => r.value < STAR_MIN);
+    const graded = l => l.filter(r => r.result);
+    const rec = l => { const w = l.filter(r => r.result === "WIN").length; return `${w}-${l.length - w}`; };
+    const pending = stars.filter(r => !r.done).length;
+    const list = stars.length ? stars.map(r => `<div class="today-row"><span>${r.team} <span class="books-dim">(${Math.round(r.value)})</span></span>`
+      + `<span class="${r.result === "WIN" ? "today-win" : r.result === "LOSS" ? "today-loss" : "books-dim"}">${r.result ? (r.result === "WIN" ? "Win" : "Loss")
+      : r.done ? r.note : "Not final"}</span></div>`).join("") : `<div class="books-dim">No starred picks today.</div>`;
+    el.innerHTML = `<div class="perf-sub" style="margin-top:12px">Graded so far today</div>`
+      + `<div class="score-star-line"><span class="top-star">${STAR_SVG}</span> Starred: <b>${rec(graded(stars))}</b>`
+      + `${pending ? ` &middot; ${pending} not final yet` : ""} &middot; Not starred: <b>${rec(graded(others))}</b>${others.some(r => !r.done) ? ` &middot; ${others.filter(r => !r.done).length} not final yet` : ""}</div>`
+      + `<div class="today-list">${list}</div>`
+      + `<div class="win-combo-more">Uses each game's last saved pick score and line, and ESPN's final scores. The official grading still runs overnight.</div>`;
+  } catch (e) {
+    el.innerHTML = "";
+  }
+}
+
 function topPickRecordHtml(games, sportKey) {
   sportKey = sportKey || perfSport;
   const have = games.filter(x => x.score && typeof x.score.value === "number");
   const head = `<div class="perf-sub">Top picks by pick score</div>`;
-  if (!have.length) return head + `<div class="perf-note">Collecting data: each game's pick score is saved at its last run before kickoff, and the record fills in as those games are graded.</div>`;
+  if (!have.length) { setTimeout(() => fillScoreToday(sportKey), 0); return head + `<div class="perf-note">Collecting data: each game's pick score is saved at its last run before kickoff, and the record fills in as those games are graded.</div><div id="score-today"></div>`; }
+  setTimeout(() => fillScoreToday(sportKey), 0);
   const vals = have.map(x => x.score.value);
   const lo = Math.floor(Math.min(...vals) / 5) * 5, hi = Math.max(lo + 5, Math.ceil(Math.max(...vals) / 5) * 5);
   const cur = Math.min(Math.max(scoreSlider, lo), hi);
@@ -1740,7 +1814,8 @@ function topPickRecordHtml(games, sportKey) {
     + `<span class="combo-conf-val" id="score-slider-val">${cur}+</span></div>`
     + `<div id="score-slider-out">${scoreRecordText(sportKey, cur)}</div>`
     + (chips ? `<div style="margin-top:6px">${chips}</div>` : "")
-    + `<details class="books-dd" style="margin-top:10px"><summary>By tier</summary><div class="books-body"><table class="perf"><tr><th>Pick score</th><th>Record</th><th>Win %</th></tr>${rows}</table></div></details>`;
+    + `<details class="books-dd" style="margin-top:10px"><summary>By tier</summary><div class="books-body"><table class="perf"><tr><th>Pick score</th><th>Record</th><th>Win %</th></tr>${rows}</table></div></details>`
+    + `<div id="score-today"></div>`;
 }
 
 // Records for consensus picks split by situation: favorite or underdog, home or away, size of the spread.
