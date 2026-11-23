@@ -2612,6 +2612,141 @@
           }
         }
       ]
+    },
+    {
+      "time": "2026-11-23T17:30:08-05:00",
+      "games": [
+        {
+          "game": "Washington Commanders (H) vs Cincinnati Bengals (A)",
+          "spread": "CIN -6",
+          "favorite": "Cincinnati Bengals -fav",
+          "confidence": "66%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Cincinnati Bengals",
+            "M2: Relevance": "TAKE: Cincinnati Bengals",
+            "M3: Efficiency": "TAKE: Cincinnati Bengals",
+            "M4: ATS Trends": "TAKE: Washington Commanders",
+            "M5: Rest": "TAKE: Washington Commanders",
+            "M6: Sharp Money": "TAKE: Cincinnati Bengals",
+            "M7: QB Injury Edge": "TAKE: Cincinnati Bengals",
+            "M8: Line Movement": "TAKE: Cincinnati Bengals",
+            "CONSENSUS": "TAKE: Cincinnati Bengals",
+            "Sharp: Circa": "TAKE: Washington Commanders",
+            "Sharp: DraftKings": "PUSH"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 14,
+              "away": 30
+            },
+            "M2: Relevance": {
+              "home": 18.0702,
+              "away": 44.4547
+            },
+            "M3: Efficiency": {
+              "margin": -6.2
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 4
+            },
+            "M5: Rest": {
+              "home": 11,
+              "away": 8,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": 23.59,
+              "home_m": 16.14,
+              "away_b": 76.41,
+              "away_m": 83.86
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Jayden Daniels (Active)",
+              "away_status": "Joe Burrow (Active)",
+              "home_rb": "Jeremy McNichols (Injured Reserve) -> Jacory Croskey-Merritt (Active) starting",
+              "away_rb": "Chase Brown (Active)",
+              "home_mlb": "Frankie Luvu (Active)",
+              "away_mlb": "Barrett Carter (Active)",
+              "home_impact": 2.0,
+              "away_impact": 0.0
+            },
+            "M8: Line Movement": {
+              "open_home": 1.5,
+              "current_home": 6.0,
+              "delta": 4.5,
+              "crosses_key": true,
+              "size": 4.5,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 6.0,
+                "last": 6.0,
+                "delta": 0.0
+              },
+              "vs_consensus": "agree"
+            }
+          },
+          "team_home": "Washington Commanders",
+          "team_away": "Cincinnati Bengals",
+          "start": "2026-11-24T01:15Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 23.0,
+              "home_m": 37.0,
+              "away_b": 77.0,
+              "away_m": 63.0,
+              "line": "+6",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 17.0,
+              "home_m": 17.0,
+              "away_b": 83.0,
+              "away_m": 83.0,
+              "line": "+6",
+              "thin": false
+            }
+          },
+          "home_id": "28",
+          "away_id": "4",
+          "espn_home": "Washington Commanders",
+          "espn_away": "Cincinnati Bengals",
+          "event_id": "401873078",
+          "score": {
+            "value": 24.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 66%"
+              },
+              {
+                "t": "4 of 6 models back it"
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a losing pattern: Confidence 65%+ (32-33, 49%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.5333,
+              "agree": 0.6667,
+              "sharp": 0.0,
+              "tier": 0.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        }
+      ]
     }
   ]
 }
