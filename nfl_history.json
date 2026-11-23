@@ -1,7 +1,1476 @@
 {
   "sport": "NFL",
-  "updated": "2026-11-22T06:15:01-05:00",
+  "updated": "2026-11-23T06:15:03-05:00",
   "days": {
+    "2026-11-22": [
+      {
+        "game": "Buffalo Bills (H) vs Miami Dolphins (A)",
+        "team_home": "Buffalo Bills",
+        "team_away": "Miami Dolphins",
+        "line": "BUF -16.5",
+        "favorite": "Buffalo Bills -fav",
+        "final": "Buffalo Bills 26, Miami Dolphins 9",
+        "cover": "Buffalo Bills",
+        "status": null,
+        "confidence": "84%",
+        "sharp": {
+          "home_b": 63.01,
+          "home_m": 65.31,
+          "away_b": 36.99,
+          "away_m": 34.69
+        },
+        "graded_run": "2026-11-22T12:52:16-05:00",
+        "score": {
+          "value": 60.91,
+          "tier": "Strong",
+          "star": true,
+          "why": [
+            {
+              "t": "Consensus confidence 84%"
+            },
+            {
+              "t": "4 of 5 models back it"
+            },
+            {
+              "t": "Sharp sources side with it (strong money gap, 12 pts)"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a winning pattern: Line move with consensus &middot; Confidence 70%+ &middot; Consensus on the favorite (7-1, 88%, Wilson 53%)"
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus &middot; Line move with consensus &middot; Confidence 65%+ (2-5, 29%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 0.8,
+            "sharp": 1.0,
+            "tier": 0.5,
+            "line": 1.0,
+            "pattern": 0.1164,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:16:11-0500",
+            "n": 13,
+            "sp": -16.5,
+            "best_h": -16,
+            "best_a": 17,
+            "tot": 45.5,
+            "pin_sp": -17,
+            "pin_h": 104,
+            "pin_a": -117,
+            "pin_tot": 45.5,
+            "pin_ml": [
+              -1431,
+              886
+            ]
+          },
+          "close": {
+            "t": "2026-11-22T12:52:16-0500",
+            "n": 13,
+            "sp": -17,
+            "best_h": -16.5,
+            "best_a": 17,
+            "tot": 45,
+            "pin_sp": -17,
+            "pin_h": 101,
+            "pin_a": -111,
+            "pin_tot": 44.5,
+            "pin_ml": [
+              -1189,
+              882
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Miami Dolphins",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Buffalo Bills",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Chicago Bears (H) vs New Orleans Saints (A)",
+        "team_home": "Chicago Bears",
+        "team_away": "New Orleans Saints",
+        "line": "CHI -11.5",
+        "favorite": "Chicago Bears -fav",
+        "final": "Chicago Bears 21, New Orleans Saints 13",
+        "cover": "New Orleans Saints",
+        "status": null,
+        "confidence": "67%",
+        "sharp": {
+          "home_b": 53.18,
+          "home_m": 55.17,
+          "away_b": 46.82,
+          "away_m": 44.83
+        },
+        "graded_run": "2026-11-22T12:52:16-05:00",
+        "score": {
+          "value": 40.83,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 67%"
+            },
+            {
+              "t": "4 of 6 models back it"
+            },
+            {
+              "t": "Sharp sources side with it"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a winning pattern: Line move with consensus &middot; Consensus on the favorite (17-7, 71%, Wilson 51%)"
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus &middot; Line move with consensus &middot; Confidence 65%+ (2-5, 29%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.5667,
+            "agree": 0.6667,
+            "sharp": 1.0,
+            "tier": 0.0,
+            "line": 1.0,
+            "pattern": 0.0333,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:16:11-0500",
+            "n": 13,
+            "sp": -11.5,
+            "best_h": -11,
+            "best_a": 12.5,
+            "tot": 49,
+            "pin_sp": -11.5,
+            "pin_h": -103,
+            "pin_a": -109,
+            "pin_tot": 48.5,
+            "pin_ml": [
+              -578,
+              439
+            ]
+          },
+          "close": {
+            "t": "2026-11-22T12:52:16-0500",
+            "n": 13,
+            "sp": -12,
+            "best_h": -11.5,
+            "best_a": 12.5,
+            "tot": 47.5,
+            "pin_sp": -11.5,
+            "pin_h": -108,
+            "pin_a": -102,
+            "pin_tot": 47.5,
+            "pin_ml": [
+              -550,
+              439
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Chicago Bears",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Chicago Bears",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "New Orleans Saints",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Chicago Bears",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "Chicago Bears",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Chicago Bears",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "New Orleans Saints",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Chicago Bears",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Chicago Bears",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "New Orleans Saints",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Chicago Bears",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Dallas Cowboys (H) vs Tennessee Titans (A)",
+        "team_home": "Dallas Cowboys",
+        "team_away": "Tennessee Titans",
+        "line": "DAL -7.5",
+        "favorite": "Dallas Cowboys -fav",
+        "final": "Dallas Cowboys 51, Tennessee Titans 30",
+        "cover": "Dallas Cowboys",
+        "status": null,
+        "confidence": "52%",
+        "sharp": {
+          "home_b": 32.45,
+          "home_m": 34.55,
+          "away_b": 67.55,
+          "away_m": 65.45
+        },
+        "graded_run": "2026-11-22T12:52:16-05:00",
+        "score": {
+          "value": 23.33,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 52%"
+            },
+            {
+              "t": "2 of 4 models back it"
+            },
+            {
+              "t": "Sharp sources side with it"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a winning pattern: Line move with consensus &middot; Consensus on the favorite (17-7, 71%, Wilson 51%)"
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus &middot; Line move with consensus (5-6, 45%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.0667,
+            "agree": 0.5,
+            "sharp": 1.0,
+            "tier": 0.0,
+            "line": 1.0,
+            "pattern": 0.0333,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:16:11-0500",
+            "n": 13,
+            "sp": -8,
+            "best_h": -7.5,
+            "best_a": 8.5,
+            "tot": 55,
+            "pin_sp": -8,
+            "pin_h": -108,
+            "pin_a": -104,
+            "pin_tot": 54.5,
+            "pin_ml": [
+              -385,
+              312
+            ]
+          },
+          "close": {
+            "t": "2026-11-22T12:52:16-0500",
+            "n": 13,
+            "sp": -7.5,
+            "best_h": -7,
+            "best_a": 8,
+            "tot": 54.5,
+            "pin_sp": -8,
+            "pin_h": -101,
+            "pin_a": -109,
+            "pin_tot": 54.5,
+            "pin_ml": [
+              -347,
+              294
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Tennessee Titans",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Tennessee Titans",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Tennessee Titans",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Dallas Cowboys",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Detroit Lions (H) vs Tampa Bay Buccaneers (A)",
+        "team_home": "Detroit Lions",
+        "team_away": "Tampa Bay Buccaneers",
+        "line": "DET -3.5",
+        "favorite": "Detroit Lions -fav",
+        "final": "Detroit Lions 31, Tampa Bay Buccaneers 21",
+        "cover": "Detroit Lions",
+        "status": null,
+        "confidence": "54%",
+        "sharp": {
+          "home_b": 78.71,
+          "home_m": 74.54,
+          "away_b": 21.29,
+          "away_m": 25.46
+        },
+        "graded_run": "2026-11-22T12:52:16-05:00",
+        "score": {
+          "value": -21.5,
+          "tier": "Conflicted",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 54%"
+            },
+            {
+              "t": "3 of 6 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (3 of 3: Circa, DraftKings, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Sharps against consensus &middot; Line move against consensus &middot; Consensus on the favorite (4-6, 40%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.1333,
+            "agree": 0.5,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:16:11-0500",
+            "n": 13,
+            "sp": -6.5,
+            "best_h": -6,
+            "best_a": 6.5,
+            "tot": 45,
+            "pin_sp": -6.5,
+            "pin_h": -102,
+            "pin_a": -110,
+            "pin_tot": 45,
+            "pin_ml": [
+              -274,
+              231
+            ]
+          },
+          "close": {
+            "t": "2026-11-22T12:52:16-0500",
+            "n": 13,
+            "sp": -3.5,
+            "best_h": -3.5,
+            "best_a": 4,
+            "tot": 48.5,
+            "pin_sp": -3.5,
+            "pin_h": -107,
+            "pin_a": -103,
+            "pin_tot": 49.5,
+            "pin_ml": [
+              -201,
+              179
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Detroit Lions",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Detroit Lions",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "LOSS"
+          },
+          "M6: Sharp Money": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Detroit Lions",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Detroit Lions",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Tampa Bay Buccaneers",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Kansas City Chiefs (H) vs Arizona Cardinals (A)",
+        "team_home": "Kansas City Chiefs",
+        "team_away": "Arizona Cardinals",
+        "line": "KC -15.5",
+        "favorite": "Kansas City Chiefs -fav",
+        "final": "Kansas City Chiefs 34, Arizona Cardinals 7",
+        "cover": "Kansas City Chiefs",
+        "status": null,
+        "confidence": "79%",
+        "sharp": {
+          "home_b": 48.97,
+          "home_m": 52.29,
+          "away_b": 51.03,
+          "away_m": 47.71
+        },
+        "graded_run": "2026-11-22T12:52:16-05:00",
+        "score": {
+          "value": 45.25,
+          "tier": "Good",
+          "star": true,
+          "why": [
+            {
+              "t": "Consensus confidence 79%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Sharp sources side with it"
+            },
+            {
+              "t": "Fits a losing pattern: No line move yet &middot; Confidence 70%+ &middot; Consensus on the favorite (3-7, 30%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.9667,
+            "agree": 0.75,
+            "sharp": 1.0,
+            "tier": 0.0,
+            "line": 0.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:16:11-0500",
+            "n": 13,
+            "sp": -16,
+            "best_h": -15.5,
+            "best_a": 16.5,
+            "tot": 41,
+            "pin_sp": -16,
+            "pin_h": -105,
+            "pin_a": -107,
+            "pin_tot": 41,
+            "pin_ml": [
+              -1363,
+              855
+            ]
+          },
+          "close": {
+            "t": "2026-11-22T12:52:16-0500",
+            "n": 13,
+            "sp": -15.5,
+            "best_h": -14.5,
+            "best_a": 16.5,
+            "tot": 40.5,
+            "pin_sp": -14.5,
+            "pin_h": -113,
+            "pin_a": 102,
+            "pin_tot": 40.5,
+            "pin_ml": [
+              -1000,
+              763
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Kansas City Chiefs",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Kansas City Chiefs",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Arizona Cardinals",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Kansas City Chiefs",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Kansas City Chiefs",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Kansas City Chiefs",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Arizona Cardinals",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Kansas City Chiefs",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Philadelphia Eagles (H) vs Pittsburgh Steelers (A)",
+        "team_home": "Philadelphia Eagles",
+        "team_away": "Pittsburgh Steelers",
+        "line": "PIT -3.5",
+        "favorite": "Pittsburgh Steelers -fav",
+        "final": "Philadelphia Eagles 19, Pittsburgh Steelers 16",
+        "cover": "Philadelphia Eagles",
+        "status": null,
+        "confidence": "84%",
+        "sharp": {
+          "home_b": 17.81,
+          "home_m": 20.04,
+          "away_b": 82.19,
+          "away_m": 79.96
+        },
+        "graded_run": "2026-11-22T12:52:16-05:00",
+        "score": {
+          "value": 28.41,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 84%"
+            },
+            {
+              "t": "5 of 6 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (3 of 3: Circa, DraftKings, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a winning pattern: Line move with consensus &middot; Confidence 70%+ &middot; Consensus on the favorite (7-1, 88%, Wilson 53%)"
+            },
+            {
+              "t": "Fits a losing pattern: Line move with consensus &middot; Confidence 80%+ (2-3, 40%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 0.8333,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": 1.0,
+            "pattern": 0.1164,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:16:11-0500",
+            "n": 13,
+            "sp": 4.5,
+            "best_h": 5,
+            "best_a": -4.5,
+            "tot": 38.5,
+            "pin_sp": 4.5,
+            "pin_h": -105,
+            "pin_a": -107,
+            "pin_tot": 38.5,
+            "pin_ml": [
+              190,
+              -220
+            ]
+          },
+          "close": {
+            "t": "2026-11-22T12:52:16-0500",
+            "n": 13,
+            "sp": 3.5,
+            "best_h": 4,
+            "best_a": -3.5,
+            "tot": 37.5,
+            "pin_sp": 3.5,
+            "pin_h": -109,
+            "pin_a": -101,
+            "pin_tot": 37.5,
+            "pin_ml": [
+              171,
+              -192
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Pittsburgh Steelers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Pittsburgh Steelers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Pittsburgh Steelers",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Pittsburgh Steelers",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "Philadelphia Eagles",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Philadelphia Eagles",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Pittsburgh Steelers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Pittsburgh Steelers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Pittsburgh Steelers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Philadelphia Eagles",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Philadelphia Eagles",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Carolina Panthers (H) vs Baltimore Ravens (A)",
+        "team_home": "Carolina Panthers",
+        "team_away": "Baltimore Ravens",
+        "line": "CAR -3",
+        "favorite": "Carolina Panthers -fav",
+        "final": "Carolina Panthers 35, Baltimore Ravens 33",
+        "cover": "Baltimore Ravens",
+        "status": null,
+        "confidence": "79%",
+        "sharp": {
+          "home_b": 50.64,
+          "home_m": 53.2,
+          "away_b": 49.36,
+          "away_m": 46.8
+        },
+        "graded_run": "2026-11-22T12:52:16-05:00",
+        "score": {
+          "value": 26.16,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 79%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: Circa, DraftKings)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a winning pattern: Line move with consensus &middot; Confidence 70%+ &middot; Consensus on the favorite (7-1, 88%, Wilson 53%)"
+            },
+            {
+              "t": "Fits a losing pattern: Confidence 65%+ (28-29, 49%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.9667,
+            "agree": 0.75,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": 1.0,
+            "pattern": 0.1164,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:16:11-0500",
+            "n": 13,
+            "sp": -2.5,
+            "best_h": -2.5,
+            "best_a": 2.5,
+            "tot": 44,
+            "pin_sp": -2.5,
+            "pin_h": -111,
+            "pin_a": -102,
+            "pin_tot": 43.5,
+            "pin_ml": [
+              -140,
+              124
+            ]
+          },
+          "close": {
+            "t": "2026-11-22T12:52:16-0500",
+            "n": 13,
+            "sp": -2.5,
+            "best_h": -2.5,
+            "best_a": 3,
+            "tot": 44.5,
+            "pin_sp": -2.5,
+            "pin_h": -108,
+            "pin_a": -102,
+            "pin_tot": 45,
+            "pin_ml": [
+              -136,
+              123
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Baltimore Ravens",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Carolina Panthers",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Baltimore Ravens",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Baltimore Ravens",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Los Angeles Chargers (H) vs New York Jets (A)",
+        "team_home": "Los Angeles Chargers",
+        "team_away": "New York Jets",
+        "line": "LAC -3",
+        "favorite": "Los Angeles Chargers -fav",
+        "final": "Los Angeles Chargers 24, New York Jets 27",
+        "cover": "New York Jets",
+        "status": null,
+        "confidence": "100%",
+        "sharp": {
+          "home_b": 62.03,
+          "home_m": 52.48,
+          "away_b": 37.97,
+          "away_m": 47.52
+        },
+        "graded_run": "2026-11-22T16:00:18-05:00",
+        "score": {
+          "value": 28.0,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 100%"
+            },
+            {
+              "t": "5 of 5 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: Circa, DraftKings)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a losing pattern: Line move with consensus &middot; Consensus on the underdog (2-5, 29%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 1.0,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": 1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:16:11-0500",
+            "n": 13,
+            "sp": -3.5,
+            "best_h": -3,
+            "best_a": 3.5,
+            "tot": 41,
+            "pin_sp": -3,
+            "pin_h": -115,
+            "pin_a": 102,
+            "pin_tot": 41,
+            "pin_ml": [
+              -173,
+              152
+            ]
+          },
+          "close": {
+            "t": "2026-11-22T16:00:18-0500",
+            "n": 13,
+            "sp": -3,
+            "best_h": -3,
+            "best_a": 3.5,
+            "tot": 43,
+            "pin_sp": -3,
+            "pin_h": -112,
+            "pin_a": 102,
+            "pin_tot": 43,
+            "pin_ml": [
+              -168,
+              151
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "New York Jets",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "New York Jets",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "New York Jets",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "New York Jets",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "New York Jets",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "New York Jets",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "New York Jets",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "New York Jets",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Los Angeles Chargers",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Los Angeles Chargers",
+            "result": "LOSS"
+          }
+        }
+      },
+      {
+        "game": "Denver Broncos (H) vs Las Vegas Raiders (A)",
+        "team_home": "Denver Broncos",
+        "team_away": "Las Vegas Raiders",
+        "line": "DEN -10.5",
+        "favorite": "Denver Broncos -fav",
+        "final": "Denver Broncos 38, Las Vegas Raiders 24",
+        "cover": "Denver Broncos",
+        "status": null,
+        "confidence": "67%",
+        "sharp": {
+          "home_b": 46.45,
+          "home_m": 50.77,
+          "away_b": 53.55,
+          "away_m": 49.23
+        },
+        "graded_run": "2026-11-22T16:00:18-05:00",
+        "score": {
+          "value": 46.83,
+          "tier": "Good",
+          "star": true,
+          "why": [
+            {
+              "t": "Consensus confidence 67%"
+            },
+            {
+              "t": "4 of 6 models back it"
+            },
+            {
+              "t": "Sharp sources side with it (extreme money gap, 37 pts)"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a winning pattern: Line move with consensus &middot; Consensus on the favorite (17-7, 71%, Wilson 51%)"
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus &middot; Line move with consensus &middot; Confidence 65%+ (2-5, 29%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.5667,
+            "agree": 0.6667,
+            "sharp": 1.0,
+            "tier": 1.0,
+            "line": 1.0,
+            "pattern": 0.0333,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:16:11-0500",
+            "n": 13,
+            "sp": -10,
+            "best_h": -9.5,
+            "best_a": 10.5,
+            "tot": 40,
+            "pin_sp": -10,
+            "pin_h": -108,
+            "pin_a": -104,
+            "pin_tot": 40,
+            "pin_ml": [
+              -533,
+              410
+            ]
+          },
+          "close": {
+            "t": "2026-11-22T16:00:18-0500",
+            "n": 13,
+            "sp": -11.5,
+            "best_h": -11.5,
+            "best_a": 12.5,
+            "tot": 41.5,
+            "pin_sp": -11.5,
+            "pin_h": -111,
+            "pin_a": 101,
+            "pin_tot": 41,
+            "pin_ml": [
+              -675,
+              521
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Las Vegas Raiders",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Las Vegas Raiders",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Denver Broncos",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "New York Giants (H) vs Jacksonville Jaguars (A)",
+        "team_home": "New York Giants",
+        "team_away": "Jacksonville Jaguars",
+        "line": "JAX -6",
+        "favorite": "Jacksonville Jaguars -fav",
+        "final": "New York Giants 23, Jacksonville Jaguars 18",
+        "cover": "New York Giants",
+        "status": null,
+        "confidence": "84%",
+        "sharp": {
+          "home_b": 19.86,
+          "home_m": 18.56,
+          "away_b": 80.14,
+          "away_m": 81.44
+        },
+        "graded_run": "2026-11-22T16:00:18-05:00",
+        "score": {
+          "value": 64.41,
+          "tier": "Strong",
+          "star": true,
+          "why": [
+            {
+              "t": "Consensus confidence 84%"
+            },
+            {
+              "t": "5 of 6 models back it"
+            },
+            {
+              "t": "Sharp sources side with it (extreme money gap, 21 pts)"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a winning pattern: Line move with consensus &middot; Confidence 70%+ &middot; Consensus on the favorite (7-1, 88%, Wilson 53%)"
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus &middot; Line move with consensus &middot; Confidence 65%+ (2-5, 29%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 0.8333,
+            "sharp": 1.0,
+            "tier": 1.0,
+            "line": 1.0,
+            "pattern": 0.1164,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:16:11-0500",
+            "n": 13,
+            "sp": 6,
+            "best_h": 6,
+            "best_a": -5.5,
+            "tot": 46.5,
+            "pin_sp": 6,
+            "pin_h": -111,
+            "pin_a": -101,
+            "pin_tot": 46.5,
+            "pin_ml": [
+              224,
+              -264
+            ]
+          },
+          "close": {
+            "t": "2026-11-22T16:00:18-0500",
+            "n": 13,
+            "sp": 6.0,
+            "best_h": 6.5,
+            "best_a": -5.5,
+            "tot": 44.75,
+            "pin_sp": 6,
+            "pin_h": -104,
+            "pin_a": -106,
+            "pin_tot": 45,
+            "pin_ml": [
+              237,
+              -272
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Jacksonville Jaguars",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Jacksonville Jaguars",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Jacksonville Jaguars",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Jacksonville Jaguars",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "New York Giants",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Jacksonville Jaguars",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Jacksonville Jaguars",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Jacksonville Jaguars",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Jacksonville Jaguars",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Jacksonville Jaguars",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "New York Giants",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "San Francisco 49ers (H) vs Minnesota Vikings (A)",
+        "team_home": "San Francisco 49ers",
+        "team_away": "Minnesota Vikings",
+        "line": "SF -3.5",
+        "favorite": "San Francisco 49ers -fav",
+        "final": "San Francisco 49ers 35, Minnesota Vikings 10",
+        "cover": "San Francisco 49ers",
+        "status": null,
+        "confidence": "60%",
+        "sharp": {
+          "home_b": 26.93,
+          "home_m": 29.34,
+          "away_b": 73.07,
+          "away_m": 70.66
+        },
+        "graded_run": "2026-11-22T20:00:20-05:00",
+        "score": {
+          "value": 35.83,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 60%"
+            },
+            {
+              "t": "3 of 5 models back it"
+            },
+            {
+              "t": "Sharp sources side with it (strong money gap, 20 pts)"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a winning pattern: Line move with consensus &middot; Consensus on the favorite (17-7, 71%, Wilson 51%)"
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus &middot; Line move with consensus (5-6, 45%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.3333,
+            "agree": 0.6,
+            "sharp": 1.0,
+            "tier": 0.5,
+            "line": 1.0,
+            "pattern": 0.0333,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:16:11-0500",
+            "n": 13,
+            "sp": -3.0,
+            "best_h": -3,
+            "best_a": 3.5,
+            "tot": 46.5,
+            "pin_sp": -3,
+            "pin_h": -110,
+            "pin_a": -102,
+            "pin_tot": 46,
+            "pin_ml": [
+              -164,
+              145
+            ]
+          },
+          "close": {
+            "t": "2026-11-22T20:00:20-0500",
+            "n": 13,
+            "sp": -4.5,
+            "best_h": -3.5,
+            "best_a": 5,
+            "tot": 45,
+            "pin_sp": -3.5,
+            "pin_h": -119,
+            "pin_a": 108,
+            "pin_tot": 45,
+            "pin_ml": [
+              -213,
+              189
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "San Francisco 49ers",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "San Francisco 49ers",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Minnesota Vikings",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "San Francisco 49ers",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "San Francisco 49ers",
+            "result": "WIN"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Minnesota Vikings",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "San Francisco 49ers",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "San Francisco 49ers",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "San Francisco 49ers",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Minnesota Vikings",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-11-21": [],
     "2026-11-20": [],
     "2026-11-19": [
