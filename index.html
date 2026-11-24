@@ -2169,18 +2169,21 @@ function wilsonTableHtml(sportKey) {
 // ---- Record by Wilson score: each graded game's Wilson score is the best Wilson bound among the winning combinations
 // it fits (0 when it fits none). The slider sets a minimum, and the readout is consensus's record in games at or above it.
 let wilsonSlider = 50;
+// The Wilson score the pick had BEFORE kickoff, read from the saved pick score (null for games from before tracking began, which have
+// no saved score). 0 means it fit no winning combination above 50% at that run. This is the forward record, not a hindsight one.
 function gameWilsonPct(sportKey, x) {
-  const lists = comboListsFor(sportKey);
-  if (x.wsLists === lists) return x.ws;
-  const f = comboFacts(x);
-  const fit = lists.wins.filter(c => comboMatch(f, c.sel));
-  x.wsLists = lists;
-  return (x.ws = fit.length ? Math.floor(Math.max(...fit.map(c => c.score)) * 100 + 1e-9) : 0);
+  if (!(x.score && typeof x.score.value === "number")) return null;
+  for (const w of x.score.why || []) {
+    const m = /Wilson (\d+)%/.exec(w.t || "");
+    if (m) return Number(m[1]);
+  }
+  return 0;
 }
 function wilsonRecord(sportKey, min) {
   let w = 0, l = 0;
   for (const x of histGames[sportKey] || []) {
-    if (gameWilsonPct(sportKey, x) < min) continue;
+    const ws = gameWilsonPct(sportKey, x);
+    if (ws === null || ws < min) continue;
     if (x.result === "WIN") w++; else l++;
   }
   return { w, l, n: w + l };
@@ -2200,10 +2203,12 @@ function setWilsonSlider(v) {
 function wilsonSliderHtml(sportKey) {
   const games = histGames[sportKey] || [];
   const scores = games.map(x => gameWilsonPct(sportKey, x)).filter(v => v > 0);
+  const tracked = games.filter(x => gameWilsonPct(sportKey, x) !== null);
+  const since = tracked.length ? shortDay(tracked[0].day) : "";
   const top = scores.length ? Math.max(...scores) : 0;
   if (top < 51) {
     return `<div class="win-combos" style="margin-top:14px"><div class="win-combos-label">Record by Wilson score</div>`
-      + `<div class="win-combo-more">No graded game has a Wilson score above 50% yet, so there is nothing to slide over.</div></div>`;
+      + `<div class="win-combo-more">No tracked pick has had a Wilson score above 50% yet, so there is nothing to slide over. Tracking began ${since || "recently"} (${tracked.length} graded game${tracked.length === 1 ? "" : "s"}).</div></div>`;
   }
   const cur = Math.min(Math.max(wilsonSlider, 50), top);
   const steps = [50, 55, 60, 65, 70].filter(v => v <= top).map(v => {
@@ -2216,7 +2221,7 @@ function wilsonSliderHtml(sportKey) {
     + `<span class="combo-conf-val" id="wilson-slider-val">${cur}%+</span></div>`
     + `<div id="wilson-slider-out" style="margin-top:6px">${wilsonRecordText(sportKey, cur)}</div>`
     + `<div style="margin-top:6px">${steps}</div>`
-    + `<div class="win-combo-more">A game's Wilson score is the best score among the winning combinations it fits. Those combinations were found in these same graded games, so these records look better than future results will.</div></div>`;
+    + `<div class="win-combo-more">A game's Wilson score is the best score among the winning combinations it fit at its last run before kickoff. This record counts only games tracked since ${since} (${tracked.length} graded), so it is a true forward record.</div></div>`;
 }
 
 function comboCardHtml() {
