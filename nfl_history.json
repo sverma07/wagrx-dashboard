@@ -1,7 +1,140 @@
 {
   "sport": "NFL",
-  "updated": "2026-11-23T06:15:03-05:00",
+  "updated": "2026-11-24T06:15:01-05:00",
   "days": {
+    "2026-11-23": [
+      {
+        "game": "Washington Commanders (H) vs Cincinnati Bengals (A)",
+        "team_home": "Washington Commanders",
+        "team_away": "Cincinnati Bengals",
+        "line": "CIN -6",
+        "favorite": "Cincinnati Bengals -fav",
+        "final": "Washington Commanders 22, Cincinnati Bengals 20",
+        "cover": "Washington Commanders",
+        "status": null,
+        "confidence": "66%",
+        "sharp": {
+          "home_b": 27.52,
+          "home_m": 25.36,
+          "away_b": 72.48,
+          "away_m": 74.64
+        },
+        "graded_run": "2026-11-23T20:00:08-05:00",
+        "score": {
+          "value": 42.0,
+          "tier": "Fair",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 66%"
+            },
+            {
+              "t": "4 of 6 models back it"
+            },
+            {
+              "t": "Sharp sources side with it (strong money gap, 19 pts)"
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a losing pattern: Sharps with consensus &middot; Line move with consensus &middot; Confidence 65%+ (4-7, 36%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.5333,
+            "agree": 0.6667,
+            "sharp": 1.0,
+            "tier": 0.5,
+            "line": 1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-17T12:16:11-0500",
+            "n": 13,
+            "sp": 6.5,
+            "best_h": 6.5,
+            "best_a": -5.5,
+            "tot": 52.5,
+            "pin_sp": 6.5,
+            "pin_h": -108,
+            "pin_a": -104,
+            "pin_tot": 53,
+            "pin_ml": [
+              238,
+              -283
+            ]
+          },
+          "close": {
+            "t": "2026-11-23T20:00:09-0500",
+            "n": 13,
+            "sp": 6.5,
+            "best_h": 6.5,
+            "best_a": -6,
+            "tot": 54.5,
+            "pin_sp": 6.5,
+            "pin_h": -111,
+            "pin_a": 101,
+            "pin_tot": 54,
+            "pin_ml": [
+              243,
+              -281
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Cincinnati Bengals",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Cincinnati Bengals",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Cincinnati Bengals",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Washington Commanders",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "Washington Commanders",
+            "result": "WIN"
+          },
+          "M6: Sharp Money": {
+            "pick": "Cincinnati Bengals",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Cincinnati Bengals",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Cincinnati Bengals",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Cincinnati Bengals",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Cincinnati Bengals",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Washington Commanders",
+            "result": "WIN"
+          }
+        }
+      }
+    ],
     "2026-11-22": [
       {
         "game": "Buffalo Bills (H) vs Miami Dolphins (A)",
