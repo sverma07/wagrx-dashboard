@@ -1,7 +1,246 @@
 {
   "sport": "NCAAF",
-  "updated": "2026-11-24T06:35:02-05:00",
+  "updated": "2026-11-25T06:35:02-05:00",
   "days": {
+    "2026-11-24": [
+      {
+        "game": "Eastern Michigan Eagles (H) vs Kent State Golden Flashes (A)",
+        "team_home": "Eastern Michigan Eagles",
+        "team_away": "Kent State Golden Flashes",
+        "line": "EMU -5.5",
+        "favorite": "Eastern Michigan Eagles -fav",
+        "final": "Eastern Michigan Eagles 17, Kent State Golden Flashes 12",
+        "cover": "Kent State Golden Flashes",
+        "status": null,
+        "confidence": "75%",
+        "sharp": {
+          "home_b": 49.33,
+          "home_m": 40.08,
+          "away_b": 50.67,
+          "away_m": 59.92
+        },
+        "graded_run": "2026-11-24T18:47:13-05:00",
+        "score": {
+          "value": 19.25,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 75%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: DraftKings, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a losing pattern: Sharps against consensus &middot; Confidence 75%+ &middot; Consensus on the favorite (30-45, 40%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8333,
+            "agree": 0.75,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": 1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-19T13:30:03-0500",
+            "n": 1,
+            "sp": -5.5,
+            "best_h": -5.5,
+            "best_a": 5.5,
+            "tot": 45.5
+          },
+          "close": {
+            "t": "2026-11-24T18:47:13-0500",
+            "n": 12,
+            "sp": -7.0,
+            "best_h": -6.5,
+            "best_a": 7,
+            "tot": 46.5,
+            "pin_sp": -7,
+            "pin_h": 101,
+            "pin_a": -114,
+            "pin_tot": 46.5,
+            "pin_ml": [
+              -239,
+              210
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Eastern Michigan Eagles",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Eastern Michigan Eagles",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Kent State Golden Flashes",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Eastern Michigan Eagles",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Kent State Golden Flashes",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Eastern Michigan Eagles",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Eastern Michigan Eagles",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Eastern Michigan Eagles",
+            "result": "LOSS"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Kent State Golden Flashes",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Western Michigan Broncos (H) vs Miami (OH) RedHawks (A)",
+        "team_home": "Western Michigan Broncos",
+        "team_away": "Miami (OH) RedHawks",
+        "line": "WMU -6.5",
+        "favorite": "Western Michigan Broncos -fav",
+        "final": "Western Michigan Broncos 24, Miami (OH) RedHawks 28",
+        "cover": "Miami (OH) RedHawks",
+        "status": null,
+        "confidence": "50%",
+        "sharp": {
+          "home_b": 57.56,
+          "home_m": 54.69,
+          "away_b": 42.44,
+          "away_m": 45.31
+        },
+        "graded_run": "2026-11-24T18:47:13-05:00",
+        "score": {
+          "value": -25.5,
+          "tier": "Conflicted",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 50%"
+            },
+            {
+              "t": "2 of 4 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: Circa, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Sharps against consensus &middot; Consensus on the favorite (68-86, 44%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.0,
+            "agree": 0.5,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-19T14:00:03-0500",
+            "n": 1
+          },
+          "close": {
+            "t": "2026-11-24T18:47:13-0500",
+            "n": 11,
+            "sp": -4.5,
+            "best_h": -4.5,
+            "best_a": 5,
+            "tot": 44.5,
+            "pin_sp": -4.5,
+            "pin_h": -100,
+            "pin_a": -112,
+            "pin_tot": 44.5,
+            "pin_ml": [
+              -192,
+              171
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Western Michigan Broncos",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Western Michigan Broncos",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Miami (OH) RedHawks",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Miami (OH) RedHawks",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Miami (OH) RedHawks",
+            "result": "WIN"
+          },
+          "M8: Line Movement": {
+            "pick": "Miami (OH) RedHawks",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Western Michigan Broncos",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Miami (OH) RedHawks",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Western Michigan Broncos",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-11-23": [],
     "2026-11-22": [],
     "2026-11-21": [
