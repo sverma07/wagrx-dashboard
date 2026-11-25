@@ -1967,6 +1967,74 @@ function selectPerfSport(key) {
   renderCombo();
 }
 
+// ---- All sports: star picks by score slider and Wilson record by slider, combined across the four sports (with a per-sport split).
+let allScoreMin = 45, allWilsonMin = 50;
+const recTxt = r => r.n ? `${r.w}-${r.l} (${Math.round(r.w / r.n * 100)}%)` : "N/A";
+const sumRec = list => list.reduce((a, r) => ({ w: a.w + r.w, l: a.l + r.l, n: a.n + r.n }), { w: 0, l: 0, n: 0 });
+function allScoreOut(min) {
+  const per = SPORTS.map(sp => { const have = scoreGames(sp.key); return { sp, at: scoreRec(have.filter(x => x.score.value >= min)), below: scoreRec(have.filter(x => x.score.value < min)) }; });
+  const tot = sumRec(per.map(p => p.at)), totB = sumRec(per.map(p => p.below));
+  const rows = per.map(p => `<tr><td>${p.sp.label}</td><td>${p.at.n ? p.at.text : "N/A"}</td><td class="perf-pct">${p.at.n ? p.at.pct : "N/A"}</td><td>${p.below.n ? p.below.text : "N/A"}</td></tr>`).join("")
+    + `<tr><td><b>All sports</b></td><td><b>${tot.n ? tot.w + "-" + tot.l : "N/A"}</b></td><td class="perf-pct"><b>${tot.n ? Math.round(tot.w / tot.n * 100) + "%" : "N/A"}</b></td><td><b>${totB.n ? totB.w + "-" + totB.l : "N/A"}</b></td></tr>`;
+  return `<div class="score-star-line"><span class="top-star">${STAR_SVG}</span> Score ${min}+: <b>${recTxt(tot)}</b> &middot; Below ${min}: <b>${recTxt(totB)}</b></div>`
+    + `<table class="perf" style="margin-top:8px"><tr><th>Sport</th><th>Score ${min}+</th><th>Win %</th><th>Below ${min}</th></tr>${rows}</table>`;
+}
+function allWilsonOut(min) {
+  const per = SPORTS.map(sp => ({ sp, all: wilsonRecord(sp.key, min, false), fwd: wilsonRecord(sp.key, min, true) }));
+  const tA = sumRec(per.map(p => p.all)), tF = sumRec(per.map(p => p.fwd));
+  const rows = per.map(p => `<tr><td>${p.sp.label}</td><td>${p.all.n ? p.all.w + "-" + p.all.l : "N/A"}</td><td class="perf-pct">${p.all.n ? Math.round(p.all.w / p.all.n * 100) + "%" : "N/A"}</td><td>${p.fwd.n ? p.fwd.w + "-" + p.fwd.l : "N/A"}</td></tr>`).join("")
+    + `<tr><td><b>All sports</b></td><td><b>${tA.n ? tA.w + "-" + tA.l : "N/A"}</b></td><td class="perf-pct"><b>${tA.n ? Math.round(tA.w / tA.n * 100) + "%" : "N/A"}</b></td><td><b>${tF.n ? tF.w + "-" + tF.l : "N/A"}</b></td></tr>`;
+  return `<div>All-time: <b>${recTxt(tA)}</b> with a Wilson score of ${min}% or higher</div>`
+    + `<div class="win-combo-more" style="margin-top:4px">Forward only (scored before kickoff): ${recTxt(tF)}</div>`
+    + `<table class="perf" style="margin-top:8px"><tr><th>Sport</th><th>All-time</th><th>Win %</th><th>Forward</th></tr>${rows}</table>`;
+}
+function setAllScore(v) {
+  allScoreMin = Number(v);
+  const a = document.getElementById("all-score-val"), o = document.getElementById("all-score-out");
+  if (a) a.textContent = allScoreMin + "+";
+  if (o) o.innerHTML = allScoreOut(allScoreMin);
+}
+function setAllWilson(v) {
+  allWilsonMin = Number(v);
+  const a = document.getElementById("all-wilson-val"), o = document.getElementById("all-wilson-out");
+  if (a) a.textContent = allWilsonMin + "%+";
+  if (o) o.innerHTML = allWilsonOut(allWilsonMin);
+}
+function allSportsBodyHtml() {
+  const vals = SPORTS.flatMap(sp => scoreGames(sp.key).map(x => x.score.value));
+  const wil = SPORTS.flatMap(sp => (histGames[sp.key] || []).map(x => allTimeWilsonPct(sp.key, x)));
+  let out = `<div class="perf-sub">Star picks by pick score</div>`;
+  if (!vals.length) out += `<div class="perf-note">No saved pick scores yet.</div>`;
+  else {
+    const lo = Math.floor(Math.min(...vals) / 5) * 5, hi = Math.max(lo + 5, Math.ceil(Math.max(...vals) / 5) * 5), cur = Math.min(Math.max(allScoreMin, lo), hi);
+    out += `<div class="perf-note">Every sport together. Stars are scores of ${STAR_MIN} or more, counted from when each sport began saving scores (Nov 17).</div>`
+      + `<div class="combo-dim"><span class="combo-dim-label">Min score</span><input type="range" class="combo-slider" min="${lo}" max="${hi}" step="5" value="${cur}" aria-label="Minimum pick score, all sports" oninput="setAllScore(this.value)"><span class="combo-conf-val" id="all-score-val">${cur}+</span></div>`
+      + `<div id="all-score-out">${allScoreOut(cur)}</div>`;
+  }
+  out += `<div class="perf-sub" style="margin-top:16px">Record by Wilson score</div>`;
+  const top = Math.max(0, ...wil);
+  if (top < 51) out += `<div class="perf-note">No game has a Wilson score above 50% yet.</div>`;
+  else {
+    const cur = Math.min(Math.max(allWilsonMin, 50), top);
+    out += `<div class="perf-note">Every sport together. All-time scores each graded game by the best winning combination it fits today (flattering in hindsight); forward counts only the score each pick had before kickoff.</div>`
+      + `<div class="combo-dim"><span class="combo-dim-label">Min Wilson</span><input type="range" class="combo-slider" min="50" max="${top}" step="1" value="${cur}" aria-label="Minimum Wilson score, all sports" oninput="setAllWilson(this.value)"><span class="combo-conf-val" id="all-wilson-val">${cur}%+</span></div>`
+      + `<div id="all-wilson-out" style="margin-top:6px">${allWilsonOut(cur)}</div>`;
+  }
+  return out;
+}
+function loadAllSports() {
+  const el = document.getElementById("all-sports-body");
+  if (!el) return;
+  Promise.all(SPORTS.map(sp => ensureBestCombo(sp.key))).then(() => {
+    const e2 = document.getElementById("all-sports-body");
+    if (e2) e2.innerHTML = allSportsBodyHtml();
+  });
+}
+function allSportsCardHtml() {
+  return `<div class="perf-card"><div class="net-head"><h2>All Sports</h2><div class="net-sub">Star picks and Wilson records across NFL, NBA, NCAAF and NCAAB.</div></div>`
+    + `<div id="all-sports-body"><div class="empty-state">Loading&hellip;</div></div></div>`;
+}
+
 function perfCardHtml() {
   return `
     <div class="perf-card">
@@ -3092,8 +3160,9 @@ function loadPerformance() {
   )).then(results => {
     perfResults = results;
     if (!perfSport) perfSport = currentSport;
-    container.innerHTML = netCardHtml() + perfCardHtml() + comboCardHtml();
+    container.innerHTML = netCardHtml() + allSportsCardHtml() + perfCardHtml() + comboCardHtml();
     selectPerfSport(perfSport);
+    loadAllSports();
     loadNetData().then(() => { renderNetChart(true); selectPerfSport(perfSport); });
   });
 }
