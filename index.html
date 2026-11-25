@@ -416,6 +416,13 @@
   .net-card { padding: 18px 18px 14px; }
   .net-head { margin-bottom: 14px; }
   .perf-tabs { flex-wrap: wrap; margin: 6px 0 4px; }
+  .tip { position: relative; cursor: help; border-bottom: 1px dotted var(--text-dim); outline: none; }
+  .tip:hover::after, .tip:focus::after {
+    content: attr(data-tip); position: absolute; left: 0; top: calc(100% + 6px); z-index: 30; width: max-content; max-width: min(240px, 70vw);
+    padding: 8px 10px; border-radius: 8px; background: var(--card-bg); color: var(--text); border: 1px solid var(--border);
+    box-shadow: var(--shadow); font-size: 0.78rem; font-weight: 400; line-height: 1.35; text-transform: none; letter-spacing: 0; white-space: normal; text-align: left;
+  }
+  table.perf th:last-child .tip:hover::after, table.perf th:last-child .tip:focus::after { left: auto; right: 0; }
   .net-head h2 { font-size: 1.05rem; margin: 10px 0 2px; letter-spacing: 0.01em; }
   .net-sub { color: var(--text-dim); font-size: 0.8rem; }
   .seg { display: inline-flex; padding: 3px; gap: 2px; background: var(--neutral-bg); border: 1px solid var(--border); border-radius: 10px; }
@@ -1686,8 +1693,8 @@ function perfExtrasHtml(sportKey) {
   let streak = 0;
   const last = games[games.length - 1].result;
   for (let i = games.length - 1; i >= 0 && games[i].result === last; i--) streak++;
-  const form = `<div class="perf-form">Last 7 days: <b>${week.text}</b>${week.w + week.l ? ` (${week.pct})` : ""}`
-    + ` &middot; Streak: <b>${last === "WIN" ? "W" : "L"}${streak}</b></div>`;
+  const form = `<div class="perf-form">${tip("Last 7 days", "Consensus record for games graded in the last seven days, today included.")}: <b>${week.text}</b>${week.w + week.l ? ` (${week.pct})` : ""}`
+    + ` &middot; ${tip('Streak', 'Wins (W) or losses (L) in a row, counting back from the latest graded game.')}: <b>${last === "WIN" ? "W" : "L"}${streak}</b></div>`;
   const buckets = [["70%+", x => x.conf >= 70], ["60-69%", x => x.conf >= 60 && x.conf < 70], ["Under 60%", x => x.conf < 60]];
   const rows = buckets.map(([label, f]) => {
     const list = games.filter(x => !isNaN(x.conf) && f(x));
@@ -1699,7 +1706,7 @@ function perfExtrasHtml(sportKey) {
     <div class="perf-sub">Consensus form</div>${form}
     <div class="perf-sub">Consensus by confidence</div>
     <div class="perf-note">Calibration check: the higher the confidence the consensus states, the more often it should win.</div>
-    <table class="perf"><tr><th>Confidence</th><th>Record</th><th>Win %</th><th>Avg stated</th></tr>${rows}</table>
+    <table class="perf"><tr><th>${tip('Confidence', TIPS.confidence)}</th><th>${tip('Record', TIPS.record)}</th><th>${tip('Win %', TIPS.winpct)}</th><th>${tip('Avg stated', TIPS.avgstated)}</th></tr>${rows}</table>
     ${situationHtml(games)}`;
 }
 
@@ -1806,7 +1813,7 @@ function topPickRecordHtml(games, sportKey) {
   const lo = Math.floor(Math.min(...vals) / 5) * 5, hi = Math.max(lo + 5, Math.ceil(Math.max(...vals) / 5) * 5);
   const cur = Math.min(Math.max(scoreSlider, lo), hi);
   const star = scoreRec(have.filter(x => x.score.value >= STAR_MIN)), rest = scoreRec(have.filter(x => x.score.value < STAR_MIN));
-  const starLine = `<div class="score-star-line"><span class="top-star">${STAR_SVG}</span> Starred (${STAR_MIN}+): <b>${star.text}</b>${star.n ? ` (${star.pct})` : ""}`
+  const starLine = `<div class="score-star-line"><span class="top-star">${STAR_SVG}</span> ${tip('Starred (' + STAR_MIN + '+)', 'Picks whose score was ' + STAR_MIN + ' or more before kickoff. These are the gold-star picks on the Top picks tab.')}: <b>${star.text}</b>${star.n ? ` (${star.pct})` : ""}`
     + ` &middot; Not starred: <b>${rest.text}</b>${rest.n ? ` (${rest.pct})` : ""}</div>`;
   const chips = [30, STAR_MIN, 55].filter(v => v >= lo && v <= hi).map(v => {
     const r = scoreRec(have.filter(x => x.score.value >= v));
@@ -1816,12 +1823,12 @@ function topPickRecordHtml(games, sportKey) {
   const rows = tiers.map(([label, f]) => { const r = scoreRec(have.filter(x => f(x.score.value))); return `<tr><td>${label}</td><td>${r.text}</td><td class="perf-pct">${r.pct}</td></tr>`; }).join("");
   return head + `<div class="perf-note">Graded consensus picks by the score they had before kickoff. Tracking began ${shortDay(have[0].day)} (${have.length} graded game${have.length === 1 ? "" : "s"} so far). If the score means something, higher scores should win more often.</div>`
     + starLine
-    + `<div class="combo-dim" style="margin-top:10px"><span class="combo-dim-label">Min score</span>`
+    + `<div class="combo-dim" style="margin-top:10px"><span class="combo-dim-label">${tip("Min score", TIPS.score)}</span>`
     + `<input type="range" class="combo-slider" min="${lo}" max="${hi}" step="5" value="${cur}" aria-label="Minimum pick score" oninput="setScoreSlider(this.value)">`
     + `<span class="combo-conf-val" id="score-slider-val">${cur}+</span></div>`
     + `<div id="score-slider-out">${scoreRecordText(sportKey, cur)}</div>`
     + (chips ? `<div style="margin-top:6px">${chips}</div>` : "")
-    + `<details class="books-dd" style="margin-top:10px"><summary>By tier</summary><div class="books-body"><table class="perf"><tr><th>Pick score</th><th>Record</th><th>Win %</th></tr>${rows}</table></div></details>`
+    + `<details class="books-dd" style="margin-top:10px"><summary>By tier</summary><div class="books-body"><table class="perf"><tr><th>${tip('Pick score', TIPS.score)}</th><th>${tip('Record', TIPS.record)}</th><th>${tip('Win %', TIPS.winpct)}</th></tr>${rows}</table></div></details>`
     + `<div id="score-today"></div>`;
 }
 
@@ -1842,7 +1849,7 @@ function situationHtml(games) {
   };
   const rows = groups.map(([label, f]) => row(label, games.filter(f))).join("")
     + size.map(([label, f]) => row(label, games.filter(g => { const n = lineNumber(g.line); return n !== null && f(n); }))).join("");
-  return `<div class="perf-sub">Consensus by situation</div><table class="perf"><tr><th>Situation</th><th>Record</th><th>Win %</th></tr>${rows}</table>`;
+  return `<div class="perf-sub">Consensus by situation</div><table class="perf"><tr><th>${tip('Situation', TIPS.situation)}</th><th>${tip('Record', TIPS.record)}</th><th>${tip('Win %', TIPS.winpct)}</th></tr>${rows}</table>`;
 }
 
 // How each sharp source does when it backs the consensus side and when it does not.
@@ -1860,7 +1867,7 @@ function sourceQualityHtml(games) {
   }).join("");
   return `<div class="perf-sub">Sharp sources by agreement</div>
     <div class="perf-note">Each source's own record when its pick matched the consensus, and when it went the other way.</div>
-    <table class="perf"><tr><th>Source</th><th>With consensus</th><th>Against</th></tr>${rows}</table>`;
+    <table class="perf"><tr><th>Source</th><th>${tip('With consensus', TIPS.withcons)}</th><th>${tip('Against', TIPS.against)}</th></tr>${rows}</table>`;
 }
 
 // Closing line value, as far as the saved market data allows: did the line move toward the consensus pick between the first
@@ -1883,7 +1890,7 @@ function marketValueHtml(games) {
   if (!n) return "";
   return `<div class="perf-sub">Closing line value</div>
     <div class="perf-note">Points the line moved toward the consensus pick from the first reading we saw to the close. Positive means the market agreed with the pick.</div>
-    <table class="perf"><tr><th>Games</th><th>Moved toward</th><th>Moved against</th><th>Average</th></tr>
+    <table class="perf"><tr><th>Games</th><th>${tip('Moved toward', TIPS.towards)}</th><th>${tip('Moved against', TIPS.against_move)}</th><th>${tip('Average', TIPS.clvavg)}</th></tr>
     <tr><td>${n}</td><td class="perf-pct">${toward}</td><td class="perf-pct">${away}</td><td class="perf-pct">${sum / n >= 0 ? "+" : ""}${(sum / n).toFixed(2)} pts</td></tr></table>`;
 }
 
@@ -1907,7 +1914,7 @@ function headToHeadHtml(sportKey) {
   return `
     <div class="perf-sub">Consensus vs sharps</div>
     <div class="perf-note">Only games where they picked opposite sides. Each record is that side's wins-losses in those games.</div>
-    <table class="perf"><tr><th>Source</th><th>Games</th><th>Consensus</th><th>Sharp</th></tr>${rows}</table>`;
+    <table class="perf"><tr><th>Source</th><th>${tip('Games', TIPS.h2hgames)}</th><th>${tip('Consensus', TIPS.h2hcons)}</th><th>${tip('Sharp', TIPS.h2hsharp)}</th></tr>${rows}</table>`;
 }
 
 // A source added after the stats reset only has records from the day it first appeared in the graded history.
@@ -1949,7 +1956,7 @@ function renderPerfTable(sport, data) {
     <div class="perf-updated">Last graded: ${updated}</div>
     ${note}
     <table class="perf">
-      <tr><th>Model</th><th>Record</th><th>Win %</th></tr>
+      <tr><th>Model</th><th>${tip('Record', TIPS.record)}</th><th>${tip('Win %', TIPS.winpct)}</th></tr>
       ${rows}
     </table>
     ${perfExtrasHtml(sport.key)}
@@ -2001,6 +2008,29 @@ function renderPerfPane() {
 
 // ---- All sports: star picks by score slider and Wilson record by slider, combined across the four sports (with a per-sport split).
 let allScoreMin = 45, allWilsonMin = 50;
+// A dotted-underline label with an explanation on hover, keyboard focus or tap.
+const tip = (label, text) => `<span class="tip" tabindex="0" data-tip="${escAttr(text)}">${label}</span>`;
+const TIPS = {
+  record: "Wins-losses against the spread for the picks counted here. A push is not counted.",
+  winpct: "Wins divided by wins plus losses. Against the spread, about 52.4% is break-even at standard -110 prices.",
+  avgstated: "The average confidence the consensus stated before these games. If it is well above the Win % next to it, the model is overconfident in this bucket.",
+  confidence: "The confidence the consensus stated for the pick. Higher should win more often.",
+  withcons: "This source's own record in games where its pick was the same team as the consensus pick.",
+  against: "This source's own record in games where it picked the other team than the consensus.",
+  h2hgames: "Games where consensus and this source picked opposite sides. Exactly one of them wins each.",
+  h2hcons: "Consensus wins-losses in those games.",
+  h2hsharp: "This source's wins-losses in those games.",
+  towards: "Games where the line moved toward the consensus pick between the first reading we saw and the close.",
+  against_move: "Games where the line moved away from the consensus pick.",
+  clvavg: "Average points the line moved toward (+) or away from (-) the consensus pick. Positive means the market agreed with the pick.",
+  situation: "A way of slicing the same consensus picks, such as favorite or underdog.",
+  score: "The pick score the game had at its last run before kickoff. Higher means more evidence backs the pick; it is not a win probability.",
+  scorebelow: "Record of games that scored below the slider value.",
+  wilsonall: "Each game scored by the best winning combination it fits today. Flattering in hindsight, because these games helped build those combinations.",
+  wilsonfwd: "Only games scored before kickoff since tracking began, using the Wilson score each pick had at the time. The honest check.",
+  wilsonmin: "Wilson score is a cautious estimate of a pattern's true win rate: a high win rate over few games is marked down. Above 50% suggests the edge is real, not luck. The slider shows the record of games at or above this value.",
+  net: "Wins minus losses. +5 means five more wins than losses.",
+};
 const recTxt = r => r.n ? `${r.w}-${r.l} (${Math.round(r.w / r.n * 100)}%)` : "N/A";
 const sumRec = list => list.reduce((a, r) => ({ w: a.w + r.w, l: a.l + r.l, n: a.n + r.n }), { w: 0, l: 0, n: 0 });
 function allScoreOut(min) {
@@ -2009,7 +2039,7 @@ function allScoreOut(min) {
   const rows = per.map(p => `<tr><td>${p.sp.label}</td><td>${p.at.n ? p.at.text : "N/A"}</td><td class="perf-pct">${p.at.n ? p.at.pct : "N/A"}</td><td>${p.below.n ? p.below.text : "N/A"}</td></tr>`).join("")
     + `<tr><td><b>All sports</b></td><td><b>${tot.n ? tot.w + "-" + tot.l : "N/A"}</b></td><td class="perf-pct"><b>${tot.n ? Math.round(tot.w / tot.n * 100) + "%" : "N/A"}</b></td><td><b>${totB.n ? totB.w + "-" + totB.l : "N/A"}</b></td></tr>`;
   return `<div class="score-star-line"><span class="top-star">${STAR_SVG}</span> Score ${min}+: <b>${recTxt(tot)}</b> &middot; Below ${min}: <b>${recTxt(totB)}</b></div>`
-    + `<table class="perf" style="margin-top:8px"><tr><th>Sport</th><th>Score ${min}+</th><th>Win %</th><th>Below ${min}</th></tr>${rows}</table>`;
+    + `<table class="perf" style="margin-top:8px"><tr><th>Sport</th><th>${tip('Score ' + min + '+', TIPS.score)}</th><th>${tip('Win %', TIPS.winpct)}</th><th>${tip('Below ' + min, TIPS.scorebelow)}</th></tr>${rows}</table>`;
 }
 function allWilsonOut(min) {
   const per = SPORTS.map(sp => ({ sp, all: wilsonRecord(sp.key, min, false), fwd: wilsonRecord(sp.key, min, true) }));
@@ -2018,7 +2048,7 @@ function allWilsonOut(min) {
     + `<tr><td><b>All sports</b></td><td><b>${tA.n ? tA.w + "-" + tA.l : "N/A"}</b></td><td class="perf-pct"><b>${tA.n ? Math.round(tA.w / tA.n * 100) + "%" : "N/A"}</b></td><td><b>${tF.n ? tF.w + "-" + tF.l : "N/A"}</b></td></tr>`;
   return `<div>All-time: <b>${recTxt(tA)}</b> with a Wilson score of ${min}% or higher</div>`
     + `<div class="win-combo-more" style="margin-top:4px">Forward only (scored before kickoff): ${recTxt(tF)}</div>`
-    + `<table class="perf" style="margin-top:8px"><tr><th>Sport</th><th>All-time</th><th>Win %</th><th>Forward</th></tr>${rows}</table>`;
+    + `<table class="perf" style="margin-top:8px"><tr><th>Sport</th><th>${tip('All-time', TIPS.wilsonall)}</th><th>${tip('Win %', TIPS.winpct)}</th><th>${tip('Forward', TIPS.wilsonfwd)}</th></tr>${rows}</table>`;
 }
 function setAllScore(v) {
   allScoreMin = Number(v);
@@ -2040,7 +2070,7 @@ function allSportsBodyHtml() {
   else {
     const lo = Math.floor(Math.min(...vals) / 5) * 5, hi = Math.max(lo + 5, Math.ceil(Math.max(...vals) / 5) * 5), cur = Math.min(Math.max(allScoreMin, lo), hi);
     out += `<div class="perf-note">Every sport together. Stars are scores of ${STAR_MIN} or more, counted from ${shortDay(SPORTS.flatMap(sp => scoreGames(sp.key).map(x => x.day)).sort()[0])}, when scores began to be saved.</div>`
-      + `<div class="combo-dim"><span class="combo-dim-label">Min score</span><input type="range" class="combo-slider" min="${lo}" max="${hi}" step="5" value="${cur}" aria-label="Minimum pick score, all sports" oninput="setAllScore(this.value)"><span class="combo-conf-val" id="all-score-val">${cur}+</span></div>`
+      + `<div class="combo-dim"><span class="combo-dim-label">${tip("Min score", TIPS.score)}</span><input type="range" class="combo-slider" min="${lo}" max="${hi}" step="5" value="${cur}" aria-label="Minimum pick score, all sports" oninput="setAllScore(this.value)"><span class="combo-conf-val" id="all-score-val">${cur}+</span></div>`
       + `<div id="all-score-out">${allScoreOut(cur)}</div>`;
   }
   out += `<div class="perf-sub" style="margin-top:16px">Record by Wilson score</div>`;
@@ -2049,7 +2079,7 @@ function allSportsBodyHtml() {
   else {
     const cur = Math.min(Math.max(allWilsonMin, 50), top);
     out += `<div class="perf-note">Every sport together. All-time scores each graded game by the best winning combination it fits today (flattering in hindsight); forward counts only the score each pick had before kickoff.</div>`
-      + `<div class="combo-dim"><span class="combo-dim-label">Min Wilson</span><input type="range" class="combo-slider" min="50" max="${top}" step="1" value="${cur}" aria-label="Minimum Wilson score, all sports" oninput="setAllWilson(this.value)"><span class="combo-conf-val" id="all-wilson-val">${cur}%+</span></div>`
+      + `<div class="combo-dim"><span class="combo-dim-label">${tip("Min Wilson", TIPS.wilsonmin)}</span><input type="range" class="combo-slider" min="50" max="${top}" step="1" value="${cur}" aria-label="Minimum Wilson score, all sports" oninput="setAllWilson(this.value)"><span class="combo-conf-val" id="all-wilson-val">${cur}%+</span></div>`
       + `<div id="all-wilson-out" style="margin-top:6px">${allWilsonOut(cur)}</div>`;
   }
   return out;
@@ -2321,7 +2351,7 @@ function wilsonSliderHtml(sportKey) {
     return `<span class="win-combo-more">${v}%+: ${r.w}-${r.l}${r.n ? " (" + Math.round(r.w / r.n * 100) + "%)" : ""}</span>`;
   }).join(" &middot; ");
   return `<div class="win-combos" style="margin-top:14px"><div class="win-combos-label">Record by Wilson score</div>`
-    + `<div class="combo-dim"><span class="combo-dim-label">Min Wilson</span>`
+    + `<div class="combo-dim"><span class="combo-dim-label">${tip("Min Wilson", TIPS.wilsonmin)}</span>`
     + `<input type="range" class="combo-slider" min="50" max="${top}" step="1" value="${cur}" aria-label="Minimum Wilson score" oninput="setWilsonSlider(this.value)">`
     + `<span class="combo-conf-val" id="wilson-slider-val">${cur}%+</span></div>`
     + `<div id="wilson-slider-out" style="margin-top:6px">${wilsonRecordText(sportKey, cur)}</div>`
@@ -3160,7 +3190,7 @@ function netCardHtml() {
       <div class="net-plot"></div>
       <details class="net-table">
         <summary>View as table</summary>
-        <table class="perf"><thead><tr><th>Sport</th><th>Record</th><th>Net</th></tr></thead><tbody></tbody></table>
+        <table class="perf"><thead><tr><th>Sport</th><th>${tip('Record', TIPS.record)}</th><th>${tip('Net', TIPS.net)}</th></tr></thead><tbody></tbody></table>
       </details>
     </div>`;
 }
