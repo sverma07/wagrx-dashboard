@@ -3050,6 +3050,145 @@
           }
         }
       ]
+    },
+    {
+      "time": "2026-11-25T18:30:09-05:00",
+      "games": [
+        {
+          "game": "Los Angeles Rams (H) vs Green Bay Packers (A)",
+          "spread": "LAR -2.5",
+          "favorite": "Los Angeles Rams -fav",
+          "confidence": "72%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Los Angeles Rams",
+            "M2: Relevance": "TAKE: Los Angeles Rams",
+            "M3: Efficiency": "TAKE: Los Angeles Rams",
+            "M4: ATS Trends": "TAKE: Green Bay Packers",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Los Angeles Rams",
+            "M7: QB Injury Edge": "PUSH",
+            "M8: Line Movement": "TAKE: Green Bay Packers",
+            "CONSENSUS": "TAKE: Los Angeles Rams",
+            "Sharp: Circa": "TAKE: Los Angeles Rams",
+            "Sharp: DraftKings": "TAKE: Green Bay Packers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 30,
+              "away": 15
+            },
+            "M2: Relevance": {
+              "home": 44.3322,
+              "away": 18.7358
+            },
+            "M3: Efficiency": {
+              "margin": 2.8
+            },
+            "M4: ATS Trends": {
+              "home": 5,
+              "away": 6
+            },
+            "M5: Rest": {
+              "home": 10,
+              "away": 10,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": 50.44,
+              "home_m": 52.6,
+              "away_b": 49.56,
+              "away_m": 47.4
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Matthew Stafford (Active)",
+              "away_status": "Jordan Love (Active)",
+              "home_rb": "Dean Connors (Injured Reserve) -> Kyren Williams (Active) starting",
+              "away_rb": "Josh Jacobs (Questionable)",
+              "home_mlb": "Nate Landman (Active)",
+              "away_mlb": "Zaire Franklin (Questionable)",
+              "home_impact": 2.0,
+              "away_impact": 1.0
+            },
+            "M8: Line Movement": {
+              "open_home": -3.5,
+              "current_home": -2.5,
+              "delta": 1.0,
+              "crosses_key": true,
+              "size": 1.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": -2.5,
+                "last": -2.5,
+                "delta": 0.0
+              },
+              "vs_consensus": "conflict"
+            }
+          },
+          "team_home": "Los Angeles Rams",
+          "team_away": "Green Bay Packers",
+          "start": "2026-11-26T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 50.0,
+              "home_m": 80.0,
+              "away_b": 50.0,
+              "away_m": 20.0,
+              "line": "-2.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 54.0,
+              "home_m": 52.0,
+              "away_b": 46.0,
+              "away_m": 48.0,
+              "line": "-2.5",
+              "thin": false
+            }
+          },
+          "home_id": "14",
+          "away_id": "9",
+          "espn_home": "Los Angeles Rams",
+          "espn_away": "Green Bay Packers",
+          "event_id": "401873079",
+          "score": {
+            "value": 36.25,
+            "tier": "Fair",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 72%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "Sharp sources side with it (extreme money gap, 30 pts)"
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: Sharps with consensus &middot; Confidence 65%+ (12-14, 46%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.7333,
+              "agree": 0.75,
+              "sharp": 1.0,
+              "tier": 1.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          }
+        }
+      ]
     }
   ]
 }
