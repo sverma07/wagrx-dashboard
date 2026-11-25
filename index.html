@@ -415,6 +415,7 @@
      against the card surface #17181d (adjacent CVD dE 8.4, normal-vision 19.8, all >= 3:1). */
   .net-card { padding: 18px 18px 14px; }
   .net-head { margin-bottom: 14px; }
+  .perf-tabs { flex-wrap: wrap; margin: 6px 0 4px; }
   .net-head h2 { font-size: 1.05rem; margin: 10px 0 2px; letter-spacing: 0.01em; }
   .net-sub { color: var(--text-dim); font-size: 0.8rem; }
   .seg { display: inline-flex; padding: 3px; gap: 2px; background: var(--neutral-bg); border: 1px solid var(--border); border-radius: 10px; }
@@ -1699,7 +1700,7 @@ function perfExtrasHtml(sportKey) {
     <div class="perf-sub">Consensus by confidence</div>
     <div class="perf-note">Calibration check: the higher the confidence the consensus states, the more often it should win.</div>
     <table class="perf"><tr><th>Confidence</th><th>Record</th><th>Win %</th><th>Avg stated</th></tr>${rows}</table>
-    ${topPickRecordHtml(games, sportKey)}${situationHtml(games)}${sourceQualityHtml(games)}${marketValueHtml(games)}`;
+    ${situationHtml(games)}`;
 }
 
 // Record of the consensus pick by its saved pick score (the score and star the Top picks tab showed at the last run before kickoff).
@@ -1729,9 +1730,15 @@ const ESPN_BOARD = {
   ncaaf: "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates={d}&groups=80&limit=400",
 };
 const todayGradeCache = {};
-async function todayGrades(sportKey) {
+function todayGrades(sportKey) {
   const c = todayGradeCache[sportKey];
-  if (c && Date.now() - c.at < 60000) return c.rows;
+  if (c && Date.now() - c.at < 60000) return c.p;  // same request shared by repeated renders; refetched after a minute
+  const p = todayGradesLoad(sportKey);
+  todayGradeCache[sportKey] = { at: Date.now(), p };
+  p.catch(() => { delete todayGradeCache[sportKey]; });
+  return p;
+}
+async function todayGradesLoad(sportKey) {
   const sp = SPORTS.find(x => x.key === sportKey);
   const data = await fetch(sp.file + "?_=" + Date.now()).then(r => r.json());
   const snap = (data.snapshots || [])[data.snapshots.length - 1] || { games: [] };
@@ -1764,7 +1771,6 @@ async function todayGrades(sportKey) {
     }
     rows.push({ game: g.game, team, value: g.score.value, fin, result, note, done: !!fin });
   }
-  todayGradeCache[sportKey] = { at: Date.now(), rows };
   return rows;
 }
 async function fillScoreToday(sportKey) {
@@ -1947,7 +1953,6 @@ function renderPerfTable(sport, data) {
       ${rows}
     </table>
     ${perfExtrasHtml(sport.key)}
-    ${headToHeadHtml(sport.key)}
   `;
 }
 
@@ -1955,16 +1960,43 @@ function renderPerfTable(sport, data) {
 let perfResults = [];
 let perfSport = null;
 
+// The by-sport card has one sport picker and four panes, so only one group of numbers is on screen at a time.
+let perfTab = "models";
+const PERF_TABS = [["models", "Models"], ["score", "Pick score"], ["patterns", "Patterns"], ["sharps", "Sharps and market"]];
+
+function selectPerfTab(key) {
+  perfTab = key;
+  document.querySelectorAll(".perf-tab-btn").forEach(b => b.classList.toggle("active", b.dataset.tab === key));
+  renderPerfPane();
+}
+
 function selectPerfSport(key) {
   perfSport = key;
   document.querySelectorAll(".perf-sport-btn").forEach(b => b.classList.toggle("active", b.dataset.sport === key));
-  const r = perfResults.find(x => x.sport.key === key);
-  document.getElementById("perf-body").innerHTML = r ? renderPerfTable(r.sport, r.data) : "";
+  renderPerfPane();
+}
+
+function renderPerfPane() {
+  const body = document.getElementById("perf-body"), sub = document.getElementById("perf-since");
+  if (!body || !perfSport) return;
+  const r = perfResults.find(x => x.sport.key === perfSport);
+  const games = histGames[perfSport];
+  const wait = '<div class="empty-state">Loading&hellip;</div>';
+  const none = `<div class="empty-state">No graded ${r ? r.sport.label : ""} games yet.</div>`;
   const since = r && r.data && r.data.since;
-  document.getElementById("perf-since").textContent = since
-    ? `Each model's graded record since ${fmtDate(since)}. Consensus is highlighted.`
-    : "Each model's graded record since the last reset. Consensus is highlighted.";
-  renderCombo();
+  const subs = {
+    models: since ? `Each model's graded record since ${fmtDate(since)}. Consensus is highlighted.` : "Each model's graded record since the last reset. Consensus is highlighted.",
+    score: "How consensus picks did by the pick score they had before kickoff, and the stars.",
+    patterns: "Pick signals to see how consensus has done when they line up, and the winning combinations.",
+    sharps: "How the sharp sources, head to head with consensus, and the closing line, have done.",
+  };
+  if (sub) sub.textContent = subs[perfTab];
+  if (perfTab === "models") body.innerHTML = r ? renderPerfTable(r.sport, r.data) : "";
+  else if (!games) body.innerHTML = wait;
+  else if (!games.length) body.innerHTML = none;
+  else if (perfTab === "score") body.innerHTML = topPickRecordHtml(games, perfSport);
+  else if (perfTab === "patterns") { body.innerHTML = '<div id="combo-body"></div>'; renderCombo(); }
+  else body.innerHTML = sourceQualityHtml(games) + headToHeadHtml(perfSport) + marketValueHtml(games);
 }
 
 // ---- All sports: star picks by score slider and Wilson record by slider, combined across the four sports (with a per-sport split).
@@ -2007,7 +2039,7 @@ function allSportsBodyHtml() {
   if (!vals.length) out += `<div class="perf-note">No saved pick scores yet.</div>`;
   else {
     const lo = Math.floor(Math.min(...vals) / 5) * 5, hi = Math.max(lo + 5, Math.ceil(Math.max(...vals) / 5) * 5), cur = Math.min(Math.max(allScoreMin, lo), hi);
-    out += `<div class="perf-note">Every sport together. Stars are scores of ${STAR_MIN} or more, counted from when each sport began saving scores (Nov 17).</div>`
+    out += `<div class="perf-note">Every sport together. Stars are scores of ${STAR_MIN} or more, counted from ${shortDay(SPORTS.flatMap(sp => scoreGames(sp.key).map(x => x.day)).sort()[0])}, when scores began to be saved.</div>`
       + `<div class="combo-dim"><span class="combo-dim-label">Min score</span><input type="range" class="combo-slider" min="${lo}" max="${hi}" step="5" value="${cur}" aria-label="Minimum pick score, all sports" oninput="setAllScore(this.value)"><span class="combo-conf-val" id="all-score-val">${cur}+</span></div>`
       + `<div id="all-score-out">${allScoreOut(cur)}</div>`;
   }
@@ -2022,14 +2054,6 @@ function allSportsBodyHtml() {
   }
   return out;
 }
-function loadAllSports() {
-  const el = document.getElementById("all-sports-body");
-  if (!el) return;
-  Promise.all(SPORTS.map(sp => ensureBestCombo(sp.key))).then(() => {
-    const e2 = document.getElementById("all-sports-body");
-    if (e2) e2.innerHTML = allSportsBodyHtml();
-  });
-}
 function allSportsCardHtml() {
   return `<div class="perf-card"><div class="net-head"><h2>All Sports</h2><div class="net-sub">Star picks and Wilson records across NFL, NBA, NCAAF and NCAAB.</div></div>`
     + `<div id="all-sports-body"><div class="empty-state">Loading&hellip;</div></div></div>`;
@@ -2042,8 +2066,11 @@ function perfCardHtml() {
         <div class="seg" role="group" aria-label="Sport">${SPORTS.map(sp =>
           `<button class="range-btn perf-sport-btn${sp.key === perfSport ? " active" : ""}" data-sport="${sp.key}" onclick="selectPerfSport('${sp.key}')">${sp.label}</button>`).join("")}
         </div>
-        <h2>Model Records</h2>
-        <div class="net-sub" id="perf-since">Each model's graded record since the last reset. Consensus is highlighted.</div>
+        <h2>By Sport</h2>
+        <div class="seg perf-tabs" role="group" aria-label="Section">${PERF_TABS.map(([k, t]) =>
+          `<button class="range-btn perf-tab-btn${k === perfTab ? " active" : ""}" data-tab="${k}" onclick="selectPerfTab('${k}')">${t}</button>`).join("")}
+        </div>
+        <div class="net-sub" id="perf-since"></div>
       </div>
       <div id="perf-body"></div>
     </div>`;
@@ -2250,8 +2277,12 @@ function gameWilsonPct(sportKey, x) {
 }
 // All-time Wilson score of a graded game: the best Wilson bound among the sport's current winning combinations it fits (0 if none).
 function allTimeWilsonPct(sportKey, x) {
+  const lists = comboListsFor(sportKey);  // cached per sport until its graded games change
+  if (x._aw && x._aw.l === lists) return x._aw.v;  // slider drags re-ask for every game, so remember the answer
   const m = winMatchesFor(sportKey, comboFacts(x));
-  return m.wilson === null ? 0 : Math.round(m.wilson * 100);
+  const v = m.wilson === null ? 0 : Math.round(m.wilson * 100);
+  x._aw = { l: lists, v };
+  return v;
 }
 function wilsonRecord(sportKey, min, forward) {
   let w = 0, l = 0;
@@ -2298,19 +2329,6 @@ function wilsonSliderHtml(sportKey) {
     + `<div class="win-combo-more">All-time covers every graded game for this sport, scoring each by the best winning combination it fits today, so it is flattering in hindsight (the games helped build those combinations). The forward line counts only games tracked since ${since} (${tracked.length} graded), using the Wilson score each pick had before kickoff.</div></div>`;
 }
 
-function comboCardHtml() {
-  return `
-    <div class="perf-card">
-      <div class="net-head">
-        <div class="seg" role="group" aria-label="Sport">${SPORTS.map(sp =>
-          `<button class="range-btn perf-sport-btn${sp.key === perfSport ? " active" : ""}" data-sport="${sp.key}" onclick="selectPerfSport('${sp.key}')">${sp.label}</button>`).join("")}
-        </div>
-        <h2>Combination Explorer</h2>
-        <div class="net-sub">Pick signals to see how consensus has done when they line up.</div>
-      </div>
-      <div id="combo-body"></div>
-    </div>`;
-}
 
 // ---- Top picks: the strongest consensus picks across every sport from each sport's latest run, ranked by a score built from
 // signals the dashboard already tracks (confidence, model agreement, sharp money, line move, winning and losing patterns).
@@ -3160,10 +3178,15 @@ function loadPerformance() {
   )).then(results => {
     perfResults = results;
     if (!perfSport) perfSport = currentSport;
-    container.innerHTML = netCardHtml() + allSportsCardHtml() + perfCardHtml() + comboCardHtml();
+    container.innerHTML = netCardHtml() + allSportsCardHtml() + perfCardHtml();
     selectPerfSport(perfSport);
-    loadAllSports();
-    loadNetData().then(() => { renderNetChart(true); selectPerfSport(perfSport); });
+    // One load of the graded history feeds the chart, the All Sports card and every pane; no second fetch.
+    loadNetData().then(() => {
+      renderNetChart(true);
+      renderPerfPane();
+      const el = document.getElementById("all-sports-body");
+      if (el) el.innerHTML = allSportsBodyHtml();
+    });
   });
 }
 
