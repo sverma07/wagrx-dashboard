@@ -1699,14 +1699,13 @@ function perfExtrasHtml(sportKey) {
   const rows = buckets.map(([label, f]) => {
     const list = games.filter(x => !isNaN(x.conf) && f(x));
     const r = rec(list);
-    const avg = list.length ? Math.round(list.reduce((a, x) => a + x.conf, 0) / list.length) : null;
-    return `<tr><td>${label}</td><td>${list.length ? r.text : "N/A"}</td><td class="perf-pct">${r.pct}</td><td>${avg === null ? "N/A" : avg + "%"}</td></tr>`;
+    return `<tr><td>${label}</td><td>${list.length ? r.text : "N/A"}</td><td class="perf-pct">${r.pct}</td></tr>`;
   }).join("");
   return `
     <div class="perf-sub">Consensus form</div>${form}
     <div class="perf-sub">Consensus by confidence</div>
     <div class="perf-note">Calibration check: the higher the confidence the consensus states, the more often it should win.</div>
-    <table class="perf"><tr><th>${tip('Confidence', TIPS.confidence)}</th><th>${tip('Record', TIPS.record)}</th><th>${tip('Win %', TIPS.winpct)}</th><th>${tip('Avg stated', TIPS.avgstated)}</th></tr>${rows}</table>
+    <table class="perf"><tr><th>${tip('Confidence', TIPS.confidence)}</th><th>${tip('Record', TIPS.record)}</th><th>${tip('Win %', TIPS.winpct)}</th></tr>${rows}</table>
     ${situationHtml(games)}`;
 }
 
@@ -2013,7 +2012,6 @@ const tip = (label, text) => `<span class="tip" tabindex="0" data-tip="${escAttr
 const TIPS = {
   record: "Wins-losses against the spread for the picks counted here. A push is not counted.",
   winpct: "Wins divided by wins plus losses. Against the spread, about 52.4% is break-even at standard -110 prices.",
-  avgstated: "The average confidence the consensus stated before these games. If it is well above the Win % next to it, the model is overconfident in this bucket.",
   confidence: "The confidence the consensus stated for the pick. Higher should win more often.",
   withcons: "This source's own record in games where its pick was the same team as the consensus pick.",
   against: "This source's own record in games where it picked the other team than the consensus.",
@@ -2346,7 +2344,7 @@ function wilsonSliderHtml(sportKey) {
       + `<div class="win-combo-more">No tracked pick has had a Wilson score above 50% yet, so there is nothing to slide over. Tracking began ${since || "recently"} (${tracked.length} graded game${tracked.length === 1 ? "" : "s"}).</div></div>`;
   }
   const cur = Math.min(Math.max(wilsonSlider, 50), top);
-  const steps = [50, 55, 60, 65, 70].filter(v => v <= top).map(v => {
+  const steps = [50, 52, 53, 55, 60, 65].filter(v => v <= top).map(v => {
     const r = wilsonRecord(sportKey, v, false);
     return `<span class="win-combo-more">${v}%+: ${r.w}-${r.l}${r.n ? " (" + Math.round(r.w / r.n * 100) + "%)" : ""}</span>`;
   }).join(" &middot; ");
