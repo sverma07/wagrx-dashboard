@@ -2180,20 +2180,25 @@ function gameWilsonPct(sportKey, x) {
   }
   return 0;
 }
-function wilsonRecord(sportKey, min) {
+// All-time Wilson score of a graded game: the best Wilson bound among the sport's current winning combinations it fits (0 if none).
+function allTimeWilsonPct(sportKey, x) {
+  const m = winMatchesFor(sportKey, comboFacts(x));
+  return m.wilson === null ? 0 : Math.round(m.wilson * 100);
+}
+function wilsonRecord(sportKey, min, forward) {
   let w = 0, l = 0;
   for (const x of histGames[sportKey] || []) {
-    const ws = gameWilsonPct(sportKey, x);
+    const ws = forward ? gameWilsonPct(sportKey, x) : allTimeWilsonPct(sportKey, x);
     if (ws === null || ws < min) continue;
     if (x.result === "WIN") w++; else l++;
   }
   return { w, l, n: w + l };
 }
 function wilsonRecordText(sportKey, min) {
-  const r = wilsonRecord(sportKey, min);
-  if (!r.n) return `<span class="win-combo-more">No graded games at ${min}% or higher.</span>`;
-  const rate = Math.round(r.w / r.n * 100);
-  return `<b>${r.w}-${r.l}</b> (${rate}%) in ${r.n} game${r.n === 1 ? "" : "s"} with a Wilson score of ${min}% or higher`;
+  const fmt = r => r.n ? `<b>${r.w}-${r.l}</b> (${Math.round(r.w / r.n * 100)}%) in ${r.n} game${r.n === 1 ? "" : "s"}` : "no games";
+  const all = wilsonRecord(sportKey, min, false), fwd = wilsonRecord(sportKey, min, true);
+  return `<div>All-time: ${fmt(all)} with a Wilson score of ${min}% or higher</div>`
+    + `<div class="win-combo-more" style="margin-top:4px">Forward only (scored before kickoff since tracking began): ${fmt(fwd)}</div>`;
 }
 function setWilsonSlider(v) {
   wilsonSlider = Number(v);
@@ -2203,7 +2208,7 @@ function setWilsonSlider(v) {
 }
 function wilsonSliderHtml(sportKey) {
   const games = histGames[sportKey] || [];
-  const scores = games.map(x => gameWilsonPct(sportKey, x)).filter(v => v > 0);
+  const scores = games.map(x => allTimeWilsonPct(sportKey, x)).filter(v => v > 0);
   const tracked = games.filter(x => gameWilsonPct(sportKey, x) !== null);
   const since = tracked.length ? shortDay(tracked[0].day) : "";
   const top = scores.length ? Math.max(...scores) : 0;
@@ -2213,7 +2218,7 @@ function wilsonSliderHtml(sportKey) {
   }
   const cur = Math.min(Math.max(wilsonSlider, 50), top);
   const steps = [50, 55, 60, 65, 70].filter(v => v <= top).map(v => {
-    const r = wilsonRecord(sportKey, v);
+    const r = wilsonRecord(sportKey, v, false);
     return `<span class="win-combo-more">${v}%+: ${r.w}-${r.l}${r.n ? " (" + Math.round(r.w / r.n * 100) + "%)" : ""}</span>`;
   }).join(" &middot; ");
   return `<div class="win-combos" style="margin-top:14px"><div class="win-combos-label">Record by Wilson score</div>`
@@ -2222,7 +2227,7 @@ function wilsonSliderHtml(sportKey) {
     + `<span class="combo-conf-val" id="wilson-slider-val">${cur}%+</span></div>`
     + `<div id="wilson-slider-out" style="margin-top:6px">${wilsonRecordText(sportKey, cur)}</div>`
     + `<div style="margin-top:6px">${steps}</div>`
-    + `<div class="win-combo-more">A game's Wilson score is the best score among the winning combinations it fit at its last run before kickoff. This record counts only games tracked since ${since} (${tracked.length} graded), so it is a true forward record.</div></div>`;
+    + `<div class="win-combo-more">All-time covers every graded game for this sport, scoring each by the best winning combination it fits today, so it is flattering in hindsight (the games helped build those combinations). The forward line counts only games tracked since ${since} (${tracked.length} graded), using the Wilson score each pick had before kickoff.</div></div>`;
 }
 
 function comboCardHtml() {
