@@ -1001,9 +1001,10 @@ function parseBookLine(text) {
   return isNaN(n) ? null : n;
 }
 
-function bookLineHistory(g) {
-  if (currentView !== "games" || !currentSnap || !allSnapshots.length) return null;
-  const upto = allSnapshots.slice(0, allSnapshots.indexOf(currentSnap) + 1);  // what the chosen run could have known
+function bookLineHistory(g, snaps) {
+  // `snaps` (Best bets): that sport's runs today; otherwise the runs of the sport tab being viewed, up to the chosen run.
+  if (!snaps && (currentView !== "games" || !currentSnap || !allSnapshots.length)) return null;
+  const upto = snaps || allSnapshots.slice(0, allSnapshots.indexOf(currentSnap) + 1);  // what the chosen run could have known
   const out = {};
   for (const key of ["circa", "dk"]) {
     const pts = [];
@@ -1065,8 +1066,8 @@ function moveSourceLabel(d) {
   return d && Array.isArray(d.sources) && d.sources.length ? "(" + d.sources.map(k => BOOK_LABELS[k] || k).join(" + ") + ")" : "";
 }
 
-function renderLineMoveRow(g) {
-  const books = bookRowsHtml(g, bookLineHistory(g));
+function renderLineMoveRow(g, sportKey, snaps) {
+  const books = bookRowsHtml(g, bookLineHistory(g, snaps));
   const d = (g.detail || {})[LINE_MOVE_KEY];
   const pick = String((g.picks || {})[LINE_MOVE_KEY] || "");
   const toward = pick.startsWith("TAKE:") ? pick.replace("TAKE:", "").trim() : null;
@@ -1088,7 +1089,7 @@ function renderLineMoveRow(g) {
     return `<div class="sharp-block"><div class="sharp-head"><span class="consensus-label">Line movement</span>${noteHtml}${books.note}</div>${movedRow}${bookRows}</div>`;
   }
   return lineMoveBlock({ home: g.team_home || "Home", open: d.open_home, cur: d.current_home, toward, noteHtml: noteHtml + books.note,
-    keyNumbers: g.keyNumbers || KEY_NUMBERS_BY_SPORT[currentView === "history" ? historySport : currentSport] || [3, 7],
+    keyNumbers: g.keyNumbers || KEY_NUMBERS_BY_SPORT[sportKey || (currentView === "history" ? historySport : currentSport)] || [3, 7],
     extraRows: books.rows, sizeOverride: d.size != null ? d.size : null, via });
 }
 
@@ -1272,7 +1273,7 @@ function renderGame(g, idx, grade = null, scope = "games", winMatches = null, sp
           <div class="conf-col"><div class="confidence-badge">${confidence}</div>${agreement}</div>
         </div>
         ${renderSharpRow(g, grade && grade.cover)}
-        ${renderLineMoveRow(g)}
+        ${renderLineMoveRow(g, scope === "best" ? cardSport : null, scope === "best" ? (((topRows || []).find(r => r[0].key === cardSport) || [])[1] || {}).snapshots : null)}
         ${marketStripHtml(g, scope, takeTeam(picks.CONSENSUS), cardSport)}
       </div>
       <div class="models-wrap">
@@ -2472,7 +2473,9 @@ function renderBest() {
     const wilson = m ? Number(m[1]) : 0;
     if (it.score >= BEST_SCORE && wilson >= BEST_WILSON) picks.push({ it, wilson, line: it.why.find(w => /Wilson \d+%/.test(w.t || "")).t });
   }
-  const head = `<div class="perf-updated">Today's picks with a pick score of ${BEST_SCORE}+ and a Wilson score of ${BEST_WILSON}%+ (${asOf.join(", ") || "no runs yet"}). `
+  const startMs = x => { const t = Date.parse(x.it.g.start); return isNaN(t) ? Infinity : t; };
+  picks.sort((a, b) => startMs(a) - startMs(b) || b.it.score - a.it.score);  // earliest game first
+  const head = `<div class="perf-updated">Today's picks with a pick score of ${BEST_SCORE}+ and a Wilson score of ${BEST_WILSON}%+, earliest game first (${asOf.join(", ") || "no runs yet"}). `
     + `Once a game starts, its card is locked at the last run before kickoff.</div>`;
   const cards = picks.map(({ it, wilson, line }) => {
     it.g._runAt = it.runAt;
