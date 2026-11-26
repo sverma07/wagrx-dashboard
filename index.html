@@ -3885,13 +3885,13 @@ function keepRefreshAnimating() {
   }
 }
 
-// Top picks page: one button that asks for a refresh of every sport. It uses one manual refresh from each sport's daily allowance
+// Best bets page: one button that asks for a refresh of every sport. It uses one manual refresh from each sport's daily allowance
 // (a sport that is already refreshing or has none left is skipped).
 const usedFor = sportKey => typeof refreshStatus.used === "object" ? (refreshStatus.used[sportKey] || 0) : refreshStatus.used;
 function renderTopRefresh() {
   const row = document.getElementById("top-refresh-row");
   if (!row) return;
-  if (!refreshStatus || currentView !== "top") { row.style.display = "none"; return; }
+  if (!refreshStatus || currentView !== "best") { row.style.display = "none"; return; }
   row.style.display = "";
   const states = SPORTS.map(sp => ({ sp, st: refreshState(sp.key), left: Math.max(0, refreshStatus.limit - usedFor(sp.key)) }));
   const active = states.filter(x => refreshActive(x.st));
@@ -3909,7 +3909,7 @@ function renderTopRefresh() {
     prog = `<div class="refresh-prog"><div class="refresh-bar"><div class="refresh-track"><i style="width:${pct.toFixed(1)}%"></i></div></div>`
       + `<div class="refresh-stage">Refreshing ${active.map(x => x.sp.label).join(", ")}</div></div>`;
   } else if (justDone) {
-    prog = `<div class="refresh-prog done"><div class="refresh-bar"><div class="refresh-track"><i style="width:100%"></i></div></div><div class="refresh-stage">Done. Top picks are up to date.</div></div>`;
+    prog = `<div class="refresh-prog done"><div class="refresh-bar"><div class="refresh-track"><i style="width:100%"></i></div></div><div class="refresh-stage">Done. Best bets and Top picks are up to date.</div></div>`;
   }
   row.innerHTML = `<button type="button" class="refresh-btn" onclick="refreshAll()"${!ready.length || refreshBusy ? " disabled" : ""}>`
     + `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>`
@@ -3968,6 +3968,7 @@ function checkRefreshFresh() {
         setTimeout(renderRefresh, 8500);
         if (refreshSeen[sp.key] === st.id && sp.key === currentSport && currentView === "games") loadSport(sp.key);
         if (refreshSeen[sp.key] === st.id && currentView === "top") loadTop(true);
+        if (refreshSeen[sp.key] === st.id && currentView === "best") loadBest(true);
       }
     }).catch(() => {}).then(() => { refreshChecking[sp.key] = false; renderRefresh(); });
   }
@@ -4036,10 +4037,10 @@ function loadSplitsStatus() {
   let saved = null;
   try { saved = localStorage.getItem("wagrx-last-sport"); } catch (e) {}
   if (saved && SPORTS.some(s => s.key === saved)) currentSport = saved;
-  selectTop();  // the dashboard opens on Top picks; currentSport is still the last sport you viewed
+  selectBest();  // the dashboard opens on Best bets; currentSport is still the last sport you viewed
   refreshTopStars();
   setInterval(refreshTopStars, 10 * 60000);
-  setInterval(pollNewRun, 2 * 60000);  // an open Today or Top picks tab picks up each new run on its own
+  setInterval(pollNewRun, 2 * 60000);  // an open Today, Best bets or Top picks tab picks up each new run on its own
   pollRefresh();
   loadSplitsStatus();
   setInterval(loadSplitsStatus, 5 * 60000);
