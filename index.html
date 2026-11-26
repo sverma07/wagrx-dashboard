@@ -1559,7 +1559,7 @@ function renderTabs() {
   const util = (view, label, onclick) =>
     `<button class="util-btn${currentView === view ? " active" : ""}" onclick="${onclick}" title="${label}" aria-label="${label}">${UTIL_ICONS[view]}<span class="util-label">${label}</span></button>`;
   document.getElementById("util-tabs").innerHTML =
-    util("top", "Top picks", "selectTop()") + util("best", "Best bets", "selectBest()") + util("upcoming", "Upcoming", "selectUpcoming()") + util("history", "History", "selectHistory()")
+    util("best", "Best bets", "selectBest()") + util("top", "Top picks", "selectTop()") + util("upcoming", "Upcoming", "selectUpcoming()") + util("history", "History", "selectHistory()")
     + util("performance", "Performance", "selectPerformance()");
 }
 
