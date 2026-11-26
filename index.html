@@ -1813,7 +1813,7 @@ function topPickRecordHtml(games, sportKey) {
   const cur = Math.min(Math.max(scoreSlider, lo), hi);
   const star = scoreRec(have.filter(x => x.score.value >= STAR_MIN)), rest = scoreRec(have.filter(x => x.score.value < STAR_MIN));
   const starLine = `<div class="score-star-line"><span class="top-star">${STAR_SVG}</span> ${tip('Starred (' + STAR_MIN + '+)', 'Picks whose score was ' + STAR_MIN + ' or more before kickoff. These are the gold-star picks on the Top picks tab.')}: <b>${star.text}</b>${star.n ? ` (${star.pct})` : ""}`
-    + ` &middot; Not starred: <b>${rest.text}</b>${rest.n ? ` (${rest.pct})` : ""}</div>`;
+    + ` &middot; Not starred: <b>${rest.text}</b>${rest.n ? ` (${rest.pct})` : ""}</div>` + undefeatedLine([sportKey]);
   const chips = [30, STAR_MIN, 55].filter(v => v >= lo && v <= hi).map(v => {
     const r = scoreRec(have.filter(x => x.score.value >= v));
     return `<span class="win-combo-more">${v}+: ${r.text}${r.n ? " (" + r.pct + ")" : ""}</span>`;
@@ -2025,8 +2025,37 @@ const TIPS = {
   score: "The pick score the game had at its last run before kickoff. Higher means more evidence backs the pick; it is not a win probability.",
   scorebelow: "Record of games that scored below the slider value.",
   wilsonmin: "Wilson score is a cautious estimate of a pattern's true win rate: a high win rate over few games is marked down. Above 50% suggests the edge is real, not luck. The slider shows the record of games at or above this value.",
+  undefeated: "Consensus record in games that, when their card locked, fit at least one winning combination and no losing one (the card's 'winning, 0 losing'). Rebuilt for every graded game from the history available the day before, so it does not look ahead.",
   net: "Wins minus losses. +5 means five more wins than losses.",
 };
+// ---- Undefeated combos: games that, when their card locked, fit at least one winning combination and no losing one (the card's
+// "N winning, 0 losing"). Rebuilt for every graded game from the history as it stood the day before, so nothing looks ahead.
+function undefeatedMark(sportKey) {
+  const games = histGames[sportKey] || [];
+  if (games._unN === games.length) return;
+  let i = 0;
+  while (i < games.length) {
+    let j = i;
+    while (j < games.length && games[j].day === games[i].day) j++;
+    const lists = i >= COMBO_MIN_GAMES ? allWinningCombos(games.slice(0, i)) : { wins: [], losses: [] };  // games is sorted by day
+    for (let k = i; k < j; k++) {
+      const f = comboFacts(games[k]);
+      games[k]._un = lists.wins.some(c => comboMatch(f, c.sel)) && !lists.losses.some(c => comboMatch(f, c.sel));
+    }
+    i = j;
+  }
+  games._unN = games.length;
+}
+function undefeatedRec(sportKey) {
+  undefeatedMark(sportKey);
+  return scoreRec((histGames[sportKey] || []).filter(x => x._un));
+}
+function undefeatedLine(sportKeys) {
+  const per = sportKeys.map(k => ({ k, r: undefeatedRec(k) }));
+  const tot = sumRec(per.map(p => p.r));
+  const split = sportKeys.length > 1 ? " &middot; " + per.map(p => `${SPORTS.find(s => s.key === p.k).label} ${p.r.n ? p.r.w + "-" + p.r.l : "N/A"}`).join(" &middot; ") : "";
+  return `<div class="score-star-line">${tip("Undefeated combos", TIPS.undefeated)}: <b>${tot.n ? tot.w + "-" + tot.l : "N/A"}</b>${tot.n ? ` (${Math.round(tot.w / tot.n * 100)}%)` : ""}${split}</div>`;
+}
 const recTxt = r => r.n ? `${r.w}-${r.l} (${Math.round(r.w / r.n * 100)}%)` : "N/A";
 const sumRec = list => list.reduce((a, r) => ({ w: a.w + r.w, l: a.l + r.l, n: a.n + r.n }), { w: 0, l: 0, n: 0 });
 function allScoreOut(min) {
@@ -2068,7 +2097,8 @@ function allSportsBodyHtml() {
       + `<div class="combo-dim"><span class="combo-dim-label">${tip("Min score", TIPS.score)}</span><input type="range" class="combo-slider" min="${lo}" max="${hi}" step="5" value="${cur}" aria-label="Minimum pick score, all sports" oninput="setAllScore(this.value)"><span class="combo-conf-val" id="all-score-val">${cur}+</span></div>`
       + `<div id="all-score-out">${allScoreOut(cur)}</div>`;
   }
-  out += `<div class="perf-sub" style="margin-top:16px">Record by Wilson score</div>`;
+  out += `<div class="perf-sub" style="margin-top:16px">Undefeated combos</div><div class="perf-note">Games that fit a winning combination and no losing one when their card locked, history rebuilt as of the day before.</div>` + undefeatedLine(SPORTS.map(sp => sp.key))
+    + `<div class="perf-sub" style="margin-top:16px">Record by Wilson score</div>`;
   const top = Math.max(0, ...wil);
   if (top < 51) out += `<div class="perf-note">No game has a Wilson score above 50% yet.</div>`;
   else {
