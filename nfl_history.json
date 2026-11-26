@@ -1,7 +1,134 @@
 {
   "sport": "NFL",
-  "updated": "2026-11-25T06:15:01-05:00",
+  "updated": "2026-11-26T06:15:02-05:00",
   "days": {
+    "2026-11-25": [
+      {
+        "game": "Los Angeles Rams (H) vs Green Bay Packers (A)",
+        "team_home": "Los Angeles Rams",
+        "team_away": "Green Bay Packers",
+        "line": "LAR -2.5",
+        "favorite": "Los Angeles Rams -fav",
+        "final": "Los Angeles Rams 26, Green Bay Packers 13",
+        "cover": "Los Angeles Rams",
+        "status": null,
+        "confidence": "56%",
+        "sharp": {
+          "home_b": 50.04,
+          "home_m": 44.81,
+          "away_b": 49.96,
+          "away_m": 55.19
+        },
+        "graded_run": "2026-11-25T19:47:04-05:00",
+        "score": {
+          "value": -18.0,
+          "tier": "Conflicted",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 56%"
+            },
+            {
+              "t": "3 of 5 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: DraftKings, SBD)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a losing pattern: Sharps against consensus &middot; Line move against consensus &middot; Consensus on the favorite (5-6, 45%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.2,
+            "agree": 0.6,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-18T06:16:10-0500",
+            "n": 5,
+            "sp": -3.5,
+            "best_h": -3.5,
+            "best_a": 3.5,
+            "tot": 45.5
+          },
+          "close": {
+            "t": "2026-11-25T19:47:05-0500",
+            "n": 13,
+            "sp": -2.5,
+            "best_h": -2.5,
+            "best_a": 2.5,
+            "tot": 43.5,
+            "pin_sp": -2.5,
+            "pin_h": -108,
+            "pin_a": -102,
+            "pin_tot": 43.5,
+            "pin_ml": [
+              -136,
+              123
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Los Angeles Rams",
+            "result": "WIN"
+          },
+          "M2: Relevance": {
+            "pick": "Los Angeles Rams",
+            "result": "WIN"
+          },
+          "M3: Efficiency": {
+            "pick": "Los Angeles Rams",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Green Bay Packers",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Green Bay Packers",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Green Bay Packers",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Green Bay Packers",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Los Angeles Rams",
+            "result": "WIN"
+          },
+          "Sharp: Circa": {
+            "pick": "Los Angeles Rams",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Green Bay Packers",
+            "result": "LOSS"
+          }
+        }
+      }
+    ],
     "2026-11-24": [],
     "2026-11-23": [
       {
