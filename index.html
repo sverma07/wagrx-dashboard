@@ -1996,6 +1996,13 @@ function renderPerfPane() {
     patterns: "Pick signals to see how consensus has done when they line up, and the winning combinations.",
     sharps: "How the sharp sources, head to head with consensus, and the closing line, have done.",
   };
+  const tabsEl = document.getElementById("perf-tabs");
+  if (tabsEl) tabsEl.style.display = perfSport === "all" ? "none" : "";
+  if (perfSport === "all") {
+    if (sub) sub.textContent = "Star picks and Wilson records across NFL, NBA, NCAAF and NCAAB.";
+    body.innerHTML = SPORTS.every(sp => histGames[sp.key]) ? allSportsBodyHtml() : wait;
+    return;
+  }
   if (sub) sub.textContent = subs[perfTab];
   if (perfTab === "models") body.innerHTML = r ? renderPerfTable(r.sport, r.data) : "";
   else if (!games) body.innerHTML = wait;
@@ -2109,20 +2116,16 @@ function allSportsBodyHtml() {
   }
   return out;
 }
-function allSportsCardHtml() {
-  return `<div class="perf-card"><div class="net-head"><h2>All Sports</h2><div class="net-sub">Star picks and Wilson records across NFL, NBA, NCAAF and NCAAB.</div></div>`
-    + `<div id="all-sports-body"><div class="empty-state">Loading&hellip;</div></div></div>`;
-}
 
 function perfCardHtml() {
   return `
     <div class="perf-card">
       <div class="net-head">
-        <div class="seg" role="group" aria-label="Sport">${SPORTS.map(sp =>
+        <div class="seg" role="group" aria-label="Sport">${[{ key: "all", label: "All" }, ...SPORTS].map(sp =>
           `<button class="range-btn perf-sport-btn${sp.key === perfSport ? " active" : ""}" data-sport="${sp.key}" onclick="selectPerfSport('${sp.key}')">${sp.label}</button>`).join("")}
         </div>
-        <h2>By Sport</h2>
-        <div class="seg perf-tabs" role="group" aria-label="Section">${PERF_TABS.map(([k, t]) =>
+        <h2>Performance Detail</h2>
+        <div class="seg perf-tabs" id="perf-tabs" role="group" aria-label="Section">${PERF_TABS.map(([k, t]) =>
           `<button class="range-btn perf-tab-btn${k === perfTab ? " active" : ""}" data-tab="${k}" onclick="selectPerfTab('${k}')">${t}</button>`).join("")}
         </div>
         <div class="net-sub" id="perf-since"></div>
@@ -3228,15 +3231,13 @@ function loadPerformance() {
       .then(data => ({ sport, data }))
   )).then(results => {
     perfResults = results;
-    if (!perfSport) perfSport = currentSport;
-    container.innerHTML = netCardHtml() + allSportsCardHtml() + perfCardHtml();
+    if (!perfSport) perfSport = "all";
+    container.innerHTML = netCardHtml() + perfCardHtml();
     selectPerfSport(perfSport);
     // One load of the graded history feeds the chart, the All Sports card and every pane; no second fetch.
     loadNetData().then(() => {
       renderNetChart(true);
       renderPerfPane();
-      const el = document.getElementById("all-sports-body");
-      if (el) el.innerHTML = allSportsBodyHtml();
     });
   });
 }
