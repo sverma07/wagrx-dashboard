@@ -478,10 +478,15 @@
     .net-tile .tile-value { font-size: 1.05rem; }
   }
   .tag.neutral { background: var(--neutral-bg); color: var(--text-dim); }
+  .best-wrap { margin-bottom: 14px; }
+  .best-why { padding: 8px 12px; border: 1px solid var(--border); border-bottom: 0; border-radius: 12px 12px 0 0; background: var(--accent-soft); font-size: 0.82rem; line-height: 1.4; }
+  .best-why b { font-weight: 700; }
+  .best-why .best-sport { font-weight: 700; margin-right: 6px; }
+  .best-wrap .game-card { margin-bottom: 0; border-top-left-radius: 0; border-top-right-radius: 0; }
   /* Wide screens: card views use two columns so twice as many games fit. */
   @media (min-width: 1000px) {
-    body[data-view="games"] .wrap, body[data-view="history"] .wrap, body[data-view="upcoming"] .wrap { max-width: 1080px; }
-    #games, #history-list, #upcoming-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; align-items: start; }
+    body[data-view="games"] .wrap, body[data-view="history"] .wrap, body[data-view="upcoming"] .wrap, body[data-view="best"] .wrap { max-width: 1080px; }
+    #games, #history-list, #upcoming-list, #best-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 14px; align-items: start; }
     #games > .empty-state, #history-list > .empty-state, #upcoming-list > .perf-sub { grid-column: 1 / -1; }
     #upcoming-list > .perf-sub { margin-top: 6px; }
   }
@@ -632,6 +637,7 @@
   <main id="upcoming" style="display:none;"></main>
   <div class="refresh-row" id="top-refresh-row" style="display:none;"></div>
   <main id="toppicks" style="display:none;"></main>
+  <main id="bestbets" style="display:none;"></main>
 </div>
 
 <script>
@@ -1197,9 +1203,10 @@ function lineMoveHtml(g) {
 // grade (History only): { cover, final, status } from that day's graded results.
 // scope keeps the detail-dropdown ids unique between the Games and History views.
 // winMatches (Winning Combination filter only): { wins, losses } the game fits, shown in an expansion at the card's bottom.
-function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
+function renderGame(g, idx, grade = null, scope = "games", winMatches = null, sportKey = null) {
   const picks = g.picks || {};
-  const sc = scope === "games" ? scorePick(SPORTS.find(x => x.key === currentSport), g) : null;  // same score as the Top picks tab
+  const cardSport = sportKey || (scope === "upcoming" ? upcomingSport : currentSport);  // the Best bets tab mixes sports, so it names each card's sport
+  const sc = scope === "games" || scope === "best" ? scorePick(SPORTS.find(x => x.key === cardSport), g) : null;  // same score as the Top picks tab
   const graded = grade && grade.cover;
   const gradeTag = pick => {
     if (!graded || !pick || !pick.startsWith("TAKE:")) return "";
@@ -1240,7 +1247,7 @@ function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
   const confidence = g.confidence || "N/A";
   const searchKey = (g.game || "").toLowerCase();
   // Today's cards say which run their data is from; a started game is locked at its last run before kickoff.
-  const runAt = scope === "games" ? g.locked_run || currentSnapshotTime : "";
+  const runAt = scope === "games" ? g.locked_run || currentSnapshotTime : scope === "best" ? g.locked_run || g._runAt || "" : "";
   const runMeta = runAt ? ` &middot; ${g.locked_run ? "Locked at" : "Data from"} ${new Date(runAt).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })} run` : "";
   const finalMeta = runMeta + (grade && grade.final ? ` &middot; Final: ${grade.final}` : "")
     + (grade && grade.run ? ` &middot; Graded: ${new Date(grade.run).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })} run` : "");
@@ -1266,13 +1273,13 @@ function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
         </div>
         ${renderSharpRow(g, grade && grade.cover)}
         ${renderLineMoveRow(g)}
-        ${marketStripHtml(g, scope, takeTeam(picks.CONSENSUS))}
+        ${marketStripHtml(g, scope, takeTeam(picks.CONSENSUS), cardSport)}
       </div>
       <div class="models-wrap">
         <table class="models">${modelRows}${infoRows}</table>
       </div>
       ${scoreBlockHtml(sc)}
-      ${booksDropdownHtml(g, scope)}
+      ${booksDropdownHtml(g, scope, cardSport)}
       ${winCombosHtml(winMatches)}
     </div>
   `;
@@ -1280,9 +1287,9 @@ function renderGame(g, idx, grade = null, scope = "games", winMatches = null) {
 
 // Header strip: best number for the consensus pick, a flag when the books disagree, and an injuries count. Filled in after the
 // sport's Books file loads (see hydrateMarketStrips); cards without book data show nothing.
-function marketStripHtml(g, scope, pickTeam) {
+function marketStripHtml(g, scope, pickTeam, sportKey) {
   if (scope === "history" || !g.event_id) return "";
-  const sport = scope === "upcoming" ? upcomingSport : currentSport;
+  const sport = sportKey || (scope === "upcoming" ? upcomingSport : currentSport);
   return `<div class="mkt-strip" data-sport="${sport}" data-game="${encodeURIComponent(String(g.event_id))}" data-home="${escAttr(g.team_home)}" data-away="${escAttr(g.team_away)}" data-pick="${escAttr(pickTeam || "")}"></div>`;
 }
 function hydrateMarketStrips() {
@@ -1540,6 +1547,7 @@ const UTIL_ICONS = {
   upcoming: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
   history: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg>',
   top: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>',
+  best: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>',
   performance: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg>',
 };
 
@@ -1550,7 +1558,7 @@ function renderTabs() {
   const util = (view, label, onclick) =>
     `<button class="util-btn${currentView === view ? " active" : ""}" onclick="${onclick}" title="${label}" aria-label="${label}">${UTIL_ICONS[view]}<span class="util-label">${label}</span></button>`;
   document.getElementById("util-tabs").innerHTML =
-    util("top", "Top picks", "selectTop()") + util("upcoming", "Upcoming", "selectUpcoming()") + util("history", "History", "selectHistory()")
+    util("top", "Top picks", "selectTop()") + util("best", "Best bets", "selectBest()") + util("upcoming", "Upcoming", "selectUpcoming()") + util("history", "History", "selectHistory()")
     + util("performance", "Performance", "selectPerformance()");
 }
 
@@ -1565,6 +1573,7 @@ function setViewVisibility() {
   document.getElementById("history").style.display = currentView === "history" ? "" : "none";
   document.getElementById("upcoming").style.display = currentView === "upcoming" ? "" : "none";
   document.getElementById("toppicks").style.display = currentView === "top" ? "" : "none";
+  document.getElementById("bestbets").style.display = currentView === "best" ? "" : "none";
   renderBestBanner();
   renderRefresh();
 }
@@ -2411,6 +2420,7 @@ function selectTop() {
 // Every run: when a new run has been published, the Today cards (if you are on the latest run) and the Top picks tab redraw together.
 function pollNewRun() {
   if (currentView === "top") { loadTop(true); return; }
+  if (currentView === "best") { loadBest(true); return; }
   if (currentView !== "games" || !allSnapshots.length || currentSnap !== allSnapshots[allSnapshots.length - 1]) return;
   const key = currentSport, sport = SPORTS.find(x => x.key === key);
   fetch(sport.file, { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null).then(data => {
@@ -2432,6 +2442,45 @@ function loadTop(silent) {
     fetch(sp.file + "?_=" + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null),
     ensureBestCombo(sp.key).catch(() => {}),
   ]).then(([d]) => [sp, d]))).then(rows => { topRows = rows; topRanks = {}; computeTop(null).items.filter(it => it.score >= STAR_MIN).forEach((it, i) => { topRanks[topKey(it.sp.key, it.g.game)] = i + 1; }); if (currentView === "top") renderTop(); });
+}
+
+// ---- Best bets: today's picks with a pick score of BEST_SCORE+ and a Wilson score of BEST_WILSON+, shown as the same cards as the sport tabs.
+const BEST_SCORE = 55, BEST_WILSON = 52;
+function selectBest() {
+  currentView = "best";
+  renderTabs();
+  setViewVisibility();
+  loadBest();
+}
+function loadBest(silent) {
+  const el = document.getElementById("bestbets");
+  if (!silent) el.innerHTML = '<div class="empty-state">Loading&hellip;</div>';
+  Promise.all(SPORTS.map(sp => Promise.all([
+    fetch(sp.file + "?_=" + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null),
+    ensureBestCombo(sp.key).catch(() => {}),
+  ]).then(([d]) => [sp, d]))).then(rows => {
+    topRows = rows;
+    if (currentView === "best") renderBest();
+  });
+}
+function renderBest() {
+  const el = document.getElementById("bestbets");
+  const { items, asOf, stale } = computeTop(null);  // today's games only, each from its sport's latest run (locked once started)
+  const picks = [];
+  for (const it of items) {
+    const m = (it.why || []).map(w => /Wilson (\d+)%/.exec(w.t || "")).find(Boolean);
+    const wilson = m ? Number(m[1]) : 0;
+    if (it.score >= BEST_SCORE && wilson >= BEST_WILSON) picks.push({ it, wilson, line: it.why.find(w => /Wilson \d+%/.test(w.t || "")).t });
+  }
+  const head = `<div class="perf-updated">Today's picks with a pick score of ${BEST_SCORE}+ and a Wilson score of ${BEST_WILSON}%+ (${asOf.join(", ") || "no runs yet"}). `
+    + `Once a game starts, its card is locked at the last run before kickoff.</div>`;
+  const cards = picks.map(({ it, wilson, line }) => {
+    it.g._runAt = it.runAt;
+    const m = { ...winMatchesFor(it.sp.key, comboFactsLive(it.g)), expand: true };
+    return `<div class="best-wrap"><div class="best-why"><span class="best-sport">${it.sp.label}</span>Selected because the pick score is <b>${Math.round(it.score)}</b> (${topTier(it.score)}, needs ${BEST_SCORE}+) `
+      + `and the Wilson score is <b>${wilson}%</b> (needs ${BEST_WILSON}%+). ${line}</div>${renderGame(it.g, 0, null, "best", m, it.sp.key)}</div>`;
+  }).join("");
+  el.innerHTML = head + `<div id="best-list">` + (cards || `<div class="empty-state">No picks meet both bars yet today.${stale.length ? ` No data yet for ${stale.join(", ")}.` : ""}</div>`) + `</div>`;
 }
 
 // Score and reasons for one not-yet-started game, or null when it has no consensus pick to rate.
@@ -2766,9 +2815,9 @@ function winComboRows(list, cls) {
 // ---- Books dropdown: every book's lines and the betting splits for one game, from the Owls Insight API. The server writes
 // {sport}_books.json with each refresh; it is fetched the first time a Books dropdown is opened and shared by every card.
 const booksFiles = {};
-function booksDropdownHtml(g, scope) {
+function booksDropdownHtml(g, scope, sportKey) {
   if (scope === "history" || !g.event_id) return "";  // keyed by ESPN event id: the same two teams can play twice in a week
-  const sport = scope === "upcoming" ? upcomingSport : currentSport;
+  const sport = sportKey || (scope === "upcoming" ? upcomingSport : currentSport);
   const m3 = ((g.detail || {})["M3: Efficiency"] || {}).margin;
   const margin = (m3 === undefined || m3 === null || isNaN(parseFloat(m3))) ? "" : parseFloat(m3);
   return `<details class="books-dd" data-sport="${sport}" data-game="${encodeURIComponent(String(g.event_id))}" data-margin="${margin}" data-pick="${escAttr(((g.picks || {}).CONSENSUS || "").replace("TAKE:", "").trim())}" data-home="${escAttr(g.team_home)}" data-away="${escAttr(g.team_away)}" ontoggle="loadBooks(this)">`
