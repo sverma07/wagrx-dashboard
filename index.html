@@ -2469,21 +2469,26 @@ function renderBest() {
   const { items, asOf, stale } = computeTop(null);  // today's games only, each from its sport's latest run (locked once started)
   const picks = [];
   for (const it of items) {
-    const m = (it.why || []).map(w => /Wilson (\d+)%/.exec(w.t || "")).find(Boolean);
-    const wilson = m ? Number(m[1]) : 0;
-    if (it.score >= BEST_SCORE && wilson >= BEST_WILSON) picks.push({ it, wilson, line: it.why.find(w => /Wilson \d+%/.test(w.t || "")).t });
+    // The Wilson score is the one printed on the card: the best winning combination the game fits, from today's graded history.
+    const m = winMatchesFor(it.sp.key, comboFactsLive(it.g));
+    const wilson = m.wilson === null ? 0 : Math.round(m.wilson * 100);
+    const byScore = it.score >= BEST_SCORE, byWilson = wilson >= BEST_WILSON;
+    if (!byScore && !byWilson) continue;
+    const c = m.wins.find(x => x.score === m.wilson);
+    picks.push({ it, m, wilson, byScore, byWilson, combo: c ? `${comboPhrase(c.sel)} (${c.w}-${c.l}, ${Math.round(c.w / c.n * 100)}%)` : "" });
   }
   const startMs = x => { const t = Date.parse(x.it.g.start); return isNaN(t) ? Infinity : t; };
   picks.sort((a, b) => startMs(a) - startMs(b) || b.it.score - a.it.score);  // earliest game first
-  const head = `<div class="perf-updated">Today's picks with a pick score of ${BEST_SCORE}+ and a Wilson score of ${BEST_WILSON}%+, earliest game first (${asOf.join(", ") || "no runs yet"}). `
+  const head = `<div class="perf-updated">Today's picks with a pick score of ${BEST_SCORE}+ or a Wilson score of ${BEST_WILSON}%+ (or both), earliest game first (${asOf.join(", ") || "no runs yet"}). `
     + `Once a game starts, its card is locked at the last run before kickoff.</div>`;
-  const cards = picks.map(({ it, wilson, line }) => {
+  const cards = picks.map(({ it, m, wilson, byScore, byWilson, combo }) => {
     it.g._runAt = it.runAt;
-    const m = { ...winMatchesFor(it.sp.key, comboFactsLive(it.g)), expand: true };
-    return `<div class="best-wrap"><div class="best-why"><span class="best-sport">${it.sp.label}</span>Selected because the pick score is <b>${Math.round(it.score)}</b> (${topTier(it.score)}, needs ${BEST_SCORE}+) `
-      + `and the Wilson score is <b>${wilson}%</b> (needs ${BEST_WILSON}%+). ${line}</div>${renderGame(it.g, 0, null, "best", m, it.sp.key)}</div>`;
+    const why = [byScore ? `pick score <b>${Math.round(it.score)}</b> (${topTier(it.score)}, ${BEST_SCORE}+ needed)` : "", byWilson ? `Wilson score <b>${wilson}%</b> (${BEST_WILSON}%+ needed)` : ""].filter(Boolean).join(" and ");
+    const other = (byScore ? `Wilson ${wilson}%` : `pick score ${Math.round(it.score)}`) + (byScore && byWilson ? "" : " (below its bar)");
+    return `<div class="best-wrap"><div class="best-why"><span class="best-sport">${it.sp.label}</span>Selected on ${why}${byScore && byWilson ? "" : `. ${other}`}.`
+      + `${byWilson && combo ? ` Best winning combination: ${combo}.` : ""}</div>${renderGame(it.g, 0, null, "best", { ...m, expand: true }, it.sp.key)}</div>`;
   }).join("");
-  el.innerHTML = head + `<div id="best-list">` + (cards || `<div class="empty-state">No picks meet both bars yet today.${stale.length ? ` No data yet for ${stale.join(", ")}.` : ""}</div>`) + `</div>`;
+  el.innerHTML = head + `<div id="best-list">` + (cards || `<div class="empty-state">No picks meet either bar yet today.${stale.length ? ` No data yet for ${stale.join(", ")}.` : ""}</div>`) + `</div>`;
 }
 
 // Score and reasons for one not-yet-started game, or null when it has no consensus pick to rate.
