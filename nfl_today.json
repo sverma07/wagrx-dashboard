@@ -1068,6 +1068,141 @@
           }
         }
       ]
+    },
+    {
+      "time": "2026-11-27T11:46:05-05:00",
+      "games": [
+        {
+          "game": "Pittsburgh Steelers (H) vs Denver Broncos (A)",
+          "spread": "DEN -4.5",
+          "favorite": "Denver Broncos -fav",
+          "confidence": "62%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Denver Broncos",
+            "M2: Relevance": "TAKE: Denver Broncos",
+            "M3: Efficiency": "TAKE: Pittsburgh Steelers",
+            "M4: ATS Trends": "TAKE: Denver Broncos",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Pittsburgh Steelers",
+            "M7: QB Injury Edge": "TAKE: Pittsburgh Steelers",
+            "M8: Line Movement": "TAKE: Denver Broncos",
+            "CONSENSUS": "TAKE: Denver Broncos",
+            "Sharp: Circa": "TAKE: Pittsburgh Steelers",
+            "Sharp: DraftKings": "PUSH"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 19,
+              "away": 27
+            },
+            "M2: Relevance": {
+              "home": 27.6007,
+              "away": 38.1813
+            },
+            "M3: Efficiency": {
+              "margin": -0.7
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 12
+            },
+            "M5: Rest": {
+              "home": 5,
+              "away": 5,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": 17.11,
+              "home_m": 24.57,
+              "away_b": 82.89,
+              "away_m": 75.43
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Mason Rudolph (Active)",
+              "away_status": "Bo Nix (Active)",
+              "home_rb": "Jaylen Warren (Active)",
+              "away_rb": "RJ Harvey (Injured Reserve) -> Jonah Coleman (Active) starting",
+              "home_mlb": "Payton Wilson (Active)",
+              "away_mlb": "Alex Singleton (Active)",
+              "home_impact": 0.0,
+              "away_impact": 2.0
+            },
+            "M8: Line Movement": {
+              "open_home": 1.5,
+              "current_home": 4.5,
+              "delta": 3.0,
+              "crosses_key": true,
+              "size": 3.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 4.5,
+                "last": 4.5,
+                "delta": 0.0
+              },
+              "vs_consensus": "agree"
+            }
+          },
+          "team_home": "Pittsburgh Steelers",
+          "team_away": "Denver Broncos",
+          "start": "2026-11-27T20:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 20.0,
+              "home_m": 68.0,
+              "away_b": 80.0,
+              "away_m": 32.0,
+              "line": "+4.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 12.0,
+              "home_m": 12.0,
+              "away_b": 88.0,
+              "away_m": 88.0,
+              "line": "+4.5",
+              "thin": false
+            }
+          },
+          "home_id": "23",
+          "away_id": "7",
+          "espn_home": "Pittsburgh Steelers",
+          "espn_away": "Denver Broncos",
+          "event_id": "401873083",
+          "score": {
+            "value": 14.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 62%"
+              },
+              {
+                "t": "3 of 5 models back it"
+              },
+              {
+                "t": "Most sharp sources lean the other way (2 of 2: Circa, SBD)",
+                "warn": true
+              },
+              {
+                "t": "The line has moved toward it"
+              }
+            ],
+            "x": {
+              "conf": 0.4,
+              "agree": 0.6,
+              "sharp": -1.0,
+              "tier": 0.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 0.0
+            },
+            "wv": 0
+          }
+        }
+      ]
     }
   ]
 }
