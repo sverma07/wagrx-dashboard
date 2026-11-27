@@ -1139,13 +1139,14 @@ function formatDetail(g, modelKey) {
     // Hurt core-five players count in the pick. Players out for a while (no minutes in the recent games) and hurt bench players are
     // listed separately: the line already reflects them, so they do not change the pick.
     const side = (team, out, repl, impact, other) => {
-      const longs = (other || []).filter(o => o.kind === "long"), bench = (other || []).filter(o => o.kind !== "long");
+      const longs = (other || []).filter(o => o.kind === "long"), unc = (other || []).filter(o => o.kind === "unconfirmed"), bench = (other || []).filter(o => o.kind === "bench");
       const list = arr => arr.map(o => `${o.name} <span class="num">(${o.status})</span>`).join(", ");
       return `<b>${team}</b>` + (impact ? ` <span class="books-dim">(injury impact ${impact}, higher is worse)</span>` : "")
         + `<br><span class="books-dim">Counted in the pick (recent core five):</span>`
         + (out.length ? out.map((p, i) => `<br>${p.name} <span class="num">(${p.status})</span>, ${p.min} min${repl[i] ? ` &rarr; ${repl[i]} in` : ""}`).join("") : `<br>No core players hurt`)
         + (longs.length ? `<br><span class="books-dim">Out for a while (not counted, the line already reflects it):</span><br>${list(longs)}` : "")
-        + (bench.length ? `<br><span class="books-dim">Hurt bench players (not counted):</span><br>${list(bench)}` : "");
+        + (bench.length ? `<br><span class="books-dim">Hurt bench players (not counted):</span><br>${list(bench)}` : "")
+        + (unc.length ? `<br><span class="books-dim">Listed hurt by one feed only, ESPN's report does not confirm (not counted):</span><br>${list(unc)}` : "");
     };
     return side(teamHome, d.home_out, d.home_repl || [], d.home_impact, d.home_other) + "<br><br>" + side(teamAway, d.away_out, d.away_repl || [], d.away_impact, d.away_other);
   }
