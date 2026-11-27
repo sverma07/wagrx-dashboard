@@ -1,7 +1,352 @@
 {
   "sport": "NFL",
-  "updated": "2026-11-26T06:15:02-05:00",
+  "updated": "2026-11-27T06:15:02-05:00",
   "days": {
+    "2026-11-26": [
+      {
+        "game": "Detroit Lions (H) vs Chicago Bears (A)",
+        "team_home": "Detroit Lions",
+        "team_away": "Chicago Bears",
+        "line": "CHI -1.5",
+        "favorite": "Chicago Bears -fav",
+        "final": "Detroit Lions 35, Chicago Bears 39",
+        "cover": "Chicago Bears",
+        "status": null,
+        "confidence": "74%",
+        "sharp": {
+          "home_b": 47.8,
+          "home_m": 51.61,
+          "away_b": 52.2,
+          "away_m": 48.39
+        },
+        "graded_run": "2026-11-26T12:50:08-05:00",
+        "score": {
+          "value": 13.22,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 74%"
+            },
+            {
+              "t": "3 of 4 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: Circa, DraftKings)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved against it",
+              "warn": true
+            },
+            {
+              "t": "Fits a winning pattern: Line move against consensus &middot; Consensus on the underdog (6-0, 100%, Wilson 61%)"
+            },
+            {
+              "t": "Fits a losing pattern: Confidence 60%+ &middot; Consensus on the underdog (12-14, 46%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 0.8,
+            "agree": 0.75,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": -1.0,
+            "pattern": 0.4386,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-19T06:16:09-0500",
+            "n": 6,
+            "sp": 2.5,
+            "best_h": 2.5,
+            "best_a": -2.5,
+            "tot": 54.5
+          },
+          "close": {
+            "t": "2026-11-26T12:50:08-0500",
+            "n": 13,
+            "sp": 1,
+            "best_h": 1.5,
+            "best_a": 0,
+            "tot": 56.5,
+            "pin_sp": 1,
+            "pin_h": -108,
+            "pin_a": -102,
+            "pin_tot": 56.5,
+            "pin_ml": [
+              -100,
+              -110
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Detroit Lions",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Detroit Lions",
+            "result": "LOSS"
+          },
+          "M4: ATS Trends": {
+            "pick": "Chicago Bears",
+            "result": "WIN"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Detroit Lions",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Detroit Lions",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Chicago Bears",
+            "result": "WIN"
+          },
+          "CONSENSUS": {
+            "pick": "Detroit Lions",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Chicago Bears",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Chicago Bears",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Dallas Cowboys (H) vs Philadelphia Eagles (A)",
+        "team_home": "Dallas Cowboys",
+        "team_away": "Philadelphia Eagles",
+        "line": "DAL -8.5",
+        "favorite": "Dallas Cowboys -fav",
+        "final": "Dallas Cowboys 38, Philadelphia Eagles 39",
+        "cover": "Philadelphia Eagles",
+        "status": null,
+        "confidence": "84%",
+        "sharp": {
+          "home_b": 60.2,
+          "home_m": 61.27,
+          "away_b": 39.8,
+          "away_m": 38.73
+        },
+        "graded_run": "2026-11-26T16:00:10-05:00",
+        "score": {
+          "value": 25.0,
+          "tier": "Weak",
+          "star": false,
+          "why": [
+            {
+              "t": "Consensus confidence 84%"
+            },
+            {
+              "t": "4 of 5 models back it"
+            },
+            {
+              "t": "Most sharp sources lean the other way (2 of 3: Circa, DraftKings)",
+              "warn": true
+            },
+            {
+              "t": "The line has moved toward it"
+            },
+            {
+              "t": "Fits a losing pattern: Line move with consensus &middot; Confidence 80%+ (4-5, 44%)",
+              "warn": true
+            }
+          ],
+          "x": {
+            "conf": 1.0,
+            "agree": 0.8,
+            "sharp": -1.0,
+            "tier": 0.0,
+            "line": 1.0,
+            "pattern": 0.0,
+            "loss": 1.0
+          },
+          "wv": 0
+        },
+        "market": {
+          "open": {
+            "t": "2026-11-19T06:16:09-0500",
+            "n": 6,
+            "sp": -8.0,
+            "best_h": -7.5,
+            "best_a": 8.5,
+            "tot": 47.5
+          },
+          "close": {
+            "t": "2026-11-26T16:00:10-0500",
+            "n": 13,
+            "sp": -8.5,
+            "best_h": -8.5,
+            "best_a": 9,
+            "tot": 49.5,
+            "pin_sp": -8.5,
+            "pin_h": -106,
+            "pin_a": -104,
+            "pin_tot": 49.5,
+            "pin_ml": [
+              -430,
+              355
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Dallas Cowboys",
+            "result": "LOSS"
+          },
+          "M2: Relevance": {
+            "pick": "Dallas Cowboys",
+            "result": "LOSS"
+          },
+          "M3: Efficiency": {
+            "pick": "Philadelphia Eagles",
+            "result": "WIN"
+          },
+          "M4: ATS Trends": {
+            "pick": "Dallas Cowboys",
+            "result": "LOSS"
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Dallas Cowboys",
+            "result": "LOSS"
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Dallas Cowboys",
+            "result": "LOSS"
+          },
+          "M8: Line Movement": {
+            "pick": "Dallas Cowboys",
+            "result": "LOSS"
+          },
+          "CONSENSUS": {
+            "pick": "Dallas Cowboys",
+            "result": "LOSS"
+          },
+          "Sharp: Circa": {
+            "pick": "Philadelphia Eagles",
+            "result": "WIN"
+          },
+          "Sharp: DraftKings": {
+            "pick": "Philadelphia Eagles",
+            "result": "WIN"
+          }
+        }
+      },
+      {
+        "game": "Buffalo Bills (H) vs Kansas City Chiefs (A)",
+        "team_home": "Buffalo Bills",
+        "team_away": "Kansas City Chiefs",
+        "line": "BUF -3",
+        "favorite": "Buffalo Bills -fav",
+        "final": "Buffalo Bills 13, Kansas City Chiefs 10",
+        "cover": null,
+        "status": "PUSH (not graded)",
+        "confidence": "64%",
+        "sharp": {
+          "home_b": 42.02,
+          "home_m": 39.29,
+          "away_b": 57.98,
+          "away_m": 60.71
+        },
+        "graded_run": null,
+        "score": null,
+        "market": {
+          "open": {
+            "t": "2026-11-19T06:16:09-0500",
+            "n": 6,
+            "sp": -3.0,
+            "best_h": -2.5,
+            "best_a": 3,
+            "tot": 50.5
+          },
+          "close": {
+            "t": "2026-11-26T20:00:15-0500",
+            "n": 13,
+            "sp": -3,
+            "best_h": -2.5,
+            "best_a": 3,
+            "tot": 46,
+            "pin_sp": -3,
+            "pin_h": 102,
+            "pin_a": -113,
+            "pin_tot": 46,
+            "pin_ml": [
+              -156,
+              141
+            ]
+          }
+        },
+        "picks": {
+          "M1: Normal Score": {
+            "pick": "Buffalo Bills",
+            "result": null
+          },
+          "M2: Relevance": {
+            "pick": "Kansas City Chiefs",
+            "result": null
+          },
+          "M3: Efficiency": {
+            "pick": "Kansas City Chiefs",
+            "result": null
+          },
+          "M4: ATS Trends": {
+            "pick": "Buffalo Bills",
+            "result": null
+          },
+          "M5: Rest": {
+            "pick": "PUSH",
+            "result": null
+          },
+          "M6: Sharp Money": {
+            "pick": "Kansas City Chiefs",
+            "result": null
+          },
+          "M7: QB Injury Edge": {
+            "pick": "Buffalo Bills",
+            "result": null
+          },
+          "M8: Line Movement": {
+            "pick": "Buffalo Bills",
+            "result": null
+          },
+          "CONSENSUS": {
+            "pick": "Buffalo Bills",
+            "result": null
+          },
+          "Sharp: Circa": {
+            "pick": "N/A",
+            "result": null
+          },
+          "Sharp: DraftKings": {
+            "pick": "N/A",
+            "result": null
+          }
+        }
+      }
+    ],
     "2026-11-25": [
       {
         "game": "Los Angeles Rams (H) vs Green Bay Packers (A)",
