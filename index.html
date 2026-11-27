@@ -1764,8 +1764,8 @@ async function todayGradesLoad(sportKey) {
   for (const ev of board.events || []) {
     const comp = (ev.competitions || [])[0] || {};
     if (!((comp.status || {}).type || {}).completed) continue;
-    const sc = {};
-    for (const t of comp.competitors || []) sc[t.homeAway] = Number(t.score);
+    const sc = { byName: {} };
+    for (const t of comp.competitors || []) { sc[t.homeAway] = Number(t.score); sc.byName[(t.team || {}).displayName] = Number(t.score); }
     if (!isNaN(sc.home) && !isNaN(sc.away)) finals[ev.id] = sc;
   }
   const rows = [];
@@ -1773,7 +1773,10 @@ async function todayGradesLoad(sportKey) {
     if (!g.score || typeof g.score.value !== "number") continue;
     const pick = String((g.picks || {}).CONSENSUS || ""), team = pick.startsWith("TAKE:") ? pick.slice(5).trim() : "";
     if (!team) continue;
-    const fin = finals[g.event_id];
+    const fin0 = finals[g.event_id];
+    // Score by team name: ESPN can list the two teams in the opposite home and away order from ours (neutral-site games).
+    const hs = fin0 && fin0.byName[g.espn_home || g.team_home], as = fin0 && fin0.byName[g.espn_away || g.team_away];
+    const fin = fin0 && (hs !== undefined && as !== undefined ? { home: hs, away: as } : fin0);
     let result = null, note = "";
     if (fin) {
       const parts = String(g.spread || "").trim().split(/\s+/), line = parseFloat(parts[parts.length - 1]);
