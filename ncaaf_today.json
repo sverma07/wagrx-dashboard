@@ -3410,6 +3410,134 @@
           "locked_run": "2026-11-26T19:30:03-05:00"
         }
       ]
+    },
+    {
+      "time": "2026-11-26T21:30:09-05:00",
+      "games": [
+        {
+          "game": "Texas Tech Red Raiders (H) vs TCU Horned Frogs (A)",
+          "spread": "TTU -15.5",
+          "favorite": "Texas Tech Red Raiders -fav",
+          "confidence": "75%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Texas Tech Red Raiders",
+            "M2: Relevance": "TAKE: Texas Tech Red Raiders",
+            "M3: Efficiency": "TAKE: TCU Horned Frogs",
+            "M4: ATS Trends": "TAKE: Texas Tech Red Raiders",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: TCU Horned Frogs",
+            "M8: Line Movement": "TAKE: TCU Horned Frogs",
+            "CONSENSUS": "TAKE: Texas Tech Red Raiders",
+            "Sharp: Circa": "TAKE: TCU Horned Frogs",
+            "Sharp: DraftKings": "TAKE: Texas Tech Red Raiders"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 29,
+              "away": 16
+            },
+            "M2: Relevance": {
+              "home": 24.2488,
+              "away": 17.3043
+            },
+            "M3: Efficiency": {
+              "margin": 6.4
+            },
+            "M4: ATS Trends": {
+              "home": 8,
+              "away": 3
+            },
+            "M5: Rest": {
+              "home": 5,
+              "away": 5,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": 59.0,
+              "home_m": 38.97,
+              "away_b": 41.0,
+              "away_m": 61.03
+            },
+            "M8: Line Movement": {
+              "open_home": -16.5,
+              "current_home": -14.0,
+              "delta": 2.5,
+              "crosses_key": false,
+              "size": 2.5,
+              "sources": [
+                "circa",
+                "dk"
+              ],
+              "circa": {
+                "first": -16.0,
+                "last": -14.0,
+                "delta": 2.0
+              }
+            }
+          },
+          "team_home": "Texas Tech Red Raiders",
+          "team_away": "TCU Horned Frogs",
+          "start": "2026-11-27T01:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 59.0,
+              "home_m": 15.0,
+              "away_b": 41.0,
+              "away_m": 85.0,
+              "line": "-14",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 48.0,
+              "home_m": 62.0,
+              "away_b": 52.0,
+              "away_m": 38.0,
+              "line": "-14",
+              "thin": false
+            }
+          },
+          "espn_home": "Texas Tech Red Raiders",
+          "espn_away": "TCU Horned Frogs",
+          "event_id": "401856879",
+          "score": {
+            "value": 3.25,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 75%"
+              },
+              {
+                "t": "3 of 4 models back it"
+              },
+              {
+                "t": "Most sharp sources lean the other way (2 of 3: Circa, SBD)",
+                "warn": true
+              },
+              {
+                "t": "The line has moved against it",
+                "warn": true
+              },
+              {
+                "t": "Fits a losing pattern: Sharps against consensus &middot; Line move against consensus &middot; Confidence 75%+ &middot; Consensus on the favorite (14-23, 38%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 0.8333,
+              "agree": 0.75,
+              "sharp": -1.0,
+              "tier": 0.0,
+              "line": -1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-26T19:30:03-05:00"
+        }
+      ]
     }
   ]
 }
