@@ -3561,6 +3561,146 @@
           "locked_run": "2026-11-27T14:30:10-05:00"
         }
       ]
+    },
+    {
+      "time": "2026-11-27T19:30:09-05:00",
+      "games": [
+        {
+          "game": "Pittsburgh Steelers (H) vs Denver Broncos (A)",
+          "spread": "DEN -4.5",
+          "favorite": "Denver Broncos -fav",
+          "confidence": "84%",
+          "picks": {
+            "M1: Normal Score": "TAKE: Denver Broncos",
+            "M2: Relevance": "TAKE: Denver Broncos",
+            "M3: Efficiency": "TAKE: Pittsburgh Steelers",
+            "M4: ATS Trends": "TAKE: Denver Broncos",
+            "M5: Rest": "PUSH",
+            "M6: Sharp Money": "TAKE: Pittsburgh Steelers",
+            "M7: QB Injury Edge": "TAKE: Denver Broncos",
+            "M8: Line Movement": "TAKE: Denver Broncos",
+            "CONSENSUS": "TAKE: Denver Broncos",
+            "Sharp: Circa": "TAKE: Pittsburgh Steelers",
+            "Sharp: DraftKings": "TAKE: Pittsburgh Steelers"
+          },
+          "detail": {
+            "M1: Normal Score": {
+              "home": 19,
+              "away": 27
+            },
+            "M2: Relevance": {
+              "home": 27.6007,
+              "away": 38.1813
+            },
+            "M3: Efficiency": {
+              "margin": -0.7
+            },
+            "M4: ATS Trends": {
+              "home": 2,
+              "away": 12
+            },
+            "M5: Rest": {
+              "home": 5,
+              "away": 5,
+              "home_last3": 0,
+              "away_last3": 0
+            },
+            "M6: Sharp Money": {
+              "home_b": 18.93,
+              "home_m": 26.29,
+              "away_b": 81.07,
+              "away_m": 73.71
+            },
+            "M7: QB Injury Edge": {
+              "home_status": "Drew Allar (Out) -> Mason Rudolph (Active) starting",
+              "away_status": "Sam Ehlinger (Out) -> Bo Nix (Active) starting",
+              "home_rb": "Eli Heidenreich (Out) -> Jaylen Warren (Active) starting",
+              "away_rb": "RJ Harvey (Injured Reserve) -> Jonah Coleman (Active) starting",
+              "home_mlb": "Cole Holcomb (Out) -> Payton Wilson (Active) starting",
+              "away_mlb": "Alex Singleton (Active)",
+              "home_impact": 9.0,
+              "away_impact": 7.0
+            },
+            "M8: Line Movement": {
+              "open_home": 1.5,
+              "current_home": 4.5,
+              "delta": 3.0,
+              "crosses_key": true,
+              "size": 3.0,
+              "sources": [
+                "dk"
+              ],
+              "circa": {
+                "first": 4.5,
+                "last": 4.5,
+                "delta": 0.0
+              },
+              "vs_consensus": "agree"
+            }
+          },
+          "team_home": "Pittsburgh Steelers",
+          "team_away": "Denver Broncos",
+          "start": "2026-11-27T20:00Z",
+          "sharp_books": {
+            "circa": {
+              "home_b": 20.0,
+              "home_m": 66.0,
+              "away_b": 80.0,
+              "away_m": 34.0,
+              "line": "+4.5",
+              "thin": false
+            },
+            "dk": {
+              "home_b": 13.0,
+              "home_m": 15.0,
+              "away_b": 87.0,
+              "away_m": 85.0,
+              "line": "+4.5",
+              "thin": false
+            }
+          },
+          "home_id": "23",
+          "away_id": "7",
+          "espn_home": "Pittsburgh Steelers",
+          "espn_away": "Denver Broncos",
+          "event_id": "401873083",
+          "score": {
+            "value": 25.0,
+            "tier": "Weak",
+            "star": false,
+            "why": [
+              {
+                "t": "Consensus confidence 84%"
+              },
+              {
+                "t": "4 of 5 models back it"
+              },
+              {
+                "t": "Most sharp sources lean the other way (3 of 3: Circa, DraftKings, SBD)",
+                "warn": true
+              },
+              {
+                "t": "The line has moved toward it"
+              },
+              {
+                "t": "Fits a losing pattern: Line move with consensus &middot; Confidence 80%+ (4-6, 40%)",
+                "warn": true
+              }
+            ],
+            "x": {
+              "conf": 1.0,
+              "agree": 0.8,
+              "sharp": -1.0,
+              "tier": 0.0,
+              "line": 1.0,
+              "pattern": 0.0,
+              "loss": 1.0
+            },
+            "wv": 0
+          },
+          "locked_run": "2026-11-27T14:30:10-05:00"
+        }
+      ]
     }
   ]
 }
